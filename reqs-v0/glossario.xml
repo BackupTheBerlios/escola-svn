@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="glossario.xsl"?>
+
+<ers nome="glossario">
+
+<termo nome="abreviatura para referência bibliográfica">
+<definicao>
+Forma usual e abreviada do nome cadastrado, na ordem inversa, 
+a ser empregada para identificação, catalogação e remissão de autoria em 
+itens de produção intelectual [bibliográfica, artística ou técnica].
+</definicao>
+</termo>
+
+</ers>

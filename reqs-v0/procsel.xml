@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylessheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="procsel">
+
+<uc nome="Cadastrar edital">
+<resumo>
+Todo processo de seleção deverá ser cadastrado no sistema. Cada processo compreende algumas informações importantes, como período da inscrição, número de vagas total e número de vagas por área de concentração, 
+data de realização de provas e data de entrega dos resultados, por exemplo. 
+</resumo>
+</uc>
+
+<uc nome="Cadastrar candidato">
+<resumo>
+Este caso de uso permite que uma pessoa física torne-se um(a) candidato(a) após inscrição em determinado processo de seleção. Em conseqüência, do ponto de vista do sistema é necessário a existência da pessoa física correspondente para que esta possa ser considerada um candidato. Através deste caso de uso, os atributos de uma inscrição e do candidato também podem ser alterados. Este serviço é oferecido à coordenação do programa em questão. Observe que o candidato poderá fornecer boa parte das informações do cadastro pela Internet através do caso de uso Efetuar pré-cadastro de candidato.
+</resumo>
+</uc>
+
+<uc nome="Efetuar pré-cadastro de candidato">
+<resumo>
+O pré-cadastramento de um candidato poderá ser efetuado pela Internet.
+Neste caso, as informações pertinentes não necessariamente precisarão ser preenchidas manualmente em formulário próprio. Quando a pessoa física correspondente for efetivar a sua inscrição como candidato, tais informações, previamente fornecidas, agilizarão o processo.
+</resumo>
+</uc>
+
+<uc nome="Relatar resultado de seleção">
+<resumo>
+A aplicação de um exame de seleção é seguida da respectiva avaliação dos resultados obtidos pelos candidatos. Os resultados obtidos deverão ser cadastrados. Para tal é suficiente identificar o processo de seleção em questão e,
+para cada candidato, fornecer o resultado correspondente. Observe que o sistema apenas recebe os resultados e os classifica. Critérios de desempate e outras situações peculiares não são tratados pelo sistema, mas pela comissão de avaliação.
+</resumo>
+</uc>
+
+<uc nome="Autorizar divulgação">
+<resumo>
+Os resultados de processo de seleção poderão ser fornecidos durante um considerável intervalo de tempo. Em conseqüência, o “resultado final” só poderá ser divulgado através de uma operação explícita. 
+Antes desta data os resultados parciais — nem todos os resultados obtidos pelos candidatos podem ter sido fornecidos — não estarão disponíveis para consulta de terceiros. 
+</resumo>
+</uc>
+
+<uc nome="Excluir processo de seleção">
+<resumo>
+Um processo de seleção pode ser excluído. Contudo, algumas dependências, caso existam, tornam esta operação impossibilitada de ocorrer. Por exemplo, caso existam candidatos inscritos no respectivo processo. Neste e noutros casos, uma lista de dependências deverá ser exibida, com possibilidade de impressão. Só após removidas todas as dependências, 
+o processo de seleção poderá ser removido.
+</resumo>
+</uc>
+
+<uc nome="Selecionar processo de seleção">
+<resumo>
+Outros serviços oferecidos pelo sistema exigem a identificação de um processo de seleção. Por exemplo: para a impressão da lista de candidatos aprovados é necessário que o processo de seleção correspondente seja identificado. Este caso de uso permite ao usuário localizar o processo de interesse.
+</resumo>
+</uc>
+
+<uc nome="Obter boleto bancário">
+<resumo>
+Vários serviços oferecidos exigem o pagamento de taxas.
+Através deste caso de uso, o usuário poderá imprimir o boleto bancário pertinente ao serviço desejado.
+</resumo>
+</uc>
+
+<uc nome="Manutenir documentos exigidos para cadastro de candidato">
+<resumo>
+O conjunto de documentos exigidos para o cadastro de um candidato pode ser mantido através deste caso de uso. Esta lista estará disponível para os interessados em se cadastrar em algum programa de pós-graduação. 
+Toda a UFG ou por programa?
+</resumo>
+</uc>
+
+</ers>
+
+
+
+
+
+
+
+
+
+

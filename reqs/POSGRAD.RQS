@@ -1,0 +1,16 @@
+[Project]
+Owner=Fábio
+Name=PEQUI
+GUID={234930CF-5EE6-4FFD-A505-B5F67B3100DA}
+Description=
+Owner Key=2
+Revision number=1.0066
+Prefix=FEAT
+NbrRequirements=256
+Directory=C:\MEU\ABARE\reqs\POSGRAD.RQS
+Key=1
+
+[Application]
+Data file version=1.0040
+Program Version=7.01.2007.1
+

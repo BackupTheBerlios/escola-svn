@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+
+<ers nome="ccpfj">
+
+<uc nome="Cadastrar pessoa física">
+<resumo>
+A inscrição em processo de seleção e membros de banca de exame de qualificação, por exemplo,
+envolvem pessoas físicas. Este caso de uso permite cadastrar pessoas físicas.
+Após este cadastro, uma determinada pessoa física pode se “envolver” em atividades da pós-graduação.
+</resumo>
+</uc>
+
+<uc nome="Selecionar pessoa física">
+<resumo>
+Permite a seleção de uma pessoa física anteriormente cadastrada.
+A seleção pode ocorrer por um rico conjunto de atributos.
+Por exemplo, pode-se consultar pelo número do telefone, pelo setor em que mora, pelo primeiro nome, por possuir certa idade e assim por diante.
+</resumo>
+</uc>
+
+<uc nome="Editar pessoa física">
+<resumo>
+Uma pessoa física está associada à quantidade significativa de informações que variam ao longo do tempo, por exemplo, endereço.
+Este caso de uso permite manter tais informações atualizadas. Alguns atributos de pessoas físicas só poderão ser alterados por usuário autorizado,
+por exemplo, CPF e nome. Outros, como o citado endereço, poderão ser mantidos pelo próprio usuário do sistema.
+</resumo>
+</uc>
+
+<uc nome="Excluir pessoa física">
+<resumo>
+Excepcionalmente, o cadastro de uma pessoa física poderá ser excluído.
+Este caso de uso permite registrar este desejo, que será avaliado e, posteriormente, conforme a avaliação,
+a exclusão será efetuada pelo administrador do sistema. Ou seja, a remoção não é executada sumariamente dadas as implicações possíveis.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar pessoa jurídica">
+<resumo>
+Ao longo do tempo, o cadastro de pessoas jurídicas pode ser necessário.
+Este caso de uso permite a criação de uma pessoa jurídica.
+</resumo>
+</uc>
+
+<uc nome="Editar pessoa jurídica">
+<resumo>
+Após cadastrada, uma pessoa jurídica pode ter alguns de seus atributos alterados.
+Este caso de uso permite manter atualizados os atributos de uma pessoa jurídica.
+</resumo>
+</uc>
+
+<uc nome="Selecionar pessoa jurídica">
+<resumo>
+De forma análoga ao caso de uso Selecionar pessoa física,
+o conjunto de atributos de pessoas jurídicas poderão ser utilizados pelos usuários para a identificação de uma pessoa jurídica em particular.
+</resumo>
+</uc>
+
+<uc nome="Excluir pessoa jurídica">
+<resumo>
+Idem para pessoa física.
+</resumo>
+</uc>
+
+<uc nome="Editar cargo">
+<resumo>
+Atributos de um cargo podem sofrer alterações ao longo do tempo. 
+Este caso de uso representa a interação correspondente.
+</resumo>
+</uc>
+
+<uc nome="Selecionar cargo">
+<resumo>
+Os atributos de um cargo poderão ser utilizados para a identificação de um cargo em particular. Esta seleção é útil a vários outros propósitos. 
+</resumo>
+</uc>
+
+<uc nome="Cadastrar cargo">
+<resumo>
+Inicialmente, nenhum cargo estará disponível. Todos eles serão criados/editados à medida em que forem necessários. Este caso de uso captura a necessidade de se criar um cargo.
+Após criado, o caso de uso editar cargo ressalta operações típicas que deverão ser realizadas pelos usuários.
+</resumo>
+</uc>
+
+<uc nome="Editar pessoa-cargo">
+<resumo>
+Uma pessoa pode ocupar vários cargos e, em alguns momentos, deixar de exercer alguns deles. Este caso de uso descreve a interação necessária para a manutenção deste tipo de informação.
+</resumo>
+</uc>
+
+<uc nome="Excluir cargo">
+<resumo>
+O usuário autorizado poderá requisitar a exclusão de um cargo.
+Neste caso, a exclusão não poderá ser realizada imediatamente. Em vez desta abordagem, será enviada uma mensagem para o administrador do sistema. 
+Este sim, após analisar as questões envolvidas e, eventualmente entrar em contato com quem requisitou a exclusão, irá remover o cargo em questão. 
+</resumo>
+</uc>
+
+</ers>
+

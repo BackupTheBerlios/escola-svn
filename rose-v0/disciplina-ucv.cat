@@ -1,0 +1,3038 @@
+
+(object Petal
+    version    	46
+    _written   	"Rose 7.7.0204.3001"
+    charSet    	0)
+
+(object Class_Category "disciplinas"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"RequisitePro"
+	    name       	"ReqProProjectPath"
+	    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+	(object Attribute
+	    tool       	"RequisitePro"
+	    name       	"ReqProProjectGuid"
+	    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+	(object Attribute
+	    tool       	"RequisitePro"
+	    name       	"ReqProDocType"
+	    value      	"{935C7A87-6DBF-45C9-B64F-0336E24D88F7}")
+	(object Attribute
+	    tool       	"RequisitePro"
+	    name       	"ReqProReqType"
+	    value      	"{6DA1F224-38FA-4B51-A809-9F3D3B61D4FB}"))
+    quid       	"3AD878C100A6"
+    documentation 	"Inclui funções associadas diretamente com disciplinas."
+    stereotype 	"uc"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object UseCase "Identificar disciplina"
+	    quid       	"3ACB256D0000"
+	    documentation 	"Para o programa em questão, várias disciplinas podem ser ministradas pelo participante. É preciso que ele selecione uma delas.")
+	(object UseCase "Editar programa de disciplina"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{5E8C9381-DD04-420D-9AEF-303EF435E665}"))
+	    quid       	"3ACB23340084"
+	    documentation 	
+|Fornecer detalhes de programa de disciplina.
+|FEAT 4.1
+	    
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\discpln.USE"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3ACB2358032F"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::controle de acesso::Validar usuário"
+		    quidu      	"3A9FDD6402B0")
+		(object Dependency_Relationship
+		    quid       	"3ACB2581022F"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Identificar disciplina"
+		    quidu      	"3ACB256D0000")
+		(object Dependency_Relationship
+		    quid       	"3B053B2702F8"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Selecionar disciplina"
+		    quidu      	"3AE963D300EA")))
+	(object UseCase "Editar conceito e freqüência"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{E1CD68D9-9549-4170-83F0-2E1A8EA0277F}"))
+	    quid       	"3ACB24AC0048"
+	    documentation 	"FEAT 4.2"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\discpln.USE"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3ACB24C80035"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::controle de acesso::Validar usuário"
+		    quidu      	"3A9FDD6402B0")
+		(object Dependency_Relationship
+		    quid       	"3ACB25850163"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Identificar disciplina"
+		    quidu      	"3ACB256D0000")
+		(object Dependency_Relationship
+		    quid       	"3B053AF80244"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::discentes::Selecionar aluno"
+		    quidu      	"3AE89CDB0306")))
+	(object UseCase "Identificar turma"
+	    quid       	"3AE73D8802B8"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3AE73E5002C0"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Identificar disciplina"
+		    quidu      	"3ACB256D0000")))
+	(object UseCase "Cadastrar oferta de disciplina"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{A8987452-36A4-4F78-A859-AC4AD9954871}"))
+	    quid       	"3B042B440399"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\discpln.USE"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B25027900E6"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Selecionar disciplina"
+		    quidu      	"3AE963D300EA")
+		(object Dependency_Relationship
+		    quid       	"3B052F9E0136"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Consultar disciplina"
+		    quidu      	"3AD87C220399")))
+	(object UseCase "Consultar extrato acadêmico"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{5849B0A1-F06F-46B8-BA34-452FD7397958}"))
+	    quid       	"3ACB271B0149"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\reqs\\discpln.USE"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3ACB28E20265"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::controle de acesso::Validar usuário"
+		    quidu      	"3A9FDD6402B0")))
+	(object UseCase "Consultar disciplina"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{8E67EB5A-E0A5-473E-9C84-DC30C15493D2}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{6DA1F224-38FA-4B51-A809-9F3D3B61D4FB}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{C13F3C05-66A9-4D0B-83F7-013591EE574F}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"vision")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	""))
+	    quid       	"3AD87C220399"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\reqs\\vision.RVD"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3AD87C32025C"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Identificar disciplina"
+		    quidu      	"3ACB256D0000")
+		(object Dependency_Relationship
+		    quid       	"3AE73D9003AA"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Identificar turma"
+		    quidu      	"3AE73D8802B8")))
+	(object UseCase "Selecionar disciplina"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{49E34208-B785-4979-9145-D188BFFA5AEF}"))
+	    quid       	"3AE963D300EA"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\usecases.USE")
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\reqs\\discpln.USE")))
+	(object UseCase "Efetuar pré-inscrição em disciplina"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectPath"
+		    value      	"E:\\ABARE\\reqs\\POSGRAD.RQS")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocType"
+		    value      	"{C94DF878-7DDD-4377-930E-D3CE1AD522B3}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProReqType"
+		    value      	"{840B2F9A-D048-4C6D-AA88-16A3F76EC48C}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProProjectGuid"
+		    value      	"{234930CF-5EE6-4FFD-A505-B5F67B3100DA}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentGuid"
+		    value      	"{0E540D3D-D5A2-49FD-B7C2-2494B9EC2393}")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProDocumentName"
+		    value      	"discpln")
+		(object Attribute
+		    tool       	"RequisitePro"
+		    name       	"ReqProRequirementId"
+		    value      	"{9DD8DD9C-B778-4A09-B30E-BC01F6D3F255}"))
+	    quid       	"3C3B440B0263"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"E:\\ABARE\\reqs\\discpln.USE"))
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B053C270000"
+		    stereotype 	"include"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Selecionar disciplina"
+		    quidu      	"3AE963D300EA")))
+	(object UseCase "Indeferir pré-inscrição"
+	    quid       	"3C3B4A60008D")
+	(object UseCase "Requerer aproveitamento de disciplina"
+	    quid       	"3C6BA1DB02A6")
+	(object UseCase "Relatar resultado de requerimento de aproveitamento de disciplina"
+	    quid       	"3C6BA25F013D"
+	    documentation 	"Deverá ser informada a disciplina aproveitada e o conceito pertinente.")
+	(object Association "$UNNAMED$0"
+	    quid       	"3B042B57011F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3B042B58003A"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Cadastrar oferta de disciplina"
+		    quidu      	"3B042B440399"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"3B042B58003C"
+		    supplier   	"Use Case View::Atores::Coordenação de Programa"
+		    quidu      	"30FCE69F0172")))
+	(object Association "$UNNAMED$3"
+	    quid       	"3B042B5A02E6"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"3B042B5B01F7"
+		    supplier   	"Logical View::Arquitetura layered::Network Services::E-mail Server"
+		    quidu      	"3B03B4050325"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"3B042B5B020B"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Cadastrar oferta de disciplina"
+		    quidu      	"3B042B440399")))
+	(object Association "$UNNAMED$6"
+	    quid       	"3B042DD203A3"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"3B042DD30232"
+		    supplier   	"Use Case View::NEGOCIO::Ler e-mail"
+		    quidu      	"3B03B53A0094"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"3B042DD3023C"
+		    supplier   	"Logical View::Arquitetura layered::Network Services::E-mail Server"
+		    quidu      	"3B03B4050325"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$9"
+	    quid       	"3B042DD50343"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$10"
+		    quid       	"3B042DD60345"
+		    supplier   	"Use Case View::NEGOCIO::Ler e-mail"
+		    quidu      	"3B03B53A0094"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$11"
+		    quid       	"3B042DD6034F"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$12"
+	    quid       	"3B042E3D007C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"3B042E3E034E"
+		    supplier   	"Use Case View::NEGOCIO::Ler e-mail"
+		    quidu      	"3B03B53A0094"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$14"
+		    quid       	"3B042E3E0350"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$15"
+	    quid       	"3B042E4300C1"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$16"
+		    quid       	"3B042E4401B3"
+		    supplier   	"Logical View::Arquitetura layered::Network Services::E-mail Server"
+		    quidu      	"3B03B4050325"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$17"
+		    quid       	"3B042E4401BD"
+		    supplier   	"Use Case View::NEGOCIO::Ler e-mail"
+		    quidu      	"3B03B53A0094")))
+	(object Association "$UNNAMED$18"
+	    quid       	"3B2502010256"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$19"
+		    quid       	"3B2502020081"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Consultar extrato acadêmico"
+		    quidu      	"3ACB271B0149"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$20"
+		    quid       	"3B2502020083"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$21"
+	    quid       	"3B250216030B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$22"
+		    quid       	"3B2502180187"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Editar conceito e freqüência"
+		    quidu      	"3ACB24AC0048"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$23"
+		    quid       	"3B2502180191"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$24"
+	    quid       	"3B2502C3016F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$25"
+		    quid       	"3B2502C401FD"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Selecionar disciplina"
+		    quidu      	"3AE963D300EA"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$26"
+		    quid       	"3B2502C401FF"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$27"
+	    quid       	"3B2502C900F5"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$28"
+		    quid       	"3B2502CA015B"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Editar programa de disciplina"
+		    quidu      	"3ACB23340084"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$29"
+		    quid       	"3B2502CA0165"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$30"
+	    quid       	"3B2502CD0001"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$31"
+		    quid       	"3B2502CE0002"
+		    supplier   	"Use Case View::Casos de Uso::calendar::Editar calendário geral"
+		    quidu      	"3AD88CC20244"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$32"
+		    quid       	"3B2502CE000D"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$33"
+	    quid       	"3C3B441C014F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$34"
+		    quid       	"3C3B441D01BF"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Efetuar pré-inscrição em disciplina"
+		    quidu      	"3C3B440B0263"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$35"
+		    quid       	"3C3B441D01C1"
+		    supplier   	"Use Case View::Atores::Aluno"
+		    quidu      	"30E2A0840092")))
+	(object Association "Orientador"
+	    quid       	"3C3B447F0328"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$36"
+		    quid       	"3C3B448003B6"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Indeferir pré-inscrição"
+		    quidu      	"3C3B4A60008D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$37"
+		    quid       	"3C3B448003C0"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$38"
+	    quid       	"3C3B49BB0393"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$39"
+		    quid       	"3C3B49BD004D"
+		    supplier   	"Use Case View::Atores::E-mail"
+		    quidu      	"3C3B49B203D6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$40"
+		    quid       	"3C3B49BD0057"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Efetuar pré-inscrição em disciplina"
+		    quidu      	"3C3B440B0263")))
+	(object Association "Responsável disciplina"
+	    quid       	"3C3B49E901E1"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$41"
+		    quid       	"3C3B49EA02E6"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Indeferir pré-inscrição"
+		    quidu      	"3C3B4A60008D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$42"
+		    quid       	"3C3B49EA02E8"
+		    supplier   	"Use Case View::Atores::Participante"
+		    quidu      	"30E2B98E01E3")))
+	(object Association "$UNNAMED$43"
+	    quid       	"3C3B4AE401A5"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$44"
+		    quid       	"3C3B4AE5026F"
+		    supplier   	"Use Case View::Atores::E-mail"
+		    quidu      	"3C3B49B203D6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$45"
+		    quid       	"3C3B4AE50283"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Indeferir pré-inscrição"
+		    quidu      	"3C3B4A60008D")))
+	(object Association "$UNNAMED$46"
+	    quid       	"3C6BA1F3030E"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$47"
+		    quid       	"3C6BA1F401BB"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Requerer aproveitamento de disciplina"
+		    quidu      	"3C6BA1DB02A6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$48"
+		    quid       	"3C6BA1F401BD"
+		    supplier   	"Use Case View::Atores::Aluno"
+		    quidu      	"30E2A0840092")))
+	(object Association "$UNNAMED$49"
+	    quid       	"3C6BA27C006C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$50"
+		    quid       	"3C6BA27C0379"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Relatar resultado de requerimento de aproveitamento de disciplina"
+		    quidu      	"3C6BA25F013D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$51"
+		    quid       	"3C6BA27C0383"
+		    supplier   	"Use Case View::Atores::Coordenação de Programa"
+		    quidu      	"30FCE69F0172")))
+	(object Association "$UNNAMED$52"
+	    quid       	"3B053B9903B6"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$53"
+		    quid       	"3B053B9B0032"
+		    supplier   	"Use Case View::Atores::E-mail"
+		    quidu      	"3C3B49B203D6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$54"
+		    quid       	"3B053B9B0064"
+		    supplier   	"Use Case View::Casos de Uso::disciplinas::Cadastrar oferta de disciplina"
+		    quidu      	"3B042B440399"))))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "disciplinas"
+	    quid       	"3AD8797D01DD"
+	    title      	"disciplinas"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object NoteView @1
+		    location   	(1918, 193)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1736, 124)
+			nlines     	3
+			max_width  	328
+			label      	"Só terá acesso ao próprio extrato.")
+		    fill_color 	16777215
+		    width      	388
+		    height     	150)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Consultar disciplina" @2
+		    location   	(1696, 1633)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1696, 1771)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Consultar disciplina")
+		    icon_style 	"Icon"
+		    quidu      	"3AD87C220399")
+		(object UseCaseView "Use Case View::Casos de Uso::discentes::Selecionar aluno" @3
+		    location   	(216, 175)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(216, 313)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Selecionar aluno")
+		    icon_style 	"Icon"
+		    quidu      	"3AE89CDB0306"
+		    height     	118)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Requerer aproveitamento de disciplina" @4
+		    location   	(2056, 414)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(2056, 552)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Requerer aproveitamento de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C6BA1DB02A6"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Atores::Aluno" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1523, 224)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1523, 384)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Aluno")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30E2A0840092"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @6
+		    stereotype 	TRUE
+		    client     	@1
+		    supplier   	@5
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$46" @7
+		    location   	(1762, 307)
+		    stereotype 	TRUE
+		    quidu      	"3C6BA1F3030E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$48" @8
+			    Parent_View 	@7
+			    location   	(631, -1736)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @9
+				Parent_View 	@8
+				location   	(1605, 296)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA1F401BD"
+			    client     	@7
+			    supplier   	@5
+			    line_style 	0)
+			(object RoleView "$UNNAMED$47" @10
+			    Parent_View 	@7
+			    location   	(631, -1736)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @11
+				Parent_View 	@10
+				location   	(1895, 399)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA1F401BB"
+			    client     	@7
+			    supplier   	@4
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Casos de Uso::calendar::Editar calendário geral" @12
+		    location   	(299, 1115)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(299, 1253)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Editar calendário geral")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3AD88CC20244")
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Selecionar disciplina" @13
+		    location   	(972, 1151)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(972, 1289)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Selecionar disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3AE963D300EA"
+		    height     	118)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Editar conceito e freqüência" @14
+		    location   	(362, 687)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(362, 825)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	2712
+			justify    	0
+			label      	"Editar conceito e freqüência")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3ACB24AC0048"
+		    height     	118)
+		(object DependencyView "" @15
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @16
+			Parent_View 	@15
+			location   	(198, 511)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.500000
+			height     	108
+			orientation 	0)
+		    quidu      	"3B053AF80244"
+		    client     	@14
+		    supplier   	@3
+		    line_style 	0)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Editar programa de disciplina" @17
+		    location   	(554, 352)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(554, 490)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	3360
+			justify    	0
+			label      	"Editar programa de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3ACB23340084"
+		    height     	118)
+		(object DependencyView "" @18
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @19
+			Parent_View 	@18
+			location   	(883, 753)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.500000
+			height     	108
+			orientation 	0)
+		    quidu      	"3B053B2702F8"
+		    client     	@17
+		    supplier   	@13
+		    line_style 	0)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Consultar extrato acadêmico" @20
+		    location   	(968, 221)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(968, 359)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	1530
+			justify    	0
+			label      	"Consultar extrato acadêmico")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3ACB271B0149")
+		(object AssociationViewNew "" @21
+		    location   	(1270, 220)
+		    stereotype 	TRUE
+		    quidu      	"3B2E52E4028F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @22
+			    Parent_View 	@21
+			    location   	(-314, -292)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @23
+				Parent_View 	@22
+				location   	(1425, 179)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2E52E500A5"
+			    client     	@21
+			    supplier   	@5
+			    line_style 	0)
+			(object RoleView "" @24
+			    Parent_View 	@21
+			    location   	(-314, -292)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @25
+				Parent_View 	@24
+				location   	(1115, 179)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2E52E5009B"
+			    client     	@21
+			    supplier   	@20
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Atores::Participante" @26
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(968, 687)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(968, 847)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Participante")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30E2B98E01E3"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$21" @27
+		    location   	(688, 687)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B250216030B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$22" @28
+			    Parent_View 	@27
+			    location   	(400, 303)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502180187"
+			    client     	@27
+			    supplier   	@14
+			    line_style 	0)
+			(object RoleView "$UNNAMED$23" @29
+			    Parent_View 	@27
+			    location   	(400, 303)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502180191"
+			    client     	@27
+			    supplier   	@26
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$27" @30
+		    location   	(831, 575)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B2502C900F5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$28" @31
+			    Parent_View 	@30
+			    location   	(-289, 431)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502CA015B"
+			    client     	@30
+			    supplier   	@17
+			    line_style 	0)
+			(object RoleView "$UNNAMED$29" @32
+			    Parent_View 	@30
+			    location   	(-289, 431)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502CA0165"
+			    client     	@30
+			    supplier   	@26
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$30" @33
+		    location   	(647, 888)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B2502CD0001"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$31" @34
+			    Parent_View 	@33
+			    location   	(-473, 744)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502CE0002"
+			    client     	@33
+			    supplier   	@12
+			    line_style 	0)
+			(object RoleView "$UNNAMED$32" @35
+			    Parent_View 	@33
+			    location   	(-473, 744)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502CE000D"
+			    client     	@33
+			    supplier   	@26
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$24" @36
+		    location   	(968, 981)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B2502C3016F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$25" @37
+			    Parent_View 	@36
+			    location   	(-152, 837)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502C401FD"
+			    client     	@36
+			    supplier   	@13
+			    line_style 	0)
+			(object RoleView "$UNNAMED$26" @38
+			    Parent_View 	@36
+			    location   	(-152, 837)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502C401FF"
+			    client     	@36
+			    supplier   	@26
+			    line_style 	0)))
+		(object AssociationViewNew "" @39
+		    location   	(831, 575)
+		    stereotype 	TRUE
+		    quidu      	"3ACB234C031D"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @40
+			    Parent_View 	@39
+			    location   	(-97, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @41
+				Parent_View 	@40
+				location   	(869, 658)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB234D029E"
+			    client     	@39
+			    supplier   	@26
+			    line_style 	0)
+			(object RoleView "" @42
+			    Parent_View 	@39
+			    location   	(-97, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @43
+				Parent_View 	@42
+				location   	(745, 559)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB234D029C"
+			    client     	@39
+			    supplier   	@17
+			    line_style 	0)))
+		(object AssociationViewNew "" @44
+		    location   	(688, 687)
+		    stereotype 	TRUE
+		    quidu      	"3ACB24F10098"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @45
+			    Parent_View 	@44
+			    location   	(368, 15)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @46
+				Parent_View 	@45
+				location   	(862, 646)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB24F20069"
+			    client     	@44
+			    supplier   	@26
+			    line_style 	0)
+			(object RoleView "" @47
+			    Parent_View 	@44
+			    location   	(368, 15)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @48
+				Parent_View 	@47
+				location   	(514, 646)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB24F20067"
+			    client     	@44
+			    supplier   	@14
+			    line_style 	0)))
+		(object AssociationViewNew "" @49
+		    location   	(831, 575)
+		    stereotype 	TRUE
+		    quidu      	"3ACB25C3028E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @50
+			    Parent_View 	@49
+			    location   	(-97, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @51
+				Parent_View 	@50
+				location   	(869, 658)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB25C600D2"
+			    client     	@49
+			    supplier   	@26
+			    line_style 	0)
+			(object RoleView "" @52
+			    Parent_View 	@49
+			    location   	(-97, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @53
+				Parent_View 	@52
+				location   	(745, 559)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB25C600D0"
+			    client     	@49
+			    supplier   	@17
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$18" @54
+		    location   	(968, 494)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B2502010256"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$19" @55
+			    Parent_View 	@54
+			    location   	(-824, -786)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502020081"
+			    client     	@54
+			    supplier   	@20
+			    line_style 	0)
+			(object RoleView "$UNNAMED$20" @56
+			    Parent_View 	@54
+			    location   	(-824, -786)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B2502020083"
+			    client     	@54
+			    supplier   	@26
+			    line_style 	0)))
+		(object AssociationViewNew "" @57
+		    location   	(968, 494)
+		    stereotype 	TRUE
+		    quidu      	"3ACB28EC009D"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @58
+			    Parent_View 	@57
+			    location   	(-504, -178)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @59
+				Parent_View 	@58
+				location   	(927, 583)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB28EC03DE"
+			    client     	@57
+			    supplier   	@26
+			    line_style 	0)
+			(object RoleView "" @60
+			    Parent_View 	@57
+			    location   	(-504, -178)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @61
+				Parent_View 	@60
+				location   	(927, 405)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3ACB28EC03DC"
+			    client     	@57
+			    supplier   	@20
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Relatar resultado de requerimento de aproveitamento de disciplina" @62
+		    location   	(340, 2093)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@62
+			location   	(340, 2231)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Relatar resultado de requerimento de aproveitamento de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C6BA25F013D"
+		    height     	118)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Indeferir pré-inscrição" @63
+		    location   	(1742, 686)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@63
+			location   	(1742, 824)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Indeferir pré-inscrição")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C3B4A60008D"
+		    height     	118)
+		(object AssociationViewNew "Orientador" @64
+		    location   	(1328, 685)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @65
+			Parent_View 	@64
+			location   	(1328, 626)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	TRUE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Orientador"
+			pctDist    	0.500000
+			height     	60
+			orientation 	0)
+		    stereotype 	TRUE
+		    quidu      	"3C3B447F0328"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$37" @66
+			    Parent_View 	@64
+			    location   	(-973, -8)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @67
+				Parent_View 	@66
+				location   	(1086, 644)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B448003C0"
+			    client     	@64
+			    supplier   	@26
+			    line_style 	0)
+			(object RoleView "$UNNAMED$36" @68
+			    Parent_View 	@64
+			    location   	(-973, -8)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @69
+				Parent_View 	@68
+				location   	(1570, 644)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B448003B6"
+			    client     	@64
+			    supplier   	@63
+			    line_style 	0)))
+		(object AssociationViewNew "Responsável disciplina" @70
+		    location   	(1475, 996)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @71
+			Parent_View 	@70
+			location   	(1578, 1041)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	TRUE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Responsável disciplina"
+			pctDist    	2.233333
+			height     	45
+			orientation 	1)
+		    stereotype 	TRUE
+		    quidu      	"3C3B49E901E1"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$42" @72
+			    Parent_View 	@70
+			    location   	(-826, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @73
+				Parent_View 	@72
+				location   	(1177, 781)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49EA02E8"
+			    client     	@70
+			    supplier   	@26
+			    vertices   	(list Points
+				(1475, 996)
+				(1415, 996)
+				(1074, 759))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$41" @74
+			    Parent_View 	@70
+			    location   	(-826, 303)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @75
+				Parent_View 	@74
+				location   	(1699, 930)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49EA02E6"
+			    client     	@70
+			    supplier   	@63
+			    vertices   	(list Points
+				(1475, 996)
+				(1740, 996)
+				(1739, 847))
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Atores::Coordenação de Programa" @76
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(344, 1631)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@76
+			location   	(344, 1791)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Coordenação de Programa")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30FCE69F0172"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$49" @77
+		    location   	(340, 1957)
+		    stereotype 	TRUE
+		    quidu      	"3C6BA27C006C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$51" @78
+			    Parent_View 	@77
+			    location   	(-2321, 1804)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @79
+				Parent_View 	@78
+				location   	(382, 1896)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA27C0383"
+			    client     	@77
+			    supplier   	@76
+			    line_style 	0)
+			(object RoleView "$UNNAMED$50" @80
+			    Parent_View 	@77
+			    location   	(-2321, 1804)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @81
+				Parent_View 	@80
+				location   	(382, 2018)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA27C0379"
+			    client     	@77
+			    supplier   	@62
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Atores::E-mail" @82
+		    ShowCompartmentStereotypes 	TRUE
+		    SuppressOperation 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1905, 1350)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@82
+			location   	(1905, 1510)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"E-mail")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"3C3B49B203D6"
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$43" @83
+		    location   	(1831, 1057)
+		    stereotype 	TRUE
+		    quidu      	"3C3B4AE401A5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$45" @84
+			    Parent_View 	@83
+			    location   	(828, -1046)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @85
+				Parent_View 	@84
+				location   	(1750, 900)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    quidu      	"3C3B4AE50283"
+			    client     	@83
+			    supplier   	@63
+			    line_style 	0)
+			(object RoleView "$UNNAMED$44" @86
+			    Parent_View 	@83
+			    location   	(828, -1046)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @87
+				Parent_View 	@86
+				location   	(1833, 1236)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    quidu      	"3C3B4AE5026F"
+			    client     	@83
+			    supplier   	@82
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Cadastrar oferta de disciplina" @88
+		    location   	(970, 1631)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@88
+			location   	(970, 1769)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Cadastrar oferta de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3B042B440399"
+		    height     	118)
+		(object DependencyView "" @89
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @90
+			Parent_View 	@89
+			location   	(1103, 1462)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.423963
+			height     	133
+			orientation 	1)
+		    quidu      	"3B25027900E6"
+		    client     	@88
+		    supplier   	@13
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @91
+		    location   	(630, 1631)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B042B57011F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @92
+			    Parent_View 	@91
+			    location   	(22, -49)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B042B58003A"
+			    client     	@91
+			    supplier   	@88
+			    line_style 	0)
+			(object RoleView "$UNNAMED$2" @93
+			    Parent_View 	@91
+			    location   	(22, -49)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3B042B58003C"
+			    client     	@91
+			    supplier   	@76
+			    line_style 	0)))
+		(object DependencyView "" @94
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @95
+			Parent_View 	@94
+			location   	(1326, 1577)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.488189
+			height     	54
+			orientation 	0)
+		    quidu      	"3B052F9E0136"
+		    client     	@88
+		    supplier   	@2
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$52" @96
+		    location   	(1462, 1480)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3B053B9903B6"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$53" @97
+			    Parent_View 	@96
+			    location   	(492, -151)
+			    stereotype 	TRUE
+			    quidu      	"3B053B9B0032"
+			    client     	@96
+			    supplier   	@82
+			    line_style 	0)
+			(object RoleView "$UNNAMED$54" @98
+			    Parent_View 	@96
+			    location   	(492, -151)
+			    stereotype 	TRUE
+			    quidu      	"3B053B9B0064"
+			    client     	@96
+			    supplier   	@88
+			    line_style 	0)))))
+	(object UseCaseDiagram "inscrição"
+	    quid       	"3C3B4A050231"
+	    title      	"inscrição"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	1194
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Use Case View::Atores::Aluno" @99
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(761, 812)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@99
+			location   	(761, 972)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Aluno")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30E2A0840092"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Efetuar pré-inscrição em disciplina" @100
+		    location   	(755, 1223)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@100
+			location   	(755, 1361)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Efetuar pré-inscrição em disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C3B440B0263"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$33" @101
+		    location   	(755, 1101)
+		    stereotype 	TRUE
+		    quidu      	"3C3B441C014F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$35" @102
+			    Parent_View 	@101
+			    location   	(-1151, 67)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @103
+				Parent_View 	@102
+				location   	(715, 1050)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B441D01C1"
+			    client     	@101
+			    supplier   	@99
+			    line_style 	0)
+			(object RoleView "$UNNAMED$34" @104
+			    Parent_View 	@101
+			    location   	(-1151, 67)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @105
+				Parent_View 	@104
+				location   	(714, 1152)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B441D01BF"
+			    client     	@101
+			    supplier   	@100
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Atores::E-mail" @106
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1383, 1225)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@106
+			location   	(1383, 1385)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"E-mail")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"3C3B49B203D6"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$38" @107
+		    location   	(1093, 1222)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3C3B49BB0393"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$39" @108
+			    Parent_View 	@107
+			    location   	(-813, 188)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49BD004D"
+			    client     	@107
+			    supplier   	@106
+			    line_style 	0)
+			(object RoleView "$UNNAMED$40" @109
+			    Parent_View 	@107
+			    location   	(-813, 188)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49BD0057"
+			    client     	@107
+			    supplier   	@100
+			    line_style 	0)))
+		(object ClassView "Class" "Use Case View::Atores::Participante" @110
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(740, 1738)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@110
+			location   	(740, 1898)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Participante")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30E2B98E01E3"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Indeferir pré-inscrição" @111
+		    location   	(1387, 1735)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@111
+			location   	(1387, 1873)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Indeferir pré-inscrição")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C3B4A60008D"
+		    height     	118)
+		(object AssociationViewNew "Orientador" @112
+		    location   	(1036, 1734)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @113
+			Parent_View 	@112
+			location   	(1036, 1675)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	TRUE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Orientador"
+			pctDist    	0.500000
+			height     	60
+			orientation 	0)
+		    stereotype 	TRUE
+		    quidu      	"3C3B447F0328"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$37" @114
+			    Parent_View 	@112
+			    location   	(-870, 700)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @115
+				Parent_View 	@114
+				location   	(846, 1693)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B448003C0"
+			    client     	@112
+			    supplier   	@110
+			    line_style 	0)
+			(object RoleView "$UNNAMED$36" @116
+			    Parent_View 	@112
+			    location   	(-870, 700)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @117
+				Parent_View 	@116
+				location   	(1226, 1693)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B448003B6"
+			    client     	@112
+			    supplier   	@111
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$43" @118
+		    location   	(1383, 1563)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3C3B4AE401A5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$44" @119
+			    Parent_View 	@118
+			    location   	(-427, -155)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B4AE5026F"
+			    client     	@118
+			    supplier   	@106
+			    line_style 	0)
+			(object RoleView "$UNNAMED$45" @120
+			    Parent_View 	@118
+			    location   	(-427, -155)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B4AE50283"
+			    client     	@118
+			    supplier   	@111
+			    line_style 	0)))
+		(object AssociationViewNew "Responsável disciplina" @121
+		    location   	(1097, 2166)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @122
+			Parent_View 	@121
+			location   	(1045, 2231)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	TRUE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Responsável disciplina"
+			pctDist    	-0.366667
+			height     	65
+			orientation 	1)
+		    stereotype 	TRUE
+		    quidu      	"3C3B49E901E1"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$42" @123
+			    Parent_View 	@121
+			    location   	(-809, 1132)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @124
+				Parent_View 	@123
+				location   	(782, 2075)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49EA02E8"
+			    client     	@121
+			    supplier   	@110
+			    vertices   	(list Points
+				(1097, 2166)
+				(740, 2166)
+				(740, 1963))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$41" @125
+			    Parent_View 	@121
+			    location   	(-809, 1132)
+			    font       	(object Font
+				size       	9
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @126
+				Parent_View 	@125
+				location   	(1346, 2009)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3C3B49EA02E6"
+			    client     	@121
+			    supplier   	@111
+			    vertices   	(list Points
+				(1097, 2166)
+				(1387, 2166)
+				(1387, 1896))
+			    line_style 	0)))
+		(object NoteView @127
+		    location   	(1988, 1735)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@127
+			location   	(1750, 1613)
+			nlines     	5
+			max_width  	440
+			label      	"Tanto o orientador quanto o professor responsável pela disciplina poderão indeferir a pré-inscrição em momentos distintos.")
+		    fill_color 	16777215
+		    width      	500
+		    height     	256)
+		(object AttachView "" @128
+		    stereotype 	TRUE
+		    client     	@111
+		    supplier   	@127
+		    line_style 	0)
+		(object Label @129
+		    location   	(666, 384)
+		    font       	(object Font
+			size       	16
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    nlines     	1
+		    max_width  	1037
+		    label      	"INSCRIÇÃO EM DISCIPLINA")
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Selecionar disciplina" @130
+		    location   	(318, 1631)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@130
+			location   	(318, 1769)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Selecionar disciplina")
+		    icon_style 	"Icon"
+		    quidu      	"3AE963D300EA"
+		    height     	118)
+		(object DependencyView "" @131
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	(object SegLabel @132
+			Parent_View 	@131
+			location   	(646, 1509)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.130569
+			height     	135
+			orientation 	0)
+		    quidu      	"3B053C270000"
+		    client     	@100
+		    supplier   	@130
+		    line_style 	0)))
+	(object UseCaseDiagram "aproveitamento"
+	    quid       	"3C6BA19E01F4"
+	    title      	"aproveitamento"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Requerer aproveitamento de disciplina" @133
+		    location   	(1053, 912)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@133
+			location   	(1053, 1050)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Requerer aproveitamento de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C6BA1DB02A6"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Atores::Aluno" @134
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(437, 912)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@134
+			location   	(437, 1072)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Aluno")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30E2A0840092"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$46" @135
+		    location   	(717, 912)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3C6BA1F3030E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$47" @136
+			    Parent_View 	@135
+			    location   	(-61, -1)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA1F401BB"
+			    client     	@135
+			    supplier   	@133
+			    line_style 	0)
+			(object RoleView "$UNNAMED$48" @137
+			    Parent_View 	@135
+			    location   	(-61, -1)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA1F401BD"
+			    client     	@135
+			    supplier   	@134
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Casos de Uso::disciplinas::Relatar resultado de requerimento de aproveitamento de disciplina" @138
+		    location   	(1184, 1534)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@138
+			location   	(1184, 1672)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Relatar resultado de requerimento de aproveitamento de disciplina")
+		    icon_style 	"Icon"
+		    fill_color 	16777215
+		    quidu      	"3C6BA25F013D"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Atores::Coordenação de Programa" @139
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(489, 1534)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	TRUE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@139
+			location   	(489, 1694)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	362
+			justify    	0
+			label      	"Coordenação de Programa")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    quidu      	"30FCE69F0172"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$49" @140
+		    location   	(810, 1534)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    stereotype 	TRUE
+		    quidu      	"3C6BA27C006C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$50" @141
+			    Parent_View 	@140
+			    location   	(321, 0)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA27C0379"
+			    client     	@140
+			    supplier   	@138
+			    line_style 	0)
+			(object RoleView "$UNNAMED$51" @142
+			    Parent_View 	@140
+			    location   	(321, 0)
+			    stereotype 	TRUE
+			    quidu      	"3C6BA27C0383"
+			    client     	@140
+			    supplier   	@139
+			    line_style 	0)))))))

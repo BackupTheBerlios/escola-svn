@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="discpln">
+
+<uc nome="Editar conceito e freqüência">
+<resumo>
+O docente responsável por uma disciplina ou, de forma abrangente, 
+por uma atividade acadêmica associada a créditos e suscetível à aprovação, deverá fornecer o conceito e a freqüência de cada aluno ao longo da execução da disciplina. 
+</resumo>
+</uc>
+
+<uc nome="Consultar extrato acadêmico">
+<resumo>
+Várias informações sobre a vida acadêmica dos alunos poderão ser consultadas, esporadicamente, como mecanismo de acompanhamento. Os próprios alunos também terão acesso a tais informações que incluem: disciplinas cursadas, resultados obtidos, freqüências, data limite para exame de qualificação (se for o caso), data de previsão de defesa,
+data de defesa, resultado de defesa e outras. 
+</resumo>
+</uc>
+
+<uc nome="Editar programa de disciplina">
+<resumo>
+Toda disciplina possui uma ementa, conforme consta no projeto do programa de pós-graduação. Contudo, cada “edição” de uma disciplina pode possuir um programa diferente dos anteriores.
+O docente responsável por ministrar uma dada disciplina terá acesso a recursos do sistema que permitirão fornecer todos os detalhes do programa da disciplina.
+</resumo>
+</uc>
+
+<uc nome="Consultar disciplina">
+<resumo>
+Há um considerável conjunto de disciplinas para cada programa de pós-graduação. Este caso de uso permite identificar uma disciplina e os dados correspondentes
+para um dado programa.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar oferta de disciplina">
+<resumo>
+Após decidida a distribuição de disciplinas a serem ofertadas, em um dado semestre,
+o resultado deverá ser cadastrado no sistema. Este cadastro exige a identificação do participante responsável para cada uma destas disciplinas. Este caso de uso ainda envia, automaticamente, um e-mail para o participante, lembrando-o de que o cadastro do programa da disciplina já poderá ser realizado. Para este cadastro também deverão ser fornecidas as quantidades de vagas para alunos do curso e aquela para alunos externos, além do período em que a disciplina será ofertada.
+</resumo>
+</uc>
+
+<uc nome="Selecionar disciplina">
+<resumo>
+A realização de algumas atividades exige que a meta de seleção de uma disciplina seja efetuada.
+Por exemplo, ao inscrever um aluno em uma disciplina é necessário que a disciplina seja selecionada. O presente caso de uso descreve a interação necessária para a obtenção desta meta. 
+</resumo>
+</uc>
+
+<uc nome="Avaliação de docente">
+<resumo>
+Todo aluno de uma dada disciplina poderá, durante a execução da mesma, fornecer informações pertinentes ao andamento da disciplina e
+competência do docente que a ministra.
+</resumo>
+</uc>
+
+<uc nome="Consultar avaliações de docentes">
+<resumo>
+As avaliações realizadas pelos alunos poderão ser consultadas pelos respectivos docentes, pelas coordenações correspondentes e pela administração superior. 
+Ou seja, se se trata de docente, então apenas aquelas avaliações pertinentes às disciplinas que ministrou estão disponíveis. Se se trata da coordenação, então todas as avaliações das disciplinas do programa poderão ser consultadas. A administração superior terá acesso a todas as avaliações realizadas. É importante ressaltar que não será possível identificar a autoria das avaliações.
+</resumo>
+</uc>
+
+<uc nome="Efetuar pré-inscrição em disciplina">
+<resumo>
+Periodicamente, conforme a freqüência do curso e disciplinas, o discente efetuará a sua pré-inscrição em uma ou mais disciplinas.
+Esta pré-inscrição só terá efeito, ou seja, transformar-se-á em inscrição na disciplina caso o aval do orientador seja dado e, posteriormente, não houver nenhum indeferimento do participante responsável pela disciplina. Um e-mail é enviado para o aluno e para o respectivo orientador. Em ambos os casos é apresentada a lista de disciplina nas quais o aluno se pré-inscreveu.
+</resumo>
+</uc>
+
+<uc nome="Indeferir pré-inscrição">
+<resumo>
+A pré-inscrição efetuada por candidato poderá ser indeferida tanto pelo orientador quanto pelo docente responsável pela disciplina em questão.
+</resumo>
+</uc>
+
+<uc nome="Requerer aproveitamento de disciplina">
+<resumo>
+O aluno deverá informar o período, o nome e a instituição de ensino superior (e departamento) onde a disciplina em questão foi realizada. Cada coordenação deve estabelecer claramente quais os documentos necessários para este tipo de requerimento. Dois deles são obrigatórios: programa e ementa da disciplina em questão e declaração do programa no qual a disciplina foi realizada. Esta declaração deve conter o título da disciplina, 
+conceito, freqüência e período pertinente. 
+</resumo>
+</uc>
+
+</ers>

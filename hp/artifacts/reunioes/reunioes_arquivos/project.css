@@ -1,0 +1,105 @@
+BODY {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: white
+}
+H1 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H1.banner {
+	BACKGROUND-POSITION: 0% 50%; BACKGROUND-ATTACHMENT: scroll; COLOR: #ffffff; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Arial, sans-serif; BACKGROUND-COLOR: #000000; TEXT-ALIGN: center
+}
+H2 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H2.banner {
+	BACKGROUND-POSITION: 0% 50%; BACKGROUND-ATTACHMENT: scroll; COLOR: #ffffff; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Arial, sans-serif; BACKGROUND-COLOR: #008800; TEXT-ALIGN: center
+}
+H3 {
+	FONT-FAMILY: Arial, sans-serif
+}
+H4 {
+	MARGIN-LEFT: 0px; FONT-FAMILY: Arial, sans-serif
+}
+H5 {
+	MARGIN-LEFT: 0px; FONT-FAMILY: Arial, sans-serif
+}
+H6 {
+	MARGIN-LEFT: 0px; FONT-FAMILY: Arial, sans-serif
+}
+P {
+	MARGIN-LEFT: 0px
+}
+P.exampleheading {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-LEFT: 15px; FONT-FAMILY: Arial, sans-serif
+}
+P.example {
+	MARGIN-LEFT: 70px
+}
+P.picturetext {
+	FONT-SIZE: 80%; MARGIN-LEFT: 70px; MARGIN-RIGHT: 50px; FONT-FAMILY: sans-serif; TEXT-ALIGN: center
+}
+P.definition {
+	BORDER-RIGHT: black thin double; BORDER-TOP: black thin double; BACKGROUND: #ffffcc; BORDER-LEFT: black thin double; BORDER-BOTTOM: black thin double
+}
+P.tableheading {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 0px
+}
+P.tabletext {
+	MARGIN-LEFT: 0px
+}
+P.comment {
+	COLOR: #000000
+}
+OL {
+	MARGIN-LEFT: 45px
+}
+OL OL {
+	MARGIN-LEFT: 23px
+}
+OL OL OL {
+	MARGIN-LEFT: 23px
+}
+OL.alpha {
+	LIST-STYLE-TYPE: lower-alpha
+}
+UL LI {
+	LIST-STYLE-IMAGE: url(images/bullet1.gif)
+}
+UL UL LI {
+	LIST-STYLE-IMAGE: url(images/bullet2.gif)
+}
+UL UL UL LI {
+	LIST-STYLE-IMAGE: url(images/bullet3.gif)
+}
+UL.plus {
+	
+}
+UL.minus {
+	
+}
+UL.ck {
+	LIST-STYLE-IMAGE: url(images/checkbox.gif)
+}
+TABLE {
+	
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+TD UL {
+	MARGIN-LEFT: 20px
+}
+P.paramname {
+	TEXT-ALIGN: left
+}
+P.paramexample {
+	COLOR: red; TEXT-ALIGN: left
+}
+P.paramdescription {
+	TEXT-ALIGN: left
+}
+FONT.paramexample {
+	COLOR: red
+}
+FONT.imageexample {
+	FONT-SIZE: smaller
+}

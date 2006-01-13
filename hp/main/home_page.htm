@@ -1,0 +1,381 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../css/project.css">
+<title>SISPG</title>
+<base target="_self">
+
+</head>
+
+<body BGCOLOR="#FFFFFF" onLoad="startclock()" link="#000080">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- 
+/* This script and all others are copyright (c) 1996 by Tomer Shiran and Yehuda Shiran. They will all be posted in
+our upcoming book on JavaScript, along with many others. */
+var Temp2;
+var timerID = null;
+var timerRunning = false;
+
+function showtime() {
+}
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock () {
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+
+}
+
+function startclock () {
+// Make sure the clock is stopped
+stopclock();
+showtime();
+
+}
+
+// -->
+
+</script>
+<!-- END OF SCRIPT -->
+
+
+<h1 class="banner">Sistema<a name="top"> Acadêmico da
+Pós-Graduação</a></h1>
+<table border="0" width="95%" cellspacing="1" height="1">
+  <tr>
+    <td width="24%" align="center" height="1">
+      <font face="Arial" size="2">Boas-vindas!<br>
+      Visão geral do SISPG</font>
+    </td>
+    <td width="25%" align="center" height="1"><font face="Arial" size="2">Fatos
+      relevantes ao longo do desenvolvimento.</font>
+    </td>
+    <td width="23%" align="center" height="1"><font face="Arial" size="2">Respostas
+      para perguntas freqüentes.</font>
+    </td>
+    <td width="24%" align="center" height="1">
+      <font face="Arial" size="2">Sua oportunidade de sugerir, criticar, ...</font>
+    </td>
+    <td width="29%" align="center" valign="middle" height="60"></td>
+  </tr>
+  <tr>
+    <td width="24%" align="center" height="1" bgcolor="#EFFFDF">
+      <p><a href="../bem-vindo.htm"><font face="Arial Black">Recepção</font></a>
+    </td>
+    <td width="25%" align="center" height="1" bgcolor="#EFFFDF">
+      <p>
+      <a href="../news/news_archive.htm"><font face="Arial Black">Notícias</font></a>
+      </p>
+    </td>
+    <td width="23%" align="center" height="1" bgcolor="#EFFFDF">
+      <p>
+      <a href="../faq.htm"><font face="Arial Black">Dúvidas</font></a>
+      </p>
+    </td>
+    <td width="24%" align="center" height="1" bgcolor="#EFFFDF">
+      <p>
+      <a href="../sugestoes/sugestoes.htm"><font face="Arial Black">Participe!</font></a>
+      </p>
+    </td>
+    <td width="29%" align="center" rowspan="2" valign="middle" height="1"></td>
+  </tr>
+  <tr>
+    <td width="24%" align="center" height="24">
+    </td>
+    <td width="25%" align="center" height="24">
+    </td>
+    <td width="47%" align="center" height="24" colspan="2">
+      </td>
+  </tr>
+  <tr>
+    <td width="24%" align="center" height="24">
+    </td>
+    <td width="25%" align="center" height="24">
+    </td>
+    <td width="47%" align="center" height="24" colspan="2">
+      </td>
+  </tr>
+  <tr>
+    <td width="24%" align="center" height="70">
+      <font face="Arial Black"><br>
+      Protótipo<br>
+      corrente</font>
+    </td>
+    <td width="25%" align="center" height="70">
+      <a href="../../ihc/ihc0/index.htm"><img border="0" src="../images/bug.gif" width="100" height="80"></a>
+    </td>
+    <td width="47%" align="center" height="70" colspan="2">
+      </td>
+  </tr>
+</table>
+<hr>
+<h4><a name="calendar"></a><font size="4">Agenda</font></h4>
+<div align="center">
+  <center>
+  <table border="0" width="100%" style="background-position: center 50%" height="34">
+    <tr>
+      <td width="5%" valign="middle" height="30">
+        <p align="left"><a name="prox0"></a></td>
+      <td width="15%" valign="bottom" height="30">
+        <p style="margin-top: 3"></td>
+      <td width="59%" valign="bottom" height="30">
+        <p align="center" style="margin-top: 3"><b>Outubro 2000 - Dezembro 2001</b></td>
+      <td width="16%" valign="middle" height="30">
+        <p align="right" style="margin-top: 3">Próxima&nbsp;</td>
+      <td width="6%" valign="middle" height="30"><a href="#prox1"><img border="0" src="../images/right.jpg" align="right" width="20" height="26"></a></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<table border="1" width="100%" style="border-bottom-style: solid; border-bottom-width: 1">
+  <tr> 
+    <td width="100%" colspan="5" bgcolor="#000000"> <p align="center"><b><font color="#FFFFFF" face="Arial Black">Concepção 
+        (ano I)</font></b></td>
+  </tr>
+  <tr> 
+    <td width="67%" colspan="4"> <p align="center">Modelagem do Negócio</td>
+    <td width="33%"> <p align="center">Requisitos</td>
+  </tr>
+  <tr> 
+    <td width="22%" align="center"><b>Out-Nov-Dez</b></td>
+    <td width="20%" align="center"><b>Jan</b></td>
+    <td width="17%" align="center"><b>Fev-Mar-Abril</b></td>
+    <td width="15%" align="center"><b>Maio-Jun</b></td>
+    <td width="33%" align="center"><b>Agosto-Dezembro</b></td>
+  </tr>
+  <tr> 
+    <td width="22%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Compreender 
+      a pós-graduação na UFG (cenário onde o SISPG será implantado)</font></td>
+    <td width="20%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Identificar 
+      problemas e possibilidades de eliminação deles via SISPG</font><font face="Verdana, Arial, Helvetica, sans-serif">.</font></td>
+    <td width="17%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Identificar 
+      requisitos que o SISPG deverá contemplar.</font></td>
+    <td width="15%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Refinar 
+      e gerar <i>baseline </i>acerca da modelagem do negócio.</font></td>
+    <td width="33%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Refinar&nbsp; 
+      (a) documento <i>Visão</i>, (b) modelagem de casos de uso e (c) <i>Especificação 
+      Suplementar.</i></font> </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" width="100%" style="background-position: center 50%" height="34">
+    <tr>
+      <td width="5%" valign="middle" height="30">
+        <p align="left"><a name="prox1"></a><a href="#prox0"><img border="0" src="../images/left.jpg" width="20" height="26"></a>&nbsp;</td>
+      <td width="15%" valign="bottom" height="30">
+        <p style="margin-top: 3">Anterior</td>
+      <td width="59%" valign="bottom" height="30">
+        <p align="center" style="margin-top: 3"><b>Janeiro 2002 -&nbsp;Dezembro 
+            2002</b></td>
+      <td width="16%" valign="middle" height="30">
+        <p align="right" style="margin-top: 3">Próxima&nbsp;</td>
+      <td width="6%" valign="middle" height="30"><img border="0" src="../images/right.jpg" align="right" width="20" height="26"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<table border="1" width="100%" style="border-bottom-style: solid; border-bottom-width: 1">
+  <tr> 
+    <td colspan="5" bgcolor="#000000"> <p align="center"><b><font color="#FFFFFF" face="Arial Black">Concepção 
+        (ano II)</font></b></td>
+  </tr>
+  <tr> 
+    <td width="54%" align="center">Requisitos</td>
+    <td colspan="4" align="center">Considera&ccedil;&otilde;es</td>
+  </tr>
+  <tr> 
+    <td width="54%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Validar 
+      formato de relatórios, certificados, e demais documentos.&nbsp;</font></td>
+    <td colspan="4" rowspan="2"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+      Conv&eacute;m ressaltar que este modelo de desenvolvimento &eacute; decorrente 
+      da falta de recursos humanos alocados ao projeto. Em um desenvolvimento 
+      &quot;padr&atilde;o&quot;, outra abordagem teria sido executada. A estimativa 
+      inicial do esfor&ccedil;o necess&aacute;rio identificou um total de 270 
+      homens-m&ecirc;s para o desenvolvimento de todo o SISPG. Atualmente, o desenvolvimento 
+      prossegue com o esfor&ccedil;o de um docente do Instituto de Inform&aacute;tica 
+      e alunos de gradua&ccedil;&atilde;o e p&oacute;s-gradua&ccedil;&atilde;o. 
+      Estes &uacute;ltimos, contudo, dado ao ex&iacute;guo tempo dispon&iacute;vel, 
+      contribuem apenas com partes bem espec&iacute;ficas. Esta divis&atilde;o 
+      do SISPG para adequar &agrave; realidade dos recursos humanos dispon&iacute;veis 
+      &eacute; artificial e difere daquela ideal, o que ocasiona dificuldades 
+      adicionais.</font></td>
+  </tr>
+  <tr> 
+    <td width="54%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">V&aacute;rios 
+      componentes do SISPG foram identificados e desenvolvimentos &quot;isolados&quot; 
+      foram realizados. Entre os componentes: tratamento de requerimentos, processo 
+      de sele&ccedil;&atilde;o, corpo discente, calend&aacute;rio e outros. Por 
+      desenvolvimento entenda a elicia&ccedil;&atilde;o dos requisitos e, em alguns 
+      casos, a valida&ccedil;&atilde;o correspondente por parte dos stakeholders.</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" width="100%" style="background-position: center 50%" height="34">
+    <tr>
+      <td width="5%" valign="middle" height="30">
+        <p align="left"><a name="prox1"></a><a href="#prox0"><img border="0" src="../images/left.jpg" width="20" height="26"></a>&nbsp;</td>
+      <td width="15%" valign="bottom" height="30">
+        <p style="margin-top: 3">Anterior</td>
+      <td width="59%" valign="bottom" height="30">
+        <p align="center" style="margin-top: 3"><b>Janeiro 2003 - Dezembro 2003&nbsp;</b></td>
+      <td width="16%" valign="middle" height="30">
+        <p align="right" style="margin-top: 3">Próxima&nbsp;</td>
+      <td width="6%" valign="middle" height="30"><img border="0" src="../images/right.jpg" align="right" width="20" height="26"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<table border="1" width="100%" style="border-bottom-style: solid; border-bottom-width: 1">
+  <tr> 
+    <td width="100%" colspan="4" bgcolor="#000000"> <p align="center"><b><font color="#FFFFFF" face="Arial Black">Elaboração 
+        (ano III)</font></b></td>
+  </tr>
+  <tr> 
+    <td width="50%" align="center" colspan="2">&nbsp;</td>
+    <td width="30%" align="center">&nbsp;</td>
+    <td width="20%" align="center">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="25%" align="center">&nbsp;</td>
+    <td width="25%" align="center">&nbsp;</td>
+    <td width="30%" align="center">&nbsp;</td>
+    <td width="20%" align="center">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="30%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="30%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="30%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" width="100%" style="background-position: center 50%" height="34">
+    <tr>
+      <td width="5%" valign="middle" height="30">
+        <p align="left"><a name="prox1"></a><a href="#prox0"><img border="0" src="../images/left.jpg" width="20" height="26"></a>&nbsp;</td>
+      <td width="15%" valign="bottom" height="30">
+        <p style="margin-top: 3">Anterior</td>
+      <td width="59%" valign="bottom" height="30">
+        <p align="center" style="margin-top: 3"><b>xxx+1 2002 -&nbsp;dez 2002</b></td>
+      <td width="16%" valign="middle" height="30">
+        <p align="right" style="margin-top: 3">Próxima&nbsp;</td>
+      <td width="6%" valign="middle" height="30"><img border="0" src="../images/right.jpg" align="right" width="20" height="26"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<table border="1" width="100%" style="border-bottom-style: solid; border-bottom-width: 1">
+  <tr>
+    <td width="100%" colspan="5" bgcolor="#000000">
+      <p align="center"><b><font color="#FFFFFF" face="Arial Black">Construção</font></b></td>
+  </tr>
+  <tr>
+    <td width="20%"><b>Set</b></td>
+    <td width="20%">Out</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" width="100%" style="background-position: center 50%" height="34">
+    <tr>
+      <td width="5%" valign="middle" height="30">
+        <p align="left"><a name="prox1"></a><a href="#prox0"><img border="0" src="../images/left.jpg" width="20" height="26"></a>&nbsp;</td>
+      <td width="15%" valign="bottom" height="30">
+        <p style="margin-top: 3">Anterior</td>
+      <td width="59%" valign="bottom" height="30">
+        <p align="center" style="margin-top: 3"><b>Jan 2003 - Março 2003&nbsp;</b></td>
+      <td width="16%" valign="middle" height="30">
+        <p align="right" style="margin-top: 3">Próxima&nbsp;</td>
+      <td width="6%" valign="middle" height="30"><img border="0" src="../images/right.jpg" align="right" width="20" height="26"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<table border="1" width="100%" style="border-bottom-style: solid; border-bottom-width: 1">
+  <tr>
+    <td width="100%" colspan="5" bgcolor="#000000">
+      <p align="center"><b><font color="#FFFFFF" face="Arial Black">Implantação</font></b></td>
+  </tr>
+  <tr>
+    <td width="20%"><b>Set</b></td>
+    <td width="20%">Out</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+</table>
+
+<!-- END OF SCRIPT -->
+
+</body>
+</html>
+

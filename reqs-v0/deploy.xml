@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="deploy">
+
+<uc nome="2.1 Data de aprovação: Plano de Implantação">
+<resumo>
+ A versão final deste plano deverá estar disponível e devidamente aprovado pelo menos 2 meses antes do início da implantação, designado por dia 1 (um). 
+ A data precisa do início será estabelecida posteriormente.
+</resumo>
+</uc>
+
+<uc nome="5.1 Recursos humanos: Plano de Implantação">
+<resumo>
+O processo envolve a instalação do sistema e o treinamento de usuários.
+Estas atividades são imprescindíveis quando a comunidade de usuários é relativamente extensa e carece de cultura acerca do sistema. A instalação envolve um considerável conjunto de máquinas e, posteriormente, o próprio administrador poderá realizar esta tarefa esporadicamente. O treinamento de usuários, à semelhança da instalação, será uma tarefa considerável em um primeiro instante. Posteriormente, os novos usuários poderão requisitar treinamentos específicos e estes deverão ser curtos, pois grande quantidade de usuários experientes já estarão usufruindo dos serviços do sistema e poderão auxiliar os demais. 
+</resumo>
+</uc>
+
+<uc nome="5.4 Outros recursos: Plano de Implantação">
+<resumo>
+</resumo>
+</uc>
+
+</ers>
+
+
+ 
+ 

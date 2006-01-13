@@ -1,0 +1,22 @@
+
+1 - Em Logical View, Process View, acrescentar diagrama de atividade "Start/End" para
+    todos os serviços oferecidos de "baixo nível" (bd, so, orb, ...). 
+    Dessa forma, ao observar o diagrama saberemos como iniciar tais serviços, qual a 
+    ordem a ser utilizada, o que deve ser feito, os passos, ...
+
+2 - Contemplar "salas de aula" (local onde as disciplinas serão executadas)?
+
+3 - Vencimento do prazo de permanência de estrangeiro (contemplar).
+
+4 - registrar linguas disponíveis para exame de proficiencia
+
+5 - Qual o processo do exame de proficiencia (oferecidos em 
+    determinadas datas?) e aproveitamento de disciplina?
+
+6- Qual o conceito de disciplina aproveitada?
+
+7 - O cadastro de opções de l'ngua para o exame de proficiência correspondente
+    é atributo do programa e, dessa forma, nao pode ser alterado sem "grande 
+    esforco politico" ou é atribuicao da coordenacao de programa estabelecer?
+
+8 - Acrescentar Java Coding Standards, uploaded to docs de análise.

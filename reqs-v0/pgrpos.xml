@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylessheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="pgrpos">
+
+<uc nome="Consultar programa">
+<resumo>
+Os programas são compostos por muitas informações de interesse generalizado.
+Por exemplo, pretendentes a candidatos gostariam de ter acesso ao conteúdo dos programas nos quais desejam ser inscritos. A comunidade acadêmica, em geral, deseja consultar o conteúdo dos programas de pós-graduação. Convém ressaltar que, anualmente é produzido um documento contendo todas as informações da cada um dos programas em andamento.
+</resumo>
+</uc>
+
+<uc nome="Selecionar programa">
+<resumo>
+A operação acima só poderá ser realizada para um dado programa de um conjunto deles. 
+Este caso de uso permite identificar um programa de pós-graduação em particular.
+</resumo>
+</uc>
+
+<uc nome="Desativar programa">
+<resumo>
+Tudo o que entra em atividade poderá cessar algum dia. Este caso de uso permite informar ao sistema a interrupção das atividades de um dado programa. Após esta operação, 
+apenas aquelas operações de consulta associadas ao programa serão permitidas.
+</resumo>
+</uc>
+
+<uc nome="Editar programa">
+<resumo>
+Permite edição de atributos de um programa de pós-graduação. 
+</resumo>
+</uc>
+
+<uc nome="Manutenir participante">
+<resumo>
+Todos os docentes, pesquisadores e outros participantes de um programa devem ser cadastrados e, ao longo do tempo, 
+as informações pertinentes deverão passar por atualizações. Este caso de uso permite a realização destas atividades e consultas ao conjunto de participantes de um dado programa.
+</resumo>
+</uc>
+
+<uc nome="Selecionar participante">
+<resumo>
+Em algumas situações é necessário identificar um determinado participante de um programa, por exemplo, 
+para realizar a manutenção da sua conta de acesso ou associá-lo a uma disciplina como responsável. Este caso de uso descreve o comportamento do sistema para que esta meta seja realizada. 
+</resumo>
+</uc>
+
+<uc nome="Cadastrar programa">
+<resumo>
+Permite que a pró-reitoria “crie” um novo programa de pós-graduação do ponto de vista do sistema.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar estrutura curricular">
+<resumo>
+Todo programa de nível de mestrado ou doutorado possui sua própria estrutura curricular. Este caso de uso registra os requisitos necessários para que cada disciplina possa ser devidamente cadastrada.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar área de concentração">
+<resumo>
+Todo programa envolve uma ou mais áreas de concentração. No momento do cadastramento do programa tais áreas deverão ser cadastradas.
+</resumo>
+</uc>
+
+<uc nome="Configurar regras">
+<resumo>
+Há um conjunto bem-definido de regras a serem observadas no dia-a-dia da pós-graduação. Todas elas estão coletadas no documento Regras. Este caso de uso trata da configuração destas regras, ou seja,
+atribuição de valores aos vários parâmetros destas regras. 
+</resumo>
+</uc>
+
+<uc nome="Manutenir taxas">
+<resumo>
+Inscrição em disciplina, matrícula, emissão de diplomas e outros requerimentos exigem o pagamento de taxas. As taxas e os respectivos valores serão manutenidos através deste caso de uso.
+</resumo>
+</uc>
+
+</ers>
+

@@ -1,0 +1,1838 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><TITLE>Software Architecture Document</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="file:///E:/ABARE/reqs/deploy.PRR" rel=Original-File>
+<META content=Word.Document name=ProgId>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="../projectmanagement/deploy_arquivos/filelist.xml" rel=File-List><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>&lt;Project Name&gt;</o:Subject>
+  <o:Author>Fábio Nogueira de Lucena</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Fábio Nogueira de Lucena</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>5</o:TotalTime>
+  <o:LastPrinted>2002-01-24T12:43:00Z</o:LastPrinted>
+  <o:Created>2002-02-01T19:07:00Z</o:Created>
+  <o:LastSaved>2002-02-01T19:07:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2128</o:Words>
+  <o:Characters>12135</o:Characters>
+  <o:Company>&lt;Company Name&gt;</o:Company>
+  <o:Bytes>16896</o:Bytes>
+  <o:Lines>101</o:Lines>
+  <o:Paragraphs>24</o:Paragraphs>
+  <o:CharactersWithSpaces>14902</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:Company_x0020_Name dt:dt="string" link="_Toc430444386">Objectives</o:Company_x0020_Name>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:ActiveWritingStyle Lang="PT-BR" VendorID="1" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:DoNotUseHTMLParagraphAutoSpacing/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Helvetica;
+}
+@font-face {
+	font-family: Geneva;
+}
+@font-face {
+	font-family: Tms Rmn;
+}
+@font-face {
+	font-family: Wingdings;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@font-face {
+	font-family: Arial Black;
+}
+@font-face {
+	font-family: Century Gothic;
+}
+@font-face {
+	font-family: Serifa BT;
+}
+@font-face {
+	font-family: Verdana;
+}
+@font-face {
+	font-family: Book Antiqua;
+}
+@font-face {
+	font-family: Garamond;
+}
+@font-face {
+	font-family: Arial Unicode MS;
+}
+@font-face {
+	font-family: @Arial Unicode MS;
+}
+@page Section1 {size: 612.0pt 792.0pt; margin: -37.65pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-vertical-page-align: middle; mso-even-header: url("../projectmanagement/deploy_arquivos/header.htm") eh1; mso-header: url("../projectmanagement/deploy_arquivos/header.htm") h1; mso-paper-source: 0; }
+@page Section2 {size: 612.0pt 792.0pt; margin: 72.0pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-even-header: url("../projectmanagement/deploy_arquivos/header.htm") eh1; mso-header: url("../projectmanagement/deploy_arquivos/header.htm") h2; mso-paper-source: 0; mso-footer: url("../projectmanagement/deploy_arquivos/header.htm") f2; mso-first-header: url("../projectmanagement/deploy_arquivos/header.htm") fh2; mso-first-footer: url("../projectmanagement/deploy_arquivos/header.htm") ff2; }
+P.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 1; mso-list: l2 level1 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 0pt; mso-bidi-font-weight: normal
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 2; mso-list: l2 level2 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 3; mso-list: l2 level3 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 4; mso-list: l2 level4 lfo1; mso-bidi-font-family: "Times New Roman"
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 5; mso-list: l2 level5 lfo1; mso-bidi-font-size: 10.0pt
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 6; mso-list: l2 level6 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: normal
+}
+P.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l2 level7 lfo1
+}
+LI.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l2 level7 lfo1
+}
+DIV.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l2 level7 lfo1
+}
+P.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l2 level8 lfo1; mso-bidi-font-style: normal
+}
+LI.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l2 level8 lfo1; mso-bidi-font-style: normal
+}
+DIV.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l2 level8 lfo1; mso-bidi-font-style: normal
+}
+P.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l2 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+LI.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l2 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+DIV.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l2 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+P.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+LI.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+DIV.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+P.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+LI.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+DIV.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-style-update: auto
+}
+P.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+LI.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+DIV.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+P.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+P.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+SPAN.MsoFootnoteReference {
+	VERTICAL-ALIGN: super; mso-ansi-font-size: 10.0pt
+}
+P.MsoListBullet5 {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 10pt; PADDING-BOTTOM: 0cm; MARGIN: 0cm 0cm 0pt 7.1pt; BORDER-LEFT: medium none; LINE-HEIGHT: 16pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Garamond; LETTER-SPACING: -0.5pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-update: auto; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-line-height-rule: exactly; mso-element: frame; mso-element-frame-width: 251.7pt; mso-element-frame-height: 53.8pt; mso-element-frame-hspace: 9.35pt; mso-element-wrap: around; mso-element-anchor-vertical: paragraph; mso-element-anchor-horizontal: page; mso-element-left: 103.15pt; mso-element-top: .05pt; mso-height-rule: exactly
+}
+LI.MsoListBullet5 {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 10pt; PADDING-BOTTOM: 0cm; MARGIN: 0cm 0cm 0pt 7.1pt; BORDER-LEFT: medium none; LINE-HEIGHT: 16pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Garamond; LETTER-SPACING: -0.5pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-update: auto; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-line-height-rule: exactly; mso-element: frame; mso-element-frame-width: 251.7pt; mso-element-frame-height: 53.8pt; mso-element-frame-hspace: 9.35pt; mso-element-wrap: around; mso-element-anchor-vertical: paragraph; mso-element-anchor-horizontal: page; mso-element-left: 103.15pt; mso-element-top: .05pt; mso-height-rule: exactly
+}
+DIV.MsoListBullet5 {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 10pt; PADDING-BOTTOM: 0cm; MARGIN: 0cm 0cm 0pt 7.1pt; BORDER-LEFT: medium none; LINE-HEIGHT: 16pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Garamond; LETTER-SPACING: -0.5pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-update: auto; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm; mso-line-height-rule: exactly; mso-element: frame; mso-element-frame-width: 251.7pt; mso-element-frame-height: 53.8pt; mso-element-frame-hspace: 9.35pt; mso-element-wrap: around; mso-element-anchor-vertical: paragraph; mso-element-anchor-horizontal: page; mso-element-left: 103.15pt; mso-element-top: .05pt; mso-height-rule: exactly
+}
+P.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+LI.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+DIV.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+P.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+LI.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+DIV.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+P.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+LI.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+DIV.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+P.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal
+}
+LI.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal
+}
+DIV.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal
+}
+P.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.4pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.4pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.4pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+STRONG {
+	mso-bidi-font-weight: normal
+}
+P.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+LI.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+DIV.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 0cm; MARGIN-RIGHT: 0cm; FONT-FAMILY: "Arial Unicode MS"; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+P.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+LI.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+DIV.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+P.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+LI.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+DIV.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+P.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+LI.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+DIV.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+P.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+LI.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+DIV.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+P.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+LI.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+DIV.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+P.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+LI.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+DIV.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+P.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+LI.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+DIV.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+P.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+LI.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+DIV.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+P.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+LI.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+DIV.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+P.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; TEXT-INDENT: -18pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-list: l19 level1 lfo81; mso-bidi-font-family: "Times New Roman"; tab-stops: list 18.0pt left 36.0pt; mso-style-name: Bullet
+}
+LI.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; TEXT-INDENT: -18pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-list: l19 level1 lfo81; mso-bidi-font-family: "Times New Roman"; tab-stops: list 18.0pt left 36.0pt; mso-style-name: Bullet
+}
+DIV.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; TEXT-INDENT: -18pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-list: l19 level1 lfo81; mso-bidi-font-family: "Times New Roman"; tab-stops: list 18.0pt left 36.0pt; mso-style-name: Bullet
+}
+P.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-update: auto; mso-style-name: InfoBlue
+}
+LI.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-update: auto; mso-style-name: InfoBlue
+}
+DIV.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-update: auto; mso-style-name: InfoBlue
+}
+DIV.Section1 {
+	page: Section1
+}
+DIV.Section2 {
+	page: Section2
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+</HEAD>
+<BODY lang=PT-BR style="tab-interval: 36.0pt" vLink=purple link=blue>
+<DIV class=Section1>
+<P class=MsoTitle style="TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 48pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 48pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt">SISPG</SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><BR></SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 12pt; FONT-FAMILY: 'Century Gothic'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold">http://www.inf.ufg.br/~fabio/sispg</SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><BR></SPAN><BR><SPAN 
+style="FONT-SIZE: 16pt; mso-bidi-font-size: 10.0pt"><SPAN 
+style="mso-field-code: 'SUBJECT  \* MERGEFORMAT'"><SPAN 
+style="mso-field-code: 'SUBJECT  \* MERGEFORMAT'">Sistema de Gerenciamento da 
+Pesquisa e da Pós-graduação</SPAN></SPAN><BR>Plano de Implantação</SPAN></P>
+<P class=MsoTitle style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 14pt; mso-bidi-font-size: 10.0pt">Versão 0.5<BR 
+style="mso-special-character: line-break"><![if !supportLineBreakNewLine]><BR 
+style="mso-special-character: line-break"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyText style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 11pt; mso-bidi-font-size: 10.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Profa. Dra. Eliana Martins Lima</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Pró-Reitora de Pesquisa e 
+Pós-Graduação<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt"><A 
+href="mailto:emlima@prppg.ufg.br">emlima@prppg.ufg.br</A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. Fábio Nogueira de 
+Lucena</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Projetista de 
+Software<BR></SPAN><SPAN style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt"><A 
+href="mailto:fabio@inf.ufg.br">fabio@inf.ufg.br</A><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><SPAN 
+style="mso-spacerun: yes"></SPAN></SPAN><BR 
+style="mso-special-character: line-break"><![if !supportLineBreakNewLine]><BR 
+style="mso-special-character: line-break"><![endif]>&nbsp;</P></DIV><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN>
+<DIV class=Section2>
+<P class=MsoTitle>Histórico de Revisões</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-table-layout-alt: fixed; mso-border-alt: solid windowtext .75pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify"><B 
+      style="mso-bidi-font-weight: normal">Data<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify"><B 
+      style="mso-bidi-font-weight: normal">Versão<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify"><B 
+      style="mso-bidi-font-weight: normal">Descrição<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify"><B 
+      style="mso-bidi-font-weight: normal">Autor<o:p></o:p></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">12/12/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify">0.1</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Versão inicial.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Fábio, Elane Molinare, 
+      Tânia de Fátima e Vanessa Pereira.</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">12/12/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify">0.2</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Ajustes.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">13/12/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify">0.3</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Pequenas correções.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">14/12/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify">0.4</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Alterações para aumentar a 
+      consistência da proposta.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: justify">24/01/2002</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: justify">0.5</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: justify">Pequenas correções.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext 
+style="TEXT-ALIGN: justify">Fábio</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN></B>
+<P class=MsoTitle style="TEXT-ALIGN: justify">Conteúdo</P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes">&nbsp;</span>TOC \o &quot;1-3&quot; <span style='mso-element:field-separator'></span><![endif]--><SPAN 
+style="mso-bidi-font-size: 12.0pt">1.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Introdução</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc342967 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900360037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">2.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Objetivo deste 
+documento</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342968 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900360038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Data de aprovação: 
+Plano de Implantação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342969 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900360039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">3.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Processo de 
+implantação</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342970 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">4.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Estimativas</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342971 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">5.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Recursos</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc342972 \h <span style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Recursos humanos: Plano 
+de Implantação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342973 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.1.1<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Administrador (um)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342974 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.1.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Estagiários (dois)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342975 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt">5.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Recursos de 
+software (programas)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342976 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.2.1<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Browsers<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342977 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.2.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Sistema Operacional<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342978 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.2.3<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Visualizador PDF<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342979 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900370039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.2.4<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Ambiente Java<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342980 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt">5.3<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Recursos de 
+Hardware (computador)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342981 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Outros recursos: Plano 
+de Implantação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342982 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.4.1<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>CD-ROM (mídia)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342983 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt">5.4.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>Impressão<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342984 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">6.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Artefatos a serem 
+produzidos</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342985 \h <span
+style='mso-element:field-separator'></span><![endif]-->8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt">6.1<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Manual do 
+Usuário<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342986 \h <span
+style='mso-element:field-separator'></span><![endif]-->8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt">6.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Manual de 
+Instalação (usuários)<SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342987 \h <span
+style='mso-element:field-separator'></span><![endif]-->8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt">6.3<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>CD-ROM 
+(conteúdo)<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342988 \h <span
+style='mso-element:field-separator'></span><![endif]-->8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">7.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Treinamento</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342989 \h <span
+style='mso-element:field-separator'></span><![endif]-->8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900380039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">8.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Considerações 
+finais</SPAN><SPAN style="mso-tab-count: 1">&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc342990 \h <span
+style='mso-element:field-separator'></span><![endif]-->9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000B0000005F0054006F0063003300340032003900390030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoTitle><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all>Plano de Implantação</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 style="TEXT-ALIGN: justify"><A name=_Toc456598586></A><A 
+name=_Toc342967><SPAN 
+style="mso-bookmark: _Toc456598586"><![if !supportLists]>1.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Introdução</SPAN></A></H1>
+<P class=MsoBodyTextIndent2>Este documento <A name=_Toc456598588>descreve o 
+processo, as atividades, os artefatos a serem produzidos e os recursos 
+necessários, baseados em estimativas também fornecidas, para a implantação do 
+SISPG. Implantação é a atividade que coloca um sistema à disposição dos usuários 
+em ambiente real de uso. Não inclui atividades pertinentes aos testes do 
+sistema.</A></P>
+<P class=MsoBodyTextIndent2 style="MARGIN-LEFT: 0cm"><SPAN 
+style="mso-bookmark: _Toc456598588"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H1 style="TEXT-ALIGN: justify"><SPAN style="mso-bookmark: _Toc456598588"><A 
+name=_Toc342968><![if !supportLists]>2.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Objetivo deste documento</A></SPAN></H1>
+<P class=MsoBodyText style="TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456598588">Este plano deverá ser conhecido pela 
+administração superior e demais interessados. Propostas alternativas deverão ser 
+discutidas e, eventualmente, alterações aprovadas deverão ser refletidas no 
+presente texto.</SPAN></P>
+<H2><SPAN style="mso-bookmark: _Toc456598588"><A name=REQQU5GY4><![if !supportLists]>2.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">E1 </SPAN></U></A><A 
+name=_Toc342969><SPAN style="mso-bookmark: REQQU5GY4"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Data de aprovação: Plano 
+de Implantação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQQU5GY4">&nbsp;</SPAN></SPAN></H2>
+<P class=MsoBodyText style="TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456598588"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>A versão final deste plano deverá estar 
+disponível e devidamente aprovado pelo menos 2 meses antes do início da 
+implantação, designado por dia 1 (um). A data precisa do início será 
+estabelecida posteriormente.</SPAN></P><SPAN 
+style="mso-bookmark: _Toc456598588"></SPAN>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342970><![if !supportLists]>3.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Processo de implantação</A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">A implantação inclui atividades 
+acessórias, por exemplo, a contratação de estagiários. Esta e as demais seguem 
+abaixo. Entre colchetes seguem os dias necessários, com base no dia 1 da 
+implantação.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 38.95pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 3.5pt 0cm 3.5pt; mso-border-alt: solid windowtext .5pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=501>
+      <P class=MsoNormal style="TEXT-ALIGN: center" 
+      align=center><B>Atividade<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" 
+      align=center><B>Dias<o:p></o:p></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Contratação de estagiários</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>1-15</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Treinamento de estagiários</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>16-20</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Implantação e verificação do sistema de acompanhamento 
+      de erros</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>21-25</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Coleta de inscrições (hardware e software, veja 
+      comentário imediatamente após esta tabela)</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>26</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=Paragraph1 style="MARGIN-TOP: 0cm; LINE-HEIGHT: 12pt">Preparação 
+      do treinamento de usuários</P>
+      <P class=MsoNormal 
+      style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify; mso-list: l37 level1 lfo176; tab-stops: list 18.0pt"><![if !supportLists]>1.<SPAN 
+      style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN><![endif]>Elaborar material de divulgação (apostilas, folders, 
+      apresentação). </P>
+      <P class=MsoNormal 
+      style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l37 level1 lfo176; tab-stops: list 18.0pt"><![if !supportLists]>2.<SPAN 
+      style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN><![endif]>Elaborar de casos de testes para a experimentação dos 
+      usuários.</P>
+      <P class=MsoNormal 
+      style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l37 level1 lfo176; tab-stops: list 18.0pt"><![if !supportLists]>3.<SPAN 
+      style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN><![endif]>Refinar <I>Noções de Segurança para Usuários</I>.</P>
+      <P class=MsoNormal 
+      style="MARGIN-LEFT: 18pt; TEXT-INDENT: -18pt; mso-list: l37 level1 lfo176; tab-stops: list 18.0pt"><![if !supportLists]>4.<SPAN 
+      style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN><![endif]>Preparação do ambiente de treinamento.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>27-41</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Hardware</P>
+      <P class=MsoNormal>A instalação de hardware adquirido para uso do 
+      sistema.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>42-46</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Início de inscrições de usuários para 
+treinamento</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>46</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Distribuição do documento <I>Noções de Segurança para 
+      Usuários.</I></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>47</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Software</P>
+      <P class=MsoNormal>Instalação dos softwares necessários.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>48-59</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Fim das inscrições de usuários para treinamento</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>60</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal>Treinamento</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center>65-70</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoHeader style="tab-stops: 36.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 375.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=501>
+      <P class=MsoNormal><B>TOTAL<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 60.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=81>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><B>70 dias 
+      úteis<o:p></o:p></B></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyTextIndent2>Os itens hardware e software acima deverão ser 
+requisitados pelos interessados através das respectivas coordenações. Ao final 
+da primeira semana de implantação do sistema uma agenda com as requisições de 
+hardware e software, além de outras informações como o local, deverá estar 
+disponível para ampla consulta.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342971><![if !supportLists]>4.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Estimativas</A></H1>
+<P class=MsoBodyTextIndent2>Cerca de 800 alunos, 400 docentes e outras 40 
+pessoas físicas (docentes ou funcionários) deverão desfrutar do sistema através 
+do emprego de 100 computadores no âmbito da UFG. Este total não inclui 
+computadores localizados fora da UFG. Estes não são contemplados neste plano. 
+Para cada máquina, especula-se que um total de 60 minutos sejam suficientes para 
+a preparação da máquina (remoção de vírus, por exemplo), instalação de softwares 
+necessários, as configurações correspondentes, o deslocamento físico dos 
+estagiários e eventuais dificuldades menores. As tarefas deverão envolver pelo 
+menos 3 (três) pessoas: o administrador e 2 (dois) estagiários. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342972><![if !supportLists]>5.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Recursos</A></H1>
+<P class=MsoBodyTextIndent2>Abaixo seguem os recursos necessários conforme o 
+processo e as estimativas<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>informados anteriormente. </P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQQU5JT4><![if !supportLists]>5.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">R1 </SPAN></U></A><A 
+name=_Toc342973><SPAN style="mso-bookmark: REQQU5JT4"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Recursos humanos: Plano de 
+Implantação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQQU5JT4">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent2>O processo envolve a instalação do sistema e o 
+treinamento de usuários. Estas atividades são imprescindíveis quando a 
+comunidade de usuários é relativamente extensa e carece de cultura acerca do 
+sistema. A instalação envolve um considerável conjunto de máquinas e, 
+posteriormente, o próprio administrador poderá realizar esta tarefa 
+esporadicamente. O treinamento de usuários, à semelhança da instalação, será uma 
+tarefa considerável em um primeiro instante. Posteriormente, os novos usuários 
+poderão requisitar treinamentos específicos e estes deverão ser curtos, pois 
+grande quantidade de usuários experientes já estarão usufruindo dos serviços do 
+sistema e poderão auxiliar os demais. </P>
+<P class=MsoBodyTextIndent2 style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342974><![if !supportLists]>5.1.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Administrador (um)</A></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Após a 
+implantação será a pessoa encarregada de manter o SISPG em pleno funcionamento. 
+Inclui: realização de backups, manutenção eventual em código, monitoramento de 
+segurança, acessorar usuários e outras. Esta exigência já consta em outro 
+documento (<I>Especificação Suplementar</I>) e reforçada para a implantação, 
+pois o treinamento de estagiários e a realização de sessões de treinamentos de 
+usuários deverão ser coordenados pelo administrador. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342975><![if !supportLists]>5.1.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Estagiários (dois)</A></H3>
+<P class=MsoBodyTextIndent2>Está previsto o emprego de 2 (dois) estagiários para 
+a execução do presente plano. Alunos de cursos da área de Computação e 
+Informática (conforme classificação do MEC), possuem requisitos suficientes para 
+a execução das tarefas previstas, apresentadas no restante do documento, caso já 
+estejam no segundo ano (terceiro período) ou posterior dos respectivos cursos. 
+</P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=_Toc342976><![if !supportLists]>5.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Recursos de software (programas)</A></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Vários 
+softwares deverão estar à disposição para que os benefícios do SISPG possam ser 
+explorados. Felizmente, não significam custos adicionais, pois todas as 
+ferramentas empregadas são necessariamente de “domínio público” e, dessa forma, 
+o usuário pode optar por uma instalação completamente gratuita. 
+<B>IMPORTANTE</B>. Em alguns casos pode ser preferível o emprego de uma das 
+versões do sistema operacional Windows e,<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>nestes casos, os estagiários só irão efetuar as operações necessárias 
+caso as licenças correspondentes dos produtos estejam à disposição. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; TEXT-ALIGN: left; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes" 
+align=left><SPAN 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; FONT-FAMILY: Verdana; mso-border-shadow: yes">VERSÃO 
+COMPLETAMENTE GRATUITA</SPAN><SPAN style="FONT-FAMILY: Verdana"><BR>Estimula-se 
+o emprego de software livre. Resolve o problema, elimina eventuais ilegalidades, 
+estimula o domínio de tecnologia de ponta, reduz a dependência tecnológica, 
+reduz custos, reduz conjunto de “excluídos”, ...<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana">Para tal são 
+suficientes:<o:p></o:p></SPAN></P></DIV>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN 
+style="FONT-FAMILY: Verdana">Linux<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: Verdana">Acrobat Reader ou 
+Ghostview (visualizar PDF)<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: Verdana">NetScape 6.2 (ou 
+posterior)<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: Verdana">Ambiente 
+Java<o:p></o:p></SPAN></P></DIV>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P></DIV>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Os itens 
+descrito acima são exclusivamente livres. Abaixo segue uma configuração que 
+também atende os requisitos do sistema mas é proprietária, ou seja, envolve 
+compra de software. Ela é fornecida por ser a mais comum.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; FONT-FAMILY: Verdana; mso-border-shadow: yes">VERSÃO 
+PARCIALMENTE GRATUITA</SPAN><SPAN style="FONT-FAMILY: Verdana"> 
+<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana">Emprega software proprietário, muito comum, mas 
+caro, aumenta a dependência tecnológica, a evasão de divisas e o número de 
+“excluídos”.<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana">Configuração:<o:p></o:p></SPAN></P></DIV>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: Verdana">Uma das versões do 
+Windows<o:p></o:p></SPAN></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-weight: bold">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><B><SPAN style="FONT-FAMILY: Verdana">Acrobat Reader ou 
+Ghostview (visualizar PDF)<o:p></o:p></SPAN></B></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-weight: bold">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><B><SPAN style="FONT-FAMILY: Verdana">Internet Explorer 
+6 (ou posterior)<o:p></o:p></SPAN></B></P>
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-list: l5 level1 lfo177; tab-stops: list 54.0pt; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-weight: bold">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><B><SPAN style="FONT-FAMILY: Verdana">Ambiente 
+Java<o:p></o:p></SPAN></B></P></DIV>
+<DIV 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; BORDER-LEFT: windowtext 1pt solid; PADDING-TOP: 1pt; BORDER-BOTTOM: windowtext 1pt solid; mso-border-shadow: yes">
+<P class=MsoBodyTextIndent2 
+style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; mso-padding-alt: 1.0pt 4.0pt 1.0pt 4.0pt; mso-border-alt: solid windowtext 1.0pt; mso-border-shadow: yes"><SPAN 
+style="FONT-FAMILY: Verdana">Aqueles softwares em negrito são livres, podem ser 
+obtidos sem custos adicionais. Uma versão típica do Windows custa cerca de 
+R$350,00.<o:p></o:p></SPAN></P></DIV>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyTextIndent2>Muitas outras combinações além daquelas duas 
+apresentadas acima são suficientes. Os softwares necessários são classificados 
+abaixo.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342977><![if !supportLists]>5.2.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Browsers</A></H3>
+<P class=MsoBodyTextIndent2>O emprego de um dos browsers abaixo não deverá 
+apresentar nenhum problema. Outras versões disponíveis e inclusive outras 
+distribuições não foram testadas e terão, provavelmente, dificuldades em 
+usufruir dos serviços do SISPG.</P>
+<H4 
+style="MARGIN: 0cm 0cm 0pt 53.85pt; TEXT-INDENT: -17.85pt; mso-list: l58 level1 lfo170; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: 'Times New Roman'">Netscape 
+6.2 ou posterior<o:p></o:p></SPAN></H4>
+<H4 
+style="MARGIN: 0cm 0cm 0pt 53.85pt; TEXT-INDENT: -17.85pt; mso-list: l58 level1 lfo170; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: 'Times New Roman'">Internet 
+Explorer 6.0 ou posterior (exclusivo para Windows, cujo uso é 
+desestimulado)</SPAN></H4>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342978><![if !supportLists]>5.2.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Sistema Operacional</A></H3>
+<P class=MsoBodyTextIndent2>Para usufruir do SISPG não será necessário um 
+emprego específico de sistema operacional. Esta é uma promessa de 
+desenvolvimento, embora os ambientes testados restringem-se àqueles abaixo:</P>
+<H4 
+style="MARGIN: 0cm 0cm 0pt 53.85pt; TEXT-INDENT: -17.85pt; mso-list: l75 level1 lfo168; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: 'Times New Roman'">Linux (Red 
+Hat 7.2)<o:p></o:p></SPAN></H4>
+<H4 
+style="MARGIN: 0cm 0cm 0pt 53.85pt; TEXT-INDENT: -17.85pt; mso-list: l75 level1 lfo168; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]><SPAN style="FONT-FAMILY: 'Times New Roman'">Windows 95, 
+98, ME, 2000, XP (não é de domínio público, é prescindível e não 
+sugerido)<o:p></o:p></SPAN></H4>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342979><![if !supportLists]>5.2.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Visualizador PDF</A></H3>
+<P class=MsoBodyTextIndent2>Impressões de qualidade deverão ser produzidas 
+através de arquivos no formato PDF. Pelo menos dois visualizadores de boa 
+qualidade podem ser utilizados:</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l23 level1 lfo175; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Acrobat Reader 5.05 (ou posterior)</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l23 level1 lfo175; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Ghostview 3.6 (ou posterior)</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342980><![if !supportLists]>5.2.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Ambiente Java</A></H3>
+<P class=MsoBodyTextIndent2>Onde for necessário o emprego de Java, provavelmente 
+para as coordenações de programa e administração superior, também será 
+necessário os produtos abaixo. Convém ressaltar que, ao contrário dos 
+anteriores, aqueles abaixo são “transparentes” para o usuário, não exigem 
+conhecimentos sobre os mesmos, inclusive enventual instalação.</P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify; mso-list: l102 level1 lfo169; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Java Web Start</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify; mso-list: l102 level1 lfo169; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Java Virtual Machine (JVM)</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=_Toc342981><![if !supportLists]>5.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Recursos de Hardware (computador)</A></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Os requisitos 
+<B>mínimos</B> de hardware seguem abaixo. Muitas outras configurações são 
+suficientes, inclusive empregando outros processadores. Casos menos 
+convencionais de hardware poderão ser resolvidos com uma consulta à equipe de 
+desenvolvimento. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Computador IBM-PC ou compatível</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Processador compatível ou superior ao Pentium 500MHz</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>128Mb de RAM</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Vídeo colorido de 15 polegadas</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Mouse, teclado</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Espaço livre em disco de pelo menos 10Mbytes. </P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l127 level1 lfo174; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Placa de rede 10/100 Mbps</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Observa-se que não é necessário a 
+disponibilidade de recursos de multimídia, CD-ROM e outros. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyTextIndent2>Cada computador com a especificação semelhante ou 
+melhor que aquela fornecida acima deverá estar conectado à Internet ou UFGNet. 
+Se a conexão com a Internet se fizer por linha telefônica, então também será 
+necessária uma placa Fax/Modem 56k.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Para a 
+impressão de comprovantes e relatórios os testes foram realizados com dois tipos 
+de impressora: Laser e Jato de tinta. Os relatórios foram padronizados para 
+empregar o papel A4. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQQU5NK4><![if !supportLists]>5.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">R2 </SPAN></U></A><A 
+name=_Toc342982><SPAN style="mso-bookmark: REQQU5NK4"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Outros recursos: Plano de 
+Implantação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQQU5NK4">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342983><![if !supportLists]>5.4.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>CD-ROM (mídia)</A></H3>
+<P class=MsoBodyTextIndent2>Conforme consta em outras partes deste plano, vários 
+artefatos deverão estar à disposição dos usuários. Os softwares necessários, por 
+exemplo, estarão disponíveis em CD-ROMs para evitar frustações com lentos 
+downloadas de usuários domésticos ou até para aqueles no âmbito da UFGNet. Pelo 
+menos 100 CD-ROMs deverão estar disponíveis. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3><A name=_Toc342984><![if !supportLists]>5.4.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Impressão</A></H3>
+<P class=MsoBodyTextIndent2>Material de divulgação dos recursos do SISPG, 
+informações sobre a operação deste sistema, material de conscientização acerca 
+de segurança e manuais de “primeiros socorros”, por exemplo, deverão consumir 
+recursos para publicação. Ainda não se tem uma estimativa, que será 
+disponibilizada tão logo seja definida. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342985><![if !supportLists]>6.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Artefatos a serem produzidos</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=_Toc342986><![if !supportLists]>6.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Manual do Usuário</A></H2>
+<P class=MsoBodyTextIndent2>Descrição dos principais recursos do sistema por 
+categoria. Convém ressaltar que alunos irão interagir de forma bem diference dos 
+docentes com o sistema. Este manual também estará disponível na home page do 
+sistema e, juntamente com a Ajuda do SISPG e o administrador, deverão auxiliar 
+os usuários nas questões pertinentes.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=_Toc342987><![if !supportLists]>6.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Manual de Instalação (usuários)</A></H2>
+<P class=MsoBodyTextIndent2>Embora a colocação do sistema em operação, pela 
+primeira vez, requeira um esforço significativo, a interação com o sistema e a 
+presença do administrador, juntamente com um manual de instalação serão 
+suficientes para as novas instalações. Este manual deverá detalhar etapas e 
+formas para se constatar que a instalação foi realizada corretamente.</P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=_Toc342988><![if !supportLists]>6.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>CD-ROM (conteúdo)</A></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Deverá ser produzido um CD-ROM 
+contendo textos, softwares e outros elementos necessários à instalação do 
+sistema. Este CD-ROM deverá ser continuamente atualizado pelo administrador do 
+sistema.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342989><![if !supportLists]>7.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Treinamento</A></H1>
+<P style="MARGIN: 0cm 0cm 0pt 36pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">O treinamento será 
+realizado por estagiários e pelo administrador. Os usuários estão divididos em 
+quatro categorias, para as quais treinamentos específicos deverão ser 
+realizados: docentes, alunos, coordenação, e administração superior. 
+<o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt 36pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Interessados poderão se 
+inscrever em turmas específicas conforme o número de vagas disponíveis. O 
+treinamento será oferecido no Laboratório I do Instituto de Informática. Este 
+laboratório está equipado com computadores que atendem as restrições mínimas de 
+hardware (fornecida em outra parte deste documento).<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>O administrador deverá fornecer o 
+material preparado para os treinamentos (slides, apostila, avaliações dos 
+“alunos”, exercícios e outros recursos). Conforme a tabela abaixo, um total de 
+12 turmas estão previstas. A coordenação de programa será o maior usuário do 
+sistema e, em decorrência, tem acesso a um conjunto rico de serviços, 
+jutificando, para cada turma, um total de dois turnos de treinamento. Cada turno 
+compreende um total de 3 horas.<o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt 36pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 40.85pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-alt: solid windowtext .5pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Categorias<o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Número de 
+      Turmas<o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Turnos por 
+      turma<o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Horas<BR>(3 horas 
+      por turno)<o:p></o:p></SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Alunos 
+      (A)<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">4<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">12<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Professores 
+      (P)<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">4<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">12<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Coordenação 
+      (C)<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">12<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Administração 
+      Superior (S)<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">6<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 127.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=170>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">TOTAIS<o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 79pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=105>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">12<o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><![if !supportEmptyParas]><![endif]>&nbsp;<B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><o:p></o:p></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 111.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=149>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">42<o:p></o:p></SPAN></B></P></TD></TR></TBODY></TABLE>
+<P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN><o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt 36pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Como a demanda de 
+usuários interessados no treinamento pode variar, inscrições para novas turmas 
+poderão ser abertas após o encerramento das primeiras inscrições. O quadro de 
+atividades segue abaixo. Nela emprega-se uma sigla para a categoria, conforme na 
+tabela anterior seguida de um número, que corresponde a uma turma. Assim, A1 é a 
+turma 1 de alunos, enquanto S2 é a turma 2 da administração superior. O 
+treinamento será efetuado pelo administrador e pelos estagiários. 
+<o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt 36pt; TEXT-ALIGN: justify"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 38.95pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 3.5pt 0cm 3.5pt; mso-table-layout-alt: fixed; mso-border-alt: solid windowtext .5pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 15cm; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=567 colSpan=6>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Semana de 
+      Treinamento<o:p></o:p></SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 77.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=104>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Turno<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Segunda<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Terça<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Quarta<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Quinta<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=123>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">Sexta<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 77.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=104>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">8h-11h<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">A1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">A2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">C1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">P3<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=123>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">C2<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 77.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=104>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">12h-15h<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">P1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">A3<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">C1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">P4<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=123>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">C2<o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 77.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=104>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">15h-18h<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">P2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">A4<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.8pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">S1<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 63.75pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=85>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'">S2<o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.5pt; BORDER-TOP: medium none; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=123>
+      <P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><![if !supportEmptyParas]><![endif]>&nbsp;<SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE>
+<P style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc342990><![if !supportLists]>8.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Considerações finais</A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Este documento 
+deverá ser aprovado pelo menos 2 meses (sessenta dias) antes do dia 1 (um) da 
+implantação. Conforme visto neste texto, muitas atividades deverão ser 
+realizadas pelo conjunto formado pelos estagiários e o administrador do sistema. 
+A organização temporal destas atividades, o adequado dimensionamento delas e a 
+disciplina desta equipe serão imprescindíveis para o sucesso deste 
+plano.</P></DIV></BODY></HTML>

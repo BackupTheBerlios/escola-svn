@@ -1,0 +1,57 @@
+#	@HEAD	Requred. Must be the first line of a news item.
+#		May be more than one line. Terminated by a @URL,
+#		@MSG, or @END tags.
+#	@URL	Optional. A URL that will be associated with the
+#		news item. If the item is clicked on by a mouse,
+#		the URL will be loaded. Must be all on one line.
+#	@FRAME	Optional, but URL must be defined. If the item is
+#		clicked on by a mouse and the URL is defined, this will
+#		over-ride the TARGET parameter, allowing different frames
+#		to be targeted by different news items.
+#	@MSG	Requied. The message text. May be multiple lines.
+#		Terminated by a @END tag.
+#	@END	Required. Signals the end of the news item.
+
+@HEADContribua com sugestões ...
+@MSGPrecisamos de suas observações. Clique no botão Participe para
+ver como contribuir.
+@END
+
+# Linked text
+@HEADConcepção (primeira fase)
+@MSGEstamos na primeira fase do desenvolvimento de um total de 4. Os
+objetivos do SISPG, o escopo, critérios de aceitação e descrição
+do que é e não é parte deste sistema, entre outros, deverão ser
+estabelecidos. 
+@END
+
+# Frame target and blank lines
+@HEADElaboração (próxima fase)
+@MSGEstabelecer uma ''estrutura'' a partir da qual o SISPG poderá evoluir e
+reduzir os principais riscos do desenvolvimento são objetivos desta fase.
+@END
+
+@HEADProtótipo Versão Gelo
+@MSGAo lado o usuário poderá experimentar o protótipo corrente da interface
+gráfica, útil também à validação dos serviços oferecidos pelo SISPG. Este
+protótipo deverá passar por várias ''idades'', como o próprio nome indica.
+@END
+
+# Glossário
+@HEADArtefatos
+@MSGConjunto de documentos e outros elementos produzidos ao longo do
+desenvolvimento. Consulte o Glossário para detalhes.
+@END
+
+# Para o iniciante
+@HEADPara o iniciante ...
+@MSGConsulte o documento ''Visão'' (objetivos do projeto e do SISPG),
+''Especificação Suplementar'' e descrições de ''Casos de Uso''. Este
+conjunto caracteriza o SISPG.
+@END
+
+# The End
+@HEADDocumentos
+@MSGTodos os documentos estão disponíveis na TreeView ao lado. 
+@END
+

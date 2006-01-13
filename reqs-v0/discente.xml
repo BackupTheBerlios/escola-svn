@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="discente">
+
+<uc nome="Alterar informações de aluno">
+<resumo>
+A situação de um aluno sofre alterações ao longo do programa do qual participa. Todas as situações devem ser mantidas em um registro cronológico, indicando o motivo e, se for o caso, o usuário que efetuou a alteração. 
+Dessa forma, pode-se recuperar a “história” do aluno no programa em questão.
+</resumo>
+</uc>
+
+<uc nome="Manutenir inscrição em disciplina">
+<resumo>
+Através da execução deste caso de uso, as atividades de inscrição e cancelamento em disciplina são realizadas. Em ambos os casos, o aluno identifica a disciplina pertinente e registra a sua intenção. Em qualquer caso, o sistema deverá exibir: (a) o tempo de curso; (b) tempo para concluir;
+(c) créditos obtidos e (d) créditos para concluir.
+</resumo>
+</uc>
+
+<uc nome="Manutenir estágio-docência">
+<resumo>
+A indicação do docente-orientador, o período do estágio e o resultado obtido deverão ser registrados no sistema.
+Pode ser realizado mais de um estágio-docência por aluno?
+</resumo>
+</uc>
+
+<uc nome="Manutenir orientação">
+<resumo>
+Todos os registros da relação entre orientando e orientador deverão ser fornecidos ao sistema através deste caso de uso. Um aluno, ao ser matriculado, não possui orientador. Esta definição tem um prazo máximo para ocorrer. Contudo, ao longo do tempo, um aluno pode “passar” por diferentes orientadores. Todo orientador está associado a um período de credenciamento no qual este está autorizado a exercer a atividade de orientação. 
+Convém ressaltar que todo aluno pode ter zero ou mais coorientadores.
+</resumo>
+</uc>
+
+<uc nome="Matricular candidato">
+<resumo>
+O candidato aprovado em processo de seleção torna-se um aluno apenas após a correspondente matrícula. 
+Neste momento, o “novo” aluno recebe o seu número de matrícula e assina o documento de responsabilidade acerca do uso dos SISPG. Do ponto de vista do candidato, o seu ingresso como aluno é corroborado por um comprovante.
+</resumo>
+</uc>
+
+<uc nome="Efetuar matrícula">
+<resumo>
+Ao longo do curso de pós-graduação o aluno terá que efetuar matrículas periódicas, conforme a freqüência do programa. Este caso de uso,
+ao contrário do anterior, aplica-se exclusivamente a alunos. Aquele denominado de Matricular candidato é exclusivamente executado uma única vez  para a pessoa física aprovada em processo de seleção. 
+</resumo>
+</uc>
+
+<uc nome="Acompanhar auxílio">
+<resumo>
+Alunos podem receber auxílio de várias fontes, em períodos distintos. Este caso de uso permite acompanhar os auxílios recebidos pelos alunos. Por exemplo, o aluno pode receber, inicialmente, auxílio oferecido pelo CNPq e, posteriormente, da própria UFG.
+Os períodos correspondentes aos auxílios, os respectivos órgãos de fomento e os valores mensais fornecidos por estes órgãos estão entre as informações a serem manipuladas.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar exame de qualificação">
+<resumo>
+Após a integralização curricular e outras atividades a serem cumpridas antes da defesa de dissertação ou tese, o aluno deverá submeter-se ao exame de qualificação. Muitos programas, inclusive aqueles do nível de mestrado, exigem a aprovação em exame de qualificação antes da defesa. Neste caso de uso, o coordenador irá registrar o momento e as pessoas envolvidas,
+o resultado e comentários oportunos. 
+</resumo>
+</uc>
+
+</ers>

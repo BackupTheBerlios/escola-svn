@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?> 
+
+
+<ers nome="admprg">
+
+<uc nome="Manutenir cadastro de projeto de pesquisa">
+<resumo>
+Todos os projetos de pesquisa pertinentes a um dado programa devem ser 
+cadastrados pela coordenação correspondente. 
+Este caso de uso permite a criação de um novo projeto, remoção de projetos e 
+atualização dos dados de projetos já cadastrados.
+</resumo>
+</uc>
+
+<uc nome="Selecionar projeto de pesquisa">
+<resumo>
+Este caso de uso permite selecionar um projeto de pesquisa no conjunto 
+daqueles associados a um dado programa.
+</resumo>
+</uc>
+
+<uc nome="Manutenir linha de pesquisa">
+<resumo>
+Compreende a edição, remoção e acréscimo de linhas de pesquisa de um dado programa.
+</resumo>
+</uc>
+
+<uc nome="Selecionar linha de pesquisa">
+<resumo>
+Dado um programa de pós-graduação, este caso de uso oferece ao usuário a possibilidade de selecionar
+uma das linhas de pesquisa pertinentes ao programa.
+Esta seleção é útil para a manutenção da própria linha de pesquisa e para associação com projetos de pesquisa, por exemplo.
+</resumo>
+</uc>
+
+<uc nome="Cadastrar resultado de avaliação da CAPES">
+<resumo>
+Periodicamente a CAPES realiza uma avaliação dos programas de pós-graduação.
+Os resultados destas avaliações, atualmente bienais, deverão ser fornecidos ao sistema por este caso de uso.
+</resumo>
+</uc>
+
+</ers>
+

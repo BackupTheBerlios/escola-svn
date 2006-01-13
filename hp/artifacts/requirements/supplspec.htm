@@ -1,0 +1,2413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Especificação Suplementar</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="file:///E:/ABARE/reqs/suplemtr.RSS" rel=Original-File>
+<META content=Word.Document name=ProgId>
+<META content="MSHTML 5.50.4522.1801" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./suplemtr_arquivos/filelist.xml" rel=File-List><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>SISPG</o:Subject>
+  <o:Author>Fábio Nogueira de Lucena</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Fábio Nogueira de Lucena</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2001-05-23T11:48:00Z</o:LastPrinted>
+  <o:Created>2001-06-19T21:54:00Z</o:Created>
+  <o:LastSaved>2001-06-19T21:54:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2979</o:Words>
+  <o:Characters>16983</o:Characters>
+  <o:Manager>Fábio Nogueira de Lucena</o:Manager>
+  <o:Company>Instituto de Informática (UFG)</o:Company>
+  <o:Bytes>32768</o:Bytes>
+  <o:Lines>141</o:Lines>
+  <o:Paragraphs>33</o:Paragraphs>
+  <o:CharactersWithSpaces>20856</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>115</w:Zoom>
+  <w:ActiveWritingStyle Lang="PT-BR" VendorID="1" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:TrackRevisions/>
+  <w:AutoHyphenation/>
+  <w:HyphenationZone>17</w:HyphenationZone>
+  <w:DoNotHyphenateCaps/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:DoNotUseHTMLParagraphAutoSpacing/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Helvetica;
+}
+@font-face {
+	font-family: Courier;
+}
+@font-face {
+	font-family: Geneva;
+}
+@font-face {
+	font-family: Wingdings;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@font-face {
+	font-family: Arial Black;
+}
+@font-face {
+	font-family: Century Gothic;
+}
+@font-face {
+	font-family: Serifa BT;
+}
+@font-face {
+	font-family: Book Antiqua;
+}
+@page Section1 {size: 612.0pt 792.0pt; margin: 41.65pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-vertical-page-align: middle; mso-header: url("./suplemtr_arquivos/header.htm") h1; mso-paper-source: 0; }
+@page Section2 {size: 612.0pt 792.0pt; margin: 72.0pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-header: url("./suplemtr_arquivos/header.htm") h2; mso-paper-source: 0; mso-page-numbers: roman-lower 2; mso-footer: url("./suplemtr_arquivos/header.htm") f2; }
+@page Section3 {size: 612.0pt 792.0pt; margin: 72.0pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-header: url("./suplemtr_arquivos/header.htm") h2; mso-paper-source: 0; mso-page-numbers: 1; mso-footer: url("./suplemtr_arquivos/header.htm") f3; }
+P.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+H1 {
+	FONT-SIZE: 12pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 1; mso-list: l0 level1 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 0pt; mso-bidi-font-weight: normal
+}
+H2 {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 2; mso-list: l0 level2 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 3; mso-list: l0 level3 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 4; mso-list: l0 level4 lfo1; mso-bidi-font-family: "Times New Roman"
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 5; mso-list: l0 level5 lfo1; mso-bidi-font-size: 10.0pt
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 6; mso-list: l0 level6 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: normal
+}
+P.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+LI.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+DIV.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+P.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+LI.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+DIV.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+P.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+LI.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+DIV.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+P.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+LI.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+DIV.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+P.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+LI.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+DIV.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+P.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+P.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+SPAN.MsoFootnoteReference {
+	VERTICAL-ALIGN: super; mso-ansi-font-size: 10.0pt
+}
+P.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+LI.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+DIV.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+P.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+LI.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+DIV.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+P.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+LI.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+DIV.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+P.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+P.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+LI.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+DIV.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+P.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+LI.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+DIV.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+P.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+LI.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+DIV.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+P.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+LI.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+DIV.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+P.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+LI.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+DIV.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+P.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+LI.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+DIV.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+P.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+LI.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+DIV.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+P.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+LI.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+DIV.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+P.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+LI.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+DIV.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+P.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+LI.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+DIV.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+P.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+LI.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+DIV.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+P.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+LI.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+DIV.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+INS {
+	COLOR: black; TEXT-DECORATION: none; mso-style-type: export-only
+}
+SPAN.msoDel {
+	DISPLAY: none; COLOR: black; TEXT-DECORATION: line-through; mso-style-name: ""; mso-style-type: export-only
+}
+DIV.Section1 {
+	page: Section1
+}
+DIV.Section2 {
+	page: Section2
+}
+DIV.Section3 {
+	page: Section3
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+</HEAD>
+<BODY lang=PT-BR style="tab-interval: 36.0pt" vLink=purple link=blue>
+<DIV class=Section1>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 48pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt"><SPAN 
+class=msoDel><DEL datetime="2001-05-23T08:37" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">Abaré</DEL></SPAN><INS 
+datetime="2001-05-23T08:37" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">SISPG</INS><BR></SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><INS 
+datetime="2001-05-23T08:37" cite="mailto:Fábio%20Nogueira%20de%20Lucena"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN></INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:37" cite="mailto:Fábio%20Nogueira%20de%20Lucena">Amigo 
+do homem</DEL></SPAN><BR><BR></SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 12pt; FONT-FAMILY: 'Century Gothic'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold">http://www.inf.ufg.br/~fabio/abare</SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><BR></SPAN><BR><SPAN 
+style="FONT-SIZE: 16pt; mso-bidi-font-size: 10.0pt"><SPAN 
+style="mso-field-code: 'SUBJECT  \\* MERGEFORMAT'"><SPAN 
+style="mso-field-code: 'SUBJECT  \\* MERGEFORMAT'">Sistema de Gerenciamento da 
+Pesquisa e da Pós-graduação</SPAN></SPAN><BR></SPAN>Especificação 
+Suplementar<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><o:p></o:p></SPAN></P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 14pt; mso-bidi-font-size: 10.0pt">Versão 0.<INS 
+datetime="2001-05-23T08:30" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">2</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:30" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">1</DEL></SPAN><o:p></o:p></SPAN></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. José Luiz Domingues</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Pró-Reitor de Pesquisa e 
+Pós-Graduação<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Profa. Dra. Eliana Martins Lima<BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Coordenadora Geral de 
+Pós-graduação<BR></SPAN><SPAN 
+style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt">emlima@prppg.ufg.br</SPAN><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"> <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. Rogério Pereira 
+Bastos</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Coordenador Geral de 
+Pesquisa</SPAN><SPAN style="FONT-FAMILY: 'Serifa BT'"> <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. Fábio Nogueira de 
+Lucena</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Projetista de 
+Software<BR></SPAN><SPAN 
+style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt">fabio@inf.ufg.br</SPAN><BR 
+style="mso-special-character: line-break"><![if !supportLineBreakNewLine]><BR 
+style="mso-special-character: line-break"><![endif]></P>
+<P class=MsoTitle><SPAN style="FONT-SIZE: 14pt; mso-bidi-font-size: 10.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=InfoBlue><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P 
+class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></DIV><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 14pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN></B>
+<DIV class=Section2>
+<P class=MsoTitle>Histórico de Revisões</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-table-layout-alt: fixed; mso-border-alt: solid windowtext .75pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Data<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Versão<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Descrição<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Autor<o:p></o:p></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>28/03/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.1</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Versão inicial</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>15/05/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.1</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Pequenas correções</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext><INS datetime="2001-05-23T08:30" 
+      cite="mailto:Fábio%20Nogueira%20de%20Lucena">23/05/2001</INS></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext><INS datetime="2001-05-23T08:30" 
+      cite="mailto:Fábio%20Nogueira%20de%20Lucena">0.2</INS></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext><INS datetime="2001-05-23T08:30" 
+      cite="mailto:Fábio%20Nogueira%20de%20Lucena">Revisão</INS></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext><INS datetime="2001-05-23T08:30" 
+      cite="mailto:Fábio%20Nogueira%20de%20Lucena">Fábio, Eliana</INS></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P 
+      class=Tabletext><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P 
+      class=Tabletext><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P 
+      class=Tabletext><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P 
+      class=Tabletext><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN></B>
+<P class=MsoTitle>Conteúdo</P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes"> </span>TOC \o &quot;1-3&quot; <span style='mso-element:field-separator'></span><![endif]--><SPAN 
+style="mso-bidi-font-size: 12.0pt">1.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Introdução</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240784 \h <span style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">2.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="mso-bidi-font-size: 12.0pt">Funcionalidade</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240785 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">3.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">Usabilidade</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240786 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">3.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Uso efetivo após 
+treinamento máximo de 16h</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240787 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">3.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Padrão de interface 
+homem-computador: Internet</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240788 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">3.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Nota mínima de 
+avaliação da interface: 6</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240789 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700380039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">4.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="mso-bidi-font-size: 12.0pt">Confiabilidade</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240790 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue">Segurança</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240791 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN style="COLOR: blue">Apenas 
+usuários autorizados têm acesso a serviços</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240792 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN style="COLOR: blue">Uso 
+restrito ao âmbito da UFGNet</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240793 \h <span
+style='mso-element:field-separator'></span><![endif]--><INS 
+datetime="2001-06-15T17:19" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">2</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:48" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">1</DEL></SPAN><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Efetuar cópias de segurança</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240794 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Conscientização de usuários</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240795 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Registro de execução de serviço</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240796 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue">Disponibilidade</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240797 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Horário padrão de disponibilidade do sistema</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240798 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Alternativa para situações de 
+indisponibilidade</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240799 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003700390039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Disponibilidade superior a 90% do tempo útil 
+semanal</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240800 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Coordenações e superiores terão prioridade em situações de 
+sobrecarga</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240801 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Supervisão 
+humana</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240802 \h <span
+style='mso-element:field-separator'></span><![endif]--><INS 
+datetime="2001-06-15T17:19" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">3</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:48" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">2</DEL></SPAN><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">5.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">Desempenho</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240803 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Tempo médio 5s e máximo 
+10s para execução de tarefa típica</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240804 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Tempo de execução de 
+tarefa não-convencional: 30s</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240805 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Número máximo de 
+usuários simultâneos: 100</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240806 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Taxa de transferência 
+de pelo menos 100 Mbps</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240807 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">6.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">Suporte</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:
+field-begin'></span> PAGEREF _Toc515240808 \h <span style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Padrão de 
+codificação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240809 \h <span style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800300039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue">Administrador</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240810 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Manutenção do sistema</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240811 \h <span
+style='mso-element:field-separator'></span><![endif]--><INS 
+datetime="2001-06-15T17:19" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">4</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:48" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">3</DEL></SPAN><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Disponibilidade</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240812 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Dominar a tecnologia utilizada pelo sistema</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240813 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Facilidade de comunicação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240814 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN style="COLOR: blue">Acesso 
+ao console do servidor</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240815 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Recursos 
+necessários</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240816 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Treinamento de 
+usuários</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240817 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">CD-ROM de apoio ao 
+cliente</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240818 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">7.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Restrições</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240819 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800310039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Ambiente 
+operacional</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240820 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Serviços disponibilizados via <SPAN 
+style="mso-bidi-font-style: italic">browser</SPAN></SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240821 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Computador do usuário</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240822 \h <span
+style='mso-element:field-separator'></span><![endif]--><INS 
+datetime="2001-06-15T17:19" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">5</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:48" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">4</DEL></SPAN><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Emprego da linguagem de programação Java</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240823 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Emprego do servidor de W3 Apache</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240824 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Emprego dos bancos de dados Interbase ou 
+PostgreSQL</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240825 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.6</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Browser será o Netscape 6.0, Internet Explorer 5 ou mais 
+recentes</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240826 \h <span style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">7.1.7</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Emprego do sistema operacional Linux no 
+servidor</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240827 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">8.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue; mso-bidi-font-size: 12.0pt">Documentação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240828 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">8.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Manual do 
+Usuário</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240829 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800320039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">8.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Ajuda 
+online</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240830 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">8.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Guia de instalação, 
+configuração e arquivo LEIAME</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240831 \h <span
+style='mso-element:field-separator'></span><![endif]-->5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">8.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Curso de 
+treinamento</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240832 \h <span style='mso-element:field-separator'></span><![endif]--><INS 
+datetime="2001-06-15T17:19" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">6</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:48" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">5</DEL></SPAN><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">8.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Rótulos e 
+empacotamento</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240833 \h <span style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">9.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Componentes a serem 
+adquiridos</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240834 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 43.2pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">10.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Interfaces</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240835 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt">10.1<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Interfaces 
+homem-computador<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc515240836 \h <span style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt">10.2<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Interfaces de 
+hardware<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240837 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt">10.3<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Interfaces de 
+software<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240838 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc3 style="tab-stops: 72.0pt 80.2pt right 468.0pt"><SPAN 
+style="COLOR: blue">10.3.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><U style="text-underline: double"><SPAN 
+style="COLOR: blue">Facilidade de futura integração com outros 
+sistemas</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240839 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800330039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt">10.4<SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Interface de 
+comunicação<SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240840 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800340030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 43.2pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">11.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Licença de 
+uso</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240841 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800340031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 43.2pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">12.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Copyright</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240842 \h <span
+style='mso-element:field-separator'></span><![endif]-->6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800340032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 43.2pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">13.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Garantias</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240843 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800340033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 43.2pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">14.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Padrões a serem 
+seguidos</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc515240844 \h <span
+style='mso-element:field-separator'></span><![endif]-->7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310035003200340030003800340034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoTitle><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></P></DIV><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN></B>
+<DIV class=Section3>
+<P class=MsoTitle><SPAN 
+style="mso-field-code: 'TITLE  \\* MERGEFORMAT'">Especificação 
+Suplementar</SPAN> </P>
+<H1 
+style="mso-list: l0 level1 lfo1; mso-list-change: '%1\:1\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=_Toc456598586></A><A name=_Toc456600917></A><A name=_Toc456660576></A><A 
+name=_Toc515240784><SPAN style="mso-bookmark: _Toc456660576"><SPAN 
+style="mso-bookmark: _Toc456600917"><SPAN style="mso-bookmark: _Toc456598586"><![if !supportLists]>1.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Introdução</SPAN></SPAN></SPAN></A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Este documento 
+fornece requisitos não-funcionais do Sistema de Gerenciamento da Pesquisa e da 
+Pós-Graduação da UFG<INS datetime="2001-05-23T08:29" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena"> ou SISPG</INS>. O conteúdo aqui 
+fornecido é derivado da análise de casos de uso e visão do sistema, 
+respectivamente contidos nos vários documentos de especificação de caso de uso e 
+no documento <I>Visão</I>. </P>
+<P class=InfoBlue 
+style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:2\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660582></A><A name=_Toc515240785><SPAN 
+style="mso-bookmark: _Toc456660582"><![if !supportLists]>2.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Funcionalidade</SPAN></A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt">Descrita em outros documentos 
+que descrevem os <I>casos de uso</I> do sistema. </P>
+<P class=InfoBlue 
+style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:3\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660584></A><A name=REQDFFJTK><SPAN 
+style="mso-bookmark: _Toc456660584"><![if !supportLists]>3.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S1 </SPAN></U></SPAN></A><A 
+name=_Toc515240786><SPAN style="mso-bookmark: _Toc456660584"><SPAN 
+style="mso-bookmark: REQDFFJTK"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Usabilidade</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQDFFJTK">&nbsp;</SPAN></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:3\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881525></A><A name=REQDFFJUK><SPAN 
+style="mso-bookmark: _Toc506881525"><![if !supportLists]>3.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S1.1 </SPAN></U></SPAN></A><A 
+name=_Toc515240787><SPAN style="mso-bookmark: _Toc506881525"><SPAN 
+style="mso-bookmark: REQDFFJUK"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Uso efetivo após treinamento máximo de 
+16h</U></SPAN></SPAN></SPAN></A><SPAN style="mso-bookmark: _Toc506881525"><SPAN 
+style="mso-bookmark: REQDFFJUK">&nbsp;</SPAN> </SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Um servidor ou 
+docente envolvido nas atividades do sistema deverá interagir de forma 
+satisfatória com o sistema após treinamento de, no máximo de 16 horas, 
+eventualmente dividido em dois ou mais períodos. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:3\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881526></A><A name=REQDFFJVK><SPAN 
+style="mso-bookmark: _Toc506881526"><![if !supportLists]>3.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S1.2 </SPAN></U></SPAN></A><A 
+name=_Toc515240788><SPAN style="mso-bookmark: _Toc506881526"><SPAN 
+style="mso-bookmark: REQDFFJVK"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Padrão de interface homem-computador: 
+Internet</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQDFFJVK">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Todas as 
+operações do sistema serão executadas via <I>browser</I> — ferramenta de uso 
+típico da comunidade de usuários. Não existe nenhum padrão de interface a ser 
+seguido. O projeto do <I>look and feel </I>do sistema será estabelecido após 
+interação constante com os usuários em um processo altamente iterativo, 
+envolvendo a construção e reformulação paulatina de protótipos.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:3\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881527></A><A name=REQDFFJWK><SPAN 
+style="mso-bookmark: _Toc506881527"><![if !supportLists]>3.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S1.3 </SPAN></U></SPAN></A><A 
+name=_Toc515240789><SPAN style="mso-bookmark: _Toc506881527"><SPAN 
+style="mso-bookmark: REQDFFJWK"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Nota mínima de avaliação da interface: 
+6</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQDFFJWK">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">Em uma faixa de valores 
+de 0 a 10, inclusive, os coordenadores da<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>pós-graduação e os usuários da Pró-Reitoria de Pesquisa e Pós-Graduação 
+deverão fornecer uma nota para a qualidade da interação com o sistema. A média 
+considerada satisfatória deverá ser superior ou igual a 6.</P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:4\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc515240790><![if !supportLists]>4.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Confiabilidade</A></H1>
+<P class=InfoBlue 
+style="tab-stops: 54.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660587></A><A name=REQCTASG2><SPAN 
+style="mso-bookmark: _Toc456660587"><![if !supportLists]>4.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2 </SPAN></U></SPAN></A><A 
+name=_Toc515240791><SPAN style="mso-bookmark: _Toc456660587"><SPAN 
+style="mso-bookmark: REQCTASG2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Segurança</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTASG2">&nbsp;</SPAN></H2>
+<P class=InfoBlue 
+style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:\.%3\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881532></A><A name=REQCTASR2><SPAN 
+style="mso-bookmark: _Toc506881532"><![if !supportLists]>4.1.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.1 </SPAN></U></SPAN></A><A 
+name=_Toc515240792><SPAN style="mso-bookmark: _Toc506881532"><SPAN 
+style="mso-bookmark: REQCTASR2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Apenas usuários autorizados têm acesso a 
+serviços</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTASR2">&nbsp;</SPAN></H3>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">Um usuário só terá acesso 
+a um dado serviço se e somente se possuir autorização para tal. Em conseqüência, 
+o sistema deverá reconhecê-lo como usuário (a identificação e senha 
+correspondentes) e o período no qual esta relação irá ser estabelecida. A senha 
+também poderá possuir um período de validade, exigindo que o usuário faça a 
+devida alteração quando o período pertinente for expirado. Ainda deverá estar 
+associado a uma categoria, que fornece o conjunto de serviços ao qual um dado 
+usuário tem acesso. Por último, deverá haver um controle para permitir que uma 
+categoria ou parte de uma categoria possam ser “impedidos” temporariamente de 
+usufruir do sistema.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:\.%3\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCTASZ2><![if !supportLists]>4.1.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.2 </SPAN></U></A><A 
+name=_Toc515240793><SPAN style="mso-bookmark: REQCTASZ2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Controle de acesso a 
+serviços dependendo da origem<SPAN class=msoDel><DEL datetime="2001-05-23T08:31" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">Uso restrito ao âmbito da 
+UFGNet</DEL></SPAN></U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTASZ2">&nbsp;</SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><A 
+name=_Toc512851685></A>Embora o sistema faça uso de <I>browsers </I>e de 
+protocolos de comunicação típicos da Internet, não será possível o acesso a 
+todos os serviços<SPAN class=msoDel><DEL datetime="2001-05-23T08:31" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">ao sistema</DEL></SPAN> pela grande 
+rede. <INS datetime="2001-05-23T08:32" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">Tarefas de “grande 
+repercuss</INS><INS datetime="2001-05-23T08:33" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">ão”, conforme serão definidas, só 
+poderão ser executadas no âmbito da UFGNet. Demais tarefas poderão ser 
+usufruídas por qualquer ponto da Internet.</INS><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:33" cite="mailto:Fábio%20Nogueira%20de%20Lucena">Em 
+outras palavras, alteração de conceito e presença de aluno, por exemplo, não 
+poderá ser realizada da residência do professor, mas exclusivamente de máquina 
+com conexão física com a UF</DEL></SPAN><SPAN class=msoDel><DEL 
+datetime="2001-05-23T08:33" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">G</DEL></SPAN><SPAN 
+class=msoDel><DEL datetime="2001-05-23T08:33" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">Net.</DEL></SPAN> </P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:\.%3\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881539></A><A name=REQCTAUH2><SPAN 
+style="mso-bookmark: _Toc506881539"><![if !supportLists]>4.1.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.3 </SPAN></U></SPAN></A><A 
+name=_Toc515240794><SPAN style="mso-bookmark: _Toc506881539"><SPAN 
+style="mso-bookmark: REQCTAUH2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Efetuar cópias de 
+segurança</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAUH2">&nbsp;</SPAN></H3>
+<P class=MsoBodyTextIndent3 style="TEXT-ALIGN: justify">Cópias de segurança 
+permitirão a recuperação das informações após a ocorrência de falhas. Nestes 
+casos, as informações “perdidas” serão aquelas fornecidas e/ou alteradas desde a 
+última cópia de segurança. Deverá ser produzido um documento estabelecendo a 
+freqüência e forma de realização das cópias de segurança, inclusive o 
+armazenamento em locais distintos, por exemplo. <A name=REQDVTU2I><U 
+style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.3.1 </SPAN><SPAN 
+style="COLOR: blue">Validar plano de cópia de segurança</SPAN></U>&nbsp;</A> 
+deverá ocorrer tão logo o plano esteja disponível para consideração.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:\.%3\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881540></A><A name=REQCTAUQ2><SPAN 
+style="mso-bookmark: _Toc506881540"><![if !supportLists]>4.1.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.4 </SPAN></U></SPAN></A><A 
+name=_Toc515240795><SPAN style="mso-bookmark: _Toc506881540"><SPAN 
+style="mso-bookmark: REQCTAUQ2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Conscientização de 
+usuários</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAUQ2">&nbsp;</SPAN></H3>
+<P class=MsoBodyTextIndent3 style="TEXT-ALIGN: justify">Um dos principais 
+“pontos fracos” da segurança de sistemas está na postura dos usuários. Um 
+programa de conscientização contínuo deverá ser implantado. Espera-se que antes 
+mesmo da introdução do sistema, todos os usuários já tenham conhecimento de 
+aspectos básicos de segurança e estejam aptos a executá-los. Algumas das idéias 
+a serem divulgadas incluem: senha é pessoal e intransferível; senha não se 
+anota; senha não se diz, seja pessoalmente, por telefone ou outro meio, entre 
+outras.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:1\:0\:\.%3\:5\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881536></A><A name=REQCTAUZ2><SPAN 
+style="mso-bookmark: _Toc506881536"><![if !supportLists]>4.1.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.5 </SPAN></U></SPAN></A><A 
+name=_Toc515240796><SPAN style="mso-bookmark: _Toc506881536"><SPAN 
+style="mso-bookmark: REQCTAUZ2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Registro de execução de 
+serviço</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAUZ2">&nbsp;</SPAN></H3>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">Informação do instante da 
+requisição, do usuário que requisita um serviço e este último, propriamente 
+dito, deverá ser mantida para que seja possível acompanhar o emprego do Abaré 
+por parte de seus usuários.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881541></A><A name=REQCTAXJ2><SPAN 
+style="mso-bookmark: _Toc506881541"><![if !supportLists]>4.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S3 </SPAN></U></SPAN></A><A 
+name=_Toc515240797><SPAN style="mso-bookmark: _Toc506881541"><SPAN 
+style="mso-bookmark: REQCTAXJ2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Disponibilidade</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: _Toc506881541"><SPAN 
+style="mso-bookmark: REQCTAXJ2">&nbsp;</SPAN></SPAN></H2>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:2\:0\:\.%3\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCTAXS2><![if !supportLists]>4.2.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S3.1 </SPAN></U></A><A 
+name=_Toc515240798><SPAN style="mso-bookmark: REQCTAXS2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Horário padrão de 
+disponibilidade do sistema</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAXS2">&nbsp;</SPAN></H3>
+<P class=MsoBodyTextIndent2>O sistema deverá estar apto para operação todos os 
+dias úteis, das segundas-feiras às sextas-feiras, das 7h30min às 17h30min. <INS 
+datetime="2001-05-23T08:34" cite="mailto:Fábio%20Nogueira%20de%20Lucena">O 
+administrador do sistema, contudo, sob ordem da administração superior, 
+poder</INS><INS datetime="2001-05-23T08:35" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">á manter o sistema em operação em 
+outros períodos diferentes daquele padr</INS><INS datetime="2001-05-23T08:36" 
+cite="mailto:Fábio%20Nogueira%20de%20Lucena">ão.</INS></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:2\:0\:\.%3\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881542></A><A name=REQCTAY02><SPAN 
+style="mso-bookmark: _Toc506881542"><![if !supportLists]>4.2.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S3.2 </SPAN></U></SPAN></A><A 
+name=_Toc515240799><SPAN style="mso-bookmark: _Toc506881542"><SPAN 
+style="mso-bookmark: REQCTAY02"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Alternativa para situações de 
+indisponibilidade</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: _Toc506881542"><SPAN 
+style="mso-bookmark: REQCTAY02">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoBodyTextIndent2><SPAN style="mso-bookmark: _Toc506881542">A 
+disponibilidade do sistema jamais poderá ser garantida em 100% do tempo. Em 
+conseqüência, é preciso se antecipar a situações indesejáveis e definir “rotas” 
+alternativas de ação. Após cessado o motivo da indisponibilidade, deverá haver 
+retomada “gradual” e “natural” do emprego do sistema.</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><SPAN 
+style="mso-bookmark: _Toc506881542"><SPAN 
+style="mso-spacerun: yes"></SPAN></SPAN>&nbsp;</P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:2\:0\:\.%3\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc506881542"><A 
+name=REQCTAY72><![if !supportLists]>4.2.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S3.3 </SPAN></U></A><A 
+name=_Toc515240800><SPAN style="mso-bookmark: REQCTAY72"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disponibilidade superior a 
+90% do tempo útil semanal</U></SPAN></SPAN></A></SPAN><SPAN 
+style="mso-bookmark: REQCTAY72">&nbsp;</SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify">Entre as 40 
+horas semanais de trabalho, espera-se que, em pelo menos 36 delas o presente 
+sistema esteja operando normalmente. As demais 4 horas poderão ser consumidas em 
+reparos e atividades de manutenção emergenciais. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="mso-list: l0 level3 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:2\:0\:\.%3\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=REQCTAYF2><![if !supportLists]>4.2.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S3.4 </SPAN></U></A><A 
+name=_Toc515240801><SPAN style="mso-bookmark: REQCTAYF2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Coordenações e superiores 
+terão prioridade em situações de sobrecarga</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAYF2">&nbsp;</SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify">Mesmo 
+quando grande número de usuários requisita serviços concorrentemente, as 
+coordenações de pós-graduação e categorias superiores deverão ter acesso 
+garantido. Demais categorias poderão ter suas requisições negadas, nestas 
+circunstâncias.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="mso-list: l0 level2 lfo1; mso-list-change: '%1\:4\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=REQCTB0B2><![if !supportLists]>4.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S4 </SPAN></U></A><A 
+name=_Toc515240802><SPAN style="mso-bookmark: REQCTB0B2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Supervisão 
+humana</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB0B2">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">O presente sistema não 
+será o primeiro software perfeito. Em outras palavras, uma supervisão e 
+acompanhamento humanos deverão ocorrer, seja por amostragem, investigação de 
+casos suspeitos ou outro cenário. O objetivo é evitar que o sistema emita 
+diplomas e declarações ilícitos, por exemplo.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:5\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660588></A><A name=REQCTB1T2><SPAN 
+style="mso-bookmark: _Toc456660588"><![if !supportLists]>5.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S5 </SPAN></U></SPAN></A><A 
+name=_Toc515240803><SPAN style="mso-bookmark: _Toc456660588"><SPAN 
+style="mso-bookmark: REQCTB1T2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Desempenho</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB1T2">&nbsp;</SPAN></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:5\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881551></A><A name=REQCTB312><SPAN 
+style="mso-bookmark: _Toc506881551"><![if !supportLists]>5.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S5.1 </SPAN></U></SPAN></A><A 
+name=_Toc515240804><SPAN style="mso-bookmark: _Toc506881551"><SPAN 
+style="mso-bookmark: REQCTB312"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Tempo médio 5s e máximo 10s para execução de 
+tarefa típica</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB312">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">Dez segundos deverá ser o 
+período máximo entre a submissão de uma tarefa e o tempo de resposta do mesmo. 
+Neste período não está incluído o tempo necessário para preenchimento de campos 
+com o objetivo de fornecer informações, atividade cujo desempenho depende da 
+habilidade e treinamento do usuário. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:5\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881552></A><A name=REQCTB3E2><SPAN 
+style="mso-bookmark: _Toc506881552"><![if !supportLists]>5.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S5.2 </SPAN></U></SPAN></A><A 
+name=_Toc515240805><SPAN style="mso-bookmark: _Toc506881552"><SPAN 
+style="mso-bookmark: REQCTB3E2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Tempo de execução de tarefa não-convencional: 
+30s</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB3E2">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify">Alguns serviços envolvem 
+muitas operações de banco de dados, interação com servidor de W3 e outros 
+softwares antes que os resultados sejam obtidos. Nestes casos, uma tolerância 
+maior será esperada do usuário.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:5\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881553></A><A name=REQCTB3M2><SPAN 
+style="mso-bookmark: _Toc506881553"><![if !supportLists]>5.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S5.3 </SPAN></U></SPAN></A><A 
+name=_Toc515240806><SPAN style="mso-bookmark: _Toc506881553"><SPAN 
+style="mso-bookmark: REQCTB3M2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Número máximo de usuários simultâneos: 
+100</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB3M2">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent2>Usuários que requisitarem serviços além deste número 
+serão informados de que o sistema não está apto a atender tantas requisições 
+simultâneas. O sistema irá sugerir que o usuário tente realizar esta operação 
+posteriormente.</P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:5\:0\:\.%2\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCTBFV2><![if !supportLists]>5.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S5.4 </SPAN></U></A><A 
+name=_Toc515240807><SPAN style="mso-bookmark: REQCTBFV2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Taxa de transferência de 
+pelo menos 100 Mbps</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTBFV2">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">A UFGNet 
+possui <I>backbone </I>ATM de alta velocidade. Contudo, as unidades, 
+internamente, estão restritas a tráfegos relativamente lentos (em geral de 10 
+Mbps). Espera-se que uma conexão de pelo menos 100 Mbps esteja disponível entre 
+o equipamento do usuário e a UFGNet.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:6\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660590></A><A name=REQCTAKH2><SPAN 
+style="mso-bookmark: _Toc456660590"><![if !supportLists]>6.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6 </SPAN></U></SPAN></A><A 
+name=_Toc515240808><SPAN style="mso-bookmark: _Toc456660590"><SPAN 
+style="mso-bookmark: REQCTAKH2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Suporte</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAKH2">&nbsp;</SPAN></H1>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660591></A><A name=REQCTAIX2><SPAN 
+style="mso-bookmark: _Toc456660591"><![if !supportLists]>6.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.1 </SPAN></U></SPAN></A><A 
+name=_Toc515240809><SPAN style="mso-bookmark: _Toc456660591"><SPAN 
+style="mso-bookmark: REQCTAIX2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Padrão de 
+codificação</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: _Toc456660591"><SPAN 
+style="mso-bookmark: REQCTAIX2">&nbsp;</SPAN></SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660591">Deverá ser seguido o padrão disponível em 
+</SPAN><A href="http://java.sun.com/docs/codeconv/"><SPAN 
+style="mso-bookmark: _Toc456660591">http://java.sun.com/docs/codeconv/</SPAN><SPAN 
+style="mso-bookmark: _Toc456660591"></SPAN></A><SPAN 
+style="mso-bookmark: _Toc456660591">. Código que não segue o padrão não poderá 
+ser incorporado ao Abaré. </SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><SPAN 
+style="mso-bookmark: _Toc456660591"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660591"><A 
+name=REQCTAHK2><![if !supportLists]>6.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.2 </SPAN></U></A><A 
+name=_Toc515240810><SPAN style="mso-bookmark: REQCTAHK2"><SPAN 
+style="COLOR: blue"><U 
+style="text-underline: double">Administrador</U></SPAN></SPAN></A></SPAN><SPAN 
+style="mso-bookmark: REQCTAHK2">&nbsp;</SPAN></H2>
+<P class=MsoBodyText style="TEXT-ALIGN: justify">Todos os sistemas de informação 
+são, inevitavelmente, alterados. Algumas alterações decorrem de evolução do 
+problema ou mudança da visão inicial do sistema para uma outra. Outras são 
+oriundas de mudanças em regras do negócio para as quais não é possível haver 
+previsão. Ainda há aquelas decorrentes de erros encontrados no sistema e de 
+pequenas alterações, como a mudança na forma de impressão de um histórico, por 
+exemplo. Em situações excepcionais será necessário restaurar cópia de segurança 
+dos dados, ocasionada por perda física do disco do servidor, por exemplo. Ainda 
+há a necessidade de acompanhar a resolução de pequenos problemas como, por 
+exemplo, a instalação de nova versão de <I>browser</I>, remoção de vírus e 
+outras tarefas de manutenção para manter as máquinas dos usuários e o sistema 
+operando normalmente. Estas tarefas serão executadas pelo <I>Administrador</I> 
+do sistema.</P>
+<P class=MsoBodyText style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:\.%3\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc515240811></A><A name=REQDW409Q><SPAN 
+style="mso-bookmark: _Toc515240811"><![if !supportLists]>6.2.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.2.1 </SPAN><SPAN 
+style="COLOR: blue">Manutenção do sistema</SPAN></U></SPAN>&nbsp;</A></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Algumas das atividades do 
+administrador, além daquelas citadas acima, exigem interação com o sistema em 
+execução. Aquelas não dão origem a recursos funcionais, aquelas aqui 
+consideradas, dão origem a recursos funcionais, por exemplo, iniciar e terminar 
+a operação do sistema. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:\.%3\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881556></A><A name=_Toc515240812></A><A name=REQCTAHV2><SPAN 
+style="mso-bookmark: _Toc515240812"><SPAN style="mso-bookmark: _Toc506881556"><![if !supportLists]>6.2.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.2.2 </SPAN><SPAN 
+style="COLOR: blue">Disponibilidade</SPAN></U></SPAN></SPAN>&nbsp;</A></H3>
+<P class=MsoBodyTextIndent3 style="TEXT-ALIGN: justify">O administrador deverá 
+possuir “agenda” que facilite, do ponto de vista dos usuários, a eliminação de 
+dúvidas, execução de pequenos reparos, manutenção e acréscimo de funções e 
+atividades emergenciais, entre outras.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:\.%3\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881557></A><A name=_Toc515240813></A><A name=REQCTAI32><SPAN 
+style="mso-bookmark: _Toc515240813"><SPAN style="mso-bookmark: _Toc506881557"><![if !supportLists]>6.2.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.2.3 </SPAN><SPAN 
+style="COLOR: blue">Dominar a tecnologia </SPAN></U></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">utilizada pelo 
+sistema</SPAN></U></SPAN>&nbsp;</A></H3>
+<P class=MsoBodyTextIndent3>A manutenção do sistema só poderá ocorrer se o 
+administrador possuir a competência técnica necessária.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="mso-list: l0 level3 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:\.%3\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=_Toc506881558></A><A name=_Toc515240814></A><A name=REQCTAIA2><SPAN 
+style="mso-bookmark: _Toc515240814"><SPAN style="mso-bookmark: _Toc506881558"><![if !supportLists]>6.2.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.2.4 </SPAN><SPAN 
+style="COLOR: blue">Facilidade de 
+comunicação</SPAN></U></SPAN></SPAN>&nbsp;</A></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Uma das 
+principais atividades do administrador será a comunicação com os usuários. Em 
+conseqüência, o administrador deverá possuir habilidades de comunicação e trato 
+com os usuários para profícua interação.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:2\:0\:\.%3\:5\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCUAQS8><![if !supportLists]>6.2.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S2.6 </SPAN></U></A><A 
+name=_Toc515240815><SPAN style="mso-bookmark: REQCUAQS8"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Acesso ao console do 
+servidor</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCUAQS8">&nbsp;</SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">O administrador realizará, como 
+parte de suas atividades, várias tarefas que exigem acesso direto ao servidor. 
+Em conseqüência, a localização física do servidor não deve impedir ou dificultar 
+este acesso.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="mso-list: l0 level2 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=REQCTAMH2><![if !supportLists]>6.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.3 </SPAN></U></A><A 
+name=_Toc515240816><SPAN style="mso-bookmark: REQCTAMH2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Recursos 
+necessários</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAMH2">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent2>Ao administrador será oferecido acesso à Internet, 
+e-mail e telefone. O primeiro permitirá que o mesmo se mantenha atualizado, 
+particularmente o que diz respeito à segurança. Os dois outros recursos visam 
+facilitar a interação com os usuários, principalmente para a eliminação de 
+dúvidas acerca da operação do sistema.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881559></A><A name=REQCTAMR2><SPAN 
+style="mso-bookmark: _Toc506881559"><![if !supportLists]>6.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.4 </SPAN></U></SPAN></A><A 
+name=_Toc515240817><SPAN style="mso-bookmark: _Toc506881559"><SPAN 
+style="mso-bookmark: REQCTAMR2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Treinamento de 
+usuários</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTAMR2">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Com o 
+propósito de manter os usuários devidamente atualizados com a evolução do 
+sistema e treinar novos usuários, a atividade de suporte executará, quando 
+conveniente, um treinamento.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:6\:0\:\.%2\:5\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQDZDEJI><![if !supportLists]>6.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S6.5 </SPAN></U></A><A 
+name=_Toc515240818><SPAN style="mso-bookmark: REQDZDEJI"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">CD-ROM de apoio ao 
+cliente</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQDZDEJI">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Uma versão 
+“enxuta” do Linux, com todos os demais utilitários devidamente disponíveis (por 
+exemplo, <I>NetScape Navigator</I>), deverá ser produzida com o intuito de 
+agilizar a recuperação de falhas ocorridas com as máquinas dos clientes. Este 
+CD-ROM deverá estar configurado para facilitar a reinstalação de todo o ambiente 
+do cliente (versão Linux) ou apenas parte, <I>browser, </I>por exemplo, no caso 
+do cliente empregar o sistema operacional Windows. </P>
+<P class=MsoBodyText style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:7\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc515240819><![if !supportLists]>7.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Restrições</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCT9PQ2><![if !supportLists]>7.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7 </SPAN></U></A><A 
+name=_Toc515240820><SPAN style="mso-bookmark: REQCT9PQ2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Ambiente 
+operacional</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9PQ2">&nbsp;</SPAN></H2>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660593></A><A name=_Toc506881561></A><A name=REQCT9Q42><SPAN 
+style="mso-bookmark: _Toc506881561"><SPAN style="mso-bookmark: _Toc456660593"><![if !supportLists]>7.1.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.1 
+</SPAN></U></SPAN></SPAN></A><A name=_Toc515240821><SPAN 
+style="mso-bookmark: _Toc456660593"><SPAN 
+style="mso-bookmark: _Toc506881561"><SPAN style="mso-bookmark: REQCT9Q42"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Serviços disponibilizados 
+via </U></SPAN></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: _Toc515240821"><SPAN 
+style="mso-bookmark: _Toc456660593"><SPAN 
+style="mso-bookmark: _Toc506881561"><SPAN style="mso-bookmark: REQCT9Q42"><U 
+style="text-underline: double"><SPAN 
+style="COLOR: blue; FONT-STYLE: normal; mso-bidi-font-style: italic">browser</SPAN></U></SPAN></SPAN></SPAN></SPAN><SPAN 
+style="mso-bookmark: _Toc506881561"></SPAN><SPAN 
+style="mso-bookmark: _Toc515240821"></SPAN><SPAN 
+style="mso-bookmark: _Toc456660593"><SPAN style="mso-bookmark: REQCT9Q42"><SPAN 
+style="FONT-STYLE: normal; mso-bidi-font-style: italic">&nbsp;</SPAN></SPAN></SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660593">Elimina custos de instalação do sistema. 
+</SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A 
+name=REQCT9QE2><![if !supportLists]>7.1.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.2 </SPAN></U></A><A 
+name=_Toc515240822><SPAN style="mso-bookmark: REQCT9QE2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Computador do 
+usuário</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9QE2">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoBodyTextIndent style="TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660593">A interação com o sistema deverá ser 
+executada por computador Pentium III ou superior, com pelo menos 128 Mbytes de 
+RAM, vídeo colorido de 15 polegadas, CD-ROM, placa/caixas de som e placa de rede 
+com capacidade de transferência de pelo menos 100 Mbps.</SPAN></P>
+<P class=MsoNormal><SPAN style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A name=_Toc506881563></A><A 
+name=REQCT9QM2><SPAN 
+style="mso-bookmark: _Toc506881563"><![if !supportLists]>7.1.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.3 </SPAN></U></SPAN></A><A 
+name=_Toc515240823><SPAN style="mso-bookmark: _Toc506881563"><SPAN 
+style="mso-bookmark: REQCT9QM2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Emprego da linguagem de programação 
+Java</U></SPAN></SPAN></SPAN></A><SPAN style="mso-bookmark: _Toc506881563"><SPAN 
+style="mso-bookmark: REQCT9QM2">&nbsp;</SPAN></SPAN></SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660593">Elimina a manutenção de versões conforme o 
+<I>hardware </I>e o sistema operacional empregado pelos usuários. Esta restrição 
+também elimina a necessidade de aquisição de compilador e outras ferramentas 
+proprietárias.</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A name=_Toc506881564></A><A 
+name=REQCT9RB2><SPAN 
+style="mso-bookmark: _Toc506881564"><![if !supportLists]>7.1.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.4 </SPAN></U></SPAN></A><A 
+name=_Toc515240824><SPAN style="mso-bookmark: _Toc506881564"><SPAN 
+style="mso-bookmark: REQCT9RB2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Emprego do servidor de W3 
+Apache</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9RB2">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoNormal><SPAN style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:5\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A name=_Toc506881565></A><A 
+name=REQCT9RJ2><SPAN 
+style="mso-bookmark: _Toc506881565"><![if !supportLists]>7.1.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.5 </SPAN></U></SPAN></A><A 
+name=_Toc515240825><SPAN style="mso-bookmark: _Toc506881565"><SPAN 
+style="mso-bookmark: REQCT9RJ2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Emprego dos bancos de dados Interbase ou 
+PostgreSQL</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9RJ2">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoNormal><SPAN style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:6\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A name=_Toc506881566></A><A 
+name=REQCT9RW2><SPAN 
+style="mso-bookmark: _Toc506881566"><![if !supportLists]>7.1.6<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.6 </SPAN></U></SPAN></A><A 
+name=_Toc515240826><SPAN style="mso-bookmark: _Toc506881566"><SPAN 
+style="mso-bookmark: REQCT9RW2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Browser será o Netscape 6.0, Internet Explorer 5 
+ou mais recentes</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9RW2">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoNormal><SPAN style="mso-bookmark: _Toc456660593"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:7\:0\:\.%2\:1\:0\:\.%3\:7\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><SPAN 
+style="mso-bookmark: _Toc456660593"><A name=_Toc506881567></A><A 
+name=REQCT9S42><SPAN 
+style="mso-bookmark: _Toc506881567"><![if !supportLists]>7.1.7<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S7.7 </SPAN></U></SPAN></A><A 
+name=_Toc515240827><SPAN style="mso-bookmark: _Toc506881567"><SPAN 
+style="mso-bookmark: REQCT9S42"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Emprego do sistema operacional Linux no 
+servidor</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCT9S42">&nbsp;</SPAN></SPAN></H3>
+<P class=MsoBodyTextIndent3 style="TEXT-ALIGN: justify"><SPAN 
+style="mso-bookmark: _Toc456660593">Com o intuito de facilitar o acesso ao 
+sistema, instalação e uso, o sistema operacional deverá ser o Linux. A 
+distribuição do Linux a ser adotada será estabelecida pela equipe de 
+desenvolvimento, conforme critérios técnicos também estabelecidos por esta 
+equipe.</SPAN></P><SPAN style="mso-bookmark: _Toc456660593"></SPAN>
+<P class=InfoBlue 
+style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="mso-list: l0 level1 lfo1; mso-list-change: '%1\:8\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><A 
+name=_Toc436203413></A><A name=_Toc452813607></A><A name=_Toc456662696></A><A 
+name=_Toc510411333></A><A name=REQCTA042><SPAN 
+style="mso-bookmark: _Toc510411333"><SPAN 
+style="mso-bookmark: _Toc456662696"><SPAN 
+style="mso-bookmark: _Toc452813607"><SPAN style="mso-bookmark: _Toc436203413"><![if !supportLists]>8.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8 
+</SPAN></U></SPAN></SPAN></SPAN></SPAN></A><A name=_Toc515240828><SPAN 
+style="mso-bookmark: _Toc436203413"><SPAN 
+style="mso-bookmark: _Toc452813607"><SPAN 
+style="mso-bookmark: _Toc456662696"><SPAN 
+style="mso-bookmark: _Toc510411333"><SPAN style="mso-bookmark: REQCTA042"><SPAN 
+style="COLOR: blue"><U 
+style="text-underline: double">Documentação</U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA042">&nbsp;</SPAN></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:8\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc510411334></A><A name=REQCTA0A2><SPAN 
+style="mso-bookmark: _Toc510411334"><![if !supportLists]>8.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8.1 </SPAN></U></SPAN></A><A 
+name=_Toc515240829><SPAN style="mso-bookmark: _Toc510411334"><SPAN 
+style="mso-bookmark: REQCTA0A2"><SPAN style="COLOR: blue"><U 
+style="text-underline: double">Manual do 
+Usuário</U></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA0A2">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Deverá ser 
+providenciado um Manual do Usuário para cada categoria de usuário. Dessa forma, 
+haverá um manual para Alunos, outro para Docentes, outro para Coordenadores e 
+assim por diante. Cada um deles deverá ser composto por poucas páginas, talvez 
+em um formato de um <I>folder</I>, pois deverá conter apenas aspectos de alto 
+nível de operação do sistema. Detalhes, glossário pormenorizado e outras 
+informações deverão ser obtidas <I>online</I>.</P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:8\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc425054416></A><A name=_Toc422186509></A><A name=_Toc436203415></A><A 
+name=_Toc452813609></A><A name=_Toc456662698></A><A name=_Toc510411335></A><A 
+name=REQCTA0K2><SPAN style="mso-bookmark: _Toc510411335"><SPAN 
+style="mso-bookmark: _Toc456662698"><SPAN 
+style="mso-bookmark: _Toc452813609"><SPAN 
+style="mso-bookmark: _Toc436203415"><SPAN 
+style="mso-bookmark: _Toc422186509"><SPAN style="mso-bookmark: _Toc425054416"><![if !supportLists]>8.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8.2 
+</SPAN></U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><A 
+name=_Toc515240830><SPAN style="mso-bookmark: _Toc425054416"><SPAN 
+style="mso-bookmark: _Toc422186509"><SPAN 
+style="mso-bookmark: _Toc436203415"><SPAN 
+style="mso-bookmark: _Toc452813609"><SPAN 
+style="mso-bookmark: _Toc456662698"><SPAN 
+style="mso-bookmark: _Toc510411335"><SPAN style="mso-bookmark: REQCTA0K2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Ajuda 
+online</U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA0K2">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">Todas as 
+informações acerca da operação do Abaré deverão estar disponíveis <I>online.</I> 
+Para cada categoria de usuário deverá ser providenciada a ajuda pertinente. 
+Convém ressaltar que as categorias possuem acesso a serviços distintos, embora 
+alguns sejam compartilhados entre categorias.</P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:8\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc425054417></A><A name=_Toc422186510></A><A name=_Toc436203416></A><A 
+name=_Toc452813610></A><A name=_Toc456662699></A><A name=_Toc510411336></A><A 
+name=REQCTA162><SPAN style="mso-bookmark: _Toc510411336"><SPAN 
+style="mso-bookmark: _Toc456662699"><SPAN 
+style="mso-bookmark: _Toc452813610"><SPAN 
+style="mso-bookmark: _Toc436203416"><SPAN 
+style="mso-bookmark: _Toc422186510"><SPAN style="mso-bookmark: _Toc425054417"><![if !supportLists]>8.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8.3 
+</SPAN></U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><A 
+name=_Toc515240831><SPAN style="mso-bookmark: _Toc425054417"><SPAN 
+style="mso-bookmark: _Toc422186510"><SPAN 
+style="mso-bookmark: _Toc436203416"><SPAN 
+style="mso-bookmark: _Toc452813610"><SPAN 
+style="mso-bookmark: _Toc456662699"><SPAN 
+style="mso-bookmark: _Toc510411336"><SPAN style="mso-bookmark: REQCTA162"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Guia de instalação, 
+configuração e arquivo 
+LEIAME</U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA162">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent2>Tais informações deverão estar contidas no CD-ROM de 
+instalação do sistema. Todos os softwares necessários, todas as ferramentas e 
+utilitários empregados, todas as informações para a instalação e configuração 
+destes também deverão estar contidas neste CD. O arquivo LEIAME deverá fornecer 
+um mapa geral para a instalação e configuração. O cliente deste CD-ROM não será 
+o usuário convencional, mas administradores de sistemas e responsáveis pela 
+instalação de software, por exemplo.</P>
+<P 
+class=MsoBodyTextIndent2><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:8\:0\:\.%2\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCTA1D2><![if !supportLists]>8.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8.4 </SPAN></U></A><A 
+name=_Toc515240832><SPAN style="mso-bookmark: REQCTA1D2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Curso de 
+treinamento</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA1D2">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent2>Deverá ser providenciado o material para treinamento 
+dos usuários (slides, apostila, avaliações dos alunos, exercícios e outros 
+recursos, caso convenientes).</P>
+<H2 
+style="mso-list: none"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></H2>
+<H2 
+style="TEXT-INDENT: -36pt; mso-pagination: widow-orphan; mso-list: l0 level2 lfo1; mso-list-change: '%1\:8\:0\:\.%2\:5\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc425054418></A><A name=_Toc422186511></A><A name=_Toc436203417></A><A 
+name=_Toc452813611></A><A name=_Toc456662700></A><A name=_Toc510411337></A><A 
+name=REQCTA1K2><SPAN style="mso-bookmark: _Toc510411337"><SPAN 
+style="mso-bookmark: _Toc456662700"><SPAN 
+style="mso-bookmark: _Toc452813611"><SPAN 
+style="mso-bookmark: _Toc436203417"><SPAN 
+style="mso-bookmark: _Toc422186511"><SPAN style="mso-bookmark: _Toc425054418"><![if !supportLists]>8.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S8.5 
+</SPAN></U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><A 
+name=_Toc515240833><SPAN style="mso-bookmark: _Toc425054418"><SPAN 
+style="mso-bookmark: _Toc422186511"><SPAN 
+style="mso-bookmark: _Toc436203417"><SPAN 
+style="mso-bookmark: _Toc452813611"><SPAN 
+style="mso-bookmark: _Toc456662700"><SPAN 
+style="mso-bookmark: _Toc510411337"><SPAN style="mso-bookmark: REQCTA1K2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Rótulos e 
+empacotamento</U></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTA1K2">&nbsp;</SPAN></H2>
+<P class=MsoBodyText style="TEXT-ALIGN: justify">O empacotamento ocorrerá 
+através da simples caixa contendo o CD-ROM. O nome, o ícone e os direitos 
+autorais deverão estar claros nesta caixa. Um trabalho mais elaborado exigirá a 
+contratação de especialista competente, recurso atualmente indisponível.</P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:9\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660595></A><A name=_Toc506881568></A><A name=_Toc515240834><SPAN 
+style="mso-bookmark: _Toc506881568"><SPAN style="mso-bookmark: _Toc456660595"><![if !supportLists]>9.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Componentes a serem adquiridos</SPAN></SPAN></A></H1>
+<P class=MsoBodyTextIndent2>Não foi identificada a necessidade, até o presente 
+momento, de aquisição de software proprietário. </P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:10\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660596></A><A name=_Toc515240835><SPAN 
+style="mso-bookmark: _Toc456660596"><![if !supportLists]>10.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Interfaces</SPAN></A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:10\:0\:\.%2\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881570></A><A name=_Toc515240836><SPAN 
+style="mso-bookmark: _Toc506881570"><![if !supportLists]>10.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Interfaces homem-computador</SPAN></A></H2>
+<P class=MsoBodyText style="MARGIN-LEFT: 0cm; TEXT-ALIGN: justify">Em seção 
+própria deste documento são estabelecidos requisitos que tais interfaces deverão 
+atender.</P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:10\:0\:\.%2\:2\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881571></A><A name=_Toc515240837><SPAN 
+style="mso-bookmark: _Toc506881571"><![if !supportLists]>10.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Interfaces de hardware</SPAN></A></H2>
+<P class=MsoBodyText style="TEXT-ALIGN: justify">Nenhuma especial.</P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:10\:0\:\.%2\:3\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881572></A><A name=_Toc515240838><SPAN 
+style="mso-bookmark: _Toc506881572"><![if !supportLists]>10.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Interfaces de software</SPAN></A></H2>
+<H3 
+style="TEXT-INDENT: -36pt; mso-list: l0 level3 lfo1; mso-list-change: '%1\:10\:0\:\.%2\:3\:0\:\.%3\:1\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=REQCTB5Q2><![if !supportLists]>10.3.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">S9 </SPAN></U></A><A 
+name=_Toc515240839><SPAN style="mso-bookmark: REQCTB5Q2"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Facilidade de futura 
+integração com outros sistemas</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQCTB5Q2">&nbsp;</SPAN></H3>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify">Em proposta 
+de desenvolvimento futuro deverá ser contemplada a integração deste sistema com 
+outros. Atualmente, a inexistência de padrões torna esta integração difícil e 
+vulnerável. Os sistemas atualmente empregados não foram preparados para tais 
+integrações e, inclusive, desconhece-se a disponibilidade de informações para 
+tal. A vulnerabilidade decorre da dificuldade de se implantar uma determinada 
+integração (modelo) que não será utilizado pelos demais. Tornando esta conexão 
+<I>ad hoc</I>, desprovida de padrão amplamente discutido pela comunidade 
+interessada. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify">A 
+arquitetura do Abaré forçará o emprego de várias APIs através das quais os 
+programas terão acesso a alguns serviços. Por se tratarem de interfaces 
+padronizadas não são aqui discutidas. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2 
+style="TEXT-INDENT: -36pt; mso-list: l0 level2 lfo1; mso-list-change: '%1\:10\:0\:\.%2\:4\:0\:' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc515240840><![if !supportLists]>10.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Interface de comunicação</A></H2>
+<P class=MsoBodyTextIndent3 style="TEXT-ALIGN: justify">Todos os usuários 
+deverão estar conectados a rede interna da UFG (UFGNet).</P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:11\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660601></A><A name=_Toc515240841><SPAN 
+style="mso-bookmark: _Toc456660601"><![if !supportLists]>11.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Licença de uso</SPAN></A></H1>
+<P class=MsoBodyTextIndent2>O presente sistema deverá ser empregado 
+exclusivamente no âmbito da UFG. Neste caso, os usuários não terão que pagar 
+pelo uso deste sistema. Em situações diferentes destas, deverá ser obtida a 
+permissão explícita e por escrito dos desenvolvedores deste sistema.</P>
+<P class=InfoBlue><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:12\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc456660602></A><A name=_Toc515240842><SPAN 
+style="mso-bookmark: _Toc456660602"><![if !supportLists]>12.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Copyright</SPAN></A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 35.45pt; TEXT-ALIGN: justify">O presente 
+sistema é fruto do trabalho intelectual de várias pessoas. O engenheiro de 
+software responsável pelo desenvolvimento, Fábio Nogueira de Lucena, é o 
+detentor dos direitos autorais do presente sistema. </P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1 
+style="TEXT-INDENT: -36pt; mso-list: l0 level1 lfo1; mso-list-change: '%1\:13\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854; mso-text-indent-alt: -36.0pt"><A 
+name=_Toc506881574></A><A name=_Toc515240843><SPAN 
+style="mso-bookmark: _Toc506881574"><![if !supportLists]>13.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Garantias</SPAN></A><SPAN 
+style="mso-bookmark: _Toc506881574"></SPAN></H1>
+<P class=MsoBodyTextIndent2><SPAN style="mso-bookmark: _Toc506881574">NÃO É 
+OFERECIDA NENHUMA GARANTIA, QUALQUER QUE SEJA ELA, AOS USUÁRIOS DO PRESENTE 
+SISTEMA. Riscos e conseqüências do emprego deste software são de 
+responsabilidade EXCLUSIVA dos usuários. Usuários que não estão de acordo com 
+este termo NÃO DEVEM FAZER DO USO PRESENTE SISTEMA.</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><SPAN 
+style="mso-bookmark: _Toc506881574"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<H1 
+style="mso-list: l0 level1 lfo1; mso-list-change: '%1\:14\:0\:\.' 'F\00E1bio Nogueira de Lucena' 20010619T1854"><SPAN 
+style="mso-bookmark: _Toc506881574"><A 
+name=_Toc515240844><![if !supportLists]>14.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Padrões a serem seguidos</A></SPAN></H1>
+<P class=MsoBodyText style="TEXT-ALIGN: justify">A Universidade Federal de Goiás 
+não possui nenhum padrão de desenvolvimento de software estabelecido, seja de 
+interface, arquitetura ou outra dimensão. É desconhecido um padrão, qualquer que 
+seja ele, que trate de questões legais, qualidade, usabilidade, 
+interoperabilidade ou outro qualquer que necessariamente deva ser seguido. No 
+âmbito das IFES, nenhum destes padrões é conhecido e, por conseguinte, nenhuma 
+restrição é imposta neste sentido.</P></DIV></BODY></HTML>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="defesa">
+
+<uc nome="Editar previsão de defesa">
+<resumo>
+A coordenação de programa deverá fornecer uma previsão de defesa para cada aluno. Esta previsão pode ser alterada, ao longo do tempo,
+por diversos fatores. Este caso de uso permite esta alteração. 
+</resumo>
+</uc>
+
+<uc nome="Registrar entrega da versão final">
+<resumo>
+A banca de defesa pode exigir que alterações sejam feitas e, neste caso,  o candidato a mestre ou doutor terá que efetuar as alterações correspondentes em um determinado período. Antes que este período seja transcorrido, 
+o candidato em questão deverá realizar a entrega da versão final.
+</resumo>
+</uc>
+
+<uc nome="Registrar resultado de defesa">
+<resumo>
+Após a defesa de dissertação ou tese, o resultado correspondente deverá ser fornecido. A data da defesa, que pode diferir daquela prevista,
+também deverá ser atualizada, se for o caso.
+</resumo>
+</uc>
+
+<uc nome="Editar banca">
+<resumo>
+O aluno e respectivo orientador trabalham conjuntamente na elaboração da lista de nomes sugeridos para composição de banca, que pode ser tanto de exame de qualificação quanto de defesa de dissertação/tese. Eletronicamente, esta lista será recebida apenas quando o orientador em questão avalizar a lista, o que é realizado através do caso de uso Validar sugestão de banca. Os membros da banca, caso não façam parte do cadastro junto ao CCPFJ, serão registrados como contato. Contato é uma espécie de pré-cadastro no CCPFJ no qual apenas alguns dados como nome e e-mail são suficientes. Em momento oportuno no futuro, se for o caso,
+um contato é registrado como pessoa física.
+</resumo>
+</uc>
+
+<uc nome="Validar sugestão de banca">
+<resumo>
+A lista contendo nomes sugeridos para composição de banca deverá ser validada necessariamente pelo orientador. 
+O aluno também poderá informar ao sistema a sua conformidade com a lista.
+</resumo>
+</uc>
+
+</ers>

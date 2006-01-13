@@ -1,0 +1,14 @@
+AuthType Basic
+AuthName "SISTEMA DA PÓS-GRADUAÇÃO"
+AuthUserFile /home/sispg/secret/users
+
+Deny from all
+Require user sispg
+Allow from inf.ufg.br
+Allow from furnas.com.br
+Allow from 200.252.217.4
+Satisfy any
+
+
+
+

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+
+
+<ers nome="calendar">
+
+<uc nome="Editar calendário geral">
+<resumo>
+Várias operações do sistema dependem de datas. O período de inscrição em processo de seleção, por exemplo, é uma delas. Apenas o calendário vigente poderá ser editado. Boa parte da edição de um calendário pode se resumir na edição de itens de calendário. Convém ressaltar que a edição de calendário por parte das coordenações de programas deve seguir as restrições impostas pelo calendário definido pela PRPPG. Este último estabelece limites que deverão ser seguidos pelos anteriores. Ou seja, ao editar um calendário pode ser que um ou mais calendários possam restringir a edição daquele em questão.
+</resumo>
+</uc>
+
+<uc nome="Editar calendário de programa">
+<resumo>
+Variante do caso de uso Editar calendário geral no qual os itens definidos no calendário geral deverão servir de restrições para o calendário do programa.
+</resumo>
+</uc>
+
+</ers>

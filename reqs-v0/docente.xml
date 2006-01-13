@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="docente">
+
+<uc nome="Relatar desempenho do orientando">
+<resumo>
+Periodicamente o orientador poderá fazer uma avaliação do orientando. Muitas instituições das quais os orientandos são provenientes exigem a apresentação destes relatórios. 
+</resumo>
+</uc>
+
+<uc nome="Aferir compromisso de orientação">
+<resumo>
+Cada coordenação possui o seu próprio processo no qual um aluno e um participante estabelecem uma relação orientando-orientador. Independente deste processo, para o sistema, o compromisso de orientação será estabelecido através do presente caso de uso. Neste momento, outras informações como reunião em que tal relação foi legitimada pela respectiva comissão de pós-graduação, por exemplo, poderão ser fornecidas.
+</resumo>
+</uc>
+
+<uc nome="Autorizar requerimento">
+<resumo>
+Um requerimento pode exigir a autorização do orientador correspondente ou pessoa competente, conforme o caso em questão. Por exemplo, Neste caso, o orientador poderá, através do sistema, “autorizar” requerimentos que partem de seus orientandos. Toda vez que um aluno efetuar um requerimento, o orientador receberá um e-mail informando-o do fato. 
+Dessa forma este poderá, caso concorde e seja necessário, efetuar a autorização.
+</resumo>
+</uc>
+
+</ers>

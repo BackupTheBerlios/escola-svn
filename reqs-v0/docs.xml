@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="docs">
+
+<uc nome="Gerar documento">
+<resumo>
+Generalização de processo a ser executado quando todo e qualquer documento for produzido pelo sistema.
+</resumo>
+</uc>
+
+<uc nome="Consultar documentos">
+<resumo>
+Os documentos emitidos pelo sistema poderão ser consultados através deste caso de uso. A identificação do tipo do documento, a data em que foi gerado e o aluno pertinente, se for o caso, 
+serão critérios utilizados para localizar o documento que se deseja consultar.
+</resumo>
+</uc>
+
+<uc nome="Emitir histórico">
+</uc>
+
+<uc nome="Emitir termo de responsabilidade">
+<resumo>
+A matrícula do candidato em programa exige que seja emitido o termo de responsabilidade para que
+o primeiro possa assiná-lo.
+</resumo>
+</uc>
+
+<uc nome="Emitir diploma">
+</uc>
+
+<uc nome="Emitir comprovante">
+<resumo>
+Alguns comprovantes são predefinidos, enquanto outros podem ser “criados”. Por exemplo, comprovante de matrícula já é predefinido pelo sistema, enquanto um comprovante de participação na Semana de Estudos Automotivos sobre Patins deverá ser produzido pela coordenação do programa que promoveu a semana, com conteúdo (texto) próprio. Para estes casos, haverá liberdade “limitada” de recursos. Um comprovante bem diferenciado não poderá ser produzido.
+</resumo>
+</uc>
+
+<uc nome="Emitir certificado">
+</uc>
+
+<uc nome="Emitir relatório">
+</uc>
+
+</ers>

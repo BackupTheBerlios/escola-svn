@@ -1,0 +1,1635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><TITLE>Especificação de caso de uso: Recepção</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="file:///E:/ABARE/reqs/regras.RBR" rel=Original-File>
+<META content=Word.Document name=ProgId>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./regras_arquivos/filelist.xml" rel=File-List><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>&lt;Project Name&gt;</o:Subject>
+  <o:Author>Fábio Nogueira de Lucena</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Fábio Nogueira de Lucena</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>24</o:TotalTime>
+  <o:LastPrinted>2002-04-04T13:25:00Z</o:LastPrinted>
+  <o:Created>2002-04-04T13:25:00Z</o:Created>
+  <o:LastSaved>2002-04-04T13:25:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1638</o:Words>
+  <o:Characters>9337</o:Characters>
+  <o:Company>&lt;Company Name&gt;</o:Company>
+  <o:Bytes>26112</o:Bytes>
+  <o:Lines>77</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>11466</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:Idioma dt:dt="boolean">1</o:Idioma>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>115</w:Zoom>
+  <w:DoNotHyphenateCaps/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:DoNotUseHTMLParagraphAutoSpacing/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Helvetica;
+}
+@font-face {
+	font-family: Courier;
+}
+@font-face {
+	font-family: Geneva;
+}
+@font-face {
+	font-family: Wingdings;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@font-face {
+	font-family: Arial Black;
+}
+@font-face {
+	font-family: Century Gothic;
+}
+@font-face {
+	font-family: Serifa BT;
+}
+@font-face {
+	font-family: Book Antiqua;
+}
+@page  {mso-endnote-numbering-style: arabic; }
+@page Section1 {size: 612.0pt 792.0pt; margin: -37.65pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-vertical-page-align: middle; mso-header: url("./regras_arquivos/header.htm") h1; mso-paper-source: 0; }
+@page Section2 {size: 612.0pt 792.0pt; margin: 72.0pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-header: url("./regras_arquivos/header.htm") h2; mso-paper-source: 0; mso-page-numbers: roman-lower 2; mso-footer: url("./regras_arquivos/header.htm") f2; }
+@page Section3 {size: 612.0pt 792.0pt; margin: 72.0pt 72.0pt 72.0pt 72.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-header: url("./regras_arquivos/header.htm") h2; mso-paper-source: 0; mso-page-numbers: 1; mso-footer: url("./regras_arquivos/header.htm") f3; }
+P.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormal {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+H1 {
+	FONT-SIZE: 12pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 1; mso-list: l0 level1 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 0pt; mso-bidi-font-weight: normal
+}
+H2 {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 2; mso-list: l0 level2 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 3; mso-list: l0 level3 lfo1; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN: 6pt 0cm 3pt 36pt; TEXT-INDENT: -36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial; mso-style-parent: "Título 1"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 4; mso-list: l0 level4 lfo1; mso-bidi-font-family: "Times New Roman"
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 5; mso-list: l0 level5 lfo1; mso-bidi-font-size: 10.0pt
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 6; mso-list: l0 level6 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-style: normal
+}
+P.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+LI.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+DIV.MsoHeading7 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 7; mso-list: l0 level7 lfo1
+}
+P.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+LI.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+DIV.MsoHeading8 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 8; mso-list: l0 level8 lfo1; mso-bidi-font-style: normal
+}
+P.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+LI.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+DIV.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN: 12pt 0cm 3pt 144pt; TEXT-INDENT: 0cm; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-outline-level: 9; mso-list: l0 level9 lfo1; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal; mso-bidi-font-style: normal
+}
+P.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc1 {
+	FONT-SIZE: 10pt; MARGIN: 12pt 36pt 3pt 0cm; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+LI.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+DIV.MsoToc2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 36pt 0pt 21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: right 468.0pt
+}
+P.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+LI.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+DIV.MsoToc3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 43.2pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; tab-stops: 72.0pt right 468.0pt
+}
+P.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc4 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 30pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc5 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 40pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc6 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 50pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc7 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 60pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc8 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 70pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+LI.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+DIV.MsoToc9 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 80pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal
+}
+P.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoNormalIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 45pt; TEXT-INDENT: -45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+LI.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+DIV.MsoFootnoteText {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; FONT-SIZE: 8pt; PADDING-BOTTOM: 0cm; MARGIN: 2pt 0cm 2pt 18pt; BORDER-LEFT: medium none; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none; FONT-FAMILY: Helvetica; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-border-bottom-alt: solid black .75pt; mso-padding-alt: 0cm 0cm 0cm 0cm
+}
+P.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoHeader {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+P.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+LI.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+DIV.MsoFooter {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; tab-stops: center 216.0pt right 432.0pt
+}
+SPAN.MsoFootnoteReference {
+	VERTICAL-ALIGN: super; mso-ansi-font-size: 10.0pt
+}
+P.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+LI.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+DIV.MsoTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 18pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: Normal; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-weight: normal
+}
+P.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyText {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+LI.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+DIV.MsoSubtitle {
+	FONT-SIZE: 18pt; MARGIN: 0cm 0cm 3pt; FONT-STYLE: italic; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-bidi-font-style: normal; mso-line-height-alt: 12.0pt; mso-ansi-language: EN-AU
+}
+P.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+LI.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+DIV.MsoBodyText2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-DECORATION: underline; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-style: normal; text-underline: single
+}
+P.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+P.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+LI.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+DIV.MsoBodyTextIndent3 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 35.45pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+P.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+LI.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+DIV.MsoDocumentMap {
+	FONT-SIZE: 10pt; BACKGROUND: navy; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Tahoma; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"
+}
+P.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+LI.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+DIV.Paragraph2 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 36pt; COLOR: black; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-ansi-language: EN-AU; mso-style-name: Paragraph2
+}
+P.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+LI.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+DIV.Paragraph3 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 76.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph3
+}
+P.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+LI.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+DIV.Paragraph4 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt 112.5pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph4
+}
+P.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+LI.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+DIV.Tabletext {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: lines-together; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Tabletext
+}
+P.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+LI.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+DIV.Bullet1 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 36pt; TEXT-INDENT: -21.6pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet1
+}
+P.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+LI.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+DIV.Bullet2 {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt 72pt; COLOR: navy; TEXT-INDENT: -18pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Bullet2
+}
+P.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+LI.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+DIV.MainTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 24pt 0cm 3pt; FONT-FAMILY: Arial; TEXT-ALIGN: center; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: "Times New Roman"; mso-font-kerning: 14.0pt; mso-bidi-font-weight: normal; mso-style-name: "Main Title"
+}
+P.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+LI.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+DIV.Paragraph1 {
+	FONT-SIZE: 10pt; MARGIN: 4pt 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-name: Paragraph1
+}
+P.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+LI.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+DIV.Body {
+	FONT-SIZE: 10pt; MARGIN: 6pt 0cm 0pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; mso-style-name: Body
+}
+P.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+LI.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+DIV.Bullet {
+	FONT-SIZE: 10pt; MARGIN: 6pt 18pt 0pt 36pt; FONT-FAMILY: "Book Antiqua"; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-bidi-font-family: "Times New Roman"; tab-stops: 18.0pt 36.0pt; mso-style-name: Bullet
+}
+P.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+LI.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+DIV.InfoBlue {
+	FONT-SIZE: 10pt; MARGIN: 0cm 0cm 6pt 36pt; COLOR: blue; LINE-HEIGHT: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; mso-pagination: none; mso-fareast-font-family: "Times New Roman"; mso-fareast-language: EN-US; mso-style-next: "Corpo de texto"; mso-bidi-font-style: normal; mso-style-name: InfoBlue
+}
+DIV.Section1 {
+	page: Section1
+}
+DIV.Section2 {
+	page: Section2
+}
+DIV.Section3 {
+	page: Section3
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+</HEAD>
+<BODY lang=PT-BR style="tab-interval: 36.0pt" vLink=purple link=blue>
+<DIV class=Section1>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 48pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt">SISPG<BR></SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN><BR><BR></SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 12pt; FONT-FAMILY: 'Century Gothic'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold">http://www.inf.ufg.br/~fabio/sispg</SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-FAMILY: 'Arial Black'; mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: bold"><BR></SPAN><BR><SPAN 
+style="FONT-SIZE: 16pt; mso-bidi-font-size: 10.0pt"><SPAN 
+style="mso-field-code: 'SUBJECT  \* MERGEFORMAT'"><SPAN 
+style="mso-field-code: 'SUBJECT  \* MERGEFORMAT'">Sistema de Gerenciamento da 
+Pesquisa e da Pós-graduação</SPAN></SPAN><BR></SPAN>Regras</P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoTitle style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 14pt; mso-bidi-font-size: 10.0pt">Versão 0.4<BR 
+style="mso-special-character: line-break"><![if !supportLineBreakNewLine]><BR 
+style="mso-special-character: line-break"><![endif]><o:p></o:p></SPAN></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoBodyText><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. José Luiz Domingues</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Pró-Reitor de Pesquisa e 
+Pós-Graduação<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Profa. Dra. Eliana Martins Lima<BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Coordenadora Geral de 
+Pós-graduação<BR></SPAN><SPAN 
+style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt">emlima@prppg.ufg.br</SPAN><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"> <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. Rogério Pereira 
+Bastos</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Coordenador Geral de 
+Pesquisa</SPAN><SPAN style="FONT-FAMILY: 'Serifa BT'"> <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: right" align=right><SPAN 
+style="FONT-FAMILY: 'Serifa BT'">Prof. Dr. Fábio Nogueira de 
+Lucena</SPAN><BR><SPAN 
+style="FONT-SIZE: 9pt; mso-bidi-font-size: 10.0pt">Projetista de 
+Software<BR></SPAN><SPAN 
+style="FONT-SIZE: 8pt; mso-bidi-font-size: 10.0pt">fabio@inf.ufg.br</SPAN></P></DIV><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN>
+<DIV class=Section2>
+<P class=MsoTitle>Histórico de Revisões</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-table-layout-alt: fixed; mso-border-alt: solid windowtext .75pt" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Data<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Versão<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Descrição<o:p></o:p></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 0.75pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext style="TEXT-ALIGN: center" align=center><B 
+      style="mso-bidi-font-weight: normal">Autor<o:p></o:p></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>28/03/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.1</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Versão inicial</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>09/05/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.1</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Pequenas correções</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio, Eliana</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>01/06/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.2</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Pequenas alterações</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>23/08/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.3</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Acréscimo de regras.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.75pt solid; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>08/12/2001</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 57.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=77>
+      <P class=Tabletext>0.4</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 187.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=250>
+      <P class=Tabletext>Acréscimo e classificação de regras.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.75pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 115.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.75pt solid; mso-border-left-alt: solid windowtext .75pt; mso-border-top-alt: solid windowtext .75pt" 
+    vAlign=top width=154>
+      <P class=Tabletext>Fábio</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN></B>
+<P class=MsoTitle>Conteúdo</P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes">&nbsp;</span>TOC \o &quot;1-3&quot; <span style='mso-element:field-separator'></span><![endif]--><SPAN 
+style="mso-bidi-font-size: 12.0pt">1.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Objetivo</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc535837628 \h <span style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600320038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">2.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Disciplina</SPAN><SPAN 
+style="mso-tab-count: 1"> </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc535837629 \h <span style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600320039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: 
+avaliação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837630 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: 
+reprovação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837631 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: freqüência 
+mínima</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837632 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: organizada 
+por área de concentração</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837633 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: 
+cancelamento</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837634 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.6</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: 
+categoria</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837635 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.7</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: restrição 
+de inscrição I</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837636 \h <span
+style='mso-element:field-separator'></span><![endif]-->1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.8</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: restrição 
+de inscrição II</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837637 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.9</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: estágio 
+docência</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837638 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">2.10</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Disciplina: avaliação 
+de docente</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837639 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600330039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">3.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Exame de 
+qualificação</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837640 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">3.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Exame de qualificação: 
+obrigatoriedade</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837641 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">4.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Programa de 
+pós-graduação</SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837642 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: 
+duração</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837643 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: prorrogação 
+de prazo de conclusão</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837644 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: estrutura 
+curricular</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837645 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: 
+aproveitamento de créditos</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837646 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: créditos para 
+integralização</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837647 \h <span
+style='mso-element:field-separator'></span><![endif]-->2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.6</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: proficiência 
+em língua estrangeira</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837648 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.7</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: titulação do 
+corpo docente</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837649 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600340039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.8</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: período 
+máximo de resposta de requerimento</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837650 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.9</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: 
+matrícula</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837651 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.10</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: participação 
+docente</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837652 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 60.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">4.11</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Programa: estágio 
+docência</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837653 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">5.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Aluno</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837654 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: cancelar 
+disciplina</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837655 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: trancar 
+matrícula</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837656 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: matrícula em 
+programa</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837657 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.4</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: matrículas 
+simultânea</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837658 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.5</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: 
+orientação</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837659 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600350039000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.6</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: 
+auxílio</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837660 \h <span
+style='mso-element:field-separator'></span><![endif]-->3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.7</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: estágio 
+docência</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837661 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360031000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.8</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: requerimento 
+I</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837662 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360032000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">5.9</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Aluno: requerimento 
+II</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837663 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360033000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">6.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Defesa</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837664 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360034000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.1</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Defesa: 
+resultado</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837665 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360035000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.2</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Defesa: apresentar 
+correções</SPAN></U><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837666 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360036000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc2 style="tab-stops: 50.0pt right 468.0pt"><SPAN 
+style="COLOR: blue">6.3</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><U 
+style="text-underline: double"><SPAN style="COLOR: blue">Defesa: 
+apto</SPAN></U><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><!--[if supportFields]><span
+style='mso-element:field-begin'></span> PAGEREF _Toc535837667 \h <span
+style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360037000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoToc1 style="tab-stops: 21.6pt right 468.0pt"><SPAN 
+style="mso-bidi-font-size: 12.0pt">7.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><SPAN 
+style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="mso-bidi-font-size: 12.0pt">Dúvidas</SPAN><SPAN 
+style="mso-tab-count: 1">&nbsp; </SPAN><!--[if supportFields]><span style='mso-element:field-begin'></span>
+PAGEREF _Toc535837668 \h <span style='mso-element:field-separator'></span><![endif]-->4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500330035003800330037003600360038000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><SPAN 
+style="FONT-SIZE: 12pt; mso-fareast-language: PT-BR"><o:p></o:p></SPAN></P>
+<P class=MsoTitle><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></P></DIV><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: PT-BR; mso-bidi-language: AR-SA"><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN></B>
+<DIV class=Section3>
+<P class=MsoTitle><A name=_Toc423410237></A><A name=_Toc425054503><SPAN 
+style="mso-bookmark: _Toc423410237">Regras </SPAN></A></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837628><![if !supportLists]>1.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Objetivo</A></H1>
+<P class=MsoBodyTextIndent>O presente documento visa catalogar todas, TODAS as 
+regras pertinentes à pós-graduação de forma que, de posse deste documento, o 
+desenvolvimento de um sistema de apoio às atividades da pós-graduação possam ser 
+executadas de acordo com estas regras. Para cada regra ainda deverá ser 
+fornecida a política a ser adotada quando não for cumprida.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837629><![if !supportLists]>2.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Disciplina</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQRWY1UA><![if !supportLists]>2.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG35 </SPAN><SPAN 
+style="COLOR: blue">Disciplina: aproveitamento</SPAN></U>&nbsp;</A></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">O aproveitamento pode ser 
+requisitado até um dia anterior àquele da defesa do aluno. Cada coordenação pode 
+estabelecer um período anterior a este e que se inicia na primeira matrícula. 
+</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Qual o percentual máximo de 
+aproveitamento? Pode-se aproveitar todas as disciplinas? Há um número 
+máximo?</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOF9WIC><![if !supportLists]>2.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG1 </SPAN></U></A><A 
+name=_Toc535837630><SPAN style="mso-bookmark: REQOF9WIC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: 
+avaliação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOF9WIC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Conceito é um valor no intervalo de 0 a 10, 
+inclusive. Alternativamente, pode-se “mapear” tais valores em intervalos de A a 
+F, por exemplo. Deve-se poder configurar este mapeamento. Também deve ser 
+estabelecido o conceito mínimo para aproveitamento da disciplina.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOF9ZOC><![if !supportLists]>2.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG29 </SPAN></U></A><A 
+name=_Toc535837631><SPAN style="mso-bookmark: REQOF9ZOC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: 
+reprovação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOF9ZOC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Quando um programa exigir aprovação em até 5 
+disciplinas, o aluno poderá obter um único conceito C e todos os demais 
+superiores a C. Quando forem exigidas aprovações em um total entre 6 (seis) e 9 
+(nove) disciplinas, inclusive, então o aluno poderá obter, no máximo, dois 
+conceitos Cs, todos os demais deverão ser superiores a C. Em programas que 
+exigirem um total de 10 ou mais disciplinas, então o aluno poderá obter 3 (três) 
+conceitos C — todos os demais deverão ser superiores ao conceito C.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFA0TC><![if !supportLists]>2.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG30 </SPAN></U></A><A 
+name=_Toc535837632><SPAN style="mso-bookmark: REQOFA0TC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: freqüência 
+mínima</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFA0TC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>A freqüência mínima em cada disciplina da 
+pós-graduação é fixada em 85% para todas as disciplinas de todos os 
+programas.</P>
+<P 
+class=MsoBodyTextIndent><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBL7C><![if !supportLists]>2.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG4 </SPAN></U></A><A 
+name=_Toc535837633><SPAN style="mso-bookmark: REQOFBL7C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: organizada por 
+área de concentração</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBL7C">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Toda disciplina está associada a 
+uma dada área de concentração.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBLDC><![if !supportLists]>2.6<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG5 </SPAN></U></A><A 
+name=_Toc535837634><SPAN style="mso-bookmark: REQOFBLDC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: 
+cancelamento</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBLDC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">O cancelamento de disciplina não 
+poderá ocorrer se mais de 15% da disciplina já foi ministrado.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBLKC><![if !supportLists]>2.7<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG6 </SPAN></U></A><A 
+name=_Toc535837635><SPAN style="mso-bookmark: REQOFBLKC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: 
+categoria</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBLKC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Disciplinas estão organizadas em 
+categorias: obrigatórias, optativas ou outra.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBRCC><![if !supportLists]>2.8<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG7 </SPAN></U></A><A 
+name=_Toc535837636><SPAN style="mso-bookmark: REQOFBRCC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: restrição de 
+inscrição I</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBRCC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Não pode haver inscrição em 
+disciplina que se encerra após a defesa prevista do aluno em questão.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBZLC><![if !supportLists]>2.9<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG8 </SPAN></U></A><A 
+name=_Toc535837637><SPAN style="mso-bookmark: REQOFBZLC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: restrição de 
+inscrição II</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBZLC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Só é permitida a inscrição em 
+disciplina se o aluno em questão estiver devidamente matriculado no período 
+pertinente.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOIRN66><![if !supportLists]>2.10<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG9 </SPAN></U></A><A 
+name=_Toc535837638><SPAN style="mso-bookmark: REQOIRN66"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: estágio 
+docência</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOIRN66">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">O estágio docência é uma atividade 
+de 30 horas (2 créditos) para o mestrado e de 60 horas (4 créditos) para alunos 
+do doutorado. Deverá ser realizado em um período de, no máximo, um semestre para 
+o mestrado e dois semestres para o doutorado. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOOLJ54><![if !supportLists]>2.11<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG34 </SPAN></U></A><A 
+name=_Toc535837639><SPAN style="mso-bookmark: REQOOLJ54"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Disciplina: avaliação de 
+docente</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOOLJ54">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Há um período durante o qual o 
+discente de uma dada disciplina poderá fornecer informações sobre o andamento da 
+mesma. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837640><![if !supportLists]>3.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Exame de qualificação</A></H1>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOF9TSC><![if !supportLists]>3.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG10 </SPAN></U></A><A 
+name=_Toc535837641><SPAN style="mso-bookmark: REQOF9TSC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Exame de qualificação: 
+obrigatoriedade</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOF9TSC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Para o doutorado é obrigatório. No 
+nível de mestrado, cada programa poderá estabelecer a sua própria política. Ou 
+seja, pode ser obrigatório ou, no outro caso, não existir.</P>
+<P class=MsoBodyTextIndent style="MARGIN-LEFT: 0cm"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837642><![if !supportLists]>4.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Programa de pós-graduação</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBM3C><![if !supportLists]>4.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG11 </SPAN></U></A><A 
+name=_Toc535837643><SPAN style="mso-bookmark: REQOFBM3C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: 
+duração</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBM3C">&nbsp;</SPAN></H2>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l3 level1 lfo8; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Mínima de 18 e máximo de 30 meses para o nível de 
+mestrado.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l3 level1 lfo8; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Mínima de 24 e máxima de 48 meses para o doutorado.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBMBC><![if !supportLists]>4.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG12 </SPAN></U></A><A 
+name=_Toc535837644><SPAN style="mso-bookmark: REQOFBMBC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: prorrogação de 
+prazo de conclusão</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBMBC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Qualquer que seja o nível do 
+programa de um dado aluno, a prorrogação não deverá ser superior a 6 meses. 
+????</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBMGC><![if !supportLists]>4.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG13 </SPAN></U></A><A 
+name=_Toc535837645><SPAN style="mso-bookmark: REQOFBMGC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: estrutura 
+curricular</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBMGC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>A estrutura curricular é composta por itens que podem 
+ou não estar associados a créditos. Estes itens estão organizados em disciplinas 
+ou nas seguintes atividades: seminários, atividades programadas, eventos 
+científicos, pesquisas e estágio docência.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBMNC><![if !supportLists]>4.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG14 </SPAN></U></A><A 
+name=_Toc535837646><SPAN style="mso-bookmark: REQOFBMNC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: aproveitamento 
+de créditos</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBMNC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Um total não superior a 25% dos créditos poderá ser 
+aproveitado de disciplinas cursadas em outros programas.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBMTC><![if !supportLists]>4.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG15 </SPAN></U></A><A 
+name=_Toc535837647><SPAN style="mso-bookmark: REQOFBMTC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: créditos para 
+integralização</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBMTC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo programa possui número mínimo 
+de créditos para integralização por categoria de disciplina.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBN0C><![if !supportLists]>4.6<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG16 </SPAN></U></A><A 
+name=_Toc535837648><SPAN style="mso-bookmark: REQOFBN0C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: proficiência em 
+língua estrangeira</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBN0C">&nbsp;</SPAN></H2>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l10 level1 lfo10; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Uma língua para o mestrado.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l10 level1 lfo10; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Duas línguas para o doutorado.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l10 level1 lfo10; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Qual o número máximo de exames por aluno permitido?????? 
+Qual a data limite, se existir????</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBN6C><![if !supportLists]>4.7<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG17 </SPAN></U></A><A 
+name=_Toc535837649><SPAN style="mso-bookmark: REQOFBN6C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: titulação do 
+corpo docente</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBN6C">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo participante também deve 
+possuir o título de doutor? Todo docente que ministra disciplina também deve ser 
+doutor?</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBNFC><![if !supportLists]>4.8<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG18 </SPAN></U></A><A 
+name=_Toc535837650><SPAN style="mso-bookmark: REQOFBNFC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: período máximo 
+de resposta de requerimento</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBNFC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Um requerimento terá 15 dias para a 
+decisão correspondente. Este período será iniciado rigorosamente após o cadastro 
+do mesmo no sistema.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFBWIC><![if !supportLists]>4.9<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG19 </SPAN></U></A><A 
+name=_Toc535837651><SPAN style="mso-bookmark: REQOFBWIC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: 
+matrícula</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFBWIC">&nbsp;</SPAN></H2>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; TEXT-INDENT: -18pt; mso-list: l9 level1 lfo12; tab-stops: list 72.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Não é permitida matrícula de aluno após a defesa do 
+mesmo.</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 72pt; TEXT-INDENT: -18pt; mso-list: l9 level1 lfo12; tab-stops: list 72.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Não será permitida se se trata do segundo período e o 
+orientador não estiver definido.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFCEFC><![if !supportLists]>4.10<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG20 </SPAN></U></A><A 
+name=_Toc535837652><SPAN style="mso-bookmark: REQOFCEFC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: participação 
+docente</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFCEFC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo participante de um dado 
+programa também poderá ser participante em, no máximo, outro programa de 
+pós-graduação.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFCGSC><![if !supportLists]>4.11<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG21 </SPAN></U></A><A 
+name=_Toc535837653><SPAN style="mso-bookmark: REQOFCGSC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Programa: estágio 
+docência</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFCGSC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Se se trata de bolsista da CAPES ou UFG, então o 
+estágio docência é obrigatório para o aluno em questão.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837654><![if !supportLists]>5.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Aluno</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB7SC><![if !supportLists]>5.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG22 </SPAN></U></A><A 
+name=_Toc535837655><SPAN style="mso-bookmark: REQOFB7SC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: cancelar 
+disciplina</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB7SC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Uma única vez durante todo o 
+programa.??????</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB7ZC><![if !supportLists]>5.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG23 </SPAN></U></A><A 
+name=_Toc535837656><SPAN style="mso-bookmark: REQOFB7ZC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: trancar 
+matrícula</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB7ZC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">O trancamento é possível uma única 
+vez durante por ingresso em programa.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB85C><![if !supportLists]>5.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG24 </SPAN></U></A><A 
+name=_Toc535837657><SPAN style="mso-bookmark: REQOFB85C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: matrícula em 
+programa</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB85C">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo aluno é obrigado a 
+matricular-se periodicamente conforme o regime do programa correspondente.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB8AC><![if !supportLists]>5.4<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG25 </SPAN></U></A><A 
+name=_Toc535837658><SPAN style="mso-bookmark: REQOFB8AC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: matrículas 
+simultânea</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB8AC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo aluno está, necessariamente, 
+matriculado em um único programa em um dado instante de tempo.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFC99C><![if !supportLists]>5.5<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG26 </SPAN></U></A><A 
+name=_Toc535837659><SPAN style="mso-bookmark: REQOFC99C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: 
+orientação</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFC99C">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo aluno deverá ter o seu 
+orientador definido até o final do primeiro período de matrícula.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFCM6C><![if !supportLists]>5.6<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG27 </SPAN></U></A><A 
+name=_Toc535837660><SPAN style="mso-bookmark: REQOFCM6C"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: 
+auxílio</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFCM6C">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo aluno poderá receber, no 
+máximo, um único auxílio em um dado instante de tempo.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFCMDC><![if !supportLists]>5.7<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG28 </SPAN></U></A><A 
+name=_Toc535837661><SPAN style="mso-bookmark: REQOFCMDC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: estágio 
+docência</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFCMDC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt">Todo aluno que recebe auxílio da 
+CAPES, da UFG ou de outra entidade dentre aquelas estabelecidas pela coordenação 
+de programa, terá necessariamente que realizar o estágio docência.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOMIOI8><![if !supportLists]>5.8<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG32 </SPAN></U></A><A 
+name=_Toc535837662><SPAN style="mso-bookmark: REQOMIOI8"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: requerimento 
+I</U></SPAN></SPAN></A><SPAN style="mso-bookmark: REQOMIOI8">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Alguns tipos de requerimento exigem a autorização do 
+orientador. Para estes requerimentos poderá ser enviado um e-mail 
+automaticamente após o cadastro do requerimento. Dessa forma o orientador poderá 
+pelo sistema efetuar a autorização, se for o caso. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOMIWD8><![if !supportLists]>5.9<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG33 </SPAN></U></A><A 
+name=_Toc535837663><SPAN style="mso-bookmark: REQOMIWD8"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Aluno: requerimento 
+II</U></SPAN></SPAN></A><SPAN style="mso-bookmark: REQOMIWD8">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Um requerimento pode ficar pendente por um período 
+máximo de 15 dias. Após este prazo, ele poderá ser removido do sistema. Esta 
+situação ocorre quando o aluno efetua o requerimento e, por depender de outras 
+exigências não cumpridas, aguarda pelo pagamento da taxa correspondente ou aval 
+do orientador, por exemplo. Nestes e outros casos, a exigência pode não ser 
+providenciada e, dessa forma, o requerimento iria permanecer pendente 
+indefinidamente. Esta regra, contudo, autoriza, após 15 dias de pendência, a 
+remoção de um requerimento pendente. Observe que, neste caso, o aluno é avisado 
+de que o requerimento não foi efetuado, assim como não é emitido o comprovante 
+de requerimento enquanto todas as exigências não são cumpridas.</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837664><![if !supportLists]>6.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Defesa</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB8LC><![if !supportLists]>6.1<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG29 </SPAN></U></A><A 
+name=_Toc535837665><SPAN style="mso-bookmark: REQOFB8LC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Defesa: 
+resultado</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB8LC">&nbsp;</SPAN></H2>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify">O resultado da 
+defesa de tese ou dissertação pode ser: (a) aprovado; (b) reprovado e (c) 
+aprovado com pendências. A generalização pode vir de uma lista de possíveis 
+resultados. Cada um deles pode significar: aprovado, reprovado ou pendente.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFB8TC><![if !supportLists]>6.2<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG30 </SPAN></U></A><A 
+name=_Toc535837666><SPAN style="mso-bookmark: REQOFB8TC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Defesa: apresentar 
+correções</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFB8TC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>Após a defesa de dissertação ou tese, sugestões podem 
+ter sido emitidas e as correções correspondentes, neste caso, terão um prazo 
+limite para serem apresentadas. Atualmente o prazo limite é de 30 dias.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 36pt; TEXT-ALIGN: justify"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H2><A name=REQOFC9OC><![if !supportLists]>6.3<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]><U style="text-underline: double"><SPAN 
+style="DISPLAY: none; COLOR: blue; mso-hide: all">RG31 </SPAN></U></A><A 
+name=_Toc535837667><SPAN style="mso-bookmark: REQOFC9OC"><SPAN 
+style="COLOR: blue"><U style="text-underline: double">Defesa: 
+apto</U></SPAN></SPAN></A><SPAN 
+style="mso-bookmark: REQOFC9OC">&nbsp;</SPAN></H2>
+<P class=MsoBodyTextIndent>A defesa só poderá ocorrer para um dado aluno caso 
+outras regras sejam atendidas. </P>
+<P class=MsoBodyTextIndent 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l8 level1 lfo9; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Créditos e disciplinas obrigatórias foram obtidos e 
+cursadas, respectivamente, antes da data da defesa.</P>
+<P class=MsoBodyTextIndent 
+style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; mso-list: l8 level1 lfo9; tab-stops: list 54.0pt"><![if !supportLists]><SPAN 
+style="FONT-FAMILY: Symbol">·<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><![endif]>Aluno foi aprovado no exame de qualificação (se for o 
+caso).</P>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<H1><A name=_Toc535837668><![if !supportLists]>7.<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><![endif]>Dúvidas</A></H1>
+<P class=MsoNormal><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<OL style="MARGIN-TOP: 0cm" type=1>
+  <LI class=MsoNormal 
+  style="mso-list: l7 level1 lfo11; tab-stops: list 36.0pt">Quais são os 
+  critérios necessários para o aproveitamento de disciplinas (créditos RG4)? 
+  Como o sistema irá “validar” tais critérios, caso existam? O que impedirá a 
+  figura do aluno “especial”, só ouvinte do programa cujas disciplinas, neste 
+  período, sejam posteriormente aproveitadas? </LI></OL></DIV></BODY></HTML>

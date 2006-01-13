@@ -1,0 +1,333 @@
+Base item not found: AssociationEnd for Role: srcRas{39C929F30160}.    **** This may result in an error in the exported file ****  Correct the model or load missing unit.
+Base item not found: AssociationEnd for Role: srcRas{39C929F301F5}.    **** This may result in an error in the exported file ****  Correct the model or load missing unit.
+Base item not found: AssociationEnd for Role: mev{39C928B802CD}.    **** This may result in an error in the exported file ****  Correct the model or load missing unit.
+Diagram Logical View::Use-Case Realizations::Informes::Excluir informe::Exclusão does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::Use-Case Realizations::Informes::Consultar informes::Exibição does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::Use-Case Realizations::Informes::analise does not include activators, since there were no hierarchically numbered message found.
+Attribute 'Taxa.sigla' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Taxa.descricao' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Financeiro.arquivoXML' does not have a type.  The type "<undefined>" will be assigned.
+Warning: The class "(DummyClass)" has been added to the model because UML requires a class where Rose does not.  Saving the model after this export will make this change permanent.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Obter detalhes: The object "Sistema" has no type, which will cause Rose to give an error for message: "Mostre detalhes sobre requerimentos".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Obter detalhes" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Obter detalhes does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obtém pré-requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Autoriza criação de requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Emite comprovante".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-I" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-I does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar pré-requerimento: The object "Sistema" has no type, which will cause Rose to give an error for message: "Criar pré-requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar pré-requerimento: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obter informações".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar pré-requerimento" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar pré-requerimento does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Editar pré-requerimento: The object "Sistema" has no type, which will cause Rose to give an error for message: "Localiza pré-requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Editar pré-requerimento: The object "Sistema" has no type, which will cause Rose to give an error for message: "Edita pré-requerimento".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Editar pré-requerimento" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Editar pré-requerimento does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-II: The object "Sistema" has no type, which will cause Rose to give an error for message: "Criar pré-requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-II: The object "Sistema" has no type, which will cause Rose to give an error for message: "Autorizar criação".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-II: The object "Sistema" has no type, which will cause Rose to give an error for message: "Emitir comprovante".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-II" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-Criar requerimento-II does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Aluno-MANUAL-Criar requerimento does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obter requerimento".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Registra resultado".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Divulgar".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-I" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-I does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::Coordenação-Avaliação-II does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::CADASTRAMENTO: The object "Sistema" has no type, which will cause Rose to give an error for message: "Registrar requerimento".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::CADASTRAMENTO" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::CADASTRAMENTO does not include activators, since there were no hierarchically numbered message found.
+The Object Instance "" and associated object flows cannot be exported from Activity Model "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::State/Activity Model14" because it has no specified state.
+The activity  "Criação de Requerimento" in activity graph "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::State/Activity Model14" was converted to a UML composite state.  An object flow into or from it cannot be exported.
+The activity  "Avaliação de Requerimento" in activity graph "Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::State/Activity Model14" was converted to a UML composite state.  An object flow into or from it cannot be exported.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obter alunos que não fizeram".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obter alunos que já foram reprovados".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Requerer inscrição".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Registrar candidatos ao exame".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Divulgar lista de candidatos".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Cadastrar candidatos does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado: The object "Sistema" has no type, which will cause Rose to give an error for message: "Obter lista de candidatos".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado: The object "Sistema" has no type, which will cause Rose to give an error for message: "Registra resultado".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado: The object "" has no type, which will cause Rose to give an error for message: "Encaminhar lista de candidatos".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado: The object "" has no type, which will cause Rose to give an error for message: "Aplicar exame".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado: The object "" has no type, which will cause Rose to give an error for message: "Corrige exame".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Realizar exame de proficiência::Aplicar, corrigir e relatar resultado does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-SISTEMA: The object "Sistema" has no type, which will cause Rose to give an error for message: "Selecionar comprovante".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-SISTEMA: The object "Sistema" has no type, which will cause Rose to give an error for message: "Valida requisição".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-SISTEMA: The object "Sistema" has no type, which will cause Rose to give an error for message: "Imprimir".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-SISTEMA" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-SISTEMA does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Requisitar comprovante".  The export cannot fix this.  Please give the object a base type.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-I: The object "Sistema" has no type, which will cause Rose to give an error for message: "Requisita impressão".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-I" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-I does not include activators, since there were no hierarchically numbered message found.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-II: The object "" has no type, which will cause Rose to give an error for message: "Requisitar a assinatura".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-II" has been modified to assign the dummy class to an object.
+Diagram Logical View::NEGÓCIO REALIZAÇÕES::Obter comprovante-MANUAL-II does not include activators, since there were no hierarchically numbered message found.
+Deployment Diagram: Device "Laser" has been duplicated, and Rose cannot distinguish them.  The original will be re-used; the results might be unsatisfactory.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::Socket::Socket" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getAllByName" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getByName" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getLocalHost" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getAllByName" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getByName" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::InetAddress::getLocalHost" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::net::PlainSocketImpl::connect" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Supplier specification (UnknownHostException) for "Logical View::Arquitetura layered::java::rmi::registry::RegistryHandler::registryStub" is ambiguous.  Make sure the exception entry for operations or the UML property page use the fully-qualified Rose name.
+Diagram Use Case View::Casos de Uso::admsys::fluxo de eventos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Consultar log".  The export cannot fix this.  Please give the object a base type.
+Diagram Use Case View::Casos de Uso::admsys::fluxo de eventos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Edita critérios".  The export cannot fix this.  Please give the object a base type.
+Diagram Use Case View::Casos de Uso::admsys::fluxo de eventos: The object "Sistema" has no type, which will cause Rose to give an error for message: "Ok para consulta".  The export cannot fix this.  Please give the object a base type.
+Warning: The sequence diagram "Use Case View::Casos de Uso::admsys::fluxo de eventos" has been modified to assign the dummy class to an object.
+The Object Instance "Coordenação de Programa" and associated object flow cannot be exported from Activity Model "Use Case View::Casos de Uso::programa de pós-graduação::Cadastros" because it has no incoming object flow.
+The Object Instance "Programa" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::programa de pós-graduação::Cadastros" because it has no specified state.
+The Object Instance "Coordenador cadastrado" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::programa de pós-graduação::Cadastros" because it has no specified state.
+The Object Instance "Altere senha" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::programa de pós-graduação::Cadastros" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Comprovante" and associated object flow cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no incoming object flow.
+The Object Instance "Docs" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Boleto" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Boleto" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model" because it has no specified state.
+The Object Instance "Nº processo" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação" because it has no specified state.
+The Object Instance "Nº processo" and associated object flows cannot be exported from Activity Model "Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação" because it has no specified state.
+The Object Instance "Projeto de Programa" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento" because it has no specified state.
+The Object Instance "Projeto de Programa" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento" because it has no specified state.
+The Object Instance "Projeto de Programa" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento" because it has no specified state.
+The Object Instance "Projeto de Programa" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento" because it has no specified state.
+The Object Instance "Resolução de Criação de Programa" and associated object flow cannot be exported from Activity Model "Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento" because it has no incoming object flow.
+The Object Instance "Calendário Geral" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar calendário::Workflows" because it has no specified state.
+The Object Instance "Calendário Geral" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar calendário::Workflows" because it has no specified state.
+The Object Instance "Calendário de Programa" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar calendário::Workflows" because it has no specified state.
+The Object Instance "Requisição de Cancelamento" and associated object flow cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no incoming object flow.
+The Object Instance "Comprovante" and associated object flow cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no incoming object flow.
+The Object Instance "Boleto" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Requerimento" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Docs" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Tratar requerimento::Processos" because it has no specified state.
+The Object Instance "Calendário" and associated object flows cannot be exported from Activity Model "Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção" because it has no specified state.
+Attribute 'Log.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Profile.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Tarefa.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Faixa.conceito' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Pessoa.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Pessoa.sexo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Pessoa jurídica.CNPJ' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Descrição de instrumento de defesa.versao' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Avaliação.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Disciplina.ementa' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Disciplina.codigo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Disciplina.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Disciplina.créditos' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Conceito.valor' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Nota.valor' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Número normalizado.valor' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Atividade de Ensino.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Atividade de Ensino.conteúdo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Atividade de Ensino.observação' does not have a type.  The type "<undefined>" will be assigned.
+The attribute "Use Case View::Modelo de domínio::disciplina::Aproveitamento::freqüência" is derived.  A "/" will be added to its name: "/freqüência"
+Attribute 'Aproveitamento.freqüência' does not have a type.  The type "<undefined>" will be assigned.
+The attribute "Use Case View::Modelo de domínio::disciplina::Aproveitamento::nota" is derived.  A "/" will be added to its name: "/nota"
+Attribute 'Aproveitamento.nota' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Comprovante.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informe.destinatario' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informe.inicio' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informe.fim' does not have a type.  The type "<undefined>" will be assigned.
+The sequence diagram: "Use Case View::Modelo de domínio::Informes::iInforme::RemoveInforme" does not have any messages.  It cannot be expressed in UML 1.3 and will not be exported.
+The sequence diagram: "Use Case View::Modelo de domínio::Informes::iInforme::InsereInforme" does not have any messages.  It cannot be expressed in UML 1.3 and will not be exported.
+Diagram Use Case View::Modelo de domínio::Informes::iInforme::CriaInforme does not include activators, since there were no hierarchically numbered message found.
+Attribute 'TipoDisciplina.tipo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'ExecutaAtividade.periodo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'ExecutaAtividade.conceito' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'ExecutaAtividade.frequencia' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'EstagioDocencia.nomeDisciplina' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'EstagioDocencia.nomeDocente' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'EstagioDocencia.cargaHoraria' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'EstagioDocencia.descrição' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'AtividadeCredito.minimo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'AtividadeCredito.maximo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'AtividadeCredito.obrigatoria' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'AtividadeCredito.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Atividade.ncreditos' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.inicio' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.fim' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.ano' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.semestre' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.código' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Turma.aproveitamento' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Defesa.PrevisaoDefesa' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Defesa.DataDefesa' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Defesa.pendências' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Matricula.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Matricula.numero' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Exame de qualificação.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Exame de qualificação.resultado' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'OfertaDisciplina.ano' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'OfertaDisciplina.dataLimiteCancelamento' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'OfertaDisciplina.semestre' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Quantidade.valor' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Quantidade.unidade' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Colabora.período' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Objetivo.período' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Requisito.tipo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Requisito.descrição' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Requisito.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informacao.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informacao.tipo' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Informacao.descrição' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Nível.nome' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Nível.descricao' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'NumeroVagas.qtde' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Resolução.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Resolução.numero' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Requerimento.data' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Conta.usuário' does not have a type.  The type "<undefined>" will be assigned.
+Attribute 'Conta.senha' does not have a type.  The type "<undefined>" will be assigned.
+Failed to find symbol for Generalization: {Logical View::Arquitetura layered::java::util::Collections::UnmodifiableMap::UnmodifiableEntrySet->>UnmodifiableSet}
+Failed to find symbol for Generalization: {Logical View::Arquitetura layered::java::util::TreeMap::SubMap::EntrySetView->>AbstractSet}
+Failed to find symbol for Object: {3C6BC82D0111}{Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::State/Activity Model14::Avaliação de Requerimento::State/Activity Model14}
+Failed to find symbol for ObjectFlow: {3C6BC86600CD}{3C6BC82D0111}
+Failed to find symbol for ObjectFlow: {3C6BC869008B}{3C6BC82D0111}
+Failed to find symbol for Object: {3C6BBB73018F}{Logical View::NEGÓCIO REALIZAÇÕES::Tratar requerimento::State/Activity Model14}
+Failed to find symbol for ObjectFlow: {3C6BBB8103B5}{3C6BBB73018F}
+Failed to find symbol for ObjectFlow: {3C6BBB8401E3}{3C6BBB73018F}
+Warning: StateDiagram "Use Case View::Casos de Uso::admsys::Consultar log::State/Activity Model::fluxo de eventos" is a duplicate.  Check and correct the model--this export will not be usable.
+Failed to find symbol for Object: Programa{3A942984010E}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for Object: Coordenador cadastrado{3A942DDE00D4}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for Object: Programa{3A942984010E}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for ObjectFlow: {3A9429B7007B}{Programa3A942984010E}
+Failed to find symbol for Object: Coordenador cadastrado{3A942DDE00D4}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for ObjectFlow: {3A94316F019F}{Coordenador cadastrado3A942DDE00D4}
+Failed to find symbol for ObjectFlow: {3A942F58036C}{Coordenador cadastrado3A942DDE00D4}
+Failed to find symbol for Object: Altere senha{3A942EDC0151}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for Object: Altere senha{3A942EDC0151}{Use Case View::Casos de Uso::programa de pós-graduação::Cadastros}
+Failed to find symbol for ObjectFlow: {3A942EFA00E6}{Altere senha3A942EDC0151}
+Failed to find symbol for ObjectFlow: {3A942F050345}{Altere senha3A942EDC0151}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Boleto{3D662D6401E8}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D6632E200B4}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Boleto{3D662D6401E8}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D66335402C0}{Boleto3D662D6401E8}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Docs{3D64F37E02E7}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D662D8B01DA}{Boleto3D662D6401E8}
+Failed to find symbol for ObjectFlow: {3D662D0402EF}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D6632680054}{Requerimento3D64F1030199}
+Failed to find symbol for ObjectFlow: {3D64F2E8010A}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Docs{3D64F37E02E7}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D64F388022D}{Docs3D64F37E02E7}
+Failed to find symbol for Object: Comprovante{3D64F3310214}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Comprovante{3D64F3310214}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D64F3470071}{Comprovante3D64F3310214}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D66340101D9}{Requerimento3D64F1030199}
+Failed to find symbol for ObjectFlow: {3D662EAF011C}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Boleto{3D662D6401E8}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D6632E200B4}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Boleto{3D662D6401E8}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D66335402C0}{Boleto3D662D6401E8}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D6632E500FE}{Requerimento3D64F1030199}
+Failed to find symbol for ObjectFlow: {3D66335E0062}{Boleto3D662D6401E8}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D6632680054}{Requerimento3D64F1030199}
+Failed to find symbol for ObjectFlow: {3D66326D037D}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Comprovante{3D64F3310214}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Comprovante{3D64F3310214}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for Object: Requerimento{3D64F1030199}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::State/Activity Model}
+Failed to find symbol for ObjectFlow: {3D66340A01C8}{Requerimento3D64F1030199}
+Failed to find symbol for ObjectFlow: {3D6633A7014D}{Comprovante3D64F3310214}
+Failed to find symbol for ObjectFlow: {3D66340101D9}{Requerimento3D64F1030199}
+Failed to find symbol for Object: Nº processo{3DAC1E73033E}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação}
+Failed to find symbol for Object: Nº processo{3DAC1E73033E}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação}
+Failed to find symbol for Object: Nº processo{3DAC1E73033E}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação}
+Failed to find symbol for ObjectFlow: {3DAC1EEE01E0}{Nº processo3DAC1E73033E}
+Failed to find symbol for Object: Nº processo{3DAC1E73033E}{Use Case View::Casos de Uso::Requerimentos::Requerimentos\:\:Negócio::Use Cases do Negócio::Avaliar Solicitação::Avaliar Solicitação}
+Failed to find symbol for ObjectFlow: {3DAC1EF1033E}{Nº processo3DAC1E73033E}
+Failed to find symbol for ObjectFlow: {3DAC203C0366}{Nº processo3DAC1E73033E}
+Failed to find symbol for ObjectFlow: {3DAC203F0154}{Nº processo3DAC1E73033E}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3A941933002B}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3A941A21024A}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Resolução de Criação de Programa{3BBB45620157}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3A941A240064}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Resolução de Criação de Programa{3BBB45620157}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3BBB456E000A}{Resolução de Criação de Programa3BBB45620157}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3A9419370045}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3BBB434C009B}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for ObjectFlow: {3BBB43D50229}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Projeto de Programa{3A93FEC301BA}{Use Case View::NEGOCIO::Criar programa de pós-graduação::Comportamento}
+Failed to find symbol for ObjectFlow: {3AE80ADB03A5}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for ObjectFlow: {3BE987090211}{Projeto de Programa3A93FEC301BA}
+Failed to find symbol for Object: Calendário Geral{3AA912E4000B}{Use Case View::NEGOCIO::Tratar calendário::Workflows}
+Failed to find symbol for Object: Calendário Geral{3AA912E4000B}{Use Case View::NEGOCIO::Tratar calendário::Workflows}
+Failed to find symbol for ObjectFlow: {3AA61A71030D}{Calendário Geral3AA912E4000B}
+Failed to find symbol for Object: Calendário de Programa{3AA912E4001A}{Use Case View::NEGOCIO::Tratar calendário::Workflows}
+Failed to find symbol for ObjectFlow: {3AB605E60348}{Calendário Geral3AA912E4000B}
+Failed to find symbol for Object: Calendário de Programa{3AA912E4001A}{Use Case View::NEGOCIO::Tratar calendário::Workflows}
+Failed to find symbol for ObjectFlow: {3AA61ADE038C}{Calendário de Programa3AA912E4001A}
+Failed to find symbol for ObjectFlow: {3AB6062D02A9}{Calendário de Programa3AA912E4001A}
+Failed to find symbol for Object: Boleto{3BBC794B03C6}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for Object: Boleto{3BBC794B03C6}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3BBC79650125}{Boleto3BBC794B03C6}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3AA9310B034F}{Requerimento3AA92F790166}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for Object: Docs{3C08C5F801E2}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3BBC768E015B}{Requerimento3AA92F790166}
+Failed to find symbol for ObjectFlow: {3BBC796802D8}{Boleto3BBC794B03C6}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3AA930760200}{Requerimento3AA92F790166}
+Failed to find symbol for ObjectFlow: {3BBC79AE03A0}{Requerimento3AA92F790166}
+Failed to find symbol for Object: Docs{3C08C5F801E2}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3C08C5FF0098}{Docs3C08C5F801E2}
+Failed to find symbol for Object: Comprovante{3B24D3900034}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for Object: Comprovante{3B24D3900034}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3B24D3A900D0}{Comprovante3B24D3900034}
+Failed to find symbol for Object: Requerimento{3AA92F790166}{Use Case View::NEGOCIO::Tratar requerimento::Processos}
+Failed to find symbol for ObjectFlow: {3AB5F662030A}{Requerimento3AA92F790166}
+Failed to find symbol for ObjectFlow: {3AB5F65D0078}{Requerimento3AA92F790166}
+Failed to find symbol for ObjectFlow: {3C963A32002A}{Requerimento3AA92F790166}
+Failed to find symbol for Object: Boleto{3C064F640026}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for Object: Boleto{3C064F640026}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for ObjectFlow: {3C064F750175}{Boleto3C064F640026}
+Failed to find symbol for Object: Documentos{3C064F93010A}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for Object: Formulário{3C064FF100DD}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for Object: Comprovante de Inscrição{3C0650B60271}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for Object: Documentos{3C064F93010A}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for ObjectFlow: {3C064F9E03E1}{Documentos3C064F93010A}
+Failed to find symbol for Object: Formulário{3C064FF100DD}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for ObjectFlow: {3C065001022B}{Formulário3C064FF100DD}
+Failed to find symbol for ObjectFlow: {3C065011001B}{Formulário3C064FF100DD}
+Failed to find symbol for ObjectFlow: {3C0650140083}{Documentos3C064F93010A}
+Failed to find symbol for ObjectFlow: {3C06501800F7}{Boleto3C064F640026}
+Failed to find symbol for Object: Comprovante de Inscrição{3C0650B60271}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção::Efetuar inscrição::State/Activity Model5}
+Failed to find symbol for ObjectFlow: {3C0650C101EB}{Comprovante de Inscrição3C0650B60271}
+Failed to find symbol for Object: Calendário{3BBC4370017D}{Use Case View::NEGOCIO::Executar processo de seleção::Executar Processo de Seleção}
+Failed to find symbol for ObjectFlow: {3BBC437A00CD}{Calendário3BBC4370017D}
+Unable to open export XML file: Package.Requerimentos::Análise.xml.  Check permissions and status of existing file, if any.
+Unable to open export XML file: Package.Requerimentos::Negócio.xml.  Check permissions and status of existing file, if any.
+Unable to open export XML file: Package.Requerimentos::Use Case View.xml.  Check permissions and status of existing file, if any.

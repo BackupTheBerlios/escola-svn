@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylessheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="relatorios">
+
+<uc nome="Programa de pós-graduação">
+<resumo>
+Cada programa de pós-graduação é personalizado por um considerável conjunto de atributos. Ter acesso às informações pertinentes é uma necessidade constante. Nestes casos, deverão ser fornecidos: nome do programa, código, nível (doutorado ou mestrado e, neste �ltimo caso, se acadêmico, profissionalizante ou misto), área e sub-área do conhecimento, conceito CAPES e ano da avaliação, data de início na UFG, unidade(s) acadêmicas envolvidas (com participação no corpo docente), n�mero e data da resolução, nome do coordenador e sub-coordenador, período de mandato de ambos, unidade acadêmica de cada um deles, n�mero da portaria de nomeação da coordenação, CPF e matrícula de cada um deles na UFG, regime letivo do programa (semestral, anual, trimestral ou outro e, neste caso, especificar qual), endereço da secretaria do programa, áreas de concentração e para cada uma delas as linhas de pesquisa, número de créditos exigidos para integralização,
+exame de qualificação (se é exigido ou não)
+</resumo>
+</uc>
+
+<uc nome="Aprovados em processo de seleção">
+<resumo>
+A banca de seleção de candidato faz a correção do(s) exame(s) e registram os resultados no sistema. O relatório deverá fornecer o nome do candidato, o resultado (nota ou reprovado + motivo) e observação. Os candidatos deverão ser fornecidos em ordem de classificação decrescente. A nota é a média das avaliações aplicadas com 2 casas decimais. Valores de 0 a 10.
+O relatório ainda deverá conter o total de inscritos e o número de vagas.
+</resumo>
+</uc>
+
+<uc nome="Carta de Desistência">
+<resumo>
+Caso o candidato aprovado em processo de seleção opte por não efetuar a sua matrícula, então este poderá informar o fato a coordenação do programa pertinente através deste formulário. 
+Há um prazo para a matrícula que, se não for cumprido, é interpretado como desistência. 
+</resumo>
+</uc>
+
+<uc nome="Termo de Compromisso SISPG">
+<resumo>
+Todo aluno, participante, coordenador e demais usuários do SISPG terão que assinar o termo de compromisso de uso deste sistema. 
+O termo deverá estabelecer, de forma clara, as responsabilidades dos usuários. A assinatura deste termo é condição sine qua non para usar o SISPG.
+</resumo>
+</uc>
+
+<uc nome="Inscritos em processo de seleção">
+<resumo>
+Durante e após a abertura de processo de seleção,
+poder-se-á identificar aqueles inscritos. O relatório deverá identificar o programa, o período referente e, para cada candidato, o nome, o CPF ou equivalente e a área de concentração.
+O total geral de inscritos e o total por área de concentração até o momento (data e horário) em que o relatório é gerado também deverão ser fornecidos. Este relatório também deverá incluir a data do exame de seleção. 
+</resumo>
+</uc>
+
+<uc nome="Ficha de candidato">
+<resumo>
+As informações fornecidas pelos candidatos poderão ser consultadas e impressas posteriormente. 
+</resumo>
+</uc>
+
+<uc nome="Aprovados em processo de seleção"> 
+<resumo>
+O processo de seleção será concluído com o fornecimento dos resultados dos exames. A lista daqueles aprovados poderá ser consultada. 
+Observação: nem todos aprovados serão chamados. A ordem de classificação será utilizada conforme o n�mero de vagas. O nome,
+o CPF (ou equivalente) e a área de concentração de cada candidato aprovado serão fornecidos. A lista será fornecida em ordem decrescente de nota, o que equivale à classificação dos aprovados. 
+Após a lista de aprovados deverá seguir o n�mero total de vagas, o n�mero de aprovados e o período no qual estes deverão efetuar as respectivas matrículas.
+</resumo>
+</uc>
+
+<uc nome="Resultado de processo de seleção">
+<resumo>
+Ao contrário das informações fornecidas no caso anterior, o resultado do processo de seleção inclui também aqueles candidatos não aprovados. 
+Uma coluna adicional é utilizada para informar se o candidato foi aprovado ou não.
+Deverá ser acrescentada uma legenda convidando os X primeiros colocados para comparecerem na secretaria correspondente para efetuar as matrículas no período também fornecido. 
+Este resultado poderá estar classificado por nome, classificação ou área de concentração. Neste �ltimo caso, a segunda informação utilizada para fornecer os candidatos poderá ser a ordem de classificação ou o nome dos candidatos. 
+</resumo>
+</uc>
+
+<uc nome="Reprovados em processo de seleção">
+<resumo>
+Após a execução de processo de seleção, uma listagem daqueles reprovados deve ser providenciada.
+A lista deverá estar em ordem decrescente de nota (classificação). 
+Para cada candidato também serão fornecidos o nome, o CPF (ou equivalente) e a área de concentração. Um convite deverá compor o corpo deste relatório convidando tais candidatos a se inscreverem em outra oportunidade.
+</resumo>
+</uc>
+
+<uc nome="Matriculados">
+<resumo>
+Após o processo de seleção os candidatos aprovados poderão realizar as suas matrículas em um dado período. Periodicamente, os alunos do curso também terão que se matricular. Em ambos os casos é natural obter uma listagem de todos os matriculados até uma determinada data. Este relatório poderá estar associado a um processo de seleção ou não. No primeiro caso deverá ser informado o processo de seleção correspondente ou uma lista deles. No segundo caso, poderá ser fornecido um ou mais períodos de matrícula. Uma observação deverá ser fornecida nestes relatórios: todos os alunos listados estão em dia com a matrícula desde o primeiro período. Para cada  candidato ou aluno, deverão ser fornecidos o nome, o CPF (ou equivalente), área de concentração, orientador, data da primeira matrícula, tempo para integralização e data de previsão de defesa.
+Estes relatórios deverão ser produzidos conforme o nível do programa.
+</resumo>
+</uc>
+
+<uc nome="Comprovantes">
+<resumo>
+Para cada interação dos usuários com o sistema, 
+em particular aqueles do corpo discente, ter-se-ão comprovantes correspondentes para as operações “sensíveis”. Por exemplo, comprovante de matrícula, comprovante de requerimento, comprovante de inscrição em disciplina(s) e demais necessários. 
+</resumo>
+</uc>
+
+<uc nome="Disciplina: descrição">
+<resumo>
+Poder-se-á consultar todo o conjunto de disciplinas de um dado programa,
+de uma determinada área, ou aquelas que possuem um determinado n�mero de créditos, uma determinada carga horária,
+ou que possuam um determinado nome ou cuja ementa possua um determinado conjunto de palavras. Embora as possibilidades de consultas sejam variadas, o conjunto de informações a serem disponibilizados é bem-definido para cada disciplina: código, nome, ementa, créditos, carga horária, obrigatoriedade (optativa ou não), programa e área de concentração correspondentes.
+</resumo>
+</uc>
+
+<uc nome="Disciplina: programa">
+<resumo>
+A descrição de uma disciplina fornece um conjunto insuficiente de informações para alunos e a coordenação de um programa. Nestes casos, em geral, além da descrição, está-se interessado no programa ou “forma” de execução da disciplina. As informações pertinentes a um programa de disciplina incluem: docente responsável, cronograma de execução (dias e horários das atividades), 
+bibliografia e critérios de avaliação (inclusive datas).
+</resumo>
+</uc>
+
+<uc nome="Inscrição em disciplina">
+<resumo>
+O aluno poderá, após matriculado, realizar a sua inscrição em disciplinas. Tanto o comprovante quanto um relatório contendo todos os inscritos em determinado programa, disciplina e período deverão conter o n�mero de matrícula do aluno, o nome, o orientador e as disciplinas nas quais este se encontra matriculado. Para cada disciplina deverá ser fornecido o n�mero de créditos correspondente.
+</resumo>
+</uc>
+
+<uc nome="Calendário">
+<resumo>
+A administração superior da pós-graduação irá estabelecer um calendário composto de itens cujos períodos deverão ser seguidos pelas coordenações subordinadas. Tanto o calendário “geral” quanto aquele específico para cada coordenação poderá ser impresso. 
+</resumo>
+</uc>
+
+<uc nome="Defesas">
+<resumo>
+É �til a vários propósitos uma lista de defesas ocorridas em um determinado período ou, caso este período refira-se ao futuro, a uma previsão de defesas. A lista deverá incluir o aluno, o orientador, o programa, a data da defesa (ou previsão) e o resultado da defesa (se for o caso). Para cada aluno ainda deverá ser fornecida o tempo transcorrido entre a primeira matrícula e a data (da defesa ou aquela prevista). 
+
+Outro relatório pertinente envolve uma síntese das informações acima e deverá incluir: (a) média dos tempos por programa; (b) n�mero total de defesas por ano; (c) n�mero total de defesas por ano e por programa; (d) pior e melhor médias; (e) relação entre o n�mero de ingressos e o n�mero de titulados; (f) pior e melhor médias do item (e); (g) programa mais concorrido e (h) programa menos concorrido.
+</resumo>
+</uc>
+
+<uc nome="Eficiência de programa">
+<resumo>
+O acompanhamento dos resultados apresentados por um programa é de grande relevância e, por esse motivo, o seguinte relatório deverá ser fornecido. Todos os alunos do programa em um determinado período e, para cada um deles, fornecer (a) o nome; (b) ano de ingresso e (c) situação atual. A situação atual pode ser titulada e, neste caso, a data e o tempo transcorrido desde a primeira matrícula; ou excluído e o motivo da exclusão ou, por �ltimo, em andamento e, neste caso, a data da previsão da defesa.
+</resumo>
+</uc>
+
+<uc nome="Auxílio">
+<resumo>
+Alunos recebem auxílios e, geralmente, é relevante um relatório que mostre para um conjunto de alunos, o tempo em que cada um deles recebe o auxílio e qual a instituição de fomento.
+</resumo>
+</uc>
+
+<uc nome="Extrato acadêmico">
+<resumo>
+Extrato acadêmico fornece um conjunto maior de informações do que aquele contido em um histórico. Em um extrato devem constar: programa, nível, aluno, orientador, coordenador do curso, data de ingresso no programa, disciplinas cursadas (nome, código, créditos, freqüência, período, conceito), exame de qualificação (data ou previsão), defesa (data ou previsão e, conforme o caso, resultado). Caso o programa ainda esteja em andamento, do ponto de vista do aluno, então deverá ser fornecido o n�mero de créditos que faltam para integralização e o tempo disponível.
+</resumo>
+</uc>
+
+</ers>
+
+
+
+
+
+
+
+
+
+
+
+
+

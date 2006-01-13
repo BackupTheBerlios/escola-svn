@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="ctrlacss">
+
+<uc nome="Manutenir conta">
+<resumo>
+Os atributos de uma conta poderão ser alterados através deste caso de uso.
+Senha e período de validade, por exemplo, são alguns dos atributos que poderão ser alterados.
+Suspender, temporariamente ou não, uma determinada conta, por exemplo, é uma das possibilidades que podem ser exploradas neste caso de uso.
+</resumo>
+</uc>
+
+<uc nome="Criar usuário">
+<resumo>
+O usuário, devidamente autorizado, poderá criar outras contas.
+O sistema permitirá o seu uso apenas por pessoas físicas devidamente autorizadas.
+Esta autorização ocorre quando uma “conta” é criada para a pessoa física em questão. Associada a cada conta está a pessoa física pertinente e o tipo de categoria correspondente.
+Pode ser que uma pessoa física faça parte de mais de uma categoria. Um período de validade da conta também deverá ser estabelecido. A categoria define o tipo de privilégio que o “novo usuário” terá ao interagir com o sistema. Este caso de uso contempla a criação, remoção, consulta e edição de contas.
+</resumo>
+</uc>
+
+<uc nome="Manutenir senha">
+<resumo>
+Após criada uma conta, a senha pertinente será válida apenas para se ter acesso a outro serviço: cadastrar senha. Dessa forma, todo usuário receberá uma senha “temporária” através da qual apenas o serviço que permite trocar esta senha estará disponível. Em conseqüência, assegura-se que ninguém mais, exceto o usuário, poderá “divulgar” a senha pertinente a sua própria conta. Adicionalmente, este caso de uso deverá ser utilizado para fornecimento de nova senha quando a anterior estiver expirada ou quando o usuário desejar alterar a senha. Toda vez que uma senha for alterada,
+o usuário correspondente receberá um e-mail informando o fato.
+</resumo>
+</uc>
+
+<uc nome="Autenticar usuário">
+<resumo>
+Qualquer ser humano que deseje usufruir dos serviços oferecidos pelo PEQUI deverá ser devidamente identificado, para que as restrições de acesso correspondentes possam ser aplicadas. Nem todos os serviços terão, necessariamente, que ser precedidos da execução deste caso de uso. 
+Muitos são públicos, como consulta a informações públicas. 
+</resumo>
+</uc>
+
+<uc nome="Consultar conta">
+<resumo>
+Quando o sistema estiver em operação, serão necessárias algumas consultas para identificar a existência de determinada conta, obter a listagem de todas as contas ativas pertinentes a um dado programa ou categoria, por exemplo. Este caso de uso oferece tais serviços. Dos resultados produzidos será possível selecionar uma conta específica e, 
+caso desejado, efetuar atividades de manutenção da conta.
+</resumo>
+</uc>
+
+<uc nome="Emitir extrato de contas ativas">
+<resumo>
+Periodicamente o sistema irá emitir um extrato das contas ativas.
+Esta informação é relevante para a manutenção da segurança do sistema.
+</resumo>
+</uc>
+
+<uc nome="Consultar extrato de acesso">
+<resumo>
+Usuários poderão consultar seus extratos de acesso e, dessa forma, aumentar a segurança do sistema. 
+</resumo>
+</uc>
+
+</ers>
+

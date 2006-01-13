@@ -1,0 +1,34 @@
+<!DOCTYPE web-app PUBLIC
+  '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+  'http://java.sun.com/dtd/web-app_2_3.dtd'>
+<web-app>
+  <servlet>
+    <servlet-name>url</servlet-name>
+    <servlet-class>RedirecionaURL</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>url</servlet-name>
+    <url-pattern>/url/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>help</servlet-name>
+    <servlet-class>RedirecionaURL</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>help</servlet-name>
+    <url-pattern>/help/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>set</servlet-name>
+    <servlet-class>RedirecionaURL</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>set</servlet-name>
+    <url-pattern>/set/*</url-pattern>
+  </servlet-mapping>
+</web-app>

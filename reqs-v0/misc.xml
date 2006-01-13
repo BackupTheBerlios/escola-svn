@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="misc">
+
+<uc nome="Imprimir relatório">
+<resumo>
+Muitos relatórios serão gerados e consultados pelos usuários. Há duas classes de relatórios: uma que será consultada através do monitor e outra que será explorada através de uma versão impressa. Este caso de uso preocupa-se exclusivamente com a segunda classe. Quando informações consultadas pelos usuários tiverem que ser impressas, então deverá estar disponível um serviço através do qual uma versão PDF do relatório em questão será disponibilizada. Esta versão, consultada através do visualizador pertinente,
+poderá então ser impresso, caso seja o interesse.
+</resumo>
+</uc>
+
+<uc nome="Ler e-mail">
+<resumo>
+Operação rotineiramente executada por usuários de computador. 
+</resumo>
+</uc>
+
+</ers>

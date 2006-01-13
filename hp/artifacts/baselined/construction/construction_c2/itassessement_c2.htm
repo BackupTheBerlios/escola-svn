@@ -1,0 +1,814 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Iteration Assessment</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="../../../projectmanagement/ex_itassmnt_files/filelist.xml" rel=File-List><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>bmacisaa</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>bmacisaa</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2000-06-14T20:25:00Z</o:Created>
+  <o:LastSaved>2000-06-14T20:25:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1141</o:Words>
+  <o:Characters>6506</o:Characters>
+  <o:Company>Rational Software</o:Company>
+  <o:Lines>54</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>7989</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Helvetica;
+}
+@font-face {
+	font-family: Wingdings;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@font-face {
+	font-family: Book Antiqua;
+}
+P.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+H1 {
+	FONT-FAMILY: Arial; FONT-SIZE: 12pt; FONT-WEIGHT: bold; LINE-HEIGHT: 12pt; MARGIN: 6pt 0in 3pt 0.5in; TEXT-INDENT: -0.5in; mso-pagination: widow-orphan; mso-outline-level: 1; mso-font-kerning: 18.0pt
+}
+H2 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt; FONT-WEIGHT: bold; LINE-HEIGHT: 12pt; MARGIN: 6pt 0in 3pt 0.5in; TEXT-INDENT: -0.5in; mso-pagination: widow-orphan; mso-outline-level: 2
+}
+H3 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt; FONT-STYLE: italic; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; MARGIN: 6pt 0in 3pt 0.5in; TEXT-INDENT: -0.5in; mso-pagination: widow-orphan; mso-outline-level: 3
+}
+H4 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; MARGIN: 6pt 0in 3pt 0.5in; TEXT-INDENT: -0.5in; mso-pagination: widow-orphan; mso-outline-level: 4
+}
+H5 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 11pt; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-outline-level: 5
+}
+H6 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 11pt; FONT-STYLE: italic; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-outline-level: 6
+}
+P.MsoHeading7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 7
+}
+LI.MsoHeading7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 7
+}
+DIV.MsoHeading7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 7
+}
+P.MsoHeading8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 8
+}
+LI.MsoHeading8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 8
+}
+DIV.MsoHeading8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 8
+}
+P.MsoHeading9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 9pt; FONT-STYLE: italic; FONT-WEIGHT: bold; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 9
+}
+LI.MsoHeading9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 9pt; FONT-STYLE: italic; FONT-WEIGHT: bold; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 9
+}
+DIV.MsoHeading9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 9pt; FONT-STYLE: italic; FONT-WEIGHT: bold; LINE-HEIGHT: 12pt; MARGIN: 12pt 0in 3pt 2in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-outline-level: 9
+}
+P.MsoToc1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0.5in 3pt 0in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0.5in 3pt 0in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 12pt 0.5in 3pt 0in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc2 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0.5in 0pt 0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc2 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0.5in 0pt 0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc2 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0.5in 0pt 0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.6in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.6in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.6in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 30pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 30pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 30pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc5 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 40pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc5 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 40pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc5 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 40pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc6 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 50pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc6 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 50pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc6 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 50pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 60pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 60pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc7 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 60pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 70pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 70pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc8 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 70pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoToc9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 80pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoToc9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 80pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoToc9 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 80pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoNormalIndent {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 45pt; TEXT-INDENT: -45pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormalIndent {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 45pt; TEXT-INDENT: -45pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormalIndent {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 45pt; TEXT-INDENT: -45pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoFootnoteText {
+	FONT-FAMILY: Helvetica; FONT-SIZE: 8pt; LINE-HEIGHT: 12pt; MARGIN: 2pt 0in 2pt 0.25in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoFootnoteText {
+	FONT-FAMILY: Helvetica; FONT-SIZE: 8pt; LINE-HEIGHT: 12pt; MARGIN: 2pt 0in 2pt 0.25in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoFootnoteText {
+	FONT-FAMILY: Helvetica; FONT-SIZE: 8pt; LINE-HEIGHT: 12pt; MARGIN: 2pt 0in 2pt 0.25in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoHeader {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoHeader {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoHeader {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoFooter {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoFooter {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoFooter {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+SPAN.MsoFootnoteReference {
+	VERTICAL-ALIGN: super
+}
+P.MsoTitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-WEIGHT: bold; MARGIN: 0in 0in 0pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoTitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-WEIGHT: bold; MARGIN: 0in 0in 0pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoTitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-WEIGHT: bold; MARGIN: 0in 0in 0pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoBodyText {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoBodyText {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoBodyText {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoBodyTextIndent {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-DECORATION: underline; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; text-underline: single
+}
+LI.MsoBodyTextIndent {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-DECORATION: underline; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; text-underline: single
+}
+DIV.MsoBodyTextIndent {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-DECORATION: underline; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; text-underline: single
+}
+P.MsoSubtitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-STYLE: italic; MARGIN: 0in 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoSubtitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-STYLE: italic; MARGIN: 0in 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoSubtitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 18pt; FONT-STYLE: italic; MARGIN: 0in 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P.MsoBodyText2 {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoBodyText2 {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoBodyText2 {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; text-underline: single
+}
+P.MsoDocumentMap {
+	BACKGROUND: navy; FONT-FAMILY: Tahoma; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoDocumentMap {
+	BACKGROUND: navy; FONT-FAMILY: Tahoma; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoDocumentMap {
+	BACKGROUND: navy; FONT-FAMILY: Tahoma; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+P {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; mso-fareast-font-family: "Times New Roman"
+}
+PRE {
+	FONT-FAMILY: "Courier New"; FONT-SIZE: 10pt; MARGIN: 0in 0in 0pt; mso-fareast-font-family: "Courier New"
+}
+P.paragraph2 {
+	COLOR: black; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 4pt 0in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph2
+}
+LI.paragraph2 {
+	COLOR: black; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 4pt 0in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph2
+}
+DIV.paragraph2 {
+	COLOR: black; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 4pt 0in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph2
+}
+P.bullet1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet1
+}
+LI.bullet1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet1
+}
+DIV.bullet1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.3in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet1
+}
+P.bullet2 {
+	COLOR: navy; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 1in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet2
+}
+LI.bullet2 {
+	COLOR: navy; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 1in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet2
+}
+DIV.bullet2 {
+	COLOR: navy; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 0pt 1in; TEXT-INDENT: -0.25in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet2
+}
+P.tabletext {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: tabletext
+}
+LI.tabletext {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: tabletext
+}
+DIV.tabletext {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: tabletext
+}
+P.maintitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 16pt; FONT-WEIGHT: bold; MARGIN: 24pt 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: maintitle
+}
+LI.maintitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 16pt; FONT-WEIGHT: bold; MARGIN: 24pt 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: maintitle
+}
+DIV.maintitle {
+	FONT-FAMILY: Arial; FONT-SIZE: 16pt; FONT-WEIGHT: bold; MARGIN: 24pt 0in 3pt; TEXT-ALIGN: center; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: maintitle
+}
+P.paragraph1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph1
+}
+LI.paragraph1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph1
+}
+DIV.paragraph1 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph1
+}
+P.paragraph3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 76.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph3
+}
+LI.paragraph3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 76.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph3
+}
+DIV.paragraph3 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 76.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph3
+}
+P.paragraph4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 112.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph4
+}
+LI.paragraph4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 112.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph4
+}
+DIV.paragraph4 {
+	FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; MARGIN: 4pt 0in 0pt 112.5pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: paragraph4
+}
+P.body {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: body; mso-bidi-font-family: "Times New Roman"
+}
+LI.body {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: body; mso-bidi-font-family: "Times New Roman"
+}
+DIV.body {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0in 0pt; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: body; mso-bidi-font-family: "Times New Roman"
+}
+P.bullet {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0.25in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet; mso-bidi-font-family: "Times New Roman"
+}
+LI.bullet {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0.25in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet; mso-bidi-font-family: "Times New Roman"
+}
+DIV.bullet {
+	FONT-FAMILY: "Book Antiqua"; FONT-SIZE: 10pt; MARGIN: 6pt 0.25in 0pt 0.5in; TEXT-ALIGN: justify; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: bullet; mso-bidi-font-family: "Times New Roman"
+}
+P.infoblue {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: infoblue
+}
+LI.infoblue {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: infoblue
+}
+DIV.infoblue {
+	COLOR: blue; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 12pt; MARGIN: 0in 0in 6pt 0.5in; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-style-name: infoblue
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0in
+}
+UL {
+	MARGIN-BOTTOM: 0in
+}
+</STYLE>
+<meta name="Microsoft Border" content="b">
+</HEAD>
+<BODY lang=EN-US link=blue style="tab-interval: .5in" vLink=purple>
+<DIV class=Section1>
+<P align=right class=MsoTitle style="TEXT-ALIGN: right">Course Registration 
+System</P>
+<P align=right class=MsoTitle style="TEXT-ALIGN: right">C2 Iteration 
+Assessment</P>
+<P align=right class=MsoTitle style="TEXT-ALIGN: right">&nbsp;</P>
+<P align=right class=MsoTitle style="TEXT-ALIGN: right"><SPAN 
+style="FONT-SIZE: 14pt">Version 1.0</SPAN></P>
+<P class=MsoTitle><SPAN style="FONT-SIZE: 14pt">&nbsp;</SPAN></P><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><BR 
+clear=all 
+style="PAGE-BREAK-BEFORE: always; mso-special-character: line-break"></SPAN>
+<P><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+<P class=MsoTitle>Revision History</P>
+<TABLE border=1 cellSpacing=1 
+style="WIDTH: 474.75pt; mso-cellspacing: .7pt; mso-padding-alt: 5.25pt 5.25pt 5.25pt 5.25pt" 
+width=100%>
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-SIZE: 10pt">Date</SPAN></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 12%" 
+    vAlign=top width="12%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-SIZE: 10pt">Version</SPAN></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 39%" 
+    vAlign=top width="39%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-SIZE: 10pt">Description</SPAN></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-SIZE: 10pt">Author</SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">27/March/1999<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 12%" 
+    vAlign=top width="12%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">1.0<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 39%" 
+    vAlign=top width="39%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">Initial Version – 
+      Assessment of second iteration C2.<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">Rick Bell<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 12%" 
+    vAlign=top width="12%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 39%" 
+    vAlign=top width="39%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 12%" 
+    vAlign=top width="12%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 39%" 
+    vAlign=top width="39%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 12%" 
+    vAlign=top width="12%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 39%" 
+    vAlign=top width="39%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 24%" 
+    vAlign=top width="24%"><PRE><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></PRE></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<P class=MsoTitle>Table of Contents</P>
+<P class=MsoToc1><a href="#1.__________________Introduction">1.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Introduction</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc2><a href="#1.1_______________Purpose">1.1<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Purpose</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc2><a href="#1.2_______________Scope">1.2<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Scope</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc2><a href="#1.3_______________Definitions,_Acronyms_">1.3<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Definitions, Acronyms 
+and Abbreviations&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc2><a href="#1.4_______________References">1.4<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>References</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc2><a href="#1.5_______________Overview">1.5<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Overview</a></P>
+<P class=MsoToc1><a href="#2.__________________Iteration_Objectives">2.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Iteration 
+Objectives Reached</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc1><a href="#3.__________________Adherence_to_Plan">3.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Adherence to 
+Plan</a></P>
+<P class=MsoToc1><a href="#4.__________________Use_Cases_and_Scenar">4.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Use Cases 
+and Scenarios Implemented</a>&nbsp;</P>
+<P class=MsoToc1><a href="#5.__________________Results_Relative_to_">5.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Results 
+Relative to Evaluation Criteria</a></P>
+<P class=MsoToc1><a href="#6.__________________Test_Results">6.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Test 
+Results</a></P>
+<P class=MsoToc1><a href="#7.__________________External_Changes_Occ">7.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>External 
+Changes Occurred</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=MsoToc1><a href="#8.__________________Rework_Required">8.<SPAN 
+style="FONT-SIZE: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Rework 
+Required</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P><B><SPAN 
+style="FONT-FAMILY: Arial; FONT-SIZE: 18pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><BR 
+clear=all style="PAGE-BREAK-BEFORE: always"></SPAN></B>
+<P class=MsoTitle>Iteration Assessment</P>
+<H1><A name=1.__________________Introduction>1.</A><SPAN 
+style="mso-bookmark: '1\.__________________Introduction'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Introduction</SPAN></H1>
+<blockquote>
+<H2><A name=1.1_______________Purpose>1.1</A><SPAN 
+style="mso-bookmark: '1\.1_______________Purpose'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Purpose</SPAN></H2>
+<P><SPAN style="FONT-SIZE: 10pt">The objective of the Iteration Assessment is to 
+capture the result of the iteration, the degree to which the evaluation criteria 
+were met, and lessons learned and changes to be done.<o:p></o:p></SPAN></P>
+<H2><A name=1.2_______________Scope>1.2</A><SPAN 
+style="mso-bookmark: '1\.2_______________Scope'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Scope</SPAN></H2>
+<P><SPAN style="FONT-SIZE: 10pt">This Iteration Assessment applies to the C2 
+Iteration. The C2 Iteration developed the software baseline for the R1.0 Release 
+of the C-Registration System.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">The success of the C2 Iteration is measured 
+against the evaluation criteria as outlined in the C2 Iteration Plan 
+[7].<o:p></o:p></SPAN></P>
+<H2><A name=1.3_______________Definitions,_Acronyms_>1.3</A><SPAN 
+style="mso-bookmark: '1\.3_______________Definitions\,_Acronyms_'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Definitions, Acronyms and Abbreviations</SPAN></H2>
+<P><SPAN style="FONT-SIZE: 10pt">See the Glossary [3].<o:p></o:p></SPAN></P>
+<H2><A name=1.4_______________References>1.4</A><SPAN 
+style="mso-bookmark: '1\.4_______________References'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>References</SPAN></H2>
+<P style="MARGIN-LEFT: 0.5in; MARGIN-RIGHT: 0.5in"><SPAN 
+style="FONT-SIZE: 10pt">Applicable references are:<o:p></o:p></SPAN></P>
+<OL type=1>
+  <OL type=1>
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">Vision 
+    Document for the C-Registration System, WyIT387, V1.0, Wylie College IT. 
+
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">Stakeholder 
+    Requests Document for the C-Registration System, WyIT389, V1.0, 1998, Wylie 
+    College IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">Glossary 
+    for the C-Registration System, WyIT406, V1.0, 1998, Wylie College IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">C-Registration 
+    Construction Phase Schedule, V1.0, 1999, Wylie College IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">Project 
+    Plan for the C-Registration System, WyIT418, V2.0, 1999, Wylie College 
+    IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">Test 
+    Plan for the C-Registration System, WyIT501, V1.0, 1999, Wylie College 
+    IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">C2 
+    Iteration Plan for the C-Registration System, WyIT500, V1.0. 1999, Wylie 
+    College IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">C2 
+    Integration Build Plan, WyIT502, V1.0, 1999, Wylie College IT. 
+    <LI class=MsoNormal 
+    style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level2 lfo1; tab-stops: list 1.0in">C2 
+    Test Evaluation Report, WyIT503, V1.0, 1999, Wylie College IT.<SPAN 
+    style="FONT-SIZE: 12pt"><o:p></o:p></SPAN> </LI></OL></OL>
+<P class=infoblue>&nbsp;</P>
+<H2><A name=1.5_______________Overview>1.5</A><SPAN 
+style="mso-bookmark: '1\.5_______________Overview'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Overview</SPAN></H2>
+<P><SPAN style="FONT-SIZE: 10pt">This document evaluates the iteration, 
+summarizing the objectives which were met, how well the iteration ran according 
+to plan.&nbsp; It lists the use cases and scenarios 
+implemented.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">The results are evaluated according to the 
+criteria established for the iteration plan.&nbsp; Test results are 
+referenced.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">Finally, the document lists the external 
+changes that affected the iteration, such as changes in requirements, and 
+problem areas that require future rework.<o:p></o:p></SPAN></P>
+</blockquote>
+<H1><A name=2.__________________Iteration_Objectives>2.</A><SPAN 
+style="mso-bookmark: '2\.__________________Iteration_Objectives'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Iteration Objectives Reached</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">The C2 Iteration developed the software 
+baseline for R1.0. By most measures the iteration succeeded in meeting its 
+objectives. However, difficulties in solving the performance problems (as 
+outlined in the Test Evaluation Report [9] have resulted in a decision to add 
+one additional iteration to redesign the interface to the Course Catalog 
+System.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">Senior management and the Wylie College 
+representative did not approve the release of R1.0 and recommended an additional 
+iteration to redesign the interface with the Course Catalog 
+System.<o:p></o:p></SPAN></P>
+<H1><A name=3.__________________Adherence_to_Plan>3.</A><SPAN 
+style="mso-bookmark: '3\.__________________Adherence_to_Plan'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Adherence to Plan</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">The iteration executed according to plan 
+completing on schedule.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">The original budget of $116,600 for the C2 
+Iteration was overrun by $10,000 due to additional effort being deployed to 
+address the performance issues.<o:p></o:p></SPAN></P>
+<H1><A name=4.__________________Use_Cases_and_Scenar>4.</A><SPAN 
+style="mso-bookmark: '4\.__________________Use_Cases_and_Scenar'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Use Cases and Scenarios Implemented</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">No new use cases or scenarios were developed 
+for the C2 Iteration. Defects identified in the Beta Release were resolved. The 
+menu and screen layouts were redesigned following user feedback on the Beta 
+Release.<o:p></o:p></SPAN></P>
+<H1><A name=5.__________________Results_Relative_to_>5.</A><SPAN 
+style="mso-bookmark: '5\.__________________Results_Relative_to_'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Results Relative to Evaluation Criteria</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">The following table lists the iteration 
+evaluation criteria (as outlined in the C2 Iteration Plan [7]) and comments on 
+how well the criteria for success were met.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">Failure of the loading tests to meet the 
+performance requirements has resulted in the decision to add one more iteration 
+prior to R1.0 Release.<o:p></o:p></SPAN></P>
+<TABLE border=1 cellPadding=0 cellSpacing=1 
+style="WIDTH: 437.25pt; mso-cellspacing: .7pt; mso-padding-alt: 5.25pt 5.25pt 5.25pt 5.25pt" 
+width=100%>
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-FAMILY: Arial; FONT-SIZE: 10pt">Evaluation 
+      Criteria</SPAN></B></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P align=center style="TEXT-ALIGN: center"><B><SPAN 
+      style="FONT-FAMILY: Arial; FONT-SIZE: 10pt">Iteration 
+      Results</SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All critical, high, and 
+      medium priority defects discovered in the Beta Release (from C1 Iteration) 
+      must be resolved.<SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All defects (medium, high, 
+      or critical severity) identified in the Beta release were resolved, with 
+      the exception of the performance-related defects.<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All user feedback from the 
+      Beta Release must be evaluated. All feedback classified as "major" must be 
+      resolved. </P>
+      <P><SPAN style="FONT-SIZE: 10pt">All use cases and requirements targeted 
+      for Release 1 must be implemented and tested.</SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">User feedback from the Beta 
+      Release was evaluated. Feedback comments classified as "major" were 
+      resolved. </P>
+      <P><SPAN style="FONT-SIZE: 10pt">All use cases and requirements targeted 
+      for Release 1 were implemented.</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All timing, performance, 
+      and quality requirements, as specified in the Supplementary Specification, 
+      must be met.<SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">The loading and performance 
+      requirements that involved accessing the Course Catalog System were not 
+      satisfied in the R1 tests.<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">The Tests, as defined in 
+      the Test Plan [6], must be executed.<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All tests defined in the 
+      Test Plan [6] and Test Model were executed. The 10 test cases dependent 
+      upon the Load Simulator were executed independently following System Test 
+      and passed.<SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">All test results must be 
+      reviewed.<SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">The Test Manager reviewed 
+      all test results.<SPAN 
+style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 51%" 
+    vAlign=top width="51%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">The senior management team 
+      and the Wylie College representative must approve the release of the R1.0 
+      software baseline.<SPAN style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="PADDING-BOTTOM: 5.25pt; PADDING-LEFT: 5.25pt; PADDING-RIGHT: 5.25pt; PADDING-TOP: 5.25pt; WIDTH: 49%" 
+    vAlign=top width="49%">
+      <P class=MsoNormal style="LINE-HEIGHT: normal">Senior Management and the 
+      Wylie College representative did not approve the release of R1.0 software. 
+      One more iteration is being planned to redesign the Course Catalog System 
+      interface and resolve the performance problems.<SPAN 
+      style="FONT-SIZE: 12pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE>
+<P><SPAN style="FONT-SIZE: 10pt">&nbsp;<o:p></o:p></SPAN></P>
+<H1><A name=6.__________________Test_Results>6.</A><SPAN 
+style="mso-bookmark: '6\.__________________Test_Results'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Test Results</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">The Test Results are filed in the Configuration 
+Management Library. Refer to the C2 Test Evaluation Report [9] for a summary of 
+the test results and an evaluation of the test 
+measurements.<o:p></o:p></SPAN></P>
+<H1><A name=7.__________________External_Changes_Occ>7.</A><SPAN 
+style="mso-bookmark: '7\.__________________External_Changes_Occ'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>External Changes Occurred</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">The C2 Iteration responded to the user feedback 
+from the Beta Release. The menu and screen layouts were all redesigned due to an 
+overwhelming dissatisfaction with the user interface. The new design has been 
+previewed by a selected group of users and has met their approval. This 
+engineering change was deemed as "in scope" and no Change Orders were 
+necessary.<o:p></o:p></SPAN></P>
+<H1><A name=8.__________________Rework_Required>8.</A><SPAN 
+style="mso-bookmark: '8\.__________________Rework_Required'"><SPAN 
+style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Rework Required</SPAN></H1>
+<P><SPAN style="FONT-SIZE: 10pt">As summarized in Section 4, an additional 
+iteration has now been added to the schedule. This iteration will redesign the 
+interface components and thoroughly test the system response under various load 
+conditions.<o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt">Response times to retrieve or deposit records 
+from the Course Catalog System will be measured under the following types of 
+conditions:<o:p></o:p></SPAN></P>
+<UL type=disc>
+  <LI class=MsoNormal 
+  style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo2; tab-stops: list .5in">Normal 
+  load 
+  <LI class=MsoNormal 
+  style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo2; tab-stops: list .5in">Maximum 
+  student load 
+  <LI class=MsoNormal 
+  style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo2; tab-stops: list .5in">Course 
+  Catalog Database at 50% capacity 
+  <LI class=MsoNormal 
+  style="LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo2; tab-stops: list .5in">Course 
+  Catalog Database at 90% capacity.<SPAN 
+  style="FONT-SIZE: 12pt"><o:p></o:p></SPAN> </LI></UL>
+<P><SPAN style="FONT-FAMILY: Arial"><o:p></o:p></SPAN></P></DIV>&nbsp;</BODY></HTML>

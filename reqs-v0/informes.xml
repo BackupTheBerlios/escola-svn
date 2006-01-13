@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?>
+
+<ers nome="informes">
+
+<uc nome="Consultar informes">
+<resumo>
+Usuários e navegantes têm acesso a um variado conjunto de informes, 
+classificados conforme a taxonomia empregada pelo remetente. Não apenas os mais recentes, mas também aqueles já “expirados”, poderão ser consultados. O acesso a um dado informe depende da categoria para a qual  o informe foi direcionado. Este caso de uso descreve a forma de acesso aos informes disponíveis para uma dada categoria.
+</resumo>
+</uc>
+
+<uc nome="Editar informe">
+<resumo>
+Os usuários que possuem privilégios de categoria para criar informes precisarão, eventualmente,
+de atualizar o conteúdo de alguns e remover outros. 
+</resumo>
+</uc>
+
+<uc nome="Criar informe">
+<resumo>
+Um usuário cria informes através da interação descrita neste caso de uso. Por ser similar àquela de Alterar informe, apenas a interação deste último caso de uso será comentada. Convém ressaltar que a alteração de um informe difere da criação apenas nos aspectos abaixo:
+•	Ao alterar, todos os campos de informação exibidos contêm as informações do informe que se deseja alterar. Ao criar, os campos estão “limpos”.
+•	Ao confirmar uma alteração, o sistema irá realizar as atualizações necessárias para que os demais usuários possam imediatamente consultá-las. Ao criar, um novo informe será divulgado para a categoria de usuários pertinente.
+</resumo>
+</uc>
+
+<uc nome="Excluir informe">
+<resumo>
+Após selecionado um informe, o usuário poderá removê-lo,
+caso possua privilégio suficiente.
+</resumo>
+</uc>
+
+<uc nome="Limpar base de informes">
+<resumo>
+Informes "antigos" poderão ser desconsiderados de consultas posteriores. Após considerável período de execução do sistema, há uma tendência no crescimento de informes que não são mais relevantes e, em conseqüência, poderão ser “eliminados”. Observe que esta eliminação apenas os exclui de consultas dos uusários destino dos informes correspondentes. Para efetio histórico, contudo,
+todos eles deverão ser indefinidamente armazenados.
+</resumo>
+</uc>
+
+</ers>

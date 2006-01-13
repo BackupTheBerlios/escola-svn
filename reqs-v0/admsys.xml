@@ -1,0 +1,61 @@
+ï»¿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ers.xsl"?> 
+
+
+<ers nome="admsys">
+
+<uc nome="Iniciar sistema">
+<resumo>
+O SISPG Ã© um sistema cuja execuÃ§Ã£o exige a disponibilidade de vÃ¡rios serviÃ§os.
+Este caso de uso documenta as atividades, do ponto de vista do administrador do sistema,
+necessárias para a execução do SISPG. O processo descrito neste caso de uso se aplica a todos os cenários nos quais o sistema deverá entrar em operação.
+</resumo>
+</uc>
+
+<uc nome="Manutenir sistema"> 
+<resumo>
+O administrador do sistema deverá realizar, ocasionalmente, várias tarefas de manutenção. Por exemplo, configurar o tipo de serviço para o qual se deseja um registro (log); suspender a operação momentaneamente;
+retomar a execução normal do sistema; parar o sistema e outras.
+</resumo>
+</uc>
+
+<uc nome="Consultar requisições">
+<resumo>
+Excluir pessoa física, excluir pessoa jurídica e outras operações similares não são executadas imediatamente pelo sistema.
+Em geral elas estão envolvidas em muitas dependências com repercussões delicadas. Nestes casos, os usuários poderão requisitar a execução de tais tarefas que só poderão ser consumadas pelo administrador do sistema. Este caso de uso permite que o administrador tome conhecimento destes "desejos" e, conforme a possibilidade, executá-los.
+</resumo>
+</uc>
+
+<uc nome="Consultar log">
+<resumo>
+Informações de log poderão ser consultadas pelo administrador.
+Nestas consultas, classificar os logs dos mais recentes para os mais antigos e pelo usuário envolvido, entre muitas outras opções, por exemplo, poderão ser usufruídas através deste caso de uso.
+</resumo>
+</uc>
+
+<uc nome="Configurar log">
+<resumo>
+Tanto as operações para as quais se deseja um registro de informações, quanto o conjunto de informações pertinentes poderão ser configurados. 
+Trata-se de um serviço que permitirá a execução de auditagem do SISPG. 
+</resumo>
+</uc>
+
+<uc nome="Gerenciar operação do sistema">
+<resumo>
+A operação do sistema exige a colaboração entre vários componentes. Em muitos casos a interação entre eles é complexa. 
+Este caso de uso do negócio trata de tarefas associadas à permanência do sistema em funcionamento. Iniciar e interromper o sitema de gerência de banco de dados,
+efetuar backup e operação de recuperação de dados, por exemplo, estão entre as atividades de gerência. Estas atividades deverão ser executadas manualmente pelo administrador do sistema.
+Outras poderão ser apoiadas pelo próprio sistema e,neste caso, são consideradas no caso de uso Manutenir sistema.
+</resumo>
+</uc>
+
+<uc nome="Relatar auditoria de segurança">
+<resumo>
+O sistema executará várias atividades com o propósito de assegurar acesso apenas a pessoas autorizadas, entre outras.
+Toda e qualquer "operação estranha", conforme definição do plano de segurança, poderá ser detectada e informada ao administrador do sistema. 
+Estes relatos são formados por informações similares àquelas registradas nos logs do sistema. 
+</resumo>
+</uc>
+
+</ers>
+
