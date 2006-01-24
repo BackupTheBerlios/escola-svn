@@ -1,0 +1,1375 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="Requerimento_arquivos/filelist.xml">
+<title>Anexo A – Especificação dos Casos de Uso</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Eduardo Hack</o:Author>
+  <o:LastAuthor>Raquel</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2006-01-16T02:49:00Z</o:Created>
+  <o:LastSaved>2006-01-16T02:49:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2053</o:Words>
+  <o:Characters>11089</o:Characters>
+  <o:Company>Simp</o:Company>
+  <o:Lines>92</o:Lines>
+  <o:Paragraphs>26</o:Paragraphs>
+  <o:CharactersWithSpaces>13116</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"TimesNewRoman\,Bold";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Albany;
+	mso-font-alt:Arial;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"Arial\,Bold";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:137264849;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-314409118 68550657 68550659 68550661 68550657 68550659 68550661 68550657 68550659 68550661;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1226842269;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1181256852 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-bidi-font-size:
+17.0pt;font-family:Arial;mso-bidi-font-family:"TimesNewRoman\,Bold"'>Anexo A –</span><b><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'> </span></b><span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ENGENHARIA DE
+REQUISITOS DO REQUERIMENTO</span><span style='font-family:Albany'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:9.5pt;font-family:Arial;
+mso-bidi-font-family:"Arial\,Bold"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:9.5pt;font-family:Arial;
+mso-bidi-font-family:"Arial\,Bold"'>Preâmbulo</span><span style='mso-bidi-font-size:
+9.5pt;font-family:Arial;mso-bidi-font-family:"Arial\,Bold"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:9.5pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>O
+relacionamento de uma instituição acadêmica com o mundo exterior pode ser
+caracterizado, em boa parte, pelas formas de interação entre ambos. Um dos
+instrumentos de registro destas interações são os requerimentos. Neste
+documento estão descritos os casos de uso pertinentes aos serviços prestados
+pelo sistema para auxiliar a gerência de requerimentos.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:11.5pt;font-family:Arial;
+mso-bidi-font-family:"Arial\,Bold"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:11.5pt;font-family:Arial;
+mso-bidi-font-family:"Arial\,Bold"'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list 36.0pt;mso-layout-grid-align:none;text-autospace:none'><span
+     style='mso-bidi-font-size:11.5pt;font-family:Arial;mso-bidi-font-family:
+     "Arial\,Bold"'>Caso de Uso <span class=GramE>RQ.</span>1- </span><span
+     style='mso-bidi-font-size:11.5pt;font-family:Arial;mso-bidi-font-family:
+     "Arial\,Bold"'><span style='mso-spacerun:yes'> </span>Emitir formulário de
+     requerimento</span><span style='mso-bidi-font-size:11.5pt;font-family:
+     Arial;mso-bidi-font-family:"Arial\,Bold"'><o:p></o:p></span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='mso-bidi-font-size:11.5pt;font-family:
+Arial;mso-bidi-font-family:"Arial\,Bold"'>ID: <span class=GramE>RQ.</span>1</span><span
+style='mso-bidi-font-size:11.5pt;font-family:Arial;mso-bidi-font-family:"Arial\,Bold"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Todos os
+formulários de requerimentos poderão ser impressos, juntamente com o boleto
+bancário e a lista de documentação necessária.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>1.1. Fluxo
+Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+deseja imprimir formulário de requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+executa o caso de uso Obter formulário de requerimento.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Usuário
+requer a impressão do formulário;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Sistema
+envia o formulário para o ator Impressão.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Usuário
+requer a impressão do boleto bancário correspondente;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Sistema
+envia o boleto para o ator Impressão e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>1.2. Fluxo Alternativo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• O usuário
+requer várias vezes <span class=GramE>a</span> impressão da informação
+comentada no item acima;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>3</span>, o usuário não requer a impressão do formulário e o fluxo
+continua no item 6.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>5</span>, o usuário não requer a impressão do boleto.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Nos itens <span
+class=GramE>3</span> e 5, o usuário requer várias vezes a impressão das
+informações pertinentes;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Nos itens <span
+class=GramE>4</span> e 6, não é possível requisição de impressão ao ator
+Impressão. O caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='mso-bidi-font-size:11.5pt;font-family:Arial;
+mso-bidi-font-family:"Arial\,Bold"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>2. Caso de
+Uso <span class=GramE>RQ.</span>2 - Obter formulário de requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Este caso de
+uso permite a seleção de um tipo de formulário de interesse, dentre todos os
+possíveis.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>2.1. Fluxo
+Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-O sistema
+lista os tipos de requerimentos disponíveis sendo um deles<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:11.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:
+EN-US'>automaticamente</span></span><span style='font-size:11.0pt;font-family:
+Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>
+selecionado. Para o tipo selecionado são fornecidas informações adicionais: <span
+class=GramE>taxa</span>, sugestões de preenchimento, normas e outras.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Usuário
+vasculha (<span class=SpellE>browse</span>) pelos tipos disponíveis. Para cada
+tipo que é selecionado o sistema exibe as informações correspondentes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Usuário
+confirma o tipo selecionado e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>2.2. Fluxo Alternativo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Nos itens <span
+class=GramE>1</span> e 3, o usuário requer a impressão das informações gerais
+sobre o requerimento, ou seja, as normas, a taxa e outras eventualmente
+disponíveis. O ator Impressão recebe o conteúdo a ser impresso;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>3. Caso de
+Uso <span class=GramE>RQ.</span>3 - Preencher requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Todo
+requerimento está associado a informações, que deverão ser fornecidas pelo
+interessado ou procurador do interessado. Um procurador, contudo, não tem
+acesso ao sistema.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>3.1. Fluxo
+Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+requer preenchimento de requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+executa o caso de uso Obter formulário de requerimento, para que o usuário
+selecione o requerimento desejado.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Sistema
+consulta o ator SAA para verificar se o aluno pertinente ao requerimento que
+está sendo preenchido pode efetuar o requerimento em questão;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Sistema
+exibe campos para preenchimento das informações pertinentes ao requerimento e
+aluno identificados;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Usuário
+preenche informações do requerimento e confirma informações fornecidas;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>0.6-Sistema
+confirma o recebimento do requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>3.2. Fluxo Alternativo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Em
+qualquer momento da execução do caso de uso, o usuário poderá interromper o
+processo através da seleção da opção “cancelar”.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>2</span>, caso o usuário seja membro do DAA, então todos os tipos
+de requerimento estarão disponíveis.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>2</span>, caso o usuário seja membro do DAA, então o sistema irá <span
+class=SpellE>execut</span><span style='mso-tab-count:1'>     </span>ar o caso
+de uso Selecionar aluno.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>3</span>, não é possível a conexão com o SAA. O sistema informa ao
+usuário e requer que uma autorização pessoal desse seja realizada. Se a
+confirmação não for efetuada, então o caso de uso se encerra.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>5</span>, o sistema exibe mensagem contendo campos obrigatórios que
+não foram preenchidos e aqueles contendo informações inconsistentes e sugere
+que sejam fornecidas e alteradas, respectivamente.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>5</span>, o usuário pode requerer uma impressão do requerimento em
+edição. Neste caso, o sistema envia ao ator Impressão o formulário
+correspondente, com as informações fornecidas até então.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>4. Caso de
+Uso <span class=GramE>RQ.</span>4 - Consultar requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>O aluno
+poderá consultar todos os requerimentos nos quais é a pessoa interessada e,
+como resultado da consulta, informações pertinentes como o resultado do
+requerimento (se foi deferido ou não), por exemplo. O DAA poderá consultar
+todos os requerimentos.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>4.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Sistema
+apresenta todos os requerimentos pertinentes;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Usuário
+informa critério<span class=GramE>(s)</span> de seleção;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Sistema
+exibe requerimentos que atendem o<span class=GramE>(s)</span> critério(s)
+especificado(s);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Usuário
+percorre requerimentos selecionados e escolhe um deles;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Sistema
+exibe as informações do requerimento escolhido;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Usuário
+requer a impressão do requerimento escolhido;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>07-Sistema
+envia o requerimento para o ator Impressão;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>4.2. Fluxos
+alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>1</span>, caso o usuário seja um aluno, então estarão disponíveis
+apenas os seus próprios requerimentos. Ao contrário, para o usuário DAA, todos
+os requerimentos estarão acessíveis.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>3</span>, nenhum requerimento atende os critérios fornecidos. O
+sistema informa e sugere que novos critérios sejam fornecidos para todo o
+conjunto de requerimentos, que é novamente apresentado.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>6</span>, o usuário não requer a impressão e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>6</span>, o usuário requer a impressão do boleto bancário ou das
+informações correspondentes ao requerimento. O sistema envia o item de
+interesse para o ator Impressão.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>6</span>, o usuário requer a impressão do comprovante do
+requerimento caso o mesmo já tenha sido devidamente registrado. O sistema envia
+o comprovante para o ator Impressão.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>5. Caso de
+Uso <span class=GramE>RQ.</span>5 - Registrar requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>5<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Todo
+requerimento, <span class=GramE>após</span> preenchido, deve ser registrado. O
+registro de um requerimento é o ato formal para que este possa ser tratado.
+Envolve a identificação de pagamento de taxa correspondente, se for o caso,
+assim como o fornecimento de documentos necessários e eventualmente outras
+exigências. Um requerimento registrado atende todas as exigências para que
+possa ser analisado. Não há operação inversa ao registro de um requerimento.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>5.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+requer registro de requerimento selecionado;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+consulta os atores SAA e Calendário acadêmico para verificar a existência de
+impedimento para o requerimento em questão. O sistema informa que inexiste impedimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Sistema
+exibe itens obrigatórios a serem cumpridos para que o requerimento possa ser
+registrado e exige que o usuário confirme um por um;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Usuário
+responde afirmativamente para cada um dos itens fornecidos pelo sistema;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Usuário
+informa que o requerimento não exige processo;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Sistema
+solicita confirmação de registro e se é desejada a impressão de comprovante;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>07-Usuário
+confirma o registro e solicita a impressão de comprovante;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>08-Sistema
+registra requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>09-Sistema
+envia para o ator Impressão o comprovante correspondente e o caso de uso
+termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>5.2. Fluxos
+alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>2</span> e 5, não é possível a conexão ou obtenção dos serviços
+oferecidos por algum dos atores, SAA e Calendário acadêmico. O sistema informa
+da impossibilidade e sugere que tente novamente.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>5</span>, caso seja necessário tratar o requerimento como processo,
+inicia-se o caso de uso Autuar processo.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>4</span>, se não for comprovada a existência de algum item
+obrigatório, o caso de uso termina;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>8</span>, o sistema não consegue realizar o registro e informa o
+fato ao usuário e sugere que tente novamente, permanecendo na situação
+anterior.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>O sistema
+exibe mensagem informando a impossibilidade de registrar o requerimento.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>6. Caso de
+Uso <span class=GramE>RQ.</span>6 – Autuar processo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>6<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>No momento
+da solicitação de um requerimento, este pode dar origem a um novo processo caso
+já não exista um de mesmo assunto do aluno interessado. Em<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span class=GramE><span style='font-size:11.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:
+EN-US'>conseqüência</span></span><span style='font-size:11.0pt;font-family:
+Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>,
+deve-se consultar o SCP com o propósito de verificar a existência de tal processo
+cujo assunto é o mesmo do requerimento solicitado.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>6.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Sistema
+solicita ao ator SCP a localização de processo envolvendo o assunto e determinado
+interessado fornecidos.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Ator SCP
+não localiza um processo supostamente existente;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Sistema
+requer a autuação de um novo processo conforme as informações fornecidas;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Ator SCP
+autua o processo requisitado e informa o número correspondente;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Caso de
+uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>6.2. Fluxos
+alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>2</span> é localizado um processo correspondente e, neste caso, o
+SCP informa o número do processo correspondente e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Nos itens <span
+class=GramE>1</span>, 2 e 4 não é possível comunicação com o SCP. O sistema
+informa a dificuldade momentânea e sugere que a operação seja repetida.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• O ator
+requer cancelamento da operação e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>7. Caso de
+Uso <span class=GramE>RQ.</span>7 – Registrar parecer<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>7<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Todo o
+requerimento em andamento gera um parecer para o requerente. Este parecer será
+registrado neste caso de uso, efetivando a comunicação via e-mail entre o DAA e
+o requerente. O parecer poderá apresentar os seguintes resultados, indeferido
+ou deferido.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>7.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+seleciona opção para registrar parecer;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+abre janela de seleção de aluno (Selecionar Aluno);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Usuário
+seleciona um aluno;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Sistema
+executa o caso de uso Consultar requerimento exibindo apenas os requerimentos
+do aluno selecionado;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Sistema
+exibe tela para registro do parecer do requerimento selecionado;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Usuário
+seleciona opção para registrar o <span class=GramE>parecer ;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>07-Usuário
+envia parecer ao interessado através do ator E-mail;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>08-Sistema
+armazena o parecer e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>7.2 – Fluxo
+Alternativo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify;mso-list:l0 level1 lfo2;
+     tab-stops:list 36.0pt;mso-layout-grid-align:none;text-autospace:none'><span
+     style='font-size:11.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+     mso-fareast-language:EN-US'>Não possui Fluxo Alternativo.<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>8. Caso de
+Uso <span class=GramE>RQ.</span>8 – Selecionar aluno<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>8<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:11.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:
+EN-US'>Parte significativa dos serviços oferecidos pelo sistema envolvem</span></span><span
+style='font-size:11.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+mso-fareast-language:EN-US'> a seleção de um aluno em particular, o que é
+realizado através deste caso de uso.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>8.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Várias
+operações no sistema exigem a identificação de um aluno específico. Este caso
+de uso é iniciado pelo usuário quando tal identificação é necessária;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+abre janela com vários atributos (nome, matrícula, disciplina, curso e outros)
+que podem ser empregados na localização de determinado aluno;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Usuário
+informa o critério de seleção;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Sistema
+exibe alunos que atendem o<span class=GramE>(s)</span> critério(s) de seleção;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Usuário
+seleciona o aluno e confirma a seleção<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Caso de
+uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>8.2. Fluxos Alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>4</span>, nenhum aluno atende a restrição de seleção. O sistema
+exibe mensagem e retorna à situação anterior.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>9. Caso de
+Uso <span class=GramE>RQ.</span>9 - Excluir requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>9<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>O registro
+de um requerimento pode permanecer pendente, dependendo de autorização do
+orientador, pagamento de taxa <span class=SpellE>e/ou</span> outra exigência,
+por exemplo, por considerável período de tempo. Nestes casos, o DAA onde o
+requerimento foi protocolado pode optar pela remoção do mesmo. O aluno também
+poderá excluir o seu próprio requerimento desde que este não tenha sido registrado.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>9.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+seleciona opção para excluir requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+solicita ao usuário a condição para a exclusão de “pré-requerimento<span
+class=GramE>(s)</span>”;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Usuário
+informa a condição;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Sistema
+inicia o caso de uso Consultar Requerimento com apenas <span class=GramE>aqueles</span>
+passíveis de serem excluídos pelo usuário (o aluno somente os dele e o DAA
+todos) e que atendem a condição determinada anteriormente;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>05-Usuário
+seleciona, se necessário, o<span class=GramE>(s)</span> requerimento(s) que não
+será(<span class=SpellE>ão</span>) excluído(s) mesmo que atenda(m) a condição
+pré-determinada;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>06-Sistema
+retira da lista de exclusão o<span class=GramE>(s)</span> requerimento(s)
+selecionado(s);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>07-Usuário
+seleciona a opção para excluir requerimento;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>08-Sistema
+exibe mensagem de confirmação para o usuário <span class=GramE>( “</span>Confirma
+exclusão?”);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>09--Usuário
+confirma a exclusão;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>10-Sistema
+efetua a exclusão do requerimento e requisita ao ator E-mail, o envio de uma
+mensagem de exclusão ao interessado;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>11-Caso de
+uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>9.2. Fluxos
+Alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>9</span>, o usuário cancela a exclusão e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>10. Caso de
+Uso <span class=GramE>RQ.</span>10 - Autorizar requerimento<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>ID: <span
+class=GramE>RQ.</span>10<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Alguns
+requerimentos necessitarão de uma autorização da Coordenadoria de curso ou do Orientador,
+<span class=GramE>por exemplo</span> aqueles que se referem aos cursos de
+pós-graduação <span class=SpellE>strictsensu</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>Fluxo de
+Eventos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>10.1. Fluxo Básico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>01-Usuário
+seleciona a opção para autorizar requerimento.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>02-Sistema
+inicia o caso de uso Consultar Requerimento com apenas àqueles passíveis de
+serem autorizados pelo usuário.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>03-Sistema
+exibe uma mensagem pedindo a confirmação da autorização.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>04-Usuário
+confirma a autorização, o sistema efetua a autorização, informa ao usuário e o
+caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>10.2. Fluxos
+Alternativos<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>1</span>, não existe requerimento a ser autorizado. O sistema exibe
+mensagem informando o fato e o caso de uso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• No item <span
+class=GramE>4</span>, o usuário cancela o processo de autorização do
+requerimento no momento da confirmação. O sistema exibe a mensagem “Autorização
+Cancelada” e o caso termina.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'>• Em
+qualquer momento durante a execução do caso de uso, <span class=GramE>o usuário
+requisita</span> a interrupção do caso de uso e o sistema o finaliza.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-fareast-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

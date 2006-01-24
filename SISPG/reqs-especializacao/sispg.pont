@@ -1,0 +1,3890 @@
+; Sat Dec 31 18:17:54 BRST 2005
+; 
+;+ (version "3.0")
+;+ (build "Build 141")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot nome
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEmenta
+;+		(comment "Descricao do conteúdo de uma disciplina")
+		(type INSTANCE)
+;+		(allowed-classes Ementa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot c%C3%B3digo
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot conte%C3%BAdo+program%C3%A1tico
+;+		(comment "Descrição do conteúdo que será ministrado na disciplina")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot data+in%C3%ADcio%2Ft%C3%A9rmino
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot AdmDisciplina_Slot_5
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot DiscPossuiPrograma
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+		(create-accessor read-write))
+	(single-slot DataIn%C3%ADcio
+;+		(comment "Data em que se iniciará a aplicação do conteúdo programado p ser ministrado em uma determinada disciplina.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataT%C3%A9rmino
+;+		(comment "Data em que se terminará a aplicação do conteúdo programado p ser ministrado em uma determinada disciplina.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nome
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot matr%C3%ADcula_Professor
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hor%C3%A1rio
+;+		(comment "Horário que será iniciada a aula de uma turma")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot local
+;+		(comment "Local em que será ministrada a aula de uma determinada turma")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot AdmDisciplina_Slot_12
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nome_Professor
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nome_Aluno
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot matr%C3%ADcula_Aluno
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dia
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot conte%C3%BAdo
+;+		(comment "Conteúdo que será ministrado em uma aula.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataAvalia%C3%A7%C3%A3o
+;+		(comment "Data em que será aplicada uma avaliação.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot tipo
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot AdmDisciplina_Slot_20
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataLimite
+;+		(comment "Data máxima em que o aluno pode se matricular nesta disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Hor%C3%A1rioDisciplina
+;+		(comment "Horário em que a Disciplina será ministrada.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot programasDeDisciplinas
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+		(create-accessor read-write))
+	(multislot direcionado
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(create-accessor read-write))
+	(multislot respons%C3%A1vel
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+		(create-accessor read-write))
+	(multislot ministra_Aula
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProgramaDisciplina
+;+		(comment "Relacionamento com a classe Programa Disciplina")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoAula
+;+		(comment "Relacionamento com a classe Aula")
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(single-slot vinculado_Ao_Programa
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %C3%A9_Avaliado
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoQuest%C3%B5es
+;+		(comment "Relacionamento com a classe Questões para identificar as questões de uma determinada Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Quest%C3%B5es)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoPrograma
+;+		(comment "Relacionamento com a classe Programa de Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNotas
+		(type INSTANCE)
+;+		(allowed-classes Nota)
+		(create-accessor read-write))
+	(single-slot NomeDisciplina
+;+		(comment "Atributo que define o nome da Disciplina")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot c%C3%B3digo_Disciplina
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataCancelamento
+;+		(comment "A partir do momento em que um Aluno se matriculou em um disciplina, ele tem até está data caso queira cancelar esta disciplina. O cancelamento de disciplinas não constará no histórico do Aluno.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot vinculado_Programa
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultadoAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoNotaAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAvalia%C3%A7%C3%A3o
+;+		(comment "Relacionamento com a classe Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot aluno_Presen%C3%A7a
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPresencaAula
+;+		(comment "Relacionamento com a classe Aula.")
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9MatriculaAluno
+;+		(comment "Relacionamento com uma determinada instância da classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9Oferta
+;+		(comment "Relacionamento com a classe Pré-Oferta")
+		(type INSTANCE)
+;+		(allowed-classes Pr%C3%A9-Oferta)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot QtdeAlunos
+;+		(comment "Quantidade de Alunos que estão lotados em uma turma")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot observa%C3%A7%C3%B5es
+;+		(comment "Observações relevantes referentes a uma determinada Aula")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LocalAplica%C3%A7%C3%A3o
+;+		(comment "Local em que será aplicada uma determinada Avaliação.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Hor%C3%A1rioAplica%C3%A7%C3%A3o
+;+		(comment "Horário em que será aplicada uma determinada Avaliação.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot quest%C3%A3o
+;+		(comment "Descrição da questão.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ConceitoObtido
+;+		(comment "Conceito que o Aluno obteve.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NotaObtida
+;+		(comment "Nota que o Aluno obteve em uma determinada Avaliação.")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LocalDisciplina
+;+		(comment "Local em que a Disciplina será ministrada.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot DisciplinasDesejadas
+;+		(comment "Disciplinas que o Aluno deseja se matricular.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(create-accessor read-write))
+	(single-slot presen%C3%A7a
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot AdmDisciplina_Slot_10021
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot cpf
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NumeroMatricula
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_1
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenadoria
+		(type INSTANCE)
+;+		(allowed-classes Coordenadoria)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descri%C3%A7%C3%A3o
+;+		(comment "Um texto que descreve um determinado programa de pós graduação, strictu sensu.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDisciplinasOferecidas
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot admin_corpoDiscente
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot data
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CodigoIdentificacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot codigoMatricula
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot valorPagamento
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nomeOrgao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot identificacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nota
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot totalHoras
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_16
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot notaAluno
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataProva
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot cidade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot extratos
+		(type INSTANCE)
+;+		(allowed-classes ExtratoAcademico)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot nomeIES
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoOrgao
+;+		(comment "Relacionmento com a classe Orgao")
+		(type INSTANCE)
+;+		(allowed-classes Orgao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNovoTopico
+		(type INSTANCE)
+;+		(allowed-classes NovoTopico)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricao
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoSecretaria
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NomeSecretaria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot objetivo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoOrgao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoLinhadePesquisa
+		(type INSTANCE)
+;+		(allowed-classes LinhaDePesquisa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot IdentificacaoArea
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10003
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoLinha
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10005
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10006
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoCoordenadoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoTopico
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoInterface
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUnidadeAcademica
+		(type INSTANCE)
+;+		(allowed-classes UnidadeAcademica)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoInstituicao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write))
+	(single-slot LigacaoPeriodo
+		(type INSTANCE)
+;+		(allowed-classes Periodo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoAtividade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCurso
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoCurso
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoFuncionario
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10020
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10021
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10022
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10023
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Ligac%C3%A3oCurso
+		(type INSTANCE)
+;+		(allowed-classes Curso)
+		(create-accessor read-write))
+	(single-slot IdentificacaoLimite
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoData
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoHora
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LimiteInferior
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LimiteSuperior
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTempoInicio
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTempoFim
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoItem
+		(type INSTANCE)
+;+		(allowed-classes)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Regime
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot hora
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_20010
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoPessoa
+		(type INSTANCE)
+;+		(allowed-classes Pessoa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_20012
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataCriacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoLocal
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoLocal
+		(type INSTANCE)
+;+		(allowed-classes Local)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot path
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoCategoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoHash
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRegistroData
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot E%2FS
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoStatusPessoa
+		(type INSTANCE)
+;+		(allowed-classes StatusPessoa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoPessoa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CPF
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CNPJ
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoContato
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_20026
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot numero
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot rua
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot email
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoCargo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoPessoaFisica
+		(type INSTANCE)
+;+		(allowed-classes PessoaFisica)
+		(create-accessor read-write))
+	(multislot LigacaoUsuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write))
+	(multislot LigacaoAtividade
+		(type INSTANCE)
+;+		(allowed-classes Atividade)
+		(create-accessor read-write))
+	(multislot LigacaoCategoria
+		(type INSTANCE)
+;+		(allowed-classes CategoriaUsu%C3%A1rio)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_20036
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPessoaStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusPessoa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot status
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataCriacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataValidade
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot enderecoAnexo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricaoDoc
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot destino
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot cargahoraria
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot orientador
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricaoAtividade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DataAvaliacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DataFim
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot livro
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoMembroDaCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes MembroDaCoordenacao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot docente
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot descricaoDisciplina
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot disciplina
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot codigoUnidade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot coordenacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nomeLivro
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot autor
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot nomeParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot titulacao
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot IdentificacaoPesquisador
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot conceito
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataDefesa
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot documento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot responsavel
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataEntrega
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot TituloDefesa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot motivo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot novaData
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot tipoTrabalho
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot resumoTrabalho
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoGrupo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot grupoParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot campoParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataInicio
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataFim
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dataInicioOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataFimOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataEmissao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataVencimento
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot valor
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot numeroInscricao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataInscricao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nomeCandidato
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot cpfCandidato
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataExame
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot metodo
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot numeroFase
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot identificacaoErrata
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot informacoes
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoRequerimento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTipoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes TipoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUsuarioRequerente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDataRequisicao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoRecibo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataAutorizacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot motivoAutorizacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot requerente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot tipoRequerimento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot itemInformacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUsuarioDeferente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataResultado
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot statusTaxa
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoTaxas
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusTaxa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDataInicio
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDataFim
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30018
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30019
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30020
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Dia
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Mes
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Ano
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPresencaAluno
+;+		(comment "Relacionamento com a classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricaoUnidade
+;+		(comment "Responsável por armazenar o nome de uma determinada Unidade Acadêmica.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot datas
+;+		(comment "Armazena as datas de um calendário")
+		(type INSTANCE)
+;+		(allowed-classes Data)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoInterfaceCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_20004
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoInterfacCalendario
+		(type INSTANCE)
+;+		(allowed-classes Interface_Calendario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoItem
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtributo
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot codigo
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Booleano
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot valorAtributo
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoLimiteSuperior
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoLimiteInferior
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricaoAtributo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAnexo
+;+		(comment "Ligacao com a classe Anexo.")
+		(type INSTANCE)
+;+		(allowed-classes Anexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResolu%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes Resolucao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoSistemaCNPQ
+		(type INSTANCE)
+;+		(allowed-classes SistemaCNPQ)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoSubProjetos
+		(type INSTANCE)
+;+		(allowed-classes SubProjetos)
+		(create-accessor read-write))
+	(single-slot LigacaoSubProjetoAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoStatusAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoConvidado
+		(type INSTANCE)
+;+		(allowed-classes Convidado)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipacao
+		(type INSTANCE)
+;+		(allowed-classes Participacao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoGrupo
+		(type INSTANCE)
+;+		(allowed-classes Grupo)
+		(create-accessor read-write))
+	(multislot LigacaoOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Orientacao)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes Defesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoPrevisaoDefesa
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot LigacaoAlteracaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes AlteracaoDePrevisaoDeDefesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoInteressados
+		(type INSTANCE)
+;+		(allowed-classes Interessados)
+		(create-accessor read-write))
+	(single-slot LigacaoTaxa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30007
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricaoProgramaPosGrad
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30010
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes Coordena%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write))
+	(multislot LigacaoFase
+		(type INSTANCE)
+;+		(allowed-classes Fase)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoVaga
+		(type INSTANCE)
+;+		(allowed-classes Vaga)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoEdital
+		(type INSTANCE)
+;+		(allowed-classes Edital)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoErrata
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot LigacaoCPG
+		(type INSTANCE)
+;+		(allowed-classes CPG)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultado
+		(type INSTANCE)
+;+		(allowed-classes Resultado)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExame
+		(type INSTANCE)
+;+		(allowed-classes Exame)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoBoletoBancario
+		(type INSTANCE)
+;+		(allowed-classes BoletoBancario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoComprovante
+		(type INSTANCE)
+;+		(allowed-classes Comprovante)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_40010
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_40011
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(multislot LigacaoPresenca
+		(type INSTANCE)
+;+		(allowed-classes Presen%C3%A7a)
+		(create-accessor read-write))
+	(single-slot LigacaoAvaliacaoCAPES
+		(type INSTANCE)
+;+		(allowed-classes AvaliacaoCapes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoBibliografia
+		(type INSTANCE)
+;+		(allowed-classes Bibliografia)
+		(create-accessor read-write))
+	(multislot LigacaoAtividadeExtra
+		(type INSTANCE)
+;+		(allowed-classes AtividadeExtra)
+		(create-accessor read-write))
+	(single-slot LigacaoIDDocumento
+		(type INSTANCE)
+;+		(allowed-classes IDDocumento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoFuncionario
+		(type INSTANCE)
+;+		(allowed-classes Funcion%C3%A1rio)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCategoriaDocumento
+		(type INSTANCE)
+;+		(allowed-classes CategoriaDocumento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoHash
+		(type INSTANCE)
+;+		(allowed-classes Hash)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoImpressao
+		(type INSTANCE)
+;+		(allowed-classes Impressao)
+		(create-accessor read-write))
+	(single-slot LigacaoRegraArmazenamento
+		(type INSTANCE)
+;+		(allowed-classes RegradeArmazenamento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_40025
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoItemInformacao
+		(type INSTANCE)
+;+		(allowed-classes ItemDeInformacao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoTipoDeRequerimento
+		(type INSTANCE)
+;+		(allowed-classes TipoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRecibo
+		(type INSTANCE)
+;+		(allowed-classes Recibo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultadoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes ResultadoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoBoleto
+		(type INSTANCE)
+;+		(allowed-classes BoletoBancario)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoMatriculaCandidato
+		(type INSTANCE)
+;+		(allowed-classes MatriculaDeCandidato)
+		(create-accessor read-write))
+	(multislot LigacaoAtividadeUsuario
+		(type INSTANCE)
+;+		(allowed-classes AtividadeUsuario)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoCategoriaUsuario
+		(type INSTANCE)
+;+		(allowed-classes CategoriaUsu%C3%A1rio)
+		(create-accessor read-write))
+	(multislot LigacaoDestinatario
+		(type INSTANCE)
+;+		(allowed-classes Destinatario)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_40036
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocAnexo
+		(type INSTANCE)
+;+		(allowed-classes DocAnexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaPosGraduacao
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write))
+	(single-slot LigacaoInstituicao
+		(type INSTANCE)
+;+		(allowed-classes Instituicao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoOrientador
+		(type INSTANCE)
+;+		(allowed-classes Orientador)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_40041
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProjetodePesquisa
+		(type INSTANCE)
+;+		(allowed-classes ProjetodePesquisa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_10001
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipante
+		(type INSTANCE)
+;+		(allowed-classes Participante)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes DescricaoTrabalho)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAta
+		(type INSTANCE)
+;+		(allowed-classes Ata)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_30005
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocenteCoordenadoria
+		(type INSTANCE)
+;+		(allowed-classes Coordenadoria)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEstruturaCurricular
+		(type INSTANCE)
+;+		(allowed-classes EstruturaCurricular)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTurma
+		(type INSTANCE)
+;+		(allowed-classes Turma)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPesquisador
+		(type INSTANCE)
+;+		(allowed-classes Pesquisador)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCorpoDocente
+		(type INSTANCE)
+;+		(allowed-classes CorpoDocente)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRegistro
+		(type INSTANCE)
+;+		(allowed-classes Registro)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocumento
+		(type INSTANCE)
+;+		(allowed-classes Documento)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocumentoDigital
+		(type INSTANCE)
+;+		(allowed-classes DocumentoDigital)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoInforme
+		(type INSTANCE)
+;+		(allowed-classes Informe)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExameDeQualifica%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ExameDeQualifica%C3%A7%C3%A3o)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExtratoAcademico
+		(type INSTANCE)
+;+		(allowed-classes ExtratoAcademico)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sispg_Slot_50010
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDesempenho
+		(type INSTANCE)
+;+		(allowed-classes Desempenho)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoMatriculaDeAluno
+		(type INSTANCE)
+;+		(allowed-classes MatriculaDeAluno)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEstagioDocencia
+		(type INSTANCE)
+;+		(allowed-classes EstagioDocencia)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass StatusAluno "Status no Aluno na Instituição."
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot LigacaoStatusAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Destinatario "Usuario que irá receber um Informe"
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot LigacaoInforme
+		(type INSTANCE)
+;+		(allowed-classes Informe)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Disciplina "Cada Programa de Pós-Graduação é composto por várias disciplinas. Estas disciplinas não consistem propriamente nas disciplinas oferecidas periodicamente. Considerando a programação orientada a objetos, pode-se dizer que Disciplina seria uma classe, e ProgramaDeDisciplina seriam as instâncias de Disciplina. Por isso o atributo ementa deve estar em disciplina, por ser o mesmo para as várias disciplinas oferecidas ao longo do tempo."
+	(is-a USER)
+	(role abstract)
+	(single-slot LigacaoEmenta
+;+		(comment "Descricao do conteúdo de uma disciplina")
+		(type INSTANCE)
+;+		(allowed-classes Ementa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NomeDisciplina
+;+		(comment "Atributo que define o nome da Disciplina")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoBibliografia
+		(type INSTANCE)
+;+		(allowed-classes Bibliografia)
+		(create-accessor read-write))
+	(single-slot LigacaoEstruturaCurricular
+		(type INSTANCE)
+;+		(allowed-classes EstruturaCurricular)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProgramaDisciplina
+;+		(comment "Relacionamento com a classe Programa Disciplina")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9Oferta
+;+		(comment "Relacionamento com a classe Pré-Oferta")
+		(type INSTANCE)
+;+		(allowed-classes Pr%C3%A9-Oferta)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass DisciplinaDeDourado "Associação formal da disciplina ao curso de doutorado, ainda que possa ser cursada por alunos de mestrado acadêmico ou mestrado profissionalizante para obtenção dos créditos exigidos por seu curso."
+	(is-a Disciplina)
+	(role concrete))
+
+(defclass DisciplinaDeMestrado "Associação formal da disciplina ao curso de mestrado profissionalizante, ainda que possa ser cursada por alunos de mestrado acadêmico ou doutorado para obtenção dos créditos exigidos por seu curso."
+	(is-a Disciplina)
+	(role concrete))
+
+(defclass ProgramaDeDisciplina "A cada período, de acordo com demanda e fatores administrativos, algumas disciplinas são ofertadas. Elas se baseiam em Disciplina, sendo que cada disciplina ofertata em um momento consiste em um novo ProgramaDeDisciplina. \nAtributos de um ProgramaDeDisciplina seriam as datas de início e término da disciplina ofertada. além da data máxima em que um aluno matriculado na disciplina pode efetuar o cancelamento da disciplina."
+	(is-a USER)
+	(role concrete)
+	(single-slot conte%C3%BAdo+program%C3%A1tico
+;+		(comment "Descrição do conteúdo que será ministrado na disciplina")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DataIn%C3%ADcio
+;+		(comment "Data em que se iniciará a aplicação do conteúdo programado p ser ministrado em uma determinada disciplina.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DataT%C3%A9rmino
+;+		(comment "Data em que se terminará a aplicação do conteúdo programado p ser ministrado em uma determinada disciplina.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DataCancelamento
+;+		(comment "A partir do momento em que um Aluno se matriculou em um disciplina, ele tem até está data caso queira cancelar esta disciplina. O cancelamento de disciplinas não constará no histórico do Aluno.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoOrgao
+;+		(comment "Relacionmento com a classe Orgao")
+		(type INSTANCE)
+;+		(allowed-classes Orgao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAvalia%C3%A7%C3%A3o
+;+		(comment "Relacionamento com a classe Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoTurma
+		(type INSTANCE)
+;+		(allowed-classes Turma)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Turma "Caracterização adicional de uma disciplina que é repetidamente ministrada no Ano-Base, em períodos distintos ou, simultaneamente, num mesmo período letivo."
+	(is-a USER)
+	(role concrete)
+	(single-slot hor%C3%A1rio
+;+		(comment "Horário que será iniciada a aula de uma turma")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot local
+;+		(comment "Local em que será ministrada a aula de uma determinada turma")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProgramaDisciplina
+;+		(comment "Relacionamento com a classe Programa Disciplina")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoAula
+;+		(comment "Relacionamento com a classe Aula")
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(single-slot QtdeAlunos
+;+		(comment "Quantidade de Alunos que estão lotados em uma turma")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Aula "Uma Aula possui um Professor que a ministra, bem como está vinculada a uma Turma e as Presenças dos Alunos."
+	(is-a USER)
+	(role concrete)
+	(single-slot conte%C3%BAdo
+;+		(comment "Conteúdo que será ministrado em uma aula.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot observa%C3%A7%C3%B5es
+;+		(comment "Observações relevantes referentes a uma determinada Aula")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoPresenca
+		(type INSTANCE)
+;+		(allowed-classes Presen%C3%A7a)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Avalia%C3%A7%C3%A3o "Uma avaliação é constituída por questões e está vinculada a um Programa de Disciplina. O resultado da avaliação é tratado por uma Nota que está vinculada a um Aluno."
+	(is-a USER)
+	(role concrete)
+	(single-slot DataAvalia%C3%A7%C3%A3o
+;+		(comment "Data em que será aplicada uma avaliação.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoQuest%C3%B5es
+;+		(comment "Relacionamento com a classe Questões para identificar as questões de uma determinada Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Quest%C3%B5es)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoPrograma
+;+		(comment "Relacionamento com a classe Programa de Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LocalAplica%C3%A7%C3%A3o
+;+		(comment "Local em que será aplicada uma determinada Avaliação.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Hor%C3%A1rioAplica%C3%A7%C3%A3o
+;+		(comment "Horário em que será aplicada uma determinada Avaliação.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoOrgao
+;+		(comment "Relacionmento com a classe Orgao")
+		(type INSTANCE)
+;+		(allowed-classes Orgao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNotas
+		(type INSTANCE)
+;+		(allowed-classes Nota)
+		(create-accessor read-write)))
+
+(defclass Pr%C3%A9-Oferta "Existe o conceito de pré-oferta para determinar a demanda das disciplinas, para assim ofertar apenas as disciplina mais desejadas. Alguns dados iniciais devem estar nesta classe para que o Aluno possa se informar ao máximo sobre a disciplina que gostaria de cursar."
+	(is-a USER)
+	(role concrete)
+	(single-slot DataLimite
+;+		(comment "Data máxima em que o aluno pode se matricular nesta disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Hor%C3%A1rioDisciplina
+;+		(comment "Horário em que a Disciplina será ministrada.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LocalDisciplina
+;+		(comment "Local em que a Disciplina será ministrada.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9MatriculaAluno
+;+		(comment "Relacionamento com uma determinada instância da classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Quest%C3%B5es "Uma avaliação possui uma ou várias questões."
+	(is-a USER)
+	(role concrete)
+	(single-slot quest%C3%A3o
+;+		(comment "Descrição da questão.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAvalia%C3%A7%C3%A3o
+;+		(comment "Relacionamento com a classe Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ResultadoFinal "Um resultado final representa a situação de um aluno (aprovado ou reprovado) de um Aluno em um Programa de Disciplina."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoNotas
+		(type INSTANCE)
+;+		(allowed-classes Nota)
+		(create-accessor read-write))
+	(single-slot LigacaoResultadoAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ConceitoObtido
+;+		(comment "Conceito que o Aluno obteve.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProgramaDisciplina
+;+		(comment "Relacionamento com a classe Programa Disciplina")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Nota "Uma nota representa a situação de um Aluno em uma Avaliação."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoNotaAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAvalia%C3%A7%C3%A3o
+;+		(comment "Relacionamento com a classe Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NotaObtida
+;+		(comment "Nota que o Aluno obteve em uma determinada Avaliação.")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultado
+		(type INSTANCE)
+;+		(allowed-classes Resultado)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Pr%C3%A9-Matr%C3%ADcula "Alunos devem efetuar uma pré-matrícula nas disciplinas que gostariam de cursar. Com esses dados que a coordenação irá decidir quais disciplinas realmente serão ofertadas (demanda)."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoPr%C3%A9MatriculaAluno
+;+		(comment "Relacionamento com uma determinada instância da classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9Oferta
+;+		(comment "Relacionamento com a classe Pré-Oferta")
+		(type INSTANCE)
+;+		(allowed-classes Pr%C3%A9-Oferta)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot DisciplinasDesejadas
+;+		(comment "Disciplinas que o Aluno deseja se matricular.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(create-accessor read-write)))
+
+(defclass Presen%C3%A7a "Uma Presença é um valor boleano (presente ou ausente) de um Aluno em uma Aula."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoPresencaAula
+;+		(comment "Relacionamento com a classe Aula.")
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot presen%C3%A7a
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPresencaAluno
+;+		(comment "Relacionamento com a classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Pessoa "Uma pessoa física, que, de algum modo, fará parte do sistema."
+	(is-a USER)
+	(role abstract)
+	(single-slot LigacaoStatusPessoa
+		(type INSTANCE)
+;+		(allowed-classes StatusPessoa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoPessoa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCategoria
+		(type INSTANCE)
+;+		(allowed-classes CategoriaUsu%C3%A1rio)
+		(create-accessor read-write))
+	(single-slot LigacaoRegistro
+		(type INSTANCE)
+;+		(allowed-classes Registro)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass PessoaFisica "Contém os dados cadastrais de Pessoa Física."
+	(is-a Pessoa)
+	(role concrete)
+	(single-slot CPF
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Usuario "Pessoa cadastrada como utilizadora do SISPG."
+	(is-a PessoaFisica)
+	(role concrete)
+	(multislot LigacaoAtividadeUsuario
+		(type INSTANCE)
+;+		(allowed-classes AtividadeUsuario)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoInteressados
+		(type INSTANCE)
+;+		(allowed-classes Interessados)
+		(create-accessor read-write)))
+
+(defclass Aluno "Um Aluno está relacionado a sua Turma, a uma Presença (que está relacionada a uma Aula), a uma Pré-Matrícula (que está relacionada a uma Pré-Oferta), a uma Nota (que está relacionada a uma Avaliação) e a um Resultado Finall (que está relacionado a um Programa de Disciplina."
+	(is-a Usuario)
+	(role concrete)
+	(single-slot nome_Aluno
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot matr%C3%ADcula_Aluno
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProjetodePesquisa
+		(type INSTANCE)
+;+		(allowed-classes ProjetodePesquisa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoSubProjetos
+		(type INSTANCE)
+;+		(allowed-classes SubProjetos)
+		(create-accessor read-write))
+	(single-slot LigacaoStatusAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipante
+		(type INSTANCE)
+;+		(allowed-classes Participante)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCPG
+		(type INSTANCE)
+;+		(allowed-classes CPG)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPr%C3%A9MatriculaAluno
+;+		(comment "Relacionamento com uma determinada instância da classe Aluno.")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNotas
+		(type INSTANCE)
+;+		(allowed-classes Nota)
+		(create-accessor read-write))
+	(multislot LigacaoPresenca
+		(type INSTANCE)
+;+		(allowed-classes Presen%C3%A7a)
+		(create-accessor read-write))
+	(single-slot LigacaoResultado
+		(type INSTANCE)
+;+		(allowed-classes Resultado)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTurma
+		(type INSTANCE)
+;+		(allowed-classes Turma)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExtratoAcademico
+		(type INSTANCE)
+;+		(allowed-classes ExtratoAcademico)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDesempenho
+		(type INSTANCE)
+;+		(allowed-classes Desempenho)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtividadeExtra
+		(type INSTANCE)
+;+		(allowed-classes AtividadeExtra)
+		(create-accessor read-write))
+	(single-slot LigacaoMatriculaDeAluno
+		(type INSTANCE)
+;+		(allowed-classes MatriculaDeAluno)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEstagioDocencia
+		(type INSTANCE)
+;+		(allowed-classes EstagioDocencia)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Docente "Um docente possui um nome e uma matricula. Sendo designado a ministrar disciplinas de acordo com sua área de especialização. Sendo assim, quando uma disciplina é ofertada, é criada um ProgramaDeDisciplina com um Professor responsável, este que pode editar alguns atributos do ProgramaDeDisciplina, como conteúdo programático. O professor terá acesso às turmas a partir do Programa De Disciplina, já que cada turma possui um Programa de Disciplina diferente."
+	(is-a Usuario)
+	(role concrete)
+	(single-slot matr%C3%ADcula_Professor
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nome_Professor
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProjetodePesquisa
+		(type INSTANCE)
+;+		(allowed-classes ProjetodePesquisa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Orientacao)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipante
+		(type INSTANCE)
+;+		(allowed-classes Participante)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenadoria
+		(type INSTANCE)
+;+		(allowed-classes Coordenadoria)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes Coordena%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCPG
+		(type INSTANCE)
+;+		(allowed-classes CPG)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExame
+		(type INSTANCE)
+;+		(allowed-classes Exame)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAula
+;+		(comment "Relacionamento com a classe Aula")
+		(type INSTANCE)
+;+		(allowed-classes Aula)
+		(create-accessor read-write))
+	(single-slot LigacaoTurma
+		(type INSTANCE)
+;+		(allowed-classes Turma)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProgramaDisciplina
+;+		(comment "Relacionamento com a classe Programa Disciplina")
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDeDisciplina)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoLinhadePesquisa
+		(type INSTANCE)
+;+		(allowed-classes LinhaDePesquisa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoCorpoDocente
+		(type INSTANCE)
+;+		(allowed-classes CorpoDocente)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDesempenho
+		(type INSTANCE)
+;+		(allowed-classes Desempenho)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtividadeExtra
+		(type INSTANCE)
+;+		(allowed-classes AtividadeExtra)
+		(create-accessor read-write))
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write)))
+
+(defclass Orientador "Docente que participa de uma Orientação."
+	(is-a Docente)
+	(role concrete)
+	(single-slot LigacaoEstagioDocencia
+		(type INSTANCE)
+;+		(allowed-classes EstagioDocencia)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Coorientador "Docente que participa de uma Coorientação."
+	(is-a Docente)
+	(role concrete))
+
+(defclass Auxliar
+	(is-a Usuario)
+	(role concrete))
+
+(defclass Candidato
+	(is-a Usuario)
+	(role concrete)
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write))
+	(multislot LigacaoFase
+		(type INSTANCE)
+;+		(allowed-classes Fase)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoMatriculaCandidato
+		(type INSTANCE)
+;+		(allowed-classes MatriculaDeCandidato)
+		(create-accessor read-write)))
+
+(defclass Funcion%C3%A1rio
+	(is-a PessoaFisica)
+	(role concrete)
+	(single-slot LigacaoCurso
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocumento
+		(type INSTANCE)
+;+		(allowed-classes Documento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass PessoaJuridica "Contém os dados cadastrais de Pessoa Jurídica."
+	(is-a Pessoa)
+	(role concrete)
+	(single-slot CNPJ
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass MatriculaDeCandidato "Primeira matrícula de um candidato. Realizada após este ter sido aprovado por processo seletivo ou equivalente. Após a realização desta matrícula o candidato passa a ser denominado Aluno."
+	(is-a USER)
+	(role concrete)
+	(single-slot NumeroMatricula
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass ProgramaDePosGradua%C3%A7%C3%A3o "Programa \nRefere-se exclusivamente à pós-graduação strictu sensu (nível de mestrado e doutorado)."
+	(is-a USER)
+	(role abstract)
+	(single-slot LigacaoCoordenadoria
+		(type INSTANCE)
+;+		(allowed-classes Coordenadoria)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descri%C3%A7%C3%A3o
+;+		(comment "Um texto que descreve um determinado programa de pós graduação, strictu sensu.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDisciplinasOferecidas
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoOrgao
+;+		(comment "Relacionmento com a classe Orgao")
+		(type INSTANCE)
+;+		(allowed-classes Orgao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNovoTopico
+		(type INSTANCE)
+;+		(allowed-classes NovoTopico)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricao
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoLinhadePesquisa
+		(type INSTANCE)
+;+		(allowed-classes LinhaDePesquisa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricaoProgramaPosGrad
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAvaliacaoCAPES
+		(type INSTANCE)
+;+		(allowed-classes AvaliacaoCapes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes Coordena%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Mestrado "Especialização de um programa de pós-graduação."
+	(is-a ProgramaDePosGradua%C3%A7%C3%A3o)
+	(role concrete))
+
+(defclass Doutorado "Especialização de um programa de pós-graduação."
+	(is-a ProgramaDePosGradua%C3%A7%C3%A3o)
+	(role concrete))
+
+(defclass ProcessoDeSele%C3%A7%C3%A3o "Atividade executada por cada coordenação de curso ou programa com o propósito de selecionar os candidatos que poderão se matricular."
+	(is-a USER)
+	(role concrete)
+	(single-slot data
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write))
+	(multislot LigacaoFase
+		(type INSTANCE)
+;+		(allowed-classes Fase)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoVaga
+		(type INSTANCE)
+;+		(allowed-classes Vaga)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoEdital
+		(type INSTANCE)
+;+		(allowed-classes Edital)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCPG
+		(type INSTANCE)
+;+		(allowed-classes CPG)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoMatriculaCandidato
+		(type INSTANCE)
+;+		(allowed-classes MatriculaDeCandidato)
+		(create-accessor read-write)))
+
+(defclass Coordena%C3%A7%C3%A3o "Categoria de usuários formada pelo(a) docente coordenador(a) e servidores auxiliares responsáveis pelas atividades administrativas de um programa de pós-graduação. O conjunto de servidores auxiliares é denominado de secretaria de programa."
+	(is-a USER)
+	(role concrete)
+	(single-slot CodigoIdentificacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricao
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoSecretaria
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoMembroDaCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes MembroDaCoordenacao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaPosGraduacao
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write))
+	(single-slot LigacaoExameDeQualifica%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ExameDeQualifica%C3%A7%C3%A3o)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Coordenador "Coordenador escolido e nomeado do corpo docente de acordo com o regimento geral em vigor na instituição"
+	(is-a Coordena%C3%A7%C3%A3o)
+	(role concrete))
+
+(defclass SubCoordenador "Subcoordenador escolido e nomeado do corpo docente de acordo com o regimento geral em vigor na instituição"
+	(is-a Coordena%C3%A7%C3%A3o)
+	(role concrete))
+
+(defclass Secretaria
+	(is-a Coordena%C3%A7%C3%A3o)
+	(role concrete))
+
+(defclass MatriculaDeAluno "Matrícula a qual se submete um aluno após estar um ano cursando um curso de pós-graduação. Uma matrícula é considerada matrícula de aluno a partir da segunda matrícula realizada por um aluno, a primeira matrícula é considerada matrícula de candidato."
+	(is-a USER)
+	(role concrete)
+	(single-slot codigoMatricula
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write)))
+
+(defclass Auxilio "Auxílio consiste no pagamento em moeda feito pela empresa que recebe o estagiário (Órgão de Fomento) com o fim de auxiliá-lo na sua manutenção e nos seus gastos pessoais."
+	(is-a USER)
+	(role concrete)
+	(single-slot valorPagamento
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass OrgaoDeFormento "Órgão de Fomento é uma instituição que financia alunos, para que eles possam fazer pesquisas."
+	(is-a USER)
+	(role concrete)
+	(single-slot nomeOrgao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Credito "Créditos são unidades para medida de atividades acadêmicas necessárias à obtenção do grau acadêmico."
+	(is-a USER)
+	(role concrete)
+	(single-slot identificacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ExameDeQualifica%C3%A7%C3%A3o "Avaliação a que se submete o aluno antes da defesa de tese ou dissertação. A aprovação no exame de qualificação é, para muitos programas, condição sine qua non para a defesa. Também possui a acepção de defesa de projeto."
+	(is-a USER)
+	(role concrete)
+	(single-slot notaAluno
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes Coordena%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass EstagioDocencia "O estágio-docência não contempla qualquer tipo de remuneração ou vínculo empregatício e tem por finalidade propiciar um aprimoramento da formação dos mestrandos."
+	(is-a USER)
+	(role concrete)
+	(single-slot totalHoras
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoOrientador
+		(type INSTANCE)
+;+		(allowed-classes Orientador)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Desempenho "Desemepenho obtido por um orientando eu uma relação de Orientação ou de Coorientação."
+	(is-a USER)
+	(role concrete)
+	(single-slot notaAluno
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Data "Representa uma data no formato dia, mês e ano."
+	(is-a USER)
+	(role concrete)
+	(single-slot Dia
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Mes
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Ano
+;+		(type ANY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPeriodo
+		(type INSTANCE)
+;+		(allowed-classes Periodo)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Resultado "Resultado obtido por um candidato em um processo de seleção de um programa de pós-graduação."
+	(is-a USER)
+	(role concrete)
+	(single-slot notaAluno
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataProva
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoFase
+		(type INSTANCE)
+;+		(allowed-classes Fase)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Endere%C3%A7o "Representa uma localização geográfica."
+	(is-a USER)
+	(role concrete)
+	(single-slot cidade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ExtratoAcademico "Documento que contém a relação de todas as notas obtidas por um aluno, para cada disciplina cursada."
+	(is-a USER)
+	(role concrete)
+	(multislot extratos
+		(type INSTANCE)
+;+		(allowed-classes ExtratoAcademico)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoInstituicao
+		(type INSTANCE)
+;+		(allowed-classes Instituicao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write)))
+
+(defclass Instituicao "Instituição de Ensino Superior"
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoInterface
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUnidadeAcademica
+		(type INSTANCE)
+;+		(allowed-classes UnidadeAcademica)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoOrgao
+;+		(comment "Relacionmento com a classe Orgao")
+		(type INSTANCE)
+;+		(allowed-classes Orgao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoInstituicao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write))
+	(single-slot LigacaoExtratoAcademico
+		(type INSTANCE)
+;+		(allowed-classes ExtratoAcademico)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Descri%C3%A7%C3%A3oProgamaPosGrad "Irá descrever todo o conteúdo e objetivos que estarão abrangendo o Programa elaborado para uma determinada Pós-Graduação."
+	(is-a USER)
+	(role concrete)
+	(single-slot objetivo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoNovoTopico
+		(type INSTANCE)
+;+		(allowed-classes NovoTopico)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaPosGraduacao
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write)))
+
+(defclass Orgao "Corresponde a todo processo burocrático que avalia o programa."
+	(is-a USER)
+	(role abstract)
+	(single-slot IdentificacaoOrgao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write))
+	(single-slot LigacaoAvalia%C3%A7%C3%A3o
+;+		(comment "Relacionamento com a classe Avaliação.")
+		(type INSTANCE)
+;+		(allowed-classes Avalia%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass DAA
+	(is-a Orgao)
+	(role concrete))
+
+(defclass PROAD
+	(is-a Orgao)
+	(role concrete))
+
+(defclass PRPPG
+	(is-a Orgao)
+	(role concrete))
+
+(defclass AreaDeConcentracao "Uma área do conhecimento que abrange linhas de pesquisa e disciplinas, englobadas por uma estrutura curricular"
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoLinhadePesquisa
+		(type INSTANCE)
+;+		(allowed-classes LinhaDePesquisa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot IdentificacaoArea
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenadoria
+		(type INSTANCE)
+;+		(allowed-classes Coordenadoria)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEstruturaCurricular
+		(type INSTANCE)
+;+		(allowed-classes EstruturaCurricular)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write)))
+
+(defclass Coordenadoria "Orgão de competencia normativa e deliberativa em matérias de natureza acadêmica e administrativa."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoCoordenadoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass NovoTopico "Responsável pela criação de um novo topico relacionado coma descrição do programa."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoTopico
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricao
+		(type INSTANCE)
+;+		(allowed-classes Descri%C3%A7%C3%A3oProgamaPosGrad)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Atividade "Classe que é uma entidade de uma atividade participante de um calendário."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write))
+	(single-slot LigacaoPeriodo
+		(type INSTANCE)
+;+		(allowed-classes Periodo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoAtividade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass UnidadeAcademica "Identificação de uma Unidade Acadêmica."
+	(is-a USER)
+	(role concrete)
+	(single-slot descricaoUnidade
+;+		(comment "Responsável por armazenar o nome de uma determinada Unidade Acadêmica.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Periodo
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoDataInicio
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDataFim
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusTaxa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtividade
+		(type INSTANCE)
+;+		(allowed-classes Atividade)
+		(create-accessor read-write)))
+
+(defclass LinhaDePesquisa "Linha de pesquisa é uma área dentro de uma grande área pertencente à area de concentração, docentes possuem pelo menos uma linha de pesquisa pela qual atuam."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoLinhadePesquisa
+		(type INSTANCE)
+;+		(allowed-classes LinhaDePesquisa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot IdentificacaoLinha
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Calendario
+	(is-a USER)
+	(role concrete)
+	(multislot datas
+;+		(comment "Armazena as datas de um calendário")
+		(type INSTANCE)
+;+		(allowed-classes Data)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write))
+	(single-slot LigacaoInterfacCalendario
+		(type INSTANCE)
+;+		(allowed-classes Interface_Calendario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtividade
+		(type INSTANCE)
+;+		(allowed-classes Atividade)
+		(create-accessor read-write))
+	(single-slot LigacaoInstituicao
+		(type INSTANCE)
+;+		(allowed-classes Instituicao)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Interface_Calendario "Desempenha o papel de uma interface de classes, refrindo-se à classe calendário."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoCalendario
+		(type INSTANCE)
+;+		(allowed-classes Calendario)
+		(create-accessor read-write)))
+
+(defclass Documento "Classe abstrata que representa qualquer dos tipos de documentos especializados em Documentos Físicos e Documentos Digitais.\nRegistra qualquer informação do domínio de pós-graduação. São classificados conforme a natureza da informação contida nele. Os tipos de documentos incluem relatório, histórico, diploma, comprovante e certificado."
+	(is-a USER)
+	(role abstract)
+	(single-slot DataCriacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descricaoDoc
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAnexo
+;+		(comment "Ligacao com a classe Anexo.")
+		(type INSTANCE)
+;+		(allowed-classes Anexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoIDDocumento
+		(type INSTANCE)
+;+		(allowed-classes IDDocumento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoFuncionario
+		(type INSTANCE)
+;+		(allowed-classes Funcion%C3%A1rio)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoCategoriaDocumento
+		(type INSTANCE)
+;+		(allowed-classes CategoriaDocumento)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass DocumentoFisico "Representa o cadastro de um Documento Físico no sistema."
+	(is-a Documento)
+	(role concrete)
+	(multislot LigacaoImpressao
+		(type INSTANCE)
+;+		(allowed-classes Impressao)
+		(create-accessor read-write)))
+
+(defclass DocumentoDigital "Representa o cadastro de um Documento Digital no sistema."
+	(is-a Documento)
+	(role concrete)
+	(single-slot LigacaoHash
+		(type INSTANCE)
+;+		(allowed-classes Hash)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass IDDocumento "Contém o número de identificador do documento. Este número é único e há uma relação biunívoca entre um documento e seu número de identificação."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoDocumento
+		(type INSTANCE)
+;+		(allowed-classes Documento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Local "Super classe abstrata de local. Este registro armazena nomes de locais abstratos que se especializam em duas classes próprias para tratarem locais digitais e locais físicos."
+	(is-a USER)
+	(role abstract)
+	(single-slot IdentificacaoLocal
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRegraArmazenamento
+		(type INSTANCE)
+;+		(allowed-classes RegradeArmazenamento)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass LocalFisico "Contém a informação de um local físico, seja prédio, sala, armário, etc. Todos os locais tem um nome único e são hierarquizados de forma que dentro de um local podem haver outros locais internos."
+	(is-a Local)
+	(role concrete)
+	(single-slot LigacaoLocal
+		(type INSTANCE)
+;+		(allowed-classes Local)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass LocalDigital "Contém o endereço digital (ou path) onde os documentos digitais podem ser armazenados. Este endereço leva ao host, bem como a pasta do sistema de arquivos de disco."
+	(is-a Local)
+	(role concrete)
+	(single-slot path
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass CategoriaUsu%C3%A1rio "Todo usuário está devidamente classificado em uma deteterminada categoria. Cada categoria está associada a um conjuntos de serviços que o sistema oferece. Assim, ao classificar um usuário em determinda categoria ele terá todos os provilégios dessa categoria segundo uma politica definida pelo administrador do sistema. Por exemplo, um usuário da categoria dos alunos não tem acesso aos serviços de manutenção das notas de disciplinas. As categorias são: aluno, coordenação de programa, pró-reitoria, administração superior, participante, administrador e navegante."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoCategoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoUsuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write))
+	(multislot LigacaoAtividade
+		(type INSTANCE)
+;+		(allowed-classes Atividade)
+		(create-accessor read-write))
+	(single-slot LigacaoInforme
+		(type INSTANCE)
+;+		(allowed-classes Informe)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Hash "Contém o número de hash obtido de um documento digital. Este número é obtido através das informações contidas neste documento."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoHash
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocumentoDigital
+		(type INSTANCE)
+;+		(allowed-classes DocumentoDigital)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Registro "Armazena uma entrada ou saída de documento a um local dado."
+	(is-a USER)
+	(role concrete)
+	(single-slot E%2FS
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoPessoa
+		(type INSTANCE)
+;+		(allowed-classes Pessoa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass RegradeArmazenamento "Registra alguma regra vinculada a alguma categoria. Se a categoria de algum documento estiver conforme a regra, então ele poderá ser armazenado no local que está vinculado à esta regra."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoLocal
+		(type INSTANCE)
+;+		(allowed-classes Local)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCategoria
+		(type INSTANCE)
+;+		(allowed-classes CategoriaUsu%C3%A1rio)
+		(create-accessor read-write)))
+
+(defclass StatusPessoa "Representa o estado ou situação de determinada pessoa na instiuição."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoPessoaStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusPessoa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot status
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Contato "Uma pessoa pode possuir nenhum ou vários contatos. O contato é composto pelo endereço, pelo telefone e pelo e-mail da pessoa."
+	(is-a USER)
+	(role abstract)
+	(single-slot IdentificacaoContato
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoPessoa
+		(type INSTANCE)
+;+		(allowed-classes Pessoa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Telefone
+	(is-a Contato)
+	(role concrete)
+	(single-slot numero
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Endereco
+	(is-a Contato)
+	(role concrete)
+	(single-slot rua
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Email
+	(is-a Contato)
+	(role concrete)
+	(single-slot email
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Informe "É um recurso do sistema que auxilia na comunicação entre os usários no sentido de transmitir  informações dirigidas a categorias. As informações deverão ser fornecidas através de um texto. Todo informe tem uma data de criação, data da ultima modificação, data de validade e poderá ou não conter anexos."
+	(is-a USER)
+	(role concrete)
+	(single-slot descricao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataCriacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataValidade
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCategoriaUsuario
+		(type INSTANCE)
+;+		(allowed-classes CategoriaUsu%C3%A1rio)
+		(create-accessor read-write))
+	(multislot LigacaoDestinatario
+		(type INSTANCE)
+;+		(allowed-classes Destinatario)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoAnexo
+;+		(comment "Ligacao com a classe Anexo.")
+		(type INSTANCE)
+;+		(allowed-classes Anexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Anexo "Essa classe tem a função de ligar  um documento que deverá ser referenciado em um informe. Desta forma, um anexo é simplesmente um link para um documento."
+	(is-a USER)
+	(role concrete)
+	(single-slot enderecoAnexo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocAnexo
+		(type INSTANCE)
+;+		(allowed-classes DocAnexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoInforme
+		(type INSTANCE)
+;+		(allowed-classes Informe)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass AtividadeExtraCurricular "É chamado de atividade extra toda atividade que não pertence à estrutura curricular do curso embora a estrutura curricular possa exigir alguma atividade extra."
+	(is-a USER)
+	(role abstract)
+	(single-slot cargahoraria
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoEstruturaCurricular
+		(type INSTANCE)
+;+		(allowed-classes EstruturaCurricular)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass AtividadeComplementar "Atividade complementar é uma atividade extra -curricular que engloba por exemplo palestras congressos etc."
+	(is-a AtividadeExtraCurricular)
+	(role concrete)
+	(single-slot descricaoAtividade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass AtividadeDePesquisa "Atividade de Pesquisa é uma atividade extra curricular com alguns atributos adicionais, como nome da atividade e nome do orientador"
+	(is-a AtividadeExtraCurricular)
+	(role concrete)
+	(single-slot orientador
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass AvaliacaoCapes "Todo ano a CAPES lança uma avaliação para cursos de pós-graduação, essa avaliação vai de 1 a 7 e é cadastrada no programa pela própria coordenação do programa"
+	(is-a USER)
+	(role concrete)
+	(single-slot DataAvaliacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write)))
+
+(defclass Bibliografia "Conjunto de livros utilizados por uma disciplina por exemplo"
+	(is-a USER)
+	(role concrete)
+	(multislot livro
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Ementa "Se refere a uma disciplina, organiza o conteúdo de uma disciplina de forma a dar uma melhor visão do que irá acontecer durante o curso."
+	(is-a USER)
+	(role concrete)
+	(single-slot descricaoDisciplina
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass EstruturaCurricular "Estrutura curricular é uma classe composta por Disciplinas, e/ou atividades extra"
+	(is-a USER)
+	(role concrete)
+	(multislot disciplina
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoAreaConcentracao
+;+		(comment "Relacionamento com a Area de Concentracao")
+		(type INSTANCE)
+;+		(allowed-classes AreaDeConcentracao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoDisciplina
+;+		(comment "Relacionamento com a classe Disciplina.")
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAtividadeExtra
+		(type INSTANCE)
+;+		(allowed-classes AtividadeExtra)
+		(create-accessor read-write)))
+
+(defclass Identificacao "Identifica o programa de pós-graduação, principalmente através do código da unidade"
+	(is-a USER)
+	(role concrete)
+	(single-slot codigoUnidade
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot coordenacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Livro "Classe utilizada pela Bibiliografia, uma forma de armazenar os livros, guarda o nome do autor e o nome do livro."
+	(is-a USER)
+	(role concrete)
+	(single-slot nomeLivro
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot autor
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Defesa "Este registro deverá conter a data de realização da defesa, a qual deve concordar com a última alteração da previsão de defesa descrito no caso de uso Registrar Previsão de Defesa. Outro atributo deste registro seria: o conceito obtido pelo aluno. Os possíveis estados do resultado da defesa são: aprovado, pendente (correções foram solicitadas) e reprovado. O sistema deverá ter um relógio que manipula o prazo limite da entrega do trabalho corrigido, quando o estado do aluno for pendente. Depois da entrega das correções esse estado poderá ser alterado para aprovado ou reprovado. O resultado final, neste caso, será condicionado ao fornecimento do resultado por parte do coordenador."
+	(is-a Livro)
+	(role concrete)
+	(single-slot conceito
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataDefesa
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoPrevisaoDefesa
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot LigacaoAta
+		(type INSTANCE)
+;+		(allowed-classes Ata)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Participante "Participante de um programa de pós-graduação, pode atuar de forma ativa no programa. Aluno não é um participante de programa de pós-gradução embora o nome possa sugerir isso"
+	(is-a USER)
+	(role abstract)
+	(single-slot nomeParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoConvidado
+		(type INSTANCE)
+;+		(allowed-classes Convidado)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipacao
+		(type INSTANCE)
+;+		(allowed-classes Participacao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPesquisador
+		(type INSTANCE)
+;+		(allowed-classes Pesquisador)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoMembroDaCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes MembroDaCoordenacao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass MembroDaCoordenacao "MembroDaCoordenação é um participante que no momento está atuando na coordenação do programa."
+	(is-a Participante)
+	(role concrete)
+	(multislot titulacao
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot LigacaoCoordenacao
+		(type INSTANCE)
+;+		(allowed-classes Coordena%C3%A7%C3%A3o)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Pesquisador "Pesquisador é um participante que atualmente atua como pesquisador, geralmente pesquisadores não são docentes embora possa isso seja possível."
+	(is-a Participante)
+	(role concrete)
+	(single-slot IdentificacaoPesquisador
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Ata
+	(is-a USER)
+	(role concrete)
+	(single-slot documento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot responsavel
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes Defesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass PrevisaoDeDefesa "Classe que contém dados sobre a previsção da defesa. Deverá ser fornecida a data, horário, local da defesa. Adicionalmente devese fornecer o título e a data da entrega da versão para a banca examinadora. Tais datas podem ser alteradas imprevistos podem postergar ou antecipar este evento. (Visão)"
+	(is-a USER)
+	(role concrete)
+	(single-slot dataEntrega
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot TituloDefesa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoAlteracaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes AlteracaoDePrevisaoDeDefesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes Defesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass AlteracaoDePrevisaoDeDefesa "Esta classe contém registro de alterações para previsões defesa."
+	(is-a USER)
+	(role concrete)
+	(single-slot motivo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot novaData
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoPrevisaoDefesa
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Trabalho "Representa  um Trabalho genérico. Este Trabalho pode ser, por exemplo, Projeto de Pesquisa, Relatório de Reuniões, Dissertações, Teses, etc. Cada Trabalho contém um tipo e a ele está associado um registro de Descrição."
+	(is-a USER)
+	(role concrete)
+	(single-slot tipoTrabalho
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoGrupo
+		(type INSTANCE)
+;+		(allowed-classes Grupo)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Orientacao)
+		(create-accessor read-write))
+	(single-slot LigacaoDescricaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes DescricaoTrabalho)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDefesa
+		(type INSTANCE)
+;+		(allowed-classes Defesa)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Grupo "Registrar componentes que podem ser internos ou externos da universidade para formarem um grupo. Esse grupo pode ser uma banca de avaliação, grupo de pesquisa, conselho diretor, etc."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoGrupo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipacao
+		(type INSTANCE)
+;+		(allowed-classes Participacao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Participacao "Classe Participação (em um trabalho) que associa um participante com um trabalho."
+	(is-a USER)
+	(role concrete)
+	(single-slot grupoParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot campoParticipante
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataInicio
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataFim
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoParticipante
+		(type INSTANCE)
+;+		(allowed-classes Participante)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LigacaoGrupo
+		(type INSTANCE)
+;+		(allowed-classes Grupo)
+		(create-accessor read-write)))
+
+(defclass Convidado "Representa um convidado que pode participar de   um Grupo. Por exemplo, um convidado que participa de uma banca examinadora."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoParticipante
+		(type INSTANCE)
+;+		(allowed-classes Participante)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Comprovante "Documento emitido no ato da inscrição ou posteriormente  através de consultas."
+	(is-a USER)
+	(role concrete)
+	(single-slot dataEmissao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write)))
+
+(defclass BoletoBancario "Formulário a ser disponibilizado ao requerente para que possa ser efetuado o pagamento da taxa necessária para que o requerimento seja realmente criado."
+	(is-a USER)
+	(role concrete)
+	(single-slot dataVencimento
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot valor
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoInscricaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes InscricaodeCandidato)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass InscricaodeCandidato
+	(is-a USER)
+	(role concrete)
+	(single-slot numeroInscricao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataInscricao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LigacaoBoletoBancario
+		(type INSTANCE)
+;+		(allowed-classes BoletoBancario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoComprovante
+		(type INSTANCE)
+;+		(allowed-classes Comprovante)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write)))
+
+(defclass Exame "Algum tipo de avaliação à qual o aluno foi submetido"
+	(is-a USER)
+	(role concrete)
+	(single-slot dataExame
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot metodo
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoFase
+		(type INSTANCE)
+;+		(allowed-classes Fase)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Fase
+	(is-a USER)
+	(role concrete)
+	(single-slot numeroFase
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultado
+		(type INSTANCE)
+;+		(allowed-classes Resultado)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoExame
+		(type INSTANCE)
+;+		(allowed-classes Exame)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoCandidato
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass CPG "Coordenadoria de Pós-Graduação. Comissão responsável pela elaboração e coordenação do Processo Seletivo"
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Edital
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoErrata
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Errata "Descricao dos erros que podem ter acontecido no aplicação do Exame do Processo Seletivo."
+	(is-a USER)
+	(role concrete)
+	(single-slot identificacaoErrata
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot informacoes
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoEdital
+		(type INSTANCE)
+;+		(allowed-classes Edital)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Vaga
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoProcessoSelecao
+		(type INSTANCE)
+;+		(allowed-classes ProcessoDeSele%C3%A7%C3%A3o)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Relatorio
+	(is-a USER)
+	(role concrete))
+
+(defclass PreDfinido
+	(is-a Relatorio)
+	(role concrete))
+
+(defclass RelatorioNovo
+	(is-a Relatorio)
+	(role concrete))
+
+(defclass Imagens "Imagem"
+	(is-a USER)
+	(role concrete))
+
+(defclass Requerimento "Um pedido formal feito a alguém ou a algum orgão de alguma instituição."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoRequerimento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoItemInformacao
+		(type INSTANCE)
+;+		(allowed-classes ItemDeInformacao)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoTipoDeRequerimento
+		(type INSTANCE)
+;+		(allowed-classes TipoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRecibo
+		(type INSTANCE)
+;+		(allowed-classes Recibo)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResultadoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes ResultadoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoBoletoBancario
+		(type INSTANCE)
+;+		(allowed-classes BoletoBancario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoUsuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write)))
+
+(defclass Recibo "Comprovante disponibilizado ao requerente (usuário que faz um requerimento) após este ter criado um requerimento"
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoTipoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes TipoDeRequerimento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUsuarioRequerente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDataRequisicao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IdentificacaoRecibo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Autorizacao "Entidade necessária a alguns tipos de requerimentos para que o mesmo possa ser realmente criado. Ex.: Um requerimento feito por um aluno para trancamento de matrícula, deve ser primeiramente autorizado pelo professor orientador para que o requerimento possa ser criado."
+	(is-a USER)
+	(role concrete)
+	(single-slot dataAutorizacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot motivoAutorizacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoUsuarioRequerente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass TipoDeRequerimento "Dependendo de que tipo é o requerimento em questão, este pode necessitar de autorização, pagamento de taxa (geração de boleto bancário), etc."
+	(is-a USER)
+	(role concrete)
+	(single-slot tipoRequerimento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass ItemDeInformacao "Qualquer informação presente em um requerimento. Ex. NomeDoRequerente, DataDaCriação, Horário, etc."
+	(is-a USER)
+	(role abstract)
+	(single-slot itemInformacao
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass ResultadoDeRequerimento "Status e demais observações sobre um requerimento para verificar se ele foi aprovado ou não."
+	(is-a USER)
+	(role abstract)
+	(single-slot LigacaoUsuarioDeferente
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataResultado
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoRequerimento
+		(type INSTANCE)
+;+		(allowed-classes Requerimento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Taxas "Taxas que são aplicadas aos serviços prestados ppr uma Unidade Acadêmica."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoTaxas
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusTaxa)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoInteressados
+		(type INSTANCE)
+;+		(allowed-classes Interessados)
+		(create-accessor read-write)))
+
+(defclass Resolucao "Resolução que irá fixar o valor das taxas existentes dentro da Instituição."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoStatus
+		(type INSTANCE)
+;+		(allowed-classes StatusTaxa)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass IES "Instituição de Ensino Superior"
+	(is-a USER)
+	(role concrete)
+	(single-slot nomeIES
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Curso "Descrição do Curso de Pós-Graduação que será ministrado."
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoCurso
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDisciplinasOferecidas
+		(type INSTANCE)
+;+		(allowed-classes Disciplina)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Cargo "Cargo ocupado por certa pessoa na instituição"
+	(is-a USER)
+	(role concrete)
+	(single-slot IdentificacaoCargo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoPessoaFisica
+		(type INSTANCE)
+;+		(allowed-classes PessoaFisica)
+		(create-accessor read-write)))
+
+(defclass CorpoDocente "Corpo docente é uma composição de docentes"
+	(is-a USER)
+	(role concrete)
+	(multislot docente
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot LigacaoProgramaDePosGradua%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes ProgramaDePosGradua%C3%A7%C3%A3o)
+		(create-accessor read-write)))
+
+(defclass DescricaoTrabalho "Contém a descrição do trabalho do qual esta classe esta relacionada."
+	(is-a USER)
+	(role concrete)
+	(single-slot resumoTrabalho
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Orientacao "Representa a atividade de orientação de um trabalho por um docente."
+	(is-a USER)
+	(role concrete)
+	(single-slot dataInicioOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dataFimOrientacao
+		(type INSTANCE)
+;+		(allowed-classes Data)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoTrabalho
+		(type INSTANCE)
+;+		(allowed-classes Trabalho)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass StatusTaxa "Status de uma taxa."
+	(is-a USER)
+	(role concrete)
+	(single-slot statusTaxa
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoTaxa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoResolu%C3%A7%C3%A3o
+		(type INSTANCE)
+;+		(allowed-classes Resolucao)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoPeriodo
+		(type INSTANCE)
+;+		(allowed-classes Periodo)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass AtividadeUsuario "Representa o Tipo de Atividade de um Usuário dentro da Instituição."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoUsuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write)))
+
+(defclass Interessados "Usuário interessado no valor de uma taxa da Instituição."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoUsuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write))
+	(single-slot LigacaoTaxa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Bolsista "Usuário que recebe algum tipo de auxílio financeiro para estudar na Insituição."
+	(is-a USER)
+	(role concrete))
+
+(defclass CategoriaDisciplina "Categoria de uma Disciplina"
+	(is-a USER)
+	(role concrete))
+
+(defclass CategoriaDocumento "Categoria de um Documento"
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoRegraArmazenamento
+		(type INSTANCE)
+;+		(allowed-classes RegradeArmazenamento)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoDocumento
+		(type INSTANCE)
+;+		(allowed-classes Documento)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass DocAnexo "Documento de um anexo de um Informe."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoAnexo
+;+		(comment "Ligacao com a classe Anexo.")
+		(type INSTANCE)
+;+		(allowed-classes Anexo)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass SubProjetos "Extensões de Projetos de Pesquisa"
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoSubProjetoAluno
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot LigacaoProjetodePesquisa
+		(type INSTANCE)
+;+		(allowed-classes ProjetodePesquisa)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass ProjetodePesquisa "Projetos desenvolvidos pelos Alunos que estão cursando Mestrado."
+	(is-a USER)
+	(role concrete)
+	(multislot LigacaoAluno
+;+		(comment "Relacionamento com a classe Aluno")
+		(type INSTANCE)
+;+		(allowed-classes Aluno)
+		(create-accessor read-write))
+	(multislot LigacaoDocente
+;+		(comment "Relacionamento com a classe Docente")
+		(type INSTANCE)
+;+		(allowed-classes Docente)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot LigacaoSistemaCNPQ
+		(type INSTANCE)
+;+		(allowed-classes SistemaCNPQ)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LigacaoSubProjetos
+		(type INSTANCE)
+;+		(allowed-classes SubProjetos)
+		(create-accessor read-write)))
+
+(defclass AtividadeExtra "Atividade que foi desenvolvida por um Aluno,  a qual está fora da Estrutura Curricular mas é de grande importância para o currículo."
+	(is-a USER)
+	(role concrete))
+
+(defclass SistemaCNPQ "Órgão interessad financiar os projetos de pesquisa de um Mestrado."
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoProjetodePesquisa
+		(type INSTANCE)
+;+		(allowed-classes ProjetodePesquisa)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Impressao "Impressao de um Documento"
+	(is-a USER)
+	(role concrete)
+	(single-slot LigacaoDocumentoDigital
+		(type INSTANCE)
+;+		(allowed-classes DocumentoDigital)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
