@@ -1,4 +1,4 @@
-; Wed Aug 02 11:49:12 BRT 2006
+; Mon Aug 14 01:09:01 BRT 2006
 ; 
 ;+ (version "3.2")
 ;+ (build "Build 322")
@@ -10,9 +10,9 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[modelo-dominio_ProjectKB_Instance_124]
-		[modelo-dominio_ProjectKB_Instance_125]
-		[modelo-dominio_ProjectKB_Instance_126]))
+		[modelo-dominio_ProjectKB_Instance_89]
+		[modelo-dominio_ProjectKB_Instance_90]
+		[modelo-dominio_ProjectKB_Instance_91]))
 
 ([CLSES_TAB] of  Widget
 
@@ -443,17 +443,20 @@
 	(name "instances_file_name")
 	(string_value "modelo-dominio.pins"))
 
-([modelo-dominio_ProjectKB_Instance_100] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_101] of  Widget
+([modelo-dominio_ProjectKB_Instance_0] of  Widget
 
 	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_102])
-	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
+	(property_list [modelo-dominio_ProjectKB_Instance_1])
+	(widget_class_name "TGViztab.TGVizTab"))
 
-([modelo-dominio_ProjectKB_Instance_102] of  Property_List
+([modelo-dominio_ProjectKB_Instance_1] of  Property_List
 )
+
+([modelo-dominio_ProjectKB_Instance_10] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_11])
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
 
 ([modelo-dominio_ProjectKB_Instance_103] of  Property_List
 
@@ -490,6 +493,9 @@
 ([modelo-dominio_ProjectKB_Instance_109] of  Property_List
 )
 
+([modelo-dominio_ProjectKB_Instance_11] of  Property_List
+)
+
 ([modelo-dominio_ProjectKB_Instance_110] of  Property_List
 )
 
@@ -521,6 +527,12 @@
 ([modelo-dominio_ProjectKB_Instance_119] of  Property_List
 )
 
+([modelo-dominio_ProjectKB_Instance_12] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_13])
+	(widget_class_name "edu.stanford.smi.RemoteKBTab.WordNetTab"))
+
 ([modelo-dominio_ProjectKB_Instance_120] of  Property_List
 )
 
@@ -533,278 +545,266 @@
 ([modelo-dominio_ProjectKB_Instance_123] of  Property_List
 )
 
-([modelo-dominio_ProjectKB_Instance_124] of  String
+([modelo-dominio_ProjectKB_Instance_13] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_14] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_15])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
+
+([modelo-dominio_ProjectKB_Instance_15] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_16] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_17])
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+
+([modelo-dominio_ProjectKB_Instance_17] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_18] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_19])
+	(widget_class_name "edu.stanford.smi.protegex.psm.PSMTab"))
+
+([modelo-dominio_ProjectKB_Instance_19] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_2] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_3])
+	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
+
+([modelo-dominio_ProjectKB_Instance_20] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_21])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
+
+([modelo-dominio_ProjectKB_Instance_21] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_22] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_23])
+	(widget_class_name "ezpal.EZPalTab"))
+
+([modelo-dominio_ProjectKB_Instance_23] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_24] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_25])
+	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
+
+([modelo-dominio_ProjectKB_Instance_25] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_26] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_27])
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+
+([modelo-dominio_ProjectKB_Instance_27] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_28] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_29])
+	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
+
+([modelo-dominio_ProjectKB_Instance_29] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_3] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_30] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_31])
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
+
+([modelo-dominio_ProjectKB_Instance_31] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_32] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_33])
+	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
+
+([modelo-dominio_ProjectKB_Instance_33] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_34] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_35])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+
+([modelo-dominio_ProjectKB_Instance_35] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_36] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_37])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
+
+([modelo-dominio_ProjectKB_Instance_37] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_38] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_39])
+	(widget_class_name "DataGenieTab.DataGenieTab"))
+
+([modelo-dominio_ProjectKB_Instance_39] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_4] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_5])
+	(widget_class_name "script.ProtegeScriptTab"))
+
+([modelo-dominio_ProjectKB_Instance_40] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_41])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+
+([modelo-dominio_ProjectKB_Instance_41] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_42] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_43])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
+
+([modelo-dominio_ProjectKB_Instance_43] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_44] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_45])
+	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
+
+([modelo-dominio_ProjectKB_Instance_45] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_46] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_47])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
+
+([modelo-dominio_ProjectKB_Instance_47] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_48] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_49])
+	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
+
+([modelo-dominio_ProjectKB_Instance_49] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_5] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_50] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_51])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+
+([modelo-dominio_ProjectKB_Instance_51] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_52] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_53])
+	(widget_class_name "org.algernon.kb.okbc.protege.plugins.AlgernonTab"))
+
+([modelo-dominio_ProjectKB_Instance_53] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_54] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_55])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+
+([modelo-dominio_ProjectKB_Instance_55] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_56] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_57])
+	(widget_class_name "edu.stanford.smi.RemoteKBTab.UMLSTab"))
+
+([modelo-dominio_ProjectKB_Instance_57] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_58] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_59])
+	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
+
+([modelo-dominio_ProjectKB_Instance_59] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_6] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_7])
+	(widget_class_name "JessTab.JessTab"))
+
+([modelo-dominio_ProjectKB_Instance_7] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_8] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [modelo-dominio_ProjectKB_Instance_9])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
+
+([modelo-dominio_ProjectKB_Instance_89] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([modelo-dominio_ProjectKB_Instance_125] of  String
+([modelo-dominio_ProjectKB_Instance_9] of  Property_List
+)
+
+([modelo-dominio_ProjectKB_Instance_90] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([modelo-dominio_ProjectKB_Instance_126] of  String
+([modelo-dominio_ProjectKB_Instance_91] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
-
-([modelo-dominio_ProjectKB_Instance_43] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_44])
-	(widget_class_name "TGViztab.TGVizTab"))
-
-([modelo-dominio_ProjectKB_Instance_44] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_45] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_46])
-	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
-
-([modelo-dominio_ProjectKB_Instance_46] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_47] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_48])
-	(widget_class_name "script.ProtegeScriptTab"))
-
-([modelo-dominio_ProjectKB_Instance_48] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_49] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_50])
-	(widget_class_name "JessTab.JessTab"))
-
-([modelo-dominio_ProjectKB_Instance_50] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_51] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_52])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
-
-([modelo-dominio_ProjectKB_Instance_52] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_53] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_54])
-	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
-
-([modelo-dominio_ProjectKB_Instance_54] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_55] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_56])
-	(widget_class_name "edu.stanford.smi.RemoteKBTab.WordNetTab"))
-
-([modelo-dominio_ProjectKB_Instance_56] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_57] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_58])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
-
-([modelo-dominio_ProjectKB_Instance_58] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_59] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_60])
-	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
-
-([modelo-dominio_ProjectKB_Instance_60] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_61] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_62])
-	(widget_class_name "edu.stanford.smi.protegex.psm.PSMTab"))
-
-([modelo-dominio_ProjectKB_Instance_62] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_63] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_64])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
-
-([modelo-dominio_ProjectKB_Instance_64] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_65] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_66])
-	(widget_class_name "ezpal.EZPalTab"))
-
-([modelo-dominio_ProjectKB_Instance_66] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_67] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_68])
-	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
-
-([modelo-dominio_ProjectKB_Instance_68] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_69] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_70])
-	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
-
-([modelo-dominio_ProjectKB_Instance_70] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_71] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_72])
-	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
-
-([modelo-dominio_ProjectKB_Instance_72] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_73] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_74])
-	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
-
-([modelo-dominio_ProjectKB_Instance_74] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_75] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_76])
-	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
-
-([modelo-dominio_ProjectKB_Instance_76] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_77] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_78])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
-
-([modelo-dominio_ProjectKB_Instance_78] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_79] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_80])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
-
-([modelo-dominio_ProjectKB_Instance_80] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_81] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_82])
-	(widget_class_name "DataGenieTab.DataGenieTab"))
-
-([modelo-dominio_ProjectKB_Instance_82] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_83] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_84])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
-
-([modelo-dominio_ProjectKB_Instance_84] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_85] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_86])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
-
-([modelo-dominio_ProjectKB_Instance_86] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_87] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_88])
-	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
-
-([modelo-dominio_ProjectKB_Instance_88] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_89] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_90])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
-
-([modelo-dominio_ProjectKB_Instance_90] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_91] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_92])
-	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
-
-([modelo-dominio_ProjectKB_Instance_92] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_93] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_94])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
-
-([modelo-dominio_ProjectKB_Instance_94] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_95] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_96])
-	(widget_class_name "org.algernon.kb.okbc.protege.plugins.AlgernonTab"))
-
-([modelo-dominio_ProjectKB_Instance_96] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_97] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_98])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
-
-([modelo-dominio_ProjectKB_Instance_98] of  Property_List
-)
-
-([modelo-dominio_ProjectKB_Instance_99] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [modelo-dominio_ProjectKB_Instance_100])
-	(widget_class_name "edu.stanford.smi.RemoteKBTab.UMLSTab"))
 
 ([PAL_FORM_WIDGET] of  Widget
 
