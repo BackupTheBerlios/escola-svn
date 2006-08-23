@@ -1,4 +1,4 @@
-; Wed Aug 16 18:16:38 GMT-03:00 2006
+; Mon Aug 21 17:11:41 GMT-03:00 2006
 ; 
 ;+ (version "3.1.1")
 ;+ (build "Build 216")
@@ -10,9 +10,9 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[modelo-dominio_ProjectKB_Instance_78]
-		[modelo-dominio_ProjectKB_Instance_79]
-		[modelo-dominio_ProjectKB_Instance_80]))
+		[modelo-dominio_ProjectKB_Instance_84]
+		[modelo-dominio_ProjectKB_Instance_85]
+		[modelo-dominio_ProjectKB_Instance_86]))
 
 ([CLSES_TAB] of  Widget
 
@@ -547,8 +547,8 @@
 
 ([modelo-dominio_ProjectKB_Instance_10141] of  Map
 
-	(entries [modelo-dominio_ProjectKB_Instance_83])
-	(referenced_maps [modelo-dominio_ProjectKB_Instance_81]))
+	(entries [modelo-dominio_ProjectKB_Instance_89])
+	(referenced_maps [modelo-dominio_ProjectKB_Instance_87]))
 
 ([modelo-dominio_ProjectKB_Instance_11] of  Property_List
 )
@@ -769,43 +769,43 @@
 ([modelo-dominio_ProjectKB_Instance_7] of  Property_List
 )
 
-([modelo-dominio_ProjectKB_Instance_78] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([modelo-dominio_ProjectKB_Instance_79] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
 ([modelo-dominio_ProjectKB_Instance_8] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [modelo-dominio_ProjectKB_Instance_9])
 	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
 
-([modelo-dominio_ProjectKB_Instance_80] of  String
+([modelo-dominio_ProjectKB_Instance_84] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([modelo-dominio_ProjectKB_Instance_85] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([modelo-dominio_ProjectKB_Instance_86] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([modelo-dominio_ProjectKB_Instance_81] of  Map
+([modelo-dominio_ProjectKB_Instance_87] of  Map
 
-	(entries [modelo-dominio_ProjectKB_Instance_82]))
+	(entries [modelo-dominio_ProjectKB_Instance_88]))
 
-([modelo-dominio_ProjectKB_Instance_82] of  Map_Entry
+([modelo-dominio_ProjectKB_Instance_88] of  Map_Entry
 
 	(key "modelo-dominio_Instance_0")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "209 18 205 127")
 	(value_class "java.awt.Rectangle"))
 
-([modelo-dominio_ProjectKB_Instance_83] of  Map_Entry
+([modelo-dominio_ProjectKB_Instance_89] of  Map_Entry
 
 	(key "InstanceDisplay.yellow_stickies")
 	(key_class "java.lang.String")
-	(value "modelo-dominio_ProjectKB_Instance_81")
+	(value "modelo-dominio_ProjectKB_Instance_87")
 	(value_class "java.util.Map"))
 
 ([modelo-dominio_ProjectKB_Instance_9] of  Property_List
