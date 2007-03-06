@@ -13,57 +13,62 @@
 			<dow day="sat" working="no"/>
 		</calendar>
 		<currency symbol="R$ " digits="2" positiveOrder="2" negativeOrder="0"/>
-		<summary ScheduleFromStart="yes" CalculateCostProgress="no" MultipleCriticalPaths="no" CriticalSlack="0d" Name="ESCOLA (escola.berlios.de)" Manager="F&#225;bio Nogueira de Lucena" Author="F&#225;bio Nogueira de Lucena" Title="ESCOLA (escola.berlios.de)" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00"/>
+		<summary ScheduleFromStart="yes" CalculateCostProgress="no" MultipleCriticalPaths="no" CriticalSlack="0d" Name="ESCOLA (escola.berlios.de)" Manager="F&#225;bio Nogueira de Lucena" Author="F&#225;bio Nogueira de Lucena" Title="ESCOLA (escola.berlios.de)" Work="2849h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00"/>
 		<tasks>
-			<task ID="0" UniqueID="0" OutlineLevel="0" Name="ESCOLA (escola.berlios.de)" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes"/>
-			<task ID="1" UniqueID="1" OutlineLevel="1" Name="Escola" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="2" UniqueID="2" OutlineLevel="2" Name="Ger&#234;ncia de projeto" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="3" UniqueID="22" OutlineLevel="3" Name="Infra-estrutura" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="4" UniqueID="26" OutlineLevel="4" Name="Ferramentas" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="5" UniqueID="48" OutlineLevel="5" Name="Definir ferramentas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="6" UniqueID="50" OutlineLevel="5" Name="Apresentar ferramentas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="7" UniqueID="49" OutlineLevel="5" Name="Atualizar ferramentas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="8" UniqueID="24" OutlineLevel="4" Name="Builds di&#225;rios" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="9" UniqueID="46" OutlineLevel="5" Name="Configurar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="10" UniqueID="47" OutlineLevel="5" Name="Manutenir" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="11" UniqueID="25" OutlineLevel="4" Name="Portal" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="12" UniqueID="44" OutlineLevel="5" Name="Gerir contas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="13" UniqueID="45" OutlineLevel="5" Name="Atualizar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="14" UniqueID="62" OutlineLevel="3" Name="Fechamento" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="15" UniqueID="63" OutlineLevel="4" Name="Gerar release" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="16" UniqueID="64" OutlineLevel="4" Name="Atualizar portal" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="17" UniqueID="19" OutlineLevel="3" Name="Reuni&#227;o de abertura (Kick-off)" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="18" UniqueID="7" OutlineLevel="3" Name="Requisi&#231;&#245;es de mudan&#231;as" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="19" UniqueID="32" OutlineLevel="4" Name="Registrar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="20" UniqueID="33" OutlineLevel="4" Name="Avaliar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="21" UniqueID="27" OutlineLevel="3" Name="Acompanhamento" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="0" UniqueID="0" OutlineLevel="0" Name="ESCOLA (escola.berlios.de)" Work="2849h" RemainingWork="2849h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes"/>
+			<task ID="1" UniqueID="1" OutlineLevel="1" Name="Escola" Work="2849h" RemainingWork="2849h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="2" UniqueID="2" OutlineLevel="2" Name="Ger&#234;ncia de projeto" Work="452h" RemainingWork="452h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="3" UniqueID="22" OutlineLevel="3" Name="Infra-estrutura" Work="133h" RemainingWork="133h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="4" UniqueID="26" OutlineLevel="4" Name="Ferramentas" Work="27h" RemainingWork="27h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="5" UniqueID="48" OutlineLevel="5" Name="Definir ferramentas" Work="3h" RemainingWork="3h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="6" UniqueID="50" OutlineLevel="5" Name="Apresentar ferramentas" Work="14h" RemainingWork="14h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="7" UniqueID="49" OutlineLevel="5" Name="Atualizar ferramentas" Work="10h" RemainingWork="10h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="8" UniqueID="24" OutlineLevel="4" Name="Builds di&#225;rios" Work="32h" RemainingWork="32h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="9" UniqueID="46" OutlineLevel="5" Name="Configurar" Work="8h" RemainingWork="8h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="10" UniqueID="47" OutlineLevel="5" Name="Manutenir" Work="24h" RemainingWork="24h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="11" UniqueID="25" OutlineLevel="4" Name="Portal" Work="74h" RemainingWork="74h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="12" UniqueID="44" OutlineLevel="5" Name="Gerir contas" Work="10h" RemainingWork="10h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="13" UniqueID="45" OutlineLevel="5" Name="Atualizar" Work="64h" RemainingWork="64h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="14" UniqueID="62" OutlineLevel="3" Name="Fechamento" Work="5h" RemainingWork="5h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="15" UniqueID="63" OutlineLevel="4" Name="Gerar release" Work="3h" RemainingWork="3h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="16" UniqueID="64" OutlineLevel="4" Name="Atualizar portal" Work="2h" RemainingWork="2h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="17" UniqueID="19" OutlineLevel="3" Name="Reuni&#227;o de abertura (Kick-off)" Work="14h" RemainingWork="14h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="18" UniqueID="7" OutlineLevel="3" Name="Requisi&#231;&#245;es de mudan&#231;as" Work="45h" RemainingWork="45h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="19" UniqueID="32" OutlineLevel="4" Name="Registrar" Work="5h" RemainingWork="5h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="20" UniqueID="33" OutlineLevel="4" Name="Avaliar" Work="40h" RemainingWork="40h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="21" UniqueID="27" OutlineLevel="3" Name="Acompanhamento" Work="255h" RemainingWork="255h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 			<task ID="22" UniqueID="51" OutlineLevel="4" Name="Esclarecer d&#250;vidas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="23" UniqueID="43" OutlineLevel="4" Name="Atualizar planos" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="24" UniqueID="34" OutlineLevel="4" Name="Elaborar e divulgar status" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="25" UniqueID="29" OutlineLevel="4" Name="Registrar li&#231;&#245;es aprendidas" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="26" UniqueID="30" OutlineLevel="4" Name="Gerir reuni&#227;o" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="27" UniqueID="3" OutlineLevel="2" Name="Arquitetura" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="28" UniqueID="11" OutlineLevel="3" Name="Definir" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="29" UniqueID="60" OutlineLevel="3" Name="Validar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="30" UniqueID="6" OutlineLevel="2" Name="Constru&#231;&#227;o" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="31" UniqueID="56" OutlineLevel="3" Name="Itera&#231;&#227;o 1..*" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="32" UniqueID="57" OutlineLevel="4" Name="Planejar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="33" UniqueID="58" OutlineLevel="4" Name="Executar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="34" UniqueID="59" OutlineLevel="4" Name="Concluir" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="35" UniqueID="20" OutlineLevel="2" Name="Qualidade" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="36" UniqueID="38" OutlineLevel="3" Name="Controle de qualidade" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="37" UniqueID="39" OutlineLevel="4" Name="Executar testes" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="38" UniqueID="40" OutlineLevel="4" Name="Realizar inspe&#231;&#245;es de c&#243;digo" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="39" UniqueID="41" OutlineLevel="4" Name="Relatar n&#227;o conformidades" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="40" UniqueID="21" OutlineLevel="3" Name="Testes" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="41" UniqueID="36" OutlineLevel="4" Name="Elaborar testes de integra&#231;&#227;o" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="42" UniqueID="37" OutlineLevel="4" Name="Elaborar testes de aceita&#231;&#227;o" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="43" UniqueID="5" OutlineLevel="2" Name="Instala&#231;&#227;o" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="44" UniqueID="10" OutlineLevel="3" Name="Definir forma" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="45" UniqueID="61" OutlineLevel="3" Name="Implementar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
-			<task ID="46" UniqueID="23" OutlineLevel="3" Name="Documentar" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="23" UniqueID="43" OutlineLevel="4" Name="Atualizar planos" Work="24h" RemainingWork="24h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="24" UniqueID="34" OutlineLevel="4" Name="Elaborar e divulgar status" Work="36h" RemainingWork="36h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="25" UniqueID="29" OutlineLevel="4" Name="Registrar li&#231;&#245;es aprendidas" Work="3h" RemainingWork="3h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="26" UniqueID="30" OutlineLevel="4" Name="Gerir reuni&#227;o" Work="192h" RemainingWork="192h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="27" UniqueID="3" OutlineLevel="2" Name="Arquitetura" Work="30h" RemainingWork="30h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="28" UniqueID="11" OutlineLevel="3" Name="Definir" Work="20h" RemainingWork="20h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="29" UniqueID="60" OutlineLevel="3" Name="Validar" Work="10h" RemainingWork="10h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="30" UniqueID="6" OutlineLevel="2" Name="Constru&#231;&#227;o (20 itera&#231;&#245;es)" Work="2040h" RemainingWork="2040h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="31" UniqueID="56" OutlineLevel="3" Name="Itera&#231;&#227;o 1..*" Work="2040h" RemainingWork="2040h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="32" UniqueID="57" OutlineLevel="4" Name="Planejar" Work="20h" RemainingWork="20h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="33" UniqueID="58" OutlineLevel="4" Name="Executar" Work="2000h" RemainingWork="2000h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="34" UniqueID="59" OutlineLevel="4" Name="Concluir" Work="20h" RemainingWork="20h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="35" UniqueID="20" OutlineLevel="2" Name="Qualidade" Work="313h" RemainingWork="313h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="36" UniqueID="38" OutlineLevel="3" Name="Controle de qualidade" Work="113h" RemainingWork="113h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="37" UniqueID="39" OutlineLevel="4" Name="Executar testes" Work="10h" RemainingWork="10h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="38" UniqueID="40" OutlineLevel="4" Name="Realizar inspe&#231;&#245;es de c&#243;digo" Work="100h" RemainingWork="100h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="39" UniqueID="41" OutlineLevel="4" Name="Relatar n&#227;o conformidades" Work="3h" RemainingWork="3h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="40" UniqueID="21" OutlineLevel="3" Name="Testes" Work="200h" RemainingWork="200h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="41" UniqueID="36" OutlineLevel="4" Name="Elaborar testes de integra&#231;&#227;o" Work="100h" RemainingWork="100h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="42" UniqueID="37" OutlineLevel="4" Name="Elaborar testes de aceita&#231;&#227;o" Work="100h" RemainingWork="100h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="43" UniqueID="5" OutlineLevel="2" Name="Instala&#231;&#227;o" Work="14h" RemainingWork="14h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="44" UniqueID="10" OutlineLevel="3" Name="Definir forma" Work="4h" RemainingWork="4h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="45" UniqueID="61" OutlineLevel="3" Name="Implementar" Work="8h" RemainingWork="8h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="46" UniqueID="23" OutlineLevel="3" Name="Documentar" Work="2h" RemainingWork="2h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 		</tasks>
-		<outline current="62"/>
+		<outline current="5">
+			<collapse uid="3"/>
+			<collapse uid="6"/>
+			<collapse uid="38"/>
+			<collapse uid="5"/>
+		</outline>
 	</proj>
 	<printInfo mode="fit" orient="landscape" pagesWide="1" pagesHigh="1" scale="100%" bw="no" enlarge="no" byColumn="no" adjustPageBreaks="no" marginTop="36pt" marginLeft="36pt" marginBottom="36pt" marginRight="36pt"/>
 	<pageLayouts>
@@ -202,7 +207,7 @@
 			<border id="frame" bkcolor="none"/>
 		</pageLayout>
 	</pageLayouts>
-	<views current="Planning View" current_wbs="Planning View" mode="normal">
+	<views current="Hours and Cost View" current_wbs="Hours and Cost View" mode="normal">
 		<wbs_view id="Critical Path View 2" pagelayout="Page Layout 8" outlinesymbolpos="bottomcenter">
 			<item id="summary" before="14.4pt"/>
 			<item id="task" before="7.2pt" listmode="stemleft"/>
@@ -252,6 +257,9 @@
 					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
 				</row>
 			</grid>
+<wbs_diff>
+</wbs_diff>
+
 		</wbs_view>
 		<wbs_view id="Critical Path View" pagelayout="Page Layout 1" outlinesymbolpos="bottomcenter">
 			<item id="summary" before="14.4pt"/>
@@ -398,7 +406,7 @@
 </wbs_diff>
 
 		</wbs_view>
-		<wbs_view id="Hours and Cost View" pagelayout="Page Layout 6" outlinesymbolpos="bottomcenter">
+		<wbs_view id="Hours and Cost View" pagelayout="Page Layout 6" outlinesymbolpos="bottomcenter" field="Work">
 			<item id="summary" before="18pt"/>
 			<item id="task" before="14.4pt" listmode="stemleft"/>
 			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
@@ -413,25 +421,110 @@
 				<border_edge id="bottom" color="gray"/>
 				<border_edge id="right" color="gray"/>
 			</border>
-			<grid id="summary" rows="2" cols="2">
+			<grid id="summary" rows="2" cols="1">
 				<row stretch="yes">
-					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="25"/>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" charlen="25"/>
 				</row>
 				<row>
 					<cell field="Work" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
-					<cell field="Cost" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
 				</row>
 			</grid>
-			<grid id="task" rows="2" cols="2">
+			<grid id="task" rows="2" cols="1">
 				<row stretch="yes">
-					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" charlen="25"/>
+					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" charlen="25"/>
 				</row>
 				<row>
 					<cell field="Work" format="5" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
-					<cell field="Cost" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid" bottom_s="solid"/>
 				</row>
 			</grid>
 <wbs_diff>
+	<treediff id="48">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="50">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="49">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="46">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="47">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="44">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="45">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="63">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="64">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="32">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="33">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="51">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="43">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="34">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="29">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="30">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="11">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="60">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="57">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="58">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="59">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="39">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="40">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="41">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="36">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="37">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="10">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="61">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="23">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
 </wbs_diff>
 
 		</wbs_view>
@@ -471,6 +564,9 @@
 					<cell field="Finish" format="1" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" top_s="solid"/>
 				</row>
 			</grid>
+<wbs_diff>
+</wbs_diff>
+
 		</wbs_view>
 		<wbs_view id="Planning View" pagelayout="Page Layout 1" outlinesymbolpos="bottomcenter">
 			<item id="summary" drop="28.8pt" before="10.8pt"/>
@@ -591,6 +687,15 @@
 	<treediff id="6">
 		<item calign="branch_nearest"/>
 	</treediff>
+	<treediff id="57">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="58">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
+	<treediff id="59">
+		<border shdir="none" shdepth="0pt"/>
+	</treediff>
 	<treediff id="20">
 		<item calign="branch_nearest"/>
 	</treediff>
@@ -608,21 +713,26 @@
 	</treediff>
 	<treediff id="36">
 		<item listmode="stemleft"/>
+		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="37">
 		<item listmode="stemleft"/>
+		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="5">
 		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="10">
 		<item listmode="stemleft"/>
+		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="61">
 		<item calign="branch_nearest" listmode="stemleft"/>
+		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="23">
 		<item listmode="stemleft"/>
+		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 </wbs_diff>
 
