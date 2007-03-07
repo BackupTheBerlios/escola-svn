@@ -1,0 +1,8 @@
+
+PROJETO ESCOLA
+Implementar um sistema de informação para
+apoio de atividades acadêmicas. Este projeto
+é derivado do Projeto SISPG.
+
+Coordenador:
+Fábio Nogueira de Lucena
