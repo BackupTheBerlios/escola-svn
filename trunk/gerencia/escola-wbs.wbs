@@ -16,7 +16,7 @@
 		<summary ScheduleFromStart="yes" CalculateCostProgress="no" MultipleCriticalPaths="no" CriticalSlack="0d" Name="ESCOLA (escola.berlios.de)" Manager="F&#225;bio Nogueira de Lucena" Author="F&#225;bio Nogueira de Lucena" Title="ESCOLA (escola.berlios.de)" Work="2849h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00"/>
 		<tasks>
 			<task ID="0" UniqueID="0" OutlineLevel="0" Name="ESCOLA (escola.berlios.de)" Work="2849h" RemainingWork="2849h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes"/>
-			<task ID="1" UniqueID="1" OutlineLevel="1" Name="Escola" Work="2849h" RemainingWork="2849h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
+			<task ID="1" UniqueID="1" OutlineLevel="1" Name="Escola 1.0" Work="2849h" RemainingWork="2849h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 			<task ID="2" UniqueID="2" OutlineLevel="2" Name="Ger&#234;ncia de projeto" Work="452h" RemainingWork="452h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 			<task ID="3" UniqueID="22" OutlineLevel="3" Name="Infra-estrutura" Work="133h" RemainingWork="133h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 			<task ID="4" UniqueID="26" OutlineLevel="4" Name="Ferramentas" Work="27h" RemainingWork="27h" Duration="1d" RemainingDuration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
@@ -63,10 +63,17 @@
 			<task ID="45" UniqueID="61" OutlineLevel="3" Name="Implementar" Work="8h" RemainingWork="8h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 			<task ID="46" UniqueID="23" OutlineLevel="3" Name="Documentar" Work="2h" RemainingWork="2h" Duration="1d" Start="2007-03-02T08:00" Finish="2007-03-02T17:00" EarlyStart="2007-03-02T08:00" EarlyFinish="2007-03-02T17:00" LateStart="2007-03-02T08:00" LateFinish="2007-03-02T17:00" Critical="yes" EffortDriven="yes" FixedCostAccrual="Prorated"/>
 		</tasks>
-		<outline current="5">
+		<outline current="1">
+			<collapse uid="26"/>
+			<collapse uid="24"/>
+			<collapse uid="25"/>
+			<collapse uid="62"/>
+			<collapse uid="7"/>
+			<collapse uid="27"/>
 			<collapse uid="3"/>
-			<collapse uid="6"/>
+			<collapse uid="56"/>
 			<collapse uid="38"/>
+			<collapse uid="21"/>
 			<collapse uid="5"/>
 		</outline>
 	</proj>
@@ -207,7 +214,7 @@
 			<border id="frame" bkcolor="none"/>
 		</pageLayout>
 	</pageLayouts>
-	<views current="Hours and Cost View" current_wbs="Hours and Cost View" mode="normal">
+	<views current="Planning View" current_wbs="Planning View" mode="normal">
 		<wbs_view id="Critical Path View 2" pagelayout="Page Layout 8" outlinesymbolpos="bottomcenter">
 			<item id="summary" before="14.4pt"/>
 			<item id="task" before="7.2pt" listmode="stemleft"/>
@@ -596,7 +603,7 @@
 		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="22">
-		<item calign="branch_nearest" listmode="stemleft"/>
+		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="48">
 		<item listmode="stemleft"/>
@@ -627,7 +634,7 @@
 		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="62">
-		<item calign="branch_nearest" listmode="stemleft"/>
+		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="63">
 		<item calign="branch_nearest" listmode="stemleft"/>
@@ -638,10 +645,10 @@
 		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="19">
-		<item calign="branch_nearest" listmode="stemleft"/>
+		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="7">
-		<item calign="branch_nearest" listmode="stemleft"/>
+		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="32">
 		<item listmode="stemleft"/>
@@ -652,7 +659,7 @@
 		<border shdir="none" shdepth="0pt"/>
 	</treediff>
 	<treediff id="27">
-		<item calign="branch_nearest" listmode="stemleft"/>
+		<item calign="branch_nearest"/>
 	</treediff>
 	<treediff id="51">
 		<item calign="branch_nearest" listmode="stemleft"/>
