@@ -59,10 +59,14 @@
 <node CREATED="1176990524375" ID="Freemind_Link_338912306" MODIFIED="1176990529687" TEXT="Cobertura de 100%"/>
 <node CREATED="1176990552140" ID="Freemind_Link_1435713420" MODIFIED="1176990581093" TEXT="Complexidade ciclom&#xe1;tica m&#xe1;xima de 15"/>
 </node>
-<node CREATED="1176990665218" ID="Freemind_Link_505446730" MODIFIED="1176990676937" TEXT="Relatar n&#xe3;o conformidades semanalmente"/>
+<node CREATED="1176990665218" ID="Freemind_Link_505446730" MODIFIED="1178030434296" TEXT="Relatar n&#xe3;o conformidades quinzenalmente"/>
 <node CREATED="1176990687562" ID="Freemind_Link_794676537" MODIFIED="1176990692890" TEXT="Testes de integra&#xe7;&#xe3;o"/>
 <node CREATED="1176990694140" ID="Freemind_Link_915221167" MODIFIED="1176990697593" TEXT="Testes de aceita&#xe7;&#xe3;o"/>
 <node CREATED="1176995503562" ID="Freemind_Link_1856618072" MODIFIED="1176995525468" TEXT="Verifica&#xe7;&#xe3;o de escopo semanal"/>
+<node CREATED="1178030444468" ID="Freemind_Link_570224399" MODIFIED="1178030452687" TEXT="Facilidade de uso">
+<node CREATED="1178030454609" ID="Freemind_Link_1627423678" MODIFIED="1178030461156" TEXT="Projeto de intera&#xe7;&#xe3;o"/>
+<node CREATED="1178030463171" ID="Freemind_Link_1553240852" MODIFIED="1178030486125" TEXT="Valida&#xe7;&#xe3;o 1, 2 e 3"/>
+</node>
 </node>
 <node CREATED="1177001390921" ID="Freemind_Link_1498130940" MODIFIED="1177002154234" POSITION="left" STYLE="bubble" TEXT="Auto-treinamento">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
