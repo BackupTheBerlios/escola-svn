@@ -1,6 +1,6 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1176989755171" ID="Freemind_Link_1096659094" MODIFIED="1177002517984" TEXT="Escola">
+<node CREATED="1176989755171" ID="Freemind_Link_1096659094" MODIFIED="1178374489000" TEXT="Escola 1.0">
 <node CREATED="1176989803125" ID="_" MODIFIED="1177002135828" POSITION="right" STYLE="bubble" TEXT="Software">
 <edge WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -32,25 +32,14 @@
 <node CREATED="1176991773234" ID="Freemind_Link_23874001" MODIFIED="1176991779500" TEXT="Cadastrar usu&#xe1;rio"/>
 <node CREATED="1177010125765" ID="Freemind_Link_151796712" MODIFIED="1177425914102" TEXT="ca-src, ca-data e ca-ui.jar"/>
 </node>
-<node CREATED="1176989904062" ID="Freemind_Link_75359271" MODIFIED="1177426873798" TEXT="Administrar curso">
+<node CREATED="1176989904062" ID="Freemind_Link_75359271" MODIFIED="1178374949265" TEXT="Administra&#xe7;&#xe3;o de curso">
 <icon BUILTIN="full-2"/>
 <node CREATED="1176991928312" ID="Freemind_Link_526802580" MODIFIED="1177426884446" TEXT="Cadastrar curso"/>
 <node CREATED="1176991941812" ID="Freemind_Link_429139860" MODIFIED="1177426896302" TEXT="Criar turma"/>
 <node CREATED="1176991969843" ID="Freemind_Link_493921486" MODIFIED="1177426912486" TEXT="Matricular aluno em curso"/>
 <node CREATED="1177010139265" ID="Freemind_Link_1629709443" MODIFIED="1177425914100" TEXT="curso-src, curso-data e curso-ui.jar"/>
-<node CREATED="1177426915260" ID="Freemind_Link_562201682" MODIFIED="1177426920390" TEXT="Matricular aluno em turma"/>
+<node CREATED="1177426915260" ID="Freemind_Link_562201682" MODIFIED="1178374291953" TEXT="Registrar interesse em turma"/>
 </node>
-<node CREATED="1177010184296" ID="Freemind_Link_1463480053" MODIFIED="1177425914092" TEXT="Integra&#xe7;&#xe3;o">
-<icon BUILTIN="full-6"/>
-<node CREATED="1177010193187" ID="Freemind_Link_1830425568" MODIFIED="1177425914089" TEXT="Persist&#xea;ncia"/>
-<node CREATED="1177010197625" ID="Freemind_Link_993876977" MODIFIED="1177425914087" TEXT="Dados"/>
-</node>
-</node>
-<node CREATED="1176989809296" ID="Freemind_Link_313142187" MODIFIED="1177002161296" POSITION="left" STYLE="bubble" TEXT="Arquitetura">
-<edge WIDTH="thin"/>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1176990438484" ID="Freemind_Link_956190808" MODIFIED="1176991121281" TEXT="Definir"/>
-<node CREATED="1176990444296" ID="Freemind_Link_319939173" MODIFIED="1176990447671" TEXT="Validar"/>
 </node>
 <node CREATED="1176989822750" ID="Freemind_Link_1253500237" MODIFIED="1177002157703" POSITION="left" STYLE="bubble" TEXT="Qualidade">
 <edge WIDTH="thin"/>
@@ -70,9 +59,15 @@
 </node>
 <node CREATED="1177001390921" ID="Freemind_Link_1498130940" MODIFIED="1177002154234" POSITION="left" STYLE="bubble" TEXT="Auto-treinamento">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1177001413656" ID="Freemind_Link_213767347" LINK="http://springframework.org" MODIFIED="1177417587804" TEXT="Spring"/>
-<node CREATED="1177001431734" ID="Freemind_Link_1273538317" LINK="http://acegisecurity.org/" MODIFIED="1177417572912" TEXT="Spring Security (Acegi Security)"/>
-<node CREATED="1177001500468" ID="Freemind_Link_1819722775" LINK="http://java.sun.com/javaee/javaserverfaces/" MODIFIED="1177002551625" TEXT="JavaServer Faces"/>
+<node CREATED="1177001413656" ID="Freemind_Link_213767347" LINK="http://springframework.org" MODIFIED="1178369601843" TEXT="Spring">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1177001431734" ID="Freemind_Link_1273538317" LINK="http://acegisecurity.org/" MODIFIED="1178369605390" TEXT="Spring Security (Acegi Security)">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1177001500468" ID="Freemind_Link_1819722775" LINK="http://java.sun.com/javaee/javaserverfaces/" MODIFIED="1178369608046" TEXT="JavaServer Faces">
+<icon BUILTIN="attach"/>
+</node>
 </node>
 <node CREATED="1176989840203" ID="Freemind_Link_1370494683" MODIFIED="1177002148468" POSITION="right" STYLE="bubble" TEXT="Instala&#xe7;&#xe3;o">
 <edge WIDTH="thin"/>
@@ -108,12 +103,23 @@
 <node CREATED="1176989953406" ID="Freemind_Link_1712240055" MODIFIED="1176989959296" TEXT="Reuni&#xe3;o de abertura (kick-off)"/>
 <node CREATED="1176989971500" ID="Freemind_Link_389171507" MODIFIED="1176989974828" TEXT="Controle de mudan&#xe7;as">
 <node CREATED="1176990295000" ID="Freemind_Link_1424720062" MODIFIED="1176990299625" TEXT="Registrar"/>
-<node CREATED="1176990301671" ID="Freemind_Link_1015762326" MODIFIED="1176990303343" TEXT="Avaliar"/>
+<node CREATED="1176990301671" ID="Freemind_Link_1015762326" MODIFIED="1178374557515" TEXT="Avaliar"/>
 </node>
 <node CREATED="1176989979046" ID="Freemind_Link_1525653070" MODIFIED="1176990109343" TEXT="Acompanhamento">
 <node CREATED="1176990395968" ID="Freemind_Link_1128612048" MODIFIED="1176990402531" TEXT="Atualizar planos"/>
 <node CREATED="1176990406859" ID="Freemind_Link_1709542555" MODIFIED="1176990411000" TEXT="Elaborar e divulgar status"/>
 <node CREATED="1176990417968" ID="Freemind_Link_642562505" MODIFIED="1176990420421" TEXT="Gerir reuni&#xe3;o"/>
+</node>
+</node>
+<node CREATED="1177010184296" ID="Freemind_Link_1463480053" MODIFIED="1178374630015" POSITION="right" TEXT="Sistema">
+<node CREATED="1177010197625" ID="Freemind_Link_993876977" MODIFIED="1178376638046" TEXT="Modelo de dom&#xed;nio"/>
+<node CREATED="1178374432625" ID="Freemind_Link_1168527982" MODIFIED="1178374583062" TEXT="Projeto de intera&#xe7;&#xe3;o">
+<node CREATED="1178374683468" ID="Freemind_Link_1092610200" MODIFIED="1178374691593" TEXT="Projeto por &quot;m&#xf3;dulo&quot;"/>
+<node CREATED="1178374694437" ID="Freemind_Link_153955639" MODIFIED="1178374699875" TEXT="Integra&#xe7;&#xe3;o das propostas"/>
+</node>
+<node CREATED="1176989809296" ID="Freemind_Link_313142187" MODIFIED="1178374650265" STYLE="bubble" TEXT="Arquitetura">
+<edge WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
 </node>
