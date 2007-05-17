@@ -1,9 +1,9 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1176989755171" ID="Freemind_Link_1096659094" MODIFIED="1178374489000" TEXT="Escola 1.0">
-<node CREATED="1176989803125" ID="_" MODIFIED="1177002135828" POSITION="right" STYLE="bubble" TEXT="Software">
+<node CREATED="1176989803125" ID="_" MODIFIED="1179429009939" POSITION="right" STYLE="bubble" TEXT="(P) Software">
 <edge WIDTH="thin"/>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#000000" CREATED="1176989846750" ID="Freemind_Link_1048992184" MODIFIED="1176991370546" TEXT="Notas e freq&#xfc;&#xea;ncias">
 <icon BUILTIN="full-3"/>
 <node CREATED="1176991415578" ID="Freemind_Link_431455152" MODIFIED="1177426020895" TEXT="Atualizar notas e freq&#xfc;&#xea;ncias"/>
@@ -52,10 +52,6 @@
 <node CREATED="1176990687562" ID="Freemind_Link_794676537" MODIFIED="1176990692890" TEXT="Testes de integra&#xe7;&#xe3;o"/>
 <node CREATED="1176990694140" ID="Freemind_Link_915221167" MODIFIED="1176990697593" TEXT="Testes de aceita&#xe7;&#xe3;o"/>
 <node CREATED="1176995503562" ID="Freemind_Link_1856618072" MODIFIED="1176995525468" TEXT="Verifica&#xe7;&#xe3;o de escopo semanal"/>
-<node CREATED="1178030444468" ID="Freemind_Link_570224399" MODIFIED="1178030452687" TEXT="Facilidade de uso">
-<node CREATED="1178030454609" ID="Freemind_Link_1627423678" MODIFIED="1178030461156" TEXT="Projeto de intera&#xe7;&#xe3;o"/>
-<node CREATED="1178030463171" ID="Freemind_Link_1553240852" MODIFIED="1178030486125" TEXT="Valida&#xe7;&#xe3;o 1, 2 e 3"/>
-</node>
 </node>
 <node CREATED="1177001390921" ID="Freemind_Link_1498130940" MODIFIED="1177002154234" POSITION="left" STYLE="bubble" TEXT="Auto-treinamento">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -69,18 +65,16 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node CREATED="1176989840203" ID="Freemind_Link_1370494683" MODIFIED="1177002148468" POSITION="right" STYLE="bubble" TEXT="Instala&#xe7;&#xe3;o">
+<node CREATED="1176989840203" ID="Freemind_Link_1370494683" MODIFIED="1179428518548" POSITION="right" STYLE="bubble" TEXT="(I) Instala&#xe7;&#xe3;o">
 <edge WIDTH="thin"/>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1176990710984" ID="Freemind_Link_1538589992" MODIFIED="1176990712875" TEXT="Definir"/>
-<node CREATED="1176990714750" ID="Freemind_Link_670839433" MODIFIED="1176990718250" TEXT="Implementar"/>
-<node CREATED="1176990721109" ID="Freemind_Link_547655356" MODIFIED="1176990722921" TEXT="Documentar"/>
-<node CREATED="1176990726609" ID="Freemind_Link_796625958" MODIFIED="1176990728437" TEXT="Testar"/>
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1176990710984" ID="Freemind_Link_1538589992" MODIFIED="1179428551340" TEXT="I1 Documenta&#xe7;&#xe3;o de Instala&#xe7;&#xe3;o"/>
+<node CREATED="1176990714750" ID="Freemind_Link_670839433" MODIFIED="1179428501071" TEXT="I2 Software"/>
 </node>
-<node CREATED="1176989818171" ID="Freemind_Link_1737730864" MODIFIED="1177002142906" POSITION="left" STYLE="bubble" TEXT="Ger&#xea;ncia de projeto">
+<node CREATED="1176989818171" ID="Freemind_Link_1737730864" MODIFIED="1179429243922" POSITION="left" STYLE="bubble" TEXT="(G) Ger&#xea;ncia de projeto">
 <edge WIDTH="thin"/>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1176989931828" ID="Freemind_Link_726699573" MODIFIED="1176989934859" TEXT="Infra-estrutura">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1176989931828" ID="Freemind_Link_726699573" MODIFIED="1179429253722" TEXT="(G1) Infra-estrutura">
 <node CREATED="1176990008156" ID="Freemind_Link_809845818" MODIFIED="1176990012859" TEXT="Ferramentas">
 <node CREATED="1176990031078" ID="Freemind_Link_1424552132" MODIFIED="1176990032484" TEXT="Definir"/>
 <node CREATED="1176990034703" ID="Freemind_Link_881250854" MODIFIED="1177425914084" TEXT="Apresentar"/>
@@ -99,8 +93,13 @@
 <node CREATED="1176990277687" ID="Freemind_Link_1703480588" MODIFIED="1176990279312" TEXT="Fontes"/>
 </node>
 <node CREATED="1176990235359" ID="Freemind_Link_1453430510" MODIFIED="1176990247609" TEXT="Apresentar resultado (defesa)"/>
+<node CREATED="1179409148631" ID="Freemind_Link_953489126" MODIFIED="1179409190174" TEXT="Confirmar todos os requisitos"/>
+<node CREATED="1179409231490" ID="Freemind_Link_1190275745" MODIFIED="1179409279890" TEXT="Confirmar fim instala&#xe7;&#xe3;o"/>
+<node CREATED="1179409303312" ID="Freemind_Link_1388890764" MODIFIED="1179409324682" TEXT="Confraterniza&#xe7;&#xe3;o (veja premia&#xe7;&#xe3;o)"/>
 </node>
-<node CREATED="1176989953406" ID="Freemind_Link_1712240055" MODIFIED="1176989959296" TEXT="Reuni&#xe3;o de abertura (kick-off)"/>
+<node CREATED="1176989953406" ID="Freemind_Link_1712240055" MODIFIED="1179429359028" TEXT="(G0) Reuni&#xe3;o de abertura (kick-off)">
+<icon BUILTIN="button_ok"/>
+</node>
 <node CREATED="1176989971500" ID="Freemind_Link_389171507" MODIFIED="1176989974828" TEXT="Controle de mudan&#xe7;as">
 <node CREATED="1176990295000" ID="Freemind_Link_1424720062" MODIFIED="1176990299625" TEXT="Registrar"/>
 <node CREATED="1176990301671" ID="Freemind_Link_1015762326" MODIFIED="1178374557515" TEXT="Avaliar"/>
@@ -111,15 +110,14 @@
 <node CREATED="1176990417968" ID="Freemind_Link_642562505" MODIFIED="1176990420421" TEXT="Gerir reuni&#xe3;o"/>
 </node>
 </node>
-<node CREATED="1177010184296" ID="Freemind_Link_1463480053" MODIFIED="1178374630015" POSITION="right" TEXT="Sistema">
-<node CREATED="1177010197625" ID="Freemind_Link_993876977" MODIFIED="1178376638046" TEXT="Modelo de dom&#xed;nio"/>
-<node CREATED="1178374432625" ID="Freemind_Link_1168527982" MODIFIED="1178374583062" TEXT="Projeto de intera&#xe7;&#xe3;o">
-<node CREATED="1178374683468" ID="Freemind_Link_1092610200" MODIFIED="1178374691593" TEXT="Projeto por &quot;m&#xf3;dulo&quot;"/>
-<node CREATED="1178374694437" ID="Freemind_Link_153955639" MODIFIED="1178374699875" TEXT="Integra&#xe7;&#xe3;o das propostas"/>
-</node>
-<node CREATED="1176989809296" ID="Freemind_Link_313142187" MODIFIED="1178374650265" STYLE="bubble" TEXT="Arquitetura">
+<node CREATED="1177010184296" ID="Freemind_Link_1463480053" MODIFIED="1179419711760" POSITION="right" TEXT="(S) Sistema">
+<node CREATED="1177010197625" ID="Freemind_Link_993876977" MODIFIED="1179419687330" STYLE="bubble" TEXT="S1 Modelo de dom&#xed;nio"/>
+<node CREATED="1178374432625" ID="Freemind_Link_1168527982" MODIFIED="1179419691928" STYLE="bubble" TEXT="S2 Projeto de intera&#xe7;&#xe3;o"/>
+<node CREATED="1176989809296" ID="Freemind_Link_313142187" MODIFIED="1179419699048" STYLE="bubble" TEXT="S3 Arquitetura">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1179413777675" ID="Freemind_Link_1454936851" MODIFIED="1179413804003" TEXT="Documenta&#xe7;&#xe3;o"/>
+<node CREATED="1179413806178" ID="Freemind_Link_204447301" MODIFIED="1179413810027" TEXT="Projeto exemplo"/>
 </node>
 </node>
 </node>
