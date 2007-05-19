@@ -40,14 +40,15 @@
 <node CREATED="1177010139265" ID="Freemind_Link_1629709443" MODIFIED="1177425914100" TEXT="curso-src, curso-data e curso-ui.jar"/>
 <node CREATED="1177426915260" ID="Freemind_Link_562201682" MODIFIED="1178374291953" TEXT="Registrar interesse em turma"/>
 </node>
+<node CREATED="1179613737625" ID="Freemind_Link_1991813319" MODIFIED="1179613753453" TEXT="Servi&#xe7;os">
+<icon BUILTIN="full-6"/>
+<node CREATED="1179613756078" ID="Freemind_Link_1261997718" MODIFIED="1179613760734" TEXT="Envio de email"/>
+<node CREATED="1179613762625" ID="Freemind_Link_459772904" MODIFIED="1179613789031" TEXT="Express&#xe3;o de nota final"/>
+</node>
 </node>
 <node CREATED="1176989822750" ID="Freemind_Link_1253500237" MODIFIED="1177002157703" POSITION="left" STYLE="bubble" TEXT="Qualidade">
 <edge WIDTH="thin"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1176990628093" ID="Freemind_Link_1981978158" MODIFIED="1176990635687" TEXT="Verifica&#xe7;&#xe3;o di&#xe1;ria">
-<node CREATED="1176990524375" ID="Freemind_Link_338912306" MODIFIED="1176990529687" TEXT="Cobertura de 100%"/>
-<node CREATED="1176990552140" ID="Freemind_Link_1435713420" MODIFIED="1176990581093" TEXT="Complexidade ciclom&#xe1;tica m&#xe1;xima de 15"/>
-</node>
 <node CREATED="1176990665218" ID="Freemind_Link_505446730" MODIFIED="1178030434296" TEXT="Relatar n&#xe3;o conformidades quinzenalmente"/>
 <node CREATED="1176990687562" ID="Freemind_Link_794676537" MODIFIED="1176990692890" TEXT="Testes de integra&#xe7;&#xe3;o"/>
 <node CREATED="1176990694140" ID="Freemind_Link_915221167" MODIFIED="1176990697593" TEXT="Testes de aceita&#xe7;&#xe3;o"/>
@@ -116,8 +117,8 @@
 <node CREATED="1176989809296" ID="Freemind_Link_313142187" MODIFIED="1179419699048" STYLE="bubble" TEXT="S3 Arquitetura">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node CREATED="1179413777675" ID="Freemind_Link_1454936851" MODIFIED="1179413804003" TEXT="Documenta&#xe7;&#xe3;o"/>
-<node CREATED="1179413806178" ID="Freemind_Link_204447301" MODIFIED="1179413810027" TEXT="Projeto exemplo"/>
+<node CREATED="1179413777675" ID="Freemind_Link_1454936851" MODIFIED="1179612793953" TEXT="S3.1 Documenta&#xe7;&#xe3;o"/>
+<node CREATED="1179413806178" ID="Freemind_Link_204447301" MODIFIED="1179612804890" TEXT="S3.2 Projeto exemplo"/>
 </node>
 </node>
 </node>
