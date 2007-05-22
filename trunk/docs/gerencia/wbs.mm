@@ -46,23 +46,23 @@
 <node CREATED="1179613762625" ID="Freemind_Link_459772904" MODIFIED="1179613789031" TEXT="Express&#xe3;o de nota final"/>
 </node>
 </node>
-<node CREATED="1176989822750" ID="Freemind_Link_1253500237" MODIFIED="1177002157703" POSITION="left" STYLE="bubble" TEXT="Qualidade">
+<node CREATED="1176989822750" ID="Freemind_Link_1253500237" MODIFIED="1179861284752" POSITION="left" STYLE="bubble" TEXT="(Q) Qualidade">
 <edge WIDTH="thin"/>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1176990665218" ID="Freemind_Link_505446730" MODIFIED="1178030434296" TEXT="Relatar n&#xe3;o conformidades quinzenalmente"/>
 <node CREATED="1176990687562" ID="Freemind_Link_794676537" MODIFIED="1176990692890" TEXT="Testes de integra&#xe7;&#xe3;o"/>
-<node CREATED="1176990694140" ID="Freemind_Link_915221167" MODIFIED="1176990697593" TEXT="Testes de aceita&#xe7;&#xe3;o"/>
+<node CREATED="1176990694140" ID="Freemind_Link_915221167" MODIFIED="1179861299304" TEXT="(Q1) Testes de aceita&#xe7;&#xe3;o"/>
 <node CREATED="1176995503562" ID="Freemind_Link_1856618072" MODIFIED="1176995525468" TEXT="Verifica&#xe7;&#xe3;o de escopo semanal"/>
 </node>
-<node CREATED="1177001390921" ID="Freemind_Link_1498130940" MODIFIED="1177002154234" POSITION="left" STYLE="bubble" TEXT="Auto-treinamento">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1177001413656" ID="Freemind_Link_213767347" LINK="http://springframework.org" MODIFIED="1178369601843" TEXT="Spring">
+<node CREATED="1177001390921" ID="Freemind_Link_1498130940" MODIFIED="1179860130008" POSITION="left" STYLE="bubble" TEXT="(A) Auto-treinamento">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1177001413656" ID="Freemind_Link_213767347" LINK="http://springframework.org" MODIFIED="1179860140499" TEXT="(A1) Spring">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1177001431734" ID="Freemind_Link_1273538317" LINK="http://acegisecurity.org/" MODIFIED="1178369605390" TEXT="Spring Security (Acegi Security)">
+<node CREATED="1177001431734" ID="Freemind_Link_1273538317" LINK="http://acegisecurity.org/" MODIFIED="1179860156403" TEXT="(A2) Spring Security (Acegi Security)">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1177001500468" ID="Freemind_Link_1819722775" LINK="http://java.sun.com/javaee/javaserverfaces/" MODIFIED="1178369608046" TEXT="JavaServer Faces">
+<node CREATED="1177001500468" ID="Freemind_Link_1819722775" LINK="http://java.sun.com/javaee/javaserverfaces/" MODIFIED="1179860164059" TEXT="(A3) JavaServer Faces">
 <icon BUILTIN="attach"/>
 </node>
 </node>
@@ -76,12 +76,12 @@
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1176989931828" ID="Freemind_Link_726699573" MODIFIED="1179429253722" TEXT="(G1) Infra-estrutura">
-<node CREATED="1176990008156" ID="Freemind_Link_809845818" MODIFIED="1176990012859" TEXT="Ferramentas">
+<node CREATED="1176990008156" ID="Freemind_Link_809845818" MODIFIED="1179860897641" TEXT="(G1.1) Ferramentas">
 <node CREATED="1176990031078" ID="Freemind_Link_1424552132" MODIFIED="1176990032484" TEXT="Definir"/>
 <node CREATED="1176990034703" ID="Freemind_Link_881250854" MODIFIED="1177425914084" TEXT="Apresentar"/>
 <node CREATED="1176990038062" ID="Freemind_Link_640626002" MODIFIED="1176990039828" TEXT="Atualizar"/>
 </node>
-<node CREATED="1176990017562" ID="Freemind_Link_1330629547" MODIFIED="1176990020671" TEXT="Builds di&#xe1;rios">
+<node CREATED="1176990017562" ID="Freemind_Link_1330629547" MODIFIED="1179860910233" TEXT="(G1.2) Builds di&#xe1;rios">
 <node CREATED="1176990045218" ID="Freemind_Link_127403470" MODIFIED="1176990047312" TEXT="Configurar"/>
 <node CREATED="1176990048765" ID="Freemind_Link_683219811" MODIFIED="1176990050531" TEXT="Manutenir"/>
 </node>
@@ -105,7 +105,7 @@
 <node CREATED="1176990295000" ID="Freemind_Link_1424720062" MODIFIED="1176990299625" TEXT="Registrar"/>
 <node CREATED="1176990301671" ID="Freemind_Link_1015762326" MODIFIED="1178374557515" TEXT="Avaliar"/>
 </node>
-<node CREATED="1176989979046" ID="Freemind_Link_1525653070" MODIFIED="1176990109343" TEXT="Acompanhamento">
+<node CREATED="1176989979046" ID="Freemind_Link_1525653070" MODIFIED="1179861919646" TEXT="(G2) Planos">
 <node CREATED="1176990395968" ID="Freemind_Link_1128612048" MODIFIED="1176990402531" TEXT="Atualizar planos"/>
 <node CREATED="1176990406859" ID="Freemind_Link_1709542555" MODIFIED="1176990411000" TEXT="Elaborar e divulgar status"/>
 <node CREATED="1176990417968" ID="Freemind_Link_642562505" MODIFIED="1176990420421" TEXT="Gerir reuni&#xe3;o"/>
