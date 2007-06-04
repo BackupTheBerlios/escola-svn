@@ -25,7 +25,7 @@
 <icon BUILTIN="full-1"/>
 <node CREATED="1176991683843" ID="Freemind_Link_678598705" MODIFIED="1177426568935" TEXT="Criar/atualizar pessoa f&#xed;sica/jur&#xed;dica"/>
 <node CREATED="1176991719296" ID="Freemind_Link_1973621961" MODIFIED="1177426597375" TEXT="Obter handle de pessoa f&#xed;sica ou jur&#xed;dica"/>
-<node CREATED="1177010098968" ID="Freemind_Link_1379596449" MODIFIED="1177425914104" TEXT="pfj-src, pfj-data e pfj-ui.jar"/>
+<node CREATED="1177010098968" ID="Freemind_Link_1379596449" MODIFIED="1180956969053" TEXT="pfj-src, pfj-data"/>
 </node>
 <node CREATED="1176989894187" ID="Freemind_Link_239325365" MODIFIED="1176991375250" TEXT="Controle de acesso">
 <icon BUILTIN="full-4"/>
