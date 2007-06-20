@@ -4,7 +4,7 @@
 <node CREATED="1176989803125" ID="_" MODIFIED="1179429009939" POSITION="right" STYLE="bubble" TEXT="(P) Software">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#000000" CREATED="1176989846750" ID="Freemind_Link_1048992184" MODIFIED="1176991370546" TEXT="Notas e freq&#xfc;&#xea;ncias">
+<node BACKGROUND_COLOR="#ddff00" COLOR="#000000" CREATED="1176989846750" ID="Freemind_Link_1048992184" MODIFIED="1182372195319" TEXT="Notas e freq&#xfc;&#xea;ncias">
 <icon BUILTIN="full-3"/>
 <node CREATED="1176991415578" ID="Freemind_Link_431455152" MODIFIED="1177426020895" TEXT="Atualizar notas e freq&#xfc;&#xea;ncias"/>
 <node CREATED="1176991472906" ID="Freemind_Link_1237879179" MODIFIED="1177425914113" TEXT="Definir express&#xe3;o de nota final"/>
@@ -20,7 +20,7 @@
 <node CREATED="1177007410796" ID="Freemind_Link_914282385" MODIFIED="1177425914106" TEXT="acd-src, acd-data e acd-ui.jar"/>
 <node CREATED="1177426407597" ID="Freemind_Link_608955041" MODIFIED="1177426413047" TEXT="Consultar desempenho"/>
 </node>
-<node CREATED="1176989878468" ID="Freemind_Link_1701764645" MODIFIED="1176991331421" TEXT="Pessoas f&#xed;sicas e jur&#xed;dicas">
+<node BACKGROUND_COLOR="#ddff00" CREATED="1176989878468" ID="Freemind_Link_1701764645" MODIFIED="1182372088092" TEXT="Pessoas f&#xed;sicas e jur&#xed;dicas">
 <edge WIDTH="thin"/>
 <icon BUILTIN="full-1"/>
 <node CREATED="1176991683843" ID="Freemind_Link_678598705" MODIFIED="1177426568935" TEXT="Criar/atualizar pessoa f&#xed;sica/jur&#xed;dica"/>
@@ -32,7 +32,7 @@
 <node CREATED="1176991773234" ID="Freemind_Link_23874001" MODIFIED="1176991779500" TEXT="Cadastrar usu&#xe1;rio"/>
 <node CREATED="1177010125765" ID="Freemind_Link_151796712" MODIFIED="1177425914102" TEXT="ca-src, ca-data e ca-ui.jar"/>
 </node>
-<node CREATED="1176989904062" ID="Freemind_Link_75359271" MODIFIED="1178374949265" TEXT="Administra&#xe7;&#xe3;o de curso">
+<node BACKGROUND_COLOR="#ddff00" CREATED="1176989904062" ID="Freemind_Link_75359271" MODIFIED="1182372100684" TEXT="Administra&#xe7;&#xe3;o de curso">
 <icon BUILTIN="full-2"/>
 <node CREATED="1176991928312" ID="Freemind_Link_526802580" MODIFIED="1177426884446" TEXT="Cadastrar curso"/>
 <node CREATED="1176991941812" ID="Freemind_Link_429139860" MODIFIED="1177426896302" TEXT="Criar turma"/>
@@ -66,7 +66,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node CREATED="1176989840203" ID="Freemind_Link_1370494683" MODIFIED="1179428518548" POSITION="right" STYLE="bubble" TEXT="(I) Instala&#xe7;&#xe3;o">
+<node BACKGROUND_COLOR="#ddff00" CREATED="1176989840203" ID="Freemind_Link_1370494683" MODIFIED="1182372012681" POSITION="right" STYLE="bubble" TEXT="(I) Instala&#xe7;&#xe3;o">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1176990710984" ID="Freemind_Link_1538589992" MODIFIED="1179428551340" TEXT="I1 Documenta&#xe7;&#xe3;o de Instala&#xe7;&#xe3;o"/>
