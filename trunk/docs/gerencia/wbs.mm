@@ -13,7 +13,7 @@
 <node CREATED="1177007359468" ID="Freemind_Link_1393045588" MODIFIED="1177425914112" TEXT="nf-src, nf-data e nf-ui.jar"/>
 <node CREATED="1177421713281" ID="Freemind_Link_1427989498" MODIFIED="1177426020894" TEXT="Acesso a notas e freq&#xfc;&#xea;ncias"/>
 </node>
-<node CREATED="1176989865765" ID="Freemind_Link_1325065905" MODIFIED="1176991378171" TEXT="Avalia&#xe7;&#xe3;o do corpo docente">
+<node BACKGROUND_COLOR="#ddff00" CREATED="1176989865765" ID="Freemind_Link_1325065905" MODIFIED="1182372299521" TEXT="Avalia&#xe7;&#xe3;o do corpo docente">
 <icon BUILTIN="full-5"/>
 <node CREATED="1176991528421" ID="Freemind_Link_73903510" MODIFIED="1177425914108" TEXT="Atualizar desempenho de docente"/>
 <node CREATED="1177001880625" ID="Freemind_Link_1604729256" MODIFIED="1177426111496" TEXT="Definir modelo de avalia&#xe7;&#xe3;o"/>
@@ -40,7 +40,7 @@
 <node CREATED="1177010139265" ID="Freemind_Link_1629709443" MODIFIED="1177425914100" TEXT="curso-src, curso-data e curso-ui.jar"/>
 <node CREATED="1177426915260" ID="Freemind_Link_562201682" MODIFIED="1178374291953" TEXT="Registrar interesse em turma"/>
 </node>
-<node CREATED="1179613737625" ID="Freemind_Link_1991813319" MODIFIED="1179613753453" TEXT="Servi&#xe7;os">
+<node BACKGROUND_COLOR="#ddff00" CREATED="1179613737625" ID="Freemind_Link_1991813319" MODIFIED="1182372307112" TEXT="Servi&#xe7;os">
 <icon BUILTIN="full-6"/>
 <node CREATED="1179613756078" ID="Freemind_Link_1261997718" MODIFIED="1179950144062" TEXT="(P6.1) Envio de email"/>
 <node CREATED="1179613762625" ID="Freemind_Link_459772904" MODIFIED="1179950151825" TEXT="(P6.2) Express&#xe3;o de nota final"/>
