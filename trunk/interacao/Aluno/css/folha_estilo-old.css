@@ -1,0 +1,94 @@
+td img {display: block;}.bordamenu {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #003366;
+	border-left-color: #003366;
+	height:18px;
+	}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url(images/bg_all.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color:#D7DDE5;
+}
+.tbmenu {
+	margin-top: 4px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+}
+.img {
+	background-color: #D7DDE5;
+	margin: 0px;
+	padding: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+.tbconteudo {
+	margin-top: 4px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+}
+.tbcomum {
+	border: 1px solid #40558C;
+	margin: 0px;
+	padding: 0px;
+	
+}
+a {
+	margin-left:4px;
+	margin-top:4px;
+	text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+	background-color:#FFFFCC;
+}
+.tbcomum th{
+   background:#DEDEEF;
+}
+
+.tbcomum td{
+   background:#E4F3F2;
+}
+
+/* ESTILO DOS BOTÕES */
+.borderform1 {
+	border: 1px solid #0065CE;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #fffffg;
+	background-color: #D7DDE5; 
+	text-decoration: none; 
+	cursor:pointer;
+	height:20px;
+}
+
+.fonte1 { 
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.menu2 {  
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #0065CE;
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal;
+	text-decoration: none
+}
+
