@@ -1,0 +1,840 @@
+<DataCollection>
+  <version>1.2</version>
+  <properties>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>backupCronExpression</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>backupFileName</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>buildThreadCount</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.EmailNotifier#Email address of the sender</name>
+      <value>hermes.junior@lg.com.br</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.EmailNotifier#SMTP host</name>
+      <value>smtp.lg.com.br</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.EmailNotifier#SMTP password</name>
+      <value>h071281</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.EmailNotifier#SMTP user</name>
+      <value>hermes.junior@lg.com.br</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.JabberNotifier#Jabber password</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.JabberNotifier#Jabber server</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.JabberNotifier#Jabber server port</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.JabberNotifier#Jabber user</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.MsnNotifier#Luntbuild MSN account</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.MsnNotifier#Luntbuild MSN password</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.SametimeNotifier#Sametime Password</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.SametimeNotifier#Sametime Server</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>com.luntsys.luntbuild.notifiers.SametimeNotifier#Sametime User</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>pageRefreshInterval</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>publishDir</name>
+      <value>C:\jakarta-tomcat-5.5.8\webapps\log</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>servletUrl</name>
+      <value></value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+    <com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+      <name>workingDir</name>
+      <value>C:\WORK\src</value>
+    </com.luntsys.luntbuild.facades.lb12.PropertyFacade>
+  </properties>
+  <projects>
+    <com.luntsys.luntbuild.facades.lb12.ProjectFacade>
+      <id>1</id>
+      <name>Projeto Escola</name>
+      <description>Escola</description>
+      <variables>versionIterator=1</variables>
+      <logLevel>1</logLevel>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.7.0\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK\build.xml</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;${build.version}&quot;&#x0D;
+artifactsDir=&quot;${build.artifactsDir}&quot;&#x0D;
+buildDate=&quot;${build.startDate}&quot;&#x0D;
+junitHtmlReportDir=&quot;${build.junitHtmlReportDir}&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <scheduleList/>
+      <notifiers>
+        <string>com.luntsys.luntbuild.notifiers.EmailNotifier</string>
+        <string>com.luntsys.luntbuild.notifiers.MsnNotifier</string>
+      </notifiers>
+    </com.luntsys.luntbuild.facades.lb12.ProjectFacade>
+  </projects>
+  <schedules>
+    <com.luntsys.luntbuild.facades.lb12.ScheduleFacade>
+      <id>1</id>
+      <scheduleDisabled>false</scheduleDisabled>
+      <name>Escola</name>
+      <description></description>
+      <nextVersion>10</nextVersion>
+      <variables></variables>
+      <triggerType>0</triggerType>
+      <repeatInterval>0</repeatInterval>
+      <buildType>0</buildType>
+      <buildNecessaryCondition>always</buildNecessaryCondition>
+      <associatedBuilderNames>
+        <string>Escola</string>
+      </associatedBuilderNames>
+      <associatedPostbuilderNames>
+        <string>Escola</string>
+      </associatedPostbuilderNames>
+      <triggerDependencyStrategy>0</triggerDependencyStrategy>
+      <buildCleanupStrategy>0</buildCleanupStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <labelStrategy>0</labelStrategy>
+      <notifyStrategy>0</notifyStrategy>
+      <status>2</status>
+      <statusDate class="sql-timestamp">2007-07-03 13:57:25.0</statusDate>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/ProjectPage&amp;sp=l1&amp;sp=l1</url>
+      <dependentScheduleIds/>
+      <workingPath>c:\Work\src</workingPath>
+      <projectId>1</projectId>
+    </com.luntsys.luntbuild.facades.lb12.ScheduleFacade>
+  </schedules>
+  <builds>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>1</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-02 20:34:45.0</startDate>
+      <endDate class="sql-timestamp">2007-07-02 20:35:02.0</endDate>
+      <version>1</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/escola</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>hermes</user>
+          <password>071281</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;1&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\1\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 20:34:45 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\1\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;1&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\1\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 20:34:45 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\1\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l1</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>2</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-02 21:24:16.0</startDate>
+      <endDate class="sql-timestamp">2007-07-02 21:24:43.0</endDate>
+      <version>2</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;2&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\2\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 21:24:16 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\2\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;2&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\2\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 21:24:16 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\2\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l2</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>3</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-02 21:28:23.0</startDate>
+      <endDate class="sql-timestamp">2007-07-02 21:28:39.0</endDate>
+      <version>3</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;3&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\3\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 21:28:23 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\3\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;3&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\3\artifacts&quot;&#x0D;
+buildDate=&quot;Mon Jul 02 21:28:23 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\3\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l3</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>4</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-03 13:34:53.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:35:19.0</endDate>
+      <version>4</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;4&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\4\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:34:53 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\4\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;4&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\4\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:34:53 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\4\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l4</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>5</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-03 13:37:49.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:38:13.0</endDate>
+      <version>5</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;5&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\5\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:37:49 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\5\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;5&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\5\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:37:49 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\5\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l5</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>6</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-03 13:42:09.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:42:27.0</endDate>
+      <version>6</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;6&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\6\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:42:09 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\6\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;6&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\6\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:42:09 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Escola\Escola\6\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l6</url>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>7</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-03 13:52:07.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:52:28.0</endDate>
+      <version>7</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;7&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\7\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:52:07 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\7\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.6.2\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;7&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\7\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:52:07 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\7\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l7</url>
+      <buildLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/7/build_log.html</buildLogUrl>
+      <revisionLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/7/revision_log.html</revisionLogUrl>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>8</id>
+      <status>2</status>
+      <startDate class="sql-timestamp">2007-07-03 13:54:45.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:55:05.0</endDate>
+      <version>8</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>false</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.7.0\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;8&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\8\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:54:45 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\8\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.7.0\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;8&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\8\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:54:45 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\8\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l8</url>
+      <buildLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/8/build_log.html</buildLogUrl>
+      <revisionLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/8/revision_log.html</revisionLogUrl>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+    <com.luntsys.luntbuild.facades.lb12.BuildFacade>
+      <id>9</id>
+      <status>1</status>
+      <startDate class="sql-timestamp">2007-07-03 13:56:40.0</startDate>
+      <endDate class="sql-timestamp">2007-07-03 13:57:06.0</endDate>
+      <version>9</version>
+      <labelStrategy>0</labelStrategy>
+      <postbuildStrategy>0</postbuildStrategy>
+      <haveLabelOnHead>true</haveLabelOnHead>
+      <buildType>0</buildType>
+      <rebuild>false</rebuild>
+      <vcsList>
+        <com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+          <urlBase>svn://localhost/svn</urlBase>
+          <trunk></trunk>
+          <branches></branches>
+          <tags></tags>
+          <user>Hermes</user>
+          <password>123456</password>
+          <quietPeriod></quietPeriod>
+          <modules>
+            <com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+              <srcPath>Escola</srcPath>
+              <branch></branch>
+              <label></label>
+              <destPath></destPath>
+            </com.luntsys.luntbuild.facades.lb12.SvnModuleFacade>
+          </modules>
+        </com.luntsys.luntbuild.facades.lb12.SvnAdaptorFacade>
+      </vcsList>
+      <builderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.7.0\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK\build.xml</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;9&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\9\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:56:40 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\9\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </builderList>
+      <postbuilderList>
+        <com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+          <command>C:\apache-ant-1.7.0\bin\ant.bat</command>
+          <buildScriptPath>C:\WORK\build.xml</buildScriptPath>
+          <buildTargets></buildTargets>
+          <buildProperties>buildVersion=&quot;9&quot;&#x0D;
+artifactsDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\9\artifacts&quot;&#x0D;
+buildDate=&quot;Tue Jul 03 13:56:40 BRT 2007&quot;&#x0D;
+junitHtmlReportDir=&quot;C:\jakarta-tomcat-5.5.8\webapps\log\Projeto Escola\Escola\9\junit_html_report&quot;</buildProperties>
+          <name>Escola</name>
+          <environments></environments>
+          <buildSuccessCondition>result==0 and logContainsLine(&quot;BUILD SUCCESSFUL&quot;)</buildSuccessCondition>
+        </com.luntsys.luntbuild.facades.lb12.AntBuilderFacade>
+      </postbuilderList>
+      <url>http://192.168.0.178:8080/luntbuild/app.do?service=external/Home&amp;sp=l1&amp;sp=l9</url>
+      <buildLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/9/build_log.html</buildLogUrl>
+      <revisionLogUrl>http://192.168.0.178:8080/luntbuild/publish/Projeto Escola/Escola/9/revision_log.html</revisionLogUrl>
+      <systemLogUrl>http://192.168.0.178:8080/luntbuild/logs/luntbuild_log.html</systemLogUrl>
+      <scheduleId>1</scheduleId>
+    </com.luntsys.luntbuild.facades.lb12.BuildFacade>
+  </builds>
+  <users>
+    <com.luntsys.luntbuild.facades.lb12.UserFacade>
+      <id>1</id>
+      <name>&lt;users who checked in code recently&gt;</name>
+      <canCreateProject>false</canCreateProject>
+      <contacts class="linked-hash-map"/>
+    </com.luntsys.luntbuild.facades.lb12.UserFacade>
+    <com.luntsys.luntbuild.facades.lb12.UserFacade>
+      <id>2</id>
+      <name>hermes</name>
+      <fullname>Hermes Silva Júnior</fullname>
+      <password>123456</password>
+      <canCreateProject>true</canCreateProject>
+      <contacts class="linked-hash-map">
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.EmailNotifier#Email</string>
+          <string>hermes@especializacao.info</string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.MsnNotifier#MSN account</string>
+          <string>hermessilvajunior@hotmail.com</string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.JabberNotifier#Jabber account</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.SametimeNotifier#Sametime account</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog Type</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog URL</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog ID</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog User</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog Password</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>com.luntsys.luntbuild.notifiers.BlogNotifier#Blog Category</string>
+          <string></string>
+        </entry>
+      </contacts>
+    </com.luntsys.luntbuild.facades.lb12.UserFacade>
+  </users>
+  <vcsLoginMapping/>
+  <rolesMapping>
+    <com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+      <id>10</id>
+      <projectId>1</projectId>
+      <userId>2</userId>
+      <roleId>4</roleId>
+    </com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+    <com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+      <id>11</id>
+      <projectId>1</projectId>
+      <userId>2</userId>
+      <roleId>5</roleId>
+    </com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+    <com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+      <id>12</id>
+      <projectId>1</projectId>
+      <userId>2</userId>
+      <roleId>3</roleId>
+    </com.luntsys.luntbuild.facades.lb12.RolesMappingFacade>
+  </rolesMapping>
+  <notifyMapping>
+    <com.luntsys.luntbuild.facades.lb12.NotifyMappingFacade>
+      <id>3</id>
+      <projectId>1</projectId>
+      <userId>2</userId>
+    </com.luntsys.luntbuild.facades.lb12.NotifyMappingFacade>
+  </notifyMapping>
+  <roles>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>3</id>
+      <name>LUNTBUILD_PRJ_ADMIN</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>4</id>
+      <name>LUNTBUILD_PRJ_BUILDER</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>5</id>
+      <name>LUNTBUILD_PRJ_VIEWER</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>6</id>
+      <name>ROLE_ANONYMOUS</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>1</id>
+      <name>ROLE_AUTHENTICATED</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+    <com.luntsys.luntbuild.facades.lb12.RoleFacade>
+      <id>2</id>
+      <name>ROLE_SITE_ADMIN</name>
+    </com.luntsys.luntbuild.facades.lb12.RoleFacade>
+  </roles>
+</DataCollection>

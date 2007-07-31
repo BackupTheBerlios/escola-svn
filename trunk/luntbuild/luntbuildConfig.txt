@@ -1,0 +1,52 @@
+INSTALAÇÃO LUNTBUILD
+
+1. Faça o download da distribuição zip do Luntbuild. 
+	Normalmente o nome é luntbuild-xxx.zip
+2. Faça a extração do arquivo zip para um diretório da sua preferência. 
+	(Iremos neste tutorial presupor c:\luntbuild
+3. Faça a seguinte configuração:
+	Edite o arquivo c:\luintbuild\web\WEB-INF\web.xml;
+	Procure por $INSTALL_PATH e substitua por o caminho do diretório do luntbuild
+	Edite o arquivo c:\luintbuild\web\WEB-INF\applicationContext.xml
+	Procure por ${sessionTimeout} e subtitua pelo tempo de expiração da session
+	Procure por ${luntbuildPassword} e substitua pela senha do adminstrador
+4. Pare o TOMCAT
+5. Crie um diretório dentro de (Diretorio do Tomcat)\webapps. Ex: luntbuild
+6. Copie o conteúdo de c:\luntbuild\web para (diretorio do tomcat\webapps\luntbuild
+
+CONFIGURAÇÃO DA BASE DE DADOS (MySQL)
+
+1. Criar as tabelas do Banco de Dados
+	Crie um banco de dados chamado luntbuild
+	Rode os scripts localizados em: c:\luntbuild\db\mysql
+2. Após a base criada entre no diretorio tomcat\webapps\luntbuild\WEB-INF\jdbc.properties e configure com os dados abaixo:
+	jdbc.driverClassName=com.mysql.jdbc.Driver
+	jdbc.url=jdbc:mysql://localhost:3306/luntbuild
+	hibernate.dialect=org.hibernate.dialect.MySQLDialect
+	jdbc.username=root - Usuário do MySQL
+	jdbc.password=123456 - Senh do Usuário do MySQL
+	
+3. Abra no mesmo diretorio o arquivo jdbc.properties para MySQL e faça as mesmas configurações.
+
+RODANDO O LUNTBUILD
+
+1. Inicie o TOMCAT
+2. Abra o seu navegador web
+3. Digite http://localhost:8080/luntbuild/
+4. Se tudo estiver correto o sistema deverá fazer um login de acesso anônimo.
+5. Clique em logout
+6. Vamos fazer login como administrador do sistema. (usuário luntbuild, e a senha que foi definida anteriormente)
+
+CONFIGURANDO O LUNTBUILD PARA BUILDS DIÁRIOS
+
+
+1. Guia Properties
+	Work directory - Especificar o diretorio aonde se encontra os fontes (aonde o subversion faz checkout)
+	Publish directory - Especificar o diretório aonde serão publicados os logs (logs do build, execução dos testes unitários etc) dica: colocar abaixo do diretorio htdocs do Apache web server.
+	Page refresh interval - O intervalo em segundos que a página é recarregada.
+	SMTP host - Host SMTP para envio de notificações via e-mail.
+	SMTP user - Usuário SMTP (Caso necessite de autenticação)
+	SMTP password - Senha do usuário SMTP
+2. Guia Administration
+	Colocar o caminho do arquivo luntbuild.xml e clicar em import
+	(Todas as configurações feitas na minha máquina aparecerão, basta ajustar os caminhos dos diretorios)
