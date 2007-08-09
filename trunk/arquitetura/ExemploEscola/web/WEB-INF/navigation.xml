@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+                              "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+    <navigation-rule>
+        <from-view-id>/Principal.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>cadastrar</from-outcome>
+            <to-view-id>/CadastrarPessoa.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listar</from-outcome>
+            <to-view-id>/ListarPessoas.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>sair</from-outcome>
+            <to-view-id>/Login.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/ListarPessoas.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>voltar</from-outcome>
+            <to-view-id>/Principal.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/CadastrarPessoa.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>voltar</from-outcome>
+            <to-view-id>/Principal.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Login.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>sucesso</from-outcome>
+            <to-view-id>/Principal.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>acessoNegado</from-outcome>
+            <to-view-id>/AcessoNegado.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/AcessoNegado.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>ok</from-outcome>
+            <to-view-id>/Login.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
