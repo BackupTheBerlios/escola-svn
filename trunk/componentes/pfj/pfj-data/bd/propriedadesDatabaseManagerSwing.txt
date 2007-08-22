@@ -1,0 +1,6 @@
+Type: HSQL Database Engine Server
+Driver: org.hsqldb.jdbcDriver
+URL: jdbc:hsqldb:hsql://localhost/escola
+User: sa
+Password:
+
