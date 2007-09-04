@@ -1,117 +1,139 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JMock;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumTelefoneEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.TelefoneCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.TelefoneNaoEncontradoException;
 
-
-/**
- * Classe de teste para a interface TelefoneRepository.
- * @author Gilmar
- *
- */
-public class TelefoneRepositoryTeste extends MockObjectTestCase{
-	
+@RunWith(JMock.class)
+public class TelefoneRepositoryTeste {
 	private Telefone t = new Telefone();
-	private Mock telefoneMock = new Mock(TelefoneRepository.class);
-	private TelefoneRepository tr = (TelefoneRepository) telefoneMock.proxy();
+	private Mockery context = new JUnit4Mockery();
+	private TelefoneRepository tr = context.mock(TelefoneRepository.class);
 	/**
 	 * 
 	 */
+	@Test
 	public void testaIncluir() {
-				
-		telefoneMock.expects(once()).method("incluir").with(eq(t)).will(returnValue(true));
-
-		boolean esperado = true;
 		try {
-			assertEquals(esperado, tr.incluir(t));
-		} catch (TelefoneCadastradoException e) {
-			e.getMessage();
+			context.checking(new Expectations(){{
+				one (tr).incluir(t);
+			}});
+		} catch (TelefoneCadastradoException tce) {
+			System.out.println(tce.getMessage());
 		}
+		try {
+			(tr).incluir(t);
+		} catch (TelefoneCadastradoException tce) {
+			System.out.println(tce.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaRemover(){
-		
-		telefoneMock.expects(once()).method("remover").with(eq(t.getId())).will(returnValue(true));
-		
-		boolean esperado = true;
-		
-		try{
-			assertEquals(esperado, tr.remover(t.getId()));
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
-		}
-	}
-	/**
-	 * 
-	 */
-	public void testaSalvar(){
-		
-		telefoneMock.expects(once()).method("salvar").with(eq(t)).will(returnValue(true));
-
-		boolean esperado = true;
-		
 		try {
-			assertEquals(esperado, tr.salvar(t));
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one (tr).remover(t.getId());
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
 		}
+		try {
+			(tr).remover(t.getId());
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
+	public void testaSalvar(){
+		try {
+			context.checking(new Expectations(){{
+				one (tr).salvar(t);
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		try {
+			(tr).salvar(t);
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
+	}
+	/**
+	 * 
+	 */
+	@Test
 	public void testaConsultar(){
 		
-		t.setNumero(98765678);
-		
-		telefoneMock.expects(once()).method("consultar").with(eq(t.getNumero())).will(returnValue(t));
-		
-		Long idFone = null;
-		
-		try{
-			assertEquals(idFone, tr.consultar(t.getNumero()).getId());
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
-		}	
-	}
-	/**
-	 * 
-	 */
-	public void testaCarregar(){
-		
-		telefoneMock.expects(once()).method("carregar").with(eq(t.getId())).will(returnValue(t));
-		
-		Long idFone = null;
-		
-		try{
-			assertEquals(idFone, tr.carregar(t.getId()).getId());
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
+		try {
+			context.checking(new Expectations(){{
+				one (tr).consultar(t.getNumero());
+			}});
+		} catch (TelefoneNaoEncontradoException tnee) {
+			System.out.println(tnee.getMessage());
 		}
-		
+		try {
+			(tr).consultar(t.getNumero());
+		} catch (TelefoneNaoEncontradoException tnee) {
+			System.out.println(tnee.getMessage());
+		}
+		context.assertIsSatisfied();	
 	}
 	/**
 	 * 
 	 */
+	@Test
+	public void testaCarregar(){
+		try {
+			context.checking(new Expectations(){{
+				one (tr).carregar(t.getId());
+			}});
+		} catch (TelefoneNaoEncontradoException tnee) {
+			System.out.println(tnee.getMessage());
+		}
+		try {
+			(tr).carregar(t.getId());
+		} catch (TelefoneNaoEncontradoException tnee) {
+			System.out.println(tnee.getMessage());
+		}
+		context.assertIsSatisfied();	
+	}
+	/**
+	 * 
+	 */
+	@Test
 	public void testaListaTodos(){
 		
-		List<Telefone> listaTelefones = new ArrayList<Telefone>();
-		
-		telefoneMock.expects(once()).method("listaTodos").will(returnValue(new ArrayList<Telefone>()));
 		try {
-			assertEquals(listaTelefones, tr.listaTodos());
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one (tr).listaTodos();
+			}});
+		} catch (NenhumTelefoneEncontradoException ntee) {
+			System.out.println(ntee.getMessage());
 		}
+		try {
+			(tr).listaTodos();
+		} catch (NenhumTelefoneEncontradoException ntee) {
+			System.out.println(ntee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
-
 }

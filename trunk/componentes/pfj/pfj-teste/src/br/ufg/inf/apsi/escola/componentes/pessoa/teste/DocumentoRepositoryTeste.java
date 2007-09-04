@@ -1,190 +1,284 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JMock;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoCadastradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumDocumentoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.RemocaoDocumentoException;
 
-
-/**
- * Classe definida para testar a interface DocumentoRepository
- * @author Gilmar
- *
- */
-public class DocumentoRepositoryTeste extends MockObjectTestCase{
-	
+@RunWith(JMock.class)
+public class DocumentoRepositoryTeste {
 	private Documento cpf = new CPF();
 	private Documento cnpj = new CNPJ();
 	private Documento rg = new RG();
-	private Mock docMock = new Mock(DocumentoRepository.class);
-	private DocumentoRepository dr = (DocumentoRepository) docMock.proxy();
+	private Mockery context = new JUnit4Mockery();
+	private DocumentoRepository dr = context.mock(DocumentoRepository.class);
 	/**
 	 * 
 	 */
+	@Test
 	public void testaIncluirDocumento() {
-		
-		cpf.setNumero("33462461168");
-		
-		docMock.expects(once()).method("incluir").with(eq(cpf)).will(returnValue(true));
-
-		boolean esperado = true;
-
+		//Testa a inclus„o de um cpf
 		try {
-			assertEquals(esperado, dr.incluir(cpf));
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one (dr).incluir(cpf);
+			}});
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
 		}
-	}
+		
+		try {
+			dr.incluir(cpf);
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		context.assertIsSatisfied();
+		
+		//Testa a inclus„o de um cpf
+		try {
+			context.checking(new Expectations(){{
+				one (dr).incluir(cnpj);
+			}});
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		
+		try {
+			dr.incluir(cnpj);
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		context.assertIsSatisfied();
+		
+		//Testa a inclus„o de um RG
+		try {
+			context.checking(new Expectations(){{
+				one (dr).incluir(rg);
+			}});
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		
+		try {
+			dr.incluir(rg);
+		} catch (DocumentoCadastradoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		context.assertIsSatisfied();
+		
+	}	
 	/**
 	 * 
 	 */		
+	@Test
 	public void testaRemover(){
-		
-		//Testa remo√ß√£o de um cpf
-		cpf.setNumero("33462461168");
-		
-		docMock.expects(once()).method("remover").with(eq(cpf.getNumero())).will(returnValue(true));
-				
-		boolean esperado = true;
-		
-		try{
-			assertEquals(esperado, dr.remover(cpf.getNumero()));
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
+		//Testa a remoÁ„o de um cpf
+		try {
+			context.checking(new Expectations(){{
+				one (dr).remover(cpf.getNumero());
+			}});
+		} catch (RemocaoDocumentoException rde) {
+			System.out.println(rde.getMessage());
 		}
 		
-		//Testa remo√ß√£o de um cnpj
-		cnpj.setNumero("03314200000107");
-		
-		docMock.expects(once()).method("remover").with(eq(cnpj.getNumero())).will(returnValue(true));
-					
-		boolean resultado = true;
-
-		try{
-			assertEquals(resultado, dr.remover(cnpj.getNumero()));
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
+		try {
+			dr.remover(cpf.getNumero());
+		} catch (RemocaoDocumentoException rde) {
+			System.out.println(rde.getMessage());
 		}
+		context.assertIsSatisfied();
+		
+		
+		//Testa remoÁ„o de um cnpj
+		try {
+			context.checking(new Expectations(){{
+				one (dr).remover(cnpj.getNumero());
+			}});
+		} catch (RemocaoDocumentoException rde) {
+			System.out.println(rde.getMessage());
+		}
+		
+		try {
+			dr.remover(cnpj.getNumero());
+		} catch (RemocaoDocumentoException rde) {
+			System.out.println(rde.getMessage());
+		}
+		context.assertIsSatisfied();
 		
 		//Testa remo√ß√£o de um RG
-		rg.setNumero("2215357");
-		if (rg instanceof RG) {
-			RG rg1 = (RG) rg;
-			rg1.setDataEmissao(new Date());
-			rg1.setOrgaoExpedidor("SSPGO");
-			
-			docMock.expects(once()).method("remover").with(eq(rg1.getNumero())).will(returnValue(true));
-					
-			boolean resultadoTeste = true;
-			try{
-				assertEquals(resultadoTeste, dr.remover(rg1.getNumero()));
-			}catch (Exception e){
-				new EscolaException(e.getMessage()).printStackTrace();
-			}
-		}	
+		try {
+			context.checking(new Expectations(){{
+				one (dr).remover(rg.getNumero());
+			}});
+		} catch (RemocaoDocumentoException rde) {
+			System.out.println(rde.getMessage());
+		}
+		
+		try {
+			dr.remover(rg.getNumero());
+		} catch (RemocaoDocumentoException dce) {
+			System.out.println(dce.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
+	
 	/**
 	 * 
 	 */
+	@Test
 	public void testaSalvar(){
 	
 		//Testa salvar um cpf
-		cpf.setNumero("33462461168");
-	
-		docMock.expects(once()).method("salvar").with(eq(cpf)).will(returnValue(true));
-
-		boolean esperado = true;
+		try {
+			context.checking(new Expectations(){{
+				one (dr).salvar(cpf);
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		try {
-			assertEquals(esperado, dr.salvar(cpf));
+			dr.salvar(cpf);
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
-		}		
-		
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();	
+				
 		//Testa salvar um cnpj
-		cnpj.setNumero("03314200000107");
-		
-		docMock.expects(once()).method("salvar").with(eq(cnpj)).will(returnValue(true));
-
-		boolean resultado = true;
-		
 		try {
-			assertEquals(resultado, dr.salvar(cnpj));
+			context.checking(new Expectations(){{
+				one (dr).salvar(cnpj);
+			}});
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			System.out.println(e.getMessage());
 		}
+		
+		try {
+			dr.salvar(cnpj);
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
 		//Testa salvar um rg
-		rg.setNumero("2215357");
-		if (rg instanceof RG) {
-			RG rg1 = (RG) rg;
-			rg1.setDataEmissao(new Date());
-			rg1.setOrgaoExpedidor("SSPGO");
-			
-			docMock.expects(once()).method("salvar").with(eq(rg1)).will(returnValue(true));
-
-			boolean resultadoTeste = true;
-			
-			try {
-				assertEquals(resultadoTeste, dr.salvar(rg1));
-			} catch (EscolaException e) {
-				new EscolaException(e.getMessage()).printStackTrace();
-			}
+		try {
+			context.checking(new Expectations(){{
+				one (dr).salvar(rg);
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
 		}
+		
+		try {
+			dr.salvar(rg);
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaCarregar(){
-		//o par√¢metro de retorno est√° configurado para retornar um cpf, mas funciona
-		//igualmente para cnpj ou rg.
-		docMock.expects(once()).method("carregar").with(eq(cpf.getId())).will(returnValue(cpf));
-		
-		Long docId = null;
+		//Testa carregar um cpf
+		try {
+			context.checking(new Expectations(){{
+				one (dr).carregar(cpf.getId());
+			}});
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
 		
 		try {
-			assertEquals(docId, dr.carregar(cpf.getId()).toString());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
+			dr.carregar(cpf.getId());
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
 		}
+		context.assertIsSatisfied();
+		//Testa carregar um cnpj
+		try {
+			context.checking(new Expectations(){{
+				one (dr).carregar(cnpj.getId());
+			}});
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
+		
+		try {
+			dr.carregar(cnpj.getId());
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
+		context.assertIsSatisfied();
+		//Testa carregar um rg
+		try {
+			context.checking(new Expectations(){{
+				one (dr).carregar(rg.getId());
+			}});
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
+		
+		try {
+			dr.carregar(rg.getId());
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaListaTodos(){
-		List<Documento> listaDocumentos = new ArrayList<Documento>();
-		
-		docMock.expects(once()).method("listaTodos").will(returnValue(new ArrayList<Documento>()));
+		try {
+			context.checking(new Expectations(){{
+				one (dr).listaTodos();
+			}});
+		} catch (NenhumDocumentoEncontradoException ndee) {
+			System.out.println(ndee.getMessage());
+		}
 		
 		try {
-			assertEquals(listaDocumentos, dr.listaTodos());
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			dr.listaTodos();
+		} catch (NenhumDocumentoEncontradoException ndee) {
+			System.out.println(ndee.getMessage());
 		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultar(){
-		Documento doc = new RG();
-		doc.setNumero("12");
-		docMock.expects(once()).method("consultar").with(eq("12")).will(returnValue(doc));
-		
+		//Testa consultar um cpf
 		try {
-			assertEquals("12", dr.consultar(doc.getNumero()).getNumero());
-		} catch (DocumentoNaoEncontradoException e) {
-			e.getMessage();
+			context.checking(new Expectations(){{
+				one (dr).consultar(cpf.getNumero());
+			}});
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
 		}
 		
+		try {
+			dr.consultar(cpf.getNumero());
+		} catch (DocumentoNaoEncontradoException dnee) {
+			System.out.println(dnee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
-	
+
 }

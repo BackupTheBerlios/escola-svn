@@ -1,309 +1,418 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
 
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
+import java.util.Date;
+
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JMock;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumaPessoaEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaCadastradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaNaoEncontradaException;
 
-
-import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
-
-/**
- * Classe definida para testar a interface PessoaRepository.
- * @author Gilmar
- *
- */
-public class PessoaRepositoryTeste extends MockObjectTestCase {
-	
-	
+@RunWith(JMock.class)
+public class PessoaRepositoryTeste {
 	private Pessoa pf = new PessoaFisica();
 	private Pessoa pj = new PessoaJuridica();
-	private Mock pessoaMock = new Mock(PessoaRepository.class);
-	private PessoaRepository pr = (PessoaRepository) pessoaMock.proxy();
+	private Mockery context = new JUnit4Mockery();
+	private PessoaRepository pr = context.mock(PessoaRepository.class);
 	/**
 	 * 
 	 */
+	@Test
 	public void testaIncluir() {
-				
-		pessoaMock.expects(once()).method("incluir").with(eq(pf)).will(returnValue(true));
-
-		boolean esperado = true;
+		//Testa a inclusão de uma pessoa física		
+		try {
+			context.checking(new Expectations(){{
+				one(pr).incluir(pf);
+			}});
+		} catch (PessoaCadastradaException pce) {
+			System.out.println(pce.getMessage());
+		}
 		
 		try {
-			assertEquals(esperado, pr.incluir(pf));
-		} catch (PessoaCadastradaException e) {
-			e.getMessage();
+			pr.incluir(pf);
+		} catch (PessoaCadastradaException pce) {
+			System.out.println(pce.getMessage());
 		}
+		context.assertIsSatisfied();
+		
+		//testa a inclusão de uma pessoa jurídica
+		try {
+			context.checking(new Expectations(){{
+				one(pr).incluir(pj);
+			}});
+		} catch (PessoaCadastradaException pce) {
+			System.out.println(pce.getMessage());
+		}
+		
+		try {
+			pr.incluir(pj);
+		} catch (PessoaCadastradaException pce) {
+			System.out.println(pce.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaRemover(){
-		
-		pessoaMock.expects(once()).method("remover").with(eq(pj.getId())).will(returnValue(true));
-		
-		boolean esperado = true;
-		
-		try{
-			assertEquals(esperado, pr.remover(pj.getId()));
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
+		//Testa a remoção de uma pessoa física
+		try {
+			context.checking(new Expectations(){{
+				one(pr).remover(pf.getId());
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
 		}
+		
+		try {
+			pr.remover(pf.getId());
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
+		//Testa a remoção de uma pessoa jurídica
+		try {
+			context.checking(new Expectations(){{
+				one(pr).remover(pj.getId());
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			pr.remover(pj.getId());
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaSalvar(){
 		//Testa Salvar Pessoa Fisica
-		pessoaMock.expects(once()).method("salvar").with(eq(pf)).will(returnValue(true));
-
-		boolean esperado = true;
-		
 		try {
-			assertEquals(esperado, pr.salvar(pf));
+			context.checking(new Expectations(){{
+				one(pr).salvar(pf);
+			}});
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		
+		try {
+			pr.salvar(pf);
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();		
 		//Testa Salvar Pessoa JurÃ­dica
-		
-		pessoaMock.expects(once()).method("salvar").with(eq(pj)).will(returnValue(true));
-
-		boolean resultado = true;
 		try {
-			assertEquals(resultado, pr.salvar(pj));
+			context.checking(new Expectations(){{
+				one(pr).salvar(pj);
+			}});
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			System.out.println(e.getMessage());
 		}
+		
+		try {
+			pr.salvar(pj);
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
+		
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultarPessoaId(){
 		//Testa Consultar Pessoa Fisica
-		pf.setNome("um dois tres de oliveira quatro");
-		pessoaMock.expects(once()).method("consultarPessoaId").with(eq(pj.getId())).will(returnValue(pf));
-		
-		String nomePf = "um dois tres de oliveira quatro";
-		
 		try {
-			assertEquals(nomePf, pr.consultarPessoaId(pf.getId()).getNome());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaId(pf.getId());
+			}});
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
 		}
 		
-		//Testa Consultar Pessoa Juridica
-		pj.setNome("Mistï¿½rios da Informï¿½tica");
-		pessoaMock.expects(once()).method("consultarPessoaId").with(eq(pj.getId())).will(returnValue(pj));
+		try {
+			pr.consultarPessoaId(pf.getId());
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied();
 		
-		String nomePj = "Mistï¿½rios da Informï¿½tica";
+		//Testa Consultar Pessoa Juridica
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaId(pj.getId());
+			}});
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
 		
 		try {
-			assertEquals(nomePj, pr.consultarPessoaId(pj.getId()).getNome());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
-		} 
+			pr.consultarPessoaId(pj.getId());
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied(); 
 	} 
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultarPessoaNome(){
-		
-		List<Pessoa> esperado = new ArrayList<Pessoa>();
-		
-		pessoaMock.expects(once()).method("consultarPessoaNome").with(eq("JoÃ£o")).will(returnValue(new ArrayList<Pessoa>()));
-						
 		try {
-			assertEquals(esperado, pr.consultarPessoaNome("JoÃ£o"));
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaNome(pf.getNome());
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
 		}
+		
+		try {
+			pr.consultarPessoaNome(pf.getNome());
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
+		
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultarPessoaCidade(){
 		
-		List<Pessoa> listaEsperada = new ArrayList<Pessoa>();
-		Cidade c = new Cidade();
-		c.setNome("GoiÃ¢nia");
-				
-		pessoaMock.expects(once()).method("consultarPessoaCidade").with(eq(c.getNome())).will(returnValue(new ArrayList<Pessoa>()));
+		final String nomeCidade = "Goiânia";
 		
 		try {
-			assertEquals(listaEsperada, pr.consultarPessoaCidade(c.getNome()));
-		} catch (Exception ex) {
-			new EscolaException(ex.getCause().getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaCidade(nomeCidade);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
 		}
+		
+		try {
+			pr.consultarPessoaCidade(nomeCidade);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
+		
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultarPessoaBairro(){
 		
-		List<Pessoa> listaEsperada = new ArrayList<Pessoa>();
-		
-		Bairro b = new Bairro("Setor Oeste");
-				
-		pessoaMock.expects(once()).method("consultarPessoaBairro").with(eq(b.getNome())).will(returnValue(new ArrayList<Pessoa>()));		
+		final String nomeBairro = "Setor Oeste";
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaBairro(nomeBairro);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
 		
 		try {
-			assertEquals(listaEsperada, pr.consultarPessoaBairro(b.getNome()));
-		} catch (Exception ex) {
-			new EscolaException(ex.getCause().getMessage()).printStackTrace();
+			pr.consultarPessoaBairro(nomeBairro);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
 		}
+		context.assertIsSatisfied();
+		
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultarPessoaTelefone(){
 		
-		List<Pessoa> listaEsperada = new ArrayList<Pessoa>();
-		
-		Telefone t = new Telefone(32016574);
-		
-		pessoaMock.expects(once()).method("consultarPessoaTelefone").with(eq(t.getNumero())).will(returnValue(new ArrayList<Pessoa>()));
+		final long numeroTelefone = 32016574;
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultarPessoaTelefone(numeroTelefone);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
 		
 		try {
-			assertEquals(listaEsperada, pr.consultarPessoaTelefone(t.getNumero()));
-		} catch (Exception ex) {
-			new EscolaException(ex.getCause().getMessage()).printStackTrace();
+			pr.consultarPessoaTelefone(numeroTelefone);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
 		}
+		context.assertIsSatisfied();
+	
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaCarregar(){
 		
-		pf.setNome("Jorlei");
-		pessoaMock.expects(once()).method("carregar").with(eq(pf.getId())).will(returnValue(pf));
-		
-		String nomePf = "Jorlei";
-		
 		try {
-			assertEquals(nomePf, pr.carregar(pf.getId()).getNome());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
-		}
-	}
-	/**
-	 * 
-	 */
-	public void testaListaTodos(){
-		List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-		
-		pessoaMock.expects(once()).method("listaTodos").will(returnValue(new ArrayList<Pessoa>()));
-		try {
-			assertEquals(listaPessoas, pr.listaTodos());
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
-		}
-	}
-	/**
-	 * 
-	 */
-	public void testaConsultaPessoaDocumento(){
-		Documento doc = new CPF();
-		doc.setNumero("33462461168");
-		pf.setNome("AlguÃ©m");
-		pf.getListaDocumentos().add(doc);
-		pessoaMock.expects(once()).method("consultaPessoaDocumento").with(eq("33462461168")).will(returnValue(pf));
-		
-		try {
-			assertEquals("AlguÃ©m", pr.consultaPessoaDocumento("33462461168").getNome());
+			context.checking(new Expectations(){{
+				one(pr).carregar(pj.getId());
+			}});
 		} catch (PessoaNaoEncontradaException pnee) {
-			pnee.getMessage();
+			System.out.println(pnee.getMessage());
 		}
+		
+		try {
+			pr.carregar(pj.getId());
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
-	 *
 	 */
+	@Test
+	public void testaListaTodos(){
+		try {
+			context.checking(new Expectations(){{
+				one(pr).listaTodos();
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		
+		try {
+			pr.listaTodos();
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
+	}
+	/**
+	 * 
+	 */
+	@Test
+	public void testaConsultaPessoaDocumento(){
+		final String numeroDocumento = "123456789";
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultaPessoaDocumento(numeroDocumento);
+			}});
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		
+		try {
+			pr.consultaPessoaDocumento(numeroDocumento);
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied();
+		
+	}
+	/**
+	 * 
+	 */
+	@Test
 	public void testaConsultaPessoaNomeDataNascimento(){
-		Date dataNascimento = new Date();
-		 if (pf instanceof PessoaFisica) {
-			PessoaFisica pf1 = (PessoaFisica) pf;
-			pf1.setDataNascimento(dataNascimento);
-			pf1.setNome("NomePessoa");
-			
-			pessoaMock.expects(once()).method("consultaPessoaNomeDataNascimento").will(returnValue(pf1));
-			
-			try {
-				assertEquals("NomePessoa", pr.consultaPessoaNomeDataNascimento("NomePessoa", dataNascimento).getNome());
-			} catch (PessoaNaoEncontradaException pnee) {
-				pnee.getMessage();
-			}
+		final String nomePessoa = "AlgumNome";
+		final Date dataNascimento = new Date();
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
+			}});
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
 		}
+
+		try {
+			pr.consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
+
+
 	/**
 	 * 
 	 */
+	@Test
 	public void testaListaPessoasIdade(){
-		Date dataNascimento = new Date();
-		if (pf instanceof PessoaFisica) {
-				PessoaFisica pf1 = (PessoaFisica) pf;
-				pf1.setDataNascimento(dataNascimento);
-				List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-				pessoaMock.expects(once()).method("listaPessoasIdade").will(returnValue(new ArrayList<Pessoa>()));
-				
-				try {
-					assertEquals(listaPessoas, pr.listaPessoasIdade(dataNascimento));
-				} catch (NenhumaPessoaEncontradaException npee) {
-					npee.getMessage();
-				}
-			}
+		final Date dataNascimento = new Date();
+		try {
+			context.checking(new Expectations(){{
+				one(pr).listaPessoasIdade(dataNascimento);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+
+		try {
+			pr.listaPessoasIdade(dataNascimento);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
-	 *
 	 */
+	@Test
 	public void testaListaPessoasIdadeSexo(){
-		Date dataNascimento = new Date();
-		String sexo = "M";
-		if (pf instanceof PessoaFisica) {
-				PessoaFisica pf1 = (PessoaFisica) pf;
-				pf1.setDataNascimento(dataNascimento);
-				pf1.setSexo(sexo);
-				List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-				pessoaMock.expects(once()).method("listaPessoasIdadeSexo").will(returnValue(new ArrayList<Pessoa>()));
-				
-				try {
-					assertEquals(listaPessoas, pr.listaPessoasIdadeSexo(dataNascimento, sexo));
-				} catch (NenhumaPessoaEncontradaException npee) {
-					npee.getMessage();
-				}
-			}
+		final Date dataNascimento = new Date();
+		final String sexo = "M";
+		
+		try {
+			context.checking(new Expectations(){{
+				one(pr).listaPessoasIdadeSexo(dataNascimento, sexo);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+
+		try {
+			pr.listaPessoasIdadeSexo(dataNascimento, sexo);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaListaPessoasSexo(){
-		String sexo = "M";
-		if (pf instanceof PessoaFisica) {
-				PessoaFisica pf1 = (PessoaFisica) pf;
-				pf1.setSexo(sexo);
-				List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-				pessoaMock.expects(once()).method("listaPessoasSexo").will(returnValue(new ArrayList<Pessoa>()));
-				
-				try {
-					assertEquals(listaPessoas, pr.listaPessoasSexo(sexo));
-				} catch (NenhumaPessoaEncontradaException npee) {
-					npee.getMessage();
-				}
-			}
+		final String sexo = "M";
+		try {
+			context.checking(new Expectations(){{
+				one(pr).listaPessoasSexo(sexo);
+			}});
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+
+		try {
+			pr.listaPessoasSexo(sexo);
+		} catch (NenhumaPessoaEncontradaException npee) {
+			System.out.println(npee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 }

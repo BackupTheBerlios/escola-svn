@@ -1,115 +1,152 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JMock;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumPaisEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisNaoEncontradoException;
 
-/**
- * Classe definida para testar a interface PaisRepository
- * @author Gilmar
- *
- */
-public class PaisRepositoryTeste extends MockObjectTestCase {
-	
+@RunWith(JMock.class)
+public class PaisRepositoryTeste {
 	private Pais p = new Pais();
-	private Mock paisMock = new Mock(PaisRepository.class);
-	private PaisRepository pr = (PaisRepository) paisMock.proxy();
+	private Mockery context = new JUnit4Mockery();
+	private PaisRepository pr = context.mock(PaisRepository.class);
 	/**
 	 * 
 	 */
+	@Test
 	public void testaIncluir(){
-				
-		paisMock.expects(once()).method("incluir").with(eq(p)).will(returnValue(true));
-
-		boolean esperado = true;
-
 		try {
-			assertEquals(esperado, pr.incluir(p));
-		} catch (PaisCadastradoException e) {
-			e.getMessage();
+			context.checking(new Expectations(){{
+				one (pr).incluir(p);
+			}});
+		} catch (PaisCadastradoException pce) {
+			System.out.println(pce.getMessage());
 		}
+		
+		try {
+			pr.incluir(p);
+		} catch (PaisCadastradoException pce) {
+			System.out.println(pce.getMessage());
+		}
+		
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaRemover(){
-		
-		paisMock.expects(once()).method("remover").with(eq(p.getId())).will(returnValue(true));
-		
-		boolean resultadoEsperado = true;
+		try {
+			context.checking(new Expectations(){{
+				one (pr).remover(p.getId());
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		try {
-			assertEquals(resultadoEsperado, pr.remover(p.getId()));
+			pr.remover(p.getId());
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			System.out.println(e.getMessage());
 		}
+		
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaSalvar(){
 		
-		paisMock.expects(once()).method("salvar").with(eq(p)).will(returnValue(true));
-
-		boolean esperado = true;
+		try {
+			context.checking(new Expectations(){{
+				one (pr).salvar(p);
+			}});
+		} catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		try {
-			assertEquals(esperado, pr.salvar(p));
+			pr.salvar(p);
 		} catch (EscolaException e) {
-			new EscolaException(e.getMessage()).printStackTrace();
-		}		
+			System.out.println(e.getMessage());
+		}
+		
+		context.assertIsSatisfied();		
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultar(){
+		try {
+			context.checking(new Expectations(){{
+				one (pr).consultar(p.getNome());
+			}});
+		} catch (PaisNaoEncontradoException pnee) {
+			System.out.println(pnee.getMessage());
+		}
 		
-		p.setNome("Brasil");
+		try {
+			pr.consultar(p.getNome());
+		} catch (PaisNaoEncontradoException pnee) {
+			System.out.println(pnee.getMessage());
+		}
 		
-		paisMock.expects(once()).method("consultar").with(eq(p.getNome())).will(returnValue(p));
-		
-		String esperado = "Brasil";
-		
-		try{
-			assertEquals(esperado, pr.consultar(p.getNome()).getNome());
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
-		}		
+		context.assertIsSatisfied();
+				
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaCarregar(){
 		
-		paisMock.expects(once()).method("carregar").with(eq(p.getId())).will(returnValue(p));
-		
-		Long paisId = null;
+		try {
+			context.checking(new Expectations(){{
+				one (pr).carregar(p.getId());
+			}});
+		} catch (PaisNaoEncontradoException pnee) {
+			System.out.println(pnee.getMessage());
+		}
 		
 		try {
-			assertEquals(paisId, pr.carregar(p.getId()).getId());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
+			pr.carregar(p.getId());
+		} catch (PaisNaoEncontradoException pnee) {
+			System.out.println(pnee.getMessage());
 		}
+		
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaListaTodos(){
-		List<Pais> listaPaises = new ArrayList<Pais>();
-		
-		paisMock.expects(once()).method("listaTodos").will(returnValue(new ArrayList<Pais>()));
+		try {
+			context.checking(new Expectations(){{
+				one (pr).listaTodos();
+			}});
+		} catch (NenhumPaisEncontradoException npee) {
+			System.out.println(npee.getMessage());
+		}
 		
 		try {
-			assertEquals(listaPaises, pr.listaTodos());
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+			pr.listaTodos();
+		} catch (NenhumPaisEncontradoException npee) {
+			System.out.println(npee.getMessage());
 		}
+		
+		context.assertIsSatisfied();
  	}
 }

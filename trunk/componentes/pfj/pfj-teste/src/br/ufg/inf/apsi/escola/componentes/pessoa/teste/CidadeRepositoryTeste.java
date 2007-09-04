@@ -1,116 +1,141 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JMock;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.CidadeCadastradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.CidadeNaoEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumaCidadeEncontradaException;
 
-
-/**
- * Classe definida para testar a interface CidadeRepository
- * @author Gilmar
- *
- */
-public class CidadeRepositoryTeste extends MockObjectTestCase {
+@RunWith(JMock.class)
+public class CidadeRepositoryTeste {
 	
 	private Cidade c = new Cidade();
-	private Mock cidadeMock = new Mock(CidadeRepository.class);
-	private CidadeRepository cr = (CidadeRepository) cidadeMock.proxy();
+	private Mockery context = new JUnit4Mockery();
+	final CidadeRepository cr = context.mock(CidadeRepository.class); 
 	/**
 	 * 
 	 */
+	@Test
 	public void testaIncluir() {
 		
-		cidadeMock.expects(once()).method("incluir").with(eq(c)).will(returnValue(true));
-
-		boolean esperado = true;
-		
-		try {
-			assertEquals(esperado, cr.incluir(c));
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
-		}
-	}
-	/**
-	 * 
-	 */
-	public void testaRemover() {
-		
-		cidadeMock.expects(once()).method("remover").with(eq(c.getId())).will(returnValue(true));
-		
-		boolean esperado = true;
-		
 		try{
-			assertEquals(esperado, cr.remover(c.getId()));
-		}catch (Exception e){
-			new EscolaException(e.getMessage()).printStackTrace();
+			context.checking(new Expectations(){{
+				one (cr).incluir(c);
+			}});
+		}catch (CidadeCadastradaException cce) {
+			System.out.println(cce.getMessage());
 		}
+		try{
+			cr.incluir(c);
+		}catch (CidadeCadastradaException cce) {
+			System.out.println(cce.getMessage());
+		}
+		context.assertIsSatisfied();	
 	}
 	/**
 	 * 
 	 */
+	@Test
+	public void testaRemover() {
+		try{
+			context.checking(new Expectations(){{
+				one (cr).remover(c.getId());
+			}});
+		}catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		try{
+			cr.remover(c.getId());
+		}catch (EscolaException cce) {
+			System.out.println(cce.getMessage());
+		}
+		context.assertIsSatisfied();
+	}
+	/**
+	 * 
+	 */
+	@Test
 	public void testaSalvar(){
-		
-		cidadeMock.expects(once()).method("salvar").with(eq(c)).will(returnValue(true));
-
-		boolean esperado = true;
-		
-		try {
-			assertEquals(esperado, cr.salvar(c));
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
-		}		
+		try{
+			context.checking(new Expectations(){{
+				one (cr).salvar(c);
+			}});
+		}catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		try{
+			cr.salvar(c);
+		}catch (EscolaException e) {
+			System.out.println(e.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaConsultar(){
 		
-		c.setNome("Itumbiara");
-				
-		cidadeMock.expects(once()).method("consultar").with(eq(c.getNome())).will(returnValue(c));
-		
-		String nomeCidade = "Itumbiara";
-		
 		try{
-			assertEquals(nomeCidade, cr.consultar(c.getNome()).getNome());
-			
-		}catch (Exception e){
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
-		}	
+			context.checking(new Expectations(){{
+				one (cr).consultar(c.getNome());
+			}});
+		}catch (CidadeNaoEncontradaException cnee) {
+			System.out.println(cnee.getMessage());
+		}
+		try{
+			cr.consultar(c.getNome());
+		}catch (CidadeNaoEncontradaException cnee) {
+			System.out.println(cnee.getMessage());
+		}
+		context.assertIsSatisfied();	
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaCarregar(){
 		
-		c.setNome("Luziania");
-		
-		cidadeMock.expects(once()).method("carregar").with(eq(c.getId())).will(returnValue(c));
-		
-		String nomeCidade = "Luziania";
-				
-		try {
-			assertEquals(nomeCidade, cr.carregar(c.getId()).getNome());
-		} catch (Exception e) {
-			new EscolaException(e.getCause().getMessage()).printStackTrace();
+		try{
+			context.checking(new Expectations(){{
+				one (cr).carregar(c.getId());
+			}});
+		}catch (CidadeNaoEncontradaException cnee) {
+			System.out.println(cnee.getMessage());
 		}
+		try{
+			cr.carregar(c.getId());
+		}catch (CidadeNaoEncontradaException cnee) {
+			System.out.println(cnee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
 	/**
 	 * 
 	 */
+	@Test
 	public void testaListaTodos(){
-		List<Cidade> listaCidades = new ArrayList<Cidade>();
-		cidadeMock.expects(once()).method("listaTodas").will(returnValue(new ArrayList<Cidade>()));
-		try {
-			assertEquals(listaCidades, cr.listaTodas());
-		} catch (Exception e) {
-			new EscolaException(e.getMessage()).printStackTrace();
+		try{
+			context.checking(new Expectations(){{
+				one (cr).listaTodas();
+			}});
+		}catch (NenhumaCidadeEncontradaException ncee) {
+			System.out.println(ncee.getMessage());
 		}
+		try{
+			cr.listaTodas();
+		}catch (NenhumaCidadeEncontradaException ncee) {
+			System.out.println(ncee.getMessage());
+		}
+		context.assertIsSatisfied();
 	}
+
 }
