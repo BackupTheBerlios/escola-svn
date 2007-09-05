@@ -1,0 +1,32 @@
+===================================
+Projeto kad-libs-eclipse
+Copyright (c) 2007 by Kyriosdata(r)
+==============================================
+Versão 0.9, 2 de julho de 2007
+
+PATROCINADOR:
+  Kyriosdata(r) (http://www.kyriosdata.com.br)
+
+O QUE É?
+  Agrupa bibliotecas da distribuição do Kad e os 
+  Outros projetos apenas estabelecem dependência
+  para este, o que automaticamente disponibiliza
+  todas as bibliotecas do Kad.
+
+INSTALAÇÃO
+  O diretório 'kad-libs-eclipse' é fornecido com uma 
+  distribuição do Kad. Ao instalar o Kad, automaticamente
+  encontra-se disponível este projeto, em diretório de
+  mesmo nome.
+  
+  Definir ou atualizar a variável 'KAD_LIBS' para o
+  Window->Preferences->Classpath Variables
+  Selecione KAD_LIBS e atualize caso exista ou 
+  crie uma nova variável (KAD_LIBS).
+
+OBSERVAÇÕES IMPORTANTES
+  Não altere o conteúdo deste projeto. 
+  Entre em contato com o gerente de configuração.
+
+------------------------------------------------------------
+
