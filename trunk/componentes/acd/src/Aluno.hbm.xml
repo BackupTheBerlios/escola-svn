@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="de.berlios.escola.acd.src">
+
+  <class name="Aluno">
+		<id name="id" type="long" column="alunoId">
+			<generator class="native" />
+		</id>
+
+		<property name="matricula" type="integer" not-null="true" />
+
+		<property name="nome" type="string" not-null="true" />
+  </class>
+</hibernate-mapping>

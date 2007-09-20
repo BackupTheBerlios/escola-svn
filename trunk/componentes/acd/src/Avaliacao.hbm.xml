@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="de.berlios.escola.acd.src">
+
+  <class name="Avaliacao">
+		<id name="id" type="long" column="avaliacaoId">
+			<generator class="native" />
+		</id>
+
+ 		<many-to-one name="Turma" column="turmaId" unique="true" not-null="true" lazy="false" />
+
+<!--	<one-to-one name="Turma" property-ref="Avaliacao" lazy="false" />  -->
+
+		<set name="formulariosAvaliacao" table="FormAvaliacao" inverse="true" lazy="false" cascade="none">
+			<key column="avaliacaoId" />
+			<one-to-many class="FormAvaliacao" />
+		</set>
+
+		<list name="questoes" table="Questao" lazy="false" cascade="all,delete-orphan" >
+			<key column="avaliacaoId" not-null="true" />
+			<list-index column="indice" />
+			<one-to-many class="Questao" />
+		</list>
+  </class>
+</hibernate-mapping>
