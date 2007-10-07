@@ -98,6 +98,7 @@ public class CadastraPessoa {
 		String nacionalidade1 = "Brasileira";
 		String naturalidade1 = "Goiânia";
 		String nomeFantasia1 = "";
+		
 //		Dados da pessoa 2 para teste
 		String nomePessoa2 = "Pessoa 2";
 		String tipoEndereco2 = "RESIDENCIAL";
@@ -219,6 +220,7 @@ public class CadastraPessoa {
 			ee.getMessage();
 		}	
 		//Cadastra Pessoa 1	
+		
 		try{	
 			ps.cadastraPessoa(
 					nomePessoa1, sexo1, dataNascimento1, nacionalidade1, naturalidade1, nomeFantasia1, tipoEndereco1, tipoLogradouro1, nomeLogradouro1, 
