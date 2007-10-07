@@ -35,8 +35,8 @@ public class BairroRepositoryTeste {
 	@Test
 	public void testaIncluir(){
 		Pais p = new Pais("Brasil");
-		Estado e = new Estado("Goi�s");
-		Cidade c = new Cidade("Goi�nia");
+		Estado e = new Estado("Goiás");
+		Cidade c = new Cidade("Goiânia");
 		e.setPais(p);
 		c.setEstado(e);
 		b.setCidade(c);
