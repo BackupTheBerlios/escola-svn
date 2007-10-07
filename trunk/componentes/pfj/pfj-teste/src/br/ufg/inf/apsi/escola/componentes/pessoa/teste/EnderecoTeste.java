@@ -35,7 +35,7 @@ public class EnderecoTeste {
 	public void testEndereco() {
 		Endereco end = new Endereco();
 		end.setId(1L);
-		assertEquals(1L, end.getId());
+		assertSame(1L, end.getId());
 	}
 
 	/**
@@ -79,8 +79,7 @@ public class EnderecoTeste {
 	public void testGetId() {
 		Endereco e = new Endereco();
 		e.setId(1L);
-		long id = 1;
-		assertEquals(id, e.getId());
+		assertSame(1L, e.getId());
 	}
 
 	/**
@@ -90,8 +89,7 @@ public class EnderecoTeste {
 	public void testSetId() {
 		Endereco e = new Endereco();
 		e.setId(1L);
-		long id = 1;
-		assertEquals(id, e.getId());
+		assertSame(1L, e.getId());
 	}
 
 	/**

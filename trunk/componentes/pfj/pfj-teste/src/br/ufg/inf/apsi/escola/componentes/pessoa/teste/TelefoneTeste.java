@@ -29,7 +29,7 @@ public class TelefoneTeste {
 	public void testTelefone() {
 		Telefone t = new Telefone();
 		t.setId(1L);
-		assertEquals(1L, t.getId());
+		assertSame(1L, t.getId());
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class TelefoneTeste {
 	public void testTelefoneLong() {
 		Telefone t = new Telefone(32997869);
 		t.setId(1L);
-		assertEquals(1L, t.getId());
+		assertSame(1L, t.getId());
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class TelefoneTeste {
 		short ddd = 62;
 		Telefone t = new Telefone(ddd, 32997869);
 		t.setId(1L);
-		assertEquals(1L, t.getId());
+		assertSame(1L, t.getId());
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class TelefoneTeste {
 		short ddd = 62;
 		Telefone t = new Telefone(ddd, 32997869,"CELULAR");
 		t.setId(1L);
-		assertEquals(1L, t.getId());
+		assertSame(1L, t.getId());
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class TelefoneTeste {
 	public void testGetId() {
 		Telefone tel = new Telefone();
 		tel.setId(1234L);
-		assertEquals(1234L, tel.getId());
+		assertSame(1234L, tel.getId());
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class TelefoneTeste {
 	public void testSetId() {
 		Telefone tel = new Telefone();
 		tel.setId(1234L);
-		assertEquals(1234L, tel.getId());
+		assertSame(1234L, tel.getId());
 	}
 
 	/**

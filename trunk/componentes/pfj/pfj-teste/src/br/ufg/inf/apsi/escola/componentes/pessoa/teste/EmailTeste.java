@@ -26,7 +26,7 @@ public class EmailTeste {
 	public void testEmail() {
 		Email email = new Email();
 		email.setId(1L);
-		assertEquals(1L, email.getId());
+		assertSame(1L, email.getId());
 	}
 
 	/**
@@ -65,8 +65,7 @@ public class EmailTeste {
 	public void testGetId() {
 		Email email = new Email();
 		email.setId(1L);
-		long id = 1;
-		assertEquals(id, email.getId());
+		assertSame(1L, email.getId());
 	}
 
 	/**
@@ -76,8 +75,7 @@ public class EmailTeste {
 	public void testSetId() {
 		Email email = new Email();
 		email.setId(1L);
-		long id = 1;
-		assertEquals(id, email.getId());
+		assertSame(1L, email.getId());
 	}
 
 	/**

@@ -231,7 +231,7 @@ public class PessoaFisicaTeste {
 	public void testGetId() {
 		Pessoa p = new PessoaFisica();
 		p.setId(1L);
-		assertEquals(1L, p.getId());
+		assertSame(1L, p.getId());
 	}
 
 	/**
@@ -241,7 +241,7 @@ public class PessoaFisicaTeste {
 	public void testSetId() {
 		Pessoa p = new PessoaFisica();
 		p.setId(1L);
-		assertEquals(1L, p.getId());
+		assertSame(1L, p.getId());
 	}
 
 	/**

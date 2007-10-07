@@ -47,8 +47,7 @@ public class PaisTeste {
 	public void testGetId() {
 		Pais p = new Pais();
 		p.setId(1L);
-		long id = 1;
-		assertEquals(id, p.getId());
+		assertSame(1L, p.getId());
 	}
 
 	/**
@@ -58,8 +57,7 @@ public class PaisTeste {
 	public void testSetId() {
 		Pais p = new Pais();
 		p.setId(1L);
-		long id = 1;
-		assertEquals(id, p.getId());
+		assertSame(1L, p.getId());
 	}
 
 	/**

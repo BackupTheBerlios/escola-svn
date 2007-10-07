@@ -47,7 +47,7 @@ public class PessoaJuridicaTeste {
 	public void testPessoaJuridica() {
 		Pessoa p = new PessoaJuridica();
 		p.setId(2L);
-		assertEquals(2L, p.getId());
+		assertSame(2L, p.getId());
 	}
 
 	/**

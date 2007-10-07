@@ -29,7 +29,7 @@ public class RgTeste {
 	public void testRG() {
 		Documento rg = new RG();
 		rg.setId(1L);
-		assertEquals(1L, rg.getId());
+		assertSame(1L, rg.getId());
 	}
 
 	/**

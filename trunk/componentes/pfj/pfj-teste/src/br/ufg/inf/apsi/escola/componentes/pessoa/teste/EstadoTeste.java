@@ -79,7 +79,7 @@ public class EstadoTeste {
 	public void testGetId() {
 		Estado estado = new Estado();
 		estado.setId(1L);
-		assertEquals(1L, estado.getId());
+		assertSame(1L, estado.getId());
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class EstadoTeste {
 	public void testSetId() {
 		Estado estado = new Estado();
 		estado.setId(1L);
-		assertEquals(1L, estado.getId());
+		assertSame(1L, estado.getId());
 	}
 
 	/**

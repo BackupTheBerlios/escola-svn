@@ -95,7 +95,7 @@ public class CnpjTeste {
 	public void testGetId() {
 		Documento doc = new CNPJ();
 		doc.setId(1L);
-		assertEquals(1L,doc.getId());
+		assertSame(1L,doc.getId());
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class CnpjTeste {
 	public void testSetId() {
 		Documento doc = new CNPJ();
 		doc.setId(1L);
-		assertEquals(1L,doc.getId());
+		assertSame(1L,doc.getId());
 	}
 
 	/**

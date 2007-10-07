@@ -63,9 +63,8 @@ public class CidadeTeste {
 	@Test
 	public void testGetId() {
 		Cidade c = new Cidade();
-		long cidadeId = 1;
-		c.setId(cidadeId);
-		assertEquals(cidadeId, c.getId());
+		c.setId(1L);
+		assertSame(1L, c.getId());
 	}
 
 	/**
@@ -74,9 +73,8 @@ public class CidadeTeste {
 	@Test
 	public void testSetId() {
 		Cidade c = new Cidade();
-		long cidadeId = 1;
-		c.setId(cidadeId);
-		assertEquals(cidadeId, c.getId());
+		c.setId(1L);
+		assertSame(1L, c.getId());
 	}
 
 	/**

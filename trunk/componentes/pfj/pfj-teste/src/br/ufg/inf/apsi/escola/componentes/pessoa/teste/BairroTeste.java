@@ -60,8 +60,7 @@ public class BairroTeste {
 	public void testGetId() {
 		Bairro b2 = new Bairro();
 		b2.setId(1L);
-		long bairroId = 1;
-		assertEquals(bairroId, b2.getId());
+		assertEquals("1", b2.getId());
 	}
 
 	/**
@@ -71,8 +70,7 @@ public class BairroTeste {
 	public void testSetId(){
 		Bairro b3 = new Bairro();
 		b3.setId(1L);
-		long bairroId = 1;
-		assertEquals(bairroId, b3.getId());
+		assertEquals("1", b3.getId());
 	}
 
 	/**

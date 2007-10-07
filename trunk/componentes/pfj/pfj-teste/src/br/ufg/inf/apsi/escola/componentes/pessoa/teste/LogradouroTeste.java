@@ -29,7 +29,7 @@ public class LogradouroTeste {
 	public void testLogradouro() {
 		Logradouro log = new Logradouro();
 		log.setId(1L);
-		assertEquals(1L, log.getId());
+		assertSame(1L, log.getId());
 	}
 
 	/**
@@ -58,8 +58,7 @@ public class LogradouroTeste {
 	public void testGetId() {
 		Logradouro log = new Logradouro();
 		log.setId(1L);
-		long id = 1;
-		assertEquals(id, log.getId());
+		assertSame(1L, log.getId());
 	}
 
 	/**
@@ -69,8 +68,7 @@ public class LogradouroTeste {
 	public void testSetId() {
 		Logradouro log = new Logradouro();
 		log.setId(1L);
-		long id = 1;
-		assertEquals(id, log.getId());
+		assertSame(1L, log.getId());
 	}
 
 	/**
