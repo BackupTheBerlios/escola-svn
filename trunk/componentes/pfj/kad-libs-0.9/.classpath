@@ -83,5 +83,6 @@
 	<classpathentry exported="true" kind="var" path="KAD_LIBS/jcommon-1.0.10/jcommon-1.0.10.jar"/>
 	<classpathentry kind="var" path="KAD_LIBS/junit4.4/junit-4.4.jar"/>
 	<classpathentry kind="var" path="KAD_LIBS/junit4.4/junit-4.4-src.jar"/>
+	<classpathentry kind="var" path="KAD_LIBS/hibernate-annotations-3.3.0.GA/lib/hibernate-commons-annotations.jar"/>
 	<classpathentry kind="output" path="target"/>
 </classpath>
