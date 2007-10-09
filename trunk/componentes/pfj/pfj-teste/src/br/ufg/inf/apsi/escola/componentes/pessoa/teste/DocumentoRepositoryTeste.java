@@ -12,12 +12,12 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.DocumentoCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.DocumentoNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumDocumentoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.RemocaoDocumentoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumDocumentoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.RemocaoDocumentoException;
 
 @RunWith(JMock.class)
 public class DocumentoRepositoryTeste {
@@ -31,7 +31,7 @@ public class DocumentoRepositoryTeste {
 	 */
 	@Test
 	public void testaIncluirDocumento() {
-		//Testa a inclusão de um cpf
+		//Testa a inclusï¿½o de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(cpf);
@@ -47,7 +47,7 @@ public class DocumentoRepositoryTeste {
 		}
 		context.assertIsSatisfied();
 		
-		//Testa a inclusão de um cpf
+		//Testa a inclusï¿½o de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(cnpj);
@@ -63,7 +63,7 @@ public class DocumentoRepositoryTeste {
 		}
 		context.assertIsSatisfied();
 		
-		//Testa a inclusão de um RG
+		//Testa a inclusï¿½o de um RG
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(rg);
@@ -85,7 +85,7 @@ public class DocumentoRepositoryTeste {
 	 */		
 	@Test
 	public void testaRemover(){
-		//Testa a remoção de um cpf
+		//Testa a remoï¿½ï¿½o de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).remover(cpf.getNumero());
@@ -102,7 +102,7 @@ public class DocumentoRepositoryTeste {
 		context.assertIsSatisfied();
 		
 		
-		//Testa remoção de um cnpj
+		//Testa remoï¿½ï¿½o de um cnpj
 		try {
 			context.checking(new Expectations(){{
 				one (dr).remover(cnpj.getNumero());

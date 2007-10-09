@@ -13,11 +13,11 @@ import org.junit.runner.RunWith;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaPessoaEncontradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaCadastradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumaPessoaEncontradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaCadastradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaNaoEncontradaException;
 
 @RunWith(JMock.class)
 public class PessoaRepositoryTeste {
@@ -30,7 +30,7 @@ public class PessoaRepositoryTeste {
 	 */
 	@Test
 	public void testaIncluir() {
-		//Testa a inclusão de uma pessoa física		
+		//Testa a inclusï¿½o de uma pessoa fï¿½sica		
 		try {
 			context.checking(new Expectations(){{
 				one(pr).incluir(pf);
@@ -46,7 +46,7 @@ public class PessoaRepositoryTeste {
 		}
 		context.assertIsSatisfied();
 		
-		//testa a inclusão de uma pessoa jurídica
+		//testa a inclusï¿½o de uma pessoa jurï¿½dica
 		try {
 			context.checking(new Expectations(){{
 				one(pr).incluir(pj);
@@ -67,7 +67,7 @@ public class PessoaRepositoryTeste {
 	 */
 	@Test
 	public void testaRemover(){
-		//Testa a remoção de uma pessoa física
+		//Testa a remoï¿½ï¿½o de uma pessoa fï¿½sica
 		try {
 			context.checking(new Expectations(){{
 				one(pr).remover(pf.getId());
@@ -82,7 +82,7 @@ public class PessoaRepositoryTeste {
 			System.out.println(e.getMessage());
 		}
 		context.assertIsSatisfied();
-		//Testa a remoção de uma pessoa jurídica
+		//Testa a remoï¿½ï¿½o de uma pessoa jurï¿½dica
 		try {
 			context.checking(new Expectations(){{
 				one(pr).remover(pj.getId());
@@ -199,7 +199,7 @@ public class PessoaRepositoryTeste {
 	@Test
 	public void testaConsultarPessoaCidade(){
 		
-		final String nomeCidade = "Goiânia";
+		final String nomeCidade = "Goiï¿½nia";
 		
 		try {
 			context.checking(new Expectations(){{

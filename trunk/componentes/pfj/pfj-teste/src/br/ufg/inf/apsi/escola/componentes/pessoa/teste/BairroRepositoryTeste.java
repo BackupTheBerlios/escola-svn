@@ -12,11 +12,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.BairroCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.BairroNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumBairroEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.BairroCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.BairroNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumBairroEncontradoException;
 
 
 /**

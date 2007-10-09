@@ -18,8 +18,8 @@ public class TipoLogradouroTeste {
 	 */
 	@Test
 	public void TipoLogradouro() {
-		br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro tipo = br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro.AVENIDA;
-		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro.AVENIDA);
+		br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro tipo = br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro.AVENIDA;
+		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro.AVENIDA);
 	}
 
 }

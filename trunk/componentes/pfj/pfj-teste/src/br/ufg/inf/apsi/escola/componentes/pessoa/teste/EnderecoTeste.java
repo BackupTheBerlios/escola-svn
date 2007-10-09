@@ -17,8 +17,8 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro;
 
 
 /**
@@ -188,7 +188,7 @@ public class EnderecoTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco)}.
 	 */
 	@Test
 	public void testSetTipo() {

@@ -9,11 +9,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumPaisEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumPaisEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisNaoEncontradoException;
 
 @RunWith(JMock.class)
 public class PaisRepositoryTeste {

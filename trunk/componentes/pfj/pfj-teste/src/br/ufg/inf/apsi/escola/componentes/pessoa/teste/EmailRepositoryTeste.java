@@ -9,11 +9,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EmailCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EmailNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEmailEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EmailCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EmailNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumEmailEncontradoException;
 
 @RunWith(JMock.class)
 public class EmailRepositoryTeste {

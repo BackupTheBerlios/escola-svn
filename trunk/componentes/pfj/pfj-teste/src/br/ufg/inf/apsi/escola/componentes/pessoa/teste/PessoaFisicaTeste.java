@@ -24,8 +24,8 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro;
 
 
 

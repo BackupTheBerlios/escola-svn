@@ -17,8 +17,8 @@ public class TipoEnderecoTeste {
 	 */
 	@Test
 	public void TipoEndereco() {
-		br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco tipo = br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco.RESIDENCIAL;
-		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco.RESIDENCIAL );
+		br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco tipo = br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco.RESIDENCIAL;
+		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco.RESIDENCIAL );
 	}
 
 }

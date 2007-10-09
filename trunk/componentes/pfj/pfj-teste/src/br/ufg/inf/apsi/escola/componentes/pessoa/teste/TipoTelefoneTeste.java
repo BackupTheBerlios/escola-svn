@@ -17,8 +17,8 @@ public class TipoTelefoneTeste {
 	 */
 	@Test
 	public void TipoTelefone() {
-		br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone tipo = br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone.FIXO;
-		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone.FIXO);
+		br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone tipo = br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone.FIXO;
+		assertEquals(tipo, br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone.FIXO);
 	}
 	
 

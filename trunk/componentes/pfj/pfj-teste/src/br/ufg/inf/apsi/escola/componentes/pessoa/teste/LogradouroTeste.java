@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro;
 
 
 /**
@@ -103,7 +103,7 @@ public class LogradouroTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro)}.
 	 */
 	@Test
 	public void testSetTipo() {

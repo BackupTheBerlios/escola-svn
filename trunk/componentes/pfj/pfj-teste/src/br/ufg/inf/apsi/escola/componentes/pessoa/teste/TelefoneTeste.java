@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone;
 
 
 /**
@@ -140,7 +140,7 @@ public class TelefoneTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone#setTipo(br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone)}.
 	 */
 	@Test
 	public void testSetTipo() {
