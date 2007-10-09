@@ -14,11 +14,11 @@ import javax.persistence.Query;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EstadoCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EstadoNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEstadoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EstadoCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EstadoNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumEstadoEncontradoException;
 
 
 /**

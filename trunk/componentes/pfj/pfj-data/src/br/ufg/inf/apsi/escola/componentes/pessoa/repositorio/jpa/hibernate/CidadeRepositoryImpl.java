@@ -14,11 +14,11 @@ import javax.persistence.Query;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.CidadeCadastradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.CidadeNaoEncontradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaCidadeEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.CidadeCadastradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.CidadeNaoEncontradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumaCidadeEncontradaException;
 
 /**
  * Classe definida para implementar a persistência de cidades.

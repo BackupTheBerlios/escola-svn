@@ -16,11 +16,11 @@ import javax.persistence.TemporalType;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaPessoaEncontradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaCadastradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumaPessoaEncontradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaCadastradaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PessoaNaoEncontradaException;
 
 
 /**

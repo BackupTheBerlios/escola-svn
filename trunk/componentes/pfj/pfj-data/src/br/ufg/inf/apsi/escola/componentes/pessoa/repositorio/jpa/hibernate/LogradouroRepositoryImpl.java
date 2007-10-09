@@ -14,11 +14,11 @@ import javax.persistence.Query;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.LogradouroCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.LogradouroNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumLogradouroEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.LogradouroCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.LogradouroNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumLogradouroEncontradoException;
 
 
 

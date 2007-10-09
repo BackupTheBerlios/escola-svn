@@ -1,5 +1,6 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.teste;
 
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaServiceImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.BairroRepositoryImpl;
@@ -13,7 +14,6 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.Logra
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
 /**
  * Classe definida para testar a remoção do cadastro de pessoas.
  * @author gilmar

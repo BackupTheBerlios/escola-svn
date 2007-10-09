@@ -14,11 +14,11 @@ import javax.persistence.Query;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EnderecoCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EnderecoNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEnderecoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EnderecoCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EnderecoNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumEnderecoEncontradoException;
 
 
 

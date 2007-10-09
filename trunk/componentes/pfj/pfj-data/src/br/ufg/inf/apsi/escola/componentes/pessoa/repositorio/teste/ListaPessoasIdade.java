@@ -2,6 +2,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.teste;
 
 import java.util.List;
 
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaServiceImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.BairroRepositoryImpl;
@@ -15,10 +16,9 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.Logra
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
 
 
-import static br.ufg.inf.apsi.escola.componentes.pessoa.util.Util.formataData;
+import static br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.util.Util.formataData;
 /**
  * Classe definida para testar a listagem de pessoas por idade.
  * @author gilmar

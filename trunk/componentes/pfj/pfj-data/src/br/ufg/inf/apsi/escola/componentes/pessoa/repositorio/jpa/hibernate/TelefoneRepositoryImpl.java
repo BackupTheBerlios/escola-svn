@@ -11,11 +11,11 @@ import javax.persistence.Query;
 import javax.persistence.TransactionRequiredException;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumTelefoneEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumTelefoneEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TelefoneCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TelefoneNaoEncontradoException;
 
 /**
  * Classe definida para implementar a persistência de telefones.
