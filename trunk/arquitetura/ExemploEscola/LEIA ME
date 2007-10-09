@@ -1,0 +1,49 @@
+**************************************************************************************
+* Arquivo Leia-me do Projeto Exemplo para modelo de arquitetura do sistema Escola - UFG																	  
+*
+* ************************************************************************************
+
+1 - Requisitos
+2 - Configurações adicionais
+3 - Acesso à aplicação
+
+
+1 - Requisitos
+
+	- Para criação do projeto exemplo foram utilizadas as seguintes ferramentas:
+
+		- Eclipse IDE 3.2.2
+		- Tomcat 5.5.23
+		- HSQLDB 1.8.0.7
+
+2 - Configurações adicionais
+
+	O nome do banco de dados utilizado para nas configurações foi "escola" bem como também o seu alias. Então, para inicializar o banco são nescessários os seguintes passos:
+
+	- Configurar CLASSPATH
+		Para que o HSQLDB possa ser inicializado, o arquivo hsqldb.jar deve estar no CLASSPATH e, para isso caso o KAD libs não esteja configurado, execute o seguinte comando:
+
+		No Linux:
+			export CLASSPATH=$CLASSPATH:<caminho_de_instalacao_hsqldb>/lib/hsqldb.jar
+
+		No Windows:
+			set CLASSPATH=CLASSPATH%<caminho_de_instalacao_hsqldb>\lib\hsqldb.jar;
+
+	- Inicializar banco de dados
+
+			java org.hsqldb.Server -database.0 escola -dbname.0 escola
+
+3 - Acesso à aplicação
+
+	Para que se faça uso da aplicação exemplo será nescessário que se tenha acesso a mesma. E para isso, faz-se necessário a inclusão do usuário e de uma autorização. 
+	Então, após a inicialização do banco de dados(ver 2 - Configurações adicionais), acesse o banco pelo SQL Client de sua preferência e execute as seguintes instruções SQL:
+
+	INSERT INTO USUARIO VALUES(1, 'user','123456');
+	
+	Tal instrução irá inserir um usuário no banco de dados.
+
+	INSERT INTO AUTORIZACAO VALUES(1,'ADMIN',1);
+
+	Tal instrução irá inserir uma autorização para o usuário user no banco de dados.
+
+	Após, executar estas instruções, pode-se acessar a aplicação com o usuário criado(usuário: user; senha: 123456).

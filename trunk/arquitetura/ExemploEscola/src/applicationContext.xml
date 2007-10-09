@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd  
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    <!--                                         Configurações dos objetos da aplicação Persistência                                            -->    
+    
+    <!--                                                            Pessoa                                                                      -->
+    <bean id="pessoaRepositorio" class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.HibernatePessoaRepositorio" >
+        <property name="entityManagerFactory">
+            <ref local="entityManagerFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="pessoaNegocio" class="br.ufg.inf.apsi.escola.componentes.pessoa.negocio.bean.PessoaNegocioBean">
+        <constructor-arg ref="pessoaRepositorio"/>
+    </bean>
+    
+    <bean id="localPessoaService" class="br.ufg.inf.apsi.escola.componentes.pessoa.servico.local.LocalPessoaService">
+        <constructor-arg ref="pessoaNegocio"/>
+    </bean>
+    
+    <!--                                                            Usuario                                                                      -->
+    <bean id="usuarioRepositorio" class="br.ufg.inf.apsi.escola.componentes.usuario.repositorio.jpa.hibernate.HibernateUsuarioRepositorio" >
+        <property name="entityManagerFactory">
+            <ref local="entityManagerFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="usuarioNegocio" class="br.ufg.inf.apsi.escola.componentes.usuario.negocio.bean.UsuarioNegocioBean">
+        <constructor-arg ref="usuarioRepositorio"/>
+    </bean>
+    
+    <bean id="localUsuarioService" class="br.ufg.inf.apsi.escola.componentes.usuario.servico.local.LocalUsuarioService">
+        <constructor-arg ref="usuarioNegocio"/>
+    </bean>
+    
+    <!--                                                            Autorizacao                                                                      -->
+    <bean id="autorizacaoRepositorio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.repositorio.jpa.hibernate.HibernateAutorizacaoRepositorio" >
+        <property name="entityManagerFactory">
+            <ref local="entityManagerFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="autorizacaoNegocio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.negocio.bean.AutorizacaoNegocioBean">
+        <constructor-arg ref="autorizacaoRepositorio"/>
+    </bean>
+    
+    <bean id="localAutorizacaoService" class="br.ufg.inf.apsi.escola.componentes.autorizacao.servico.local.LocalAutorizacaoService">
+        <constructor-arg ref="autorizacaoNegocio"/>
+    </bean>
+    
+    <!-- Managed Beans -->
+    <bean id="acessoNegado" class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.AcessoNegado" scope="session"/>
+    <bean id="principal" class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.Principal" scope="session"/>
+    <bean id="cadastrarPessoa" class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.CadastrarPessoa" scope="session"/>
+    <bean id="listarPessoas" class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.ListarPessoas" scope="session"/>
+    <bean id="login" class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.Login" scope="session"/>
+    
+    <!-- Configurações dos beans do Spring - Controle transacional-->
+            
+    <!-- Para o HBSQL-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
+        <property name="url" value="jdbc:hsqldb:hsql://localhost/escola"/>        
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+    
+    <!-- Para o Tomcat-->
+    <!--
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>java:comp/env/jdbc/escolaDataSource</value>
+        </property>        
+    </bean>
+    -->
+    
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>			
+            <tx:method name="*" propagation="REQUIRED" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- Configurações AOP para controle transacional -->
+    <aop:config>
+        <aop:pointcut id="serviceOperation" expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
+    </aop:config>
+    
+    <!-- Bean responsável pelo gerenciamento de transações -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+    
+    <!-- Entity Manager, responsável pela intermediação entre banco e aplicação -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="showSql" value="true"/>
+                <property name="generateDdl" value="true"/>
+                <property name="database" value="HSQL" />
+            </bean>
+        </property>                 
+    </bean>
+    
+    <!--                                        Autenticação com ACEGI                                          -->
+    
+    <!-- Filtro Principal para interceptar requisições HTTP. Forma uma corrente de filtros, dos quais toda requisição é interceptada. -->
+    <bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy">
+        <property name="filterInvocationDefinitionSource">  
+            <value>  
+                CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON  
+                PATTERN_TYPE_APACHE_ANT  
+                /**=httpSessionContextIntegrationFilter,authenticationProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+            </value>  
+        </property>  
+    </bean>  
+    
+    <!-- Bean responsável por manter o objeto de autenticação entre várias chamadas e, quando necessário, passa ele ao Gerenciador de Autenticações(authenticationManager) e ao Gerenciador de Decisões de Acesso(httpRequestAccessDecisionManager) -->
+    <bean id="httpSessionContextIntegrationFilter" class="org.acegisecurity.context.HttpSessionContextIntegrationFilter" />        
+    
+    <!-- Bean responsável pela checagem de autenticação, trata exceções de segurança(autorização) e toma ações apropriadas -->
+    <bean id="exceptionTranslationFilter" class="org.acegisecurity.ui.ExceptionTranslationFilter">  
+        <property name="authenticationEntryPoint">
+            <ref local="authenticationProcessingFilterEntryPoint"/>
+        </property>
+        <property name="accessDeniedHandler">
+            <bean class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+                <property name="errorPage">
+                    <value>/faces/AcessoNegado.html</value>
+                </property>
+            </bean>
+        </property>
+    </bean>  
+    
+    <!-- Bean responsável pela verificação de autenticação -->
+    <bean id="authenticationProcessingFilter" class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">  
+        <property name="authenticationManager"><ref bean="authenticationManager" /></property>  
+        <property name="defaultTargetUrl"><value>/</value></property>  
+        <property name="alwaysUseDefaultTargetUrl"><value>false</value></property>  
+        <property name="filterProcessesUrl"><value>/j_acegi_security_check</value></property>  
+        <property name="authenticationFailureUrl"><value>/AcessoNegado.html</value></property>        
+    </bean>  
+    
+    <!-- Bean responsável pelo redirecionamento caso o FilterSecurityInterceptor(filterInvocationInterceptor) não encontra objeto de autenticação -->
+    <bean id="authenticationProcessingFilterEntryPoint" class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">  
+        <property name="loginFormUrl">
+            <value>/AcessoNegado.html</value>
+        </property>
+        <!-- Deseja criptografar usuário e senha (https)? -->
+        <property name="forceHttps">
+            <value>false</value>
+        </property>  
+    </bean>  
+    
+    <!-- Bean reponsável pelo gerenciamento de autorizações -->
+    <bean id="httpRequestAccessDecisionManager" class="org.acegisecurity.vote.AffirmativeBased">  
+        <property name="allowIfAllAbstainDecisions">
+            <value>false</value>
+        </property>  
+        <property name="decisionVoters">  
+            <list>  
+                <ref bean="roleVoter" />
+            </list>
+        </property>  
+    </bean>  
+    
+    <!-- Gerencia o acesso restrito e a checagem de autorização. Conhece os recursos e quais são os direitos necessários para acessá-los -->
+    <!-- Obs.: Pode ser preenchido de forma dinâmica -->
+    <bean id="filterInvocationInterceptor" class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">  
+        <property name="authenticationManager">  
+            <ref bean="authenticationManager" />  
+        </property>  
+        <property name="accessDecisionManager">  
+            <ref local="httpRequestAccessDecisionManager" />  
+        </property>
+        <property name="objectDefinitionSource">
+            <value>
+                CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+                PATTERN_TYPE_APACHE_ANT
+                /faces/principal.jsp=ADMIN,USER
+                /faces/cadastrarpessoa.jsp=ADMIN
+                /faces/listarpessoas.jsp=ADMIN,USER
+            </value>
+        </property>
+    </bean>
+    
+    <!-- Especifica padrões para verificação de autorização -->
+    <bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter">
+        <property name="rolePrefix">
+            <value></value>
+        </property>
+    </bean>
+    
+    <!-- Bean responsável pela controle de autenticação. Implementação própria -->
+    <bean id="controladorDeAutenticacao" class="br.ufg.inf.apsi.escola.ie.acegi.ControladorDeAutenticacao">
+        <property name="authenticationManager">
+            <ref bean="authenticationManager"/>
+        </property>
+    </bean>
+    
+    <!-- Bean responsável pelo gerenciamento de autenticação-->
+    <bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+        <!-- Podem existir vários providers e de vários tipos -->
+        <property name="providers">
+            <list>
+                <ref bean="daoAuthenticationProvider"/>
+            </list>                
+        </property >
+        
+        <property name="sessionController">
+            <ref bean="concurrentSessionController"/>
+        </property>
+    </bean>
+    
+    <!-- Bean responsável por controlar a quantidade de sessões por usuário -->
+    <bean id="concurrentSessionController" class="org.acegisecurity.concurrent.ConcurrentSessionControllerImpl">
+        <property name="maximumSessions">
+            <value>1</value>
+        </property>
+        <property name="sessionRegistry">
+            <ref local="sessionRegistry"/>
+        </property>
+    </bean>
+    
+    <!-- Bean responsável pelo registro de sessões -->
+    <bean id="sessionRegistry" class="org.acegisecurity.concurrent.SessionRegistryImpl"/>
+    
+    <!-- Bean responsável pela autenticação do usuário e a busca de suas autorizações (perfis) - Implementação própria -->
+    <bean id="autenticadorUsuario" class="br.ufg.inf.apsi.escola.ie.acegi.AutenticadorUsuario">
+        <constructor-arg ref="localUsuarioService"/>
+        <constructor-arg ref="localAutorizacaoService"/>
+    </bean>
+    
+    <!--Bean responsável pela encriptação do password do usuário - Implementação própria -->
+    <bean id="passwordEncoder" class="br.ufg.inf.apsi.escola.ie.acegi.EncodificadorPassword"/>
+    
+    <!-- Bean responsável por prover as informações dos usuários -->
+    <bean id="daoAuthenticationProvider" class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+        <property name="userDetailsService">
+            <ref local="autenticadorUsuario"/>
+        </property>
+        <property name="userCache">
+            <ref local="userCache"/>
+        </property>
+        <property name="passwordEncoder">
+            <ref local="passwordEncoder"/>
+        </property>
+    </bean>
+    
+    <!-- Bean gerenciador de cache do Spring -->
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
+    
+    <!-- Cache do Spring para armazenamento de dados -->
+    <bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager">
+            <ref local="cacheManager"/>
+        </property>
+        <property name="cacheName">
+            <value>userCache</value>
+        </property>
+    </bean>
+    
+    <!-- Coloca informações de usuário em cache para uso. -->
+    <bean id="userCache" class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
+        <property name="cache">
+            <ref local="userCacheBackend"/>
+        </property>
+    </bean>   
+</beans>
