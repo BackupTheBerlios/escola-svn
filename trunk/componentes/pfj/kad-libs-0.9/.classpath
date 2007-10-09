@@ -81,8 +81,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="var" path="KAD_LIBS/jcommon-1.0.10/jcommon-1.0.10.jar"/>
-	<classpathentry kind="var" path="KAD_LIBS/junit4.4/junit-4.4.jar"/>
-	<classpathentry kind="var" path="KAD_LIBS/junit4.4/junit-4.4-src.jar"/>
-	<classpathentry kind="var" path="KAD_LIBS/hibernate-annotations-3.3.0.GA/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/junit4.4/junit-4.4.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/junit4.4/junit-4.4-src.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/hibernate-annotations-3.3.0.GA/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/jmock-2.1.0/cglib-2.1_3-src.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/jmock-2.1.0/cglib-nodep-2.1_3.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/jmock-2.1.0/jmock-junit3-2.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/jmock-2.1.0/jmock-legacy-2.1.0.jar"/>
+	<classpathentry exported="true" kind="var" path="KAD_LIBS/jmock-2.1.0/objenesis-1.0.jar"/>
 	<classpathentry kind="output" path="target"/>
 </classpath>
