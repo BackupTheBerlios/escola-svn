@@ -3,11 +3,11 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.DocumentoNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumDocumentoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.RemocaoDocumentoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.DocumentoCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.DocumentoNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumDocumentoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.RemocaoDocumentoException;
 
 
 /**

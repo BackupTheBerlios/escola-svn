@@ -2,7 +2,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.modelo;
 
 import java.util.List;
 
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoLogradouro;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoLogradouro;
 
 /**
  * Classe definido para modelar os Logradouros componentes dos Enderecos das Pessoas participantes do sistema Escola.

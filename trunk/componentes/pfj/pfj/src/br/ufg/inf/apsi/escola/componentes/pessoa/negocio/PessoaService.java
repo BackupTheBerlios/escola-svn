@@ -6,6 +6,7 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
@@ -16,7 +17,6 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepositor
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
 
 /**
  * Interface definida para disponibilizar as operações do componente pfj acessíveis externamente ao mesmo. 

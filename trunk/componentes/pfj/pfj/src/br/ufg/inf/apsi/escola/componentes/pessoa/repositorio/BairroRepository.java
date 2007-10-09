@@ -3,10 +3,10 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.BairroCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.BairroNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumBairroEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.BairroCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.BairroNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumBairroEncontradoException;
 
 
 /**

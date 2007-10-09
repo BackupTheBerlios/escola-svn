@@ -3,10 +3,10 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EmailCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EmailNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumEmailEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EmailCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EmailNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEmailEncontradoException;
 
 /**
  * Interface definida para gerenciar a persistência de emails.

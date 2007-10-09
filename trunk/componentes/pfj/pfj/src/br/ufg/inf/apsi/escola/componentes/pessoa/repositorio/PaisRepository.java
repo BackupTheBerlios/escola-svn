@@ -3,10 +3,10 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumPaisEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.PaisNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumPaisEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisNaoEncontradoException;
 
 /**
  * Interface definida para gerenciar a persistência de países.

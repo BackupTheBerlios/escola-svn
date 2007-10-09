@@ -3,7 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoEndereco;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoEndereco;
 
 /**
  * Classe definida para modelar os Endereços das Pessoas participantes do sistema Escola.

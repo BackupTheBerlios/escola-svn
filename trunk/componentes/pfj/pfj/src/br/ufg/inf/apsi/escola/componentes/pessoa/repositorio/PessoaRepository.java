@@ -5,7 +5,10 @@ import java.util.Date;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.*;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaPessoaEncontradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaCadastradaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncontradaException;
 /**
  * Interface definida para gerenciar a persistência de pessoas.
  * @author gilmar

@@ -3,10 +3,10 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EnderecoCadastradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EnderecoNaoEncontradoException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.EscolaException;
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.NenhumEnderecoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EnderecoCadastradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EnderecoNaoEncontradoException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEnderecoEncontradoException;
 
 /**
  * Interface definida para gerenciar a persistência de endereços.

@@ -3,7 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ufg.inf.apsi.escola.componentes.pessoa.util.TipoTelefone;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TipoTelefone;
 
 /**
  * Classe definida para modelar os telefones das Pessoas participantes do Sistema Escola.
