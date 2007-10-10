@@ -7,7 +7,6 @@ import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado;
@@ -31,7 +30,7 @@ public class BairroRepositoryTeste {
 	private Bairro b = new Bairro();
 	private Mockery context = new JUnit4Mockery();
 	final BairroRepository br = context.mock(BairroRepository.class); 
-
+	
 	@Test
 	public void testaIncluir(){
 		Pais p = new Pais("Brasil");
