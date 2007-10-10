@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+                 version="1.0">
+    <description>Mapeamento Entidade Pacote Administracao de Curso</description>
+    <package>pu</package>
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno" name="Aluno">
+        <table name="ALUNO"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>
+            </id>
+            
+            <basic name="historicoAcademico" >
+                <column name="HISTORICO" length="200" nullable="true"/>
+                                
+            </basic>
+            <basic name="numeroMatricula" >
+                <column name="MATRICULA" length="6" />
+            </basic>
+			<one-to-one name="curso" mapped-by="Curso"/>
+			       
+        </attributes>
+    </entity>
+    
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso" name="Curso">
+        <table name="CURSO"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            
+            <basic name="codigo">
+                <column name="CODIGO" length="6"/>
+            </basic>
+             <basic name="dataCriacao">
+                <column name="DATA_CRIACAO" length="10"/>
+            </basic>
+                        
+            <basic name="matriculaMEC">
+                <column name="MATRICULA_MEC" length="6"/>
+            </basic>    
+            
+            
+            <basic name="metodologia">
+                <column name="METODOLOGIA" length="100"/>
+            </basic>
+
+            <basic name="objetivo">
+                <column name="OBJETIVO" length="100"/>
+            </basic>
+            
+            <basic name="sigla">
+                <column name="SIGLA" length="4"/>
+            </basic>
+                        <basic name="titulo">
+                <column name="TITULO" length="120"/>
+            </basic>
+                        <basic name="vigencia">
+                <column name="VIGENCIA" length="10"/>
+            </basic>
+            <one-to-many name="disciplina" mapped-by="Disciplina" />         
+            <one-to-one name="turma" mapped-by="Turma"/>
+        </attributes>        
+    </entity>
+    
+     <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina" name="Disciplina">
+        <table name="DISCIPLINA"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            
+            <basic name="codigo">
+                <column name="CODIGO" length="6"/>
+            </basic>
+             <basic name="nome">
+                <column name="NOME" length="120"/>
+            </basic>
+          
+            <many-to-one name="curso">
+              <join-column name="CURSO_ID" referenced-column-name="id"/>
+             
+            </many-to-one>
+           
+            <one-to-one name="ofertaDisciplina" mapped-by="OfertaDisciplina" />
+            
+        </attributes>        
+    </entity>
+    
+     <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente" name="Docente">
+        <table name="DOCENTE"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            
+            <basic name="matricula">
+                <column name="MATRICULA" length="6"/>
+            </basic>
+             <basic name="curriculum">
+                <column name="CURRICULUM" length="255"/>
+            </basic>
+            <many-to-one name="programaDisciplina">
+              <join-column name="PROGRAMA_ID" referenced-column-name="id" />
+            </many-to-one>
+            
+        </attributes>        
+    </entity>
+     <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma" name="MatriculaTurma">
+        <table name="MATRICULA_TURMA"/>
+        <attributes>
+            <id name="matriculaAluno">
+                <generated-value strategy="SEQUENCE"/>                
+            </id>
+            <many-to-one name="turma" >
+              <join-column name="TURMA_ID" referenced-column-name="id" ></join-column>
+            </many-to-one>
+            
+        </attributes>        
+    </entity>
+    
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.OfertaDisciplina" name="OfertaDisciplina">
+        <table name="OFERTA_DISC"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            <basic name="quantidadeVagas">
+               <column name="QTDE_VAGAS"/>
+               
+            </basic>
+            <many-to-one name="preMatriculaDisciplina" >
+              <join-column name="PRE_MATRICULA_ID" referenced-column-name="id"/>
+            </many-to-one>
+            
+        </attributes>        
+    </entity>
+    
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.PreMatriculaDisciplina" name="PreMatriculaDisciplina">
+        <table name="PRE_MATRICULA_DISC"/>
+        <attributes>
+            <id name="matriculaAluno">
+                <generated-value strategy="SEQUENCE"/>                
+            </id>
+            <basic name="codigoDisciplina">
+               <column name="COD_DISC"/>
+               
+            </basic>
+            <basic name="matriculaAluno">
+               <column name="MAT_ALUNO"/>
+               
+            </basic>
+            
+          <one-to-one name="ofertaDisciplina" mapped-by="OfertaDisciplina"/>
+            
+        </attributes>        
+    </entity>
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.ProgramaDisciplina" name="ProgramaDisciplina">
+        <table name="PROGRAMA_DISC"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            <basic name="ementa">
+               <column name="EMENTA"/>
+               
+            </basic>
+            <basic name="horarioAulas">
+               <column name="HORARIO"/>
+               
+            </basic>
+            
+            <basic name="numeroSala">
+               <column name="SALA"/>
+               
+            </basic>
+          <many-to-one name="disciplina" >
+            <join-column name="DISCIPLINA_ID" referenced-column-name="id"/>
+          </many-to-one>
+          <many-to-one name="turma" >
+            <join-column  name="TURMA_ID" referenced-column-name="id"/>
+          </many-to-one>
+          <many-to-one name="docente" >
+            <join-column name="DOCENTE_ID" referenced-column-name="id"/>
+          </many-to-one>
+                      
+        </attributes>        
+    </entity>
+    <entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma" name="Turma">
+        <table name="TURMA"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>                
+            </id>
+            <basic name="codigoTurma">
+               <column name="COD_TURMA"/>
+               
+            </basic>
+          <many-to-one name="curso">
+            <join-column name="CURSO_ID" referenced-column-name="id"/>
+          </many-to-one>              
+          <one-to-many name="programaDisciplina" mapped-by="ProgramaDisciplina"/>
+          <one-to-many name="matriculaTurma" mapped-by="MatriculaTurma"/>
+          
+        </attributes>        
+    </entity>
+</entity-mappings>

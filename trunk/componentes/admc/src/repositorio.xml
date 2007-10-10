@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"
+				rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut id="serviceOperation"
+			expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="serviceOperation" />
+	</aop:config>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="jpaVendorAdapter">
+			<bean id="vendor"
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="HSQL" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+			ref="entityManagerFactory" />
+	</bean>
+
+
+	<!-- Aluno -->
+	<bean id="alunoRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.AlunoRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Docente -->
+	<bean id="docenteRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DocenteRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Disciplina -->
+	<bean id="disciplinaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DisciplinaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Curso  -->
+	<bean id="cursoRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.CursoRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- MatriculaTurma -->
+	<bean id="matriculaTurmaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.MatriculaTurmaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Turma -->
+	<bean id="turmaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.TurmaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- ProgramaDisciplina -->
+	<bean id="programaDisciplinaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.ProgramaDisciplinaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- PreMatriculaDisciplina -->
+	<bean id="preMatriculaDisciplinaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.PreMatriculaDisciplinaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+</beans>
