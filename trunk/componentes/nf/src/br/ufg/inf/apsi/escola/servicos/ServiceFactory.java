@@ -1,5 +1,8 @@
 package br.ufg.inf.apsi.escola.servicos;
 
-public class ServiceFactory {
+import br.ufg.inf.apsi.escola.componentes.nf.servico.NotaFrequenciaService;
 
+public interface ServiceFactory {
+
+	NotaFrequenciaService obtemNotaFrequenciaService();
 }
