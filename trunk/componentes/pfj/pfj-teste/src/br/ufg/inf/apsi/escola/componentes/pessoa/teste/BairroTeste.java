@@ -56,21 +56,23 @@ public class BairroTeste {
 	/**
 	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro#getId()}.
 	 */
+	
 	@Test
 	public void testGetId() {
 		Bairro b2 = new Bairro();
 		b2.setId(1L);
-		assertEquals("1", b2.getId());
+		assertSame(1L, b2.getId());
 	}
 
 	/**
 	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro#setId()}.
 	 */
+	
 	@Test
 	public void testSetId(){
 		Bairro b3 = new Bairro();
-		b3.setId(1L);
-		assertEquals("1", b3.getId());
+		b3.setId(10L);
+		assertSame(10L, b3.getId());
 	}
 
 	/**
