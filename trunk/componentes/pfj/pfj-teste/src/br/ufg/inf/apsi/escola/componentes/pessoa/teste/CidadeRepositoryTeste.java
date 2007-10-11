@@ -2,9 +2,9 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
+import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade;
@@ -14,7 +14,7 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaCidadeEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
 
-@RunWith(JMock.class)
+@RunWith(JUnit4ClassRunner.class)
 public class CidadeRepositoryTeste {
 	
 	private Cidade c = new Cidade();

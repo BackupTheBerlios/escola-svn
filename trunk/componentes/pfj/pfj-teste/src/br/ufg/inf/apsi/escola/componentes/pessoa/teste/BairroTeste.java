@@ -63,7 +63,7 @@ public class BairroTeste {
 		b2.setId(1L);
 		assertSame(1L, b2.getId());
 	}
-
+	
 	/**
 	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro#setId()}.
 	 */

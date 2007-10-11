@@ -3,9 +3,9 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
+import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
@@ -15,7 +15,7 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneCadastr
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
 
-@RunWith(JMock.class)
+@RunWith(JUnit4ClassRunner.class)
 public class TelefoneRepositoryTeste {
 	private Telefone t = new Telefone();
 	private Mockery context = new JUnit4Mockery();

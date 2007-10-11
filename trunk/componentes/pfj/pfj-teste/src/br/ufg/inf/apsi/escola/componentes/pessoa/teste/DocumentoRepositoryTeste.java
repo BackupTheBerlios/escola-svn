@@ -3,9 +3,9 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
+import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ;
@@ -19,7 +19,7 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumDocumento
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.RemocaoDocumentoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
 
-@RunWith(JMock.class)
+@RunWith(JUnit4ClassRunner.class)
 public class DocumentoRepositoryTeste {
 	private Documento cpf = new CPF();
 	private Documento cnpj = new CNPJ();
@@ -31,7 +31,7 @@ public class DocumentoRepositoryTeste {
 	 */
 	@Test
 	public void testaIncluirDocumento() {
-		//Testa a inclus�o de um cpf
+		//Testa a inclusão de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(cpf);
@@ -47,7 +47,7 @@ public class DocumentoRepositoryTeste {
 		}
 		context.assertIsSatisfied();
 		
-		//Testa a inclus�o de um cpf
+		//Testa a inclusão de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(cnpj);
@@ -63,7 +63,7 @@ public class DocumentoRepositoryTeste {
 		}
 		context.assertIsSatisfied();
 		
-		//Testa a inclus�o de um RG
+		//Testa a inclusão de um RG
 		try {
 			context.checking(new Expectations(){{
 				one (dr).incluir(rg);
@@ -85,7 +85,7 @@ public class DocumentoRepositoryTeste {
 	 */		
 	@Test
 	public void testaRemover(){
-		//Testa a remo��o de um cpf
+		//Testa a remoção de um cpf
 		try {
 			context.checking(new Expectations(){{
 				one (dr).remover(cpf.getNumero());
@@ -102,7 +102,7 @@ public class DocumentoRepositoryTeste {
 		context.assertIsSatisfied();
 		
 		
-		//Testa remo��o de um cnpj
+		//Testa remoção de um cnpj
 		try {
 			context.checking(new Expectations(){{
 				one (dr).remover(cnpj.getNumero());

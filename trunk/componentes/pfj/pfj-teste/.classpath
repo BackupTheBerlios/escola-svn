@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/pfj"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/pfj-data"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/kad-libs-0.9"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/kad-libs-0.9"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
