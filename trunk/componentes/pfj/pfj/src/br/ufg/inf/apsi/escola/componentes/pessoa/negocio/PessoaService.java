@@ -1,6 +1,7 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.negocio;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
@@ -184,6 +185,13 @@ public interface PessoaService {
 	 * @throws EscolaException
 	 */
 	String consultaPessoaDocumento(String numeroDocumento) throws EscolaException;
+	/**
+	 * Operação definida para consulta os dados de uma pessoa (id e nome) a partir do número de um
+	 * dos seus documentos
+	 * @return
+	 * @throws EscolaException
+	 */
+	Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento) throws EscolaException;
 	/**
 	 * Operação definida para obter o repositório de bairros.
 	 * @return

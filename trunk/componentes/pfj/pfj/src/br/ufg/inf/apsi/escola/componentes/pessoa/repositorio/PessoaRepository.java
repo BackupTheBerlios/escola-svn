@@ -3,6 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
@@ -50,6 +51,14 @@ public interface PessoaRepository {
 	 * @throws PessoaNaoEncontradaException
 	 */
 	Pessoa consultaPessoaDocumento(String numeroDocumento) throws PessoaNaoEncontradaException;
+	/**
+	 * Operação definida para consultar os dados de uma pessoa (id e nome), a partir do número de um dos seus
+	 * documentos 
+	 * @param numeroDocumento
+	 * @return Map<Long, String>
+	 * @throws PessoaNaoEncontradaException
+	 */
+	Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para carregar os dados de uma pessoa, a partir do deu identificador.
 	 * @param pessoaId

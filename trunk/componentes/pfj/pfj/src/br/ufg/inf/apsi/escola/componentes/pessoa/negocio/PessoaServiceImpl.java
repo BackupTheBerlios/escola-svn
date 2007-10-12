@@ -3,6 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.negocio;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ;
@@ -555,6 +556,22 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 		
 	}
+	
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaPorDocumento(java.lang.String)
+	 */
+	@Override
+	public Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento)
+			throws EscolaException {
+		Map<Long, String> idNomePessoa = null;
+		try {
+			idNomePessoa = pessoaRepository.consultaPessoaPorDocumento(numeroDocumento);
+		} catch (PessoaNaoEncontradaException e) {
+			throw new EscolaException(e.getMessage());
+		}
+		return idNomePessoa;
+	}
+
 	/**
 	 * Implementação da operação getBairroRepository(), definida na interface PessoaService.
 	 */
