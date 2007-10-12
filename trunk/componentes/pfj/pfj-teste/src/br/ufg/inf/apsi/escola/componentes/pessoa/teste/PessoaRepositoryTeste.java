@@ -330,6 +330,27 @@ public class PessoaRepositoryTeste {
 	 * 
 	 */
 	@Test
+	public void consultaPessoaPorDocumento(){
+		final String numeroDocumento = "123456789";
+		try {
+			context.checking(new Expectations(){{
+				one(pr).consultaPessoaPorDocumento(numeroDocumento);
+			}});
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		
+		try {
+			pr.consultaPessoaPorDocumento(numeroDocumento);
+		} catch (PessoaNaoEncontradaException pnee) {
+			System.out.println(pnee.getMessage());
+		}
+		context.assertIsSatisfied();
+	}
+	/**
+	 * 
+	 */
+	@Test
 	public void testaConsultaPessoaNomeDataNascimento(){
 		final String nomePessoa = "AlgumNome";
 		final Date dataNascimento = new Date();
