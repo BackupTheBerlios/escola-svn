@@ -5,7 +5,9 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate;
 
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
@@ -103,6 +105,31 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		}
 	}
 	
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultaPessoaPorDocumento(java.lang.String)
+	 */
+	@Override
+	public Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento)
+			throws PessoaNaoEncontradaException {
+		Pessoa pessoa = null;
+		Map<Long, String> idNomePessoa = new HashMap<Long, String>();
+		try {
+			q = persistencia.getEm().createQuery("Select p from Pessoa p " + 
+				" left join p.listaDocumentos l "	+
+				" where l.numero = :numeroDocumento");
+			q.setParameter("numeroDocumento", numeroDocumento);
+			pessoa = (Pessoa) q.getSingleResult();	
+		}catch (NoResultException nre) {
+			throw new PessoaNaoEncontradaException();
+		} catch (EntityNotFoundException enfe) {
+			throw new PessoaNaoEncontradaException();
+		} catch (IllegalStateException ilee) {
+			throw new PessoaNaoEncontradaException();
+		}
+		idNomePessoa.put(pessoa.getId(), pessoa.getNome());
+		return idNomePessoa;
+	}
+
 	/**
 	 * Implementação da operação consultaPessoaNomeDataNascimento.
 	 */
