@@ -556,7 +556,21 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 		
 	}
-	
+		
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaId()
+	 */
+	@Override
+	public String consultaPessoaId(Long pessoaId) throws EscolaException {
+		Pessoa pessoa = null;
+		try {
+			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
+		} catch (PessoaNaoEncontradaException e) {
+			throw new EscolaException(e.getMessage());
+		}
+		return pessoa.getNome();
+	}
+
 	/**
 	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaPorDocumento(java.lang.String)
 	 */
