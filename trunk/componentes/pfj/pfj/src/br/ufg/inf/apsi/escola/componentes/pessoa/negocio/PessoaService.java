@@ -186,6 +186,12 @@ public interface PessoaService {
 	 */
 	String consultaPessoaDocumento(String numeroDocumento) throws EscolaException;
 	/**
+	 * Operação definida para retornar o nome da pessoa, dado o seu id.
+	 * @return
+	 * @throws EscolaException
+	 */
+	String consultaPessoaId(Long pessoaId) throws EscolaException;
+	/**
 	 * Operação definida para consulta os dados de uma pessoa (id e nome) a partir do número de um
 	 * dos seus documentos
 	 * @return
