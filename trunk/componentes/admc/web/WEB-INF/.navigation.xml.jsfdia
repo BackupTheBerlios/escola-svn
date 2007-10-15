@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS ENTITY="JSFProcess">
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules:#sm.jsp"
+  PATH="/sm.jsp" SHAPE="56,144,50,41">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules:#sm.jsp:0" NAME="item" PATH="/sm.jsp">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="sm:novo:#sm.jsp" NAME="output" PATH="/sm.jsp"
+    TARGET="rules:#sm.jsp" TITLE="novo:sm"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
