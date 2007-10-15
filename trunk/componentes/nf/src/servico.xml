@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
 	<!-- NotaFrequenciaService -->
-	<bean id="LocalNotaFrequenciaService" class="br.ufg.inf.apsi.escola.componentes.nf.servico.local.LocalNotaFrequenciaService">
+	<bean id="LocalNotaService" class="br.ufg.inf.apsi.escola.componentes.nf.servico.local.LocalNotaService">
 	</bean>
 
 </beans>

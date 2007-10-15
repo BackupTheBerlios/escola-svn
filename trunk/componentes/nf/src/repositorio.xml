@@ -42,8 +42,8 @@
 	</bean>
 
 	<!-- ConfiguracaoNotaFrequencia -->
-	<bean id="ConfiguracaoNotaFrequenciaRepositorio"
-		class="br.ufg.inf.apsi.escola.componentes.nf.repositorio.jpa.hibernate.HibernateConfiguracaoNotaFrequenciaRepositorio">
+	<bean id="ConfiguracaoNotaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.nf.repositorio.jpa.hibernate.HibernateConfiguracaoNotaRepositorio">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
 		</property>

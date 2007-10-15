@@ -1,18 +1,18 @@
 package br.ufg.inf.apsi.escola.componentes.nf.testes;
 
-import br.ufg.inf.apsi.escola.componentes.nf.modelo.ConfiguracaoNotaFrequencia;
+import br.ufg.inf.apsi.escola.componentes.nf.modelo.ConfiguracaoNota;
 import br.ufg.inf.apsi.escola.componentes.nf.servico.local.LocalNotaFrequenciaService;
 import junit.framework.TestCase;
 
-public class ConfiguracaoNotaFrequenciaTest extends TestCase {
+public class ConfiguracaoNotaTest extends TestCase {
 
 	public void testObtemPessoaService() {
-		System.out.println("obtemNotaFrequenciaService");
+		System.out.println("obtemNotaService");
 
 		LocalNotaFrequenciaService instance = new LocalNotaFrequenciaService();
 
-		ConfiguracaoNotaFrequencia result = instance
-				.obterConfiguracaoNotaFrequencia(null);
+		ConfiguracaoNota result = instance
+				.obterConfiguracaoNota(null);
 		assertNotNull(result);
 
 	}

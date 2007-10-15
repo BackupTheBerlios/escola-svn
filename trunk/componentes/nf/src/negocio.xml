@@ -5,8 +5,8 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
 <!-- ConfiguracaoNotaFrequencia -->
-	<bean id="ConfiguracaoNotaFrequenciaNegocio" class="br.ufg.inf.apsi.escola.componentes.nf.negocio.bean.ConfiguracaoNotaFrequenciaBean">
-        <constructor-arg ref="ConfiguracaoNotaFrequenciaRepositorio"/>
+	<bean id="ConfiguracaoNotaNegocio" class="br.ufg.inf.apsi.escola.componentes.nf.negocio.bean.ConfiguracaoNotaBean">
+        <constructor-arg ref="ConfiguracaoNotaRepositorio"/>
     </bean>
 
 </beans>
