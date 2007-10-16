@@ -3,6 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.nf.servico.local;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma;
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 import br.ufg.inf.apsi.escola.componentes.nf.modelo.ConfiguracaoNota;
 import br.ufg.inf.apsi.escola.componentes.nf.modelo.Frequencia;
 import br.ufg.inf.apsi.escola.componentes.nf.modelo.Nota;
@@ -21,7 +22,7 @@ public class LocalNotaFrequenciaService implements NotaFrequenciaService {
 		return null;
 	}
 
-	public ConfiguracaoNota obterConfiguracaoNota(Object Turma) {
+	public ConfiguracaoNota obterConfiguracaoNota(Turma turma) {
 		// TODO Auto-generated method stub
 		return null;
 	}

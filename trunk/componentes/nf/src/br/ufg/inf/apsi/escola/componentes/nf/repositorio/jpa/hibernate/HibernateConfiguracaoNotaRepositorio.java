@@ -21,8 +21,7 @@ public class HibernateConfiguracaoNotaRepositorio extends
 	}
 
 	public void salvar(ConfiguracaoNota configuracaoNotaFrequencia) throws Exception {
-		// TODO Auto-generated method stub
-		
+		getJpaTemplate().persist(configuracaoNotaFrequencia);
 	}
 
 }
