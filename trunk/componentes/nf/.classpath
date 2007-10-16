@@ -6,5 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3.8.1"/>
 	<classpathentry kind="var" path="KAD_LIBS/spring-framework-2.0.1/dist/spring.jar"/>
+	<classpathentry kind="var" path="KAD_LIBS/spring-framework-2.0.1/lib/jsf/jsf-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
