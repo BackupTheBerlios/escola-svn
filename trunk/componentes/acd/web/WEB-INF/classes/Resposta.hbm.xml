@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="br.ufg.inf.apsi.escola.componentes.acd.modelo">
+
+	<class name="Resposta">
+		<id name="id" type="long" column="respostaId">
+			<generator class="native" />
+		</id>
+
+		<many-to-one name="Questao" column="questaoId" not-null="true" lazy="false" />
+
+		<property name="resposta" type="string" />
+	</class>
+</hibernate-mapping>
