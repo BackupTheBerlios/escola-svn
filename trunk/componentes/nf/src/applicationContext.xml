@@ -6,52 +6,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd  
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
-	<!--                                         Configurações dos objetos da aplicação Persistência                                                                                                      Pessoa                                                                     
-    <bean id="pessoaRepositorio" class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.HibernatePessoaRepositorio" >
-        <property name="entityManagerFactory">
-            <ref local="entityManagerFactory"/>
-        </property>
-    </bean>
-    
-    <bean id="pessoaNegocio" class="br.ufg.inf.apsi.escola.componentes.pessoa.negocio.bean.PessoaNegocioBean">
-        <constructor-arg ref="pessoaRepositorio"/>
-    </bean>
-    
-    <bean id="localPessoaService" class="br.ufg.inf.apsi.escola.componentes.pessoa.servico.local.LocalPessoaService">
-        <constructor-arg ref="pessoaNegocio"/>
-    </bean>
 
-    <bean id="usuarioRepositorio" class="br.ufg.inf.apsi.escola.componentes.usuario.repositorio.jpa.hibernate.HibernateUsuarioRepositorio" >
-        <property name="entityManagerFactory">
-            <ref local="entityManagerFactory"/>
-        </property>
-    </bean>
-    
-    <bean id="usuarioNegocio" class="br.ufg.inf.apsi.escola.componentes.usuario.negocio.bean.UsuarioNegocioBean">
-        <constructor-arg ref="usuarioRepositorio"/>
-    </bean>
-    
-    <bean id="localUsuarioService" class="br.ufg.inf.apsi.escola.componentes.usuario.servico.local.LocalUsuarioService">
-        <constructor-arg ref="usuarioNegocio"/>
-    </bean>
-    
-    <bean id="autorizacaoRepositorio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.repositorio.jpa.hibernate.HibernateAutorizacaoRepositorio" >
-        <property name="entityManagerFactory">
-            <ref local="entityManagerFactory"/>
-        </property>
-    </bean>
-    
-    <bean id="autorizacaoNegocio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.negocio.bean.AutorizacaoNegocioBean">
-        <constructor-arg ref="autorizacaoRepositorio"/>
-    </bean>
-    
-    <bean id="localAutorizacaoService" class="br.ufg.inf.apsi.escola.componentes.autorizacao.servico.local.LocalAutorizacaoService">
-        <constructor-arg ref="autorizacaoNegocio"/>
-    </bean>
-    
-	-->
 	<bean id="configuracaoNota"
 		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.ConfiguracaoNotaController"
 		scope="session" />
-	
+
 </beans>
