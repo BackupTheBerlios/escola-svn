@@ -3,6 +3,7 @@
 	<name>ExemploEscola</name>
 	<comment></comment>
 	<projects>
+		<project>kad-libs-0.9</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

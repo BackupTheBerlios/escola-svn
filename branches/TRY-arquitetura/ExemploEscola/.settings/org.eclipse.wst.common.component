@@ -3,6 +3,9 @@
     <wb-module deploy-name="ExemploEscola">
         <wb-resource deploy-path="/" source-path="/web"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/kad-libs-0.9/kad-libs-0.9">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ExemploEscola"/>
         <property name="java-output-path" value="build/classes"/>
     </wb-module>
