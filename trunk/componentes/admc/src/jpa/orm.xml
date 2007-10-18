@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+	<description>
+		Mapeamento Entidade Pacote Administracao de Curso
+	</description>
+	<package>pu</package>
+
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente"
+		name="Docente">
+		<table name="DOCENTE" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="matricula">
+				<column name="MATRICULA" length="6" />
+			</basic>
+			<basic name="curriculum">
+				<column name="CURRICULUM" length="255" />
+			</basic>
+			<basic name="pessoaId">
+				<column name="PESSOA_ID" />
+			</basic>
+			<one-to-many name="turma" mapped-by="docente" />
+		</attributes>
+	</entity>
+
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma"
+		name="MatriculaTurma">
+		<table name="MATRICULA_TURMA" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+			<one-to-one name="turma">
+				<join-column name="turma_id" />
+			</one-to-one>
+
+		</attributes>
+	</entity>
+	<entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma"
+		name="Turma">
+		<table name="TURMA" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="codigoTurma">
+				<column name="COD_TURMA" />
+
+			</basic>
+			<basic name="expressao">
+				<column name="EXPRESSAO" />
+
+			</basic>
+			<basic name="qtdeNotas">
+				<column name="QTDE_NOTAS" />
+
+			</basic>
+			<basic name="situacao">
+				<column name="SITUACAO" />
+
+			</basic>
+			<basic name="preMatricula">
+				<column name="PRE_MATRICULA" />
+
+			</basic>
+
+			<many-to-one name="docente">
+				<join-column name="docente_id"
+					referenced-column-name="id" />
+			</many-to-one>
+			<one-to-many name="preMatriculaDisciplina"
+				mapped-by="turma" />
+
+			<one-to-one name="disciplina">
+				<join-column name="DISCIPLINA_ID"
+					referenced-column-name="id" />
+			</one-to-one>
+
+		</attributes>
+	</entity>
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina"
+		name="Disciplina">
+		<table name="DISCIPLINA" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="codigo">
+				<column name="CODIGO" length="6" />
+			</basic>
+			<basic name="nome">
+				<column name="NOME" length="120" />
+			</basic>
+			<basic name="ementa">
+				<column name="EMENTA" length="200" />
+			</basic>
+			<basic name="cargaHoraria">
+				<column name="c_h" />
+			</basic>
+			<many-to-one name="curso">
+				<join-column name="CURSO_ID"
+					referenced-column-name="id" />
+			</many-to-one>
+			<one-to-one name="turma" mapped-by="disciplina" />
+		</attributes>
+	</entity>
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Secretario"
+		name="Secretario">
+		<table name="SECRETARIO" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="matricula">
+				<column name="MATRICULA" length="6" />
+			</basic>
+			<basic name="pessoaId">
+				<column name="pessoa_id" length="120" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso"
+		name="Curso">
+		<table name="CURSO" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="codigo">
+				<column name="CODIGO" length="6" />
+			</basic>
+
+			<basic name="nome">
+				<column name="NOME" length="120" />
+			</basic>
+
+			<basic name="cargaHoraria">
+				<column name="CARGAHORARIA" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno"
+		name="Aluno">
+		<table name="ALUNO" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="numeroMatricula">
+				<column name="MATRICULA" length="8" nullable="false" unique="true"/>
+				
+			</basic>
+			<basic name="pessoa">
+				<column name="pessoa_id" nullable="false" />
+			</basic>
+			<many-to-one name="curso">
+				<join-column name="CURSO_ID"
+					referenced-column-name="id" nullable="true"/>
+			</many-to-one>
+
+		</attributes>
+	</entity>
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.admc.modelo.PreMatriculaDisciplina"
+		name="PreMatriculaDisciplina">
+		<table name="PRE_MATRICULA_DISC" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="TABLE" />
+			</id>
+
+			<basic name="matriculaAluno">
+				<column name="MAT_ALUNO" />
+
+			</basic>
+
+			<many-to-one name="turma">
+				<join-column name="TURMA_ID"
+					referenced-column-name="id" />
+			</many-to-one>
+
+
+
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" name="Bairro">
+		<table name="BAIRRO" />
+		<attributes>
+			<id name="id">
+				<column name="BAIRRO_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="nome">
+				<column name="BAIRRO_NOME" length="50" nullable="false" />
+			</basic>
+			<many-to-one name="cidade"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" fetch="EAGER">
+				<join-column name="CIDADE_ID" nullable="false" />
+				<cascade>
+					<cascade-merge/>
+				</cascade>
+			</many-to-one>
+			<one-to-many name="listaEnderecos"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY"
+				mapped-by="bairro">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" name="Cidade">
+		<table name="CIDADE" />
+		<attributes>
+			<id name="id">
+				<column name="CIDADE_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="nome">
+				<column name="CIDADE_NOME" length="50" nullable="false" />
+			</basic>
+			<many-to-one name="estado"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" fetch="EAGER">
+				<join-column name="ESTADO_ID" nullable="false" />
+				<cascade>
+					<cascade-merge />
+				</cascade>
+			</many-to-one>
+			<one-to-many name="listaBairros"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" fetch="LAZY"
+				mapped-by="cidade">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento" name="Documento">
+		<table name="DOCUMENTO" />
+		<inheritance strategy="SINGLE_TABLE" />
+		<discriminator-column name="DOC_TIPO"
+			discriminator-type="STRING" />
+		<attributes>
+			<id name="id">
+				<column name="DOC_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="numero">
+				<column name="DOC_NUMERO" length="20" nullable="false"
+					unique="true" />
+			</basic>
+			<basic name="tipo">
+				<column name="DOC_TIPO" length="20" nullable="false"
+				insertable="false" updatable="false"/>
+			</basic>
+			<!-- Relacionamento com a classe Pessoa -->
+			<many-to-one name="titular"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="EAGER">
+				<join-column name="PESSOA_ID" nullable="false" />
+				<cascade>
+					<cascade-merge />
+				</cascade>
+			</many-to-one> 
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ" name="CNPJ">
+		<discriminator-value>CNPJ</discriminator-value>
+		<attributes>
+			<basic name="tipo">
+				<column name="DOC_TIPO" length="20" nullable="false"
+					 insertable="false" updatable="false" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF" name="CPF">
+		<discriminator-value>CPF</discriminator-value>
+		<attributes>
+			<basic name="tipo">
+				<column name="DOC_TIPO" length="20" nullable="false"
+					insertable="false" updatable="false" />
+			</basic>
+		</attributes>
+	</entity>
+	
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG" name="RG">
+		<discriminator-value>RG</discriminator-value>
+		<attributes>
+			<basic name="tipo">
+				<column name="DOC_TIPO" length="20" nullable="false"
+					insertable="false" updatable="false" />
+			</basic>
+			<basic name="dataEmissao">
+				<column name="DOC_DT_EMISSAO" />
+				<temporal>DATE</temporal>
+			</basic>
+			<basic name="orgaoExpedidor">
+				<column name="DOC_ORGAO_EXP" length="30" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email" name="Email">
+		<table name="EMAIL" />
+		<attributes>
+			<id name="id">
+				<column name="EMAIL_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="email">
+				<column name="EMAIL_DESC" length="30" nullable="false" />
+			</basic>
+			<many-to-one name="titularEmail"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="EAGER">
+				<join-column name="PESSOA_ID" nullable="false" />
+				<cascade>
+					<cascade-merge/>
+				</cascade> 
+			</many-to-one>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" name="Endereco">
+		<table name="ENDERECO" />
+		<attributes>
+			<id name="id">
+				<column name="END_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="numero">
+				<column name="END_NUMERO" length="20" nullable="false" />
+			</basic>
+			<basic name="complemento">
+				<column name="END_COMPLEMENTO" length="20"
+					nullable="false" />
+			</basic>
+			<basic name="cep">
+				<column name="END_CEP" length="8" nullable="false" />
+			</basic>
+			<basic name="tipo">
+				<column name="END_TIPO" length="20" nullable="false"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+			<many-to-one name="logradouro" 
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro" fetch="EAGER">
+				<join-column name="LOG_ID" nullable="false" />
+				<cascade>
+					<cascade-merge />
+				</cascade>
+			</many-to-one>
+			<many-to-one name="bairro" 
+			 	target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" fetch="EAGER">
+				<join-column name="BAIRRO_ID" nullable="false" />
+				<cascade>
+					<cascade-merge />
+				</cascade>
+			</many-to-one>
+			<many-to-many name="pessoas"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="LAZY"
+				mapped-by="listaEnderecos">
+				<cascade>
+					<cascade-refresh />
+				</cascade>
+			</many-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" name="Estado">
+		<table name="ESTADO" />
+		<attributes>
+			<id name="id">
+				<column name="EST_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="sigla">
+				<column name="EST_SIGLA" unique="true" length="2" />
+			</basic>
+			<basic name="nome">
+				<column name="EST_NOME" unique="true" length="20" />
+			</basic>
+			<many-to-one name="pais"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais" fetch="EAGER">
+				<join-column name="PAIS_ID" nullable="false" />
+				<cascade>
+					<cascade-merge/>
+				</cascade>
+			</many-to-one>
+			<one-to-many name="listaCidades"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" fetch="LAZY"
+				mapped-by="estado">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro"
+		name="Logradouro">
+		<table name="LOGRADOURO" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="nome">
+				<column name="LOG_NOME" nullable="false" />
+			</basic>
+			<basic name="tipo">
+				<column name="LOG_TIPO" length="20" />
+				<enumerated>STRING</enumerated>
+			</basic>
+			<one-to-many name="listaEnderecos"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY"
+				mapped-by="logradouro">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais" name="Pais">
+		<table name="PAIS" />
+		<attributes>
+			<id name="id">
+				<column name="PAIS_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="nome">
+				<column name="PAIS_NOME" unique="true" length="20" nullable="false" />
+			</basic>
+			<!-- Relacionamento com a classe Estado -->
+			<one-to-many name="listaEstados"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" fetch="LAZY"
+				mapped-by="pais">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" name="Pessoa">
+		<table name="PESSOA" />
+		<inheritance strategy="SINGLE_TABLE"/>
+		<discriminator-column name="PESSOA_TIPO" discriminator-type="STRING"/>
+		<attributes>
+			<id name="id">
+				<column name="PESSOA_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="nome">
+				<column name="PESSOA_NOME" length="30" nullable="false" />
+			</basic>
+			<basic name="tipo">
+				<column name="PESSOA_TIPO" length="20" nullable="false" 
+				insertable="false" updatable="false"/>
+			</basic>
+			<!-- Relacionamento com a classe Email -->
+			<one-to-many name="listaEmails"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email" fetch="LAZY"
+				mapped-by="titularEmail">
+				<cascade>
+					<cascade-remove/>
+				</cascade>
+			</one-to-many>
+			<!-- relacionamento com a classe Documento-->
+			<one-to-many name="listaDocumentos"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento" fetch="LAZY"
+				mapped-by="titular">
+				<cascade>
+					<cascade-remove/>
+				</cascade>
+			</one-to-many>
+			<!-- Relacionamento com a classe Endereço -->
+			<many-to-many name="listaEnderecos"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY">
+				<join-table name="ENDERECOS_PESSOA">
+					<join-column name="PESSOA_ID" />
+					<inverse-join-column name="END_ID" />
+				</join-table>
+				<cascade>
+					<cascade-refresh />
+				</cascade>
+			</many-to-many>
+			<!-- Relacionamento com a classe Telefone -->
+			<many-to-many name="listaTelefones"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone" fetch="LAZY">
+				<join-table name="TELEFONES_PESSOA">
+					<join-column name="PESSOA_ID" />
+					<inverse-join-column name="TELEFONE_ID" />
+				</join-table>
+				<cascade>
+					<cascade-refresh />
+				</cascade>
+			</many-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica"
+		name="PessoaFisica">
+		<discriminator-value>Pessoa Fisica</discriminator-value>
+		<attributes>
+			<basic name="tipo">
+				<column name="PESSOA_TIPO" length="20" nullable="false"
+					updatable="false" insertable="false" />
+			</basic>
+			<basic name="dataNascimento">
+				<column name="PESSOA_DATA_NASCIMENTO" />
+				<temporal>DATE</temporal>
+			</basic>
+			<basic name="sexo">
+				<column name="PESSOA_SEXO" length="1" />
+			</basic>
+			<basic name="nacionalidade">
+				<column name="PESSOA_NACIONALIDADE" length="30" />
+			</basic>
+			<basic name="naturalidade">
+				<column name="PESSOA_NATURALIDADE" length="30" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica"
+		name="PessoaJuridica">
+		<discriminator-value>Pessoa Juridica</discriminator-value>
+		<attributes>
+			<basic name="tipo">
+				<column name="PESSOA_TIPO" length="20" nullable="false" 
+				insertable="false" updatable="false"/>
+			</basic>
+			<basic name="nomeFantasia">
+				<column name="PESSOA_NOME_FANTASIA" length="30" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone" name="Telefone">
+		<table name="TELEFONE" />
+		<attributes>
+			<id name="id">
+				<column name="TELEFONE_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+			<basic name="DDD">
+				<column name="TELEFONE_DDD" nullable="false" />
+			</basic>
+			<basic name="numero">
+				<column name="TELEFONE_NUMERO" nullable="false" />
+			</basic>
+			<basic name="tipo">
+				<column name="TELEFONE_TIPO" />
+				<enumerated>STRING</enumerated>
+			</basic>
+			<many-to-many name="pessoas"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="LAZY"
+				mapped-by="listaTelefones">
+				<cascade>
+					<cascade-refresh />
+				</cascade>
+			</many-to-many>
+		</attributes>
+	</entity>
+</entity-mappings>

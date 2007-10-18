@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.1.xsd">
+
+	<!-- <import resource="negocio.xml"/>
+		<import resource="servico.xml"/>
+		<import resource="repositorio.xml"/>-->
+
+	<!-- Managed Beans -->
+
+	<bean id="disciplinaController"
+		class="br.ufg.inf.apsi.escola.ui.DisciplinaController"
+		scope="session" />
+
+	<bean id="alunoController"
+		class="br.ufg.inf.apsi.escola.ui.AlunoController" scope="session" />
+
+	<bean id="cursoController"
+		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
+
+	<bean id="cursoAlunoController"
+		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
+
+    <!-- Pessoa Repositorio -->
+    <bean id="pessoaRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="cidadeRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CidadeRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="bairroRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.BairroRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="documentoRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.DocumentoRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="emailRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EmailRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="enderecoRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EnderecoRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="estadoRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EstadoRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="logradouroRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.LogradouroRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="paisRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+	 <bean id="telefoneRepository"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl">
+		<constructor-arg ref="entityManagerFactory" />
+	</bean>
+
+	<!-- Pessoa Servico-->
+	<bean id="localPessoaService"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaServiceImpl">
+		<property name="bairroRepository">
+			<ref local="bairroRepository" />
+		</property>
+		<property name="cidadeRepository">
+			<ref local="cidadeRepository" />
+		</property>
+		<property name="documentoRepository">
+			<ref local="documentoRepository" />
+		</property>
+		<property name="emailRepository">
+			<ref local="emailRepository" />
+		</property>
+		<property name="enderecoRepository">
+			<ref local="enderecoRepository" />
+		</property>
+		<property name="estadoRepository">
+			<ref local="estadoRepository" />
+		</property>
+		<property name="logradouroRepository">
+			<ref local="logradouroRepository" />
+		</property>
+		<property name="paisRepository">
+			<ref local="paisRepository" />
+		</property>
+		<property name="pessoaRepository">
+			<ref local="pessoaRepository" />
+		</property>
+		<property name="telefoneRepository">
+			<ref local="telefoneRepository" />
+		</property>
+		
+	</bean>
+
+	<!-- Docente Repositorio-->
+	<bean id="docenteRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DocenteRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Docente Negocio-->
+	<bean id="docenteNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.DocenteNegocioBean">
+		<constructor-arg ref="docenteRepositorio" />
+	</bean>
+	<!-- Docente Servico-->
+	<bean id="localDocenteService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalDocenteService">
+		<constructor-arg ref="docenteNegocio" />
+	</bean>
+
+	<!-- Secretario Repositorio-->
+	<bean id="secretarioRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.SecretarioRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Secretario Negocio-->
+	<bean id="secretarioNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.SecretarioNegocioBean">
+		<constructor-arg ref="secretarioRepositorio" />
+	</bean>
+	<!-- Docente Servico-->
+	<bean id="localSecretarioService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalSecretarioService">
+		<constructor-arg ref="secretarioNegocio" />
+	</bean>
+
+
+	<!-- Disciplina Repositorio-->
+	<bean id="disciplinaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DisciplinaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Disciplina Negocio-->
+	<bean id="disciplinaNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.DisciplinaNegocioBean">
+		<constructor-arg ref="disciplinaRepositorio" />
+	</bean>
+
+	<!-- Disciplina Servico-->
+	<bean id="localDisciplinaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalDisciplinaService">
+		<constructor-arg ref="disciplinaNegocio" />
+	</bean>
+
+	<!-- Aluno Repositorio-->
+	<bean id="alunoRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.AlunoRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+	<!-- Aluno Negocio-->
+	<bean id="alunoNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.AlunoNegocioBean">
+		<constructor-arg ref="alunoRepositorio" />
+	</bean>
+
+	<!-- Aluno Servico-->
+	<bean id="localAlunoService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalAlunoService">
+		<constructor-arg ref="alunoNegocio" />
+	</bean>
+
+
+
+	<!-- Curso  Repositorio-->
+	<bean id="cursoRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.CursoRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+	<!-- Curso  Negocio-->
+	<bean id="cursoNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.CursoNegocioBean">
+		<constructor-arg ref="cursoRepositorio" />
+	</bean>
+
+	<!-- Curso  Servico-->
+	<bean id="localCursoService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalCursoService">
+		<constructor-arg ref="cursoNegocio" />
+	</bean>
+
+	<!-- MatriculaTurma Repositorio-->
+	<bean id="matriculaTurmaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.MatriculaTurmaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- MatriculaTurma Negocio-->
+	<bean id="matriculaTurmaNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.MatriculaTurmaNegocioBean">
+		<constructor-arg ref="matriculaTurmaRepositorio" />
+	</bean>
+
+	<!-- MatriculaTurma Servico-->
+	<bean id="localMatriculaTurmaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalMatriculaTurmaService">
+		<constructor-arg ref="matriculaTurmaNegocio" />
+	</bean>
+
+	<!-- Turma Repositorio-->
+	<bean id="turmaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.TurmaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- Turma Negocio-->
+	<bean id="turmaNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.TurmaNegocioBean">
+		<constructor-arg ref="turmaRepositorio" />
+	</bean>
+
+	<!-- Turma Servico-->
+	<bean id="localTurmaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalTurmaService">
+		<constructor-arg ref="turmaNegocio" />
+	</bean>
+
+	<!-- PreMatriculaDisciplina Repositorio-->
+	<bean id="preMatriculaDisciplinaRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.PreMatriculaDisciplinaRepositorioImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<!-- PreMatriculaDisciplina Negocio-->
+	<bean id="preMatriculaDisciplinaNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.PreMatriculaDisciplinaNegocioBean">
+		<constructor-arg ref="preMatriculaDisciplinaRepositorio" />
+	</bean>
+
+	<!-- PreMatriculaDisciplina Servico-->
+	<bean id="localPreMatriculaDisciplinaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalPreMatriculaDisciplinaService">
+		<constructor-arg ref="preMatriculaDisciplinaNegocio" />
+	</bean>
+
+
+	<!--     ////////////ACESSO A BASE DE DADOS ////////////////////////
+		
+	-->
+
+	<!-- Configuracoes dos beans do Spring - Controle transacional-->
+
+	<!-- Para o HBSQL-->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url"
+			value="jdbc:hsqldb:hsql://localhost/escola" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- Para o Tomcat-->
+	<!--
+		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+		<value>java:comp/env/jdbc/escolaDataSource</value>
+		</property>        
+		</bean>
+	-->
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"
+				rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- Configuracoes AOP para controle transacional -->
+	<aop:config>
+		<aop:pointcut id="serviceOperation"
+			expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="serviceOperation" />
+	</aop:config>
+
+	<!-- Bean responsavel pelo gerenciamento de transacoes -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+			ref="entityManagerFactory" />
+	</bean>
+
+	<!-- Entity Manager, responsavel pela intermediarioo entre banco e aplicacao -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="HSQL" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- Bean gerenciador de cache do Spring -->
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+
+	<!-- Cache do Spring para armazenamento de dados -->
+	<bean id="userCacheBackend"
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>userCache</value>
+		</property>
+	</bean>
+
+	<!-- Coloca informaÃ§Ãµes de usuÃ¡rio em cache para uso. -->
+	<bean id="userCache"
+		class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
+		<property name="cache">
+			<ref local="userCacheBackend" />
+		</property>
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+

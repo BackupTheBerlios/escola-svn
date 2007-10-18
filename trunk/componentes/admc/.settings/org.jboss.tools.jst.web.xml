@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FILESYSTEMS APPLICATION_NAME="admc" ENTITY="FileSystems"
+ VERSION="2.0.0.beta3" WORKSPACE_HOME="./web/WEB-INF">
+ <FILESYSTEM ENTITY="FileSystemFolder" LOCATION="%redhat.workspace%" NAME="WEB-INF"/>
+ <FILESYSTEM ENTITY="FileSystemFolder" INFO="Content-Type=Web"
+  LOCATION="%redhat.workspace%/.." NAME="WEB-ROOT"/>
+ <FILESYSTEM ENTITY="FileSystemFolder"
+  LOCATION="%redhat.workspace%/../../src" NAME="src"/>
+ <FILESYSTEM ENTITY="FileSystemFolder"
+  LOCATION="%redhat.workspace%/../../build/classes" NAME="classes"/>
+ <FILESYSTEM ENTITY="FileSystemFolder" LOCATION="%redhat.workspace%/lib" NAME="lib"/>
+ <FILESYSTEM ENTITY="FileSystemFolder" LOCATION="%eclipse.project%" NAME="admc"/>
+ <WEB ENTITY="JstWeb" MODEL_PATH="/web.xml" SERVLET_VERSION="2.4">
+  <MODULE ENTITY="WebJSFModule" ROOT="WEB-ROOT" SRC="src" URI="/WEB-INF/navigation.xml">
+   <MODULE ENTITY="JstWebConfig" URI="/WEB-INF/managed-beans.xml"/>
+  </MODULE>
+ </WEB>
+</FILESYSTEMS>
