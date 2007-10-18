@@ -3,7 +3,13 @@
     <wb-module deploy-name="ExemploEscola">
         <wb-resource deploy-path="/" source-path="/web"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring-framework-2.0.6/dist/spring.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/kad-libs-0.9/kad-libs-0.9">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate-entitymanager-3.3.1.GA/lib/ejb3-persistence.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="ExemploEscola"/>
