@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<!-- CONFIGURAÇÕES DOS OBJETOS DA AAPLICAÇÃO -->
+
+	<bean id="relatorioNFAlunosUmaTurmaController"
+		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.RelatorioNFAlunosUmaTurmaController"
+		scope="session" />
+
+	<!-- =============================================================================================================================   -->
+	<!-- Relatorios                                                                                                                      -->
+	<!-- =============================================================================================================================   -->
+	<bean id="consultasBean"
+		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.ConsultasBean">
+		<property name="turmaService" ref="localTurmaService" />
+	</bean>
+
+	<bean id="relatorioNotasEFrequenciasBean"
+		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.RelatorioNotasEFrequenciasBean">
+		<property name="cursoService" ref="localCursoService" />
+		<property name="expressaoNotaFinalService"
+			ref="localExpressaoNotaFinalService" />
+		<property name="matriculaTurmaService"
+			ref="localMatriculaTurmaService" />
+		<property name="notaFrequenciaService"
+			ref="localNotaFrequenciaService" />
+		<property name="turmaService" ref="localTurmaService" />
+	</bean>
+
+	<bean id="localRelatorioService"
+		class="br.ufg.inf.apsi.escola.componentes.relatorios.servico.local.LocalRelatorioService">
+		<property name="consultas" ref="consultasBean" />
+		<property name="relatorioNotasEFrequencias"
+			ref="relatorioNotasEFrequenciasBean" />
+	</bean>
+
+	<!-- ============================================================================================================================= -->
+	<!-- Pessoa                                                                                                                        -->
+	<!-- ============================================================================================================================= -->
+	<bean id="localPessoaService"
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.negocio.local.LocalPessoaService" />
+
+	<!-- ============================================================================================================================= -->
+	<!-- admc - Administração de Curso                                                                                                 -->
+	<!-- ============================================================================================================================= -->
+	<bean id="localTurmaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalTurmaService" />
+	<bean id="localCursoService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalCursoService" />
+	<bean id="localMatriculaTurmaService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalMatriculaTurmaService" />
+
+	<!-- ============================================================================================================================= -->
+	<!-- nf - Notas e Frequencias                                                                                                      -->
+	<!-- ============================================================================================================================= -->
+	<bean id="localNotaFrequenciaService"
+		class="br.ufg.inf.apsi.escola.componentes.nf.servico.local.LocalNotaFrequenciaService" />
+
+	<!-- ============================================================================================================================= -->
+	<!-- expnf - Servico de Expressao de Nota Final                                                                                    -->
+	<!-- ============================================================================================================================= -->
+	<bean id="localExpressaoNotaFinalService"
+		class="br.ufg.inf.apsi.escola.componentes.expnf.servico.local.LocalExpressaoNotaFinalService" />
+
+
+	<!--                                                            Autorizacao                                                                      -->
+	<!-- <bean id="autorizacaoRepositorio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.repositorio.jpa.hibernate.HibernateAutorizacaoRepositorio" >
+		<property name="entityManagerFactory">
+		<ref local="entityManagerFactory"/>
+		</property>
+		</bean>
+		
+		<bean id="autorizacaoNegocio" class="br.ufg.inf.apsi.escola.componentes.autorizacao.negocio.bean.AutorizacaoNegocioBean">
+		<constructor-arg ref="autorizacaoRepositorio"/>
+		</bean>
+		
+		<bean id="localAutorizacaoService" class="br.ufg.inf.apsi.escola.componentes.autorizacao.servico.local.LocalAutorizacaoService">
+		<constructor-arg ref="autorizacaoNegocio"/>
+		</bean> -->
+
+	<!-- Configurações dos objetos do Spring -->
+
+	<!-- Para o HBSQL-->
+	<!--  
+		<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url"
+		value="jdbc:hsqldb:hsql://localhost/escola" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+		</bean>
+	-->
+
+
+	<!-- Para o Tomcat-->
+	<!--
+		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+		<value>java:comp/env/jdbc/escolaDataSource</value>
+		</property>        
+		</bean>
+	-->
+	<!--  
+		
+		<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+		<tx:method name="*" propagation="REQUIRED"
+		rollback-for="Exception" />
+		</tx:attributes>
+		</tx:advice>
+		
+		<aop:config>
+		<aop:pointcut id="serviceOperation"
+		expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+		pointcut-ref="serviceOperation" />
+		</aop:config>
+		
+		
+		
+		<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		
+		<property name="jpaVendorAdapter">
+		<bean id="vendor"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="showSql" value="true" />
+		<property name="generateDdl" value="true" />
+		<property name="database" value="HSQL" />
+		</bean>
+		</property>
+		</bean>
+		
+		<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+		ref="entityManagerFactory" />
+		</bean>
+		
+	-->
+
+	<!--                                        Autenticação com ACEGI                                          -->
+	<!--
+		<bean id="acegiFilterChainProxy"
+		class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+		<value>
+		CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+		PATTERN_TYPE_APACHE_ANT
+		/**=httpSessionContextIntegrationFilter,securityRequestFilter,exceptionTranslationFilter,filterSecurityInterceptor
+		</value>
+		</property>
+		</bean>
+		
+		<bean id="httpSessionContextIntegrationFilter"
+		class="org.acegisecurity.context.HttpSessionContextIntegrationFilter">
+		<property name="context">
+		<value>org.acegisecurity.context.SecurityContextImpl</value>
+		</property>
+		</bean>
+		
+		<bean id="securityRequestFilter"
+		class="org.acegisecurity.wrapper.SecurityContextHolderAwareRequestFilter" />
+		
+		<bean id="exceptionTranslationFilter"
+		class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+		<bean id="entry"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+		<property name="loginFormUrl">
+		<value>/Login.jsf</value>
+		</property>
+		<property name="forceHttps">
+		<value>false</value>
+		</property>
+		</bean>
+		</property>
+		<property name="accessDeniedHandler">
+		<bean id="handler"
+		class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+		<property name="errorPage">
+		<value>/acessoNegado.jsf</value>
+		</property>
+		</bean>
+		</property>
+		</bean>
+		
+		<bean id="filterSecurityInterceptor"
+		class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager">
+		<ref bean="authenticationManager" />
+		</property>
+		<property name="accessDecisionManager">
+		<bean id="base"
+		class="org.acegisecurity.vote.AffirmativeBased">
+		<property name="decisionVoters">
+		<list>
+		<bean id="role"
+		class="org.acegisecurity.vote.RoleVoter">
+		<property name="rolePrefix">
+		<value></value>
+		</property>
+		</bean>
+		<bean id="Authenticated"
+		class="org.acegisecurity.vote.AuthenticatedVoter" />
+		</list>
+		</property>
+		</bean>
+		</property>
+		<property name="objectDefinitionSource">
+		<value>
+		CONVERT_URL_TO_UPPERCASE_BEFORE_COMPARISON
+		PATTERN_TYPE_APACHE_ANT /faces/**=ADMIN, USER
+		/faces/ManterPessoa.jsp=ADMIN
+		/faces/ManterPessoa.jsp=ADMIN, USER
+		</value>
+		</property>
+		</bean>
+	-->
+	<!-- AuthenticationController -->
+</beans>
