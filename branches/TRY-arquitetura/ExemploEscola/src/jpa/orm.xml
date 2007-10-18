@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+                 version="1.0">
+    <description>Mapeamento das entidades exmplo</description>
+    <package>pu</package>
+    <entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" name="Pessoa">
+        <table name="PESSOA"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="TABLE"/>
+            </id>
+            
+            <basic name="nome">
+                <column name="NOME" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+    
+    <entity class="br.ufg.inf.apsi.escola.componentes.usuario.modelo.Usuario" name="Usuario">
+        <table name="USUARIO"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="TABLE"/>                
+            </id>
+            
+            <basic name="usuario">
+                <column name="usuario" length="100"/>
+            </basic>
+            
+            <basic name="senha">
+                <column name="SENHA" length="100"/>
+            </basic>
+            
+            <one-to-many name="autorizacoes" mapped-by="usuario"/>            
+        </attributes>        
+    </entity>
+    
+    <entity class="br.ufg.inf.apsi.escola.componentes.autorizacao.modelo.Autorizacao" name="Autorizacao">
+        <table name="AUTORIZACAO"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="TABLE"/>
+            </id>
+            
+            <basic name="nome">
+                <column name="NOME" length="100"/>
+            </basic>
+            
+            <many-to-one name="usuario">
+               <join-column name="USUARIO_ID" referenced-column-name="id" />
+            </many-to-one>            
+        </attributes>
+    </entity>
+</entity-mappings>
