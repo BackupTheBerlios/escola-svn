@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.1.xsd">
+
+
+	<!-- \\\\\\\\\\ CAMADA DE SERVICO ////////// -->
+	<bean id="avaliacaoDocenteService"
+		class="br.ufg.inf.apsi.escola.componentes.acd.servico.local.LocalAvaliacaoDocenteService">
+		<constructor-arg ref="avaliacaoDocenteHandler" />
+	</bean>
+
+
+	<!-- \\\\\\\\\\ CAMADA DE NEGOCIO ////////// -->
+	<bean id="avaliacaoDocenteHandler"
+		class="br.ufg.inf.apsi.escola.componentes.acd.negocio.bean.AvaliacaoDocenteHandlerImpl">
+		<constructor-arg index="0" ref="avaliacaoRepository" />
+		<constructor-arg index="1" ref="formAvaliacaoRepository" />
+	</bean>
+
+
+	<!-- \\\\\\\\\\ CAMADA DE PERSISTENCIA ////////// -->
+	<bean id="avaliacaoRepository"
+		class="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.hibernate.AvaliacaoRepositoryImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+	<bean id="formAvaliacaoRepository"
+		class="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.hibernate.FormAvaliacaoRepositoryImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+
+
+	<!-- \\\\\\\\\\ MANAGED BEANS ////////// -->
+	<bean id="avaliacaoBean"
+		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.AvaliacaoBean"
+		scope="session" />
+	<bean id="formAvaliacaoBean"
+		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.FormAvaliacaoBean"
+		scope="session" />
+
+
+	<!-- \\\\\\\\\\ CONEXAO COM O BANCO DE DADOS ////////// -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url"
+			value="jdbc:hsqldb:hsql://localhost/escola" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+
+	<!-- \\\\\\\\\\ CONTROLE E GERENCIAMENTO DE TRANSACAO ////////// -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"
+				rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="serviceOperation"
+			expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="serviceOperation" />
+	</aop:config>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+			ref="entityManagerFactory" />
+	</bean>
+
+
+	<!-- \\\\\\\\\\ INTEMEDIACAO ENTRE BANCO DE DADOS E APLICACAO ////////// -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="jpaVendorAdapter">
+			<bean id="vendor"
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="HSQL" />
+			</bean>
+		</property>
+	</bean>
+</beans>

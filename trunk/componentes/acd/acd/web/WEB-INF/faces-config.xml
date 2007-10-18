@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+
+	<application>
+		<variable-resolver>
+			org.springframework.web.jsf.DelegatingVariableResolver
+		</variable-resolver>
+
+		<message-bundle>messages</message-bundle>
+		<message-bundle>validacoes</message-bundle>
+	</application>
+
+	<navigation-rule>
+		<from-view-id>/CadastroExcluiAvaliacao.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Avaliacao_Cadastrada</from-outcome>
+			<to-view-id>/CadastroQuestao.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>
