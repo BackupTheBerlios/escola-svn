@@ -36,7 +36,7 @@ public class FormAvaliacaoRepositoryImpl extends JpaDaoSupport implements FormAv
 	 */
 	public FormAvaliacao buscarFormAvaliacao(Long avaliacaoId, Long alunoId) {
 		// TODO Auto-generated method stub
-		String hqlQuery = "select f from FormAvaliacao f inner join f.Avaliacao as a where a.id = " + avaliacaoId + " and f.alunoId = " + alunoId;
+		String hqlQuery = "select f from FormAvaliacao f inner join f.Avaliacao as a where a.id = :" + avaliacaoId + " and f.alunoId = :" + alunoId;
 
 		return (FormAvaliacao) getJpaTemplate().find(hqlQuery);
 	}
@@ -46,7 +46,7 @@ public class FormAvaliacaoRepositoryImpl extends JpaDaoSupport implements FormAv
 	 */
 	public List<FormAvaliacao> buscarListFormAvaliacao(Long avaliacaoId) {
 		// TODO Auto-generated method stub
-		String hqlQuery = "select f from FormAvaliacao f inner join f.Avaliacao as a where a.id = " + avaliacaoId;
+		String hqlQuery = "select f from FormAvaliacao f inner join f.Avaliacao as a where a.id = :" + avaliacaoId;
 
 		return (List<FormAvaliacao>) getJpaTemplate().find(hqlQuery);
 	}
@@ -56,7 +56,7 @@ public class FormAvaliacaoRepositoryImpl extends JpaDaoSupport implements FormAv
 	 */
 	public List<Resposta> buscarListResposta(Long formAvaliacaoId) {
 		// TODO Auto-generated method stub
-		String hqlQuery = "select r from FormAvaliacao f inner join f.respostas as r where f.id = " + formAvaliacaoId;
+		String hqlQuery = "select r from FormAvaliacao f inner join f.respostas as r where f.id = :" + formAvaliacaoId;
 
 		return (List<Resposta>) getJpaTemplate().find(hqlQuery);
 	}

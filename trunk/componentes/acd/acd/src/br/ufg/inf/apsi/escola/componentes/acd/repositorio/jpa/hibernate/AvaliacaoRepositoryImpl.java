@@ -36,7 +36,7 @@ public class AvaliacaoRepositoryImpl extends JpaDaoSupport implements AvaliacaoR
 	 */
 	public Avaliacao buscarAvaliacaoTurma(Long turmaId) {
 		// TODO Auto-generated method stub
-		return (Avaliacao) getJpaTemplate().find("from Avaliacao a where a.turmaId = " + turmaId);
+		return (Avaliacao) getJpaTemplate().find("from Avaliacao a where a.turmaId = :" + turmaId);
 	}
 
 	/* (non-Javadoc)
@@ -44,7 +44,7 @@ public class AvaliacaoRepositoryImpl extends JpaDaoSupport implements AvaliacaoR
 	 */
 	public List<Questao> buscarListQuestao(Long avaliacaoId) {
 		// TODO Auto-generated method stub
-		String hqlQuery = "select q from Avaliacao a inner join a.questoes as q where a.id = " + avaliacaoId;
+		String hqlQuery = "select q from Avaliacao a inner join a.questoes as q where a.id = :" + avaliacaoId;
 
 		return (List<Questao>) getJpaTemplate().find(hqlQuery);
 	}

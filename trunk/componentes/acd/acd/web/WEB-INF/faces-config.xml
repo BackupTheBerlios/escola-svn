@@ -10,9 +10,6 @@
 		<variable-resolver>
 			org.springframework.web.jsf.DelegatingVariableResolver
 		</variable-resolver>
-
-		<message-bundle>messages</message-bundle>
-		<message-bundle>validacoes</message-bundle>
 	</application>
 
 	<navigation-rule>

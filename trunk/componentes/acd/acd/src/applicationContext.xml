@@ -95,4 +95,22 @@
 			</bean>
 		</property>
 	</bean>
+
+
+	<!-- \\\\\\\\\\ GERENCIAMENTO DE CACHE ////////// -->
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+
+
+	<!-- \\\\\\\\\\ CACHE PARA ARMAZENAMENTO DOS DADOS ////////// -->
+	<bean id="userCacheBackend"
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>userCache</value>
+		</property>
+	</bean>
+
 </beans>
