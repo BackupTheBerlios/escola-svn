@@ -42,6 +42,7 @@ public class PessoaFisica extends Pessoa {
 	
 	/**
 	 * Método definido para obter o tipo da Pessoa Física.
+	 * @return "Pessoa Fisica"
 	 */		
 	public String getTipo(){
 		return "Pessoa Fisica";
@@ -49,7 +50,7 @@ public class PessoaFisica extends Pessoa {
 	
 	/**
 	 * Método definido para obter a data de nascimento da Pessoa Física.
-	 * @return
+	 * @return dataNascimento
 	 */
 	public Date getDataNascimento() {
 		return dataNascimento;
@@ -63,7 +64,7 @@ public class PessoaFisica extends Pessoa {
 	}
 	/**
 	 * Método definido para obter o sexo da Pessoa Física.
-	 * @return
+	 * @return sexo
 	 */
 	public String getSexo() {
 		return sexo;
@@ -78,7 +79,7 @@ public class PessoaFisica extends Pessoa {
 	
 	/**
 	 * Método definido para obter a nacionalidade da pessoa física.
-	 * @return
+	 * @return nacionalidade
 	 */
 	public String getNacionalidade() {
 		return nacionalidade;
@@ -92,7 +93,7 @@ public class PessoaFisica extends Pessoa {
 	}
 	/**
 	 * Método definido para obter a naturalidade da pessoa física.
-	 * @return 
+	 * @return naturalidade
 	 */
 	public String getNaturalidade() {
 		return naturalidade;
@@ -106,6 +107,7 @@ public class PessoaFisica extends Pessoa {
 	}
 	/**
 	 * Método definido para configurar a apresentação de uma Pessoa Física no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		StringBuffer dadospf = new StringBuffer();

@@ -47,7 +47,7 @@ public class Cidade {
 	}
 	/**
 	 * Método definido para obter o idenficador da Cidade.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -62,7 +62,7 @@ public class Cidade {
 	}
 	/**
 	 * Método definido para obter o Estado a que a Cidade pertence.
-	 * @return
+	 * @return estado
 	 */
 	public Estado getEstado() {
 		return estado;
@@ -76,7 +76,7 @@ public class Cidade {
 	}
 	/**
 	 * Método definido para obter o nome de uma Cidade.
-	 * @return
+	 * @return nome
 	 */
 	public String getNome() {
 		return nome;
@@ -91,7 +91,7 @@ public class Cidade {
 	
 	/**
 	 * Método definido para obter a lista de bairros da cidade.
-	 * @return
+	 * @return listaBairros
 	 */
 	public List<Bairro> getListaBairros() {
 		return listaBairros;
@@ -105,6 +105,7 @@ public class Cidade {
 	}
 	/**
 	 * Método definido para configurar a apresentação de uma Cidade no formato de um objeto da classe String.
+	 * @return String
 	 */
 	
 	public String toString(){

@@ -84,7 +84,7 @@ public class Estado {
 	}
 	/**
 	 * Método definido para obter o identificador do Estado.
-	 * @return
+	 * @return id
 	 */
 	public Long getId(){
 		return id;
@@ -99,7 +99,7 @@ public class Estado {
 	}
 	/**
 	 * Método definido para obter o nome do Estado.
-	 * @return
+	 * @return nome
 	 */
 	public String getNome() {
 		return nome;
@@ -113,7 +113,7 @@ public class Estado {
 	}
 	/**
 	 * Método definido para obter o País do qual um Estado faz parte.
-	 * @return
+	 * @return pais
 	 */
 	public Pais getPais() {
 		return pais;
@@ -127,7 +127,7 @@ public class Estado {
 	}
 	/**
 	 * Método definido para obter a sigla do Estado.
-	 * @return
+	 * @return sigla
 	 */
 	public String getSigla() {
 		return sigla;
@@ -137,8 +137,7 @@ public class Estado {
 	 * @param sigla
 	 */
 	public void setSigla(String sigla) {
-		
-			this.sigla = sigla;
+		this.sigla = sigla;
 	}
 	
 	/**
@@ -157,6 +156,7 @@ public class Estado {
 	}
 	/**
 	 * Método definido para configurar a apresentação de um Estado no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		StringBuffer dadosEstado = new StringBuffer();

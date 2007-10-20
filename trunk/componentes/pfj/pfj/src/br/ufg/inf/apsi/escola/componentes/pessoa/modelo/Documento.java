@@ -41,7 +41,7 @@ public abstract class Documento {
 	}
 	/**
 	 * Metodo definido para obter o identificador do Documento.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -56,7 +56,7 @@ public abstract class Documento {
 	}
 	/**
 	 * Método definido para obter o número do Documento.
-	 * @return
+	 * @return numero
 	 */
 	public String getNumero() {
 		return numero;
@@ -70,7 +70,7 @@ public abstract class Documento {
 	}
 	/**
 	 * Método definido para obter o titular do documento
-	 * @return
+	 * @return titular
 	 */
 	public Pessoa getTitular() {
 		return titular;
@@ -84,6 +84,7 @@ public abstract class Documento {
 	}
 	/**
 	 * Método definido para apresentar um documento no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		return getNumero();
@@ -91,12 +92,12 @@ public abstract class Documento {
 	/**
 	 * Método definido para validar o número de um Documento.
 	 * @param num
-	 * @return
+	 * @return boolean
 	 */
 	public abstract boolean validar(String num);
 	/**
 	 * Método definido para retornar o tipo de um documento.
-	 * @return
+	 * @return String
 	 */
 	public abstract String getTipo();
 	
@@ -112,7 +113,7 @@ public abstract class Documento {
 	 * @param numero
 	 * @param dataEmissao
 	 * @param orgaoExpedidor
-	 * @return
+	 * @return {@link Documento}
 	 */
 	public static Documento getDocumento(String numero, Date dataEmissao, String orgaoExpedidor){
 		Documento doc;

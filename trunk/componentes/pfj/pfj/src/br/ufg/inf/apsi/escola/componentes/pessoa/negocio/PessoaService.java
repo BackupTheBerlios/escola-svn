@@ -122,7 +122,7 @@ public interface PessoaService {
 	 * @param nomeCidade
 	 * @param nomeEstado
 	 * @param nomePais 
-	 * @return
+	 * @return {@link Endereco}
 	 * @throws EscolaException
 	 */
 	Endereco cadastraEndereco(String tipoEndereco, String tipoLogradouro, String nomeLogradouro, String numero, 
@@ -174,84 +174,86 @@ public interface PessoaService {
 	 * @param ddd
 	 * @param numero
 	 * @param tipo
-	 * @return
+	 * @return {@link Telefone}
 	 * @throws EscolaException
 	 */
 	Telefone cadastraTelefone(short ddd, long numero, String tipo) throws EscolaException;
 	/**
 	 * Operação definida para consultar uma pessoa a partir do número de um de seus documentos.
 	 * @param numeroDocumento
-	 * @return
+	 * @return String
 	 * @throws EscolaException
 	 */
 	String consultaPessoaDocumento(String numeroDocumento) throws EscolaException;
 	/**
 	 * Operação definida para retornar o nome da pessoa, dado o seu id.
-	 * @return
+	 * @param pessoaId
+	 * @return String
 	 * @throws EscolaException
 	 */
 	String consultaPessoaId(Long pessoaId) throws EscolaException;
 	/**
 	 * Operação definida para consulta os dados de uma pessoa (id e nome) a partir do número de um
 	 * dos seus documentos
-	 * @return
+	 * @param numeroDocumento
+	 * @return String
 	 * @throws EscolaException
 	 */
 	Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento) throws EscolaException;
 	/**
 	 * Operação definida para obter o repositório de bairros.
-	 * @return
+	 * @return {@link BairroRepository}
 	 */
 	BairroRepository getBairroRepository();
 	/**
 	 * Operação definida para obter o repositório de cidades.
-	 * @return
+	 * @return {@link CidadeRepository}
 	 */
 	CidadeRepository getCidadeRepository();
 	/**
 	 * Operação definida para obter o repositório de Documentos. 
-	 * @return
+	 * @return {@link DocumentoRepository}
 	 */
 	DocumentoRepository getDocumentoRepository();
 	/**
 	 * Operação definida para obter o repositório de emails.
-	 * @return
+	 * @return {@link EmailRepository}
 	 */
 	EmailRepository getEmailRepository();
 	/**
 	 * Operação definida para obter o repositório de endereços.
-	 * @return
+	 * @return {@link EnderecoRepository}
 	 */
 	EnderecoRepository getEnderecoRepository();
 	/**
 	 * Operação definida para obter o repositório de estados.
-	 * @return
+	 * @return {@link EstadoRepository}
 	 */
 	EstadoRepository getEstadoRepository();
 	/**
 	 * Operação definida para obter o repositório de logradouros.
-	 * @return
+	 * @return {@link LogradouroRepository}
 	 */
 	LogradouroRepository getLogradouroRepository();
 	/**
 	 * Operação definida para obter o repositório de países.
-	 * @return
+	 * @return {@link PaisRepository}
 	 */
 	PaisRepository getPaisRepository();
 	/**
 	 * Operação definida para obter o respositório de cidades.
-	 * @return
+	 * @return PessoaRepository
 	 */
 	PessoaRepository getPessoaRepository();
 	/**
 	 * Operação definida para obter o repositório de telefones.
-	 * @return
+	 * @return TelefoneRepository
 	 */
 	TelefoneRepository getTelefoneRepository();
 	/**
 	 * Operação definida para listar os documentos de uma pessoa.
 	 * @param pessoaId
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaDocumentosPessoa(Long pessoaId) throws EscolaException;
@@ -259,14 +261,14 @@ public interface PessoaService {
 	/**
 	 * Operação definida para listar os emails de uma pessoa.
 	 * @param pessoaId
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaEmailsPessoa(Long pessoaId) throws EscolaException;
 	/**
 	 * Operação definida para listar os endereços de uma pessoa.
 	 * @param pessoaId
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaEnderecosPessoa(Long pessoaId) throws EscolaException;
@@ -275,14 +277,14 @@ public interface PessoaService {
 	 * @param nomeRua
 	 * @param complemento
 	 * @param numero
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasEndereco(String nomeRua, String complemento, String numero) throws EscolaException;
 	
 	/**
 	 * Operação definida para listar os nomes de todas as pessoas cadastradas no sistema
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoas() throws EscolaException;
@@ -290,7 +292,7 @@ public interface PessoaService {
 	/**
 	 * Operação definida para listar os nomes da pessoas que moram num determinado bairro.
 	 * @param nomeBairro
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasBairro(String nomeBairro) throws EscolaException;
@@ -298,7 +300,7 @@ public interface PessoaService {
 	/**
 	 * Operação definida para listar os nomes da pessoas que moram numa determinada cidade.
 	 * @param nomeCidade
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasCidade(String nomeCidade) throws EscolaException;
@@ -306,21 +308,21 @@ public interface PessoaService {
 	/**
 	 * Método definido para listar os nomes de pessoas pesquisadas por nome.
 	 * @param nome
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasNome(String nome) throws EscolaException;
 	/**
 	 * Operação definida para listar as pessoas nascidas a partir de uma determinada data. 
 	 * @param dataNascimento
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasIdade(Date dataNascimento) throws EscolaException; 
 	/**
 	 * Operação definida para listar todas as pessoas de um determinado sexo.
 	 * @param sexo
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasSexo(String sexo) throws EscolaException;
@@ -328,21 +330,21 @@ public interface PessoaService {
 	 * Operação definida para listar todas as pessoas de um sexo nascidas a partir de uma data.
 	 * @param dataNascimento
 	 * @param sexo
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasIdadeSexo(Date dataNascimento, String sexo) throws EscolaException;
 	/**
 	 * Operação definida para listar as pessoas relacionadas a um determinado telefone.
 	 * @param numTelefone
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaPessoasTelefone(long numTelefone) throws EscolaException;
 	/**
 	 * Operação definida para listar os telefones de uma pessoa.
 	 * @param pessoaId
-	 * @return
+	 * @return List<String>
 	 * @throws EscolaException
 	 */
 	List<String> listaTelefonesPessoa(Long pessoaId) throws EscolaException;
@@ -352,7 +354,6 @@ public interface PessoaService {
 	 * CNPJ ou CPF não poderão ser removidos, estão modelados como documentos obrigatórios.
 	 * Esta verificação foi contemplada no método que implementa esta operação.
 	 * @param numero
-	 * @return
 	 * @throws EscolaException
 	 */
 	
@@ -375,7 +376,6 @@ public interface PessoaService {
 	/**
 	 * Operação definido para remover o cadastro de uma pessoa.
 	 * @param pessoaId
-	 * @return
 	 * @throws EscolaException
 	 */
 	void removePessoa(Long pessoaId) throws EscolaException;
@@ -444,14 +444,14 @@ public interface PessoaService {
 	 * um CPF ou RG não poderão ser adicionados à lista de documentos de uma Pessoa Jurídica. 
 	 * @param p
 	 * @param d
-	 * @return
+	 * @return boolean
 	 */
 	boolean verificaAdicaoDocumentoLista(Pessoa p, Documento d);
 	/**
 	 * Operação definida para verificar se um documento, por exemplo CNPJ ou CPF, que devem ser únicos na lista de documentos de uma pessoa.
 	 * @param p
 	 * @param d
-	 * @return
+	 * @return boolean
 	 */
 	boolean verificaDocumentoUnicoLista(Pessoa p, Documento d);
 	

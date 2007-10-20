@@ -1,6 +1,5 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.negocio;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -63,20 +62,49 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
  * @author gilmar
  */
 public class PessoaServiceImpl implements PessoaService {
-			
-	private BairroRepository 			 bairroRepository 	  = null;					
+	/**
+	 * atributo definido para representar o repositório de bairros
+	 */		
+	private BairroRepository 			 bairroRepository 	  = null;
+	/**
+	 * atributo definido para representar o repositório de cidades
+	 */
 	private CidadeRepository 			 cidadeRepository 	  = null;
-	private DocumentoRepository 		 documentoRepository  = null;	
+	/**
+	 * atributo definido para representar o repositório de documentos
+	 */
+	private DocumentoRepository 		 documentoRepository  = null;
+	/**
+	 * atributo definido para representar o repositório de emails
+	 */
 	private EmailRepository 			 emailRepository 	  = null;
-	private EnderecoRepository 			 enderecoRepository   = null;	
-	private EstadoRepository 			 estadoRepository  	  = null;	 		
-	private LogradouroRepository 		 logradouroRepository = null;	
+	/**
+	 * atributo definido para representar o repositório de endereços
+	 */
+	private EnderecoRepository 			 enderecoRepository   = null;
+	/**
+	 * atributo definido para representar o repositório de estados
+	 */
+	private EstadoRepository 			 estadoRepository  	  = null;
+	/**
+	 * atributo definido para representar o repositório de logradouros
+	 */
+	private LogradouroRepository 		 logradouroRepository = null;
+	/**
+	 * atributo definido para representar o repositório de países
+	 */
 	private PaisRepository 				 paisRepository 	  = null;
-	private PessoaRepository 			 pessoaRepository 	  = null;	
+	/**
+	 * atributo definido para representar o repositório de pessoas
+	 */
+	private PessoaRepository 			 pessoaRepository 	  = null;
+	/**
+	 * atributo definido para representar o repositório de telefones
+	 */
 	private TelefoneRepository 			 telefoneRepository   = null;
 	
 	/**
-	 * Implementação da operação adicionaDocumento(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#adicionaDocumento(Long, String, Date, String)
 	 */
 	public void adicionaDocumento(Long pessoaId,String numero, Date dataEmissao, String orgaoExpedidor) throws EscolaException {
 		Pessoa pessoa = null;
@@ -120,7 +148,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/**
-	 * Implementação da operação removeDocumento(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#removeDocumento(String)
 	 */
 	public void removeDocumento(String numero) throws EscolaException {
 		Documento doc = null;
@@ -139,7 +167,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/**
-	 * Implementação da operação adicionaEmail(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#adicionaEmail(Long, String)
 	 */		
 	public void adicionaEmail(Long pessoaId, String email) throws EscolaException {
 		Pessoa pessoa = null;
@@ -170,7 +198,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}	
 	}
 	/**
-	 * Implementação da operação removeEmail(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#removeEmail(String)
 	 */
 	public void removeEmail(String email) throws EscolaException {
 		try {
@@ -180,7 +208,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação alteraEmailPessoa(), definida na interface PessoaService. 
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#alteraEmail(Long, String, String) 
 	 */
 	public void alteraEmail(Long pessoaId, String emailAtual, String novoEmail) throws EscolaException {
 		Pessoa pessoa = null;
@@ -197,7 +225,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação adicionaEndereço(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#adicionaEndereco(Long, String, String, String, String, String, Integer, String, String, String, String)
 	 */
 	public void adicionaEndereco(Long pessoaId, String tipoEndereco, String tipoLogradouro, String nomeLogradouro, String numero, String complemento, 
 			Integer cep, String nomeBairro, String nomeCidade, String nomeEstado, String nomePais) throws EscolaException {
@@ -229,8 +257,9 @@ public class PessoaServiceImpl implements PessoaService {
 		}		
 	}	
 	/**
-	 * Implementação da operação removeEnderecoListaPessoa(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#removeEnderecoListaPessoa(Long, String)
 	 */
+	@SuppressWarnings("unchecked")
 	public void removeEnderecoListaPessoa(Long pessoaId, String nomeLogradouro) throws EscolaException {
 		
 		try{
@@ -253,7 +282,7 @@ public class PessoaServiceImpl implements PessoaService {
 	
 	
 	/**
-	 * Implementação da operação alteraEndereco(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#alteraEndereco(Long, String, String, String, String, Integer, Integer, String, String)
 	 */
 	public void alteraEndereco(Long pessoaId,
 			String complementoAtual, String novoComplemento,
@@ -287,7 +316,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação adicionaTelefone(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#adicionaTelefone(Long, short, long, String)
 	 */
 	public void adicionaTelefone(Long pessoaId, short ddd, long numero, String tipo) throws EscolaException{
 		Pessoa pessoa = null;
@@ -318,7 +347,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação removeTelefoneListaPessoa(), definida na inteface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#removeTelefoneListaPessoa(Long, long)
 	 */
 	public void removeTelefoneListaPessoa(Long pessoaId, long telefoneNumero) throws EscolaException{
 		
@@ -336,27 +365,10 @@ public class PessoaServiceImpl implements PessoaService {
 			throw new EscolaException(tnee.getMessage());
 		}
 		
-		/*
-		Pessoa pessoa = null;
-		//atribui à referência pessoa,  a pessoa instanciada partir do parâmetro pessoaId
-		try{
-			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			for(Telefone telefone : pessoa.getListaTelefones()){
-				if(telefone.getNumero() == telefoneNumero){
-					pessoa.getListaTelefones().remove(telefone);
-					telefone.getPessoas().remove(pessoa);
-					pessoaRepository.salvar(pessoa);
-					telefoneRepository.salvar(telefone);
-				}
-			}
-		}catch (PessoaNaoEncontradaException pnee) {
-			throw new EscolaException(pnee.getMessage());
-		}
-		*/
 	}
 	
 	/**
-	 * Implementação da operação alteraTelefonePessoa(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#alteraTelefone(Long, long, short, long, String)
 	 */
 	public void alteraTelefone(Long pessoaId, long numeroAtual, short novoDDD, long novoNumero, String novoTipo) throws EscolaException {
 		Pessoa pessoa = null;
@@ -388,7 +400,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/**
-	 * Implementação da operação cadastraEndereco(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#cadastraEndereco(String, String, String, String, String, Integer, String, String, String, String)
 	 */
 	public Endereco cadastraEndereco(String tipoEndereco, String tipoLogradouro, String nomeLogradouro, String numero, String complemento, 
 			Integer cep, String nomeBairro, String nomeCidade, String nomeEstado, String nomePais) throws EscolaException {
@@ -464,7 +476,7 @@ public class PessoaServiceImpl implements PessoaService {
 		return endereco;
 	}
 	/**
-	 * Implementação da operação cadastraPessoa(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#cadastraPessoa(String, String, Date, String, String, String, String, String, String, String, String, Integer, String, String, String, String, String, short, long, String, String, Date, String, String, Date, String)
 	 */
 	public void cadastraPessoa(
 			//atributos da pessoa
@@ -524,7 +536,7 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação cadastraTelefone(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#cadastraTelefone(short, long, String)
 	 */
 	public Telefone cadastraTelefone(short ddd, long numero, String tipo) throws EscolaException{
 		
@@ -544,7 +556,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação consultaPessoaDocumento(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaDocumento(String)
 	 */
 	public String consultaPessoaDocumento(String numeroDocumento) throws EscolaException {
 		
@@ -558,7 +570,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 		
 	/**
-	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaId()
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaId(Long)
 	 */
 	@Override
 	public String consultaPessoaId(Long pessoaId) throws EscolaException {
@@ -574,6 +586,7 @@ public class PessoaServiceImpl implements PessoaService {
 	/**
 	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaPorDocumento(java.lang.String)
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento)
 			throws EscolaException {
@@ -587,49 +600,49 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação getBairroRepository(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getBairroRepository()
 	 */
 	public BairroRepository getBairroRepository() {
 		return bairroRepository;
 	}
 
 	/**
-	 * Implementação da operação getCidadeRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getCidadeRepository()
 	 */
 	public CidadeRepository getCidadeRepository() {
 		return cidadeRepository;
 	}
 
 	/**
-	 * Implementação da operação getDocumentoRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getDocumentoRepository()
 	 */
 	public DocumentoRepository getDocumentoRepository() {
 		return documentoRepository;
 	}
 
 	/**
-	 * Implementação da operação getEnderecoRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getEnderecoRepository()
 	 */
 	public EnderecoRepository getEnderecoRepository() {
 		return enderecoRepository;
 	}
 
 	/**
-	 * Implementação da operação getEmailRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getEmailRepository()
 	 */
 	public EmailRepository getEmailRepository() {
 		return emailRepository;
 	}
 
 	/**
-	 * Implementação da operação getEstadoRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getEstadoRepository()
 	 */
 	public EstadoRepository getEstadoRepository() {
 		return estadoRepository;
 	}
 
 	/**
-	 * Implementação da operação getLogradouroRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getLogradouroRepository()
 	 */
 	public LogradouroRepository getLogradouroRepository() {
 		return logradouroRepository;
@@ -637,28 +650,28 @@ public class PessoaServiceImpl implements PessoaService {
 
 
 	/**
-	 * Implementação da operação getPaisRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getPaisRepository()
 	 */
 	public PaisRepository getPaisRepository() {
 		return paisRepository;
 	}
 
 	/**
-	 * Implementação da operação getPessoaRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getPessoaRepository()
 	 */
 	public PessoaRepository getPessoaRepository() {
 		return pessoaRepository;
 	}
 
 	/**
-	 * Implementação da operação geTelefoneRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#getTelefoneRepository()
 	 */
 	public TelefoneRepository getTelefoneRepository() {
 		return telefoneRepository;
 	}
 
 	/**
-	 * Implementação da operação listaDocumentosPessoa(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaDocumentosPessoa(Long)
 	 */
 	public List<String> listaDocumentosPessoa(Long pessoaId) throws EscolaException {
 		Pessoa pessoa = null;
@@ -666,7 +679,7 @@ public class PessoaServiceImpl implements PessoaService {
 		//Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaDocumentosPessoa = new ArrayList<String>();
+			List<String> listaDocumentosPessoa = null;
 			for (Documento doc : pessoa.getListaDocumentos()){
 				
 				if (doc instanceof RG) {
@@ -683,14 +696,14 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação listaEmailsPessoa(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaEmailsPessoa(Long)
 	 */
 	public List<String> listaEmailsPessoa(Long pessoaId) throws EscolaException {
 		Pessoa pessoa = null;
 		//Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaEmailsPessoa = new ArrayList<String>();
+			List<String> listaEmailsPessoa = null;
 			for (Email email : pessoa.getListaEmails()){
 				listaEmailsPessoa.add(email.getEmail() + "\n");
 			}
@@ -701,14 +714,14 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação listaEnderecosPessoa(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaEnderecosPessoa(Long)
 	 */
 	public List<String> listaEnderecosPessoa(Long pessoaId) throws EscolaException {
 		Pessoa pessoa = null;
 //		Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaEnderecosPessoa = new ArrayList<String>();
+			List<String> listaEnderecosPessoa = null;
 			for (Endereco end : pessoa.getListaEnderecos()){
 				listaEnderecosPessoa.add(end.toString());
 			}
@@ -719,13 +732,13 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/** 
-	 * Implementação da operação listaPessoasEndereco(), definida na interface PessoaService.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasEndereco(String, String, String)
 	 */
 	public List<String> listaPessoasEndereco(String nomeRua, String complemento, String numero) throws EscolaException {
 		Endereco end = null;
 		try {
 			end = enderecoRepository.consultarDiversos(nomeRua, complemento, numero);
-			List<String> nomePessoas = new ArrayList<String>();
+			List<String> nomePessoas = null;
 			for(Pessoa p : end.getPessoas()){
 				nomePessoas.add(p.getNome());
 			}
@@ -736,10 +749,11 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação listaPessoas(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoas()
 	 */	
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoas() throws EscolaException {
-		List<String> listaNomePessoas = new ArrayList<String>();
+		List<String> listaNomePessoas = null;
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaTodos();
 			for (Pessoa p : listaPessoas){
@@ -751,11 +765,12 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 	}
 	/**
-	 * Implementação da operação listaPessoasBairro(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasBairro(String)
 	 */
 	
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasBairro(String nomeBairro)  throws EscolaException {
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		
 		try {
 			List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaBairro(nomeBairro);
@@ -769,10 +784,11 @@ public class PessoaServiceImpl implements PessoaService {
 		return listaNomes;
 	}
 	/**
-	 * Implementação da operação listaPessoasCidade(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasCidade(String)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasCidade(String nomeCidade) throws EscolaException{
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try {
 			List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaCidade(nomeCidade);
 			for (Pessoa p : listaPessoas){
@@ -786,10 +802,11 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação listaPessoasNome(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasNome(String)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasNome(String nome) throws EscolaException{
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaNome(nome);
  		for (Pessoa p : listaPessoas){
@@ -801,10 +818,11 @@ public class PessoaServiceImpl implements PessoaService {
 		return listaNomes;
 	}
 	/**
-	 * Implementação da operação listaPessoasIdade(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasIdade(Date)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasIdade(Date dataNascimento) throws EscolaException {
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.listaPessoasIdade(dataNascimento);
  		for (Pessoa p : listaPessoas){
@@ -817,10 +835,11 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/**
-	 * Implementação da operação listaPessoasIdadeSexo(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasIdadeSexo(Date, String)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasIdadeSexo(Date dataNascimento, String sexo) throws EscolaException {
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaPessoasIdadeSexo(dataNascimento, sexo);
 			for (Pessoa p : listaPessoas){
@@ -832,10 +851,11 @@ public class PessoaServiceImpl implements PessoaService {
  		return listaNomes;
 	}
 	/**
-	 * Implementação da operação listaPessoasSexo(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasSexo(String)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasSexo(String sexo) throws EscolaException {
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaPessoasSexo(sexo);
 	 		for (Pessoa p : listaPessoas){
@@ -848,11 +868,11 @@ public class PessoaServiceImpl implements PessoaService {
 
 	}
 	/**
-	 * Implementação da operação listaPessoasTelefone(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaPessoasTelefone(long)
 	 */
+	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasTelefone(long numeroTelefone) throws EscolaException {
-
-		List<String> listaNomes = new ArrayList<String>();
+		List<String> listaNomes = null;
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaTelefone(numeroTelefone);
 		for (Pessoa p : listaPessoas) {
@@ -865,14 +885,14 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 
 	/**
-	 * Implementação da operação listaTelefonesPessoas(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#listaTelefonesPessoa(Long)
 	 */
 	public List<String> listaTelefonesPessoa(Long pessoaId)  throws EscolaException {
 		Pessoa pessoa = null;
 		//atribui à referência pessoa,  a pessoa instanciada partir do parâmetro pessoaId
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String > listaTelefones = new ArrayList<String>();
+			List<String > listaTelefones = null;
 			for (Telefone t : pessoa.getListaTelefones()){
 				listaTelefones.add(t.getDDD() + " " +String.valueOf(t.getNumero()) +" "+ t.getTipo() + "\n");
 			}
@@ -883,7 +903,7 @@ public class PessoaServiceImpl implements PessoaService {
 	}
 	
 	/**
-	 * Implementação da operação removePessoa(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#removePessoa(Long)
 	 */
 	public void removePessoa(Long pessoaId) throws EscolaException {
 		
@@ -894,94 +914,94 @@ public class PessoaServiceImpl implements PessoaService {
 			}	
 	}
 	/**
-	 * Implementação da operação setBairroRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setBairroRepository(BairroRepository)
 	 */
-	public void setBairroRepository(BairroRepository br) {
-		this.bairroRepository = br;
+	public void setBairroRepository(BairroRepository bairroRepository) {
+		this.bairroRepository = bairroRepository;
 	}
 	/**
-	 * Implementação da operação setCidadeRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setCidadeRepository(CidadeRepository)
 	 */
-	public void setCidadeRepository(CidadeRepository cr) {
-		this.cidadeRepository = cr;
-	}
-
-	/**
-	 * Implementação da operação setDocumentoRepository(), definida na interface PessoaService
-	 */
-	public void setDocumentoRepository(DocumentoRepository dr) {
-		this.documentoRepository = dr;
+	public void setCidadeRepository(CidadeRepository cidadeRepository) {
+		this.cidadeRepository = cidadeRepository;
 	}
 
 	/**
-	 * Implementação da operação setEnderecoRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setDocumentoRepository(DocumentoRepository)
 	 */
-	public void setEnderecoRepository(EnderecoRepository endRep) {
-		this.enderecoRepository = endRep;
+	public void setDocumentoRepository(DocumentoRepository documentoRepository) {
+		this.documentoRepository = documentoRepository;
 	}
 
 	/**
-	 * Implementação da operação setEmailRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setEnderecoRepository(EnderecoRepository)
 	 */
-	public void setEmailRepository(EmailRepository er) {
-		this.emailRepository = er;
+	public void setEnderecoRepository(EnderecoRepository enderecoRepository) {
+		this.enderecoRepository = enderecoRepository;
 	}
 
 	/**
-	 * Implementação da operação setEstadoRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setEmailRepository(EmailRepository)
 	 */
-	public void setEstadoRepository(EstadoRepository estRep) {
-		this.estadoRepository = estRep;
+	public void setEmailRepository(EmailRepository emailRepository) {
+		this.emailRepository = emailRepository;
 	}
 
 	/**
-	 * Implementação da operação setLogradouroRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setEstadoRepository(EstadoRepository)
 	 */
-	public void setLogradouroRepository(LogradouroRepository lr) {
-		this.logradouroRepository = lr;
+	public void setEstadoRepository(EstadoRepository estadoRepository) {
+		this.estadoRepository = estadoRepository;
 	}
 
 	/**
-	 * Implementação da operação setPaisRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setLogradouroRepository(LogradouroRepository)
 	 */
-	public void setPaisRepository(PaisRepository paisRep) {
-		this.paisRepository = paisRep;
+	public void setLogradouroRepository(LogradouroRepository logradouroRepository) {
+		this.logradouroRepository = logradouroRepository;
 	}
 
 	/**
-	 * Implementação da operação setPessoaRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setPaisRepository(PaisRepository)
 	 */
-	public void setPessoaRepository(PessoaRepository pr) {
-		this.pessoaRepository = pr;
+	public void setPaisRepository(PaisRepository paisRepository) {
+		this.paisRepository = paisRepository;
 	}
 
 	/**
-	 * Implementação da operação setTelefoneRepository(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setPessoaRepository(PessoaRepository)
 	 */
-	public void setTelefoneRepository(TelefoneRepository tr) {
-		this.telefoneRepository = tr;
+	public void setPessoaRepository(PessoaRepository pessoaRepository) {
+		this.pessoaRepository = pessoaRepository;
 	}
 
 	/**
-	 * Implementação da operação verificaAdicaoDocumentoLista(), definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#setTelefoneRepository(TelefoneRepository)
 	 */
-	public boolean verificaAdicaoDocumentoLista(Pessoa p, Documento d) {
+	public void setTelefoneRepository(TelefoneRepository telefoneRepository) {
+		this.telefoneRepository = telefoneRepository;
+	}
+
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#verificaAdicaoDocumentoLista(Pessoa, Documento)
+	 */
+	public boolean verificaAdicaoDocumentoLista(Pessoa pessoa, Documento documento) {
 		
-		if ((p instanceof PessoaFisica) && ((d instanceof CPF)||(d instanceof RG)))
+		if ((pessoa instanceof PessoaFisica) && ((documento instanceof CPF)||(documento instanceof RG)))
 			return true;
-		else if ((p instanceof PessoaJuridica) && (d instanceof CNPJ))
+		else if ((pessoa instanceof PessoaJuridica) && (documento instanceof CNPJ))
 			return true;
 		else
 		return true;
 	}
 
 	/**
-	 * Implementação da operação verificaDocumentoUnicoLista, definida na interface PessoaService
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#verificaDocumentoUnicoLista(Pessoa, Documento)
 	 */
-	public boolean verificaDocumentoUnicoLista(Pessoa p, Documento d) {
+	public boolean verificaDocumentoUnicoLista(Pessoa pessoa, Documento documento) {
 
-		if ((d instanceof CPF) || (d instanceof CNPJ)){
-			for (Documento doc : p.getListaDocumentos()){
+		if ((documento instanceof CPF) || (documento instanceof CNPJ)){
+			for (Documento doc : pessoa.getListaDocumentos()){
 				if ((doc instanceof CPF) || (doc instanceof CNPJ)){
 					return false;
 				}else 

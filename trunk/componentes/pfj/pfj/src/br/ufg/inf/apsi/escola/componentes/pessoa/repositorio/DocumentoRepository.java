@@ -20,41 +20,41 @@ public interface DocumentoRepository {
 	/**
 	 * Opração definida para incluir um documento no repositório.
 	 * @param doc
-	 * @return
+	 * @return boolean
 	 * @throws DocumentoCadastradoException
 	 */
 	boolean incluir(Documento doc) throws DocumentoCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um documento do repositório.
 	 * @param numero
-	 * @return
+	 * @return boolean
 	 * @throws RemocaoDocumentoException
 	 */
 	boolean remover(String numero) throws RemocaoDocumentoException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um documento.
 	 * @param doc
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Documento doc) throws EscolaException;
 	/**
 	 * Operação definida para consultar um documento, a partir do seu número.
 	 * @param numero
-	 * @return
+	 * @return {@link Documento}
 	 * @throws DocumentoNaoEncontradoException
 	 */
 	Documento consultar(String numero) throws DocumentoNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um documento, a partir do seu id.
 	 * @param documentoId
-	 * @return
+	 * @return {@link Documento}
 	 * @throws DocumentoNaoEncontradoException
 	 */
 	Documento carregar(Long documentoId) throws DocumentoNaoEncontradoException;
 	/**
 	 * Operação definida para listar os documentos cadastrados.
-	 * @return
+	 * @return List<Documento> 
 	 * @throws NenhumDocumentoEncontradoException
 	 */
 	List<Documento> listaTodos() throws NenhumDocumentoEncontradoException;

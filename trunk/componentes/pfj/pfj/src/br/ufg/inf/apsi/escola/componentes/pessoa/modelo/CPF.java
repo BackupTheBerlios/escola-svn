@@ -25,7 +25,7 @@ public class CPF extends Documento {
 	}
 	/**
 	 * Método definido para retornar o tipo de um cpf.
-	 * @return
+	 * @return "CPF"
 	 */
 	
 	@Override
@@ -35,7 +35,8 @@ public class CPF extends Documento {
 
 	/**
 	 * Método definido para validar o número de um Cpf.
-	 * @return
+	 * @param cpf
+	 * @return boolean
 	 */
 	public boolean validar(String cpf){
 		int soma = 0;

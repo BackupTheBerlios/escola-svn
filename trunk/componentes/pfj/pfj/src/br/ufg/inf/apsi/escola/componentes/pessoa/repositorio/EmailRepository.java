@@ -17,41 +17,41 @@ public interface EmailRepository {
 	/**
 	 * Operação definida para incluir um novo email no repositório.
 	 * @param e
-	 * @return
+	 * @return boolean
 	 * @throws EmailCadastradoException
 	 */
 	boolean incluir(Email e) throws EmailCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de email do repositório.
 	 * @param email
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(String email) throws EscolaException;
 	/**
 	 * Operação definida para salvar as operações efetuadas no cadastro de um email.
 	 * @param e
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Email e) throws EscolaException;
 	/**
 	 * Operação definida para consultar um email.
 	 * @param email
-	 * @return
+	 * @return {@link Email}
 	 * @throws EmailNaoEncontradoException
 	 */
 	Email consultar(String email) throws EmailNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um email, a partir do seu identificador.
 	 * @param emailId
-	 * @return
+	 * @return {@link Email}
 	 * @throws EmailNaoEncontradoException
 	 */
 	Email carregar(Long emailId) throws EmailNaoEncontradoException;
 	/**
 	 * Operação definida para listar os emails cadastrados.
-	 * @return
+	 * @return List<Email>
 	 * @throws NenhumEmailEncontradoException
 	 */
 	List<Email> listaTodos() throws NenhumEmailEncontradoException;

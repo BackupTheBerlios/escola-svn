@@ -59,11 +59,9 @@ public class Telefone {
 	}
 	/**
 	 * Construtor parametrizado com o ddd, o número e o tipo do Telefone.
-	 * @param pref
 	 * @param ddd
 	 * @param num
 	 * @param tp
-	 * @param op
 	 */
 	public Telefone(short ddd, long num, String tp){
 		setDDD(ddd);
@@ -73,7 +71,7 @@ public class Telefone {
 	}
 	/**
 	 * Método definido para obter o ddd do Telefone.
-	 * @return
+	 * @return DDD
 	 */
 	public short getDDD() {
 		return DDD;
@@ -87,7 +85,7 @@ public class Telefone {
 	}
 	/**
 	 * Método definido para obter o identificador do Telefone.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -102,7 +100,7 @@ public class Telefone {
 	}
 	/**
 	 * Método definido para obter o numero do Telefone.
-	 * @return
+	 * @return numero
 	 */
 	public long getNumero() {
 		return numero;
@@ -117,7 +115,7 @@ public class Telefone {
 	
 	/**
 	 * Método definido para obter o tipo do Telefone.
-	 * @return
+	 * @return tipo
 	 */
 	public TipoTelefone getTipo() {
 		return tipo;
@@ -132,7 +130,7 @@ public class Telefone {
 	
 	/**
 	 * Método definido para obter a lista de pessoas associadas ao telefone.
-	 * @return
+	 * @return pessoas
 	 */
 	public List<Pessoa> getPessoas() {
 		return pessoas;
@@ -146,6 +144,7 @@ public class Telefone {
 	}
 	/**
 	 *Método definido para configurar a apresentação de um Telefone no formato de um objeto da classe String. 
+	 *@return String
 	 */
 	public String toString(){
 		StringBuffer dadosTelefone = new StringBuffer();

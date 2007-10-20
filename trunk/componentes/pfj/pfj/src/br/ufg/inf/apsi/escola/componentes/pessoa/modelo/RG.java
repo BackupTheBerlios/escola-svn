@@ -37,7 +37,7 @@ public class RG extends Documento {
 	}
 	/**
 	 * Método definido para obter a data de emissão de um RG.
-	 * @return
+	 * @return dataEmissao
 	 */
 	public Date getDataEmissao() {
 		return dataEmissao;
@@ -51,7 +51,7 @@ public class RG extends Documento {
 	}
 	/**
 	 * Método definido para obter o órgão expedidor de um RG
-	 * @return
+	 * @return orgaoEmissor
 	 */
 	public String getOrgaoExpedidor() {
 		return orgaoExpedidor;
@@ -73,6 +73,7 @@ public class RG extends Documento {
 	
 	/**
 	 * Método definido para configurar a apresentação de um RG no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		StringBuffer dadosrg = new StringBuffer();
@@ -83,9 +84,9 @@ public class RG extends Documento {
 		return dadosrg.toString();
 	};
 	/**
-	 * Método definido para validar o número de um RG.
-	 * Validação de RG não é relevante para o sistema Escola.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento#validar(String)
 	 */
+	@Override
 	public boolean validar (String num){
 		return true;
 	}

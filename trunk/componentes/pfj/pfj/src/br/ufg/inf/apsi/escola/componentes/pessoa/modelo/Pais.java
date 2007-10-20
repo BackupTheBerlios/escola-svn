@@ -36,7 +36,7 @@ public class Pais {
 	}
 	/**
 	 * Método definido para obter o identificador do País.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -51,7 +51,7 @@ public class Pais {
 	}
 	/**
 	 * Método definido para obter o nome do País.
-	 * @return
+	 * @return nome
 	 */
 	public String getNome() {
 		return nome;
@@ -66,7 +66,7 @@ public class Pais {
 	
 	/**
 	 * Método definido para obter a lista de estados, associados ao país.
-	 * @return
+	 * @return listaEstados
 	 */
 	public List<Estado> getListaEstados() {
 		return listaEstados;
@@ -80,6 +80,7 @@ public class Pais {
 	}
 	/**
 	 * Método definido para configurar a apresentação de um País no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		return getNome();

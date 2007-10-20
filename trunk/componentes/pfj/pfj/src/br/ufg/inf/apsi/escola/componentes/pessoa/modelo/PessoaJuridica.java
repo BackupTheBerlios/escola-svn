@@ -26,6 +26,7 @@ public class PessoaJuridica extends Pessoa {
 	
 	/**
 	 * Método definido para obter o tipo da Pessoa Jurídica.
+	 * @return "Pessoa Juridica"
 	 */
 	public String getTipo(){
 		return "Pessoa Juridica";
@@ -33,7 +34,7 @@ public class PessoaJuridica extends Pessoa {
 	
 	/**
 	 * Método definido para obter o nome de fantasia da Pessoa Jurídica.
-	 * @return
+	 * @return nomeFantasia
 	 */
 	public String getNomeFantasia() {
 		return nomeFantasia;
@@ -47,6 +48,7 @@ public class PessoaJuridica extends Pessoa {
 	}
 	/**
 	 * Método definido para configurar a apresentação de uma Pessoa Jurídica no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		StringBuffer dadospj = new StringBuffer();

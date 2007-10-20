@@ -17,41 +17,41 @@ public interface CidadeRepository {
 	/**
 	 * Operação definida para incluir uma cidade no repositório.
 	 * @param c
-	 * @return
+	 * @return boolean
 	 * @throws CidadeCadastradaException
 	 */
 	boolean incluir(Cidade c) throws CidadeCadastradaException;
 	/**
 	 * Operação definida para remover o cadastro de uma cidade do repositório.
 	 * @param cidadeId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long cidadeId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas em uma cidade.
 	 * @param c
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Cidade c) throws EscolaException;
 	/**
 	 * Operação definida para consultar uma cidade, a partir do seu nome.
 	 * @param nome
-	 * @return
+	 * @return {@link Cidade}
 	 * @throws CidadeNaoEncontradaException
 	 */
 	Cidade consultar(String nome) throws CidadeNaoEncontradaException;
 	/**
 	 * Operação definida para carregar os dados de uma cidade, a partir do seu identificador.
 	 * @param cidadeId
-	 * @return
+	 * @return {@link Cidade}
 	 * @throws CidadeNaoEncontradaException
 	 */
 	Cidade carregar(Long cidadeId) throws CidadeNaoEncontradaException;
 	/**
 	 * Operação definida para listar as cidades cadastradas.
-	 * @return
+	 * @return List<Cidade>
 	 * @throws NenhumaCidadeEncontradaException
 	 */
 	List<Cidade> listaTodas() throws NenhumaCidadeEncontradaException;

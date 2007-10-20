@@ -19,35 +19,35 @@ public interface PessoaRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de pessoa no repositório.
 	 * @param p
-	 * @return
+	 * @return boolean
 	 * @throws PessoaCadastradaException
 	 */
 	boolean incluir(Pessoa p) throws PessoaCadastradaException;
 	/**
 	 * Operação definida para remover o cadastro de uma pessoa do repositório.
 	 * @param pessoaId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long pessoaId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de uma pessoa.
 	 * @param p
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Pessoa p) throws EscolaException;
 	/**
 	 * Operação definida para consultar os dados de uma pessoa, a partir do seu identificador.
 	 * @param pessoaId
-	 * @return
+	 * @return {@link Pessoa}
 	 * @throws PessoaNaoEncontradaException
 	 */
 	Pessoa consultarPessoaId(Long pessoaId) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para consultar os dados de uma pessoa, a partir do número de um dos seus documentos.
 	 * @param numeroDocumento
-	 * @return
+	 * @return {@link Pessoa}
 	 * @throws PessoaNaoEncontradaException
 	 */
 	Pessoa consultaPessoaDocumento(String numeroDocumento) throws PessoaNaoEncontradaException;
@@ -62,7 +62,7 @@ public interface PessoaRepository {
 	/**
 	 * Operação definida para carregar os dados de uma pessoa, a partir do deu identificador.
 	 * @param pessoaId
-	 * @return
+	 * @return {@link Pessoa}
 	 * @throws PessoaNaoEncontradaException
 	 */
 	Pessoa carregar(Long pessoaId) throws PessoaNaoEncontradaException;
@@ -70,55 +70,55 @@ public interface PessoaRepository {
 	 * Operação definida para consultar os dados de uma pessoa, a partir do seu nome e sua data de nascimento.
 	 * @param nome
 	 * @param dataNascimento
-	 * @return
+	 * @return {@link Pessoa}
 	 * @throws PessoaNaoEncontradaException
 	 */
 	Pessoa consultaPessoaNomeDataNascimento(String nome, Date dataNascimento) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, a partir do nome.
 	 * @param nome
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> consultarPessoaNome(String nome) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, moradoras de um determinada cidade.
 	 * @param nomeCidade
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> consultarPessoaCidade(String nomeCidade) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, moradoras de um determinado bairro.
 	 * @param nomeBairro
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> consultarPessoaBairro(String nomeBairro) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, a partir de um número de telefone.
 	 * @param numeroTelefone
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> consultarPessoaTelefone(long numeroTelefone) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para listar todas as pessoas cadastradas.
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> listaTodos() throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para listar pessoas, por idade.
 	 * @param dataNascimento
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> listaPessoasIdade(Date dataNascimento) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para listar pessoas por sexo.
 	 * @param sexo
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> listaPessoasSexo(String sexo) throws NenhumaPessoaEncontradaException;
@@ -126,7 +126,7 @@ public interface PessoaRepository {
 	 * OPeração definida para listar pessoas por idade e sexo.
 	 * @param dataNascimento
 	 * @param sexo
-	 * @return
+	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
 	List<Pessoa> listaPessoasIdadeSexo(Date dataNascimento, String sexo) throws NenhumaPessoaEncontradaException;

@@ -17,41 +17,41 @@ public interface LogradouroRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de logradouro no repositório.
 	 * @param log
-	 * @return
+	 * @return boolean
 	 * @throws LogradouroCadastradoException
 	 */
 	boolean incluir(Logradouro log) throws LogradouroCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um logradouro do repositório.
 	 * @param logradouroId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long logradouroId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um logradouro.
 	 * @param log
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Logradouro log) throws EscolaException;
 	/**
 	 * Operação definida para consultar um logradouro, a partir do seu nome.
 	 * @param nome
-	 * @return
+	 * @return {@link Logradouro}
 	 * @throws LogradouroNaoEncontradoException
 	 */
 	Logradouro consultar(String nome) throws LogradouroNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de uma logradouro, a partir do seu identificador.
 	 * @param logradouroId
-	 * @return
+	 * @return {@link Logradouro}
 	 * @throws LogradouroNaoEncontradoException
 	 */
 	Logradouro carregar(Long logradouroId) throws LogradouroNaoEncontradoException;
 	/**
 	 * Operação definida para listar todos os logradouros cadastrados.
-	 * @return
+	 * @return List<Logradouro>
 	 * @throws NenhumLogradouroEncontradoException
 	 */
 	List<Logradouro> listaTodos() throws NenhumLogradouroEncontradoException;

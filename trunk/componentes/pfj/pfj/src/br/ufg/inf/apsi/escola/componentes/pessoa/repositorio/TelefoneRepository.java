@@ -17,41 +17,41 @@ public interface TelefoneRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de telefone no repositório.
 	 * @param t
-	 * @return
+	 * @return boolean
 	 * @throws TelefoneCadastradoException
 	 */
 	boolean incluir(Telefone t) throws TelefoneCadastradoException;
 	/**
 	 * Operação definida para remover um cadastro de telefone do repositório.
 	 * @param telefoneId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long telefoneId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro do telefone.
 	 * @param t
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Telefone t) throws EscolaException;
 	/**
 	 * Operação definida para consultar um telefone, a partir do seu número.
 	 * @param numero
-	 * @return
+	 * @return Telefone
 	 * @throws TelefoneNaoEncontradoException
 	 */
 	Telefone consultar(long numero)throws TelefoneNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um telefone, a partir do seu identificador.
 	 * @param telefoneId
-	 * @return
+	 * @return Telefone
 	 * @throws TelefoneNaoEncontradoException
 	 */
 	Telefone carregar(Long telefoneId) throws TelefoneNaoEncontradoException;
 	/**
 	 * Operação definida para listar todos os telefones cadastrados.
-	 * @return
+	 * @return List<Telefone>
 	 * @throws NenhumTelefoneEncontradoException
 	 */
 	List<Telefone> listaTodos() throws NenhumTelefoneEncontradoException;

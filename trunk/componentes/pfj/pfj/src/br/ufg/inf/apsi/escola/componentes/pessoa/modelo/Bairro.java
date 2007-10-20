@@ -110,7 +110,7 @@ public class Bairro {
 	}
 	/**
 	 * Método definido para configurar a apresentação de um Bairro no formato de um objeto da classe String.
-	 * @return
+	 * @return String
 	 */
 	public String toString(){
 		StringBuffer sb = new StringBuffer();

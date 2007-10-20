@@ -18,41 +18,41 @@ public interface PaisRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de país no repositório.
 	 * @param p
-	 * @return
+	 * @return boolean
 	 * @throws PaisCadastradoException
 	 */
 	boolean incluir(Pais p) throws PaisCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um país do repositório.
 	 * @param paisId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long paisId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um país.
 	 * @param p
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Pais p) throws EscolaException;
 	/**
 	 * Operação definida para consultar um país a partir do seu nome.
 	 * @param nome
-	 * @return
+	 * @return Pais
 	 * @throws PaisNaoEncontradoException
 	 */
 	Pais consultar(String nome) throws PaisNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um país a partir do seu identificador.
 	 * @param paisId
-	 * @return
+	 * @return Pais
 	 * @throws PaisNaoEncontradoException
 	 */
 	Pais carregar(Long paisId) throws PaisNaoEncontradoException;
 	/**
 	 * Operação definida para listar todos os países cadastrados.
-	 * @return
+	 * @return List<Pais>
 	 * @throws NenhumPaisEncontradoException
 	 */
 	List<Pais> listaTodos() throws NenhumPaisEncontradoException; 

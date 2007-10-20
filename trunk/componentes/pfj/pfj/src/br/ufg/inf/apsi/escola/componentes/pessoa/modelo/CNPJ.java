@@ -24,7 +24,7 @@ public class CNPJ extends Documento {
 	}
 	/**
 	 * Método definido para retornar o tipo de um cnpj.
-	 * @return
+	 * @return "CNPJ"
 	 */
 	@Override
 	public String getTipo() {
@@ -33,7 +33,8 @@ public class CNPJ extends Documento {
 	
 	/**
 	 * Método definido para efetuar a validação de um número de Cnpj.
-	 * @return
+	 * @param cnpj
+	 * @return boolean
 	 */
 	public boolean validar(String cnpj){
 		int soma = 0;

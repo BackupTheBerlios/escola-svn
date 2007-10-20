@@ -54,7 +54,7 @@ public abstract class Pessoa {
 	
 	/**
 	 * Método definido para obter o identificador da Pessoa.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -69,7 +69,7 @@ public abstract class Pessoa {
 	}
 	/**
 	 * Método definido para obter a lista de Emails da Pessoa.
-	 * @return
+	 * @return listaEmails
 	 */
 	public List<Email> getListaEmails() {
 		return listaEmails;
@@ -83,7 +83,7 @@ public abstract class Pessoa {
 	}
 	/**
 	 * Método definido para obter a lista de Endereços da Pessoa.
-	 * @return
+	 * @return listaEnderecos
 	 */
 	public List<Endereco> getListaEnderecos() {
 		return listaEnderecos;
@@ -100,7 +100,7 @@ public abstract class Pessoa {
 	
 	/**
 	 * Método definido para obter o nome da Pessoa.
-	 * @return
+	 * @return nome
 	 */
 	public String getNome() {
 		return nome;
@@ -114,7 +114,7 @@ public abstract class Pessoa {
 	}
 	/**
 	 * Método definido para obter a lista de Telefones da Pessoa.
-	 * @return
+	 * @return listaTelefones
 	 */
 	public List<Telefone> getListaTelefones() {
 		return listaTelefones;
@@ -129,7 +129,7 @@ public abstract class Pessoa {
 	
 	/**
 	 * Método definida para obter o tipo de uma Pessoa.
-	 * @return
+	 * @return String
 	 */
 	public abstract String getTipo();
 	/**
@@ -141,7 +141,7 @@ public abstract class Pessoa {
 	}
 	/**
 	 * Método definida para obter a lista de documentos da pessoa.
-	 * @return
+	 * @return listaDocumentos
 	 */
 	public List<Documento> getListaDocumentos() {
 		return listaDocumentos;

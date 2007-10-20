@@ -55,31 +55,30 @@ public class Endereco {
 	}
 	/**
 	 * Construtor parametrizado com os atributos necessários para a instanciação de um Endereço.
-	 * @param tp
-	 * @param log
-	 * @param num
-	 * @param compl
+	 * @param tipoEndereco
+	 * @param logradouro
+	 * @param numero
+	 * @param complemento
 	 * @param cep
-	 * @param bair
-	 * @param cid
+	 * @param bairro
 	 */
-	public Endereco(String tp, 
-			Logradouro log, 
-			String num, 
-			String compl, 
+	public Endereco(String tipoEndereco, 
+			Logradouro logradouro, 
+			String numero, 
+			String complemento, 
 			Integer cep, 
-			Bairro bair){
-		setTipo(TipoEndereco.valueOf(tp));
-		setNumero(num);
-		setComplemento(compl);
+			Bairro bairro){
+		setTipo(TipoEndereco.valueOf(tipoEndereco));
+		setNumero(numero);
+		setComplemento(complemento);
 		setCep(cep);
-		setLogradouro(log);
-		setBairro(bair);
+		setLogradouro(logradouro);
+		setBairro(bairro);
 		pessoas = new ArrayList<Pessoa>();
 	}
 	/**
 	 * Método definido para obter o Bairro constante do Endereço.
-	 * @return
+	 * @return bairro
 	 */
 	public Bairro getBairro() {
 		return bairro;
@@ -93,7 +92,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter o identificador do Endereço.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -108,7 +107,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter o Cep do Endereço.
-	 * @return
+	 * @return Integer
 	 */
 	public Integer getCep() {
 		return cep;
@@ -122,7 +121,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter o complemento do Endereço.
-	 * @return
+	 * @return complemento
 	 */
 	public String getComplemento() {
 		return complemento;
@@ -136,7 +135,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter o Logradouro componente do Endereço.
-	 * @return
+	 * @return logradouro
 	 */
 	public Logradouro getLogradouro() {
 		return logradouro;
@@ -150,7 +149,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter o número do Endereço.
-	 * @return
+	 * @return numero
 	 */
 	public String getNumero() {
 		return numero;
@@ -165,7 +164,7 @@ public class Endereco {
 	
 	/**
 	 * Método definido para obter o tipo do Endereço.
-	 * @return
+	 * @return tipo
 	 */
 	public TipoEndereco getTipo() {
 		return tipo;
@@ -180,7 +179,7 @@ public class Endereco {
 	}
 	/**
 	 * Método definido para obter a lista de pessoas associadas ao endereço.
-	 * @return
+	 * @return pessoas
 	 */
 	public List<Pessoa> getPessoas() {
 		return pessoas;
@@ -196,6 +195,7 @@ public class Endereco {
 	
 	/**
 	 * Método definido para configurar a apresentação de um Endereço no formato de um objeto da classe String.
+	 * @return String
 	 */
 	
 	public String toString(){

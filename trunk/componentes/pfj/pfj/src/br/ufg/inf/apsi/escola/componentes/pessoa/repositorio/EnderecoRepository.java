@@ -17,48 +17,48 @@ public interface EnderecoRepository {
 	/**
 	 * Operação definida para incluir o cadastro de um novo endereço no repositório.
 	 * @param e
-	 * @return
+	 * @return boolean
 	 * @throws EnderecoCadastradoException
 	 */
 	boolean incluir(Endereco e) throws EnderecoCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um endereço do repositório.
 	 * @param enderecoId
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean remover(Long enderecoId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações feitas no cadastro de um endereço.
 	 * @param e
-	 * @return
+	 * @return boolean
 	 * @throws EscolaException
 	 */
 	boolean salvar(Endereco e) throws EscolaException;
 	/**
 	 * Operação definida para consultar endereços, a partir do nome da rua.
 	 * @param nomeRua
-	 * @return
+	 * @return List<Endereco>
 	 * @throws NenhumEnderecoEncontradoException
 	 */
 	List<Endereco> consultarNomeRua(String nomeRua) throws NenhumEnderecoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um endereço a partir do seu id.
 	 * @param enderecoId
-	 * @return
+	 * @return {@link Endereco}
 	 * @throws EnderecoNaoEncontradoException
 	 */
 	Endereco carregar(Long enderecoId) throws EnderecoNaoEncontradoException;
 	/**
 	 * Operação definida para listar todos os endereços cadastrados.
-	 * @return
+	 * @return List<Endereco>
 	 * @throws NenhumEnderecoEncontradoException
 	 */
 	List<Endereco> listaTodos() throws NenhumEnderecoEncontradoException;
 	/**
 	 * Operação definida para consultar endereços, a partir do cep.
 	 * @param cep
-	 * @return
+	 * @return List<Endereco>
 	 * @throws NenhumEnderecoEncontradoException
 	 */
 	List<Endereco> consultaCep(Integer cep) throws NenhumEnderecoEncontradoException;
@@ -67,7 +67,7 @@ public interface EnderecoRepository {
 	 * @param nomeRua
 	 * @param complemento
 	 * @param numero
-	 * @return
+	 * @return {@link Endereco}
 	 * @throws EnderecoNaoEncontradoException
 	 */
 	Endereco consultarDiversos(String nomeRua, String complemento, String numero) throws EnderecoNaoEncontradoException;

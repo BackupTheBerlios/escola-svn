@@ -36,7 +36,7 @@ public class Email {
 	}
 	/**
 	 * Método definido para obter um Email.
-	 * @return
+	 * @return String
 	 */
 	public String getEmail() {
 		return email;
@@ -50,7 +50,7 @@ public class Email {
 	}
 	/**
 	 * Método definido para obter o identificador de um Email.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -66,7 +66,7 @@ public class Email {
 	
 	/**
 	 * Método definido para obter o titular de um email.
-	 * @return
+	 * @return titularEmail
 	 */
 	public Pessoa getTitularEmail() {
 		return titularEmail;
@@ -81,7 +81,7 @@ public class Email {
 	/**
 	 * Método definido para validar um Email.
 	 * @param email
-	 * @return
+	 * @return boolean
 	 */
 	public boolean validar(String email){
 		
@@ -95,6 +95,7 @@ public class Email {
 	}
 	/**
 	 * Método definido para configurar a apresentação de um Email no formato de um objeto da classe String.
+	 * @return String
 	 */
 	public String toString(){
 		return getEmail();

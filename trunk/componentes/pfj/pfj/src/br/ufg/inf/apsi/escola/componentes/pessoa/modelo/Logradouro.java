@@ -49,7 +49,7 @@ public class Logradouro {
 	}
 	/**
 	 * Método definido para obter o identificador do logradouro.
-	 * @return
+	 * @return id
 	 */
 	public Long getId() {
 		return id;
@@ -64,7 +64,7 @@ public class Logradouro {
 	}
 	/**
 	 * Método definido para obter o nome do Logradouro.
-	 * @return
+	 * @return nome
 	 */
 	public String getNome() {
 		return nome;
@@ -80,7 +80,7 @@ public class Logradouro {
 
 	/**
 	 * Método definido para obter o tipo do Logradouro.
-	 * @return
+	 * @return tipo
 	 */
 	public TipoLogradouro getTipo() {
 		return tipo;
@@ -96,7 +96,7 @@ public class Logradouro {
 	
 	/**
 	 * Método definido para obter a lista de endereços que o logradouro participa.
-	 * @return
+	 * @return listaEnderecos
 	 */
 	public List<Endereco> getListaEnderecos() {
 		return listaEnderecos;
@@ -110,7 +110,7 @@ public class Logradouro {
 	}
 	/**
 	 * Método definido para configurar a apresentação de um Logradouro no formato de um objeto da classe String.
-	 * @return
+	 * @return Sttring
 	 */
 	public String toString(){
 		return getTipo() + " " +getNome();
