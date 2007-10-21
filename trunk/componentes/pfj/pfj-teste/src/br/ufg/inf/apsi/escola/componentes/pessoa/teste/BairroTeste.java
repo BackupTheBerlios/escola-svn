@@ -65,7 +65,7 @@ public class BairroTeste {
 	}
 	
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro#setId()}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro#setId(Long)}.
 	 */
 	
 	@Test

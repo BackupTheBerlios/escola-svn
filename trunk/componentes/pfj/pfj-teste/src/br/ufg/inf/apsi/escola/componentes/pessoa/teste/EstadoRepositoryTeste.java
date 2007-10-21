@@ -14,13 +14,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EstadoCadastrad
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EstadoNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEstadoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class EstadoRepositoryTeste {
-	
-	private Estado est = new Estado();
+	/**
+	 * 
+	 */
+	private Estado estado = new Estado();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private EstadoRepository estRep = context.mock(EstadoRepository.class);
+	/**
+	 * 
+	 */
+	private EstadoRepository estadoRepository = context.mock(EstadoRepository.class);
 	/**
 	 * 
 	 */
@@ -28,14 +40,14 @@ public class EstadoRepositoryTeste {
 	public void testaIncluir(){
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).incluir(est);
+				one (estadoRepository).incluir(estado);
 			}});
 		} catch (EstadoCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
 		
 		try {
-			estRep.incluir(est);
+			estadoRepository.incluir(estado);
 		} catch (EstadoCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
@@ -48,14 +60,14 @@ public class EstadoRepositoryTeste {
 	public void testaRemover(){
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).remover(est.getId());
+				one (estadoRepository).remover(estado.getId());
 			}});
 		} catch (EscolaException ece) {
 			System.out.println(ece.getMessage());
 		}
 		
 		try {
-			estRep.remover(est.getId());
+			estadoRepository.remover(estado.getId());
 		} catch (EscolaException ece) {
 			System.out.println(ece.getMessage());
 		}
@@ -69,14 +81,14 @@ public class EstadoRepositoryTeste {
 	public void testaSalvar(){
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).salvar(est);
+				one (estadoRepository).salvar(estado);
 			}});
 		} catch (EscolaException ece) {
 			System.out.println(ece.getMessage());
 		}
 		
 		try {
-			estRep.salvar(est);
+			estadoRepository.salvar(estado);
 		} catch (EscolaException ece) {
 			System.out.println(ece.getMessage());
 		}
@@ -90,14 +102,14 @@ public class EstadoRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).consultar(est.getNome());
+				one (estadoRepository).consultar(estado.getNome());
 			}});
 		} catch (EstadoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			estRep.consultar(est.getNome());
+			estadoRepository.consultar(estado.getNome());
 		} catch (EstadoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
@@ -110,14 +122,14 @@ public class EstadoRepositoryTeste {
 	public void testaCarregar(){
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).carregar(est.getId());
+				one (estadoRepository).carregar(estado.getId());
 			}});
 		} catch (EstadoNaoEncontradoException  enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			estRep.carregar(est.getId());
+			estadoRepository.carregar(estado.getId());
 		} catch (EstadoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
@@ -132,14 +144,14 @@ public class EstadoRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (estRep).listaTodos();
+				one (estadoRepository).listaTodos();
 			}});
 		} catch (NenhumEstadoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
 		
 		try {
-			estRep.listaTodos();
+			estadoRepository.listaTodos();
 		} catch (NenhumEstadoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}

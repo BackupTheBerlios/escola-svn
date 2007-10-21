@@ -68,7 +68,7 @@ public class CidadeTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

@@ -49,7 +49,7 @@ public class CPFTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF#CPF(java.lang.String)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF#CPF()}.
 	 */
 	@Test
 	public void testCPFStringPessoa() {

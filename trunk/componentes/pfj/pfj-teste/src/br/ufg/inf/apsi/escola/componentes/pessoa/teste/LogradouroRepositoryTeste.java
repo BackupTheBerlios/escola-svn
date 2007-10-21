@@ -13,12 +13,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.LogradouroCadas
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.LogradouroNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumLogradouroEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class LogradouroRepositoryTeste {
-	private Logradouro log = new Logradouro();
+	/**
+	 * 
+	 */
+	private Logradouro logradouro = new Logradouro();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private LogradouroRepository lr = context.mock(LogradouroRepository.class);
+	/**
+	 * 
+	 */
+	private LogradouroRepository logradouroRepository = context.mock(LogradouroRepository.class);
 	/**
 	 * 
 	 */
@@ -26,14 +39,14 @@ public class LogradouroRepositoryTeste {
 	public void testaIncluir(){
 		try {
 			context.checking(new Expectations(){{
-				one (lr).incluir(log);
+				one (logradouroRepository).incluir(logradouro);
 			}});
 		} catch (LogradouroCadastradoException lce) {
 			System.out.println(lce.getMessage());
 		}
 		
 		try {
-			lr.incluir(log);
+			logradouroRepository.incluir(logradouro);
 		} catch (LogradouroCadastradoException lce) {
 			System.out.println(lce.getMessage());
 		}
@@ -48,14 +61,14 @@ public class LogradouroRepositoryTeste {
 	public void testaRemover(){
 		try {
 			context.checking(new Expectations(){{
-				one (lr).remover(log.getId());
+				one (logradouroRepository).remover(logradouro.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			lr.remover(log.getId());
+			logradouroRepository.remover(logradouro.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -71,14 +84,14 @@ public class LogradouroRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (lr).salvar(log);
+				one (logradouroRepository).salvar(logradouro);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			lr.salvar(log);
+			logradouroRepository.salvar(logradouro);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -93,14 +106,14 @@ public class LogradouroRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (lr).consultar(log.getNome());
+				one (logradouroRepository).consultar(logradouro.getNome());
 			}});
 		} catch (LogradouroNaoEncontradoException lnee) {
 			System.out.println(lnee.getMessage());
 		}
 		
 		try {
-			lr.consultar(log.getNome());
+			logradouroRepository.consultar(logradouro.getNome());
 		} catch (LogradouroNaoEncontradoException lnee) {
 			System.out.println(lnee.getMessage());
 		}
@@ -115,14 +128,14 @@ public class LogradouroRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (lr).carregar(log.getId());
+				one (logradouroRepository).carregar(logradouro.getId());
 			}});
 		} catch (LogradouroNaoEncontradoException lnee) {
 			System.out.println(lnee.getMessage());
 		}
 		
 		try {
-			lr.carregar(log.getId());
+			logradouroRepository.carregar(logradouro.getId());
 		} catch (LogradouroNaoEncontradoException lnee) {
 			System.out.println(lnee.getMessage());
 		}
@@ -136,14 +149,14 @@ public class LogradouroRepositoryTeste {
 	public void testaListaTodos(){
 		try {
 			context.checking(new Expectations(){{
-				one (lr).listaTodos();
+				one (logradouroRepository).listaTodos();
 			}});
 		} catch (NenhumLogradouroEncontradoException nlee) {
 			System.out.println(nlee.getMessage());
 		}
 		
 		try {
-			lr.listaTodos();
+			logradouroRepository.listaTodos();
 		} catch (NenhumLogradouroEncontradoException nlee) {
 			System.out.println(nlee.getMessage());
 		}

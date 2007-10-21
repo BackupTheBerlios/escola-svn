@@ -3,9 +3,9 @@ package br.ufg.inf.apsi.escola.componentes.pessoa.teste;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
+import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email;
@@ -14,12 +14,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EmailNaoEncontr
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEmailEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository;
-
-@RunWith(JMock.class)
+/**
+ * 
+ * @author gilmar
+ *
+ */
+@RunWith(JUnit4ClassRunner.class)
 public class EmailRepositoryTeste {
+	/**
+	 * 
+	 */
 	private Email email = new Email();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private EmailRepository er = context.mock(EmailRepository.class);
+	/**
+	 * 
+	 */
+	private EmailRepository emailRepository = context.mock(EmailRepository.class);
 	/**
 	 * 
 	 */
@@ -28,14 +41,14 @@ public class EmailRepositoryTeste {
 	
 		try {
 			context.checking(new Expectations(){{
-				one (er).incluir(email);
+				one (emailRepository).incluir(email);
 			}});
 		} catch (EmailCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
 		
 		try {
-			er.incluir(email);
+			emailRepository.incluir(email);
 		} catch (EmailCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
@@ -50,14 +63,14 @@ public class EmailRepositoryTeste {
 	
 		try {
 			context.checking(new Expectations(){{
-				one (er).remover(email.getEmail());
+				one (emailRepository).remover(email.getEmail());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			er.remover(email.getEmail());
+			emailRepository.remover(email.getEmail());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -71,14 +84,14 @@ public class EmailRepositoryTeste {
 	public void testaSalvar(){
 		try {
 			context.checking(new Expectations(){{
-				one (er).salvar(email);
+				one (emailRepository).salvar(email);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			er.salvar(email);
+			emailRepository.salvar(email);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -93,14 +106,14 @@ public class EmailRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (er).consultar(email.getEmail());
+				one (emailRepository).consultar(email.getEmail());
 			}});
 		} catch (EmailNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			er.consultar(email.getEmail());
+			emailRepository.consultar(email.getEmail());
 		} catch (EmailNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
@@ -116,14 +129,14 @@ public class EmailRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (er).carregar(email.getId());
+				one (emailRepository).carregar(email.getId());
 			}});
 		} catch (EmailNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			er.carregar(email.getId());
+			emailRepository.carregar(email.getId());
 		} catch (EmailNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
@@ -138,14 +151,14 @@ public class EmailRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (er).listaTodos();
+				one (emailRepository).listaTodos();
 			}});
 		} catch (NenhumEmailEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
 		
 		try {
-			er.listaTodos();
+			emailRepository.listaTodos();
 		} catch (NenhumEmailEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}

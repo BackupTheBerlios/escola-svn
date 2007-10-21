@@ -62,7 +62,7 @@ public class LogradouroTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

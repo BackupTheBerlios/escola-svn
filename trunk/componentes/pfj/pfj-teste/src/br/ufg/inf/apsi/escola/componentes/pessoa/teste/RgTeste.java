@@ -33,7 +33,7 @@ public class RgTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG#RG(java.lang.String, java.util.Date, java.lang.String)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG#RG()}.
 	 */
 	@Test
 	public void testRGStringPessoaDateString() {

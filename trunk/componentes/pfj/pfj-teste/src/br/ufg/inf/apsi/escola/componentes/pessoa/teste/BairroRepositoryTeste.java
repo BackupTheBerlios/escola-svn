@@ -26,11 +26,21 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository;
 
 @RunWith(JUnit4ClassRunner.class)
 public class BairroRepositoryTeste {
-
-	private Bairro b = new Bairro();
+	/**
+	 * 
+	 */
+	private Bairro bairro = new Bairro();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	final BairroRepository br = context.mock(BairroRepository.class); 
-	
+	/**
+	 * 
+	 */
+	final BairroRepository bairroRepository = context.mock(BairroRepository.class); 
+	/**
+	 * 
+	 */
 	@Test
 	public void testaIncluir(){
 		Pais p = new Pais("Brasil");
@@ -38,19 +48,19 @@ public class BairroRepositoryTeste {
 		Cidade c = new Cidade("Goiânia");
 		e.setPais(p);
 		c.setEstado(e);
-		b.setCidade(c);
-		b.setNome("Setor Oeste");
+		bairro.setCidade(c);
+		bairro.setNome("Setor Oeste");
 
 
 		try{
 			context.checking(new Expectations(){{
-				one (br).incluir(b);
+				one (bairroRepository).incluir(bairro);
 			}});
 		}catch (BairroCadastradoException bce) {
 			System.out.println(bce.getMessage());
 		}
 		try{
-			br.incluir(b);
+			bairroRepository.incluir(bairro);
 		}catch (BairroCadastradoException bce) {
 			System.out.println(bce.getMessage());
 		}
@@ -64,13 +74,13 @@ public class BairroRepositoryTeste {
 
 		try{
 			context.checking(new Expectations(){{
-				one (br).remover(b.getId());
+				one (bairroRepository).remover(bairro.getId());
 			}});
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try{
-			br.remover(b.getId());
+			bairroRepository.remover(bairro.getId());
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -85,13 +95,13 @@ public class BairroRepositoryTeste {
 		
 		try{
 			context.checking(new Expectations(){{
-				one (br).salvar(b);
+				one (bairroRepository).salvar(bairro);
 			}});
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try{
-			br.salvar(b);
+			bairroRepository.salvar(bairro);
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -106,13 +116,13 @@ public class BairroRepositoryTeste {
 
 		try{
 			context.checking(new Expectations(){{
-				one (br).consultar(b.getNome());
+				one (bairroRepository).consultar(bairro.getNome());
 			}});
 		}catch (BairroNaoEncontradoException bnee) {
 			System.out.println(bnee.getMessage());
 		}
 		try{
-			br.consultar(b.getNome());
+			bairroRepository.consultar(bairro.getNome());
 		}catch (BairroNaoEncontradoException bnee) {
 			System.out.println(bnee.getMessage());
 		}
@@ -127,13 +137,13 @@ public class BairroRepositoryTeste {
 
 		try{
 			context.checking(new Expectations(){{
-				one (br).carregar(b.getId());
+				one (bairroRepository).carregar(bairro.getId());
 			}});
 		}catch (BairroNaoEncontradoException bnee) {
 			System.out.println(bnee.getMessage());
 		}
 		try{
-			br.carregar(b.getId());
+			bairroRepository.carregar(bairro.getId());
 		}catch (BairroNaoEncontradoException bnee) {
 			System.out.println(bnee.getMessage());
 		}
@@ -147,13 +157,13 @@ public class BairroRepositoryTeste {
 
 		try{
 			context.checking(new Expectations(){{
-				one (br).listaTodos();
+				one (bairroRepository).listaTodos();
 			}});
 		}catch (NenhumBairroEncontradoException nbee) {
 			System.out.println(nbee.getMessage());
 		}
 		try{
-			br.listaTodos();
+			bairroRepository.listaTodos();
 		}catch (NenhumBairroEncontradoException nbee) {
 			System.out.println(nbee.getMessage());
 		}

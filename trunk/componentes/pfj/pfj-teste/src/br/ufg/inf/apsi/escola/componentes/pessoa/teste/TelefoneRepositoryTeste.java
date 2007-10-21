@@ -14,12 +14,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumTelefoneE
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneCadastradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class TelefoneRepositoryTeste {
-	private Telefone t = new Telefone();
+	/**
+	 * 
+	 */
+	private Telefone telefone = new Telefone();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private TelefoneRepository tr = context.mock(TelefoneRepository.class);
+	/**
+	 * 
+	 */
+	private TelefoneRepository telefoneRepository = context.mock(TelefoneRepository.class);
 	/**
 	 * 
 	 */
@@ -27,13 +40,13 @@ public class TelefoneRepositoryTeste {
 	public void testaIncluir() {
 		try {
 			context.checking(new Expectations(){{
-				one (tr).incluir(t);
+				one (telefoneRepository).incluir(telefone);
 			}});
 		} catch (TelefoneCadastradoException tce) {
 			System.out.println(tce.getMessage());
 		}
 		try {
-			(tr).incluir(t);
+			(telefoneRepository).incluir(telefone);
 		} catch (TelefoneCadastradoException tce) {
 			System.out.println(tce.getMessage());
 		}
@@ -46,13 +59,13 @@ public class TelefoneRepositoryTeste {
 	public void testaRemover(){
 		try {
 			context.checking(new Expectations(){{
-				one (tr).remover(t.getId());
+				one (telefoneRepository).remover(telefone.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try {
-			(tr).remover(t.getId());
+			(telefoneRepository).remover(telefone.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -65,13 +78,13 @@ public class TelefoneRepositoryTeste {
 	public void testaSalvar(){
 		try {
 			context.checking(new Expectations(){{
-				one (tr).salvar(t);
+				one (telefoneRepository).salvar(telefone);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try {
-			(tr).salvar(t);
+			(telefoneRepository).salvar(telefone);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -85,13 +98,13 @@ public class TelefoneRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (tr).consultar(t.getNumero());
+				one (telefoneRepository).consultar(telefone.getNumero());
 			}});
 		} catch (TelefoneNaoEncontradoException tnee) {
 			System.out.println(tnee.getMessage());
 		}
 		try {
-			(tr).consultar(t.getNumero());
+			(telefoneRepository).consultar(telefone.getNumero());
 		} catch (TelefoneNaoEncontradoException tnee) {
 			System.out.println(tnee.getMessage());
 		}
@@ -104,13 +117,13 @@ public class TelefoneRepositoryTeste {
 	public void testaCarregar(){
 		try {
 			context.checking(new Expectations(){{
-				one (tr).carregar(t.getId());
+				one (telefoneRepository).carregar(telefone.getId());
 			}});
 		} catch (TelefoneNaoEncontradoException tnee) {
 			System.out.println(tnee.getMessage());
 		}
 		try {
-			(tr).carregar(t.getId());
+			(telefoneRepository).carregar(telefone.getId());
 		} catch (TelefoneNaoEncontradoException tnee) {
 			System.out.println(tnee.getMessage());
 		}
@@ -124,13 +137,13 @@ public class TelefoneRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (tr).listaTodos();
+				one (telefoneRepository).listaTodos();
 			}});
 		} catch (NenhumTelefoneEncontradoException ntee) {
 			System.out.println(ntee.getMessage());
 		}
 		try {
-			(tr).listaTodos();
+			(telefoneRepository).listaTodos();
 		} catch (NenhumTelefoneEncontradoException ntee) {
 			System.out.println(ntee.getMessage());
 		}

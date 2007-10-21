@@ -56,7 +56,7 @@ public class CnpjTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ#CNPJ(java.lang.String)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ#CNPJ()}.
 	 */
 	@Test
 	public void testCNPJStringPessoa() {
@@ -78,7 +78,7 @@ public class CnpjTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento#Documento(java.lang.String)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento#Documento()}.
 	 */
 	@Test
 	public void testDocumentoStringPessoa() {

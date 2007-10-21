@@ -69,7 +69,7 @@ public class EmailTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

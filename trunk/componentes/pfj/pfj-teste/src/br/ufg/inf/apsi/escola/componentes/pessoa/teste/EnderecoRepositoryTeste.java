@@ -15,12 +15,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EnderecoNaoEnco
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEnderecoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class EnderecoRepositoryTeste {
-	private Endereco end = new Endereco();
+	/**
+	 * 
+	 */
+	private Endereco endereco = new Endereco();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private EnderecoRepository er = context.mock(EnderecoRepository.class);
+	/**
+	 * 
+	 */
+	private EnderecoRepository enderecoRepository = context.mock(EnderecoRepository.class);
 	/**
 	 * 
 	 */
@@ -29,14 +42,14 @@ public class EnderecoRepositoryTeste {
 	
 		try {
 			context.checking(new Expectations(){{
-				one (er).incluir(end);
+				one (enderecoRepository).incluir(endereco);
 			}});
 		} catch (EnderecoCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
 		
 		try {
-			er.incluir(end);
+			enderecoRepository.incluir(endereco);
 		} catch (EnderecoCadastradoException ece) {
 			System.out.println(ece.getMessage());
 		}
@@ -49,14 +62,14 @@ public class EnderecoRepositoryTeste {
 	public void testaRemover(){
 		try {
 			context.checking(new Expectations(){{
-				one (er).remover(end.getId());
+				one (enderecoRepository).remover(endereco.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			er.remover(end.getId());
+			enderecoRepository.remover(endereco.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -70,14 +83,14 @@ public class EnderecoRepositoryTeste {
 	public void testaSalvar(){
 		try {
 			context.checking(new Expectations(){{
-				one (er).salvar(end);
+				one (enderecoRepository).salvar(endereco);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			er.salvar(end);
+			enderecoRepository.salvar(endereco);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -90,17 +103,17 @@ public class EnderecoRepositoryTeste {
 	@Test
 	public void testaConsultarNomeRua(){
 		Logradouro log = new Logradouro();
-		end.setLogradouro(log);
+		endereco.setLogradouro(log);
 		try {
 			context.checking(new Expectations(){{
-				one (er).consultarNomeRua(end.getLogradouro().getNome());
+				one (enderecoRepository).consultarNomeRua(endereco.getLogradouro().getNome());
 			}});
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
 		
 		try {
-			er.consultarNomeRua(end.getLogradouro().getNome());
+			enderecoRepository.consultarNomeRua(endereco.getLogradouro().getNome());
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
@@ -114,14 +127,14 @@ public class EnderecoRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (er).carregar(end.getId());
+				one (enderecoRepository).carregar(endereco.getId());
 			}});
 		} catch (EnderecoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			er.carregar(end.getId());
+			enderecoRepository.carregar(endereco.getId());
 		} catch (EnderecoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
@@ -135,14 +148,14 @@ public class EnderecoRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (er).listaTodos();
+				one (enderecoRepository).listaTodos();
 			}});
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
 		
 		try {
-			er.listaTodos();
+			enderecoRepository.listaTodos();
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
@@ -155,14 +168,14 @@ public class EnderecoRepositoryTeste {
 	public void testaConsultaCep(){
 		try {
 			context.checking(new Expectations(){{
-				one (er).consultaCep(end.getCep());
+				one (enderecoRepository).consultaCep(endereco.getCep());
 			}});
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
 		
 		try {
-			er.consultaCep(end.getCep());
+			enderecoRepository.consultaCep(endereco.getCep());
 		} catch (NenhumEnderecoEncontradoException neee) {
 			System.out.println(neee.getMessage());
 		}
@@ -175,17 +188,17 @@ public class EnderecoRepositoryTeste {
 	@Test
 	public void testaConsultarDiversos(){
 		Logradouro log = new Logradouro();
-		end.setLogradouro(log);
+		endereco.setLogradouro(log);
 		try {
 			context.checking(new Expectations(){{
-				one (er).consultarDiversos(end.getLogradouro().getNome(), end.getComplemento(), end.getNumero());
+				one (enderecoRepository).consultarDiversos(endereco.getLogradouro().getNome(), endereco.getComplemento(), endereco.getNumero());
 			}});
 		} catch (EnderecoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			er.consultarDiversos(end.getLogradouro().getNome(), end.getComplemento(), end.getNumero());
+			enderecoRepository.consultarDiversos(endereco.getLogradouro().getNome(), endereco.getComplemento(), endereco.getNumero());
 		} catch (EnderecoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}

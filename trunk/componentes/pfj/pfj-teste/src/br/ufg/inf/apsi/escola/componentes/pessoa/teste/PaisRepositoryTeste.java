@@ -14,12 +14,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumPaisEncon
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisCadastradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisNaoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class PaisRepositoryTeste {
-	private Pais p = new Pais();
+	/**
+	 * 
+	 */
+	private Pais pais = new Pais();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private PaisRepository pr = context.mock(PaisRepository.class);
+	/**
+	 * 
+	 */
+	private PaisRepository paisRepository = context.mock(PaisRepository.class);
 	/**
 	 * 
 	 */
@@ -27,14 +40,14 @@ public class PaisRepositoryTeste {
 	public void testaIncluir(){
 		try {
 			context.checking(new Expectations(){{
-				one (pr).incluir(p);
+				one (paisRepository).incluir(pais);
 			}});
 		} catch (PaisCadastradoException pce) {
 			System.out.println(pce.getMessage());
 		}
 		
 		try {
-			pr.incluir(p);
+			paisRepository.incluir(pais);
 		} catch (PaisCadastradoException pce) {
 			System.out.println(pce.getMessage());
 		}
@@ -48,14 +61,14 @@ public class PaisRepositoryTeste {
 	public void testaRemover(){
 		try {
 			context.checking(new Expectations(){{
-				one (pr).remover(p.getId());
+				one (paisRepository).remover(pais.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.remover(p.getId());
+			paisRepository.remover(pais.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -70,14 +83,14 @@ public class PaisRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (pr).salvar(p);
+				one (paisRepository).salvar(pais);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.salvar(p);
+			paisRepository.salvar(pais);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -91,14 +104,14 @@ public class PaisRepositoryTeste {
 	public void testaConsultar(){
 		try {
 			context.checking(new Expectations(){{
-				one (pr).consultar(p.getNome());
+				one (paisRepository).consultar(pais.getNome());
 			}});
 		} catch (PaisNaoEncontradoException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.consultar(p.getNome());
+			paisRepository.consultar(pais.getNome());
 		} catch (PaisNaoEncontradoException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -114,14 +127,14 @@ public class PaisRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one (pr).carregar(p.getId());
+				one (paisRepository).carregar(pais.getId());
 			}});
 		} catch (PaisNaoEncontradoException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.carregar(p.getId());
+			paisRepository.carregar(pais.getId());
 		} catch (PaisNaoEncontradoException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -135,14 +148,14 @@ public class PaisRepositoryTeste {
 	public void testaListaTodos(){
 		try {
 			context.checking(new Expectations(){{
-				one (pr).listaTodos();
+				one (paisRepository).listaTodos();
 			}});
 		} catch (NenhumPaisEncontradoException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.listaTodos();
+			paisRepository.listaTodos();
 		} catch (NenhumPaisEncontradoException npee) {
 			System.out.println(npee.getMessage());
 		}

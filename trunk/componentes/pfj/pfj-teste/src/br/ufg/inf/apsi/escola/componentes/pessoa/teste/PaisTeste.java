@@ -51,7 +51,7 @@ public class PaisTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

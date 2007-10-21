@@ -97,7 +97,7 @@ public class TelefoneTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

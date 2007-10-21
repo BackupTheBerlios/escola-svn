@@ -13,13 +13,25 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.CidadeNaoEncont
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaCidadeEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class CidadeRepositoryTeste {
-	
-	private Cidade c = new Cidade();
+	/**
+	 * 
+	 */
+	private Cidade cidade = new Cidade();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	final CidadeRepository cr = context.mock(CidadeRepository.class); 
+	/**
+	 * 
+	 */
+	final CidadeRepository cidadeRepository = context.mock(CidadeRepository.class); 
 	/**
 	 * 
 	 */
@@ -28,13 +40,13 @@ public class CidadeRepositoryTeste {
 		
 		try{
 			context.checking(new Expectations(){{
-				one (cr).incluir(c);
+				one (cidadeRepository).incluir(cidade);
 			}});
 		}catch (CidadeCadastradaException cce) {
 			System.out.println(cce.getMessage());
 		}
 		try{
-			cr.incluir(c);
+			cidadeRepository.incluir(cidade);
 		}catch (CidadeCadastradaException cce) {
 			System.out.println(cce.getMessage());
 		}
@@ -47,13 +59,13 @@ public class CidadeRepositoryTeste {
 	public void testaRemover() {
 		try{
 			context.checking(new Expectations(){{
-				one (cr).remover(c.getId());
+				one (cidadeRepository).remover(cidade.getId());
 			}});
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try{
-			cr.remover(c.getId());
+			cidadeRepository.remover(cidade.getId());
 		}catch (EscolaException cce) {
 			System.out.println(cce.getMessage());
 		}
@@ -66,13 +78,13 @@ public class CidadeRepositoryTeste {
 	public void testaSalvar(){
 		try{
 			context.checking(new Expectations(){{
-				one (cr).salvar(c);
+				one (cidadeRepository).salvar(cidade);
 			}});
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		try{
-			cr.salvar(c);
+			cidadeRepository.salvar(cidade);
 		}catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -86,13 +98,13 @@ public class CidadeRepositoryTeste {
 		
 		try{
 			context.checking(new Expectations(){{
-				one (cr).consultar(c.getNome());
+				one (cidadeRepository).consultar(cidade.getNome());
 			}});
 		}catch (CidadeNaoEncontradaException cnee) {
 			System.out.println(cnee.getMessage());
 		}
 		try{
-			cr.consultar(c.getNome());
+			cidadeRepository.consultar(cidade.getNome());
 		}catch (CidadeNaoEncontradaException cnee) {
 			System.out.println(cnee.getMessage());
 		}
@@ -106,13 +118,13 @@ public class CidadeRepositoryTeste {
 		
 		try{
 			context.checking(new Expectations(){{
-				one (cr).carregar(c.getId());
+				one (cidadeRepository).carregar(cidade.getId());
 			}});
 		}catch (CidadeNaoEncontradaException cnee) {
 			System.out.println(cnee.getMessage());
 		}
 		try{
-			cr.carregar(c.getId());
+			cidadeRepository.carregar(cidade.getId());
 		}catch (CidadeNaoEncontradaException cnee) {
 			System.out.println(cnee.getMessage());
 		}
@@ -125,13 +137,13 @@ public class CidadeRepositoryTeste {
 	public void testaListaTodos(){
 		try{
 			context.checking(new Expectations(){{
-				one (cr).listaTodas();
+				one (cidadeRepository).listaTodas();
 			}});
 		}catch (NenhumaCidadeEncontradaException ncee) {
 			System.out.println(ncee.getMessage());
 		}
 		try{
-			cr.listaTodas();
+			cidadeRepository.listaTodas();
 		}catch (NenhumaCidadeEncontradaException ncee) {
 			System.out.println(ncee.getMessage());
 		}

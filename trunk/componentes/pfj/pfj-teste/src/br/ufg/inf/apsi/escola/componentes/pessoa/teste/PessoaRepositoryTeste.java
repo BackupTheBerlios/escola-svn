@@ -18,29 +18,45 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaPessoaEn
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaCadastradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class PessoaRepositoryTeste {
-	private Pessoa pf = new PessoaFisica();
-	private Pessoa pj = new PessoaJuridica();
+	/**
+	 * 
+	 */
+	private Pessoa pessoaFisica = new PessoaFisica();
+	/**
+	 * 
+	 */
+	private Pessoa pessoaJuridica = new PessoaJuridica();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private PessoaRepository pr = context.mock(PessoaRepository.class);
+	/**
+	 * 
+	 */
+	private PessoaRepository pessoaRepository = context.mock(PessoaRepository.class);
 	/**
 	 * 
 	 */
 	@Test
 	public void testaIncluir() {
-		//Testa a inclus�o de uma pessoa f�sica		
+		//Testa a inclusão de uma pessoa física		
 		try {
 			context.checking(new Expectations(){{
-				one(pr).incluir(pf);
+				one(pessoaRepository).incluir(pessoaFisica);
 			}});
 		} catch (PessoaCadastradaException pce) {
 			System.out.println(pce.getMessage());
 		}
 		
 		try {
-			pr.incluir(pf);
+			pessoaRepository.incluir(pessoaFisica);
 		} catch (PessoaCadastradaException pce) {
 			System.out.println(pce.getMessage());
 		}
@@ -49,14 +65,14 @@ public class PessoaRepositoryTeste {
 		//testa a inclus�o de uma pessoa jur�dica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).incluir(pj);
+				one(pessoaRepository).incluir(pessoaJuridica);
 			}});
 		} catch (PessoaCadastradaException pce) {
 			System.out.println(pce.getMessage());
 		}
 		
 		try {
-			pr.incluir(pj);
+			pessoaRepository.incluir(pessoaJuridica);
 		} catch (PessoaCadastradaException pce) {
 			System.out.println(pce.getMessage());
 		}
@@ -70,14 +86,14 @@ public class PessoaRepositoryTeste {
 		//Testa a remo��o de uma pessoa f�sica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).remover(pf.getId());
+				one(pessoaRepository).remover(pessoaFisica.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.remover(pf.getId());
+			pessoaRepository.remover(pessoaFisica.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -85,14 +101,14 @@ public class PessoaRepositoryTeste {
 		//Testa a remo��o de uma pessoa jur�dica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).remover(pj.getId());
+				one(pessoaRepository).remover(pessoaJuridica.getId());
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.remover(pj.getId());
+			pessoaRepository.remover(pessoaJuridica.getId());
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -106,14 +122,14 @@ public class PessoaRepositoryTeste {
 		//Testa Salvar Pessoa Fisica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).salvar(pf);
+				one(pessoaRepository).salvar(pessoaFisica);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.salvar(pf);
+			pessoaRepository.salvar(pessoaFisica);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -121,14 +137,14 @@ public class PessoaRepositoryTeste {
 		//Testa Salvar Pessoa Jurídica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).salvar(pj);
+				one(pessoaRepository).salvar(pessoaJuridica);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			pr.salvar(pj);
+			pessoaRepository.salvar(pessoaJuridica);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -143,14 +159,14 @@ public class PessoaRepositoryTeste {
 		//Testa Consultar Pessoa Fisica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaId(pf.getId());
+				one(pessoaRepository).consultarPessoaId(pessoaFisica.getId());
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaId(pf.getId());
+			pessoaRepository.consultarPessoaId(pessoaFisica.getId());
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -159,14 +175,14 @@ public class PessoaRepositoryTeste {
 		//Testa Consultar Pessoa Juridica
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaId(pj.getId());
+				one(pessoaRepository).consultarPessoaId(pessoaJuridica.getId());
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaId(pj.getId());
+			pessoaRepository.consultarPessoaId(pessoaJuridica.getId());
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -179,14 +195,14 @@ public class PessoaRepositoryTeste {
 	public void testaConsultarPessoaNome(){
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaNome(pf.getNome());
+				one(pessoaRepository).consultarPessoaNome(pessoaFisica.getNome());
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaNome(pf.getNome());
+			pessoaRepository.consultarPessoaNome(pessoaFisica.getNome());
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -203,14 +219,14 @@ public class PessoaRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaCidade(nomeCidade);
+				one(pessoaRepository).consultarPessoaCidade(nomeCidade);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaCidade(nomeCidade);
+			pessoaRepository.consultarPessoaCidade(nomeCidade);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -226,14 +242,14 @@ public class PessoaRepositoryTeste {
 		final String nomeBairro = "Setor Oeste";
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaBairro(nomeBairro);
+				one(pessoaRepository).consultarPessoaBairro(nomeBairro);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaBairro(nomeBairro);
+			pessoaRepository.consultarPessoaBairro(nomeBairro);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -249,14 +265,14 @@ public class PessoaRepositoryTeste {
 		final long numeroTelefone = 32016574;
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultarPessoaTelefone(numeroTelefone);
+				one(pessoaRepository).consultarPessoaTelefone(numeroTelefone);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.consultarPessoaTelefone(numeroTelefone);
+			pessoaRepository.consultarPessoaTelefone(numeroTelefone);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -271,14 +287,14 @@ public class PessoaRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one(pr).carregar(pj.getId());
+				one(pessoaRepository).carregar(pessoaJuridica.getId());
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.carregar(pj.getId());
+			pessoaRepository.carregar(pessoaJuridica.getId());
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -291,14 +307,14 @@ public class PessoaRepositoryTeste {
 	public void testaListaTodos(){
 		try {
 			context.checking(new Expectations(){{
-				one(pr).listaTodos();
+				one(pessoaRepository).listaTodos();
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 		
 		try {
-			pr.listaTodos();
+			pessoaRepository.listaTodos();
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -312,14 +328,14 @@ public class PessoaRepositoryTeste {
 		final String numeroDocumento = "123456789";
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultaPessoaDocumento(numeroDocumento);
+				one(pessoaRepository).consultaPessoaDocumento(numeroDocumento);
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.consultaPessoaDocumento(numeroDocumento);
+			pessoaRepository.consultaPessoaDocumento(numeroDocumento);
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -334,14 +350,14 @@ public class PessoaRepositoryTeste {
 		final String numeroDocumento = "123456789";
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultaPessoaPorDocumento(numeroDocumento);
+				one(pessoaRepository).consultaPessoaPorDocumento(numeroDocumento);
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 		
 		try {
-			pr.consultaPessoaPorDocumento(numeroDocumento);
+			pessoaRepository.consultaPessoaPorDocumento(numeroDocumento);
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -356,14 +372,14 @@ public class PessoaRepositoryTeste {
 		final Date dataNascimento = new Date();
 		try {
 			context.checking(new Expectations(){{
-				one(pr).consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
+				one(pessoaRepository).consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
 			}});
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
 
 		try {
-			pr.consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
+			pessoaRepository.consultaPessoaNomeDataNascimento(nomePessoa, dataNascimento);
 		} catch (PessoaNaoEncontradaException pnee) {
 			System.out.println(pnee.getMessage());
 		}
@@ -379,14 +395,14 @@ public class PessoaRepositoryTeste {
 		final Date dataNascimento = new Date();
 		try {
 			context.checking(new Expectations(){{
-				one(pr).listaPessoasIdade(dataNascimento);
+				one(pessoaRepository).listaPessoasIdade(dataNascimento);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 
 		try {
-			pr.listaPessoasIdade(dataNascimento);
+			pessoaRepository.listaPessoasIdade(dataNascimento);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -402,14 +418,14 @@ public class PessoaRepositoryTeste {
 		
 		try {
 			context.checking(new Expectations(){{
-				one(pr).listaPessoasIdadeSexo(dataNascimento, sexo);
+				one(pessoaRepository).listaPessoasIdadeSexo(dataNascimento, sexo);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 
 		try {
-			pr.listaPessoasIdadeSexo(dataNascimento, sexo);
+			pessoaRepository.listaPessoasIdadeSexo(dataNascimento, sexo);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
@@ -423,14 +439,14 @@ public class PessoaRepositoryTeste {
 		final String sexo = "M";
 		try {
 			context.checking(new Expectations(){{
-				one(pr).listaPessoasSexo(sexo);
+				one(pessoaRepository).listaPessoasSexo(sexo);
 			}});
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}
 
 		try {
-			pr.listaPessoasSexo(sexo);
+			pessoaRepository.listaPessoasSexo(sexo);
 		} catch (NenhumaPessoaEncontradaException npee) {
 			System.out.println(npee.getMessage());
 		}

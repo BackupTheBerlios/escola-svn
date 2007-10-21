@@ -83,7 +83,7 @@ public class EnderecoTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco#setId(long)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco#setId(Long)}.
 	 */
 	@Test
 	public void testSetId() {

@@ -98,7 +98,7 @@ public class PessoaFisicaTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica#setSexo(char)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica#setSexo(String)}.
 	 */
 	@Test
 	public void testSetSexo() {
@@ -256,7 +256,7 @@ public class PessoaFisicaTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa#setListaEmails(java.util.Set)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa#setListaEmails(List)}.
 	 */
 	@Test
 	public void testSetListaEmails() {
@@ -320,7 +320,7 @@ public class PessoaFisicaTeste {
 	}
 
 	/**
-	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa#setListaTelefones(java.util.Set)}.
+	 * Test method for {@link br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa#setListaTelefones(List)}.
 	 */
 	@Test
 	public void testSetListaTelefones() {

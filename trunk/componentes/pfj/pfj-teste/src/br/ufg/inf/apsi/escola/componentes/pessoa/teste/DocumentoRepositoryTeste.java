@@ -18,14 +18,33 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumDocumentoEncontradoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.RemocaoDocumentoException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 @RunWith(JUnit4ClassRunner.class)
 public class DocumentoRepositoryTeste {
+	/**
+	 * 
+	 */
 	private Documento cpf = new CPF();
+	/**
+	 * 
+	 */
 	private Documento cnpj = new CNPJ();
+	/**
+	 * 
+	 */
 	private Documento rg = new RG();
+	/**
+	 * 
+	 */
 	private Mockery context = new JUnit4Mockery();
-	private DocumentoRepository dr = context.mock(DocumentoRepository.class);
+	/**
+	 * 
+	 */
+	private DocumentoRepository documentoRepository = context.mock(DocumentoRepository.class);
 	/**
 	 * 
 	 */
@@ -34,14 +53,14 @@ public class DocumentoRepositoryTeste {
 		//Testa a inclusão de um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).incluir(cpf);
+				one (documentoRepository).incluir(cpf);
 			}});
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
 		
 		try {
-			dr.incluir(cpf);
+			documentoRepository.incluir(cpf);
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
@@ -50,14 +69,14 @@ public class DocumentoRepositoryTeste {
 		//Testa a inclusão de um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).incluir(cnpj);
+				one (documentoRepository).incluir(cnpj);
 			}});
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
 		
 		try {
-			dr.incluir(cnpj);
+			documentoRepository.incluir(cnpj);
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
@@ -66,14 +85,14 @@ public class DocumentoRepositoryTeste {
 		//Testa a inclusão de um RG
 		try {
 			context.checking(new Expectations(){{
-				one (dr).incluir(rg);
+				one (documentoRepository).incluir(rg);
 			}});
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
 		
 		try {
-			dr.incluir(rg);
+			documentoRepository.incluir(rg);
 		} catch (DocumentoCadastradoException dce) {
 			System.out.println(dce.getMessage());
 		}
@@ -88,14 +107,14 @@ public class DocumentoRepositoryTeste {
 		//Testa a remoção de um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).remover(cpf.getNumero());
+				one (documentoRepository).remover(cpf.getNumero());
 			}});
 		} catch (RemocaoDocumentoException rde) {
 			System.out.println(rde.getMessage());
 		}
 		
 		try {
-			dr.remover(cpf.getNumero());
+			documentoRepository.remover(cpf.getNumero());
 		} catch (RemocaoDocumentoException rde) {
 			System.out.println(rde.getMessage());
 		}
@@ -105,14 +124,14 @@ public class DocumentoRepositoryTeste {
 		//Testa remoção de um cnpj
 		try {
 			context.checking(new Expectations(){{
-				one (dr).remover(cnpj.getNumero());
+				one (documentoRepository).remover(cnpj.getNumero());
 			}});
 		} catch (RemocaoDocumentoException rde) {
 			System.out.println(rde.getMessage());
 		}
 		
 		try {
-			dr.remover(cnpj.getNumero());
+			documentoRepository.remover(cnpj.getNumero());
 		} catch (RemocaoDocumentoException rde) {
 			System.out.println(rde.getMessage());
 		}
@@ -121,14 +140,14 @@ public class DocumentoRepositoryTeste {
 		//Testa remoção de um RG
 		try {
 			context.checking(new Expectations(){{
-				one (dr).remover(rg.getNumero());
+				one (documentoRepository).remover(rg.getNumero());
 			}});
 		} catch (RemocaoDocumentoException rde) {
 			System.out.println(rde.getMessage());
 		}
 		
 		try {
-			dr.remover(rg.getNumero());
+			documentoRepository.remover(rg.getNumero());
 		} catch (RemocaoDocumentoException dce) {
 			System.out.println(dce.getMessage());
 		}
@@ -144,14 +163,14 @@ public class DocumentoRepositoryTeste {
 		//Testa salvar um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).salvar(cpf);
+				one (documentoRepository).salvar(cpf);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			dr.salvar(cpf);
+			documentoRepository.salvar(cpf);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -160,14 +179,14 @@ public class DocumentoRepositoryTeste {
 		//Testa salvar um cnpj
 		try {
 			context.checking(new Expectations(){{
-				one (dr).salvar(cnpj);
+				one (documentoRepository).salvar(cnpj);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			dr.salvar(cnpj);
+			documentoRepository.salvar(cnpj);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -175,14 +194,14 @@ public class DocumentoRepositoryTeste {
 		//Testa salvar um rg
 		try {
 			context.checking(new Expectations(){{
-				one (dr).salvar(rg);
+				one (documentoRepository).salvar(rg);
 			}});
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
 		
 		try {
-			dr.salvar(rg);
+			documentoRepository.salvar(rg);
 		} catch (EscolaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -196,14 +215,14 @@ public class DocumentoRepositoryTeste {
 		//Testa carregar um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).carregar(cpf.getId());
+				one (documentoRepository).carregar(cpf.getId());
 			}});
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
 		
 		try {
-			dr.carregar(cpf.getId());
+			documentoRepository.carregar(cpf.getId());
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
@@ -211,14 +230,14 @@ public class DocumentoRepositoryTeste {
 		//Testa carregar um cnpj
 		try {
 			context.checking(new Expectations(){{
-				one (dr).carregar(cnpj.getId());
+				one (documentoRepository).carregar(cnpj.getId());
 			}});
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
 		
 		try {
-			dr.carregar(cnpj.getId());
+			documentoRepository.carregar(cnpj.getId());
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
@@ -226,14 +245,14 @@ public class DocumentoRepositoryTeste {
 		//Testa carregar um rg
 		try {
 			context.checking(new Expectations(){{
-				one (dr).carregar(rg.getId());
+				one (documentoRepository).carregar(rg.getId());
 			}});
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
 		
 		try {
-			dr.carregar(rg.getId());
+			documentoRepository.carregar(rg.getId());
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
@@ -246,14 +265,14 @@ public class DocumentoRepositoryTeste {
 	public void testaListaTodos(){
 		try {
 			context.checking(new Expectations(){{
-				one (dr).listaTodos();
+				one (documentoRepository).listaTodos();
 			}});
 		} catch (NenhumDocumentoEncontradoException ndee) {
 			System.out.println(ndee.getMessage());
 		}
 		
 		try {
-			dr.listaTodos();
+			documentoRepository.listaTodos();
 		} catch (NenhumDocumentoEncontradoException ndee) {
 			System.out.println(ndee.getMessage());
 		}
@@ -267,14 +286,14 @@ public class DocumentoRepositoryTeste {
 		//Testa consultar um cpf
 		try {
 			context.checking(new Expectations(){{
-				one (dr).consultar(cpf.getNumero());
+				one (documentoRepository).consultar(cpf.getNumero());
 			}});
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
 		
 		try {
-			dr.consultar(cpf.getNumero());
+			documentoRepository.consultar(cpf.getNumero());
 		} catch (DocumentoNaoEncontradoException dnee) {
 			System.out.println(dnee.getMessage());
 		}
