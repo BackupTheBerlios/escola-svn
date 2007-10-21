@@ -23,30 +23,32 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
 
 
 /**
- * Classe definida para implementar a persistência de países.
- * @author gilmar
- *
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository
  */
 public class PaisRepositoryImpl implements PaisRepository {
-
-	private CriaPersistenciaGeral persistencia;
-	Query q;
 	/**
-	 * 
-	 *
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 */
 	public PaisRepositoryImpl(){
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#consultar(String)
 	 */
-	public Pais consultar(String nome) throws PaisNaoEncontradoException {
+	public Pais consultar(String nomePais) throws PaisNaoEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pais p where p.nome=:nome");
-			q.setParameter("nome", nome);
-			return (Pais) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Pais p where p.nome=:nome");
+			query.setParameter("nome", nomePais);
+			return (Pais) query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new PaisNaoEncontradoException();
 		} catch (EntityNotFoundException enfe) {
@@ -57,12 +59,12 @@ public class PaisRepositoryImpl implements PaisRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#incluir(Pais)
 	 */
-	public boolean incluir(Pais p) throws PaisCadastradoException {
+	public boolean incluir(Pais pais) throws PaisCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(p);
+			persistencia.getEm().persist(pais);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -81,7 +83,7 @@ public class PaisRepositoryImpl implements PaisRepository {
 	}
 
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#remover(Long)
 	 */
 	public boolean remover(Long paisId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -105,12 +107,12 @@ public class PaisRepositoryImpl implements PaisRepository {
 	}
 
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#salvar(Pais)
 	 */
-	public boolean salvar(Pais p) throws EscolaException {
+	public boolean salvar(Pais pais) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(p);
+			persistencia.getEm().merge(pais);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -125,7 +127,7 @@ public class PaisRepositoryImpl implements PaisRepository {
 		}		
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#carregar(Long)
 	 */
 	public Pais carregar(Long paisId) throws PaisNaoEncontradoException {
 		try {
@@ -138,14 +140,15 @@ public class PaisRepositoryImpl implements PaisRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository#listaTodos()
+	 * 
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pais> listaTodos() throws NenhumPaisEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pais p");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Pais p");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumPaisEncontradoException();
 		}catch (NonUniqueResultException nure) {

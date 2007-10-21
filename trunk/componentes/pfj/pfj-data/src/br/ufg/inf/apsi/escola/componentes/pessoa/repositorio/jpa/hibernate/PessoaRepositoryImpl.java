@@ -26,34 +26,37 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
 
 
 /**
- * Classe definida para implementar a persistência de pessoas.
- * @author gilmar
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository
  *
  */
 public class PessoaRepositoryImpl implements PessoaRepository {
-
-	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
 	/**
-	 * 
-	 *
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia = null;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório 
+	 */
+	private Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 */
 	public PessoaRepositoryImpl(){
 		persistencia = new CriaPersistenciaGeral();
 	}
 
 	/**
-	 * Implementação da operação consultarPessoaBairro.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultarPessoaBairro(String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> consultarPessoaBairro(String nomeBairro) throws NenhumaPessoaEncontradaException{
 		
 		try {
-			q = persistencia.getEm().createQuery("Select p from Pessoa AS p, IN (p.listaEnderecos) e " +
+			query = persistencia.getEm().createQuery("Select p from Pessoa AS p, IN (p.listaEnderecos) e " +
 					" left join e.bairro b" +
 					" where b.nome = :nomeBairro");
-			q.setParameter("nomeBairro", nomeBairro);	
-			return q.getResultList();	
+			query.setParameter("nomeBairro", nomeBairro);	
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -64,18 +67,18 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultarPessoaCidade.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultarPessoaCidade(String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> consultarPessoaCidade(String nomeCidade) throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("Select p from Pessoa AS p, IN (p.listaEnderecos) e " +
+			query = persistencia.getEm().createQuery("Select p from Pessoa AS p, IN (p.listaEnderecos) e " +
 					" left join e.bairro b " + 
 					" left join b.cidade c " + 
 					" where c.nome =:nomeCidade");
-			q.setParameter("nomeCidade", nomeCidade);
-			return q.getResultList();	
+			query.setParameter("nomeCidade", nomeCidade);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -86,16 +89,16 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultaPessoaDocumento.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultaPessoaDocumento(String)
 	 */
 	public Pessoa consultaPessoaDocumento(String numeroDocumento) throws PessoaNaoEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("Select p from Pessoa p " + 
+			query = persistencia.getEm().createQuery("Select p from Pessoa p " + 
 				" left join p.listaDocumentos l "	+
 				" where l.numero = :numeroDocumento");
-			q.setParameter("numeroDocumento", numeroDocumento);
-			return (Pessoa) q.getSingleResult();	
+			query.setParameter("numeroDocumento", numeroDocumento);
+			return (Pessoa) query.getSingleResult();	
 		}catch (NoResultException nre) {
 			throw new PessoaNaoEncontradaException();
 		} catch (EntityNotFoundException enfe) {
@@ -114,11 +117,11 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		Pessoa pessoa = null;
 		Map<Long, String> idNomePessoa = new HashMap<Long, String>();
 		try {
-			q = persistencia.getEm().createQuery("Select p from Pessoa p " + 
+			query = persistencia.getEm().createQuery("Select p from Pessoa p " + 
 				" left join p.listaDocumentos l "	+
 				" where l.numero = :numeroDocumento");
-			q.setParameter("numeroDocumento", numeroDocumento);
-			pessoa = (Pessoa) q.getSingleResult();	
+			query.setParameter("numeroDocumento", numeroDocumento);
+			pessoa = (Pessoa) query.getSingleResult();	
 		}catch (NoResultException nre) {
 			throw new PessoaNaoEncontradaException();
 		} catch (EntityNotFoundException enfe) {
@@ -131,16 +134,16 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultaPessoaNomeDataNascimento.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultaPessoaNomeDataNascimento(String, Date)
 	 */
 	@Override
-	public Pessoa consultaPessoaNomeDataNascimento(String nome,
+	public Pessoa consultaPessoaNomeDataNascimento(String nomePessoa,
 			Date dataNascimento) throws PessoaNaoEncontradaException {
 		try{
-			q = persistencia.getEm().createQuery("From Pessoa p where p.nome=:nome and p.dataNascimento =:dataNascimento");
-			q.setParameter("nome", nome);
-			q.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
-			return (Pessoa) q.getSingleResult();
+			query = persistencia.getEm().createQuery("From Pessoa p where p.nome=:nome and p.dataNascimento =:dataNascimento");
+			query.setParameter("nome", nomePessoa);
+			query.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
+			return (Pessoa) query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new PessoaNaoEncontradaException();
 		} catch (EntityNotFoundException enfe) {
@@ -151,7 +154,7 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultarPessoaId.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultarPessoaId(Long)
 	 */
 	public Pessoa consultarPessoaId(Long pessoaId) throws PessoaNaoEncontradaException {
 		try {
@@ -165,15 +168,15 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultarPessoaNome.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultarPessoaNome(String)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<Pessoa> consultarPessoaNome(String nome) throws NenhumaPessoaEncontradaException {
+	public List<Pessoa> consultarPessoaNome(String nomePessoa) throws NenhumaPessoaEncontradaException {
 
 		try {
-			q = persistencia.getEm().createQuery("select p from Pessoa p where p.nome like :nome");
-			q.setParameter("nome", "%"+nome+"%");	
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("select p from Pessoa p where p.nome like :nome");
+			query.setParameter("nome", "%"+nomePessoa+"%");	
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -184,17 +187,17 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação consultarPessoaTelefone.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#consultarPessoaTelefone(long)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> consultarPessoaTelefone(long numeroTelefone) throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("Select p from Pessoa p " + 
+			query = persistencia.getEm().createQuery("Select p from Pessoa p " + 
 					" left join p.listaTelefones t" + 
 					" where t.numero = :numeroTelefone");
-			q.setParameter("numeroTelefone",numeroTelefone);
-			return q.getResultList();	
+			query.setParameter("numeroTelefone",numeroTelefone);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -206,12 +209,12 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#incluir(Pessoa)
 	 */
-	public boolean incluir(Pessoa p) throws PessoaCadastradaException {
+	public boolean incluir(Pessoa pessoa) throws PessoaCadastradaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(p);
+			persistencia.getEm().persist(pessoa);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -230,7 +233,7 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#remover(Long)
 	 */
 	public boolean remover(Long pessoaId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -254,12 +257,12 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#salvar(Pessoa)
 	 */
-	public boolean salvar(Pessoa p) throws EscolaException {
+	public boolean salvar(Pessoa pessoa) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(p);
+			persistencia.getEm().merge(pessoa);
 			persistencia.getTx().commit();
 			return true;	
 		} catch (IllegalStateException ilae) {
@@ -274,7 +277,7 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#carregar(Long)
 	 */
 	public Pessoa carregar(Long pessoaId) throws PessoaNaoEncontradaException {
 		try {
@@ -287,14 +290,14 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> listaTodos() throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pessoa p");	
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Pessoa p");	
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -305,15 +308,15 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		
 	}
 	/**
-	 * Implementação da operação listaPessoasIdade.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#listaPessoasIdade(Date)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> listaPessoasIdade(Date dataNascimento) throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pessoa p where p.dataNascimento >= :dataNascimento");
-			q.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Pessoa p where p.dataNascimento >= :dataNascimento");
+			query.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -324,16 +327,16 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 	}
 	
 	/**
-	 * Implementação da operação listaPessoasIdadeSexo.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#listaPessoasIdadeSexo(Date, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> listaPessoasIdadeSexo(Date dataNascimento, String sexo) throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pessoa p where p.sexo =:sexo and p.dataNascimento >= :dataNascimento");
-			q.setParameter("sexo", sexo);
-			q.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Pessoa p where p.sexo =:sexo and p.dataNascimento >= :dataNascimento");
+			query.setParameter("sexo", sexo);
+			query.setParameter("dataNascimento", dataNascimento, TemporalType.DATE);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {
@@ -344,15 +347,15 @@ public class PessoaRepositoryImpl implements PessoaRepository {
 		
 	}
 	/**
-	 * Implementação da operação listaPessoasSexo.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository#listaPessoasSexo(String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> listaPessoasSexo(String sexo) throws NenhumaPessoaEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Pessoa p where p.sexo =:sexo");
-			q.setParameter("sexo", sexo);
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Pessoa p where p.sexo =:sexo");
+			query.setParameter("sexo", sexo);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumaPessoaEncontradaException();
 		}catch (NonUniqueResultException nure) {

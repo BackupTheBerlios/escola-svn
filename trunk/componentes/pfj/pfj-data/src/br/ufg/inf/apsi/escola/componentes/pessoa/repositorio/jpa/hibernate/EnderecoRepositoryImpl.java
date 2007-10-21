@@ -23,14 +23,18 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository;
 
 
 /**
- * Classe definida para testar a implementação de endereços.
- * @author gilmar
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository
  *
  */
 public class EnderecoRepositoryImpl implements EnderecoRepository {
-
+	/**
+	 * atributo definido para representar o gerenciador de persistência
+	 */
 	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
 	/**
 	 * 
 	 *
@@ -39,17 +43,17 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operaçã consultar.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#consultarNomeRua(String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Endereco> consultarNomeRua(String nomeRua) throws NenhumEnderecoEncontradoException {
 		 
 		try {
-			q = persistencia.getEm().createQuery("Select endr from Endereco endr " +
+			query = persistencia.getEm().createQuery("Select endr from Endereco endr " +
 					" left join endr.logradouro logr " + 
 					" where logr.nome = :nomeRua");
-			q.setParameter("nomeRua", nomeRua);
-			return q.getResultList();	
+			query.setParameter("nomeRua", nomeRua);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumEnderecoEncontradoException();
 		}catch (NonUniqueResultException nure) {
@@ -60,12 +64,12 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		
 	}
 	/**
-	 * Implementação da operação incluir.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#incluir(Endereco)
 	 */
-	public boolean incluir(Endereco end) throws EnderecoCadastradoException {
+	public boolean incluir(Endereco endereco) throws EnderecoCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(end);
+			persistencia.getEm().persist(endereco);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -83,7 +87,7 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação remover.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#remover(Long)
 	 */
 	public boolean remover(Long enderecoId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -106,12 +110,12 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação salvar.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#salvar(Endereco)
 	 */
-	public boolean salvar(Endereco end) throws EscolaException {
+	public boolean salvar(Endereco endereco) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(end);
+			persistencia.getEm().merge(endereco);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -126,7 +130,7 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#carregar(Long)
 	 */
 	public Endereco carregar(Long enderecoId) throws EnderecoNaoEncontradoException {
 		persistencia.getTx().begin();
@@ -141,14 +145,14 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Endereco> listaTodos() throws NenhumEnderecoEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Endereco end");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Endereco end");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumEnderecoEncontradoException();
 		}catch (NonUniqueResultException nure) {
@@ -158,15 +162,15 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação consultaCep.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#consultaCep(Integer)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Endereco> consultaCep(Integer cep) throws NenhumEnderecoEncontradoException{
 		
 		try {
-			q = persistencia.getEm().createQuery("from Endereco end where end.cep =:cep");
-			q.setParameter("cep", cep);
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Endereco end where end.cep =:cep");
+			query.setParameter("cep", cep);
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumEnderecoEncontradoException();
 		}catch (NonUniqueResultException nure) {
@@ -176,19 +180,19 @@ public class EnderecoRepositoryImpl implements EnderecoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação consultar.
+	 *  @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EnderecoRepository#consultarDiversos(String, String, String)
 	 */
 	@Override
 	public Endereco consultarDiversos(String nomeRua, String complemento, String numero)
 			throws EnderecoNaoEncontradoException {
 		Endereco end = null;
 		try {
-			q = persistencia.getEm().createQuery("Select e from Endereco e left join e.logradouro logr " +
+			query = persistencia.getEm().createQuery("Select e from Endereco e left join e.logradouro logr " +
 					" where logr.nome = :nomeRua and e.numero =:numero and e.complemento =:complemento");
-			q.setParameter("nomeRua", nomeRua);
-			q.setParameter("numero", numero);
-			q.setParameter("complemento", complemento);
-			end = (Endereco) q.getSingleResult();
+			query.setParameter("nomeRua", nomeRua);
+			query.setParameter("numero", numero);
+			query.setParameter("complemento", complemento);
+			end = (Endereco) query.getSingleResult();
 			return end;
 		}catch (NoResultException nre) {
 			throw new EnderecoNaoEncontradoException();

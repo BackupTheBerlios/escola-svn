@@ -22,14 +22,18 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository;
 
 
 /**
- * Classe definida para implementar a persistência de estados.
- * @author gilmar
- *
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository
+ * 
  */
 public class EstadoRepositoryImpl implements EstadoRepository {
-
+	/**
+	 * atributo definido para representar o gerenciador de persistência
+	 */
 	private CriaPersistenciaGeral persistencia;
-	private Query q;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
 	/**
 	 * 
 	 *
@@ -38,13 +42,13 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação consultar.
+	 *@see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#consultar(String)
 	 */
-	public Estado consultar(String nome) throws EstadoNaoEncontradoException {
+	public Estado consultar(String nomeEstado) throws EstadoNaoEncontradoException {
 		try {
-			q = persistencia.getEm().createQuery("from Estado est where est.nome=:nome");
-			q.setParameter("nome", nome);
-			return (Estado) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Estado est where est.nome=:nome");
+			query.setParameter("nome", nomeEstado);
+			return (Estado) query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new EstadoNaoEncontradoException();
 		} catch (EntityNotFoundException enfe) {
@@ -55,12 +59,12 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#incluir(Estado)
 	 */
-	public boolean incluir(Estado est) throws EstadoCadastradoException {
+	public boolean incluir(Estado estado) throws EstadoCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(est);
+			persistencia.getEm().persist(estado);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -79,7 +83,7 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 	}
 
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#remover(Long)
 	 */
 	public boolean remover(Long estadoId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -103,12 +107,12 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 	}
 
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#salvar(Estado)
 	 */
-	public boolean salvar(Estado est) throws EscolaException {
+	public boolean salvar(Estado estado) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(est);
+			persistencia.getEm().merge(estado);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -123,7 +127,7 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#carregar(Long)
 	 */
 	public Estado carregar(Long estadoId) throws EstadoNaoEncontradoException {
 		try {
@@ -136,14 +140,14 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Estado> listaTodos() throws NenhumEstadoEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Estado est");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Estado est");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumEstadoEncontradoException();
 		}catch (NonUniqueResultException nure) {

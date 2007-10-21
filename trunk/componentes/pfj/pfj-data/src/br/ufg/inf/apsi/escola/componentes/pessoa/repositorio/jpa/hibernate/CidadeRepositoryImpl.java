@@ -21,30 +21,33 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaCidadeEn
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
 
 /**
- * Classe definida para implementar a persistência de cidades.
- * @author gilmar
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository
  *
  */
 public class CidadeRepositoryImpl implements CidadeRepository {
-	
-	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
 	/**
-	 * 
-	 *
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia = null;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 */
 	public CidadeRepositoryImpl(){
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#consultar(String)
 	 */
-	public Cidade consultar(String nome) throws CidadeNaoEncontradaException {
+	public Cidade consultar(String nomeCidade) throws CidadeNaoEncontradaException {
 		Cidade cidade = null;
 		try {
-			q = persistencia.getEm().createQuery("from Cidade c where c.nome =:nome");
-			q.setParameter("nome", nome);
-			cidade = (Cidade) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Cidade c where c.nome =:nome");
+			query.setParameter("nome", nomeCidade);
+			cidade = (Cidade) query.getSingleResult();
 			return cidade;
 		}catch (NoResultException nre) {
 			throw new CidadeNaoEncontradaException();
@@ -56,12 +59,12 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#incluir(Cidade)
 	 */
-	public boolean incluir(Cidade c) throws CidadeCadastradaException {
+	public boolean incluir(Cidade cidade) throws CidadeCadastradaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(c);
+			persistencia.getEm().persist(cidade);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -80,7 +83,7 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 	}
 
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#remover(Long)
 	 */
 	public boolean remover(Long cidadeId) throws EscolaException {
 		Cidade cidade = null;
@@ -105,12 +108,12 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 	}
 
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#salvar(Cidade)
 	 */
-	public boolean salvar(Cidade c) throws EscolaException {
+	public boolean salvar(Cidade cidade) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(c);
+			persistencia.getEm().merge(cidade);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -125,7 +128,7 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 		}
 	}
 	/**
-	 *Implementação da operação carregar. 
+	 *@see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#carregar(Long) 
 	 */
 	public Cidade carregar(Long cidadeId) throws CidadeNaoEncontradaException {
 		Cidade cidade = null;
@@ -139,14 +142,14 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodas.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository#listaTodas()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Cidade> listaTodas() throws NenhumaCidadeEncontradaException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Cidade c");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Cidade c");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumaCidadeEncontradaException();
 		}catch (NonUniqueResultException nure) {

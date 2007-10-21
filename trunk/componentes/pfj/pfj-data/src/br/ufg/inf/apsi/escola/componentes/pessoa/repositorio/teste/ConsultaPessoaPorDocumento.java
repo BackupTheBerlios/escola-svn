@@ -16,7 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.Logra
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl;
-
+/**
+ * 
+ * @author gilmar
+ *
+ */
 public class ConsultaPessoaPorDocumento {
 
 	/**

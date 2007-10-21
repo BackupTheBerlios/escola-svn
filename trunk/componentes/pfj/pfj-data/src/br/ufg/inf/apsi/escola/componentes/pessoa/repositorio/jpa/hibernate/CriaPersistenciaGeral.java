@@ -10,8 +10,17 @@ import javax.persistence.Persistence;
  *
  */
 public class CriaPersistenciaGeral {
+		/**
+		 * atributo definido para representar a fábrica de gerenciadores de entidades
+		 */
 		private EntityManagerFactory emf = null;
+		/**
+		 * atributo definido para representar o gerenciador de entidade
+		 */
 		private EntityManager em = null;
+		/**
+		 * atributo definido para representar as transações utilizadas na interação com o repositório
+		 */
 		private EntityTransaction tx; 
 		/**
 		 * Construtor
@@ -30,13 +39,15 @@ public class CriaPersistenciaGeral {
 		}
 
 		/**
-		 * @return
+		 * obtem o gerenciador de entidades
+		 * @return em
 		 */
 		public EntityManager getEm() {
 			return em;
 		}
 
 		/**
+		 * obtém a transação
 		 * @return the tx
 		 */
 		public EntityTransaction getTx() {

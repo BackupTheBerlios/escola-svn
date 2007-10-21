@@ -10,11 +10,14 @@ import java.util.Date;
  *
  */
 public class Util {
+	/**
+	 * atributo definido para representar o objeto que possui o formato da data definido na classe.
+	 */
 	private static DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	/**
 	 * Formata data a partir de um string passado como parâmetro.
 	 * @param data
-	 * @return
+	 * @return dataFormatada
 	 */
 	public static Date formataData(String data) {
 		Date dataFormatada = null;
@@ -29,7 +32,7 @@ public class Util {
 	/**
 	 * Formata a data a partir de uma data passada como parâmetro.
 	 * @param data
-	 * @return
+	 * @return String (dataFormatada)
 	 */
 	public static String formataData(Date data) {
 		return formato.format(data);

@@ -22,14 +22,18 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository;
 
 
 /**
- * Classe definida para implementar a persistência de emails.
- * @author gilmar
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository
  *
  */
 public class EmailRepositoryImpl implements EmailRepository {
-
+	/**
+	 * atributo definido para representar o gerenciador de persistência
+	 */
 	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
 	/**
 	 * 
 	 *
@@ -38,14 +42,14 @@ public class EmailRepositoryImpl implements EmailRepository {
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#consultar(String)
 	 */
 	public Email consultar(String email) throws EmailNaoEncontradoException {
 		Email mail;
 		try {
-			q = persistencia.getEm().createQuery("from Email e where e.email =:email");
-			q.setParameter("email", email);
-			mail = (Email) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Email e where e.email =:email");
+			query.setParameter("email", email);
+			mail = (Email) query.getSingleResult();
 			return mail;	
 		} catch (NoResultException nre) {
 			throw new EmailNaoEncontradoException();
@@ -56,12 +60,12 @@ public class EmailRepositoryImpl implements EmailRepository {
 		}
 	}
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#incluir(Email)
 	 */
-	public boolean incluir(Email e) throws EmailCadastradoException {
+	public boolean incluir(Email email) throws EmailCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(e);
+			persistencia.getEm().persist(email);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -79,7 +83,7 @@ public class EmailRepositoryImpl implements EmailRepository {
 		}
 	}
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#remover(String)
 	 */
 	public boolean remover(String email) throws EscolaException {
 		Email mail = null;
@@ -103,12 +107,12 @@ public class EmailRepositoryImpl implements EmailRepository {
 		}
 	}
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#salvar(Email)
 	 */
-	public boolean salvar(Email e) throws EscolaException {
+	public boolean salvar(Email email) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(e);
+			persistencia.getEm().merge(email);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -123,7 +127,7 @@ public class EmailRepositoryImpl implements EmailRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#carregar(Long)
 	 */
 	public Email carregar(Long emailId) throws EmailNaoEncontradoException {
 		Email mail = null;
@@ -137,14 +141,14 @@ public class EmailRepositoryImpl implements EmailRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EmailRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Email> listaTodos() throws NenhumEmailEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Email e");	
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Email e");	
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumEmailEncontradoException();
 		}catch (NonUniqueResultException nure) {

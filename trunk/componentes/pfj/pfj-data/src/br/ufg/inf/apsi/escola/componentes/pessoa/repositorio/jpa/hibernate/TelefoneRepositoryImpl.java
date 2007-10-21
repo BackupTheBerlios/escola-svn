@@ -18,29 +18,31 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneNaoEnco
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
 
 /**
- * Classe definida para implementar a persistência de telefones.
- * @author gilmar
- *
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository
  */
 public class TelefoneRepositoryImpl implements TelefoneRepository {
-	
-	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
 	/**
-	 * 
-	 *
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia = null;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 */
 	public TelefoneRepositoryImpl(){
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#consultar(long)
 	 */
-	public Telefone consultar(long numero) throws TelefoneNaoEncontradoException {
+	public Telefone consultar(long numeroTelefone) throws TelefoneNaoEncontradoException {
 		try {
-			q = persistencia.getEm().createQuery("from Telefone t where t.numero =:numero");
-			q.setParameter("numero", numero);
-			return (Telefone)q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Telefone t where t.numero =:numero");
+			query.setParameter("numero", numeroTelefone);
+			return (Telefone)query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new TelefoneNaoEncontradoException();
 		} catch (EntityNotFoundException enfe) {
@@ -50,12 +52,12 @@ public class TelefoneRepositoryImpl implements TelefoneRepository {
 		}
 	}
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#incluir(Telefone)
 	 */
-	public boolean incluir(Telefone t) throws TelefoneCadastradoException {
+	public boolean incluir(Telefone telefone) throws TelefoneCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(t);
+			persistencia.getEm().persist(telefone);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -73,7 +75,7 @@ public class TelefoneRepositoryImpl implements TelefoneRepository {
 		}
 	}
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#remover(Long)
 	 */
 	public boolean remover(Long telefoneId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -96,12 +98,12 @@ public class TelefoneRepositoryImpl implements TelefoneRepository {
 		}
 	}
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#salvar(Telefone)
 	 */
-	public boolean salvar(Telefone t) throws EscolaException {
+	public boolean salvar(Telefone telefone) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(t);
+			persistencia.getEm().merge(telefone);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -116,7 +118,7 @@ public class TelefoneRepositoryImpl implements TelefoneRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#carregar(Long)
 	 */
 	public Telefone carregar(Long telefoneId) throws TelefoneNaoEncontradoException {
 		try {
@@ -130,14 +132,14 @@ public class TelefoneRepositoryImpl implements TelefoneRepository {
 		
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Telefone> listaTodos() throws NenhumTelefoneEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Telefone t");
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Telefone t");
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumTelefoneEncontradoException();
 		}catch (NonUniqueResultException nure) {

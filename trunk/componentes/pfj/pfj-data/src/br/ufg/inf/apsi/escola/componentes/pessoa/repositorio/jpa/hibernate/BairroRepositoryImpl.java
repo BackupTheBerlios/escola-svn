@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate;
 
 
@@ -22,16 +20,20 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository;
 
 
 /**
- * Classe definida para implementar a persistência de bairros.
- * @author gilmar
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository
  *
  */
 public class BairroRepositoryImpl implements BairroRepository {
-	
-	private CriaPersistenciaGeral persistencia = null;
-	Query q;
 	/**
-	 * 
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia = null;
+	/**
+	 * atributo definido para representar um objeto de consulta ao repositório
+	 */
+	Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 *
 	 */
 	public BairroRepositoryImpl(){
@@ -40,14 +42,14 @@ public class BairroRepositoryImpl implements BairroRepository {
 	
 	
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#consultar(String)
 	 */
-	public Bairro consultar(String nome) throws BairroNaoEncontradoException {
+	public Bairro consultar(String nomeBairro) throws BairroNaoEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Bairro b where b.nome =:nome");
-			q.setParameter("nome", nome);
-			return (Bairro) q.getSingleResult(); 
+			query = persistencia.getEm().createQuery("from Bairro b where b.nome =:nome");
+			query.setParameter("nome", nomeBairro);
+			return (Bairro) query.getSingleResult(); 
 		}catch (NoResultException nre) {
 			throw new BairroNaoEncontradoException();
 		} catch (EntityNotFoundException enfe) {
@@ -58,12 +60,12 @@ public class BairroRepositoryImpl implements BairroRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#incluir(Bairro)
 	 */
-	public boolean incluir(Bairro b) throws BairroCadastradoException {
+	public boolean incluir(Bairro bairro) throws BairroCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(b);
+			persistencia.getEm().persist(bairro);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -82,7 +84,7 @@ public class BairroRepositoryImpl implements BairroRepository {
 	}
 
 	/** 
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#remover(Long)
 	 */
 	public boolean remover(Long bairroId) throws EscolaException {
 		Bairro bairro = null;
@@ -107,12 +109,12 @@ public class BairroRepositoryImpl implements BairroRepository {
 	}
 
 	/** 
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#salvar(Bairro)
 	 */
-	public boolean salvar(Bairro b) throws EscolaException {
+	public boolean salvar(Bairro bairro) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(b);
+			persistencia.getEm().merge(bairro);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -129,7 +131,7 @@ public class BairroRepositoryImpl implements BairroRepository {
 
 
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#carregar(Long)
 	 */
 	public Bairro carregar(Long bairroId) throws BairroNaoEncontradoException {
 		Bairro bairro = null;
@@ -143,12 +145,14 @@ public class BairroRepositoryImpl implements BairroRepository {
 		}
 	}
 
-
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository#listaTodos()
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Bairro> listaTodos() throws NenhumBairroEncontradoException {
 		try {
-			q = persistencia.getEm().createQuery("from Bairro b");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Bairro b");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumBairroEncontradoException();
 		}catch (NonUniqueResultException nure) {

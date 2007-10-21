@@ -20,14 +20,17 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository
 
 
 /**
- * Classe definida para implementar a persistência de documentos.
- * @author gilmar
- *
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository
  */
 public class DocumentoRepositoryImpl implements DocumentoRepository {
-	
+	/**
+	 * atributo definido para representar o gerenciador de persistência
+	 */
 	private CriaPersistenciaGeral persistencia = new CriaPersistenciaGeral();
-	private Query q;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
 	/**
 	 * 
 	 *
@@ -36,12 +39,12 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#incluir(Documento)
 	 */
-	public boolean incluir(Documento doc) throws DocumentoCadastradoException {
+	public boolean incluir(Documento documento) throws DocumentoCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(doc);
+			persistencia.getEm().persist(documento);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -59,13 +62,13 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#remover(String)
 	 */
-	public boolean remover(String numero) throws RemocaoDocumentoException {
+	public boolean remover(String numeroDocumento) throws RemocaoDocumentoException {
 		Documento doc = null;
 		persistencia.getTx().begin();
 		try {
-			doc = consultar(numero);
+			doc = consultar(numeroDocumento);
 			persistencia.getEm().remove(doc);
 			persistencia.getTx().commit();
 			return true;
@@ -83,12 +86,12 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#salvar(Documento)
 	 */
-	public boolean salvar(Documento doc) throws EscolaException {
+	public boolean salvar(Documento documento) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(doc);
+			persistencia.getEm().merge(documento);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -103,14 +106,14 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#consultar(String)
 	 */
-	public Documento consultar(String numero) throws DocumentoNaoEncontradoException {
+	public Documento consultar(String numeroDocumento) throws DocumentoNaoEncontradoException {
 		Documento doc = null;
 		try {
-			q = persistencia.getEm().createQuery("from Documento d where d.numero =:numero");
-			q.setParameter("numero", numero);
-			doc = (Documento) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Documento d where d.numero =:numero");
+			query.setParameter("numero", numeroDocumento);
+			doc = (Documento) query.getSingleResult();
 			return doc;
 		}catch (NoResultException nre) {
 			throw new DocumentoNaoEncontradoException();
@@ -121,7 +124,7 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#carregar(Long)
 	 */
 	public Documento carregar(Long documentoId) throws DocumentoNaoEncontradoException {
 		Documento doc = null;
@@ -135,14 +138,14 @@ public class DocumentoRepositoryImpl implements DocumentoRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Documento> listaTodos() throws NenhumDocumentoEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Documento d");
-			return q.getResultList();	
+			query = persistencia.getEm().createQuery("from Documento d");
+			return query.getResultList();	
 		} catch (NoResultException nre) {
 			throw new NenhumDocumentoEncontradoException();
 		}catch (NonUniqueResultException nure) {

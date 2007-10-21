@@ -23,30 +23,32 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepositor
 
 
 /**
- * Classe definida para implementar a persistência de Logradouros.
- * @author gilmar
- *
+ * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository
  */
 public class LogradouroRepositoryImpl implements LogradouroRepository {
-	
-	private CriaPersistenciaGeral persistencia = null;
-	private Query q;
 	/**
-	 * 
-	 *
+	 * atributo definido para representar o gerenciador de persistência
+	 */
+	private CriaPersistenciaGeral persistencia = null;
+	/**
+	 * atributo definido para representar o objeto de consulta ao repositório
+	 */
+	private Query query;
+	/**
+	 * construtor inicializando o gerenciador de persistência
 	 */
 	public LogradouroRepositoryImpl(){
 		persistencia = new CriaPersistenciaGeral();
 	}
 
 	/**
-	 * Implementação da operação consultar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#consultar(String)
 	 */
-	public Logradouro consultar(String nome) throws LogradouroNaoEncontradoException {
+	public Logradouro consultar(String nomeLogradouro) throws LogradouroNaoEncontradoException {
 		try {
-			q = persistencia.getEm().createQuery("from Logradouro log where log.nome=:nome");
-			q.setParameter("nome", nome);
-			return (Logradouro) q.getSingleResult();
+			query = persistencia.getEm().createQuery("from Logradouro log where log.nome=:nome");
+			query.setParameter("nome", nomeLogradouro);
+			return (Logradouro) query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new LogradouroNaoEncontradoException();
 		} catch (EntityNotFoundException enfe) {
@@ -57,12 +59,12 @@ public class LogradouroRepositoryImpl implements LogradouroRepository {
 	}
 
 	/**
-	 * Implementação da operação incluir.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#incluir(Logradouro)
 	 */
-	public boolean incluir(Logradouro log) throws LogradouroCadastradoException {
+	public boolean incluir(Logradouro logradouro) throws LogradouroCadastradoException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().persist(log);
+			persistencia.getEm().persist(logradouro);
 			persistencia.getTx().commit();
 			return true;
 		} catch (EntityExistsException eee) {
@@ -81,7 +83,7 @@ public class LogradouroRepositoryImpl implements LogradouroRepository {
 	}
 
 	/**
-	 * Operação da operação remover.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#remover(Long)
 	 */
 	public boolean remover(Long logradouroId) throws EscolaException {
 		persistencia.getTx().begin();
@@ -105,12 +107,12 @@ public class LogradouroRepositoryImpl implements LogradouroRepository {
 	}
 
 	/**
-	 * Implementação da operação salvar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#salvar(Logradouro)
 	 */
-	public boolean salvar(Logradouro log) throws EscolaException {
+	public boolean salvar(Logradouro logradouro) throws EscolaException {
 		persistencia.getTx().begin();
 		try {
-			persistencia.getEm().merge(log);
+			persistencia.getEm().merge(logradouro);
 			persistencia.getTx().commit();
 			return true;
 		} catch (IllegalStateException ilae) {
@@ -125,7 +127,7 @@ public class LogradouroRepositoryImpl implements LogradouroRepository {
 		}
 	}
 	/**
-	 * Implementação da operação carregar.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#carregar(Long)
 	 */
 	public Logradouro carregar(Long logradouroId) throws LogradouroNaoEncontradoException {
 		try {
@@ -138,14 +140,14 @@ public class LogradouroRepositoryImpl implements LogradouroRepository {
 		}
 	}
 	/**
-	 * Implementação da operação listaTodos.
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepository#listaTodos()
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Logradouro> listaTodos() throws NenhumLogradouroEncontradoException {
 		
 		try {
-			q = persistencia.getEm().createQuery("from Logradouro log");
-			return q.getResultList();
+			query = persistencia.getEm().createQuery("from Logradouro log");
+			return query.getResultList();
 		} catch (NoResultException nre) {
 			throw new NenhumLogradouroEncontradoException();
 		}catch (NonUniqueResultException nure) {
