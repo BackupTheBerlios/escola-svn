@@ -16,11 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEnderecoE
 public interface EnderecoRepository {
 	/**
 	 * Operação definida para incluir o cadastro de um novo endereço no repositório.
-	 * @param e
+	 * @param endereco
 	 * @return boolean
 	 * @throws EnderecoCadastradoException
 	 */
-	boolean incluir(Endereco e) throws EnderecoCadastradoException;
+	boolean incluir(Endereco endereco) throws EnderecoCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um endereço do repositório.
 	 * @param enderecoId
@@ -30,11 +30,11 @@ public interface EnderecoRepository {
 	boolean remover(Long enderecoId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações feitas no cadastro de um endereço.
-	 * @param e
+	 * @param endereco
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Endereco e) throws EscolaException;
+	boolean salvar(Endereco endereco) throws EscolaException;
 	/**
 	 * Operação definida para consultar endereços, a partir do nome da rua.
 	 * @param nomeRua

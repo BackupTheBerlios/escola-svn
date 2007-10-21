@@ -17,11 +17,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PaisNaoEncontra
 public interface PaisRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de país no repositório.
-	 * @param p
+	 * @param pais
 	 * @return boolean
 	 * @throws PaisCadastradoException
 	 */
-	boolean incluir(Pais p) throws PaisCadastradoException;
+	boolean incluir(Pais pais) throws PaisCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um país do repositório.
 	 * @param paisId
@@ -31,18 +31,18 @@ public interface PaisRepository {
 	boolean remover(Long paisId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um país.
-	 * @param p
+	 * @param pais
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Pais p) throws EscolaException;
+	boolean salvar(Pais pais) throws EscolaException;
 	/**
 	 * Operação definida para consultar um país a partir do seu nome.
-	 * @param nome
+	 * @param nomePais
 	 * @return Pais
 	 * @throws PaisNaoEncontradoException
 	 */
-	Pais consultar(String nome) throws PaisNaoEncontradoException;
+	Pais consultar(String nomePais) throws PaisNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um país a partir do seu identificador.
 	 * @param paisId

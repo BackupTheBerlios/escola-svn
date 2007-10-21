@@ -16,11 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumaCidadeEn
 public interface CidadeRepository {
 	/**
 	 * Operação definida para incluir uma cidade no repositório.
-	 * @param c
+	 * @param cidade
 	 * @return boolean
 	 * @throws CidadeCadastradaException
 	 */
-	boolean incluir(Cidade c) throws CidadeCadastradaException;
+	boolean incluir(Cidade cidade) throws CidadeCadastradaException;
 	/**
 	 * Operação definida para remover o cadastro de uma cidade do repositório.
 	 * @param cidadeId
@@ -30,18 +30,18 @@ public interface CidadeRepository {
 	boolean remover(Long cidadeId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas em uma cidade.
-	 * @param c
+	 * @param cidade
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Cidade c) throws EscolaException;
+	boolean salvar(Cidade cidade) throws EscolaException;
 	/**
 	 * Operação definida para consultar uma cidade, a partir do seu nome.
-	 * @param nome
+	 * @param nomeCidade
 	 * @return {@link Cidade}
 	 * @throws CidadeNaoEncontradaException
 	 */
-	Cidade consultar(String nome) throws CidadeNaoEncontradaException;
+	Cidade consultar(String nomeCidade) throws CidadeNaoEncontradaException;
 	/**
 	 * Operação definida para carregar os dados de uma cidade, a partir do seu identificador.
 	 * @param cidadeId

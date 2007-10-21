@@ -16,11 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.TelefoneNaoEnco
 public interface TelefoneRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de telefone no repositório.
-	 * @param t
+	 * @param telefone
 	 * @return boolean
 	 * @throws TelefoneCadastradoException
 	 */
-	boolean incluir(Telefone t) throws TelefoneCadastradoException;
+	boolean incluir(Telefone telefone) throws TelefoneCadastradoException;
 	/**
 	 * Operação definida para remover um cadastro de telefone do repositório.
 	 * @param telefoneId
@@ -30,18 +30,18 @@ public interface TelefoneRepository {
 	boolean remover(Long telefoneId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro do telefone.
-	 * @param t
+	 * @param telefone
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Telefone t) throws EscolaException;
+	boolean salvar(Telefone telefone) throws EscolaException;
 	/**
 	 * Operação definida para consultar um telefone, a partir do seu número.
-	 * @param numero
+	 * @param numeroTelefone
 	 * @return Telefone
 	 * @throws TelefoneNaoEncontradoException
 	 */
-	Telefone consultar(long numero)throws TelefoneNaoEncontradoException;
+	Telefone consultar(long numeroTelefone)throws TelefoneNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um telefone, a partir do seu identificador.
 	 * @param telefoneId

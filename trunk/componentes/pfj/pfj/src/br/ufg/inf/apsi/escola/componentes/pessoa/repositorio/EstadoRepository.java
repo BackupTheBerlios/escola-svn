@@ -17,11 +17,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEstadoEnc
 public interface EstadoRepository {
 	/**
 	 * Operação definida para incluir o cadastro de um novo estado no repositório.
-	 * @param est
+	 * @param estado
 	 * @return boolean
 	 * @throws EstadoCadastradoException
 	 */
-	boolean incluir(Estado est) throws EstadoCadastradoException;
+	boolean incluir(Estado estado) throws EstadoCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um estado do repositório.
 	 * @param estadoId
@@ -31,18 +31,18 @@ public interface EstadoRepository {
 	boolean remover(Long estadoId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um estado.
-	 * @param e
+	 * @param estado
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Estado e) throws EscolaException;
+	boolean salvar(Estado estado) throws EscolaException;
 	/**
 	 * Operação definida para consultar os dados de um estado, a partir do seu nome.
-	 * @param nome
+	 * @param nomeEstado
 	 * @return Estado
 	 * @throws EstadoNaoEncontradoException
 	 */
-	Estado consultar(String nome) throws EstadoNaoEncontradoException;
+	Estado consultar(String nomeEstado) throws EstadoNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um estado, a partir do seu identificador.
 	 * @param estadoId

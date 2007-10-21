@@ -18,11 +18,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncont
 public interface PessoaRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de pessoa no repositório.
-	 * @param p
+	 * @param pessoa
 	 * @return boolean
 	 * @throws PessoaCadastradaException
 	 */
-	boolean incluir(Pessoa p) throws PessoaCadastradaException;
+	boolean incluir(Pessoa pessoa) throws PessoaCadastradaException;
 	/**
 	 * Operação definida para remover o cadastro de uma pessoa do repositório.
 	 * @param pessoaId
@@ -32,11 +32,11 @@ public interface PessoaRepository {
 	boolean remover(Long pessoaId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de uma pessoa.
-	 * @param p
+	 * @param pessoa
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Pessoa p) throws EscolaException;
+	boolean salvar(Pessoa pessoa) throws EscolaException;
 	/**
 	 * Operação definida para consultar os dados de uma pessoa, a partir do seu identificador.
 	 * @param pessoaId
@@ -68,19 +68,19 @@ public interface PessoaRepository {
 	Pessoa carregar(Long pessoaId) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para consultar os dados de uma pessoa, a partir do seu nome e sua data de nascimento.
-	 * @param nome
+	 * @param nomePessoa
 	 * @param dataNascimento
 	 * @return {@link Pessoa}
 	 * @throws PessoaNaoEncontradaException
 	 */
-	Pessoa consultaPessoaNomeDataNascimento(String nome, Date dataNascimento) throws PessoaNaoEncontradaException;
+	Pessoa consultaPessoaNomeDataNascimento(String nomePessoa, Date dataNascimento) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, a partir do nome.
-	 * @param nome
+	 * @param nomePessoa
 	 * @return List<Pessoa>
 	 * @throws NenhumaPessoaEncontradaException
 	 */
-	List<Pessoa> consultarPessoaNome(String nome) throws NenhumaPessoaEncontradaException;
+	List<Pessoa> consultarPessoaNome(String nomePessoa) throws NenhumaPessoaEncontradaException;
 	/**
 	 * Operação definida para consultar pessoas, moradoras de um determinada cidade.
 	 * @param nomeCidade

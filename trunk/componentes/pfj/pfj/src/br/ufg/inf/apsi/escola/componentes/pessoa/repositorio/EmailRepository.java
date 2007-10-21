@@ -16,11 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumEmailEnco
 public interface EmailRepository {
 	/**
 	 * Operação definida para incluir um novo email no repositório.
-	 * @param e
+	 * @param email
 	 * @return boolean
 	 * @throws EmailCadastradoException
 	 */
-	boolean incluir(Email e) throws EmailCadastradoException;
+	boolean incluir(Email email) throws EmailCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de email do repositório.
 	 * @param email
@@ -30,11 +30,11 @@ public interface EmailRepository {
 	boolean remover(String email) throws EscolaException;
 	/**
 	 * Operação definida para salvar as operações efetuadas no cadastro de um email.
-	 * @param e
+	 * @param email
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Email e) throws EscolaException;
+	boolean salvar(Email email) throws EscolaException;
 	/**
 	 * Operação definida para consultar um email.
 	 * @param email

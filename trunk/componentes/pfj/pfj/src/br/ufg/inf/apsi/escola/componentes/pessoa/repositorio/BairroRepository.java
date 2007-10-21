@@ -17,11 +17,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumBairroEnc
 public interface BairroRepository {
 	/**
 	 * Operação definida para incluir um novo bairro no repositório.
-	 * @param b
+	 * @param bairro
 	 * @return boolean
 	 * @throws BairroCadastradoException
 	 */
-	boolean incluir(Bairro b) throws BairroCadastradoException;
+	boolean incluir(Bairro bairro) throws BairroCadastradoException;
 	/**
 	 * Operação definida para remover um bairro do repositório.
 	 * @param bairroId
@@ -31,18 +31,18 @@ public interface BairroRepository {
 	boolean remover(Long bairroId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas em um bairro.
-	 * @param b
+	 * @param bairro
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Bairro b) throws EscolaException;
+	boolean salvar(Bairro bairro) throws EscolaException;
 	/**
 	 * Operação definida para consultar um bairro, a partir de seu nome.
-	 * @param nome
+	 * @param nomeBairro
 	 * @return {@link Bairro}
 	 * @throws BairroNaoEncontradoException
 	 */
-	Bairro consultar(String nome) throws BairroNaoEncontradoException; 
+	Bairro consultar(String nomeBairro) throws BairroNaoEncontradoException; 
 	/**
 	 * Operação definida para carregar os dados de um bairro, a partir do seu identificador.
 	 * @param bairroId

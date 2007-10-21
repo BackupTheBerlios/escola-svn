@@ -16,11 +16,11 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.NenhumLogradour
 public interface LogradouroRepository {
 	/**
 	 * Operação definida para incluir um novo cadastro de logradouro no repositório.
-	 * @param log
+	 * @param logradouro
 	 * @return boolean
 	 * @throws LogradouroCadastradoException
 	 */
-	boolean incluir(Logradouro log) throws LogradouroCadastradoException;
+	boolean incluir(Logradouro logradouro) throws LogradouroCadastradoException;
 	/**
 	 * Operação definida para remover o cadastro de um logradouro do repositório.
 	 * @param logradouroId
@@ -30,18 +30,18 @@ public interface LogradouroRepository {
 	boolean remover(Long logradouroId) throws EscolaException;
 	/**
 	 * Operação definida para salvar as alterações efetuadas no cadastro de um logradouro.
-	 * @param log
+	 * @param logradouro
 	 * @return boolean
 	 * @throws EscolaException
 	 */
-	boolean salvar(Logradouro log) throws EscolaException;
+	boolean salvar(Logradouro logradouro) throws EscolaException;
 	/**
 	 * Operação definida para consultar um logradouro, a partir do seu nome.
-	 * @param nome
+	 * @param nomeLogradouro
 	 * @return {@link Logradouro}
 	 * @throws LogradouroNaoEncontradoException
 	 */
-	Logradouro consultar(String nome) throws LogradouroNaoEncontradoException;
+	Logradouro consultar(String nomeLogradouro) throws LogradouroNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de uma logradouro, a partir do seu identificador.
 	 * @param logradouroId
