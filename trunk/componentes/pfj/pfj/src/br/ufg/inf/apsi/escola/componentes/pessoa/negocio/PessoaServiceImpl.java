@@ -1,5 +1,6 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.negocio;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -116,7 +117,7 @@ public class PessoaServiceImpl implements PessoaService {
 				//Pesquisa se o documento existe na base de dados
 				doc = documentoRepository.consultar(numero);
 				if (doc.getNumero() != null){
-					throw new EscolaException("Documento cadastrado, portando consta da lista de outra pessoa!");
+					throw new EscolaException(new DocumentoCadastradoException().getMessage());
 				}
 				//Documento não encontrado.
 			} catch (DocumentoNaoEncontradoException dnee) {
@@ -512,7 +513,7 @@ public class PessoaServiceImpl implements PessoaService {
 				try{
 					pessoaRepository.incluir(pf);
 					adicionaEmail(pf.getId(), mail);
-					adicionaEndereco(pf.getId(), tipoEndereco, tipoLogradouro, nomeLogradouro, numeroEndereco, complemento, cep, nomeBairro, nomeCidade, nomeEstado, nomePais);					
+					adicionaEndereco(pf.getId(), tipoEndereco, tipoLogradouro, nomeLogradouro, numeroEndereco, complemento, cep, nomeBairro, nomeCidade, nomeEstado, nomePais);
 					adicionaDocumento(pf.getId(), numeroDoc1, dataEmissaoDoc1, orgaoExpedidorDoc1);
 					adicionaDocumento(pf.getId(), numeroDoc2, dataEmissaoDoc2, orgaoExpedidorDoc2);
 					adicionaTelefone(pf.getId(), dddTelefone, numeroTelefone, tipoTelefone);
@@ -568,7 +569,20 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 		
 	}
-		
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaId(Long)
+	 */	
+	@Override
+	public Long consultaPessoaDocumentoId(String numeroDocumento)
+			throws EscolaException {
+		try {
+			Pessoa pessoa = pessoaRepository.consultaPessoaDocumento(numeroDocumento);
+			return pessoa.getId();		
+		} catch (PessoaNaoEncontradaException pnee) {
+			throw new EscolaException(pnee.getMessage());
+		}
+	}
+
 	/**
 	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#consultaPessoaId(Long)
 	 */
@@ -679,7 +693,7 @@ public class PessoaServiceImpl implements PessoaService {
 		//Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaDocumentosPessoa = null;
+			List<String> listaDocumentosPessoa = new ArrayList<String>();
 			for (Documento doc : pessoa.getListaDocumentos()){
 				
 				if (doc instanceof RG) {
@@ -703,7 +717,7 @@ public class PessoaServiceImpl implements PessoaService {
 		//Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaEmailsPessoa = null;
+			List<String> listaEmailsPessoa = new ArrayList<String>();
 			for (Email email : pessoa.getListaEmails()){
 				listaEmailsPessoa.add(email.getEmail() + "\n");
 			}
@@ -721,7 +735,7 @@ public class PessoaServiceImpl implements PessoaService {
 //		Atribui à referência pessoa, a pessoa instanciada a partir do id passado como parâmetro
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String> listaEnderecosPessoa = null;
+			List<String> listaEnderecosPessoa = new ArrayList<String>();
 			for (Endereco end : pessoa.getListaEnderecos()){
 				listaEnderecosPessoa.add(end.toString());
 			}
@@ -738,7 +752,7 @@ public class PessoaServiceImpl implements PessoaService {
 		Endereco end = null;
 		try {
 			end = enderecoRepository.consultarDiversos(nomeRua, complemento, numero);
-			List<String> nomePessoas = null;
+			List<String> nomePessoas = new ArrayList<String>();
 			for(Pessoa p : end.getPessoas()){
 				nomePessoas.add(p.getNome());
 			}
@@ -753,7 +767,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */	
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoas() throws EscolaException {
-		List<String> listaNomePessoas = null;
+		List<String> listaNomePessoas = new ArrayList<String>();
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaTodos();
 			for (Pessoa p : listaPessoas){
@@ -770,7 +784,7 @@ public class PessoaServiceImpl implements PessoaService {
 	
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasBairro(String nomeBairro)  throws EscolaException {
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();
 		
 		try {
 			List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaBairro(nomeBairro);
@@ -788,7 +802,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasCidade(String nomeCidade) throws EscolaException{
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();;
 		try {
 			List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaCidade(nomeCidade);
 			for (Pessoa p : listaPessoas){
@@ -806,7 +820,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasNome(String nome) throws EscolaException{
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();;
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaNome(nome);
  		for (Pessoa p : listaPessoas){
@@ -822,7 +836,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasIdade(Date dataNascimento) throws EscolaException {
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();;
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.listaPessoasIdade(dataNascimento);
  		for (Pessoa p : listaPessoas){
@@ -839,7 +853,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasIdadeSexo(Date dataNascimento, String sexo) throws EscolaException {
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaPessoasIdadeSexo(dataNascimento, sexo);
 			for (Pessoa p : listaPessoas){
@@ -855,7 +869,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasSexo(String sexo) throws EscolaException {
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();
 		try{
 			List<Pessoa> listaPessoas = pessoaRepository.listaPessoasSexo(sexo);
 	 		for (Pessoa p : listaPessoas){
@@ -872,7 +886,7 @@ public class PessoaServiceImpl implements PessoaService {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> listaPessoasTelefone(long numeroTelefone) throws EscolaException {
-		List<String> listaNomes = null;
+		List<String> listaNomes = new ArrayList<String>();
 		try{
 		List<Pessoa> listaPessoas = pessoaRepository.consultarPessoaTelefone(numeroTelefone);
 		for (Pessoa p : listaPessoas) {
@@ -892,9 +906,9 @@ public class PessoaServiceImpl implements PessoaService {
 		//atribui à referência pessoa,  a pessoa instanciada partir do parâmetro pessoaId
 		try {
 			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
-			List<String > listaTelefones = null;
+			List<String > listaTelefones = new ArrayList<String>();
 			for (Telefone t : pessoa.getListaTelefones()){
-				listaTelefones.add(t.getDDD() + " " +String.valueOf(t.getNumero()) +" "+ t.getTipo() + "\n");
+				listaTelefones.add(t.getDDD() + " " +String.valueOf(t.getNumero()) +" "+ t.getTipo());
 			}
 			return listaTelefones;	
 		} catch (PessoaNaoEncontradaException pnee) {
