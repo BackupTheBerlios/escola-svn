@@ -36,6 +36,7 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 	private FormAvaliacao fa1 = null, fa2 = null;
 	private Questao q1 = null, q2 = null;
 	private Resposta r1 = null, r2 = null;
+	private List<FormAvaliacao> formularios = null;
 
 	/**
 	 * Executa testes no metodo "Avaliacao buscarAvaliacao(Long avaliacaoId)".
@@ -153,6 +154,7 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 
 		a.setId(2L);
 		a.adicionarFormAvaliacao(fa1);
+		formularios = new ArrayList<FormAvaliacao>(a.getFormulariosAvaliacao());
 
 		ar = contextoAvaliacao.mock(AvaliacaoRepository.class);
 		contextoAvaliacao.checking(new Expectations() {
@@ -162,7 +164,15 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 			}
 		});
 
-		adh = new AvaliacaoDocenteHandlerImpl(ar, null);
+		far = contextoFormAvaliacao.mock(FormAvaliacaoRepository.class);
+		contextoFormAvaliacao.checking(new Expectations() {
+			{
+				one(far).buscarListFormAvaliacao(2L);
+				will(returnValue(formularios));
+			}
+		});
+
+		adh = new AvaliacaoDocenteHandlerImpl(ar, far);
 
 		assertFalse(adh.excluirAvaliacao(2L));
 		contextoAvaliacao.assertIsSatisfied();
@@ -185,7 +195,15 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 			}
 		});
 
-		adh = new AvaliacaoDocenteHandlerImpl(ar, null);
+		far = contextoFormAvaliacao.mock(FormAvaliacaoRepository.class);
+		contextoFormAvaliacao.checking(new Expectations() {
+			{
+				one(far).buscarListFormAvaliacao(2L);
+				will(returnValue(null));
+			}
+		});
+
+		adh = new AvaliacaoDocenteHandlerImpl(ar, far);
 
 		assertTrue(adh.excluirAvaliacao(2L));
 		contextoAvaliacao.assertIsSatisfied();
@@ -265,7 +283,15 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 			}
 		});
 
-		adh = new AvaliacaoDocenteHandlerImpl(ar, null);
+		far = contextoFormAvaliacao.mock(FormAvaliacaoRepository.class);
+		contextoFormAvaliacao.checking(new Expectations() {
+			{
+				one(far).buscarListFormAvaliacao(2L);
+				will(returnValue(null));
+			}
+		});
+
+		adh = new AvaliacaoDocenteHandlerImpl(ar, far);
 
 		assertTrue(adh.cadastrarQuestao(2L, false, "Questao_01"));
 		contextoAvaliacao.assertIsSatisfied();
@@ -296,7 +322,15 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 			}
 		});
 
-		adh = new AvaliacaoDocenteHandlerImpl(ar, null);
+		far = contextoFormAvaliacao.mock(FormAvaliacaoRepository.class);
+		contextoFormAvaliacao.checking(new Expectations() {
+			{
+				one(far).buscarListFormAvaliacao(2L);
+				will(returnValue(null));
+			}
+		});
+
+		adh = new AvaliacaoDocenteHandlerImpl(ar, far);
 
 		assertTrue(adh.alterarQuestao(2L, 4L, true, "Questao_02 - Alterada"));
 		contextoAvaliacao.assertIsSatisfied();
@@ -322,12 +356,20 @@ public class AvaliacaoDocenteHandlerImplTest extends TestCase {
 			{
 				one(ar).buscarAvaliacao(2L);
 				will(returnValue(a));
-				one(ar).alterarAvaliacao(a);
+				one(ar).excluirQuestao(q2);
 				will(returnValue(true));
 			}
 		});
 
-		adh = new AvaliacaoDocenteHandlerImpl(ar, null);
+		far = contextoFormAvaliacao.mock(FormAvaliacaoRepository.class);
+		contextoFormAvaliacao.checking(new Expectations() {
+			{
+				one(far).buscarListFormAvaliacao(2L);
+				will(returnValue(null));
+			}
+		});
+
+		adh = new AvaliacaoDocenteHandlerImpl(ar, far);
 
 		assertTrue(adh.excluirQuestao(2L, 4L));
 		contextoAvaliacao.assertIsSatisfied();
