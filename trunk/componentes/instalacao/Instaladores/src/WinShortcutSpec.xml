@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<shortcuts>
+		<programGroup defaultName="Escola" location="startMenu"/>
+		<shortcut name="ESCOLA"
+			target="$INSTALL_PATH\SetupEscola"
+			iconFile="$INSTALL_PATH\produto.ico"
+			commandLine="" workingDirectory="$INSTALL_PATH"
+			description="Clique aqui para iniciar o ESCOLA"
+			programGroup="yes" desktop="yes"    applications="no"
+			startMenu="no" startup="no"> 
+		</shortcut>
+	</shortcuts>
+		
