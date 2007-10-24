@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Instalação do Escola</title>
+</head>
+<body>
+	<center>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=index_r1_c1 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c1.gif" width=174 border=0 
+            name=index_r1_c1></TD>
+          <TD width=216><IMG id=index_r1_c3 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c3.gif" width=217 border=0 
+            name=index_r1_c3></TD>
+          <TD width=216><IMG id=index_r1_c4 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c4.gif" width=225 border=0 
+            name=index_r1_c4></TD>
+          <TD width=167><IMG id=index_r1_c5 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c5.gif" width=164 border=0 
+            name=index_r1_c5></TD></TR></TBODY></TABLE></TD></TR>
+		</center>	
+  <center>
+	  <h2><font color="#FF0000">SISPG: Guia de Instalação</font></h2>
+  </center>
+
+  <p><font size="4">Conteúdo da página</font></p>
+
+  <ul>
+    <li><a href="#requisitos">Pré-Requisitos</a></li>
+
+    <li><a href="#download">Download do Escola</a></li>
+
+    <li><a href="#instalacao">Instalação do Escola</a></li>
+
+    <li><a href="#primAcesso">Primeiro Acesso</a></li>
+  </ul>
+
+  <p><a name="requisitos" id="requisitos"></a></p>
+
+  <p><font size="4">Pré-Requisitos</font></p>
+  <p>
+     Para instalar o Escola 1.0 será necessário que estejam instalados os seguintes pacotes:
+  </p>
+  <ul>
+    <li>Java Runtime Environment 6.0 - <a href="http://java.sun.com/javase/downloads/index.jsp">download no java.sun.com</a></li>
+
+    <li>Apache Tomcat 6.0 - <a href="http://tomcat.apache.org/download-60.cgi">download no tomcat.apache.org</a></li>
+
+    <li>Hibernate- <a href="http://www.hibernate.org/6.html">download no www.hibernate.org</a></li>
+
+    <li>Apache Ant 1.7.0 - <a href="http://ant.apache.org/bindownload.cgi">download no ant.apache.org</a></li>
+
+    <li>Banco de Dados HQLDB - <a href="http://sourceforge.net/project/showfiles.php?group_id=23316">download no sourceforge.net</a></li>
+  </ul>
+  
+  <a name="instalacao" id="instalacao"></a>
+  <p><font size="4">Instalação</font></p>
+
+  <ol>
+    <a name="descompactar" id="descompactar"></a>
+    <font size="3"><b><li><p>Criar os seguintes diretórios</p></li></b></font>
+    
+	<IMG id=dir height=120 alt="" 
+			src="D:\Gustavo\Especialização\Projeto Final\images\diretorios.gif" width=280 border=0 
+			name=index_r1_c4>
+
+
+	<ul type="A">
+		<li> Faça o download do pacote de instalação: <a href="file:///C|/Documents and Settings/Gustavo/Desktop/Escola.war">ESCOLA 1.0.war</a> e armazená-lo no diretório war do ESCOLA;</li>
+		<li> Faça o download do BANCO DE DADOS de instalação: <a href="file:///C|/Documents and Settings/Gustavo/Desktop/Escola.war">HSQL</a> e armazená-lo no diretório BANCO do ESCOLA;</li>
+		<li>Caso utilize o WINDOWS faça o download do <a href="file:///C|/Documents and Settings/Gustavo/Desktop/Escola.war">scriptBanco.bat</a> e armazená-lo no diretório SCRIPT do ESCOLA;</li>
+		<li>Caso utilize o LINUX faça o download do <a href="file:///C|/Documents and Settings/Gustavo/Desktop/Escola.war">scriptBanco.sh</a> e armazená-lo no diretório SCRIPT do ESCOLA;</li>		
+  </ul>  
+    <a name="banco" id="banco"></a>
+    <font size="3"><b><li><p>Criar o Banco de Dados</p></li></b></font>
+    <ul>
+      <li>Entrar no diretório <i>../Escola/script</i></li>	  
+      <li>Caso esteja utilizando o LINUX, digite o seguinte comando: sh scriptBanco.sh</li>
+	  <li>Caso esteja utilizando o WINDOWS, basta dar um duplo click no scriptBanco.bat</li>	  	  
+    </ul>
+
+    <a name="deploy" id="deploy"></a>
+    <font size="3"><b><li><p>Instalação do Escola no Tomcat</p></li></b></font>
+    <ul>
+      <li>Iniciar o Tomcat;</li>
+
+     <li>Abrir o endereco http://localhost:8080/manager/html;<br>
+	      <p>Observação: O número da porta podera ser diferente caso o servidor Tomcat tenha sido configurado para
+          uma porta diferente.</p>
+		  <p>
+		    Usuario: admin<br>
+		    Senha: admin
+		  </p>
+		  <p/> 
+      <li>Na tela de gerência do Tomcat, preencher o campo "Select WAR file to upload"; com o endereço do arquivo <i>..Escola/war/Escola.war</i></li>
+
+      <li>Pressionar o botao Deploy para carregar o contexto no servidor;</li>
+
+      <li>Reinicie o TOMCAT;</li>
+    </ul><a name="primAcesso" id="primAcesso"></a>
+  </ol>
+
+  <p><font size="4">Primeiro Acesso</font></p>
+
+  <ul>
+    <li>No próprio servidor acessar o endereço <a href="http://localhost:8080">http://localhost:8080/Escola/</a></li>
+
+		  <p>
+		  	<ol>
+				<ul>
+					<li> Cadatre seu usuario;  </li>
+					<li> Após o cadastro uma senha temporária será enviada para o seu e-mail </li>
+				</ul>
+			</ol>		
+			
+		  </p>
+  </ul>
+
+
+</body>
+</html>
