@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Instalação do Escola</title>
+</head>
+<body>
+	<center>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=index_r1_c1 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c1.gif" width=174 border=0 
+            name=index_r1_c1></TD>
+          <TD width=216><IMG id=index_r1_c3 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c3.gif" width=217 border=0 
+            name=index_r1_c3></TD>
+          <TD width=216><IMG id=index_r1_c4 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c4.gif" width=225 border=0 
+            name=index_r1_c4></TD>
+          <TD width=167><IMG id=index_r1_c5 height=71 alt="" 
+            src="D:\Gustavo\Especialização\Projeto Final\images\index_r1_c5.gif" width=164 border=0 
+            name=index_r1_c5></TD></TR></TBODY></TABLE></TD></TR>
+		</center>	
+  <center>
+	  <h2><font color="#FF0000">SISPG: Guia de Instalação utilizando o instalador ESCOLA 1.0</font></h2>
+  </center>
+
+  <p><font size="4">Conteúdo da página</font></p>
+	<ul>
+		<li> Nessa página se encontram os principais passos para a instalação do ESCOLA de uma maneira mais fácil para o usuário. Será necessário apenas que o usuário realize o download do JDK e do APACHE TOMCAT (pré-requisitos que estão contidos na <a href="instalacao.html">página anterior</a>.</li>
+		<li> Após o download e configuração desses dois componentes, favor seguir os passos contidos nessa página.
+	</ul>
+ 
+  <a name="instalacao" id="instalacao"></a>
+  <p><font size="4">Instalação</font></p>
+  <ol>
+    <ul type="A">
+		<li> Faça o download do pacote de instalação: <a href="file:///C|/Documents and Settings/Gustavo/Desktop/Escola.war">SetupEscola.jar</a>. Armazená-lo em um diretório da sua preferência;</li>
+		<li> Utilizando o terminal do seu sistema operacional (DOS no caso do Windows) vá ao diretório em que em SetupEscola.jar foi armazenado. Nesse diretório favor digitar o seguinte comando: <i> java -jar SetupEscola.jar.</i> Nesse momento, irá aparecer uma tela de instalação do ESCOLA, semelhante à tela mostrada abaixo:</li>
+			<br /><br /><center><IMG id=dir height=300 alt="" 
+			src="images/IzPack1.png" width=500 border=0 
+			name=index_r1_c4></center>
+		<li>A instalação estará completa quando aparecer a seguinte imagem</li>
+			<br /><br /><center><IMG id=dir height=300 alt="" 
+			src="images/IzPack2.png" width=500 border=0 
+			name=index_r1_c4></center>
+		<li>Para a verificação da instalação correta, é necessário que os seguintes diretórios tenham sido criados:</li>		
+		<br /><br /><center><IMG id=dir height=300 alt="" 
+			src="images/dir2.png" width=500 border=0 
+			name=index_r1_c4></center>
+		<li>
+			Acessar a pasta SCRIPTS. 
+			<ol>
+				<li>Caso esteja utilizando o LINUX, digite o seguinte comando: <i>sh ClassPathBanco.sh</i>. Após o dígito desse comando, digitar esse próximo comando para startar o banco: <i>sh scriptBanco.sh</i></li>
+	  			<li>Caso esteja utilizando o WINDOWS, basta dar um duplo click nos seguintes bats:<i>ClassPathBanco.bat e scriptBanco.bat</i></li>	
+			</ol>	
+		</li>
+  
+    <font size="3"><li><p>Instalação do Escola no Tomcat</p></li></font>
+    <ol>
+      <li>Iniciar o Tomcat;</li>
+
+     <li>Abrir o endereco http://localhost:8080/manager/html;<br>
+	      <p><i>Observação: O número da porta podera ser diferente caso o servidor Tomcat tenha sido configurado para
+          uma porta diferente.</p></i>
+		  <p>
+		    Usuario: admin<br>
+		    Senha: admin
+		  </p>
+		  <p/> 
+      <li>Na tela de gerência do Tomcat, preencher o campo "Select WAR file to upload"; com o endereço do arquivo <i>..Escola/war/Escola.war</i></li>
+
+      <li>Pressionar o botao Deploy para carregar o contexto no servidor;</li>
+
+      <li>Reinicie o TOMCAT;</li>
+  </ol>
+
+ <li> <font size="3">Primeiro Acesso</font> </li>
+
+  <ol>
+    <li>No próprio servidor acessar o endereço <a href="http://localhost:8080">http://localhost:8080/Escola/</a></li>
+
+		  <p>
+		  	<ol>
+				<ul>
+					<li> Cadatre seu usuario;  </li>
+					<li> Após o cadastro uma senha temporária será enviada para o seu e-mail </li>
+				</ul>
+			</ol>		
+			
+		  </p>
+  </ol>
+  
+  <li>Remoção do ESCOLA</li><br /><br />
+  	Para realizar a exclusão do ECOLA é necessário acessar via terminal a pasta <i>Uninstaller</i>. Nela digitar o seguinte comando: <i>java -jar uninstaller.jar</i>. Após total remoção do projeto, aparecerá uma tela indicando que a exclusão do ESCOLA foi concluída com sucesso!
+</body>
+</html>
+
