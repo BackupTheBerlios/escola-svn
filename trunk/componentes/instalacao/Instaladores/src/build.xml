@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<project default = "main">
+	<property name="Mensagem" value="Criando Instaladores"/>
+	<property name="izpack.dir" location="C:\Arquivos de programas\IzPack"/>
+	
+	<taskdef name="izpack" classpath="${izpack.dir}/lib/compiler.jar"
+	  classname="com.izforge.izpack.ant.IzPackTask"/> 
+	
+	<izpack input="Instalador.xml"
+	output="SetupEscola"
+	installerType="standard" basedir="${basedir}"
+	izPackDir="${izpack.dir}/"/> 
+	
+	<target name="main">
+		<echo>
+			${Mensagem}
+		</echo>
+		<taskdef name="izpack" classpath="${izpack.dir}/lib/compiler.jar"
+		  classname="com.izforge.izpack.ant.IzPackTask"/> 
+	
+	</target>
+	
+</project>
