@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<installation version="1.0">      
+		 <info>   
+	       <appname>Escola</appname>   
+		    	<appversion>1.0</appversion>   
+		       	<authors>   
+		             <author name="Alunos da Especialização do Curso Análise e Projeto de Sistemas" email=""/>
+				</authors>   
+          		<url>http://www.especializacao.info</url>   
+                <javaversion>1.5</javaversion>   
+		</info>
+		
+		<guiprefs width="480" height="320"    resizable="no"/>
+		
+		<locale>
+			<langpack iso3="por"/>
+		</locale>
+		
+		<native type="izpack" name="ShellLink.dll"/>
+		
+		<resources>
+			<res src="docs/read-me.txt"   id="InfoPanel.info"/>
+			<res src="docs/Lincença.txt"   id="LicencePanel.licence"/>
+			<res src="WinShortcutSpec.xml" id="shortcutSpec.xml"/>
+		</resources>
+		
+		<panels>
+			<panel classname="HelloPanel"/> 
+			<panel classname="InfoPanel"/>
+			<panel classname="LicencePanel"/>
+			<panel classname="TargetPanel"/>
+			<panel classname="PacksPanel"/>
+			<panel classname="ShortcutPanel"/>
+			<panel classname="InstallPanel"/>
+			<panel classname="SimpleFinishPanel"/>
+		</panels>
+		
+		<packs>
+			<pack name="Projeto" required="yes">
+				<description>Contém os arquivos necessários para execução do programa</description>	
+				<file src="war/ExemploEscola.war"    targetdir="$INSTALL_PATH/WAR">
+					<fileset dir="dist"    targetdir="$INSTALL_PATH">
+						<include    name="**/*" />
+					</fileset>
+				</file>	
+			</pack>
+			<pack name="Banco de Dados" required="yes">
+				<description>Contém o Banco de Dados do Projeto</description>	
+				<file src="banco/hsqldb.zip"    targetdir="$INSTALL_PATH/banco">
+					<fileset dir="dist"    targetdir="$INSTALL_PATH">
+						<include    name="**/*" />
+					</fileset>
+				</file>	
+			</pack>
+			<pack name="Scripts" required="yes">
+				<description>Contém os scripts necessários para o start do banco de dados</description>	
+				<file src="Scripts/ScriptsWindows.zip"    targetdir="$INSTALL_PATH/scripts">
+					<fileset dir="dist"    targetdir="$INSTALL_PATH">
+						<include    name="**/*" />
+					</fileset>
+				</file>	
+				
+				<file src="Scripts/ScriptsLinux.zip"    targetdir="$INSTALL_PATH/scripts">
+					<fileset dir="dist"    targetdir="$INSTALL_PATH">
+						<include    name="**/*" />
+					</fileset>
+				</file>							
+			</pack>
+			<pack name="Manual" required="no">
+				<description>Contém um manual de instalação do ESCOLA</description>	
+				<file src="instalacao2.html"    targetdir="$INSTALL_PATH/docs">
+					<fileset dir="dist"    targetdir="$INSTALL_PATH">
+						<include    name="**/*" />
+					</fileset>
+				</file>	
+			</pack>
+		</packs>
+</installation>			
