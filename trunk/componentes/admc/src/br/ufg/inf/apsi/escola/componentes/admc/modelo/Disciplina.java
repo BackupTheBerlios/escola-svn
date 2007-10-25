@@ -16,6 +16,7 @@ public class Disciplina {
 	
  	
 	public Disciplina(){
+		
 		this.codigo =new String();
 		this.nome = new String();
 		this.ementa = new String();
@@ -25,6 +26,7 @@ public class Disciplina {
 	
 	public Disciplina(String nome,String codigo, 
 			String ementa, int cargaHoraria, Curso curso){
+		
 		this.nome = nome;
 		this.codigo = codigo;
 		this.ementa = ementa;

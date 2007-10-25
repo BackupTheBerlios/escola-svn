@@ -25,10 +25,10 @@ public interface CursoNegocio {
 	 * <p>
 	 * 
 	 * @param curso
-	 *            instância de Curso a ser persistida.
+	 *            instï¿½ncia de Curso a ser persistida.
 	 *            <p>
 	 * @throws Exception
-	 *             Exceção gerada na gravação do curso.
+	 *             Exceï¿½ï¿½o gerada na gravaï¿½ï¿½o do curso.
 	 */
 	public abstract void gravar(Curso curso) throws Exception;
 

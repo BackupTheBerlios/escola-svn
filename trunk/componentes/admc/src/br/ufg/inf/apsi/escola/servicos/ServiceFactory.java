@@ -6,9 +6,11 @@ import br.ufg.inf.apsi.escola.componentes.admc.servico.DisciplinaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.MatriculaTurmaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.PreMatriculaDisciplinaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.TurmaService;
+import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 
 public interface ServiceFactory {
 
+	PessoaService obterPessoaService();
 	AlunoService obterAlunoService();
 	CursoService obterCursoService();
 	DisciplinaService obterDisciplinaService();

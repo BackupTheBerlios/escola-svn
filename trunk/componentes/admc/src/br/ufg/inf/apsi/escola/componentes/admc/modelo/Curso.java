@@ -25,6 +25,11 @@ import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 public class Curso implements Serializable {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Inteiro longo para a indentitifacao do Curso
 	 */
 	private long id;
@@ -42,11 +47,11 @@ public class Curso implements Serializable {
 	private Integer cargaHoraria;
 
 	/**
-	 * Cria instância de Curso
+	 * Cria instï¿½ncia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
-	 *            String contendo o código do Curso
+	 *            String contendo o cï¿½digo do Curso
 	 * @param nome
 	 *            String contendo o nome do Curso
 	 */
@@ -56,11 +61,11 @@ public class Curso implements Serializable {
 	}
 
 	/**
-	 * Cria instância de Curso
+	 * Cria instï¿½ncia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
-	 *            String contendo o código do Curso
+	 *            String contendo o cï¿½digo do Curso
 	 * @param nome
 	 *            String contendo o nome do Curso
 	 */
@@ -72,7 +77,7 @@ public class Curso implements Serializable {
 	}
 
 	/**
-	 * Cria instância de Curso
+	 * Cria instï¿½ncia de Curso
 	 */
 	public Curso() {
 		this.codigo = new String();
@@ -110,21 +115,21 @@ public class Curso implements Serializable {
 	}
 
 	/**
-	 * Retorna o código do Curso
+	 * Retorna o cï¿½digo do Curso
 	 * <p>
 	 * 
-	 * @return String contendo o código do Curso
+	 * @return String contendo o cï¿½digo do Curso
 	 */
 	public String getCodigo() {
 		return codigo;
 	}
 
 	/**
-	 * Atribui o código ao curso
+	 * Atribui o cï¿½digo ao curso
 	 * <p>
 	 * 
 	 * @param codigo
-	 *            String contendo o código do Curso
+	 *            String contendo o cï¿½digo do Curso
 	 */
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;

@@ -16,6 +16,7 @@ public class Docente {
 	private List<Turma> turma;
 	
 	public Docente(){
+		this.id=-1;
 		this.matricula = new String();
 		this.curriculum = new String();
 		this.turma = new ArrayList<Turma>();
@@ -23,6 +24,7 @@ public class Docente {
 	}
 	
 	public Docente(String matricula, String curriculum,List<Turma> turma,long pessoaId){
+		this.id=-1;
 		this.matricula = matricula;
 		this.curriculum = curriculum;
 		this.turma = turma;

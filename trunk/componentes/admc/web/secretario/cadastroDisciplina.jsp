@@ -135,10 +135,14 @@
 						</td>
 					</tr>
 				</table>
-				</h:form> <map name="m_index_r2_c1" id="m_index_r2_c1">
-					<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
-					<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp"
-						alt="" />
-				</map> </f:view>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+	<map name="m_index_r2_c1" id="m_index_r2_c1">
+		<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
+		<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp" alt="" />
+	</map>
+</f:view>
 </body>
 </html>

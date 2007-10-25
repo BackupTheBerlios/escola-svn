@@ -55,6 +55,7 @@ public class DocenteNegocioBean implements DocenteNegocio {
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente)
 	 */
 	public void gravar(Docente docente) throws Exception {
+			
 		this.docenteRepositorio.gravar(docente);
 
 	}

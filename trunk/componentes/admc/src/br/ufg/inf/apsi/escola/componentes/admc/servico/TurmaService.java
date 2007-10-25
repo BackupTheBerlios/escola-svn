@@ -32,7 +32,7 @@ public interface TurmaService {
 	 * @throws Exception
 	 */
 
-	public abstract List consultar() throws Exception;
+	public abstract List<Turma> consultar() throws Exception;
 
 	/**
 	 * 

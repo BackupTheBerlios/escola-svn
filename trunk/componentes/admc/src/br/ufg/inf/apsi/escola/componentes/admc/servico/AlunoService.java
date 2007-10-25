@@ -1,7 +1,8 @@
 package br.ufg.inf.apsi.escola.componentes.admc.servico;
 
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import java.util.List;
+
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 
 public interface AlunoService {
  

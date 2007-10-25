@@ -50,6 +50,7 @@ public class DisciplinaController {
 			this.cursos = cursoService.consultar();
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 		}
 		return "novoDisciplina";
 	}
@@ -62,10 +63,11 @@ public class DisciplinaController {
 			Curso curso =cursoService.consultar(getCurso());
 			
 			if (getId() != -1) {
-				disciplina = new Disciplina(getNome(),getCodigo(),
-						getEmenta(), getCargaHoraria(),curso);
-			} else {
 				disciplina = new Disciplina(getId(),getNome(),getCodigo(),
+						getEmenta(), getCargaHoraria(),curso);
+				
+			} else {
+				disciplina = new Disciplina(getNome(),getCodigo(),
 						getEmenta(), getCargaHoraria(),curso);
 			}
 			disciplinaService.gravar(disciplina);
@@ -84,6 +86,7 @@ public class DisciplinaController {
 	public String editar(){
 		Disciplina disciplina= getDisciplinaFromEditOrDelete();
 		try{
+		this.setId(disciplina.getId());
 		this.setCodigo(disciplina.getCodigo());
 		this.setNome(disciplina.getNome());
 		this.setEmenta(disciplina.getEmenta());

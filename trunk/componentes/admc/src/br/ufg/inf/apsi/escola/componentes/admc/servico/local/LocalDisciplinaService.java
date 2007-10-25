@@ -42,9 +42,7 @@ public class LocalDisciplinaService implements DisciplinaService {
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.servico.DisciplinaService#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina)
 	 */
 	public void gravar(Disciplina disciplina) throws Exception {
-		
 		this.disciplinaNegocio.gravar(disciplina);
-
 	}
 
 	public List<Disciplina> consultar() throws Exception {

@@ -3,7 +3,7 @@
                               "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
 <faces-config>
  <navigation-rule>
-  <from-view-id>/secretario/Principal.jsp</from-view-id>
+  <from-view-id>*</from-view-id>
   <navigation-case>
    <from-outcome>novoDisciplina</from-outcome>
    <to-view-id>/secretario/cadastroDisciplina.jsp</to-view-id>
@@ -16,8 +16,8 @@
    <from-outcome>novoAluno</from-outcome>
    <to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
   </navigation-case>
-   
  </navigation-rule>
+ 
  <navigation-rule>
  <from-view-id>/secretario/cadastroAluno.jsp</from-view-id>
  <navigation-case>

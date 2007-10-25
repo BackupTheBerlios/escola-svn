@@ -31,7 +31,7 @@ public class LocalTurmaService implements TurmaService {
 	 * 
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.servico.TurmaService#consultar()
 	 */
-	public List consultar() throws Exception {
+	public List<Turma> consultar() throws Exception {
 		return this.turmaNegocio.consultar();
 	}
 

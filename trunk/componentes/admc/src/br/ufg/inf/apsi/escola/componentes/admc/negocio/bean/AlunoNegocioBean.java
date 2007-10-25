@@ -9,6 +9,7 @@ import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.AlunoNegocio;
 import br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepositorio;
 
+
 /**
  * @author ailton
  *
@@ -18,8 +19,10 @@ public class AlunoNegocioBean implements AlunoNegocio {
 	private AlunoRepositorio alunoRepositorio=null;
 	
 	
+	
 	public AlunoNegocioBean(AlunoRepositorio alunoRepositorio){
 		this.alunoRepositorio = alunoRepositorio;
+		
 	}
 	/* (non-Javadoc)
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.AlunoNegocio#consultar(long)

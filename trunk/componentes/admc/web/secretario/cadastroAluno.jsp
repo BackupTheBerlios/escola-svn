@@ -66,9 +66,8 @@
 							</tr>
 							<tr>
 								<td width="598" height="377" align="center" valign="top"
-									class="bordamenu"><h:messages /> 
-									
-									<h:panelGrid columns="2">
+									class="bordamenu"><br />
+								<h:messages title="msg" id="msg"/> <h:panelGrid columns="2">
 									<h:outputText value="Matricula:" />
 									<h:inputText value="#{alunoController.matricula}" size="15" />
 									<h:outputText value="Nome:" />
@@ -79,7 +78,8 @@
 										<f:selectItem itemValue="F" itemLabel="Feminino" />
 									</h:selectOneMenu>
 									<h:outputText value="Data Nascimento:" />
-									<h:inputText value="#{alunoController.dataNascimento}" size="12" />
+									<h:inputText value="#{alunoController.dataNascimento}"
+										size="12" />
 									<h:outputText value="Telefone 1:" />
 									<h:inputText value="#{alunoController.telefone1}" size="15" />
 									<h:outputText value="Telefone 2:" />
@@ -110,14 +110,13 @@
 									<h:inputText value="#{alunoController.estado}" size="3" />
 									<h:outputText value="Pais:" />
 									<h:inputText value="#{alunoController.pais}" size="60" />
-									<h:commandButton action="#{alunoController.gravar}" value="Gravar" />
-									<h:commandButton action="consultarAlunos" value="Alunos Cadastrados" />
+									<h:commandButton action="#{alunoController.gravar}"
+										value="Gravar" />
+									<h:commandButton action="consultarAlunos"
+										value="Alunos Cadastrados" />
 
 
-								</h:panelGrid> <br />
-
-
-								</td>
+								</h:panelGrid></td>
 								<td><img
 									src="<%=request.getContextPath()%>/images/spacer.gif" width="1"
 									height="377" border="0" alt="" /></td>
@@ -133,10 +132,14 @@
 						</td>
 					</tr>
 				</table>
-				</h:form> <map name="m_index_r2_c1" id="m_index_r2_c1">
-					<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
-					<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp"
-						alt="" />
-				</map> </f:view>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+
+</f:view>
+<map name="m_index_r2_c1" id="m_index_r2_c1">
+	<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
+	<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp" alt="" />
 </body>
 </html>

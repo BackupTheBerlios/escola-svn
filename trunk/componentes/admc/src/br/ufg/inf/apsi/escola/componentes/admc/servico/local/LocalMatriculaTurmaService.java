@@ -40,8 +40,8 @@ public class LocalMatriculaTurmaService implements MatriculaTurmaService {
 	/* (non-Javadoc)
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.servico.MatriculaTurmaService#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma)
 	 */
-	public void gravar(MatriculaTurma matriculaTurma) throws Exception {
-		this.matriculaTurma.gravar(matriculaTurma);
+	public void gravar(MatriculaTurma matricula) throws Exception {
+		this.matriculaTurma.gravar(matricula);
 
 	}
 

@@ -29,7 +29,7 @@ public class AlunoRepositorioImpl extends JpaDaoSupport implements AlunoReposito
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepositorio#consultar(long)
 	 */
 	public Aluno consultar(long id) throws Exception {
-		Aluno aluno = (Aluno) getJpaTemplate().find(Aluno.class, Long.valueOf(id));
+		Aluno aluno = getJpaTemplate().find(Aluno.class, Long.valueOf(id));
         
         if(aluno==null) {
             throw new Exception("Nenhum aluno encontrado!");
@@ -65,7 +65,11 @@ public class AlunoRepositorioImpl extends JpaDaoSupport implements AlunoReposito
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepositorio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno)
 	 */
 	public void gravar(Aluno aluno) throws Exception {
-		getJpaTemplate().persist(aluno);
+		if (aluno.getId() != -1) {
+			getJpaTemplate().merge(aluno);
+		} else {
+			getJpaTemplate().persist(aluno);
+		}
 
 
 	}

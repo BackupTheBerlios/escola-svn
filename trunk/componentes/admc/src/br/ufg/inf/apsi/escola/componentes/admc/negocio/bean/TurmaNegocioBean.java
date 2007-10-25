@@ -31,7 +31,7 @@ public class TurmaNegocioBean implements TurmaNegocio {
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio#consultar()
 	 */
 
-	public List consultar() throws Exception {
+	public List<Turma> consultar() throws Exception {
 		return this.turmaRepositorio.consultar();
 	}
 

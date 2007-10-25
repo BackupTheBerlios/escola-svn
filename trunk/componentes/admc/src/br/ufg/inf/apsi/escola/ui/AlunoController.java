@@ -2,28 +2,17 @@ package br.ufg.inf.apsi.escola.ui;
 
 import static br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.util.Util.formataData;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.AlunoService;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
-import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaServiceImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.BairroRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CidadeRepositoryImpl;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CriaPersistenciaGeral;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.DocumentoRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EmailRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EnderecoRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EstadoRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.LogradouroRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
 public class AlunoController {
@@ -49,6 +38,7 @@ public class AlunoController {
 	private String cidade;
 	private String estado;
 	private String pais;
+	private Long id;
 
 	private DataModel model;
 	private CriaPersistenciaGeral cpg = null;
@@ -58,7 +48,7 @@ public class AlunoController {
 	public AlunoController() {
 		localServiceFactory = new LocalServiceFactory();
 		alunoService = localServiceFactory.obterAlunoService();
-        ps = localServiceFactory.obterPessoaService();
+		ps = localServiceFactory.obterPessoaService();
 	}
 
 	public String novo() {
@@ -84,10 +74,18 @@ public class AlunoController {
 		return "novoAluno";
 	}
 
-	public String gravar() {
+	public String gravar() throws Exception {
+		Long p = null;
 		try {
-			pr = ps.getPessoaRepository();
-			Pessoa p = pr.consultaPessoaDocumento(getCpf());
+
+			p = ps.consultaPessoaDocumento(getCpf());
+
+		} catch (EscolaException ee) {
+			FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(ee.getMessage()));
+			p = null;
+		}
+		try {
+
 			if (p == null) {
 				ps.cadastraPessoa(getNome(), getSexo(),
 						formataData(getDataNascimento()), "", "", "",
@@ -99,51 +97,47 @@ public class AlunoController {
 						formataData(""), "", getRg(),
 						formataData(getDataEmissao()), getOrgaoExpedidor());
 
-				p = pr.consultaPessoaDocumento(getCpf());
-				alunoService.gravar(new Aluno(p.getId(), getMatricula(), null));
+				p = ps.consultaPessoaDocumento(getCpf());
+
+			}
+			if (getId() != -1) {
+				alunoService
+						.gravar(new Aluno(getId(), p, getMatricula(), null));
 			} else {
-				alunoService.gravar(new Aluno(p.getId(), getMatricula(), null));
+				alunoService.gravar(new Aluno(p, getMatricula(), null));
 			}
 
-		} catch (EscolaException ee) {
-			ee.getMessage();
+			limpar();
+
 		} catch (Exception e) {
-			e.getMessage();
+			FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(e.getMessage()));
 		}
 
 		return null;
 
 	}
 
-	public String editar() {
+	public String editar() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
 		try {
+
 			setMatricula(aluno.getNumeroMatricula());
-			pr = ps.getPessoaRepository();
-			Pessoa p = pr.consultarPessoaId(aluno.getPessoa());
-			
-			setNome(p.getNome());
+			setNome(ps.consultaPessoaId(aluno.getPessoa()));
+
 			/**
-			 * Nao foi disponibilizado em PessoaRepository um metodo q 
-			 * permite consultar PessoaFisica, data nascimento e um 
-			 * atributo de pessoa fisica.
+			 * Nao foi disponibilizado em PessoaRepository um metodo q permite
+			 * consultar PessoaFisica, data nascimento e um atributo de pessoa
+			 * fisica.
 			 */
-			setDataNascimento("");
-			setTelefone1(new String());
-			setTelefone2(new String());
-			setCpf(new String());
-			setRg(new String());
-			setDataEmissao(new String());
-			setOrgaoExpedidor(new String());
-			setEmail(new String());
-			setEndereco(new String());
-			setNumero(new String());
-			setComplemento(new String());
-			setCep(new String());
-			setBairro(new String());
-			setCidade(new String());
-			setEstado(new String());
-			setPais(new String());
+			/*
+			 * setDataNascimento(""); setTelefone1(new String());
+			 * setTelefone2(new String()); setCpf(new String()); setRg(new
+			 * String()); setDataEmissao(new String()); setOrgaoExpedidor(new
+			 * String()); setEmail(new String()); setEndereco(new String());
+			 * setNumero(new String()); setComplemento(new String()); setCep(new
+			 * String()); setBairro(new String()); setCidade(new String());
+			 * setEstado(new String()); setPais(new String());
+			 */
 			return "editar";
 		} catch (Exception e) {
 			return null;
@@ -152,11 +146,11 @@ public class AlunoController {
 	}
 
 	public DataModel getTodos() throws Exception {
-		try{
-		
-		model = new ListDataModel(alunoService.consultar());
-		
-		}catch(Exception e){
+		try {
+
+			model = new ListDataModel(alunoService.consultar());
+
+		} catch (Exception e) {
 			e.getMessage();
 		}
 		return model;
@@ -165,6 +159,28 @@ public class AlunoController {
 	public Aluno getAlunoFromEditOrDelete() {
 		Aluno aluno = (Aluno) model.getRowData();
 		return aluno;
+	}
+
+	public void limpar() {
+		setMatricula(new String());
+		setNome(new String());
+		setDataNascimento(new String());
+		setTelefone1(new String());
+		setTelefone2(new String());
+		setCpf(new String());
+		setRg(new String());
+		setDataEmissao(new String());
+		setOrgaoExpedidor(new String());
+		setEmail(new String());
+		setEndereco(new String());
+		setNumero(new String());
+		setComplemento(new String());
+		setCep(new String());
+		setBairro(new String());
+		setCidade(new String());
+		setEstado(new String());
+		setPais(new String());
+
 	}
 
 	public String getMatricula() {
@@ -325,6 +341,14 @@ public class AlunoController {
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 }

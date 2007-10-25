@@ -14,7 +14,7 @@
 
 
  <tr>
-		<td class="bordamenu"><a href="modeloAvaliacao.xhtml"></f:verbatim> <h:commandLink value="Modelo Avaliacao" action="#{disciplinaController.novo}"/> <f:verbatim> </td>
+		<td class="bordamenu"><a href="modeloAvaliacao.xhtml"></f:verbatim> <h:commandLink value="Modelo Avaliacao" action="#{disciplinaController.novo}"/> <f:verbatim></td>
 	</tr>
 	<tr>
 		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Usuario" action="#{usuarioController.novo}"/> <f:verbatim> </td>

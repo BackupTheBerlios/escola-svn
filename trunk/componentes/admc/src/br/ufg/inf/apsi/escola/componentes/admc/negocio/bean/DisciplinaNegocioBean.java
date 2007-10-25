@@ -19,6 +19,7 @@ public class DisciplinaNegocioBean implements DisciplinaNegocio {
 	
 	public DisciplinaNegocioBean(DisciplinaRepositorio disciplinaRepositorio){
 		this.disciplinaRepositorio = disciplinaRepositorio;
+		
 	}
 	
 	
@@ -45,6 +46,7 @@ public class DisciplinaNegocioBean implements DisciplinaNegocio {
 	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DisciplinaNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina)
 	 */
 	public void gravar(Disciplina disciplina) throws Exception {
+	
 		this.disciplinaRepositorio.gravar(disciplina);
 
 	}

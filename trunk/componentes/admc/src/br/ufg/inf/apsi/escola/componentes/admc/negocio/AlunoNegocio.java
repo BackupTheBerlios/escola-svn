@@ -3,7 +3,6 @@ package br.ufg.inf.apsi.escola.componentes.admc.negocio;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
 
 public interface AlunoNegocio {
  

@@ -1,9 +1,9 @@
 package br.ufg.inf.apsi.escola.componentes.admc.servico;
 
+import java.util.List;
+
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
-
-import java.util.List;
 
 public interface CursoService {
 
