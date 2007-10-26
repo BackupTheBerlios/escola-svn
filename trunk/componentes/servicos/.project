@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ServiçosEscola</name>
+	<name>servicos</name>
 	<comment></comment>
 	<projects>
+		<project>ServiçosEscola</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
