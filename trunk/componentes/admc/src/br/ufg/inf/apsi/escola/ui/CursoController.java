@@ -62,13 +62,14 @@ public class CursoController {
 		this.nome = nome;
 	}
 
-	public String novo(){
+	public String novo() {
+		setId(-1);
 		setCodigo(new String());
 		setNome(new String());
 		setCargaHoraria(new Integer(0));
 		return "novoCurso";
 	}
-	
+
 	public String gravar() {
 		Curso curso = null;
 
@@ -76,7 +77,8 @@ public class CursoController {
 			curso = new Curso(getId(), getCodigo(), getNome(),
 					getCargaHoraria());
 		} else {
-			curso = new Curso(getCodigo(), getNome(), getCargaHoraria());
+			curso = new Curso(getId(), getCodigo(), getNome(),
+					getCargaHoraria());
 		}
 
 		try {

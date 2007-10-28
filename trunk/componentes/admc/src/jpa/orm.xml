@@ -78,7 +78,7 @@
 				<join-column name="docente_id"
 					referenced-column-name="id" />
 			</many-to-one>
-			
+
 			<one-to-many name="preMatriculaDisciplina"
 				mapped-by="turma" />
 
@@ -111,8 +111,7 @@
 				<column name="c_h" />
 			</basic>
 			<many-to-one name="curso">
-				<join-column name="CURSO_ID"
-					referenced-column-name="id" />
+			
 			</many-to-one>
 		</attributes>
 	</entity>
@@ -154,13 +153,13 @@
 			<basic name="cargaHoraria">
 				<column name="CARGAHORARIA" />
 			</basic>
-			
+
 			<one-to-many name="disciplinas"
-				target-entity="br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina" fetch="LAZY"
-				mapped-by="disciplina">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina"
+				fetch="LAZY" >
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-all />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
@@ -174,15 +173,16 @@
 			</id>
 
 			<basic name="numeroMatricula">
-				<column name="MATRICULA" length="8" nullable="false" unique="true"/>
-				
+				<column name="MATRICULA" length="8" nullable="false"
+					unique="true" />
+
 			</basic>
 			<basic name="pessoa">
 				<column name="pessoa_id" nullable="false" />
 			</basic>
 			<many-to-one name="curso">
-				<join-column name="CURSO_ID"
-					referenced-column-name="id" nullable="true"/>
+				<join-column name="CURSO_ID" referenced-column-name="id"
+					nullable="true" />
 			</many-to-one>
 
 		</attributes>
@@ -212,7 +212,9 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" name="Bairro">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro"
+		name="Bairro">
 		<table name="BAIRRO" />
 		<attributes>
 			<id name="id">
@@ -223,23 +225,26 @@
 				<column name="BAIRRO_NOME" length="50" nullable="false" />
 			</basic>
 			<many-to-one name="cidade"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" fetch="EAGER">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade"
+				fetch="EAGER">
 				<join-column name="CIDADE_ID" nullable="false" />
 				<cascade>
-					<cascade-merge/>
+					<cascade-merge />
 				</cascade>
 			</many-to-one>
 			<one-to-many name="listaEnderecos"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY"
-				mapped-by="bairro">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco"
+				fetch="LAZY" mapped-by="bairro">
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-remove />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" name="Cidade">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade"
+		name="Cidade">
 		<table name="CIDADE" />
 		<attributes>
 			<id name="id">
@@ -250,23 +255,26 @@
 				<column name="CIDADE_NOME" length="50" nullable="false" />
 			</basic>
 			<many-to-one name="estado"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" fetch="EAGER">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado"
+				fetch="EAGER">
 				<join-column name="ESTADO_ID" nullable="false" />
 				<cascade>
 					<cascade-merge />
 				</cascade>
 			</many-to-one>
 			<one-to-many name="listaBairros"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" fetch="LAZY"
-				mapped-by="cidade">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro"
+				fetch="LAZY" mapped-by="cidade">
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-remove />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento" name="Documento">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento"
+		name="Documento">
 		<table name="DOCUMENTO" />
 		<inheritance strategy="SINGLE_TABLE" />
 		<discriminator-column name="DOC_TIPO"
@@ -282,30 +290,34 @@
 			</basic>
 			<basic name="tipo">
 				<column name="DOC_TIPO" length="20" nullable="false"
-				insertable="false" updatable="false"/>
+					insertable="false" updatable="false" />
 			</basic>
 			<!-- Relacionamento com a classe Pessoa -->
 			<many-to-one name="titular"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="EAGER">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa"
+				fetch="EAGER">
 				<join-column name="PESSOA_ID" nullable="false" />
 				<cascade>
 					<cascade-merge />
 				</cascade>
-			</many-to-one> 
+			</many-to-one>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ" name="CNPJ">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CNPJ"
+		name="CNPJ">
 		<discriminator-value>CNPJ</discriminator-value>
 		<attributes>
 			<basic name="tipo">
 				<column name="DOC_TIPO" length="20" nullable="false"
-					 insertable="false" updatable="false" />
+					insertable="false" updatable="false" />
 			</basic>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF" name="CPF">
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.CPF"
+		name="CPF">
 		<discriminator-value>CPF</discriminator-value>
 		<attributes>
 			<basic name="tipo">
@@ -314,8 +326,9 @@
 			</basic>
 		</attributes>
 	</entity>
-	
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG" name="RG">
+
+	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.RG"
+		name="RG">
 		<discriminator-value>RG</discriminator-value>
 		<attributes>
 			<basic name="tipo">
@@ -332,7 +345,9 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email" name="Email">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email"
+		name="Email">
 		<table name="EMAIL" />
 		<attributes>
 			<id name="id">
@@ -343,16 +358,19 @@
 				<column name="EMAIL_DESC" length="30" nullable="false" />
 			</basic>
 			<many-to-one name="titularEmail"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="EAGER">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa"
+				fetch="EAGER">
 				<join-column name="PESSOA_ID" nullable="false" />
 				<cascade>
-					<cascade-merge/>
-				</cascade> 
+					<cascade-merge />
+				</cascade>
 			</many-to-one>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" name="Endereco">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco"
+		name="Endereco">
 		<table name="ENDERECO" />
 		<attributes>
 			<id name="id">
@@ -370,26 +388,28 @@
 				<column name="END_CEP" length="8" nullable="false" />
 			</basic>
 			<basic name="tipo">
-				<column name="END_TIPO" length="20" nullable="false"/>
+				<column name="END_TIPO" length="20" nullable="false" />
 				<enumerated>STRING</enumerated>
 			</basic>
-			<many-to-one name="logradouro" 
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro" fetch="EAGER">
+			<many-to-one name="logradouro"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro"
+				fetch="EAGER">
 				<join-column name="LOG_ID" nullable="false" />
 				<cascade>
 					<cascade-merge />
 				</cascade>
 			</many-to-one>
-			<many-to-one name="bairro" 
-			 	target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro" fetch="EAGER">
+			<many-to-one name="bairro"
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Bairro"
+				fetch="EAGER">
 				<join-column name="BAIRRO_ID" nullable="false" />
 				<cascade>
 					<cascade-merge />
 				</cascade>
 			</many-to-one>
 			<many-to-many name="pessoas"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="LAZY"
-				mapped-by="listaEnderecos">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa"
+				fetch="LAZY" mapped-by="listaEnderecos">
 				<cascade>
 					<cascade-refresh />
 				</cascade>
@@ -397,7 +417,9 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" name="Estado">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado"
+		name="Estado">
 		<table name="ESTADO" />
 		<attributes>
 			<id name="id">
@@ -411,23 +433,25 @@
 				<column name="EST_NOME" unique="true" length="20" />
 			</basic>
 			<many-to-one name="pais"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais" fetch="EAGER">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais"
+				fetch="EAGER">
 				<join-column name="PAIS_ID" nullable="false" />
 				<cascade>
-					<cascade-merge/>
+					<cascade-merge />
 				</cascade>
 			</many-to-one>
 			<one-to-many name="listaCidades"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade" fetch="LAZY"
-				mapped-by="estado">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Cidade"
+				fetch="LAZY" mapped-by="estado">
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-remove />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro"
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Logradouro"
 		name="Logradouro">
 		<table name="LOGRADOURO" />
 		<attributes>
@@ -442,16 +466,18 @@
 				<enumerated>STRING</enumerated>
 			</basic>
 			<one-to-many name="listaEnderecos"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY"
-				mapped-by="logradouro">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco"
+				fetch="LAZY" mapped-by="logradouro">
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-remove />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais" name="Pais">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pais"
+		name="Pais">
 		<table name="PAIS" />
 		<attributes>
 			<id name="id">
@@ -459,23 +485,27 @@
 				<generated-value strategy="AUTO" />
 			</id>
 			<basic name="nome">
-				<column name="PAIS_NOME" unique="true" length="20" nullable="false" />
+				<column name="PAIS_NOME" unique="true" length="20"
+					nullable="false" />
 			</basic>
 			<!-- Relacionamento com a classe Estado -->
 			<one-to-many name="listaEstados"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado" fetch="LAZY"
-				mapped-by="pais">  
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Estado"
+				fetch="LAZY" mapped-by="pais">
 				<cascade>
-					<cascade-remove/>
-				</cascade>   
+					<cascade-remove />
+				</cascade>
 			</one-to-many>
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" name="Pessoa">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa"
+		name="Pessoa">
 		<table name="PESSOA" />
-		<inheritance strategy="SINGLE_TABLE"/>
-		<discriminator-column name="PESSOA_TIPO" discriminator-type="STRING"/>
+		<inheritance strategy="SINGLE_TABLE" />
+		<discriminator-column name="PESSOA_TIPO"
+			discriminator-type="STRING" />
 		<attributes>
 			<id name="id">
 				<column name="PESSOA_ID" />
@@ -485,28 +515,29 @@
 				<column name="PESSOA_NOME" length="30" nullable="false" />
 			</basic>
 			<basic name="tipo">
-				<column name="PESSOA_TIPO" length="20" nullable="false" 
-				insertable="false" updatable="false"/>
+				<column name="PESSOA_TIPO" length="20" nullable="false"
+					insertable="false" updatable="false" />
 			</basic>
 			<!-- Relacionamento com a classe Email -->
 			<one-to-many name="listaEmails"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email" fetch="LAZY"
-				mapped-by="titularEmail">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Email"
+				fetch="LAZY" mapped-by="titularEmail">
 				<cascade>
-					<cascade-remove/>
+					<cascade-remove />
 				</cascade>
 			</one-to-many>
 			<!-- relacionamento com a classe Documento-->
 			<one-to-many name="listaDocumentos"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento" fetch="LAZY"
-				mapped-by="titular">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Documento"
+				fetch="LAZY" mapped-by="titular">
 				<cascade>
-					<cascade-remove/>
+					<cascade-remove />
 				</cascade>
 			</one-to-many>
 			<!-- Relacionamento com a classe Endereço -->
 			<many-to-many name="listaEnderecos"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco" fetch="LAZY">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco"
+				fetch="LAZY">
 				<join-table name="ENDERECOS_PESSOA">
 					<join-column name="PESSOA_ID" />
 					<inverse-join-column name="END_ID" />
@@ -517,7 +548,8 @@
 			</many-to-many>
 			<!-- Relacionamento com a classe Telefone -->
 			<many-to-many name="listaTelefones"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone" fetch="LAZY">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone"
+				fetch="LAZY">
 				<join-table name="TELEFONES_PESSOA">
 					<join-column name="PESSOA_ID" />
 					<inverse-join-column name="TELEFONE_ID" />
@@ -529,7 +561,8 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica"
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaFisica"
 		name="PessoaFisica">
 		<discriminator-value>Pessoa Fisica</discriminator-value>
 		<attributes>
@@ -553,13 +586,14 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica"
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.PessoaJuridica"
 		name="PessoaJuridica">
 		<discriminator-value>Pessoa Juridica</discriminator-value>
 		<attributes>
 			<basic name="tipo">
-				<column name="PESSOA_TIPO" length="20" nullable="false" 
-				insertable="false" updatable="false"/>
+				<column name="PESSOA_TIPO" length="20" nullable="false"
+					insertable="false" updatable="false" />
 			</basic>
 			<basic name="nomeFantasia">
 				<column name="PESSOA_NOME_FANTASIA" length="30" />
@@ -567,7 +601,9 @@
 		</attributes>
 	</entity>
 
-	<entity class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone" name="Telefone">
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone"
+		name="Telefone">
 		<table name="TELEFONE" />
 		<attributes>
 			<id name="id">
@@ -585,8 +621,8 @@
 				<enumerated>STRING</enumerated>
 			</basic>
 			<many-to-many name="pessoas"
-				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa" fetch="LAZY"
-				mapped-by="listaTelefones">
+				target-entity="br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa"
+				fetch="LAZY" mapped-by="listaTelefones">
 				<cascade>
 					<cascade-refresh />
 				</cascade>

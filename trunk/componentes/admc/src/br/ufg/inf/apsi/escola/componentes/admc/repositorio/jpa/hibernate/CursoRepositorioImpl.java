@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.repositorio.CursoRepositorio;
 
 /**
@@ -47,24 +46,11 @@ public class CursoRepositorioImpl extends JpaDaoSupport implements
 	}
 
 	public void gravar(Curso curso) throws Exception {
-		if (curso.getId() != -1) {
+		if (curso.getId() != 0 || curso.getId() != -1) {
 			getJpaTemplate().merge(curso);
 		} else {
 			getJpaTemplate().persist(curso);
 		}
-	}
-
-	public List<Disciplina> consultarDisciplinaDeCurso(long idCurso)
-			throws Exception {
-		List<Disciplina> list = getJpaTemplate().find(
-				"from Disciplina d where d.id = :" + idCurso);
-
-		if (list.size() == 0) {
-			throw new Exception("Nenhuma disciplina para o Curso informado!");
-		}
-
-		return list;
-
 	}
 
 }

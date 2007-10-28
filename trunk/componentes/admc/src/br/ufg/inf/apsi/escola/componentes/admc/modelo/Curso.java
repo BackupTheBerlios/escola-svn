@@ -55,21 +55,6 @@ public class Curso implements Serializable {
 	 * @param nome
 	 *            String contendo o nome do Curso
 	 */
-	public Curso(String codigo, String nome, Integer cargaHoraria) {
-		this.codigo = codigo;
-		this.nome = nome;
-		this.disciplinas = new ArrayList<Disciplina>();
-	}
-
-	/**
-	 * Cria inst�ncia de Curso
-	 * <p>
-	 * 
-	 * @param codigo
-	 *            String contendo o c�digo do Curso
-	 * @param nome
-	 *            String contendo o nome do Curso
-	 */
 	public Curso(long id, String codigo, String nome, Integer cargaHoraria) {
 		this.id = id;
 		this.codigo = codigo;

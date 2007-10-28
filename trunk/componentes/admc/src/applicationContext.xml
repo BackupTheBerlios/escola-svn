@@ -182,8 +182,6 @@
 		<constructor-arg ref="alunoNegocio" />
 	</bean>
 
-
-
 	<!-- Curso  Repositorio-->
 	<bean id="cursoRepositorio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.CursoRepositorioImpl">
