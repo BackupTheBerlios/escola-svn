@@ -77,9 +77,8 @@ public class AlunoRepositorioImpl extends JpaDaoSupport implements AlunoReposito
 
 
 	public Aluno consultar(String numeroMatricula) throws Exception {
-		    Map<String, String> params = new HashMap<String, String>();
-	        params.put("numeroMatricula",numeroMatricula);
-	        return (Aluno) getJpaTemplate().findByNamedParams("from Aluno where numeroMatricula = :numeroMatricula", params).get(0);
+		    
+	        return (Aluno) getJpaTemplate().find("select a from Aluno a where a.getNumeroMatricula = ?1", numeroMatricula);
 
 	}
 

@@ -2,8 +2,10 @@ package br.ufg.inf.apsi.escola.ui;
 
 import static br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.util.Util.formataData;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
@@ -12,7 +14,6 @@ import br.ufg.inf.apsi.escola.componentes.admc.servico.AlunoService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CriaPersistenciaGeral;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
 public class AlunoController {
@@ -23,8 +24,10 @@ public class AlunoController {
 	private String nome;
 	private String dataNascimento;
 	private String sexo;
-	private String telefone1;
-	private String telefone2;
+	private Long telefone1;
+	private Long telefone2;
+	private Short dddf1;
+	private Short dddf2;
 	private String cpf;
 	private String rg;
 	private String dataEmissao;
@@ -33,7 +36,7 @@ public class AlunoController {
 	private String endereco;
 	private String numero;
 	private String complemento;
-	private String cep;
+	private Integer cep;
 	private String bairro;
 	private String cidade;
 	private String estado;
@@ -41,7 +44,7 @@ public class AlunoController {
 	private Long id;
 
 	private DataModel model;
-	private CriaPersistenciaGeral cpg = null;
+
 	PessoaService ps = null;
 	PessoaRepository pr = null;
 
@@ -70,18 +73,20 @@ public class AlunoController {
 		setCidade(new String());
 		setEstado(new String());
 		setPais(new String());
+		setDddf1(new String());
+		setDddf2(new String());
 
 		return "novoAluno";
 	}
 
-	public String gravar() throws Exception {
+	public String gravar() {
 		Long p = null;
 		try {
 
 			p = ps.consultaPessoaDocumento(getCpf());
 
 		} catch (EscolaException ee) {
-			FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(ee.getMessage()));
+			//FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(ee.getMessage()));
 			p = null;
 		}
 		try {
@@ -89,18 +94,17 @@ public class AlunoController {
 			if (p == null) {
 				ps.cadastraPessoa(getNome(), getSexo(),
 						formataData(getDataNascimento()), "", "", "",
-						"RESIDENCIAL", "", getEndereco(), getNumero(),
-						getComplemento(), Integer.getInteger(getCep()),
+						"RESIDENCIAL", "RUA", getEndereco(), getNumero(),
+						getComplemento(), this.cep,
 						getBairro(), getCidade(), getEstado(), getPais(),
-						getEmail(), Short.parseShort(getTelefone1()), Long
-								.parseLong(getTelefone2()), "", getCpf(),
-						formataData(""), "", getRg(),
+						getEmail(),this.dddf1,this.telefone1,"FIXO", getCpf(),
+						null,null, getRg(),
 						formataData(getDataEmissao()), getOrgaoExpedidor());
 
 				p = ps.consultaPessoaDocumento(getCpf());
 
 			}
-			if (getId() != -1) {
+			if (getId() >0) {
 				alunoService
 						.gravar(new Aluno(getId(), p, getMatricula(), null));
 			} else {
@@ -109,8 +113,10 @@ public class AlunoController {
 
 			limpar();
 
-		} catch (Exception e) {
-			FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(e.getMessage()));
+		} catch (EscolaException ee) {
+			ee.getMessage();
+		} catch(Exception e){
+			e.getMessage();
 		}
 
 		return null;
@@ -119,26 +125,38 @@ public class AlunoController {
 
 	public String editar() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
+		
 		try {
 
 			setMatricula(aluno.getNumeroMatricula());
+			
 			setNome(ps.consultaPessoaId(aluno.getPessoa()));
-
 			/**
-			 * Nao foi disponibilizado em PessoaRepository um metodo q permite
-			 * consultar PessoaFisica, data nascimento e um atributo de pessoa
-			 * fisica.
+			 * 
+			 * Não existe nenhum metodo em PessoaService q retorna os
+			 * dados de uma pessoa Fisica ou Juridica somente nome
+			 * 
 			 */
-			/*
-			 * setDataNascimento(""); setTelefone1(new String());
-			 * setTelefone2(new String()); setCpf(new String()); setRg(new
-			 * String()); setDataEmissao(new String()); setOrgaoExpedidor(new
-			 * String()); setEmail(new String()); setEndereco(new String());
-			 * setNumero(new String()); setComplemento(new String()); setCep(new
-			 * String()); setBairro(new String()); setCidade(new String());
-			 * setEstado(new String()); setPais(new String());
-			 */
-			return "editar";
+			setDataNascimento(new String());
+			setTelefone1(new String());
+			setTelefone2(new String());
+			setCpf(new String());
+			setRg(new String());
+			setDataEmissao(new String());
+			setOrgaoExpedidor(new String());
+			setEmail(new String());
+			setEndereco(new String());
+			setNumero(new String());
+			setComplemento(new String());
+			setCep(new String());
+			setBairro(new String());
+			setCidade(new String());
+			setEstado(new String());
+			setPais(new String());
+			setDddf1(new String());
+			setDddf2(new String());
+			
+			return "editarAluno";
 		} catch (Exception e) {
 			return null;
 		}
@@ -146,10 +164,19 @@ public class AlunoController {
 	}
 
 	public DataModel getTodos() throws Exception {
+		List<String[]> lista= new ArrayList<String[]>();
+		String dados[]={"",""};
+		
 		try {
-
-			model = new ListDataModel(alunoService.consultar());
-
+				
+			for (Aluno a: alunoService.consultar()) {
+			   	dados[0]=String.valueOf(a.getId());
+			   	dados[1]=ps.consultaPessoaId(a.getPessoa());
+			    lista.add(dados);  	
+			}
+			
+			model = new ListDataModel(lista);
+	
 		} catch (Exception e) {
 			e.getMessage();
 		}
@@ -157,7 +184,15 @@ public class AlunoController {
 	}
 
 	public Aluno getAlunoFromEditOrDelete() {
-		Aluno aluno = (Aluno) model.getRowData();
+		Aluno aluno=null;
+		try{
+		 String[] dados = (String[]) model.getRowData();
+		 aluno = alunoService.consultar(Long.parseLong(dados[0]));
+		}catch(Exception e){
+			e.printStackTrace();
+			
+		}
+	    
 		return aluno;
 	}
 
@@ -180,7 +215,8 @@ public class AlunoController {
 		setCidade(new String());
 		setEstado(new String());
 		setPais(new String());
-
+		setDddf1(new String());
+		setDddf2(new String());
 	}
 
 	public String getMatricula() {
@@ -208,19 +244,29 @@ public class AlunoController {
 	}
 
 	public String getTelefone1() {
-		return telefone1;
+		return ((telefone1==null)||(telefone1.equals(0)))?"":String.valueOf(telefone1);
 	}
 
 	public void setTelefone1(String telefone1) {
-		this.telefone1 = telefone1;
+		try{
+			this.telefone1 = Long.parseLong(telefone1);
+		}catch (NumberFormatException nf) {
+		    
+		}
 	}
 
 	public String getTelefone2() {
-		return telefone2;
+		
+		return ((telefone2==null)||(telefone2.equals(0)))?"":String.valueOf(telefone2);
+	
 	}
 
 	public void setTelefone2(String telefone2) {
-		this.telefone2 = telefone2;
+	  try{	
+		this.telefone2 = Long.parseLong(telefone2);
+		}catch (NumberFormatException nf) {
+		
+	    }
 	}
 
 	public String getCpf() {
@@ -288,11 +334,15 @@ public class AlunoController {
 	}
 
 	public String getCep() {
-		return cep;
+		return ((cep==null)||(cep.equals(0)))?"":String.valueOf(cep);
 	}
 
 	public void setCep(String cep) {
-		this.cep = cep;
+		try{
+		   this.cep =Integer.parseInt(cep);
+		}catch (NumberFormatException nf) {
+			
+		}
 	}
 
 	public String getBairro() {
@@ -327,14 +377,6 @@ public class AlunoController {
 		this.pais = pais;
 	}
 
-	public CriaPersistenciaGeral getCpg() {
-		return cpg;
-	}
-
-	public void setCpg(CriaPersistenciaGeral cpg) {
-		this.cpg = cpg;
-	}
-
 	public String getSexo() {
 		return sexo;
 	}
@@ -351,4 +393,32 @@ public class AlunoController {
 		this.id = id;
 	}
 
+	
+	
+	public String getDddf1() {
+		return ((dddf1==null)||(dddf1.equals(0)))?"":String.valueOf(dddf1);
+	}
+
+	public void setDddf1(String dddf1) {
+	  try{
+		  this.dddf1=Short.parseShort(dddf1);
+	  }catch(NumberFormatException ne){
+		  
+	  }
+	}
+
+	public String getDddf2() {
+		return ((dddf2==null)||(dddf2.equals(0)))?"":String.valueOf(dddf2);
+	}
+
+	public void setDddf2(String dddf2) {
+		try{
+		this.dddf2 =Short.parseShort(dddf2);
+		}catch(NumberFormatException ne){
+			
+		}
+	}
+
+	
+	
 }

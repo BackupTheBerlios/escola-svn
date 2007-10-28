@@ -2,42 +2,63 @@
 <!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
                               "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
 <faces-config>
- <navigation-rule>
-  <from-view-id>*</from-view-id>
-  <navigation-case>
-   <from-outcome>novoDisciplina</from-outcome>
-   <to-view-id>/secretario/cadastroDisciplina.jsp</to-view-id>
-  </navigation-case>
-  <navigation-case>
-   <from-outcome>novoCurso</from-outcome>
-   <to-view-id>/secretario/cadastrarCurso.jsp</to-view-id>
-  </navigation-case>
-   <navigation-case>
-   <from-outcome>novoAluno</from-outcome>
-   <to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
-  </navigation-case>
- </navigation-rule>
- 
- <navigation-rule>
- <from-view-id>/secretario/cadastroAluno.jsp</from-view-id>
- <navigation-case>
-   <from-outcome>consultarAlunos</from-outcome>
-   <to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
-  </navigation-case>
- </navigation-rule>
- <navigation-rule>
- <from-view-id>/secretario/mostrarAlunos.jsp</from-view-id>
- <navigation-case>
-   <from-outcome>novoAluno</from-outcome>
-   <to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
-  </navigation-case>
- </navigation-rule>
- 
- <application>
-  <variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
-  <locale-config>
-   <default-locale>pt</default-locale>
-   <supported-locale>pt_BR</supported-locale>
-  </locale-config>
- </application>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>novoDisciplina</from-outcome>
+			<to-view-id>/secretario/cadastroDisciplina.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>novoCurso</from-outcome>
+			<to-view-id>/secretario/cadastrarCurso.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>novoAluno</from-outcome>
+			<to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/secretario/cadastroAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>consultarAlunos</from-outcome>
+			<to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/secretario/mostrarAlunos.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>novoAluno</from-outcome>
+			<to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editarAluno</from-outcome>
+			<to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<validator>
+
+    <validator-id>dataValidate</validator-id>
+
+    <validator-class>br.ufg.inf.apsi.escola.ui.utils.DataValidate</validator-class>
+
+  </validator>
+<validator>
+
+    <validator-id>cpfValidate</validator-id>
+
+    <validator-class>br.ufg.inf.apsi.escola.ui.utils.CPFValidate</validator-class>
+
+  </validator>	
+	
+	<application>
+		<variable-resolver>
+			org.springframework.web.jsf.DelegatingVariableResolver
+		</variable-resolver>
+		<locale-config>
+			<default-locale>pt</default-locale>
+			<supported-locale>pt_BR</supported-locale>
+		</locale-config>
+	</application>
 </faces-config>
