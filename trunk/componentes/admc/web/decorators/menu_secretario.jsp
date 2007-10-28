@@ -20,7 +20,7 @@
 		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Usuario" action="#{usuarioController.novo}"/> <f:verbatim> </td>
 	</tr>
 	<tr>
-		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Aluno" action="#{alunoController.novo}"/> <f:verbatim> </td>
+		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Aluno" action="consultarAlunos"/> <f:verbatim> </td>
 	</tr>
 	<tr>
 		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Docente" action="#{docenteController.novo}"/> <f:verbatim> </td>

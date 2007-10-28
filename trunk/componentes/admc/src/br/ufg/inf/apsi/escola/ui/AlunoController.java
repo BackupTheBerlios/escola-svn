@@ -3,7 +3,6 @@ package br.ufg.inf.apsi.escola.ui;
 import static br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.util.Util.formataData;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;

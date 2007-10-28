@@ -253,7 +253,7 @@
 	<!-- PreMatriculaDisciplina Negocio-->
 	<bean id="preMatriculaDisciplinaNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.PreMatriculaDisciplinaNegocioBean">
-		<constructor-arg ref="preMatriculaDisciplinaRepositorio" />
+		<constructor-arg ref="preMatriculaDisciplinaRepository" />
 	</bean>
 
 	<!-- PreMatriculaDisciplina Servico-->

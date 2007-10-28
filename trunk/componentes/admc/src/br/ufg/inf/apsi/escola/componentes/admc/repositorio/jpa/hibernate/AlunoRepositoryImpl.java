@@ -3,9 +3,7 @@
  */
 package br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 

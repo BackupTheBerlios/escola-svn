@@ -18,13 +18,14 @@
 		</navigation-case>
 	</navigation-rule>
 
-	<navigation-rule>
-		<from-view-id>/secretario/cadastroAluno.jsp</from-view-id>
+     <navigation-rule>
+		<from-view-id>/secretario/Principal.jsp</from-view-id>
 		<navigation-case>
 			<from-outcome>consultarAlunos</from-outcome>
 			<to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	
 	<navigation-rule>
 		<from-view-id>/secretario/mostrarAlunos.jsp</from-view-id>
 		<navigation-case>

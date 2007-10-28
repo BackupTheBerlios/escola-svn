@@ -3,14 +3,10 @@
  */
 package br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
+import org.springframework.orm.jpa.support.JpaDaoSupport;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma;
 import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaRepository;
-import org.springframework.orm.jpa.support.JpaDaoSupport;
 /**
  * @author ailton
  *

@@ -3,11 +3,9 @@ package br.ufg.inf.apsi.escola.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
-import javax.servlet.http.HttpServletRequest;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
@@ -185,11 +183,7 @@ public class DisciplinaController {
 		return disciplina;
 	}
 	
-	private HttpServletRequest getRequest() {
-		return (HttpServletRequest) FacesContext.getCurrentInstance()
-				.getExternalContext().getRequest();
-	}
-
+	
 	public long getCurso() {
 		return curso;
 	}

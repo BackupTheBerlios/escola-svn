@@ -141,10 +141,7 @@
 									<h:inputText value="#{alunoController.pais}" size="50" />
 									<h:commandButton action="#{alunoController.gravar}"
 										value="Gravar" />
-									<h:commandButton action="consultarAlunos"
-										value="Alunos Cadastrados" />
-
-
+									
 								</h:panelGrid></td>
 								<td><img
 									src="<%=request.getContextPath()%>/images/spacer.gif" width="1"

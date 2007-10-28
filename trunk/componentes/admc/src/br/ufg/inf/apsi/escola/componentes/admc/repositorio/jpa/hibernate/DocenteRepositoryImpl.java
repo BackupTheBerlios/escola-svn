@@ -5,9 +5,8 @@ package br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate;
 
 import java.util.List;
 
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 
 /**
  * @author ailton
