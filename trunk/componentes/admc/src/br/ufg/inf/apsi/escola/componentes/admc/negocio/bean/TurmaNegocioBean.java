@@ -25,43 +25,21 @@ public class TurmaNegocioBean implements TurmaNegocio {
 		this.turmaRepositorio = turmaRepositorio;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio#consultar()
-	 */
-
 	public List<Turma> consultar() throws Exception {
 		return this.turmaRepositorio.consultar();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio#consultar(java.lang.String)
-	 */
 	public Turma consultar(String codigoTurma) throws Exception {
 		return this.turmaRepositorio.consultar(codigoTurma);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio#excluir(java.lang.String)
-	 */
 	public void excluir(String codigoTurma) throws Exception {
 		this.turmaRepositorio.excluir(codigoTurma);
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma)
-	 */
 	public void gravar(Turma turma) throws Exception {
 		this.turmaRepositorio.gravar(turma);
-
 	}
 
 }

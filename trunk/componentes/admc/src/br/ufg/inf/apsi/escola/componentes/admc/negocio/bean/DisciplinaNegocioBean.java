@@ -11,42 +11,31 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepository;
 
 /**
  * @author ailton
- *
+ * 
  */
 public class DisciplinaNegocioBean implements DisciplinaNegocio {
 
 	private DisciplinaRepository disciplinaRepositorio = null;
-	
-	public DisciplinaNegocioBean(DisciplinaRepository disciplinaRepositorio){
+
+	public DisciplinaNegocioBean(DisciplinaRepository disciplinaRepositorio) {
 		this.disciplinaRepositorio = disciplinaRepositorio;
-		
+
 	}
-	
-	
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DisciplinaNegocio#consultar(long)
-	 */
+
 	public Disciplina consultar(long id) throws Exception {
-	   return this.disciplinaRepositorio.consultar(id);
+		return this.disciplinaRepositorio.consultar(id);
 	}
-	
-	public List<Disciplina> consultar() throws Exception{
+
+	public List<Disciplina> consultar() throws Exception {
 		return this.disciplinaRepositorio.consultar();
 	}
 
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DisciplinaNegocio#excluir(long)
-	 */
 	public void excluir(long id) throws Exception {
 		this.disciplinaRepositorio.excluir(id);
 
 	}
 
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DisciplinaNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina)
-	 */
 	public void gravar(Disciplina disciplina) throws Exception {
-	
 		this.disciplinaRepositorio.gravar(disciplina);
 
 	}

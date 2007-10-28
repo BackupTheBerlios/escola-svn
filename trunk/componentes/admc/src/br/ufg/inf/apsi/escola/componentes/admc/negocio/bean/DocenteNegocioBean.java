@@ -21,41 +21,21 @@ public class DocenteNegocioBean implements DocenteNegocio {
 		this.docenteRepositorio = docenteRepositorio;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio#consultar(long)
-	 */
 	public Docente consultar(long id) throws Exception {
 		return this.docenteRepositorio.consultar(id);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio#consultar()
-	 */
 	public List<Docente> consultar() throws Exception {
 		return this.docenteRepositorio.consultar();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio#excluir(long)
-	 */
 	public void excluir(long id) throws Exception {
 		this.docenteRepositorio.excluir(id);
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente)
-	 */
 	public void gravar(Docente docente) throws Exception {
-			
+
 		this.docenteRepositorio.gravar(docente);
 
 	}

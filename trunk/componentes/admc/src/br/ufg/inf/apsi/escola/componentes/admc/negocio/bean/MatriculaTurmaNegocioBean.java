@@ -11,44 +11,31 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaReposit
 
 /**
  * @author ailton
- *
+ * 
  */
 public class MatriculaTurmaNegocioBean implements MatriculaTurmaNegocio {
 
-	
 	private MatriculaTurmaRepository matriculaTurmaRepositorio = null;
-	
-	
-	public MatriculaTurmaNegocioBean(MatriculaTurmaRepository matriculaTurmaRepositorio){
+
+	public MatriculaTurmaNegocioBean(
+			MatriculaTurmaRepository matriculaTurmaRepositorio) {
 		this.matriculaTurmaRepositorio = matriculaTurmaRepositorio;
-		
+
 	}
-	
-	
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.MatriculaTurmaNegocio#consultar(java.lang.String)
-	 */
+
 	public MatriculaTurma consultar(String matriculaAluno) throws Exception {
 		return this.matriculaTurmaRepositorio.consultar(matriculaAluno);
 	}
 
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.MatriculaTurmaNegocio#excluir(java.lang.String)
-	 */
 	public void excluir(String matriculaAluno) throws Exception {
 		this.matriculaTurmaRepositorio.excluir(matriculaAluno);
 
 	}
 
-	/* (non-Javadoc)
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.negocio.MatriculaTurmaNegocio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma)
-	 */
 	public void gravar(MatriculaTurma matricula) throws Exception {
-		
 		this.matriculaTurmaRepositorio.gravar(matricula);
 
 	}
-
 
 	public List<MatriculaTurma> consultar() throws Exception {
 		return this.matriculaTurmaRepositorio.consultar();
