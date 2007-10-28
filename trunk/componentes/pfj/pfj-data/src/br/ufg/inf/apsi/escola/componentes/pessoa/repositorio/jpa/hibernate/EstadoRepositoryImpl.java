@@ -42,12 +42,12 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 		persistencia = new CriaPersistenciaGeral();
 	}
 	/**
-	 *@see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#consultar(String)
+	 *@see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#consultarNome(String)
 	 */
-	public Estado consultar(String nomeEstado) throws EstadoNaoEncontradoException {
+	public Estado consultarNome(String nomeEstado) throws EstadoNaoEncontradoException {
 		try {
-			query = persistencia.getEm().createQuery("from Estado est where est.nome=:nome");
-			query.setParameter("nome", nomeEstado);
+			query = persistencia.getEm().createQuery("from Estado est where est.nome=:nomeEstado");
+			query.setParameter("nomeEstado", nomeEstado);
 			return (Estado) query.getSingleResult();
 		}catch (NoResultException nre) {
 			throw new EstadoNaoEncontradoException();
@@ -58,6 +58,24 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 		}
 	}
 
+	/**
+	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#consultarSigla(java.lang.String)
+	 */
+	@Override
+	public Estado consultarSigla(String siglaEstado)
+			throws EstadoNaoEncontradoException {
+		try {
+			query = persistencia.getEm().createQuery("from Estado est where est.sigla=:siglaEstado");
+			query.setParameter("siglaEstado", siglaEstado);
+			return (Estado) query.getSingleResult();
+		}catch (NoResultException nre) {
+			throw new EstadoNaoEncontradoException();
+		} catch (EntityNotFoundException enfe) {
+			throw new EstadoNaoEncontradoException();
+		} catch (IllegalStateException ilee) {
+			throw new EstadoNaoEncontradoException();
+		}
+	}
 	/**
 	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.EstadoRepository#incluir(Estado)
 	 */
