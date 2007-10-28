@@ -84,7 +84,7 @@ public class CursoController {
 		try {
 			cursoService.gravar(curso);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return "";
 		}
@@ -108,7 +108,7 @@ public class CursoController {
 		try {
 			cursoService.excluir(getId());
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			e.printStackTrace();
 			return "";
 		}
@@ -122,7 +122,7 @@ public class CursoController {
 			model = new ListDataModel(listaCursoQuery);
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 		return model;
 	}
