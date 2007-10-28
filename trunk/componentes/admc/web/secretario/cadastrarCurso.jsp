@@ -66,48 +66,44 @@
 							</tr>
 							<tr>
 								<td width="598" height="377" align="center" valign="top"
-									class="bordamenu"><h:messages /> 
-									<h:panelGrid columns="2">
-										<h:outputText value="Código do Curso:" />
-										<h:inputText value="#{cursoController.codigo}" />
-										<h:outputText value="Nome do Curso:" />
-										<h:inputText value="#{cursoController.nome}"
-											style=" width : 369px;" />
-										<h:outputText value="Carga Horária:" />
-										<h:inputText value="#{cursoController.cargaHoraria}"
-											style=" width : 87px;" />
-									</h:panelGrid>
-									<br />
-									<h:commandButton action="#{cursoController.gravar}"
-										value="Inserir" />
-									<br />
-									<br />
-									<br />
-									<h:dataTable value="#{cursoController.consultar}" var="item"
-										style="font-Size: 10px; font-family: Arial;">
-										<h:column>
-											<f:facet name="header">
-												<h:outputText value="Nome do Curso" />
-											</f:facet>
-											<h:outputText value="#{item.nome}" />
-										</h:column>
-										<h:column>
-											<f:facet name="header">
-												<h:outputText value="Editar" />
-											</f:facet>
-											<h:commandLink action="#{cursoController.selecionaCurso}"
-												value="Editar" />
-										</h:column>
-										<h:column>
-											<f:facet name="header">
-												<h:outputText value="Remoção" />
-											</f:facet>
-											<h:commandLink action="#{cursoController.excluir}"
-												value="Excluir" />
-										</h:column>
-									</h:dataTable>
-
-									<br /></td>
+									class="bordamenu"><h:messages /> <h:panelGrid columns="2">
+									<h:outputText value="Código do Curso:" />
+									<h:inputText value="#{cursoController.codigo}" />
+									<h:outputText value="Nome do Curso:" />
+									<h:inputText value="#{cursoController.nome}"
+										style=" width : 369px;" />
+									<h:outputText value="Carga Horária:" />
+									<h:inputText value="#{cursoController.cargaHoraria}"
+										style=" width : 87px;" />
+								</h:panelGrid> <br />
+								<h:commandButton action="#{cursoController.gravar}"
+									value="Inserir" /> <br />
+								<br />
+								<br />
+								<h:dataTable value="#{cursoController.consultar}" var="item"
+									style="font-Size: 10px; font-family: Arial;">
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Nome do Curso" />
+										</f:facet>
+										<h:outputText value="#{item.nome}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Editar" />
+										</f:facet>
+										<h:commandLink action="#{cursoController.selecionaCurso}"
+											value="Editar" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Remoção" />
+										</f:facet>
+										<h:commandLink action="#{cursoController.excluir}"
+											value="Excluir" />
+									</h:column>
+								</h:dataTable> <br />
+								</td>
 								<td><img
 									src="<%=request.getContextPath()%>/images/spacer.gif" width="1"
 									height="377" border="0" alt="" /></td>
@@ -123,10 +119,14 @@
 						</td>
 					</tr>
 				</table>
-				</h:form> <map name="m_index_r2_c1" id="m_index_r2_c1">
-					<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
-					<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp"
-						alt="" />
-				</map> </f:view>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+	<map name="m_index_r2_c1" id="m_index_r2_c1">
+		<area shape="rect" coords="697,0,760,25" href="Login.jsp" alt="" />
+		<area shape="rect" coords="8,1,78,26" href="menuPrincipal.jsp" alt="" />
+	</map>
+</f:view>
 </body>
 </html>
