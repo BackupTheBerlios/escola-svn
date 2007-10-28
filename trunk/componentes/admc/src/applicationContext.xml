@@ -106,7 +106,7 @@
 	</bean>
 
 	<!-- Docente Repositorio-->
-	<bean id="docenteRepositorio"
+	<bean id="docenteRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DocenteRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -116,7 +116,7 @@
 	<!-- Docente Negocio-->
 	<bean id="docenteNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.DocenteNegocioBean">
-		<constructor-arg ref="docenteRepositorio" />
+		<constructor-arg ref="docenteRepository" />
 	</bean>
 	<!-- Docente Servico-->
 	<bean id="localDocenteService"
@@ -125,7 +125,7 @@
 	</bean>
 
 	<!-- Secretario Repositorio-->
-	<bean id="secretarioRepositorio"
+	<bean id="secretarioRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.SecretarioRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -135,7 +135,7 @@
 	<!-- Secretario Negocio-->
 	<bean id="secretarioNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.SecretarioNegocioBean">
-		<constructor-arg ref="secretarioRepositorio" />
+		<constructor-arg ref="secretarioRepository" />
 	</bean>
 	<!-- Docente Servico-->
 	<bean id="localSecretarioService"
@@ -145,7 +145,7 @@
 
 
 	<!-- Disciplina Repositorio-->
-	<bean id="disciplinaRepositorio"
+	<bean id="disciplinaRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.DisciplinaRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -155,7 +155,7 @@
 	<!-- Disciplina Negocio-->
 	<bean id="disciplinaNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.DisciplinaNegocioBean">
-		<constructor-arg ref="disciplinaRepositorio" />
+		<constructor-arg ref="disciplinaRepository" />
 	</bean>
 
 	<!-- Disciplina Servico-->
@@ -165,7 +165,7 @@
 	</bean>
 
 	<!-- Aluno Repositorio-->
-	<bean id="alunoRepositorio"
+	<bean id="alunoRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.AlunoRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -174,7 +174,7 @@
 	<!-- Aluno Negocio-->
 	<bean id="alunoNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.AlunoNegocioBean">
-		<constructor-arg ref="alunoRepositorio" />
+		<constructor-arg ref="alunoRepository" />
 	</bean>
 
 	<!-- Aluno Servico-->
@@ -184,7 +184,7 @@
 	</bean>
 
 	<!-- Curso  Repositorio-->
-	<bean id="cursoRepositorio"
+	<bean id="cursoRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.CursoRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -193,7 +193,7 @@
 	<!-- Curso  Negocio-->
 	<bean id="cursoNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.CursoNegocioBean">
-		<constructor-arg ref="cursoRepositorio" />
+		<constructor-arg ref="cursoRepository" />
 	</bean>
 
 	<!-- Curso  Servico-->
@@ -203,7 +203,7 @@
 	</bean>
 
 	<!-- MatriculaTurma Repositorio-->
-	<bean id="matriculaTurmaRepositorio"
+	<bean id="matriculaTurmaRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.MatriculaTurmaRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -213,7 +213,7 @@
 	<!-- MatriculaTurma Negocio-->
 	<bean id="matriculaTurmaNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.MatriculaTurmaNegocioBean">
-		<constructor-arg ref="matriculaTurmaRepositorio" />
+		<constructor-arg ref="matriculaTurmaRepository" />
 	</bean>
 
 	<!-- MatriculaTurma Servico-->
@@ -223,7 +223,7 @@
 	</bean>
 
 	<!-- Turma Repositorio-->
-	<bean id="turmaRepositorio"
+	<bean id="turmaRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.TurmaRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
@@ -233,7 +233,7 @@
 	<!-- Turma Negocio-->
 	<bean id="turmaNegocio"
 		class="br.ufg.inf.apsi.escola.componentes.admc.negocio.bean.TurmaNegocioBean">
-		<constructor-arg ref="turmaRepositorio" />
+		<constructor-arg ref="turmaRepository" />
 	</bean>
 
 	<!-- Turma Servico-->
@@ -243,7 +243,7 @@
 	</bean>
 
 	<!-- PreMatriculaDisciplina Repositorio-->
-	<bean id="preMatriculaDisciplinaRepositorio"
+	<bean id="preMatriculaDisciplinaRepository"
 		class="br.ufg.inf.apsi.escola.componentes.admc.repositorio.jpa.hibernate.PreMatriculaDisciplinaRepositoryImpl">
 		<property name="entityManagerFactory">
 			<ref local="entityManagerFactory" />
