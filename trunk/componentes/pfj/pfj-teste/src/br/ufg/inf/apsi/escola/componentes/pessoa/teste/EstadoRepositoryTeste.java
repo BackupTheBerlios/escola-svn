@@ -98,18 +98,39 @@ public class EstadoRepositoryTeste {
 	 * 
 	 */
 	@Test
-	public void testaConsultar(){
+	public void testaConsultarNome(){
 		
 		try {
 			context.checking(new Expectations(){{
-				one (estadoRepository).consultar(estado.getNome());
+				one (estadoRepository).consultarNome(estado.getNome());
 			}});
 		} catch (EstadoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
 		
 		try {
-			estadoRepository.consultar(estado.getNome());
+			estadoRepository.consultarNome(estado.getNome());
+		} catch (EstadoNaoEncontradoException enee) {
+			System.out.println(enee.getMessage());
+		}
+		context.assertIsSatisfied();
+	}
+	/**
+	 * 
+	 */
+	@Test
+	public void testaConsultarSigla(){
+		
+		try {
+			context.checking(new Expectations(){{
+				one (estadoRepository).consultarSigla(estado.getSigla());
+			}});
+		} catch (EstadoNaoEncontradoException enee) {
+			System.out.println(enee.getMessage());
+		}
+		
+		try {
+			estadoRepository.consultarSigla(estado.getSigla());
 		} catch (EstadoNaoEncontradoException enee) {
 			System.out.println(enee.getMessage());
 		}
