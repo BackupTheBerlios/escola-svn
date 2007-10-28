@@ -209,6 +209,13 @@ public interface PessoaService {
 	 */
 	Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento) throws EscolaException;
 	/**
+	 * Operação definida para retornar em um List<String> todos os dados da pessoa
+	 * @param pessoaId
+	 * @return List<String>
+	 * @throws PessoaNaoEncontradaException
+	 */
+	List<String> consultaTodosDadosPessoa(Long pessoaId) throws PessoaNaoEncontradaException;
+	/**
 	 * Operação definida para obter o repositório de bairros.
 	 * @return {@link BairroRepository}
 	 */

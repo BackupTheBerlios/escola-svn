@@ -424,7 +424,10 @@ public class PessoaServiceImpl implements PessoaService {
 		}
 		//Manipula dados do estado
 		try{
-			estado = estadoRepository.consultar(nomeEstado);
+			if (nomeEstado.length() > 2)
+				estado = estadoRepository.consultarNome(nomeEstado);
+			else
+				estado = estadoRepository.consultarSigla(nomeEstado);
 		}catch (EstadoNaoEncontradoException enee) {
 			estado = new Estado(nomeEstado, pais);
 			try {
@@ -611,6 +614,72 @@ public class PessoaServiceImpl implements PessoaService {
 			throw new EscolaException(e.getMessage());
 		}
 		return idNomePessoa;
+	}
+	/**
+	 * @see PessoaService#consultaTodosDadosPessoa(Long)
+	 */
+	@Override
+	public List<String> consultaTodosDadosPessoa(Long pessoaId)
+			throws PessoaNaoEncontradaException {
+		Pessoa pessoa = null;
+		List<String> dadosPessoa = new ArrayList<String>();
+		try {
+			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
+		} catch (PessoaNaoEncontradaException e) {
+			throw new PessoaNaoEncontradaException();
+		}
+		//preencher a lista com os dados da pessoa
+		//adiciona os dados pessoais
+		dadosPessoa.add(pessoa.getId().toString());
+		dadosPessoa.add(pessoa.getNome());
+		dadosPessoa.add(pessoa.getTipo());
+		if (pessoa instanceof PessoaFisica) {
+			PessoaFisica pf = (PessoaFisica) pessoa;
+			dadosPessoa.add(pf.getNacionalidade());
+			dadosPessoa.add(pf.getNaturalidade());
+			dadosPessoa.add(pf.getSexo());
+			dadosPessoa.add(pf.getDataNascimento().toString());
+		} else{
+			if (pessoa instanceof PessoaJuridica) {
+				PessoaJuridica pj = (PessoaJuridica) pessoa;
+				dadosPessoa.add(pj.getNomeFantasia());
+			}
+		} 
+		//adiciona os documentos
+		for (Documento documento : pessoa.getListaDocumentos()){
+			dadosPessoa.add(documento.getTipo());
+			dadosPessoa.add(documento.getNumero());
+			if (documento instanceof RG) {
+				RG rg = (RG) documento;
+				dadosPessoa.add(rg.getOrgaoExpedidor());
+				dadosPessoa.add(rg.getDataEmissao().toString());
+			}
+		}
+		//adiciona os emails
+		for (Email email : pessoa.getListaEmails()){
+			dadosPessoa.add(email.getEmail());
+		}
+		//Adiciona os dados dos endereços
+		for (Endereco endereco : pessoa.getListaEnderecos()){
+			dadosPessoa.add(endereco.getTipo().toString());
+			dadosPessoa.add(endereco.getLogradouro().getTipo().toString());
+			dadosPessoa.add(endereco.getLogradouro().getNome());
+			dadosPessoa.add(endereco.getNumero());
+			dadosPessoa.add(endereco.getComplemento());
+			dadosPessoa.add(endereco.getCep().toString());
+			dadosPessoa.add(endereco.getBairro().getNome());
+			dadosPessoa.add(endereco.getBairro().getCidade().getNome());
+			dadosPessoa.add(endereco.getBairro().getCidade().getEstado().getNome());
+			dadosPessoa.add(endereco.getBairro().getCidade().getEstado().getSigla());
+			dadosPessoa.add(endereco.getBairro().getCidade().getEstado().getPais().getNome());
+		}
+		//adiciona os dados dos telefones
+		for (Telefone telefone : pessoa.getListaTelefones()){
+			dadosPessoa.add(telefone.getTipo().toString());
+			dadosPessoa.add(String.valueOf(telefone.getDDD()));
+			dadosPessoa.add(String.valueOf(telefone.getNumero()));
+		}
+		return dadosPessoa;
 	}
 
 	/**

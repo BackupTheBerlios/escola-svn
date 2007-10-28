@@ -42,7 +42,14 @@ public interface EstadoRepository {
 	 * @return Estado
 	 * @throws EstadoNaoEncontradoException
 	 */
-	Estado consultar(String nomeEstado) throws EstadoNaoEncontradoException;
+	Estado consultarNome(String nomeEstado) throws EstadoNaoEncontradoException;
+	/**
+	 * opração definida para consultar os dados de um estado, a partir de sua sigla
+	 * @param siglaEstado
+	 * @return Estado
+	 * @throws EstadoNaoEncontradoException
+	 */
+	Estado consultarSigla(String siglaEstado) throws EstadoNaoEncontradoException;
 	/**
 	 * Operação definida para carregar os dados de um estado, a partir do seu identificador.
 	 * @param estadoId
