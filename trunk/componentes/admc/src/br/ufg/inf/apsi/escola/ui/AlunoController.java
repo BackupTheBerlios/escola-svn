@@ -87,7 +87,8 @@ public class AlunoController {
 			p = ps.consultaPessoaDocumento(getCpf());
 
 		} catch (EscolaException ee) {
-			//FacesContext.getCurrentInstance().addMessage("msg",new FacesMessage(ee.getMessage()));
+			// FacesContext.getCurrentInstance().addMessage("msg",new
+			// FacesMessage(ee.getMessage()));
 			p = null;
 		}
 		try {
@@ -96,16 +97,15 @@ public class AlunoController {
 				ps.cadastraPessoa(getNome(), getSexo(),
 						formataData(getDataNascimento()), "", "", "",
 						"RESIDENCIAL", "RUA", getEndereco(), getNumero(),
-						getComplemento(), this.cep,
-						getBairro(), getCidade(), getEstado(), getPais(),
-						getEmail(),this.dddf1,this.telefone1,"FIXO", getCpf(),
-						null,null, getRg(),
+						getComplemento(), this.cep, getBairro(), getCidade(),
+						getEstado(), getPais(), getEmail(), this.dddf1,
+						this.telefone1, "FIXO", getCpf(), null, null, getRg(),
 						formataData(getDataEmissao()), getOrgaoExpedidor());
 
 				p = ps.consultaPessoaDocumento(getCpf());
 
 			}
-			if (getId() >0) {
+			if (getId() > 0) {
 				alunoService
 						.gravar(new Aluno(getId(), p, getMatricula(), null));
 			} else {
@@ -113,14 +113,17 @@ public class AlunoController {
 			}
 
 			limpar();
-			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Dados Gravados com sucesso!"));
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Dados Gravados com sucesso!"));
 
 		} catch (EscolaException ee) {
-			
-			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Erro ao gravar dados do Aluno!"));
-		} catch(Exception e){
-			
-			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Erro ao gravar dados do Aluno!"));
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Erro ao gravar dados do Aluno!"));
+		} catch (Exception e) {
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Erro ao gravar dados do Aluno!"));
 		}
 
 		return null;
@@ -129,16 +132,18 @@ public class AlunoController {
 
 	public String editar() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
-		
+
 		try {
 
-		    alunoService.excluir(aluno.getId());
-			
-		    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Aluno Excluído com sucesso!"));
-		    
+			alunoService.excluir(aluno.getId());
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Aluno Excluído com sucesso!"));
+
 			return null;
 		} catch (Exception e) {
-			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Falha ao excluir o Aluno!"));
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Falha ao excluir o Aluno!"));
 			return null;
 		}
 
@@ -146,16 +151,16 @@ public class AlunoController {
 
 	public String excluir() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
-		
+
 		try {
 
 			setMatricula(aluno.getNumeroMatricula());
-			
+
 			setNome(ps.consultaPessoaId(aluno.getPessoa()));
 			/**
 			 * 
-			 * Não existe nenhum metodo em PessoaService q retorna os
-			 * dados de uma pessoa Fisica ou Juridica somente nome
+			 * Não existe nenhum metodo em PessoaService q retorna os dados de
+			 * uma pessoa Fisica ou Juridica somente nome
 			 * 
 			 */
 			setDataNascimento(new String());
@@ -176,7 +181,7 @@ public class AlunoController {
 			setPais(new String());
 			setDddf1(new String());
 			setDddf2(new String());
-			
+
 			return "editarAluno";
 		} catch (Exception e) {
 			return null;
@@ -184,21 +189,20 @@ public class AlunoController {
 
 	}
 
-	
 	public DataModel getTodos() throws Exception {
-		List<String[]> lista= new ArrayList<String[]>();
-		String dados[]={"",""};
-		
+		List<String[]> lista = new ArrayList<String[]>();
+		String dados[] = { "", "" };
+
 		try {
-				
-			for (Aluno a: alunoService.consultar()) {
-			   	dados[0]=String.valueOf(a.getId());
-			   	dados[1]=ps.consultaPessoaId(a.getPessoa());
-			    lista.add(dados);  	
+
+			for (Aluno a : alunoService.consultar()) {
+				dados[0] = String.valueOf(a.getId());
+				dados[1] = ps.consultaPessoaId(a.getPessoa());
+				lista.add(dados);
 			}
-			
+
 			model = new ListDataModel(lista);
-	
+
 		} catch (Exception e) {
 			e.getMessage();
 		}
@@ -206,15 +210,15 @@ public class AlunoController {
 	}
 
 	public Aluno getAlunoFromEditOrDelete() {
-		Aluno aluno=null;
-		try{
-		 String[] dados = (String[]) model.getRowData();
-		 aluno = alunoService.consultar(Long.parseLong(dados[0]));
-		}catch(Exception e){
+		Aluno aluno = null;
+		try {
+			String[] dados = (String[]) model.getRowData();
+			aluno = alunoService.consultar(Long.parseLong(dados[0]));
+		} catch (Exception e) {
 			e.printStackTrace();
-			
+
 		}
-	    
+
 		return aluno;
 	}
 
@@ -266,29 +270,31 @@ public class AlunoController {
 	}
 
 	public String getTelefone1() {
-		return ((telefone1==null)||(telefone1.equals(0)))?"":String.valueOf(telefone1);
+		return ((telefone1 == null) || (telefone1.equals(0))) ? "" : String
+				.valueOf(telefone1);
 	}
 
 	public void setTelefone1(String telefone1) {
-		try{
+		try {
 			this.telefone1 = Long.parseLong(telefone1);
-		}catch (NumberFormatException nf) {
-		    
+		} catch (NumberFormatException nf) {
+
 		}
 	}
 
 	public String getTelefone2() {
-		
-		return ((telefone2==null)||(telefone2.equals(0)))?"":String.valueOf(telefone2);
-	
+
+		return ((telefone2 == null) || (telefone2.equals(0))) ? "" : String
+				.valueOf(telefone2);
+
 	}
 
 	public void setTelefone2(String telefone2) {
-	  try{	
-		this.telefone2 = Long.parseLong(telefone2);
-		}catch (NumberFormatException nf) {
-		
-	    }
+		try {
+			this.telefone2 = Long.parseLong(telefone2);
+		} catch (NumberFormatException nf) {
+
+		}
 	}
 
 	public String getCpf() {
@@ -356,14 +362,14 @@ public class AlunoController {
 	}
 
 	public String getCep() {
-		return ((cep==null)||(cep.equals(0)))?"":String.valueOf(cep);
+		return ((cep == null) || (cep.equals(0))) ? "" : String.valueOf(cep);
 	}
 
 	public void setCep(String cep) {
-		try{
-		   this.cep =Integer.parseInt(cep);
-		}catch (NumberFormatException nf) {
-			
+		try {
+			this.cep = Integer.parseInt(cep);
+		} catch (NumberFormatException nf) {
+
 		}
 	}
 
@@ -415,32 +421,30 @@ public class AlunoController {
 		this.id = id;
 	}
 
-	
-	
 	public String getDddf1() {
-		return ((dddf1==null)||(dddf1.equals(0)))?"":String.valueOf(dddf1);
+		return ((dddf1 == null) || (dddf1.equals(0))) ? "" : String
+				.valueOf(dddf1);
 	}
 
 	public void setDddf1(String dddf1) {
-	  try{
-		  this.dddf1=Short.parseShort(dddf1);
-	  }catch(NumberFormatException ne){
-		  
-	  }
-	}
+		try {
+			this.dddf1 = Short.parseShort(dddf1);
+		} catch (NumberFormatException ne) {
 
-	public String getDddf2() {
-		return ((dddf2==null)||(dddf2.equals(0)))?"":String.valueOf(dddf2);
-	}
-
-	public void setDddf2(String dddf2) {
-		try{
-		this.dddf2 =Short.parseShort(dddf2);
-		}catch(NumberFormatException ne){
-			
 		}
 	}
 
-	
-	
+	public String getDddf2() {
+		return ((dddf2 == null) || (dddf2.equals(0))) ? "" : String
+				.valueOf(dddf2);
+	}
+
+	public void setDddf2(String dddf2) {
+		try {
+			this.dddf2 = Short.parseShort(dddf2);
+		} catch (NumberFormatException ne) {
+
+		}
+	}
+
 }

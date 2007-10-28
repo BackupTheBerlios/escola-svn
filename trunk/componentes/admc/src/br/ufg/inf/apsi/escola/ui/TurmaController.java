@@ -14,83 +14,31 @@ import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
  * 
  */
 public class TurmaController {
-	/**
-	 * 
-	 */
 	private String codigoTurma;
-
-	/**
-	 * 
-	 */
 
 	private String expressao;
 
-	/**
-	 * 
-	 */
-
 	private int qtdeNotas;
-
-	/**
-	 * 
-	 */
 
 	private boolean preMatricula;
 
-	/**
-	 * 
-	 */
-
 	private boolean situacao;
-	/**
-	 * 
-	 */
 
 	private String codigoDisciplina;
-	/**
-	 * 
-	 */
 
 	private String matriculaDocente;
 
-	/**
-	 * 
-	 */
-
 	private String nomeDocente;
-
-	/**
-	 * 
-	 */
 
 	private long idDocente;
 
-	/**
-	 * 
-	 */
-
 	private long idDisciplina;
-
-	/**
-	 * 
-	 */
 
 	private String nomeDisciplina;
 
-	/**
-	 * 
-	 */
 	private TurmaService turmaService;
 
-	/**
-	 * 
-	 */
-
 	private LocalServiceFactory localServiceFactory;
-
-	/**
-	 * 
-	 */
 
 	public TurmaController() {
 		localServiceFactory = new LocalServiceFactory();

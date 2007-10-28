@@ -8,6 +8,8 @@ import java.util.List;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
+
 /**
  * @author ailton
  * 
@@ -19,11 +21,6 @@ public class DocenteRepositoryImpl extends JpaDaoSupport implements
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio#consultar(long)
-	 */
 	public Docente consultar(long id) throws Exception {
 		Docente docente = (Docente) getJpaTemplate().find(Docente.class,
 				Long.valueOf(id));
@@ -35,11 +32,6 @@ public class DocenteRepositoryImpl extends JpaDaoSupport implements
 		return docente;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio#consultar()
-	 */
 	public List<Docente> consultar() throws Exception {
 		List<Docente> list = getJpaTemplate().find("from Docente");
 
@@ -51,21 +43,11 @@ public class DocenteRepositoryImpl extends JpaDaoSupport implements
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio#excluir(long)
-	 */
 	public void excluir(long id) throws Exception {
 		getJpaTemplate().remove(this.consultar(id));
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio#gravar(br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente)
-	 */
 	public void gravar(Docente docente) throws Exception {
 		getJpaTemplate().persist(docente);
 
