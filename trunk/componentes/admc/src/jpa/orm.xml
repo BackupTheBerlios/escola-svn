@@ -78,6 +78,7 @@
 				<join-column name="docente_id"
 					referenced-column-name="id" />
 			</many-to-one>
+			
 			<one-to-many name="preMatriculaDisciplina"
 				mapped-by="turma" />
 
@@ -113,7 +114,6 @@
 				<join-column name="CURSO_ID"
 					referenced-column-name="id" />
 			</many-to-one>
-			<one-to-one name="turma" mapped-by="disciplina" />
 		</attributes>
 	</entity>
 
