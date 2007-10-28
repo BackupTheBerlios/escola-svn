@@ -155,7 +155,13 @@
 				<column name="CARGAHORARIA" />
 			</basic>
 			
-			<one-to-many name="disciplinas" mapped-by="disciplina" />
+			<one-to-many name="disciplinas"
+				target-entity="br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina" fetch="LAZY"
+				mapped-by="disciplina">  
+				<cascade>
+					<cascade-remove/>
+				</cascade>   
+			</one-to-many>
 		</attributes>
 	</entity>
 
