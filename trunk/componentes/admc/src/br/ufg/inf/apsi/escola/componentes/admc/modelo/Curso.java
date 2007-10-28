@@ -1,10 +1,19 @@
+/*
+ * Curso.java
+ *
+ * Alterado em 13 de Outubro de 2007 16:06
+ * Por: Yoshi
+ * 
+ * 
+ * Alterado em 15 de Outubro de 2007
+ * Por: Fernando Nery
+ * 
+ */
 package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
-
-import br.ufg.inf.apsi.escola.componentes.admc.servico.CursoService;
-import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
 /**
  * Classe que armazena os dados de um Curso
@@ -35,8 +44,10 @@ public class Curso implements Serializable {
 
 	private Integer cargaHoraria;
 
+	private List<Disciplina> disciplinas;
+
 	/**
-	 * Cria instancia de Curso
+	 * Cria instï¿½ncia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
@@ -47,10 +58,11 @@ public class Curso implements Serializable {
 	public Curso(String codigo, String nome, Integer cargaHoraria) {
 		this.codigo = codigo;
 		this.nome = nome;
+		this.disciplinas = new ArrayList<Disciplina>();
 	}
 
 	/**
-	 * Cria instancia de Curso
+	 * Cria instï¿½ncia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
@@ -63,10 +75,11 @@ public class Curso implements Serializable {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cargaHoraria = cargaHoraria;
+		this.disciplinas = new ArrayList<Disciplina>();
 	}
 
 	/**
-	 * Cria instancia de Curso
+	 * Cria instï¿½ncia de Curso
 	 */
 	public Curso() {
 		this.codigo = new String();
@@ -145,14 +158,28 @@ public class Curso implements Serializable {
 		this.nome = nome;
 	}
 
-	public static final List<Disciplina> obterDisciplinas(long idCodigo)
-			throws Exception {
-		LocalServiceFactory localServiceFactory = new LocalServiceFactory();
-		CursoService cursoService = localServiceFactory.obterCursoService();
-
-		cursoService.consultarDisciplinaDeCurso(idCodigo);
-
-		return null;
-
+	/**
+	 * Lista de disciplinas de um curso.
+	 * 
+	 * @return
+	 */
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+
+	public void addDisciplina(Disciplina disciplina) {
+		this.disciplinas.add(disciplina);
+	}
+
+	public void removeDisciplina(Disciplina disciplina) throws Exception {
+		if (this.disciplinas != null || !this.disciplinas.isEmpty()) {
+			this.disciplinas.remove(disciplina);
+		} else
+			throw new Exception("Não existe Disciplina para remoção!");
+	}
+
 }
