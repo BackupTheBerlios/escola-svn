@@ -154,6 +154,8 @@
 			<basic name="cargaHoraria">
 				<column name="CARGAHORARIA" />
 			</basic>
+			
+			<one-to-many name="disciplinas" mapped-by="disciplina" />
 		</attributes>
 	</entity>
 
