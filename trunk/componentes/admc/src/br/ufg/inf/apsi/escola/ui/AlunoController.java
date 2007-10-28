@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
@@ -112,11 +114,14 @@ public class AlunoController {
 			}
 
 			limpar();
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Dados Gravados com sucesso!"));
 
 		} catch (EscolaException ee) {
-			ee.getMessage();
+			
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Erro ao gravar dados do Aluno!"));
 		} catch(Exception e){
-			e.getMessage();
+			
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Erro ao gravar dados do Aluno!"));
 		}
 
 		return null;
@@ -124,6 +129,23 @@ public class AlunoController {
 	}
 
 	public String editar() throws Exception {
+		Aluno aluno = getAlunoFromEditOrDelete();
+		
+		try {
+
+		    alunoService.excluir(aluno.getId());
+			
+		    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Aluno Excluído com sucesso!"));
+		    
+			return null;
+		} catch (Exception e) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Falha ao excluir o Aluno!"));
+			return null;
+		}
+
+	}
+
+	public String excluir() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
 		
 		try {
@@ -163,6 +185,7 @@ public class AlunoController {
 
 	}
 
+	
 	public DataModel getTodos() throws Exception {
 		List<String[]> lista= new ArrayList<String[]>();
 		String dados[]={"",""};

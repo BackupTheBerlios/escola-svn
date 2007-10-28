@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.TurmaNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.TurmaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.TurmaRepository;
 
 /**
  * Esta classe, <code>TurmaNegocioBean</code>, implementa a
@@ -19,9 +19,9 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.TurmaRepositorio;
  */
 public class TurmaNegocioBean implements TurmaNegocio {
 
-	private TurmaRepositorio turmaRepositorio = null;
+	private TurmaRepository turmaRepositorio = null;
 
-	public TurmaNegocioBean(TurmaRepositorio turmaRepositorio) {
+	public TurmaNegocioBean(TurmaRepository turmaRepositorio) {
 		this.turmaRepositorio = turmaRepositorio;
 	}
 

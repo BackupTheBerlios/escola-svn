@@ -9,7 +9,7 @@ import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
  * @author Fernando Nery Barros
  * 
  */
-public interface TurmaRepositorio {
+public interface TurmaRepository {
 
 	/**
 	 * 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
 
-public interface CursoRepositorio {
+public interface CursoRepository {
 
 	public abstract void gravar(Curso curso) throws Exception;
 

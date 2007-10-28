@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.MatriculaTurmaNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaRepository;
 
 /**
  * @author ailton
@@ -16,10 +16,10 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaReposit
 public class MatriculaTurmaNegocioBean implements MatriculaTurmaNegocio {
 
 	
-	private MatriculaTurmaRepositorio matriculaTurmaRepositorio = null;
+	private MatriculaTurmaRepository matriculaTurmaRepositorio = null;
 	
 	
-	public MatriculaTurmaNegocioBean(MatriculaTurmaRepositorio matriculaTurmaRepositorio){
+	public MatriculaTurmaNegocioBean(MatriculaTurmaRepository matriculaTurmaRepositorio){
 		this.matriculaTurmaRepositorio = matriculaTurmaRepositorio;
 		
 	}

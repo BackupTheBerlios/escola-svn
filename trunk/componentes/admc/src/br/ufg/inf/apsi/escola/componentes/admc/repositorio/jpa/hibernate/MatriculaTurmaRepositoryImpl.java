@@ -9,15 +9,15 @@ import java.util.Map;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.MatriculaTurmaRepository;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 /**
  * @author ailton
  *
  */
-public class MatriculaTurmaRepositorioImpl extends JpaDaoSupport implements MatriculaTurmaRepositorio {
+public class MatriculaTurmaRepositoryImpl extends JpaDaoSupport implements MatriculaTurmaRepository {
 
-	public MatriculaTurmaRepositorioImpl() {
+	public MatriculaTurmaRepositoryImpl() {
 	
 	}
 	

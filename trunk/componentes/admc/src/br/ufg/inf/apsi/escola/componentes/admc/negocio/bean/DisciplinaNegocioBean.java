@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.DisciplinaNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepository;
 
 /**
  * @author ailton
@@ -15,9 +15,9 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepositorio
  */
 public class DisciplinaNegocioBean implements DisciplinaNegocio {
 
-	private DisciplinaRepositorio disciplinaRepositorio = null;
+	private DisciplinaRepository disciplinaRepositorio = null;
 	
-	public DisciplinaNegocioBean(DisciplinaRepositorio disciplinaRepositorio){
+	public DisciplinaNegocioBean(DisciplinaRepository disciplinaRepositorio){
 		this.disciplinaRepositorio = disciplinaRepositorio;
 		
 	}

@@ -13,10 +13,10 @@ import org.springframework.orm.jpa.support.JpaDaoSupport;
  * @author ailton
  * 
  */
-public class DocenteRepositorioImpl extends JpaDaoSupport implements
-		br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio {
+public class DocenteRepositoryImpl extends JpaDaoSupport implements
+		br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepository {
 
-	public DocenteRepositorioImpl() {
+	public DocenteRepositoryImpl() {
 
 	}
 

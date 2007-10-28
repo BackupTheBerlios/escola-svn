@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.DocenteNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepository;
 
 /**
  * @author ailton
@@ -15,9 +15,9 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DocenteRepositorio;
  */
 public class DocenteNegocioBean implements DocenteNegocio {
 
-	private DocenteRepositorio docenteRepositorio = null;
+	private DocenteRepository docenteRepositorio = null;
 
-	public DocenteNegocioBean(DocenteRepositorio docenteRepositorio) {
+	public DocenteNegocioBean(DocenteRepository docenteRepositorio) {
 		this.docenteRepositorio = docenteRepositorio;
 	}
 

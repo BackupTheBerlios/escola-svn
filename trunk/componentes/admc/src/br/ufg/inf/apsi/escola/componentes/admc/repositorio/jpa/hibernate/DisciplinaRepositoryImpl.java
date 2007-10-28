@@ -5,15 +5,15 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.DisciplinaRepository;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 /**
  * @author ailton
  *
  */
-public class DisciplinaRepositorioImpl extends JpaDaoSupport implements DisciplinaRepositorio {
+public class DisciplinaRepositoryImpl extends JpaDaoSupport implements DisciplinaRepository {
 
-	public DisciplinaRepositorioImpl() {
+	public DisciplinaRepositoryImpl() {
 	
 	}
 	

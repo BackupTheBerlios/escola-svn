@@ -7,16 +7,16 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.TurmaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.TurmaRepository;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 /**
  * @author ailton
  *
  */
-public class TurmaRepositorioImpl extends JpaDaoSupport implements TurmaRepositorio {
+public class TurmaRepositoryImpl extends JpaDaoSupport implements TurmaRepository {
 
 	
-	public TurmaRepositorioImpl() {
+	public TurmaRepositoryImpl() {
 	
 	}
 	

@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.PreMatriculaDisciplina;
 
-public interface PreMatriculaDisciplinaRepositorio {
+public interface PreMatriculaDisciplinaRepository {
  
 	public void gravar(PreMatriculaDisciplina preMatricula)throws Exception;
 	public void excluir(String matriculaAluno)throws Exception;

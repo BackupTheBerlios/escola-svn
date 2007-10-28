@@ -11,15 +11,15 @@ import org.springframework.orm.jpa.support.JpaDaoSupport;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Secretario;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.SecretarioRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.SecretarioRepository;
 
 /**
  * @author ailton
  *
  */
-public class SecretarioRepositorioImpl extends JpaDaoSupport implements SecretarioRepositorio {
+public class SecretarioRepositoryImpl extends JpaDaoSupport implements SecretarioRepository {
 
-	public SecretarioRepositorioImpl(){}
+	public SecretarioRepositoryImpl(){}
 	
 	
 	/* (non-Javadoc)

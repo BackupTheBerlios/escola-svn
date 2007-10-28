@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Secretario;
 
-public interface SecretarioRepositorio {
+public interface SecretarioRepository {
 
 	
 	public abstract void gravar(Secretario secretario) throws Exception;

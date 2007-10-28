@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.PreMatriculaDisciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.PreMatriculaDisciplinaNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.PreMatriculaDisciplinaRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.PreMatriculaDisciplinaRepository;
 
 /**
  * @author ailton
@@ -16,10 +16,10 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.PreMatriculaDisciplin
 public class PreMatriculaDisciplinaNegocioBean implements
 		PreMatriculaDisciplinaNegocio {
 
-	private PreMatriculaDisciplinaRepositorio preMatricula = null;
+	private PreMatriculaDisciplinaRepository preMatricula = null;
 	
 	
-	public PreMatriculaDisciplinaNegocioBean(PreMatriculaDisciplinaRepositorio preMatriculaRepositorio){
+	public PreMatriculaDisciplinaNegocioBean(PreMatriculaDisciplinaRepository preMatriculaRepositorio){
 		this.preMatricula = preMatriculaRepositorio;
 	}
 	

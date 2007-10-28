@@ -10,7 +10,7 @@ import java.util.List;
  * 
  */
 
-public interface DocenteRepositorio {
+public interface DocenteRepository {
 
 	/**
 	 * 

@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.CursoRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.CursoRepository;
 
 /**
  * @author ailton
  * 
  */
-public class CursoRepositorioImpl extends JpaDaoSupport implements
-		CursoRepositorio {
+public class CursoRepositoryImpl extends JpaDaoSupport implements
+		CursoRepository {
 
-	public CursoRepositorioImpl() {
+	public CursoRepositoryImpl() {
 
 	}
 

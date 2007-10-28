@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Secretario;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.SecretarioNegocio;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.SecretarioRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.SecretarioRepository;
 
 /**
  * @author ailton
@@ -15,10 +15,10 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.SecretarioRepositorio
  */
 public class SecretarioNegocioBean implements SecretarioNegocio {
 
-	private SecretarioRepositorio secretarioRepositorio =null;
+	private SecretarioRepository secretarioRepositorio =null;
 	
 	
-	public SecretarioNegocioBean(SecretarioRepositorio secretarioRepositorio){
+	public SecretarioNegocioBean(SecretarioRepository secretarioRepositorio){
 		this.secretarioRepositorio = secretarioRepositorio;
 	}
 	

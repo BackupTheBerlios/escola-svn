@@ -14,12 +14,12 @@ import org.springframework.orm.jpa.support.JpaDaoSupport;
  * @author ailton
  * 
  */
-public class PreMatriculaDisciplinaRepositorioImpl extends JpaDaoSupport
+public class PreMatriculaDisciplinaRepositoryImpl extends JpaDaoSupport
 		implements
-		br.ufg.inf.apsi.escola.componentes.admc.repositorio.PreMatriculaDisciplinaRepositorio {
+		br.ufg.inf.apsi.escola.componentes.admc.repositorio.PreMatriculaDisciplinaRepository {
 
 	
-	public PreMatriculaDisciplinaRepositorioImpl() {
+	public PreMatriculaDisciplinaRepositoryImpl() {
 	
 	}
 	

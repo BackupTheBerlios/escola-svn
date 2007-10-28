@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.MatriculaTurma;
 
-public interface MatriculaTurmaRepositorio {
+public interface MatriculaTurmaRepository {
  
 	public abstract void gravar(MatriculaTurma matriculaTurma)throws Exception;
 	public abstract void excluir(String matriculaAluno)throws Exception;

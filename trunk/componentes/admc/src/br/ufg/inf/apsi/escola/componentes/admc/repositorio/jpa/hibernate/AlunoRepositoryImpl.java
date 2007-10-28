@@ -10,7 +10,7 @@ import java.util.Map;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
-import br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepositorio;
+import br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepository;
 
 
 
@@ -18,10 +18,10 @@ import br.ufg.inf.apsi.escola.componentes.admc.repositorio.AlunoRepositorio;
  * @author ailton
  *
  */
-public class AlunoRepositorioImpl extends JpaDaoSupport implements AlunoRepositorio {
+public class AlunoRepositoryImpl extends JpaDaoSupport implements AlunoRepository {
 
 	
-	public AlunoRepositorioImpl(){}
+	public AlunoRepositoryImpl(){}
 	
 	
 	
