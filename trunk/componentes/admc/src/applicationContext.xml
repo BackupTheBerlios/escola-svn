@@ -17,51 +17,54 @@
 		class="br.ufg.inf.apsi.escola.ui.DisciplinaController"
 		scope="session" />
 
-	
+	<bean id="alunoController"
+		class="br.ufg.inf.apsi.escola.ui.AlunoController" scope="session" />
+
+
 	<bean id="cursoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
 
 	<bean id="cursoAlunoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
 
-    <!-- Pessoa Repositorio -->
-    <bean id="pessoaRepository"
+	<!-- Pessoa Repositorio -->
+	<bean id="pessoaRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PessoaRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="cidadeRepository"
+	<bean id="cidadeRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CidadeRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="bairroRepository"
+	<bean id="bairroRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.BairroRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="documentoRepository"
+	<bean id="documentoRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.DocumentoRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="emailRepository"
+	<bean id="emailRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EmailRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="enderecoRepository"
+	<bean id="enderecoRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EnderecoRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="estadoRepository"
+	<bean id="estadoRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.EstadoRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="logradouroRepository"
+	<bean id="logradouroRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.LogradouroRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="paisRepository"
+	<bean id="paisRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.PaisRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
-	 <bean id="telefoneRepository"
+	<bean id="telefoneRepository"
 		class="br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.TelefoneRepositoryImpl">
 		<constructor-arg ref="entityManagerFactory" />
 	</bean>
@@ -99,7 +102,7 @@
 		<property name="telefoneRepository">
 			<ref local="telefoneRepository" />
 		</property>
-		
+
 	</bean>
 
 	<!-- Docente Repositorio-->
