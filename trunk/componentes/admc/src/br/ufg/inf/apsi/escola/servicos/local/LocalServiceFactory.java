@@ -23,10 +23,11 @@ public class LocalServiceFactory implements ServiceFactory {
 		escolaServiceDelegate = EscolaServiceDelegate.getInstancia();
 	}
 
-	public PessoaService obterPessoaService(){
-		return (PessoaService) escolaServiceDelegate.obtemServico("localPessoaService");
+	public PessoaService obterPessoaService() {
+		return (PessoaService) escolaServiceDelegate
+				.obtemServico("localPessoaService");
 	}
-	
+
 	public AlunoService obterAlunoService() {
 		return (AlunoService) escolaServiceDelegate
 				.obtemServico("localAlunoService");
