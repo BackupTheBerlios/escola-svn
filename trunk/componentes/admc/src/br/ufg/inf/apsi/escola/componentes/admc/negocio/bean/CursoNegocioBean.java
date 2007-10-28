@@ -1,12 +1,8 @@
-/**
- * 
- */
 package br.ufg.inf.apsi.escola.componentes.admc.negocio.bean;
 
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.negocio.CursoNegocio;
 import br.ufg.inf.apsi.escola.componentes.admc.repositorio.CursoRepositorio;
 
@@ -58,13 +54,5 @@ public class CursoNegocioBean implements CursoNegocio {
 	 */
 	public List<Curso> consultar() throws Exception {
 		return this.cursoRepositorio.consultar();
-	}
-
-	@Override
-	public List<Disciplina> consultarDisciplinaDeCurso(long idCurso)
-			throws Exception {
-
-		return this.cursoRepositorio.consultarDisciplinaDeCurso(idCurso);
-
 	}
 }
