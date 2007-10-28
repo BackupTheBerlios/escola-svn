@@ -17,9 +17,7 @@
 		class="br.ufg.inf.apsi.escola.ui.DisciplinaController"
 		scope="session" />
 
-	<bean id="alunoController"
-		class="br.ufg.inf.apsi.escola.ui.AlunoController" scope="session" />
-
+	
 	<bean id="cursoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
 
