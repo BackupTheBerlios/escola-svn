@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="admc" basedir="." default="execute">
+
+	<!-- ================================================================= -->
+	<!-- Define 'kad.libs' (repositório de bibliotecas do Kad)                    -->
+	<!-- ================================================================= -->
+	<property environment="env" />
+	<property name="kad.libs" value="${env.KAD_LIBS}" />
+
+	<!-- ================================================================= -->
+	<!-- Propriedades de bibliotecas do Kad                                -->
+	<!-- ================================================================= -->
+	<property file="${kad.libs}/kad-libs.properties" />
+
+	<property name="src.dir" location="/home/totoim/workspace/admc/src" />
+	<property name="build.dir" location="/home/totoim/workspace/admc/build" />
+
+	<!-- ================================================================= -->
+	<!-- CLASSPATH (bibliotecas e diretórios necessários para Hibernate    -->
+	<!-- ================================================================= -->
+	<path id="projeto.classpath">
+		<pathelement location="${hibernate.jar}" />
+		<pathelement location="${hsqldb.jar}" />
+		<fileset dir="${hibernate.dir}/lib" includes="*.jar" />
+		<fileset dir="${h.entity.dir}/lib" includes="*.jar" />
+		<pathelement location="${h.entity1.jar}" />
+		<pathelement location="${h.entity2.jar}" />
+		<pathelement location="${h.tools1.jar}" />
+		<pathelement location="${h.tools2.jar}" />
+		<pathelement location="${h.annotations.jar}" />
+		<pathelement location="${spring.jar}" />
+		
+		<path location="${build.dir}" />
+
+		<!-- Inclui arquivos de configuração -->
+		<path location="${ant.project.name}" />
+	</path>
+
+	<!-- Executa classe conforme comando no formato fornecido abaixo: -->
+	<!-- ant -Dclasse=<nome-da-classe> execute                        -->
+	<target name="execute" depends="compile" description="java X 0 1 (-Dclasse=X -Dargs='0 1')">
+		<java classname="${classe}">
+			<arg line="${args}" />
+			<classpath refid="projeto.classpath" />
+		</java>
+	</target>
+
+	<target name="compile" description="compila arquivos .java">
+		<mkdir dir="${build.dir}" />
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="projeto.classpath" />
+		</javac>
+	</target>
+
+	<target name="clean" description="Apaga arquivos gerados">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="db-start" description="inicia SGBD (escola)">
+		<java classname="org.hsqldb.Server" spawn="yes" fork="yes">
+			<jvmarg value="-Duser.dir=${kad.libs}" />
+			<classpath>
+				<pathelement path="${hsqldb.jar}" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="db-manager" description="inicia HSQLDB manager (cliente SQL)">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" spawn="yes" fork="yes">
+			<arg line="-url jdbc:hsqldb:hsql://localhost/escola" />
+			<classpath>
+				<pathelement path="${hsqldb.jar}" />
+			</classpath>
+		</java>
+	</target>
+
+	<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="projeto.classpath" />
+	<hibernatetool destdir="${build.dir}">
+			<jpaconfiguration persistenceunit="pu" />
+				<classpath>
+					<path location="${build.dir}/classes" />
+				</classpath>
+				<hbm2ddl export="true" outputfilename="schema.sql" />
+	</hibernatetool>
+	
+	<target name="db-show" depends="compile" description="exibe esquema">
+		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
+			<arg line="--output=${build.dir}/sql.ddl --text --format --config=hibernate.cfg.xml" />e
+			<classpath refid="projeto.classpath" />
+		</java>
+	</target>
+
+	<target name="db-schema" depends="compile" description="cria esquema (V2)">
+		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
+			<arg line="--output=${build.dir}/sql.ddl --format --config=hibernate.cfg.xml" />
+			<classpath refid="projeto.classpath" />
+		</java>
+	</target>
+
+	<target name="db-drop" depends="compile" description="remove esquama do HSQLDB">
+		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
+			<arg line="--output=${build.dir}/sql.ddl --drop --config=hibernate.cfg.xml" />
+			<classpath refid="projeto.classpath" />
+		</java>
+	</target>
+
+	
+
+</project>
