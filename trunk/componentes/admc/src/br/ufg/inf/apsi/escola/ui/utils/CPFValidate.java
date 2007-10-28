@@ -1,5 +1,8 @@
 package br.ufg.inf.apsi.escola.ui.utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -11,21 +14,22 @@ public class CPFValidate implements Validator {
 	public void validate(FacesContext arg0, UIComponent arg1, Object value)
 			throws ValidatorException {
 		
-		String strCpf = (String) value;
+				
 		int d1, d2;
 		int digito1, digito2, resto;
 		int digitoCPF;
 		String nDigResult;
-
-		String cpf = "";
-
-		cpf = strCpf.replace('.', ' ');
-		cpf = cpf.replace('-', ' ');
-
-		strCpf = cpf.substring(0, 3) + cpf.substring(4, 7)
-				+ cpf.substring(8, 11) + cpf.substring(12, 14);
-		strCpf.trim();
-
+        
+		if(value.toString().length()>10){
+		
+		Pattern numericos = Pattern.compile("[0-9]",Pattern.CASE_INSENSITIVE);  
+		Matcher encaixe = numericos.matcher((String)value);  
+		StringBuffer saida = new StringBuffer();  
+		while(encaixe.find())  
+		     saida.append(encaixe.group());  
+		
+		String strCpf = saida.toString();
+		
 		d1 = d2 = 0;
 		digito1 = digito2 = resto = 0;
 
@@ -75,14 +79,20 @@ public class CPFValidate implements Validator {
 		// comparar o digito verificador do cpf com o primeiro resto + o segundo
 		// resto.
 		if(!nDigVerific.equals(nDigResult)){
-			FacesMessage message = new FacesMessage();
-		    message.setDetail("Formato de CPF inválido");
-		    message.setSummary("CPF inválido");
-		    message.setSeverity(FacesMessage.SEVERITY_ERROR);
-		    throw new ValidatorException(message);  
+			geraExcecao();
 			
 		}
+		
+		}else geraExcecao();
 
+	}
+	
+	private void geraExcecao(){
+		FacesMessage message = new FacesMessage();
+		message.setDetail("Formato de CPF inválido");
+	    message.setSummary("CPF inválido");
+	    message.setSeverity(FacesMessage.SEVERITY_ERROR);
+	    throw new ValidatorException(message);  
 	}
 
 }

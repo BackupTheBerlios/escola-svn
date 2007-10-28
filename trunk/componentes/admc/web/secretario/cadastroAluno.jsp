@@ -67,13 +67,14 @@
 							<tr>
 								<td width="598" height="377" align="center" valign="top"
 									class="bordamenu"><br />
-								<h:messages title="msg" id="msg" />
+								 <h:messages />
 								 <h:panelGrid columns="2" width="590">
 									<h:outputText value="Matricula:" />
-									<h:inputText value="#{alunoController.matricula}" size="15" disabled="true"/>
-									<h:outputText value="Nome:" />
-									<h:inputText value="#{alunoController.nome}" size="50" required="true">
-									   <f:validateLength minimum="2" maximum="200" />
+									<h:inputText  value="#{alunoController.matricula}" size="15" disabled="true"/>
+									<h:outputText  value="Nome:" />
+									<h:inputText id="nome" value="#{alunoController.nome}" size="50" required="true">
+									   <f:validateLength minimum="2" maximum="200"/>
+									   <h:message for="nome" showDetail="true"/>
 									</h:inputText>
 									<h:outputText value="Sexo:" />
 									<h:selectOneMenu value="#{alunoController.sexo}" >
@@ -81,9 +82,10 @@
 										<f:selectItem itemValue="F" itemLabel="Feminino" />
 									</h:selectOneMenu>
 									<h:outputText value="Data Nascimento:" />
-									<h:inputText value="#{alunoController.dataNascimento}"
+									<h:inputText id="datanascimento" value="#{alunoController.dataNascimento}"
 										size="12" >
 										 <f:validator validatorId="dataValidate"/>
+										 <h:message for="datanascimento"/>
 									</h:inputText>	
 									<h:outputText value="Telefone Fixo:" />
 									<h:panelGrid columns="2">
@@ -104,8 +106,10 @@
 										</h:inputText>
 									</h:panelGrid>
 									<h:outputText value="CPF:" />
-									<h:inputText value="#{alunoController.cpf}" size="15" required="true">
+									<h:inputText id="cpf" value="#{alunoController.cpf}" size="15" required="true">
 									    <f:validator validatorId="cpfValidate"/>
+									    <h:message for="cpf" showDetail="true"/>
+									      
 									</h:inputText>
 									<h:outputText value="RG:" />
 									<h:inputText value="#{alunoController.rg}" size="15" />
