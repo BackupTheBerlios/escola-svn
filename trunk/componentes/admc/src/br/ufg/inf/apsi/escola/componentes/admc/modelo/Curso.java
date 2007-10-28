@@ -1,14 +1,3 @@
-/*
- * Curso.java
- *
- * Alterado em 13 de Outubro de 2007 16:06
- * Por: Yoshi
- * 
- * 
- * Alterado em 15 de Outubro de 2007
- * Por: Fernando Nery
- * 
- */
 package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 
 import java.io.Serializable;
@@ -47,7 +36,7 @@ public class Curso implements Serializable {
 	private Integer cargaHoraria;
 
 	/**
-	 * Cria inst�ncia de Curso
+	 * Cria instancia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
@@ -61,7 +50,7 @@ public class Curso implements Serializable {
 	}
 
 	/**
-	 * Cria inst�ncia de Curso
+	 * Cria instancia de Curso
 	 * <p>
 	 * 
 	 * @param codigo
@@ -77,7 +66,7 @@ public class Curso implements Serializable {
 	}
 
 	/**
-	 * Cria inst�ncia de Curso
+	 * Cria instancia de Curso
 	 */
 	public Curso() {
 		this.codigo = new String();
