@@ -3,7 +3,6 @@ package br.ufg.inf.apsi.escola.componentes.admc.servico;
 import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 
 public interface CursoService {
 
@@ -15,6 +14,4 @@ public interface CursoService {
 
 	public abstract List<Curso> consultar() throws Exception;
 
-	public abstract List<Disciplina> consultarDisciplinaDeCurso(long idCurso)
-			throws Exception;
 }
