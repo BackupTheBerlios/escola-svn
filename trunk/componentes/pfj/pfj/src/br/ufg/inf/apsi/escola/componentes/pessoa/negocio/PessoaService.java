@@ -8,6 +8,7 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Endereco;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Telefone;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
+import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.PessoaNaoEncontradaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.BairroRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.CidadeRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.DocumentoRepository;
@@ -445,6 +446,13 @@ public interface PessoaService {
 	 * @param tr
 	 */
 	void setTelefoneRepository(TelefoneRepository tr);
+	/**
+	 * operação definida para retornar todos os dados de uma pessoa na forma de um Objeto da Classe String
+	 * @param pessoaId
+	 * @return String
+	 * @throws PessoaNaoEncontradaException
+	 */
+	String toString(Long pessoaId) throws PessoaNaoEncontradaException;
 	/**
 	 * Operação definida para verificar a exatidão da adição de documentos à lista de documentos de uma pessoa.
 	 * Por exemplo, um CNPJ não poderá ser adicionado à lista de documentos de uma pessoa física, da mesma forma,

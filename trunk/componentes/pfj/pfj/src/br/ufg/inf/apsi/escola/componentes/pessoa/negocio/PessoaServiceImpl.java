@@ -995,6 +995,20 @@ public class PessoaServiceImpl implements PessoaService {
 	public void setTelefoneRepository(TelefoneRepository telefoneRepository) {
 		this.telefoneRepository = telefoneRepository;
 	}
+	/**
+	 * @see PessoaService#toString(Long)
+	 */
+	@Override
+	public String toString(Long pessoaId) throws PessoaNaoEncontradaException {
+		
+		Pessoa pessoa = null;
+		try {
+			pessoa = pessoaRepository.consultarPessoaId(pessoaId);
+		} catch (PessoaNaoEncontradaException e) {
+			throw new PessoaNaoEncontradaException();
+		}
+		return pessoa.toString();
+	}
 
 	/**
 	 * @see br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService#verificaAdicaoDocumentoLista(Pessoa, Documento)
