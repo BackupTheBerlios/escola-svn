@@ -6,22 +6,8 @@
 	version="1.2">
 
 	<application>
-		<!--
-			<el-resolver>
-			org.springframework.web.jsf.DelegatingVariableResolver
-			</el-resolver>
-		-->
 		<variable-resolver>
 			org.springframework.web.jsf.DelegatingVariableResolver
 		</variable-resolver>
-
 	</application>
-
-	<navigation-rule>
-		<from-view-id>/CadastroExcluiAvaliacao.jsp</from-view-id>
-		<navigation-case>
-			<from-outcome>Avaliacao_Cadastrada</from-outcome>
-			<to-view-id>/CadastroQuestao.jsp</to-view-id>
-		</navigation-case>
-	</navigation-rule>
 </faces-config>
