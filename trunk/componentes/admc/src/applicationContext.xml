@@ -20,9 +20,11 @@
 	<bean id="alunoController"
 		class="br.ufg.inf.apsi.escola.ui.AlunoController" scope="session" />
 
-
 	<bean id="cursoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
+		
+	<bean id="turmaController"
+		class="br.ufg.inf.apsi.escola.ui.TurmaController" scope="session" />
 
 	<bean id="cursoAlunoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />

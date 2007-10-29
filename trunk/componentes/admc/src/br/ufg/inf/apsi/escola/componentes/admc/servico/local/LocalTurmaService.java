@@ -22,12 +22,12 @@ public class LocalTurmaService implements TurmaService {
 		return this.turmaNegocio.consultar();
 	}
 
-	public Turma consultar(String codigoTurma) throws Exception {
-		return this.turmaNegocio.consultar(codigoTurma);
+	public Turma consultar(long id) throws Exception {
+		return this.turmaNegocio.consultar(id);
 	}
 
-	public void excluir(String codigoTurma) throws Exception {
-		this.turmaNegocio.excluir(codigoTurma);
+	public void excluir(long id) throws Exception {
+		this.turmaNegocio.excluir(id);
 
 	}
 

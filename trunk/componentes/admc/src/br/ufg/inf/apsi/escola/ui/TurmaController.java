@@ -3,6 +3,16 @@
  */
 package br.ufg.inf.apsi.escola.ui;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.model.DataModel;
+import javax.faces.model.ListDataModel;
+import javax.faces.model.SelectItem;
+
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
+import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.DisciplinaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.DocenteService;
@@ -14,43 +24,36 @@ import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
  * 
  */
 public class TurmaController {
-	private String codigoTurma;
-
-	private String expressao;
-
-	private int qtdeNotas;
-
-	private boolean preMatricula;
 
 	private boolean situacao;
 
-	private String codigoDisciplina;
+	private boolean preMatricula;
 
-	private String matriculaDocente;
+	private String codigoTurma;
 
-	private String nomeDocente;
+	private long docenteId;
 
-	private long idDocente;
-
-	private long idDisciplina;
-
-	private String nomeDisciplina;
+	private long disciplinaId;
 
 	private TurmaService turmaService;
 
 	private LocalServiceFactory localServiceFactory;
 
+	private List<Docente> docentes;
+
+	private List<Disciplina> disciplinas;
+
+	private int qtdeNotas;
+
+	private String expressao;
+
+	private DataModel model;
+
+	private long idTurma;
+
 	public TurmaController() {
 		localServiceFactory = new LocalServiceFactory();
 		turmaService = localServiceFactory.obterTurmaService();
-	}
-
-	public String getExpressao() {
-		return expressao;
-	}
-
-	public void setExpressao(String expressao) {
-		this.expressao = expressao;
 	}
 
 	public int getQtdeNotas() {
@@ -61,36 +64,28 @@ public class TurmaController {
 		this.qtdeNotas = qtdeNotas;
 	}
 
-	public String getNomeDocente() {
-		return nomeDocente;
+	public String getExpressao() {
+		return expressao;
 	}
 
-	public void setNomeDocente(String nomeDocente) {
-		this.nomeDocente = nomeDocente;
+	public void setExpressao(String expressao) {
+		this.expressao = expressao;
 	}
 
-	public long getIdDocente() {
-		return idDocente;
+	public long getDocenteId() {
+		return docenteId;
 	}
 
-	public void setIdDocente(long idDocente) {
-		this.idDocente = idDocente;
+	public void setDocenteId(long docenteId) {
+		this.docenteId = docenteId;
 	}
 
-	public long getIdDisciplina() {
-		return idDisciplina;
+	public long getDisciplinaId() {
+		return disciplinaId;
 	}
 
-	public void setIdDisciplina(long idDisciplina) {
-		this.idDisciplina = idDisciplina;
-	}
-
-	public String getNomeDisciplina() {
-		return nomeDisciplina;
-	}
-
-	public void setNomeDisciplina(String nomeDisciplina) {
-		this.nomeDisciplina = nomeDisciplina;
+	public void setDisciplinaId(long disciplinaId) {
+		this.disciplinaId = disciplinaId;
 	}
 
 	public boolean isPreMatricula() {
@@ -109,22 +104,6 @@ public class TurmaController {
 		this.situacao = situacao;
 	}
 
-	public String getCodigoDisciplina() {
-		return codigoDisciplina;
-	}
-
-	public void setCodigoDisciplina(String codigoDisciplina) {
-		this.codigoDisciplina = codigoDisciplina;
-	}
-
-	public String getMatriculaDocente() {
-		return matriculaDocente;
-	}
-
-	public void setMatriculaDocente(String matriculaDocente) {
-		this.matriculaDocente = matriculaDocente;
-	}
-
 	public String getCodigoTurma() {
 		return codigoTurma;
 	}
@@ -133,19 +112,68 @@ public class TurmaController {
 		this.codigoTurma = codigoTurma;
 	}
 
+	public SelectItem[] getDocentes() {
+		DocenteService docenteService = localServiceFactory
+				.obterDocenteService();
+
+		List<SelectItem> items = new ArrayList<SelectItem>();
+		SelectItem[] a = { new SelectItem(0, "") };
+		try {
+			this.docentes = docenteService.consultar();
+			if (!this.docentes.isEmpty()) {
+
+				for (Docente docente : docentes) {
+					items.add(new SelectItem(docente.getId(), docente
+							.getMatricula()));
+				}
+			} else {
+				items.add(new SelectItem(0, ""));
+			}
+			return items.toArray(a);
+		} catch (Exception e) {
+			items.add(new SelectItem(0, ""));
+			return items.toArray(a);
+		}
+	}
+
+	public SelectItem[] getDisciplinas() {
+		DisciplinaService disciplinaService = localServiceFactory
+				.obterDisciplinaService();
+
+		List<SelectItem> items = new ArrayList<SelectItem>();
+		SelectItem[] a = { new SelectItem(0, "") };
+		try {
+			this.disciplinas = disciplinaService.consultar();
+			if (!this.disciplinas.isEmpty()) {
+
+				for (Disciplina disciplina : disciplinas) {
+					items.add(new SelectItem(disciplina.getId(), disciplina
+							.getNome()));
+				}
+			} else {
+				items.add(new SelectItem(0, ""));
+			}
+			return items.toArray(a);
+		} catch (Exception e) {
+			items.add(new SelectItem(0, ""));
+			return items.toArray(a);
+		}
+	}
+
 	/**
 	 * Método limpa a tela de cadastro de turma.
 	 * 
 	 * @return ""
 	 */
 	public String novo() {
+
+		setSituacao(false);
 		setCodigoTurma(null);
+		setDisciplinaId(0);
+		setDocenteId(0);
 		setExpressao(null);
-		setCodigoDisciplina(null);
-		setMatriculaDocente(null);
 		setPreMatricula(false);
 		setQtdeNotas(0);
-		setSituacao(false);
 		return "";
 	}
 
@@ -156,12 +184,16 @@ public class TurmaController {
 			DisciplinaService disciplinaService = localServiceFactory
 					.obterDisciplinaService();
 
-			Turma turma = new Turma(getCodigoTurma(), getExpressao(),
-					getQtdeNotas(), isPreMatricula(), isSituacao(),
-					disciplinaService.consultar(getIdDisciplina()),
-					docenteService.consultarPorMatricula(getMatriculaDocente()));
+			Docente docente = docenteService.consultar(docenteId);
+
+			Disciplina disciplina = disciplinaService.consultar(disciplinaId);
+
+			Turma turma = new Turma(idTurma, codigoTurma, expressao, qtdeNotas,
+					preMatricula, situacao, disciplina, docente);
 
 			turmaService.gravar(turma);
+
+			novo();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -169,4 +201,44 @@ public class TurmaController {
 
 		return "";
 	}
+
+	public DataModel getConsultar() {
+		List<Turma> listaQuery = null;
+		try {
+			listaQuery = turmaService.consultar();
+
+			model = new ListDataModel();
+
+		} catch (Exception e) {
+			model = new ListDataModel(listaQuery);
+		}
+		return model;
+	}
+
+	public String selecionaTurma() {
+		idTurma = ((Turma) model.getRowData()).getId();
+		setCodigoTurma(((Turma) model.getRowData()).getCodigoTurma());
+		setSituacao(((Turma) model.getRowData()).getSituacao());
+		setDisciplinaId(((Turma) model.getRowData()).getDisciplina().getId());
+		setDocenteId(((Turma) model.getRowData()).getDocente().getId());
+		setPreMatricula(((Turma) model.getRowData()).isPreMatricula());
+		setQtdeNotas(((Turma) model.getRowData()).getQtdeNotas());
+		setExpressao(((Turma) model.getRowData()).getExpressao());
+
+		return "";
+	}
+
+	public String excluir() {
+		idTurma = ((Turma) model.getRowData()).getId();
+
+		try {
+			turmaService.excluir(idTurma);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			return "";
+		}
+		return "";
+	}
+
 }

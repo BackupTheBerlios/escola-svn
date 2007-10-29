@@ -3,6 +3,8 @@ package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService;
+
 /**
  * Esta classe, <code>Turma</code>, representa uma turma. Toda turma possui:
  * <p>
@@ -89,8 +91,9 @@ public class Turma {
 	public Turma() {
 		this.codigoTurma = new String();
 		this.expressao = new String();
-		this.qtdeNotas = 0;
+		this.qtdeNotas = 1;
 		this.preMatricula = false;
+		this.situacao = false;
 		this.disciplina = new Disciplina();
 		this.docente = new Docente();
 		this.preMatriculaDisciplina = new ArrayList<PreMatriculaDisciplina>();
@@ -108,6 +111,21 @@ public class Turma {
 	public Turma(String codigoTurma, String expressao, int qtdeNotas,
 			boolean preMatricula, boolean situacao, Disciplina disciplina,
 			Docente docente) {
+		this.codigoTurma = codigoTurma;
+		this.expressao = expressao;
+		this.qtdeNotas = qtdeNotas;
+		this.preMatricula = preMatricula;
+		this.situacao = situacao;
+		this.disciplina = disciplina;
+		this.docente = docente;
+		this.preMatriculaDisciplina = new ArrayList<PreMatriculaDisciplina>();
+
+	}
+
+	public Turma(long id, String codigoTurma, String expressao, int qtdeNotas,
+			boolean preMatricula, boolean situacao, Disciplina disciplina,
+			Docente docente) {
+		this.id = id;
 		this.codigoTurma = codigoTurma;
 		this.expressao = expressao;
 		this.qtdeNotas = qtdeNotas;

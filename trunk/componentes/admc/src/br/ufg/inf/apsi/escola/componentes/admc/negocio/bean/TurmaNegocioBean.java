@@ -29,12 +29,12 @@ public class TurmaNegocioBean implements TurmaNegocio {
 		return this.turmaRepositorio.consultar();
 	}
 
-	public Turma consultar(String codigoTurma) throws Exception {
-		return this.turmaRepositorio.consultar(codigoTurma);
+	public Turma consultar(long id) throws Exception {
+		return this.turmaRepositorio.consultar(id);
 	}
 
-	public void excluir(String codigoTurma) throws Exception {
-		this.turmaRepositorio.excluir(codigoTurma);
+	public void excluir(long id) throws Exception {
+		this.turmaRepositorio.excluir(id);
 
 	}
 

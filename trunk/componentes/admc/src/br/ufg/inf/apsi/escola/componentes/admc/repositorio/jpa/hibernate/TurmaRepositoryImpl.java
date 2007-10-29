@@ -31,9 +31,9 @@ public class TurmaRepositoryImpl extends JpaDaoSupport implements
 		return list;
 	}
 
-	public Turma consultar(String codigoTurma) throws Exception {
+	public Turma consultar(long id) throws Exception {
 		Turma turma = (Turma) getJpaTemplate().find(Turma.class,
-				String.valueOf(codigoTurma));
+				Long.valueOf(id));
 
 		if (turma == null) {
 			throw new Exception("Nenhuma Turma encontrada!");
@@ -42,13 +42,18 @@ public class TurmaRepositoryImpl extends JpaDaoSupport implements
 		return turma;
 	}
 
-	public void excluir(String codigoTurma) throws Exception {
-		getJpaTemplate().remove(this.consultar(codigoTurma));
+	public void excluir(long id) throws Exception {
+		getJpaTemplate().remove(this.consultar(id));
 
 	}
 
 	public void gravar(Turma turma) throws Exception {
-		getJpaTemplate().persist(turma);
+		if (turma.getId() == 0) {
+			getJpaTemplate().persist(turma);
+		} else {
+			getJpaTemplate().merge(turma);
+		}
+		
 	}
 
 }
