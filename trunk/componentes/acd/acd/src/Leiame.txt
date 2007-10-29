@@ -1,0 +1,119 @@
+﻿UNIVERSIDADE FEDERAL DE GOIÁS - UFG
+CURSO: ESPECIALIZAÇÃO EM ANÁLISE E PROJETO DE SISTEMAS DE INFORMAÇÃO
+TURMA: APSI-2006
+ALUNO: RODRIGO MORIAN LOURES
+
+PROJETO: ESCOLA
+MÓDULO: AVALIAÇÃO DO CORPO DOCENTE
+
+
+ÍNDICE
+
+1- Introdução
+2- Estrutura de pastas
+3- Pré-Requisitos de Instalação
+4- Instalação
+5- Observações
+5- Bibliotecas
+
+
+1- INTRODUÇÃO
+
+O Escola é o projeto de desenvolvimento de um software livre para gerenciamento acadêmico de cursos de pós-graduação. Para ver mais detalhes leia a documentação do projeto.
+Este módulo está contemplado a parte de "Avaliação do Corpo Docente", onde o secretário poderá criar uma avaliação para uma turma e os alunos da mesma poderão respondê-la avaliando o professor, que por sua vez poderá consultar posteriormente essa avaliação e verificar seu desempenho na turma.
+
+
+2- ESTRUTURA DE PASTAS
+
+2.1- acd
+	- Diretório raiz do projeto, contém todas as pastas e arquivos do projeto;
+
+2.2- acd/src
+	- Pacotes com arquivos de código fonte java (*.java);
+	- Pasta META-INF => contém arquivos xml para mapeamento objeto-relacional usado pelo JPA;
+	- Pasta db => comtém os arquivos do banco de dados escola;
+	- Arquivo build.xml, arquivo usado pelo Ant para automatizar tarefas;
+	- Arquivo applicationContext, arquivo de contexto da aplicação usado pela framework Spring;
+	- Arquivo log4j.properties, contém as configurações para geração de logs de persistência;
+	- Arquivo Leiame.txt, este arquivo, com uma rápida explicação sobre o projeto e instruções de instalação.
+
+2.3- acd/test
+	- Pacotes com arquivos de código fonte java (*.java) para testes de unidades usando JUnit;
+
+2.4- acd/web
+	- Pasta META-INF;
+	- Pasta WEB-INF =>
+		+ Pasta classes, arquivos compilados do sistema;
+		+ Pasta classes/db, arquivos do banco de dados;
+		+ Pasta lib, bibliotecas java (*.jar) necessárias para executar a aplicação.
+		+ Arquivo web.xml, configuração da aplicação para o Tomcat;
+		+ Arquivo faces-config.xml, arquivo de configuração JSF;
+	- Arquivos JSF e JSP (*.jsp);
+
+
+3- PRÉ-REQUISITOS DE INSTALAÇÃO
+
+Ferramentas do KAD (KAD-0.9) instaladas no computador, ou assegure que estajam instalados no computador o TomCat 6.0, Java Standard Edition Runtime Environment 6.0 (JRE), Ant, e que todas as bibliotecas do diretório "../acd/web/WEB-INF/lib" citadas no item 5 estejam presentes;
+
+
+3- INSTALAÇÃO
+
+	3.1- Abra o prompt de comando, vá para o diretório "../acd/src" da aplicação;
+
+	3.2- Execute o comando "ant compile", para compilar os arquivos fonte java (*.java);
+
+	3.3- Execute o comando "ant prepare", para preparar a aplicação para instalação;
+
+	3.4- Execute o comando "ant db-start", para inicializar e criar o banco de dados;
+
+	3.5- Execute o comando "startup.sh" (startup.bat - Windows), para inicializar o TomCat;
+
+	3.6- Instalar a aplicação no TomCat:
+		3.6.1- Abra o Browser, digite a URL, http://localhost:8080;
+		3.6.2- Clique em "Tomcat Manager", digite o usuário - "admin" e a senha - "admin" e clique no botão OK;
+		3.6.3- Vá para parte de Deploy e preencha os campos da seguinte maneira:
+		3.6.3.1- Context Path (optional): "/acd";
+		3.6.3.2- XML Configuration file URL: "../acd/web/WEB-INF/web.xml";
+		3.6.3.3- WAR or Directory URL: "../acd/web/WEB-INF";
+		3.6.3.4- Clique no botão Deploy;
+
+	3.6.4- Verifique se o projeto está criado na lista de aplicações e está iniciado.
+
+
+4- ACESSANDO A APLICAÇÃO
+
+Abra o browser, informe a URL "http://localhost:8080/acd" e tecle <ENTER>, então aparecerá o menu de opções do sistema.
+
+
+5- OBSERVAÇÕES
+
+5.1- Ant: O arquivo build.xml que acompanha o projeto, possui duas funcionalidades que para funcionarem exigem bibliotecas que não fazem parte do KAD (KAD-0.9), devido ao fato de estarmos usando JPA para persistência, são as bibliotecas do "hibernate-tools". Por isso, elas estão comentadas, mas caso se resolva adotar o hibernate-tools, basta descomentá-las. Mas acho que não é necessário, já que o esquema é criado automaticamente quando se executa a aplicação. São elas:
+	- <target name="db-schema" depends="compile" description="Cria o esquema no banco de dados">
+	- <target name="db-drop" depends="compile"  description="Remove o esquema do banco de dados">
+
+
+6- BIBLIOTECAS
+
+Bibliotecas java necessárias para a execução da aplicação, essas bibliotecas devem estar no diretório "..acd/web/WEB-INF/lib":
+antlr-2.7.6.jar
+ejb3-persistence.jar                aspectjweaver.jar
+acegi-security-1.0.3.jar            ehcache-1.2.4.jar
+jta.jar                             spring.jar
+webui.jar                           commons-collections.jar
+commons-pool.jar                    hibernate-entitymanager.jar
+commons-el-1.0.jar                  jstl.jar
+appbase.jar                         cglib-2.1.3.jar
+commons-validator-1.3.1.jar         dom4j-1.6.1.jar
+jmock-junit4-2.1.0.jar              persistence.jar
+javassist.jar                       jsfcl.jar
+hibernate-commons-annotations.jar   standard.jar
+cglib-nodep-2.1_3.jar               hibernate-annotations.jar
+jmock-2.1.0.jar                     commons-logging.jar
+commons-lang.jar                    commons-digester.jar
+hibernate3.jar                      hsqldb.jar
+junit-4.3.1.jar                     hibernate-validator.jar
+log4j-1.2.14.jar                    jboss-archive-browsing.jar
+asm.jar                             aspectjrt.jar
+jsf-api.jar                         commons-beanutils.jar
+commons-dbcp.jar                    jsf-impl.jar
+dataprovider.jar                    commons-codec-1.3.jar

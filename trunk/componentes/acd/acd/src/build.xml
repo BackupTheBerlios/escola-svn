@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="acd" basedir="." default="">
+
+	<echo message="ESCOLA - ACD" />
+
+	<property environment="env" />
+	<property name="kad.libs" value="${env.KAD_LIBS}" />
+
+	<property name="hsqldb.jar" value="${kad.libs}/hsqldb/lib/hsqldb.jar" />
+	<property name="hibernate.dir" value="${kad.libs}/hibernate-3.2" />
+	<property name="jmock.dir" value="${kad.libs}/jmock-2.1.0" />
+	<property name="junit.dir" value="${kad.libs}/junit4.3.1" />
+    <property name="src.dir" location="." />
+    <property name="test.dir" location="../test" />
+    <property name="db.dir" location="../web/WEB-INF/classes/db" />
+	<property name="build.dir" location="../web/WEB-INF/classes" />
+	<property name="lib.dir" location="../web/WEB-INF/lib" />
+    <property name="doc.dir" location="../doc" />
+
+
+	<path id="projeto.classpath">
+		<pathelement location="${hibernate.dir}/hibernate3.jar" />
+		<pathelement location="${hsqldb.jar}" />
+		<fileset dir="${hibernate.dir}/lib" includes="*.jar" />
+		<fileset dir="${jmock.dir}" includes="jmock-2.1.0.jar, jmock-junit4-2.1.0.jar, hamcrest-api-1.0.jar, hamcrest-library-1.0.jar" />
+		<fileset dir="${junit.dir}" includes="*.jar" />
+		<fileset dir="${lib.dir}" includes="*.jar" />
+		<path location="${build.dir}" />	
+		<path location="." />
+	</path>
+
+
+	<target name="compile" description="Compila os arquivos fontes java (*.java) do sistema">
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="projeto.classpath" />
+		</javac>
+	</target>
+
+	<target name="test-compile" description="Compila os arquivos fontes java (*.java) dos testes de unidade">
+		<javac srcdir="${test.dir}" destdir="${build.dir}">
+			<classpath refid="projeto.classpath" />
+		</javac>
+	</target>
+
+	<target name="test-execute" depends="compile, test-compile" description="Executa os testes de unidade">
+		<echo message="Executar classe de teste => AvaliacaoTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.modelo.AvaliacaoTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+		<echo message="Executar classe de teste => FormAvaliacaoTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.modelo.FormAvaliacaoTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+		<echo message="Executar classe de teste => QuestaoTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.modelo.QuestaoTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+		<echo message="Executar classe de teste => RespostaTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.modelo.RespostaTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+		<echo message="Executar classe de teste => AvaliacaoDocenteHandlerImplTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.negocio.bean.AvaliacaoDocenteHandlerImplTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+<!--		<echo message="Executar classe de teste => AvaliacaoRepositoryImplTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.AvaliacaoRepositoryImplTest" >
+			<classpath refid="projeto.classpath" />
+		</java>
+		<echo message="Executar classe de teste => FormAvaliacaoRepositoryImplTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.FormAvaliacaoRepositoryImplTest" >
+			<classpath refid="projeto.classpath" />
+		</java> -->
+	</target>
+
+
+	<target name="db-start" description="Cria e inicia o SGBD (escola)">
+		<mkdir dir="${db.dir}" />
+		<java classname="org.hsqldb.Server" spawn="yes" fork="yes">
+			<arg line="-database.0 ${db.dir}/escola -dbname.0 escola" />
+			<classpath>
+				<pathelement path="${hsqldb.jar}" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="db-manager" description="Inicia HSQLDB manager (cliente SQL)">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" spawn="yes" fork="yes">
+			<arg line="-url jdbc:hsqldb:hsql://localhost/escola" />
+			<classpath>
+				<pathelement path="${hsqldb.jar}" />
+			</classpath>
+		</java>
+	</target>
+<!--
+   <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="projeto.classpath"/>
+
+    <target name="db-schema" depends="compile" description="Cria o esquema no banco de dados">
+    	
+        <hibernatetool destdir="${build.dir}" >
+            <jpaconfiguration persistenceunit="acd" />
+        	<classpath refid="projeto.classpath" />
+            <hbm2ddl drop="false" create="true" export="true" outputfilename="SchemaDDL.sql" delimiter=";" format="true" />
+        </hibernatetool>
+    </target>	
+
+	<target name="db-drop" depends="compile"  description="Remove o esquema do banco de dados">
+    	
+        <hibernatetool destdir="${build.dir}" classpath="projeto.classpath">
+            <jpaconfiguration persistenceunit="acd" />
+        	<classpath refid="projeto.classpath" />
+            <hbm2hbmxml drop="true" create="false" export="true" outputfilename="DropDDL.sql" delimiter=";" format="true"/>
+        </hibernatetool>
+    </target>	
+-->
+
+	<target name="clean" description="Limpa o diretorio '../acd/web/WEB-INF/classes'">
+		<delete dir="${build.dir}" includes="*, **/*" includeemptydirs="true" casesensitive="false" quiet="true">
+		</delete>
+	</target>
+
+	<target name="prepare" depends="compile, test-compile" description="Prepara o projeto para a instalaçao">
+		<copy todir="${build.dir}" includeemptydirs="true" overwrite="yes">
+			<fileset dir="${src.dir}" excludes="**/*.java"></fileset>
+		</copy>
+	</target>
+	
+    <target name="javadoc" description="Gera documentaçao javadoc">
+        <javadoc access="public" author="true" classpath="projeto.classpath" destdir="${doc.dir}" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false"
+        	 sourcepath="${test.dir}:${src.dir}" splitindex="true" use="true" version="true">
+			<classpath refid="projeto.classpath" />
+        	<link href="file:${doc.dir}" />
+        </javadoc>
+    </target>
+
+</project>

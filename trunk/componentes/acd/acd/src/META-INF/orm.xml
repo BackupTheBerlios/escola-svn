@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+
+	<description>Avaliacao do Corpo Docente</description>
+	<package>br.ufg.inf.apsi.escola.componentes.acd.modelo</package>
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.acd.modelo.Avaliacao"
+		name="Avaliacao">
+		<table name="Avaliacao" />
+		<attributes>
+			<id name="id">
+				<column name="Id" />
+				<generated-value strategy="AUTO" />
+			</id>
+
+			<basic name="turmaId">
+				<column name="TurmaId" unique="true" nullable="false" />
+			</basic>
+
+			<one-to-many name="formulariosAvaliacao"
+				mapped-by="avaliacao" fetch="LAZY">
+			</one-to-many>
+
+			<one-to-many name="questoes" fetch="LAZY">
+				<join-column name="AvaliacaoId" nullable="false" />
+				<cascade><cascade-all/></cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.acd.modelo.FormAvaliacao"
+		name="FormAvaliacao">
+		<table name="FormAvaliacao" />
+		<attributes>
+			<id name="id">
+				<column name="Id" />
+				<generated-value strategy="AUTO" />
+			</id>
+
+			<basic name="alunoId">
+				<column name="AlunoId" nullable="false" />
+			</basic>
+
+			<many-to-one name="avaliacao" fetch="EAGER">
+				<join-column name="AvaliacaoId"
+					referenced-column-name="Id" nullable="false" />
+			</many-to-one>
+
+			<one-to-many name="respostas" fetch="LAZY">
+				<join-column name="FormAvaliacaoId" nullable="false" />
+				<cascade>
+					<cascade-all />
+				</cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.acd.modelo.Questao"
+		name="Questao">
+		<table name="Questao" />
+		<attributes>
+			<id name="id">
+				<column name="Id" />
+				<generated-value strategy="AUTO" />
+			</id>
+
+			<basic name="objetiva">
+				<column name="Objetiva" nullable="false" />
+			</basic>
+
+			<basic name="pergunta">
+				<column name="Pergunta" length="80" nullable="false" />
+			</basic>
+		</attributes>
+	</entity>
+ 
+	<entity
+		class="br.ufg.inf.apsi.escola.componentes.acd.modelo.Resposta"
+		name="Resposta">
+		<table name="Resposta" />
+		<attributes>
+			<id name="id">
+				<column name="Id" />
+				<generated-value strategy="AUTO" />
+			</id>
+
+			<basic name="resposta">
+				<column name="Resposta" length="100" />
+			</basic>
+
+			<many-to-one name="questao" fetch="EAGER">
+				<join-column name="QuestaoId"
+					referenced-column-name="Id" nullable="false" />
+			</many-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>
