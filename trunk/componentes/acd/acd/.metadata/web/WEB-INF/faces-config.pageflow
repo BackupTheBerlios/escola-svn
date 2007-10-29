@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11929705117170" configfile="/acd/web/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="CadastroExcluiAvaliacao" id="pf11929719654997" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf11929719654998" path="/CadastroExcluiAvaliacao.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="CadastroQuestao" id="pf11929719654999" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf11929719654998" path="/CadastroQuestao.jsp"/>
-  <links id="pf11929719654998" target="pf11929719654999" source="pf11929719654997" outcome="Avaliacao_Cadastrada"/>
-</pageflow:Pageflow>
