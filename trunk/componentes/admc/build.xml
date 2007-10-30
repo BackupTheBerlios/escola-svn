@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="admc" basedir="." default="execute">
+<project name="admc" basedir="." default="deploy">
 
+	<!-- Configuracoes do projeto -->
+	    <property name="project.distname" value="admc"/>
+	
 	<!-- ================================================================= -->
 	<!-- Define 'kad.libs' (repositório de bibliotecas do Kad)                    -->
 	<!-- ================================================================= -->
@@ -12,8 +15,12 @@
 	<!-- ================================================================= -->
 	<property file="${kad.libs}/kad-libs.properties" />
 
-	<property name="src.dir" location="/home/totoim/workspace/admc/src" />
-	<property name="build.dir" location="/home/totoim/workspace/admc/build" />
+	<property name="src.dir" location="${basedir}/src" />
+	<property name="build.dir" location="${basedir}/build" />
+	<property name="test.dir" location="${basedir}/test" />
+	<property name="webroot.dir" value="${basedir}/web"/>
+	<property name="webinf.dir" value="${webroot.dir}/WEB-INF"/>
+	
 
 	<!-- ================================================================= -->
 	<!-- CLASSPATH (bibliotecas e diretórios necessários para Hibernate    -->
@@ -29,33 +36,94 @@
 		<pathelement location="${h.tools2.jar}" />
 		<pathelement location="${h.annotations.jar}" />
 		<pathelement location="${spring.jar}" />
-		
-		<path location="${build.dir}" />
+		<pathelement location="${acegi.jar}" />
+		<pathelement location="${ant-contrib.jar}" />
+		<pathelement location="${commons-beanutils.jar}" />
+		<pathelement location="${commons-collections.jar}" />
+		<pathelement location="${commons-dbcp.jar}" />
+		<pathelement location="${commons-digester.jar}" />
+		<pathelement location="${commons-fileupload.jar}" />
+		<pathelement location="${commons-io.jar}" />
+		<pathelement location="${commons-lang.jar}" />
+		<pathelement location="${commons-logging.jar}" />
+		<pathelement location="${commons-pool.jar}" />
+		<pathelement location="${commons-validator.jar}" />
+		<pathelement location="${jaf.jar}" />
+		<pathelement location="${javamail.jar}" />
+		<pathelement location="${jstl.jar}" />
+		<pathelement location="${jsp2.jar}" />
+		<pathelement location="${junit.jar}" />
+		<pathelement location="${log4j.jar}" />
+		<pathelement location="${servletapi.jar}" />
+		<pathelement location="${sitemesh.jar}" />
+		<pathelement location="${jsf.jar}" />
+		<pathelement location="${jsf2.jar}" />	
+	
+		<pathelement path ="${webinf.dir}/classes"/>
 
 		<!-- Inclui arquivos de configuração -->
 		<path location="${ant.project.name}" />
 	</path>
 
-	<!-- Executa classe conforme comando no formato fornecido abaixo: -->
-	<!-- ant -Dclasse=<nome-da-classe> execute                        -->
-	<target name="execute" depends="compile" description="java X 0 1 (-Dclasse=X -Dargs='0 1')">
-		<java classname="${classe}">
-			<arg line="${args}" />
-			<classpath refid="projeto.classpath" />
-		</java>
-	</target>
+	    <!-- Pasta onde sera armazenado o binario -->
+	    <property name="deploy.dir" value="deploy"/>
 
-	<target name="compile" description="compila arquivos .java">
-		<mkdir dir="${build.dir}" />
-		<javac srcdir="${src.dir}" destdir="${build.dir}">
-			<classpath refid="projeto.classpath" />
-		</javac>
-	</target>
+	    <!-- Verifica arquivos modificados -->
+	    <target name="prepare">
+	        <tstamp/>
+	    </target>
 
-	<target name="clean" description="Apaga arquivos gerados">
-		<delete dir="${build.dir}" />
-	</target>
+	    <!-- Copia arquivos de configuracao para a pasta correta -->
+	    <target name="resources">
+	        <copy todir="${webinf.dir}/classes" includeEmptyDirs="no">
+	            <fileset dir="${src.dir}">
+	            <patternset>
+	                <include name="**/*.conf"/>
+	                <include name="**/*.properties"/>
+	                <include name="**/*.xml"/>
+	            </patternset>
+	            </fileset>
+	        </copy>
+	    </target>
 
+	    <!-- Compila arquivos -->
+	    <target name="compile" depends="prepare,resources">
+	        <javac srcdir="${src.dir}" destdir="${webinf.dir}/classes">
+	            <classpath refid="projeto.classpath"/>
+	        </javac>
+	    </target>
+
+	    <!-- Remove arquivos compilados da pasta build -->
+	    <target name="clean"
+	      description="Prepare for clean build">
+	      <delete dir="${webinf.dir}/classes"/>
+	      <mkdir  dir="${webinf.dir}/classes"/>
+	    </target>
+
+	    <!-- Constroi ou Reconstroi o projeto -->
+	    <target name="build" depends="prepare,compile,db-start,db-manager"/>
+	    <target name="rebuild" depends="clean,prepare,compile,db-start,db-manager"/>
+
+	    <!-- Cria arquivo binario para distribuicao -->
+	    <target name="war" depends="build">
+	      <mkdir dir="${build.dir}"/>
+	      <war
+	        basedir="${webroot.dir}"
+	        warfile="${build.dir}/${project.distname}.war"
+	        webxml="${webinf.dir}/web.xml">
+	        <exclude name="WEB-INF/${build.dir}/**"/>
+	        <exclude name="WEB-INF/src/**"/>
+	        <exclude name="WEB-INF/web.xml"/>
+	       </war>
+
+	    </target>
+
+	    <target name="deploy" depends="war">
+	       <delete file="${deploy.dir}/${project.distname}.war"/>
+	       <delete dir="${deploy.dir}/${project.distname}"/>
+	       <copy file="${build.dir}/${project.distname}.war" todir="${deploy.dir}"/>
+	    </target>
+	
 	<target name="db-start" description="inicia SGBD (escola)">
 		<java classname="org.hsqldb.Server" spawn="yes" fork="yes">
 			<jvmarg value="-Duser.dir=${kad.libs}" />
@@ -74,6 +142,7 @@
 		</java>
 	</target>
 
+	<target name="db-schema" description="Exporta o Schema para o Banco">
 	<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="projeto.classpath" />
 	<hibernatetool destdir="${build.dir}">
 			<jpaconfiguration persistenceunit="pu" />
@@ -82,28 +151,6 @@
 				</classpath>
 				<hbm2ddl export="true" outputfilename="schema.sql" />
 	</hibernatetool>
+	</target>
 	
-	<target name="db-show" depends="compile" description="exibe esquema">
-		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
-			<arg line="--output=${build.dir}/sql.ddl --text --format --config=hibernate.cfg.xml" />e
-			<classpath refid="projeto.classpath" />
-		</java>
-	</target>
-
-	<target name="db-schema" depends="compile" description="cria esquema (V2)">
-		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
-			<arg line="--output=${build.dir}/sql.ddl --format --config=hibernate.cfg.xml" />
-			<classpath refid="projeto.classpath" />
-		</java>
-	</target>
-
-	<target name="db-drop" depends="compile" description="remove esquama do HSQLDB">
-		<java classname="org.hibernate.tool.hbm2ddl.SchemaExport">
-			<arg line="--output=${build.dir}/sql.ddl --drop --config=hibernate.cfg.xml" />
-			<classpath refid="projeto.classpath" />
-		</java>
-	</target>
-
-	
-
 </project>
