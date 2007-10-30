@@ -57,7 +57,12 @@
 		<pathelement location="${servletapi.jar}" />
 		<pathelement location="${sitemesh.jar}" />
 		<pathelement location="${jsf.jar}" />
-		<pathelement location="${jsf2.jar}" />	
+		<pathelement location="${jsf2.jar}" />
+		
+		<!-- Dependencia Projeto Pessoa Fisica e Juridica -->
+		
+		<pathelement location="${webinf.dir}/lib/pfj.jar" />	
+		<pathelement location="${webinf.dir}/lib/pfj-data.jar" />	
 	
 		<pathelement path ="${webinf.dir}/classes"/>
 
@@ -86,8 +91,20 @@
 	        </copy>
 	    </target>
 
+	 <!-- Copia a dependencia do projeto Pessoa Fisica e Juridica para a pasta das bibliotecas -->
+		    <target name="dependencia">
+		        <copy todir="${webinf.dir}/lib" includeEmptyDirs="no">
+		            <fileset dir="${basedir}">
+		            <patternset>
+		                <include name="**/*.jar"/>
+		                
+		            </patternset>
+		            </fileset>
+		        </copy>
+		    </target>
+	
 	    <!-- Compila arquivos -->
-	    <target name="compile" depends="prepare,resources">
+	    <target name="compile" depends="prepare,resources,dependencia">
 	        <javac srcdir="${src.dir}" destdir="${webinf.dir}/classes">
 	            <classpath refid="projeto.classpath"/>
 	        </javac>
@@ -101,8 +118,8 @@
 	    </target>
 
 	    <!-- Constroi ou Reconstroi o projeto -->
-	    <target name="build" depends="prepare,compile,db-start,db-manager"/>
-	    <target name="rebuild" depends="clean,prepare,compile,db-start,db-manager"/>
+	    <target name="build" depends="prepare,compile,jar_admc,jar_admc_impl"/>
+	    <target name="rebuild" depends="clean,prepare,compile,jar_admc,jar_admc_impl"/>
 
 	    <!-- Cria arquivo binario para distribuicao -->
 	    <target name="war" depends="build">
@@ -117,7 +134,33 @@
 	       </war>
 
 	    </target>
+	 
+	 <!-- Cria binario com as interfaces do projeto-->
+	<target name="jar_admc" depends="compile">
+	    <jar destfile="${deploy.dir}/admc.jar"
+	         basedir="${webinf.dir}/classes"
+	         includes="br/ufg/inf/apsi/escola/componentes/admc/**"
+	    	      
+	    >
+	     <exclude name="br/ufg/inf/apsi/escola/componentes/admc/negocio/bean/**" />
+	     <exclude name="br/ufg/inf/apsi/escola/componentes/admc/repositorio/jpa/hibernate/**" />
+	     <exclude name="br/ufg/inf/apsi/escola/componentes/admc/servico/local/**" />
+	    	
+	   </jar> 	
+	  </target>
+	
+	<!-- Cria binario com as implementacoes do projeto-->
+	<target name="jar_admc_impl" depends="compile">
+	    <jar destfile="${deploy.dir}/admc-data.jar"
+	         basedir="${webinf.dir}/classes" >
+	    	 <include name="br/ufg/inf/apsi/escola/componentes/admc/negocio/bean/**"/>
+	    	 <include name="br/ufg/inf/apsi/escola/componentes/admc/repositorio/jpa/hibernate/**"/>
+	    	 <include name="br/ufg/inf/apsi/escola/componentes/admc/servico/local/**"/>
+	    	 
+	    </jar>	
+	  </target>
 
+	<!-- Cria arquivo binario para distribuicao -->
 	    <target name="deploy" depends="war">
 	       <delete file="${deploy.dir}/${project.distname}.war"/>
 	       <delete dir="${deploy.dir}/${project.distname}"/>
@@ -125,12 +168,19 @@
 	    </target>
 	
 	<target name="db-start" description="inicia SGBD (escola)">
-		<java classname="org.hsqldb.Server" spawn="yes" fork="yes">
-			<jvmarg value="-Duser.dir=${kad.libs}" />
-			<classpath>
-				<pathelement path="${hsqldb.jar}" />
-			</classpath>
-		</java>
+		<echo message="Iniciando HSQLDB"/>
+		<echo message="Base de Dados: ${basedir}/escola"/>
+		
+		   <java fork="true" dir="${basedir}" classname="org.hsqldb.Server">
+		      <classpath>
+		         <pathelement path="${hsqldb.jar}"/>
+		      </classpath>
+		      <arg value="-database.0"/>
+		   	  <arg value="escola"/>
+		      <arg value="-dbname.0"/>
+		      <arg value="escola"/>
+		      
+		   </java>
 	</target>
 
 	<target name="db-manager" description="inicia HSQLDB manager (cliente SQL)">
