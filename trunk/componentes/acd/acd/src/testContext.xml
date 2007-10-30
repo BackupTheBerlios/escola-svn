@@ -26,13 +26,54 @@
 
 	<!-- \\\\\\\\\\ INTEMEDIACAO ENTRE BANCO DE DADOS E APLICACAO ////////// -->
 	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="jpaVendorAdapter">
+			<bean id="vendor"
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="HSQL" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- \\\\\\\\\\ CONEXAO COM O BANCO DE DADOS ////////// -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:hsql://localhost/escola" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+
+	<!-- \\\\\\\\\\ CONTROLE E GERENCIAMENTO DE TRANSACAO ////////// -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"
+				rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="serviceOperation"
+			expression="execution(* br.ufg.inf.apsi.escola.componentes.*.servico.*.*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="serviceOperation" />
+	</aop:config>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+			ref="entityManagerFactory" />
+	</bean>
+</beans>
+<!--
+	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
 		<property name="persistenceUnitName" value="acd"/>
 	</bean>
-
-	<!-- \\\\\\\\\\ CONTROLE E GERENCIAMENTO DE TRANSACAO ////////// -->
-	<bean id="transactionManager"
-		class="org.springframework.orm.jpa.JpaTransactionManager">
-		<property name="entityManagerFactory" ref="entityManagerFactory" />
-	</bean>
-</beans>
+ -->
