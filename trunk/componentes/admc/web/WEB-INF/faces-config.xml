@@ -16,16 +16,41 @@
 			<from-outcome>novoAluno</from-outcome>
 			<to-view-id>/secretario/cadastroAluno.jsp</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>novoDocente</from-outcome>
+			<to-view-id>/secretario/cadastroDocente.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>consultarDocentes</from-outcome>
+			<to-view-id>/secretario/mostrarDocentes.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>consultarAlunos</from-outcome>
+			<to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>cadastroSecretario</from-outcome>
+			<to-view-id>/secretario/cadastroSecretario.jsp</to-view-id>
+		</navigation-case>
+
 	</navigation-rule>
 
-     <navigation-rule>
+	<navigation-rule>
 		<from-view-id>/secretario/Principal.jsp</from-view-id>
 		<navigation-case>
 			<from-outcome>consultarAlunos</from-outcome>
 			<to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
+	<navigation-rule>
+		<from-view-id>/secretario/Principal.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>consultarDocentes</from-outcome>
+			<to-view-id>/secretario/mostrarDocentes.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
 	<navigation-rule>
 		<from-view-id>/secretario/mostrarAlunos.jsp</from-view-id>
 		<navigation-case>
@@ -38,21 +63,58 @@
 		</navigation-case>
 	</navigation-rule>
 	
+	
+
+	<navigation-rule>
+		<from-view-id>/secretario/cadastroAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>consultarAlunos</from-outcome>
+			<to-view-id>/secretario/mostrarAlunos.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/secretario/cadastroDocente.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>consultarDocentes</from-outcome>
+			<to-view-id>/secretario/mostrarDocentes.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/secretario/mostrarDocentes.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>novoDocente</from-outcome>
+			<to-view-id>/secretario/cadastroDocente.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editarDocente</from-outcome>
+			<to-view-id>/secretario/cadastroDocente.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
 	<validator>
 
-    <validator-id>dataValidate</validator-id>
+		<validator-id>dataValidate</validator-id>
 
-    <validator-class>br.ufg.inf.apsi.escola.ui.utils.DataValidate</validator-class>
+		<validator-class>
+			br.ufg.inf.apsi.escola.ui.utils.DataValidate
+		</validator-class>
 
-  </validator>
-<validator>
+	</validator>
+	<validator>
 
-    <validator-id>cpfValidate</validator-id>
+		<validator-id>cpfValidate</validator-id>
 
-    <validator-class>br.ufg.inf.apsi.escola.ui.utils.CPFValidate</validator-class>
+		<validator-class>
+			br.ufg.inf.apsi.escola.ui.utils.CPFValidate
+		</validator-class>
 
-  </validator>	
-	
+	</validator>
+
 	<application>
 		<variable-resolver>
 			org.springframework.web.jsf.DelegatingVariableResolver

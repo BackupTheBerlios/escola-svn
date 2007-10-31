@@ -17,6 +17,11 @@ public class Secretario {
 	   this.pessoa_id = pessoa_id;
    }
    
+   public Secretario(long id,String matricula, long pessoa_id){
+	   this.id = id;
+	   this.matricula = matricula;
+	   this.pessoa_id = pessoa_id;
+   }
    
 	public long getId() {
 		return id;

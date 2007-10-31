@@ -2,20 +2,19 @@ package br.ufg.inf.apsi.escola.ui;
 
 import static br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.util.Util.formataData;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Aluno;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.DocenteService;
-import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.Pessoa;
 import br.ufg.inf.apsi.escola.componentes.pessoa.modelo.excecoes.EscolaException;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
-import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.jpa.hibernate.CriaPersistenciaGeral;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
 public class DocenteController {
@@ -23,13 +22,14 @@ public class DocenteController {
 	private DocenteService docenteService = null;
 	private LocalServiceFactory localServiceFactory = null;
 	private String matricula;
-	private String curriculum;
-	private List<Turma> turmas;
+	private String curriculo;
 	private String nome;
 	private String dataNascimento;
 	private String sexo;
-	private String telefone1;
-	private String telefone2;
+	private Long telefone1;
+	private Long telefone2;
+	private Short dddf1;
+	private Short dddf2;
 	private String cpf;
 	private String rg;
 	private String dataEmissao;
@@ -38,22 +38,22 @@ public class DocenteController {
 	private String endereco;
 	private String numero;
 	private String complemento;
-	private String cep;
+	private Integer cep;
 	private String bairro;
 	private String cidade;
 	private String estado;
 	private String pais;
-	private long id;
+	private Long id;
 
 	private DataModel model;
-	private CriaPersistenciaGeral cpg = null;
+
 	PessoaService ps = null;
 	PessoaRepository pr = null;
 
 	public DocenteController() {
 		localServiceFactory = new LocalServiceFactory();
 		docenteService = localServiceFactory.obterDocenteService();
-        ps = localServiceFactory.obterPessoaService();
+		ps = localServiceFactory.obterPessoaService();
 	}
 
 	public String novo() {
@@ -75,55 +75,95 @@ public class DocenteController {
 		setCidade(new String());
 		setEstado(new String());
 		setPais(new String());
-
-		return "novoAluno";
+		setDddf1(new String());
+		setDddf2(new String());
+        setCurriculo(new String());
+		return "novoDocente";
 	}
 
 	public String gravar() {
+		Long p = null;
 		try {
-			pr = ps.getPessoaRepository();
-			Pessoa p = pr.consultaPessoaDocumento(getCpf());
+
+			p = ps.consultaPessoaDocumento(getCpf());
+
+		} catch (EscolaException ee) {
+			// FacesContext.getCurrentInstance().addMessage("msg",new
+			// FacesMessage(ee.getMessage()));
+			p = null;
+		}
+		try {
+
 			if (p == null) {
 				ps.cadastraPessoa(getNome(), getSexo(),
 						formataData(getDataNascimento()), "", "", "",
-						"RESIDENCIAL", "", getEndereco(), getNumero(),
-						getComplemento(), Integer.getInteger(getCep()),
-						getBairro(), getCidade(), getEstado(), getPais(),
-						getEmail(), Short.parseShort(getTelefone1()), Long
-								.parseLong(getTelefone2()), "", getCpf(),
-						formataData(""), "", getRg(),
+						"RESIDENCIAL", "RUA", getEndereco(), getNumero(),
+						getComplemento(), this.cep, getBairro(), getCidade(),
+						getEstado(), getPais(), getEmail(), this.dddf1,
+						this.telefone1, "FIXO", getCpf(), null, null, getRg(),
 						formataData(getDataEmissao()), getOrgaoExpedidor());
 
-				p = pr.consultaPessoaDocumento(getCpf());
-				docenteService.gravar(new Docente(getMatricula(), getCurriculum(),getTurmas(),p.getId()));
+				p = ps.consultaPessoaDocumento(getCpf());
+
+			}
+			if (getId() > 0) {
+				docenteService.gravar(new Docente(getId(),getMatricula(), getCurriculo(),null,p));
 			} else {
-				docenteService.gravar(new Docente(getId(),getMatricula(), getCurriculum(),getTurmas(),p.getId()));
+				docenteService.gravar(new Docente(getMatricula(), getCurriculo(),null,p));
 			}
 
+			limpar();
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Dados Gravados com sucesso!"));
+
 		} catch (EscolaException ee) {
-			ee.getMessage();
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Erro ao gravar dados do Docente!"));
 		} catch (Exception e) {
-			e.getMessage();
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Erro ao gravar dados do Docente!"));
 		}
 
 		return null;
 
 	}
 
-	public String editar() {
-		Aluno aluno = getAlunoFromEditOrDelete();
+	public String excluir() throws Exception {
+		Docente docente = getDocenteFromEditOrDelete();
+
 		try {
-			setMatricula(aluno.getNumeroMatricula());
-			pr = ps.getPessoaRepository();
-			Pessoa p = pr.consultarPessoaId(aluno.getPessoa());
-			
-			setNome(p.getNome());
+
+			docenteService.excluir(docente.getId());
+
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Docente Excluído com sucesso!"));
+
+			return null;
+		} catch (Exception e) {
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage("Falha ao excluir o Docente!"));
+			return null;
+		}
+
+	}
+
+	public String editar() throws Exception {
+		Docente docente = getDocenteFromEditOrDelete();
+
+		try {
+
+			setMatricula(docente.getMatricula());
+
+			setNome(ps.consultaPessoaId(docente.getPessoaId()));
 			/**
-			 * Nao foi disponibilizado em PessoaRepository um metodo q 
-			 * permite consultar PessoaFisica, data nascimento e um 
-			 * atributo de pessoa fisica.
+			 * 
+			 * Não existe nenhum metodo em PessoaService q retorna os dados de
+			 * uma pessoa Fisica ou Juridica somente nome
+			 * 
 			 */
-			setDataNascimento("");
+			setDataNascimento(new String());
 			setTelefone1(new String());
 			setTelefone2(new String());
 			setCpf(new String());
@@ -139,7 +179,10 @@ public class DocenteController {
 			setCidade(new String());
 			setEstado(new String());
 			setPais(new String());
-			return "editar";
+			setDddf1(new String());
+			setDddf2(new String());
+            setCurriculo(new String());
+			return "editarDocente";
 		} catch (Exception e) {
 			return null;
 		}
@@ -147,19 +190,60 @@ public class DocenteController {
 	}
 
 	public DataModel getTodos() throws Exception {
-		try{
-		
-		model = new ListDataModel(docenteService.consultar());
-		
-		}catch(Exception e){
+		List<String[]> lista = new ArrayList<String[]>();
+		String dados[] = { "", "" };
+
+		try {
+
+			for (Docente d : docenteService.consultar()) {
+				dados[0] = String.valueOf(d.getId());
+				dados[1] = ps.consultaPessoaId(d.getPessoaId());
+				lista.add(dados);
+			}
+
+			model = new ListDataModel(lista);
+
+		} catch (Exception e) {
 			e.getMessage();
 		}
 		return model;
 	}
 
-	public Aluno getAlunoFromEditOrDelete() {
-		Aluno aluno = (Aluno) model.getRowData();
-		return aluno;
+	public Docente getDocenteFromEditOrDelete() {
+		Docente docente = null;
+		try {
+			String[] dados = (String[]) model.getRowData();
+			docente = docenteService.consultar(Long.parseLong(dados[0]));
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+		return docente;
+	}
+
+	public void limpar() {
+		setMatricula(new String());
+		setNome(new String());
+		setDataNascimento(new String());
+		setTelefone1(new String());
+		setTelefone2(new String());
+		setCpf(new String());
+		setRg(new String());
+		setDataEmissao(new String());
+		setOrgaoExpedidor(new String());
+		setEmail(new String());
+		setEndereco(new String());
+		setNumero(new String());
+		setComplemento(new String());
+		setCep(new String());
+		setBairro(new String());
+		setCidade(new String());
+		setEstado(new String());
+		setPais(new String());
+		setDddf1(new String());
+		setDddf2(new String());
+		setCurriculo(new String());
 	}
 
 	public String getMatricula() {
@@ -187,19 +271,31 @@ public class DocenteController {
 	}
 
 	public String getTelefone1() {
-		return telefone1;
+		return ((telefone1 == null) || (telefone1.equals(0))) ? "" : String
+				.valueOf(telefone1);
 	}
 
 	public void setTelefone1(String telefone1) {
-		this.telefone1 = telefone1;
+		try {
+			this.telefone1 = Long.parseLong(telefone1);
+		} catch (NumberFormatException nf) {
+
+		}
 	}
 
 	public String getTelefone2() {
-		return telefone2;
+
+		return ((telefone2 == null) || (telefone2.equals(0))) ? "" : String
+				.valueOf(telefone2);
+
 	}
 
 	public void setTelefone2(String telefone2) {
-		this.telefone2 = telefone2;
+		try {
+			this.telefone2 = Long.parseLong(telefone2);
+		} catch (NumberFormatException nf) {
+
+		}
 	}
 
 	public String getCpf() {
@@ -267,11 +363,15 @@ public class DocenteController {
 	}
 
 	public String getCep() {
-		return cep;
+		return ((cep == null) || (cep.equals(0))) ? "" : String.valueOf(cep);
 	}
 
 	public void setCep(String cep) {
-		this.cep = cep;
+		try {
+			this.cep = Integer.parseInt(cep);
+		} catch (NumberFormatException nf) {
+
+		}
 	}
 
 	public String getBairro() {
@@ -306,14 +406,6 @@ public class DocenteController {
 		this.pais = pais;
 	}
 
-	public CriaPersistenciaGeral getCpg() {
-		return cpg;
-	}
-
-	public void setCpg(CriaPersistenciaGeral cpg) {
-		this.cpg = cpg;
-	}
-
 	public String getSexo() {
 		return sexo;
 	}
@@ -322,30 +414,46 @@ public class DocenteController {
 		this.sexo = sexo;
 	}
 
-	public String getCurriculum() {
-		return curriculum;
-	}
-
-	public void setCurriculum(String curriculum) {
-		this.curriculum = curriculum;
-	}
-
-	
-	public List<Turma> getTurmas() {
-		return turmas;
-	}
-
-	public void setTurmas(List<Turma> turmas) {
-		this.turmas = turmas;
-	}
-
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-}
+	public String getCurriculo() {
+		return curriculo;
+	}
 
+	public void setCurriculo(String curriculo) {
+		this.curriculo = curriculo;
+	}
+
+	public String getDddf1() {
+		return ((dddf1 == null) || (dddf1.equals(0))) ? "" : String
+				.valueOf(dddf1);
+	}
+
+	public void setDddf1(String dddf1) {
+		try {
+			this.dddf1 = Short.parseShort(dddf1);
+		} catch (NumberFormatException ne) {
+
+		}
+	}
+
+	public String getDddf2() {
+		return ((dddf2 == null) || (dddf2.equals(0))) ? "" : String
+				.valueOf(dddf2);
+	}
+
+	public void setDddf2(String dddf2) {
+		try {
+			this.dddf2 = Short.parseShort(dddf2);
+		} catch (NumberFormatException ne) {
+
+		}
+	}
+
+}

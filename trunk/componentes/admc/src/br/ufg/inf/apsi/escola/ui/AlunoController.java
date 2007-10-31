@@ -17,6 +17,10 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
+/**
+ * @author Ailton Antonio de Araujo
+ * 
+ */
 public class AlunoController {
 
 	private AlunoService alunoService = null;
@@ -130,7 +134,7 @@ public class AlunoController {
 
 	}
 
-	public String editar() throws Exception {
+	public String excluir() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
 
 		try {
@@ -149,7 +153,7 @@ public class AlunoController {
 
 	}
 
-	public String excluir() throws Exception {
+	public String editar() throws Exception {
 		Aluno aluno = getAlunoFromEditOrDelete();
 
 		try {

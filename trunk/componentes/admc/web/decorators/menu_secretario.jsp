@@ -23,10 +23,10 @@
 		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Aluno" action="consultarAlunos"/> <f:verbatim> </td>
 	</tr>
 	<tr>
-		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Docente" action="#{docenteController.novo}"/> <f:verbatim> </td>
+		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Docente" action="consultarDocentes"/> <f:verbatim> </td>
 	</tr>
 	<tr>
-		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Secretario" action="#{secretarioController.novo}"/> <f:verbatim> </td>
+		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Secretario" action="#{secretarioController.cadastro}"/> <f:verbatim> </td>
 	</tr>
 	<tr>
 		<td class="bordamenu"></f:verbatim> <h:commandLink value="Cadastrar Disciplinas" action="#{disciplinaController.novo}"/> <f:verbatim> </td>

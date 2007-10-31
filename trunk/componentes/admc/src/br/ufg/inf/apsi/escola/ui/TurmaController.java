@@ -10,7 +10,6 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Curso;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Disciplina;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Docente;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
@@ -161,7 +160,7 @@ public class TurmaController {
 	}
 
 	/**
-	 * Método limpa a tela de cadastro de turma.
+	 * Mï¿½todo limpa a tela de cadastro de turma.
 	 * 
 	 * @return ""
 	 */

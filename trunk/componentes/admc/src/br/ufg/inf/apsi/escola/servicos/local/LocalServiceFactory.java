@@ -6,6 +6,7 @@ import br.ufg.inf.apsi.escola.componentes.admc.servico.DisciplinaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.DocenteService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.MatriculaTurmaService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.PreMatriculaDisciplinaService;
+import br.ufg.inf.apsi.escola.componentes.admc.servico.SecretarioService;
 import br.ufg.inf.apsi.escola.componentes.admc.servico.TurmaService;
 import br.ufg.inf.apsi.escola.componentes.pessoa.negocio.PessoaService;
 import br.ufg.inf.apsi.escola.ie.EscolaServiceDelegate;
@@ -63,4 +64,7 @@ public class LocalServiceFactory implements ServiceFactory {
 				.obtemServico("localDocenteService");
 	}
 
+	public SecretarioService obterSecretarioService(){
+		return (SecretarioService) escolaServiceDelegate.obtemServico("localSecretarioService");
+	}
 }

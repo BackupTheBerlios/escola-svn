@@ -19,10 +19,16 @@
 
 	<bean id="alunoController"
 		class="br.ufg.inf.apsi.escola.ui.AlunoController" scope="session" />
+	
+	<bean id="secretarioController"
+		class="br.ufg.inf.apsi.escola.ui.SecretarioController" scope="session" />	
+	
+	<bean id="docenteController"
+		class="br.ufg.inf.apsi.escola.ui.DocenteController" scope="session" />
 
 	<bean id="cursoController"
 		class="br.ufg.inf.apsi.escola.ui.CursoController" scope="session" />
-		
+
 	<bean id="turmaController"
 		class="br.ufg.inf.apsi.escola.ui.TurmaController" scope="session" />
 
@@ -280,15 +286,6 @@
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean>
-
-	<!-- Para o Tomcat-->
-	<!--
-		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName">
-		<value>java:comp/env/jdbc/escolaDataSource</value>
-		</property>        
-		</bean>
-	-->
 
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>

@@ -2,24 +2,23 @@ package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService;
+//import br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService;
 
 /**
  * Esta classe, <code>Turma</code>, representa uma turma. Toda turma possui:
  * <p>
- * *Uma identificação (<code>codigoTurma</code>);
+ * *Uma identificaï¿½ï¿½o (<code>codigoTurma</code>);
  * <p>
- * *Uma expressão de nota (<code>expressao</code>);
+ * *Uma expressï¿½o de nota (<code>expressao</code>);
  * <p>
  * *Quantidade de notas (<code>qtdeNotas</code>);
  * <p>
- * *Uma identificação se a turma está disponível para que alunos realizem
- * pré-matrícula (<code>preMatricula</code>);
+ * *Uma identificaï¿½ï¿½o se a turma estï¿½ disponï¿½vel para que alunos realizem
+ * prï¿½-matrï¿½cula (<code>preMatricula</code>);
  * <p>
- * *Um <code>Docente</code> responsável pela turma (<code>docente</code>);
+ * *Um <code>Docente</code> responsï¿½vel pela turma (<code>docente</code>);
  * <p>
- * *Uma turma é de uma <code>Disciplina</code> (<code>disciplina</code>);
+ * *Uma turma ï¿½ de uma <code>Disciplina</code> (<code>disciplina</code>);
  * 
  * @author Fernando Nery Barros
  * @data 13/10/2007
@@ -28,40 +27,40 @@ import br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService;
 public class Turma {
 
 	/**
-	 * Atributo <code>id</code> é obrigatório porque foi definido que ao
-	 * utilizar o hibernate todos objetos deverão conter um id para
-	 * identificação.
+	 * Atributo <code>id</code> ï¿½ obrigatï¿½rio porque foi definido que ao
+	 * utilizar o hibernate todos objetos deverï¿½o conter um id para
+	 * identificaï¿½ï¿½o.
 	 */
 
 	private long id;
 
 	/**
-	 * Atributo <code>codigoTurma</code> é o código da turma. Por exemplo a
-	 * turma Análise e Projeto de Sistema de Informação possui o código
+	 * Atributo <code>codigoTurma</code> ï¿½ o cï¿½digo da turma. Por exemplo a
+	 * turma Anï¿½lise e Projeto de Sistema de Informaï¿½ï¿½o possui o cï¿½digo
 	 * APSI2006.
 	 */
 
 	private String codigoTurma;
 
 	/**
-	 * Atributo <code>expressao</code> é usado para definir a expressão de
-	 * cálculo da nota. Essa expressão deverá ser validada, e depende da
+	 * Atributo <code>expressao</code> ï¿½ usado para definir a expressï¿½o de
+	 * cï¿½lculo da nota. Essa expressï¿½o deverï¿½ ser validada, e depende da
 	 * quantidade de notas.
 	 */
 
 	private String expressao;
 
 	/**
-	 * Atributo <code>qtdeNotas</code> é quem informa a quantidade de notas
-	 * que formará a expressão.
+	 * Atributo <code>qtdeNotas</code> ï¿½ quem informa a quantidade de notas
+	 * que formarï¿½ a expressï¿½o.
 	 */
 
 	private int qtdeNotas;
 
 	/**
 	 * Atributo <code>preMatricula</code> retorna <code>true</code> ou
-	 * <code>false</code> e informa se a turma está disponível para que os
-	 * alunos efetuem pré-matrícula.
+	 * <code>false</code> e informa se a turma estï¿½ disponï¿½vel para que os
+	 * alunos efetuem prï¿½-matrï¿½cula.
 	 */
 
 	private boolean preMatricula;
@@ -72,13 +71,13 @@ public class Turma {
 	private Disciplina disciplina;
 
 	/**
-	 * Atributo <docente> informa qual o docente responsável pela turma.
+	 * Atributo <docente> informa qual o docente responsï¿½vel pela turma.
 	 */
 	private Docente docente;
 
 	/**
 	 * Atributo <situacao> retorna <code>true</code> ou <code>false</code>
-	 * informando se a turma está disponível.
+	 * informando se a turma estï¿½ disponï¿½vel.
 	 */
 
 	private boolean situacao;
