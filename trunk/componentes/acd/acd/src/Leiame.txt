@@ -19,8 +19,8 @@ MÓDULO: AVALIAÇÃO DO CORPO DOCENTE
 
 1- INTRODUÇÃO
 
-O Escola é o projeto de desenvolvimento de um software livre para gerenciamento acadêmico de cursos de pós-graduação. Para ver mais detalhes leia a documentação do projeto.
-Este módulo está contemplado a parte de "Avaliação do Corpo Docente", onde o secretário poderá criar uma avaliação para uma turma e os alunos da mesma poderão respondê-la avaliando o professor, que por sua vez poderá consultar posteriormente essa avaliação e verificar seu desempenho na turma.
+O "Escola" é o projeto de desenvolvimento de um software livre para gerenciamento acadêmico de cursos de pós-graduação (para ver mais detalhes leia a documentação do projeto).
+A “Avaliação do Corpo Docente” é um módulo do “Escola”, que irá interagir Aluno, Docente e Secretário para a realização de avaliação de docentes. Uma avaliação de docente estará disponível para os alunos durante o período de execução da disciplina de uma turma. Servirá para o docente verificar seu desempenho em cada turma, segundo a visão dos alunos.
 
 
 2- ESTRUTURA DE PASTAS
@@ -33,16 +33,17 @@ Este módulo está contemplado a parte de "Avaliação do Corpo Docente", onde o
 	- Pasta META-INF => contém arquivos xml para mapeamento objeto-relacional usado pelo JPA;
 	- Pasta db => comtém os arquivos do banco de dados escola;
 	- Arquivo build.xml, arquivo usado pelo Ant para automatizar tarefas;
-	- Arquivo applicationContext, arquivo de contexto da aplicação usado pela framework Spring;
+	- Arquivo applicationContext, arquivo de contexto da aplicação usado pela framework Spring, definido para a aplicação;
+	- Arquivo testContext, arquivo de contexto da aplicação usado pela framework Spring, definido para execução de testes;
 	- Arquivo log4j.properties, contém as configurações para geração de logs de persistência;
 	- Arquivo Leiame.txt, este arquivo, com uma rápida explicação sobre o projeto e instruções de instalação.
 
 2.3- acd/test
-	- Pacotes com arquivos de código fonte java (*.java) para testes de unidades usando JUnit;
+	- Pacotes com arquivos de código fonte java (*.java) para testes de unidades usando JUnit e AbstractJpaTests;
 
 2.4- acd/web
 	- Pasta META-INF;
-	- Pasta WEB-INF =>
+	- Pasta WEB-INF
 		+ Pasta classes, arquivos compilados do sistema;
 		+ Pasta classes/db, arquivos do banco de dados;
 		+ Pasta lib, bibliotecas java (*.jar) necessárias para executar a aplicação.
