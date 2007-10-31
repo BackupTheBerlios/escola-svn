@@ -1,5 +1,5 @@
 package br.ufg.inf.apsi.escola.componentes.nf.repositorio;
 
-public class NotaRepositorio {
+public class NotaRepository {
 
 }

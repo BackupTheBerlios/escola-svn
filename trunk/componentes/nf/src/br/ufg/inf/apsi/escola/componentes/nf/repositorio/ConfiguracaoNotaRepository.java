@@ -3,7 +3,7 @@ package br.ufg.inf.apsi.escola.componentes.nf.repositorio;
 import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 import br.ufg.inf.apsi.escola.componentes.nf.modelo.ConfiguracaoNota;
 
-public interface ConfiguracaoNotaRepositorio {
+public interface ConfiguracaoNotaRepository {
 
 	public void salvar(ConfiguracaoNota configuracaoNotaFrequencia)
 			throws Exception;
