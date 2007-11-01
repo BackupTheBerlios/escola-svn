@@ -1,4 +1,4 @@
-package br.ufg.inf.apsi.escola.componentes.servico;
+package src.br.ufg.inf.apsi.escola.componentes.servico;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
