@@ -20,7 +20,7 @@ MÓDULO: AVALIAÇÃO DO CORPO DOCENTE
 1- INTRODUÇÃO
 
 O "Escola" é o projeto de desenvolvimento de um software livre para gerenciamento acadêmico de cursos de pós-graduação (para ver mais detalhes leia a documentação do projeto).
-A “Avaliação do Corpo Docente” é um módulo do “Escola”, que irá interagir Aluno, Docente e Secretário para a realização de avaliação de docentes. Uma avaliação de docente estará disponível para os alunos durante o período de execução da disciplina de uma turma. Servirá para o docente verificar seu desempenho em cada turma, segundo a visão dos alunos.
+A “Avaliação do Corpo Docente” é um módulo do “Escola”, que irá interagir Aluno, Docente e Secretário para a realização de avaliação de docentes. Uma avaliação de docente estará disponível para os alunos durante o período de execução da disciplina em uma turma. Servirá para o docente verificar seu desempenho em cada turma, segundo a visão dos alunos.
 
 
 2- ESTRUTURA DE PASTAS
@@ -34,7 +34,7 @@ A “Avaliação do Corpo Docente” é um módulo do “Escola”, que irá int
 	- Pasta db => comtém os arquivos do banco de dados escola;
 	- Arquivo build.xml, arquivo usado pelo Ant para automatizar tarefas;
 	- Arquivo applicationContext, arquivo de contexto da aplicação usado pela framework Spring, definido para a aplicação;
-	- Arquivo testContext, arquivo de contexto da aplicação usado pela framework Spring, definido para execução de testes;
+	- Arquivo testContext, arquivo de contexto da aplicação usado pela framework Spring, definido para execução de testes de unidades;
 	- Arquivo log4j.properties, contém as configurações para geração de logs de persistência;
 	- Arquivo Leiame.txt, este arquivo, com uma rápida explicação sobre o projeto e instruções de instalação.
 
@@ -54,7 +54,7 @@ A “Avaliação do Corpo Docente” é um módulo do “Escola”, que irá int
 
 3- PRÉ-REQUISITOS DE INSTALAÇÃO
 
-Ferramentas do KAD (KAD-0.9) instaladas no computador, ou assegure que estajam instalados no computador o TomCat 6.0, Java Standard Edition Runtime Environment 6.0 (JRE), Ant, e que todas as bibliotecas do diretório "../acd/web/WEB-INF/lib" citadas no item 5 estejam presentes;
+Ferramentas do KAD (KAD-0.9) instaladas no computador, ou assegure que estajam instalados no computador o TomCat 6.0, Java Standard Edition Runtime Environment 6.0 (JRE), ant, e que todas as bibliotecas do diretório "../acd/web/WEB-INF/lib" citadas no item 6 estejam presentes;
 
 
 3- INSTALAÇÃO
@@ -88,33 +88,20 @@ Abra o browser, informe a URL "http://localhost:8080/acd" e tecle <ENTER>, entã
 
 5- OBSERVAÇÕES
 
-5.1- Ant: O arquivo build.xml que acompanha o projeto, possui duas funcionalidades que para funcionarem exigem bibliotecas que não fazem parte do KAD (KAD-0.9), devido ao fato de estarmos usando JPA para persistência, são as bibliotecas do "hibernate-tools". Por isso, elas estão comentadas, mas caso se resolva adotar o hibernate-tools, basta descomentá-las. Mas acho que não é necessário, já que o esquema é criado automaticamente quando se executa a aplicação. São elas:
-	- <target name="db-schema" depends="compile" description="Cria o esquema no banco de dados">
-	- <target name="db-drop" depends="compile"  description="Remove o esquema do banco de dados">
+5.1- O pacote "br.ufg.inf.apsi.escola.componentes.externo.servicos" que se encontra no diretório "../acd/src", não faz parte deste componente, foi criado com o intuito de simular servicos de componentes externos ao componente "acd", dos quais o componente "acd" depende. Dessa forma, pode-se executar e testar o componente "acd", enquanto os servicos externos dos quais este componente dependente, nao estão disponíveis.
 
 
 6- BIBLIOTECAS
 
-Bibliotecas java necessárias para a execução da aplicação, essas bibliotecas devem estar no diretório "..acd/web/WEB-INF/lib":
-antlr-2.7.6.jar
-ejb3-persistence.jar                aspectjweaver.jar
-acegi-security-1.0.3.jar            ehcache-1.2.4.jar
-jta.jar                             spring.jar
-webui.jar                           commons-collections.jar
-commons-pool.jar                    hibernate-entitymanager.jar
-commons-el-1.0.jar                  jstl.jar
-appbase.jar                         cglib-2.1.3.jar
-commons-validator-1.3.1.jar         dom4j-1.6.1.jar
-jmock-junit4-2.1.0.jar              persistence.jar
-javassist.jar                       jsfcl.jar
-hibernate-commons-annotations.jar   standard.jar
-cglib-nodep-2.1_3.jar               hibernate-annotations.jar
-jmock-2.1.0.jar                     commons-logging.jar
-commons-lang.jar                    commons-digester.jar
-hibernate3.jar                      hsqldb.jar
-junit-4.3.1.jar                     hibernate-validator.jar
-log4j-1.2.14.jar                    jboss-archive-browsing.jar
-asm.jar                             aspectjrt.jar
-jsf-api.jar                         commons-beanutils.jar
-commons-dbcp.jar                    jsf-impl.jar
-dataprovider.jar                    commons-codec-1.3.jar
+Bibliotecas java necessárias para a execução da aplicação. Essas bibliotecas devem estar no diretório "..acd/web/WEB-INF/lib". As principais ferramentas das quais essas bibliotecas fazem parte são: apache-tomcat-6.0.13, hibernate-3.2, hibernate-annotations-3.3.0.GA, hibernate-entitymanager-3.3.1.GA, hsqldb-1.8.0.7, jmock-2.1.0, jsf-1.2_04-b16-p02, junit4.3.1, spring-framework-2.0.6. Segue abaixo a lista das bibliotecas (*.jar): 
+
+acegi-security-1.0.3.jar  commons-collections.jar      ehcache-1.2.4.jar                  jboss-archive-browsing.jar  persistence.jar
+antlr-2.7.6.jar           commons-dbcp.jar             ejb3-persistence.jar               jmock-2.1.0.jar             spring-aspects.jar
+appbase.jar               commons-digester.jar         hamcrest-library-1.0.jar           jmock-junit4-2.1.0.jar      spring.jar
+asm.jar                   commons-el-1.0.jar           hibernate3.jar                     jsf-api.jar                 spring-mock.jar
+aspectjrt.jar             commons-lang.jar             hibernate-annotations.jar          jsfcl.jar                   standard.jar
+aspectjweaver.jar         commons-logging.jar          hibernate-commons-annotations.jar  jsf-impl.jar                webui.jar
+cglib-2.1.3.jar           commons-pool.jar             hibernate-entitymanager.jar        jstl.jar
+cglib-nodep-2.1_3.jar     commons-validator-1.3.1.jar  hibernate-validator.jar            jta.jar
+commons-beanutils.jar     dataprovider.jar             hsqldb.jar                         junit-4.3.1.jar
+commons-codec-1.3.jar     dom4j-1.6.1.jar              javassist.jar                      log4j-1.2.14.jar

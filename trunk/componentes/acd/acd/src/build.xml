@@ -42,7 +42,7 @@
 		</javac>
 	</target>
 
-	<target name="test-execute" depends="compile, test-compile" description="Executa os testes de unidade">
+	<target name="test-execute" depends="compile, test-compile, db-start" description="Executa os testes de unidade">
 		<echo message="Executar classe de teste => AvaliacaoTest" />
 		<java classname="br.ufg.inf.apsi.escola.componentes.acd.modelo.AvaliacaoTest" >
 			<classpath refid="projeto.classpath" />
@@ -63,14 +63,14 @@
 		<java classname="br.ufg.inf.apsi.escola.componentes.acd.negocio.bean.AvaliacaoDocenteHandlerImplTest" >
 			<classpath refid="projeto.classpath" />
 		</java>
-<!--		<echo message="Executar classe de teste => AvaliacaoRepositoryImplTest" />
-		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.AvaliacaoRepositoryImplTest" >
+		<echo message="Executar classe de teste => AvaliacaoRepositoryImplTest" />
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.hibernate.AvaliacaoRepositoryImplTest" >
 			<classpath refid="projeto.classpath" />
 		</java>
 		<echo message="Executar classe de teste => FormAvaliacaoRepositoryImplTest" />
-		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.FormAvaliacaoRepositoryImplTest" >
+		<java classname="br.ufg.inf.apsi.escola.componentes.acd.repositorio.jpa.hibernate.FormAvaliacaoRepositoryImplTest" >
 			<classpath refid="projeto.classpath" />
-		</java> -->
+		</java>
 	</target>
 
 

@@ -71,9 +71,3 @@
 			ref="entityManagerFactory" />
 	</bean>
 </beans>
-<!--
-	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="acd"/>
-	</bean>
- -->

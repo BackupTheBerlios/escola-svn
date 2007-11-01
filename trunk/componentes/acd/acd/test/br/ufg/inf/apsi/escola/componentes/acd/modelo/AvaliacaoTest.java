@@ -23,7 +23,6 @@ public class AvaliacaoTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		// TODO Auto-generated method stub
 		super.setUp();
 		a1 = new Avaliacao(51L);
 	}

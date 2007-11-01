@@ -10,9 +10,9 @@ import javax.faces.model.SelectItem;
 
 import br.ufg.inf.apsi.escola.componentes.acd.modelo.Questao;
 import br.ufg.inf.apsi.escola.componentes.acd.servico.AvaliacaoDocenteService;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoService;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoServiceImpl;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.Turma;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoService;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoServiceImpl;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.Turma;
 import br.ufg.inf.apsi.escola.servicos.ServiceFactory;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
@@ -46,6 +46,7 @@ public class AvaliacaoBean {
 		super();
 		sf = new LocalServiceFactory();
 		ads = sf.ObtemAvaliacaoDocenteService();
+
 		es = new ExternoServiceImpl();
 		lista = es.buscarTurmas();
 		turmas.add(new SelectItem(0L, ""));
@@ -55,105 +56,136 @@ public class AvaliacaoBean {
 	}
 
 	/**
-	 * @return the avaliacaoId
+	 * Obtem id da <code>Avaliacao</code>.
+	 * 
+	 * @return O id da <code>Avaliacao</code>.
 	 */
 	public Long getAvaliacaoId() {
 		return avaliacaoId;
 	}
 
 	/**
+	 * Atribui o id da <code>Avaliacao</code>.
+	 * 
 	 * @param avaliacaoId
-	 *            the avaliacaoId to set
+	 *            O id da <code>Avaliacao</code>.
 	 */
 	public void setAvaliacaoId(Long avaliacaoId) {
 		this.avaliacaoId = avaliacaoId;
 	}
 
 	/**
-	 * @return the turmaId
+	 * Obtem o id da <code>Turma</code>.
+	 * 
+	 * @return O id da <code>Turma</code>.
 	 */
 	public Long getTurmaId() {
 		return turmaId;
 	}
 
 	/**
+	 * Atribui o id da <code>Turma</code>.
+	 * 
 	 * @param turmaId
-	 *            the turmaId to set
+	 *            O id da <code>Turma</code>.
 	 */
 	public void setTurmaId(Long turmaId) {
 		this.turmaId = turmaId;
 	}
 
 	/**
-	 * @return the questaoId
+	 * Obtem o id da <code>Questao</code>.
+	 * 
+	 * @return O id da <code>Questao</code>.
 	 */
 	public Long getQuestaoId() {
 		return questaoId;
 	}
 
 	/**
+	 * Atribui o id da <code>Questao</code>.
+	 * 
 	 * @param questaoId
-	 *            the questaoId to set
+	 *            O id da <code>Questao</code>.
 	 */
 	public void setQuestaoId(Long questaoId) {
 		this.questaoId = questaoId;
 	}
 
 	/**
-	 * @return the objetiva
+	 * Verifica se <code>Questao</code> e objetiva ou nao.
+	 * 
+	 * @return Se <code>Questao</code> e objetiva ou nao.
 	 */
 	public boolean isObjetiva() {
 		return objetiva;
 	}
 
 	/**
+	 * Atribui se <code>Questao</code> e objetiva ou nao.
+	 * 
 	 * @param objetiva
-	 *            the objetiva to set
+	 *            "true" se <code>Questao</code> e objetiva, ou "false" caso
+	 *            contrario.
 	 */
 	public void setObjetiva(boolean objetiva) {
 		this.objetiva = objetiva;
 	}
 
 	/**
-	 * @return the pergunta
+	 * Obtem a pergunta da <code>Questao</code>.
+	 * 
+	 * @return A pergunta da <code>Questao</code>.
 	 */
 	public String getPergunta() {
 		return pergunta;
 	}
 
 	/**
+	 * Atribui a pergunta da <code>Questao</code>.
+	 * 
 	 * @param pergunta
-	 *            the pergunta to set
+	 *            A pergunta da <code>Questao</code>.
 	 */
 	public void setPergunta(String pergunta) {
 		this.pergunta = pergunta;
 	}
 
 	/**
-	 * @return the questoes
+	 * Obtem uma <code>List<Questao></code> de <code>AvaliacaoBean</code>.
+	 * 
+	 * @return Uma <code>List<Questao></code>.
 	 */
 	public List<Questao> getQuestoes() {
 		return questoes;
 	}
 
 	/**
+	 * Atribui uma <code>List<Questao></code> para <code>AvaliacaoBean</code>.
+	 * 
 	 * @param questoes
-	 *            the questoes to set
+	 *            Uma <code>List<Questao></code>.
 	 */
 	public void setQuestoes(List<Questao> questoes) {
 		this.questoes = questoes;
 	}
 
 	/**
-	 * @return the turmas
+	 * Obtem o <code>List<SelectItem></code> da <code>AvaliacaoBean</code>.
+	 * 
+	 * @return O <code>List<SelectItem></code> da <code>AvaliacaoBean</code>.
 	 */
 	public List<SelectItem> getTurmas() {
 		return turmas;
 	}
 
 	/**
+	 * Atribui o <code>List<SelectItem></code> para
+	 * <code>AvaliacaoBean</code>.
+	 * 
 	 * @param turmas
-	 *            the turmas to set
+	 *            O <code>List<SelectItem></code> para
+	 *            <code>AvaliacaoBean</code>.
 	 */
 	public void setTurmas(List<SelectItem> turmas) {
 		this.turmas = turmas;
@@ -163,7 +195,7 @@ public class AvaliacaoBean {
 	 * Este metodo busca a <code>Avaliacao</code> da turma selecionada pelo o
 	 * usuario para o mesmo poder cadastrar as questoes.
 	 * 
-	 * @return "Sucesso" ou "Falha"
+	 * @return "Sucesso" ou "Falha".
 	 */
 	public String selecionarTurma() {
 		if (turmaId > 0) {
@@ -230,10 +262,16 @@ public class AvaliacaoBean {
 			carregarQuestoes();
 	}
 
+	/**
+	 * Carrega todas as questoes para o id de uma <code>Avaliacao</code>
+	 */
 	private void carregarQuestoes() {
 		setQuestoes(ads.buscarQuestoes(avaliacaoId));
 	}
 
+	/**
+	 * Cadastra uma <code>Avaliacao</code> para a <code>Turma</code> informada.
+	 */
 	private void cadastrarAvaliacao() {
 		if (turmaId > 0)
 			setAvaliacaoId(ads.cadastrarAvaliacao(turmaId));

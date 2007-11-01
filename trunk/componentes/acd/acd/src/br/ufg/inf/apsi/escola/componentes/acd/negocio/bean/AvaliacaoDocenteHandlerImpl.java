@@ -10,8 +10,8 @@ import br.ufg.inf.apsi.escola.componentes.acd.modelo.Resposta;
 import br.ufg.inf.apsi.escola.componentes.acd.negocio.AvaliacaoDocenteHandler;
 import br.ufg.inf.apsi.escola.componentes.acd.repositorio.AvaliacaoRepository;
 import br.ufg.inf.apsi.escola.componentes.acd.repositorio.FormAvaliacaoRepository;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoService;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoServiceImpl;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoService;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoServiceImpl;
 
 /**
  * Esta classe implementa a interface AvaliacaoDocenteHandler e fornece todas as
@@ -429,9 +429,9 @@ public class AvaliacaoDocenteHandlerImpl implements AvaliacaoDocenteHandler {
 	 *         ja finalizou.
 	 */
 	private boolean validaPeriodoTurma(Long turmaId) {
+		ExternoService servicoTurma = new ExternoServiceImpl();
 		GregorianCalendar agora = new GregorianCalendar();
 
-		ExternoService servicoTurma = new ExternoServiceImpl();
 		if (agora.compareTo(servicoTurma.buscarDataInicioTurma(turmaId)) >= 0
 				&& agora
 						.compareTo(servicoTurma.buscarDataTerminoTurma(turmaId)) <= 0)

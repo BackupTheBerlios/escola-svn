@@ -1,8 +1,14 @@
-package br.ufg.inf.apsi.escola.componentes.admc.servico;
+package br.ufg.inf.apsi.escola.componentes.externo.servicos;
 
 import java.util.Calendar;
 
 /**
+ * Classe criada com o intuito de simular servicos de componentes externos ao
+ * componente "acd", dos quais o componente "acd" depende. Dessa forma, pode-se
+ * executar e testar o componente "acd", enquanto os servicos externos dos quais
+ * ele dependente, nao estao disponiveis. Por este motivo, nao sera gerado
+ * documentacao para esta classe.
+ * 
  * @author Rodrigo Morian Loures
  */
 public class Turma {

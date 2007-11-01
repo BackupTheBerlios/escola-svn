@@ -7,9 +7,9 @@ import javax.faces.model.SelectItem;
 
 import br.ufg.inf.apsi.escola.componentes.acd.modelo.Resposta;
 import br.ufg.inf.apsi.escola.componentes.acd.servico.AvaliacaoDocenteService;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoService;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.ExternoServiceImpl;
-import br.ufg.inf.apsi.escola.componentes.admc.servico.Turma;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoService;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.ExternoServiceImpl;
+import br.ufg.inf.apsi.escola.componentes.externo.servicos.Turma;
 import br.ufg.inf.apsi.escola.servicos.ServiceFactory;
 import br.ufg.inf.apsi.escola.servicos.local.LocalServiceFactory;
 
@@ -46,6 +46,7 @@ public class FormAvaliacaoBean {
 		super();
 		sf = new LocalServiceFactory();
 		ads = sf.ObtemAvaliacaoDocenteService();
+
 		es = new ExternoServiceImpl();
 		lista = es.buscarTurmas();
 		turmas.add(new SelectItem(0L, ""));
@@ -55,135 +56,182 @@ public class FormAvaliacaoBean {
 	}
 
 	/**
-	 * @return the id
+	 * Obtem o id do <code>FormAvaliacao</code>.
+	 * 
+	 * @return o id do <code>FormAvaliacao</code>.
 	 */
 	public Long getFormAvaliacaoId() {
 		return formAvaliacaoId;
 	}
 
 	/**
-	 * @param id
-	 *            the id to set
+	 * Atribui o id do <code>FormAvaliacao</code>.
+	 * 
+	 * @param formAvaliacaoId
+	 *            O id do <code>FormAvaliacao</code>.
 	 */
-	public void setFormAvaliacaoId(Long id) {
-		this.formAvaliacaoId = id;
+	public void setFormAvaliacaoId(Long formAvaliacaoId) {
+		this.formAvaliacaoId = formAvaliacaoId;
 	}
 
 	/**
-	 * @return the avaliacaoId
+	 * Obtem id da <code>Avaliacao</code>.
+	 * 
+	 * @return O id da <code>Avaliacao</code>.
 	 */
 	public Long getAvaliacaoId() {
 		return avaliacaoId;
 	}
 
 	/**
+	 * Atribui o id da <code>Avaliacao</code>.
+	 * 
 	 * @param avaliacaoId
-	 *            the avaliacaoId to set
+	 *            O id da <code>Avaliacao</code>.
 	 */
 	public void setAvaliacaoId(Long avaliacaoId) {
 		this.avaliacaoId = avaliacaoId;
 	}
 
 	/**
-	 * @return the turmaId
+	 * Obtem o id da <code>Turma</code>.
+	 * 
+	 * @return O id da <code>Turma</code>.
 	 */
 	public Long getTurmaId() {
 		return turmaId;
 	}
 
 	/**
+	 * Atribui o id da <code>Turma</code>.
+	 * 
 	 * @param turmaId
-	 *            the turmaId to set
+	 *            O id da <code>Turma</code>.
 	 */
 	public void setTurmaId(Long turmaId) {
 		this.turmaId = turmaId;
 	}
 
 	/**
-	 * @return the alunoId
+	 * Obtem o id do <code>Aluno</code>.
+	 * 
+	 * @return O id do <code>Aluno</code>.
 	 */
 	public Long getAlunoId() {
 		return alunoId;
 	}
 
 	/**
+	 * Atribui o id do <code>Aluno</code>.
+	 * 
 	 * @param alunoId
-	 *            the alunoId to set
+	 *            O id do <code>Aluno</code>.
 	 */
 	public void setAlunoId(Long alunoId) {
 		this.alunoId = alunoId;
 	}
 
 	/**
-	 * @return the objetiva
+	 * Verifica se <code>Questao</code> e objetiva ou nao.
+	 * 
+	 * @return Se <code>Questao</code> e objetiva ou nao.
 	 */
 	public boolean isObjetiva() {
 		return objetiva;
 	}
 
 	/**
+	 * Atribui se <code>Questao</code> e objetiva ou nao.
+	 * 
 	 * @param objetiva
-	 *            the objetiva to set
+	 *            "true" se <code>Questao</code> e objetiva, ou "false" caso
+	 *            contrario.
 	 */
 	public void setObjetiva(boolean objetiva) {
 		this.objetiva = objetiva;
 	}
 
 	/**
-	 * @return the pergunta
+	 * Obtem a pergunta da <code>Questao</code>.
+	 * 
+	 * @return A pergunta da <code>Questao</code>.
 	 */
 	public String getPergunta() {
 		return pergunta;
 	}
 
 	/**
+	 * Atribui a pergunta da <code>Questao</code>.
+	 * 
 	 * @param pergunta
-	 *            the pergunta to set
+	 *            A pergunta da <code>Questao</code>.
 	 */
 	public void setPergunta(String pergunta) {
 		this.pergunta = pergunta;
 	}
 
 	/**
-	 * @return the resposta
+	 * Obtem a resposta de uma <code>Questao</code> do
+	 * <code>FormAvaliacao</code>.
+	 * 
+	 * @return A resposta de uma <code>Questao</code> do
+	 *         <code>FormAvaliacao</code>.
 	 */
 	public String getResposta() {
 		return resposta;
 	}
 
 	/**
+	 * Atribui a resposta de uma <code>Questao</code> do
+	 * <code>FormAvaliacaoBean</code>.
+	 * 
 	 * @param resposta
-	 *            the resposta to set
+	 *            A resposta de uma <code>Questao</code> do
+	 *            <code>FormAvaliacaoBean</code>.
 	 */
 	public void setResposta(String resposta) {
 		this.resposta = resposta;
 	}
 
 	/**
-	 * @return the respostas
+	 * Obtem uma <code>List<Resposta></code> do
+	 * <code>FormAvaliacaoBean</code>.
+	 * 
+	 * @return Uma <code>List<Resposta></code> do
+	 *         <code>FormAvaliacaoBean</code>.
 	 */
 	public List<Resposta> getRespostas() {
 		return respostas;
 	}
 
 	/**
+	 * Atribui uma <code>List<Resposta></code> do
+	 * <code>FormAvaliacaoBean</code>.
+	 * 
 	 * @param respostas
-	 *            the respostas to set
+	 *            Uma <code>List<Resposta></code> do
+	 *            <code>FormAvaliacaoBean</code>.
 	 */
 	public void setRespostas(List<Resposta> respostas) {
 		this.respostas = respostas;
 	}
 
 	/**
-	 * @return the turmas
+	 * Obtem o <code>List<SelectItem></code> da <code>AvaliacaoBean</code>
+	 * 
+	 * @return O <code>List<SelectItem></code> da <code>AvaliacaoBean</code>
 	 */
 	public List<SelectItem> getTurmas() {
 		return turmas;
 	}
 
 	/**
+	 * Atribui o <code>List<SelectItem></code> para
+	 * <code>AvaliacaoBean</code>
+	 * 
 	 * @param turmas
-	 *            the turmas to set
+	 *            O <code>List<SelectItem></code> para
+	 *            <code>AvaliacaoBean</code>
 	 */
 	public void setTurmas(List<SelectItem> turmas) {
 		this.turmas = turmas;
@@ -254,6 +302,13 @@ public class FormAvaliacaoBean {
 		return "Sucesso";
 	}
 
+	/**
+	 * Verifica se ha uma <code>Avaliacao</code> para a <code>Turma</code>
+	 * informada, e obtem o id da <code>Avaliacao</code> caso haja.
+	 * 
+	 * @return "true" caso haja a <code>Avaliacao</code> e "false" caso
+	 *         contrario.
+	 */
 	private boolean verificaAvaliacao() {
 		if (turmaId < 1)
 			return false;
@@ -265,7 +320,14 @@ public class FormAvaliacaoBean {
 			return false;
 	}
 
+	/**
+	 * Obtem o id do <code>Aluno</code> que acessando os servicos de
+	 * "Avaliacao do Corpo Docente".
+	 * 
+	 * @return O id do <code>Aluno</code> que acessando os servicos de
+	 *         "Avaliacao do Corpo Docente".
+	 */
 	private Long obterAlumoLogadoId() {
-		return 700L;
+		return es.buscarIdAlunoLogado();
 	}
 }
