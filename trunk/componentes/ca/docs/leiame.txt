@@ -1,0 +1,15 @@
+Componente Controle De Acesso
+
+Para realizar os testes de unidade da classe ControladorDeAutenticacaoUsandoPersistenciaTest.java 
+deve-se cadastrar dois usuários no banco de dados.
+
+Inicializar banco
+
+	java org.hsqldb.Server -database.0 escola -dbname.0 escola
+
+Acessar o banco pelo SQL Client e executar as seguintes instruções SQL:
+
+	INSERT INTO USUARIO VALUES(1, true, 1, '111', 'romario','2008-12-30');
+	INSERT INTO USUARIO VALUES(2, true, 2, '222', 'robinho','2009-10-28');
+  
+As instruções cadastradas também podem ser utilizadas para acessar a aplicação.

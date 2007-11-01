@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<import resource="acegi-security-teste.xml" />
+	
+	<!--     Usuario      -->
+
+	<bean id="localUsuarioService"
+		class="br.ufg.inf.apsi.escola.componentes.ca.servico.local.LocalUsuarioService">
+		<constructor-arg ref="usuarioNegocio" />
+	</bean>
+
+	<bean id="usuarioNegocio"
+		class="br.ufg.inf.apsi.escola.componentes.ca.negocio.bean.UsuarioNegocioBean">
+		<constructor-arg ref="usuarioRepositorio" />
+		<constructor-arg ref="pessoaService" />
+		<constructor-arg ref="emailService" />
+	</bean>
+
+	<bean id="usuarioRepositorio"
+		class="br.ufg.inf.apsi.escola.componentes.ca.repositorio.jpa.hibernate.UsuarioRepositoryImpl">
+		<property name="entityManagerFactory">
+			<ref local="entityManagerFactory" />
+		</property>
+	</bean>
+	
+	<!--     Aluno, Docente, Secretario      -->
+
+	<bean id="alunoService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalAlunoService">
+	</bean>
+
+	<bean id="docenteService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalDocenteService">
+	</bean>
+
+	<bean id="secretarioService"
+		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalSecretarioService">
+	</bean>
+
+	<!--     Pessoa      -->
+
+	<bean id="pessoaService"
+		class="br.ufg.inf.apsi.escola.componentes.pfj.servico.local.LocalPessoaService">
+	</bean>
+
+	<!--     E-mail     -->
+
+	<bean id="emailService"
+		class="br.ufg.inf.apsi.escola.ie.email.EmailServiceImpl">
+	</bean>
+	
+
+	<!-- Configurações dos objetos para o HSQLDB-->
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:mem:dwspring" /> 
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+
+		<property name="jpaVendorAdapter">
+			<bean id="vendor"
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+				<property name="database" value="HSQL" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory"
+			ref="entityManagerFactory" />
+	</bean>
+</beans>

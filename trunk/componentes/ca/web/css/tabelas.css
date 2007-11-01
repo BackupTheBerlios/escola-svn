@@ -1,0 +1,31 @@
+/* DefiniÃ§Ã£o de estilos para toda a tabela*/
+
+.tabela {
+border: 1px solid green;
+}
+
+/* DefiniÃ§Ã£o de estilos para linha de cabeÃ§alho da tabela*/
+
+.cabecalho {
+    text-align: center;
+    font: 11px Arial, sans-serif;
+    font-weight: bold;
+    color: Snow;
+    background: #008B45;
+}
+
+/* DefiniÃ§Ã£o de estilos para coluna */
+
+.primeiro {
+    text-align: center;
+    font: 11px Arial, sans-serif;
+    background: #A2CD5A;
+}
+
+/* DefiniÃ§Ã£o de estilos para coluna */
+
+.ultimo {
+    font: 11px Arial, sans-serif;
+    text-align: center;
+    background: #BCEE68;
+}
