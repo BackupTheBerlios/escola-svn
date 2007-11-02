@@ -5,5 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/Arquivos de programas/Java/jre1.6.0_01/lib/commons-email-1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Arquivos de programas/Java/jre1.6.0_01/lib/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Arquivos de programas/Java/jre1.6.0_01/lib/jel.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
