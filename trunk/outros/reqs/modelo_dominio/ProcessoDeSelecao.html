@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<title>modelo-dominio Project: ProcessoDeSelecao</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="htmlexport.css"/>
+</head>
+
+<body class="generalContent">
+<a name="top"></a>
+
+<!-- BEGIN HEADER -->
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td><img src="images/ProtegeLogo.gif" width="160" height="57" alt="protege logo"/></td>
+	</tr>
+</table><br>
+<!-- END HEADER -->
+
+<span class="pageTitle">Class: ProcessoDeSelecao</span><br><br>
+<div class="classBorder">
+<span class="sectionTitle">Documentation:</span> Atividade executada por cada coordenação de curso ou programa com o propósito de selecionar os candidatos que poderão se matricular.<br><br>
+<span class="sectionTitle">Superclasses</span>
+<ul class="iconList">
+	<li class="abstractClass"><a href="_THING.html">:THING</a></li>
+</ul><br>
+<span class="sectionTitle">Subclasses</span>
+<ul class="iconList">
+	<li>None</li>
+</ul><br>
+<span class="sectionTitle">Types</span>
+<ul class="iconList">
+	<li class="metaclass"><a href="_STANDARD-CLASS.html">:STANDARD-CLASS</a></li>
+</ul><br>
+<table width="100%" border="1" cellpadding="3" cellspacing="0" class="mozillaTableHack">
+	<th align="left" bgcolor="#C4DAE5" colspan="5" class="mozillaTableHack">Template Slots</th>
+	<tr class="sectionTitle">
+		<td class="mozillaTableHack">&nbsp;</td>
+		<td class="mozillaTableHack">Slot Name</td>
+		<td class="mozillaTableHack">Documentation</td>
+		<td class="mozillaTableHack">Type</td>
+		<td class="mozillaTableHack">Cardinality</td>
+	</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_datafimProcesso.html">datafimProcesso</a></td>
+<td class="mozillaTableHack">Data final do processo de seleção</td>
+<td class="mozillaTableHack">String</td>
+<td class="mozillaTableHack">1:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_datainicioProcesso.html">datainicioProcesso</a></td>
+<td class="mozillaTableHack">Data do inicio do processo de selecao</td>
+<td class="mozillaTableHack">String</td>
+<td class="mozillaTableHack">1:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoAreaConcentracao.html">ligacaoAreaConcentracao</a></td>
+<td class="mozillaTableHack">Relacionamento com a Area de Concentracao</td>
+<td class="mozillaTableHack"><a href="AreaDeConcentracao.html">AreaDeConcentracao</a></td>
+<td class="mozillaTableHack">1:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoCoordenadoria.html">ligacaoCoordenadoria</a></td>
+<td class="mozillaTableHack">Relacionamento com a classe Coordenadoria</td>
+<td class="mozillaTableHack"><a href="Coordenadoria.html">Coordenadoria</a></td>
+<td class="mozillaTableHack">1:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoEdital.html">ligacaoEdital</a></td>
+<td class="mozillaTableHack">Relacionamento com a classe Edital</td>
+<td class="mozillaTableHack"><a href="Edital.html">Edital</a></td>
+<td class="mozillaTableHack">1:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoExameSuficiencia.html">ligacaoExameSuficiencia</a></td>
+<td class="mozillaTableHack">Relacionamento com a classe ExameDeSuficiencia</td>
+<td class="mozillaTableHack"><a href="ExameDeSuficiencia.html">ExameDeSuficiencia</a></td>
+<td class="mozillaTableHack">0:1</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoInscricaoCandidato.html">ligacaoInscricaoCandidato</a></td>
+<td class="mozillaTableHack">Relacionamento com a classe Candidato</td>
+<td class="mozillaTableHack"><a href="InscricaoDeCandidato.html">InscricaoDeCandidato</a></td>
+<td class="mozillaTableHack">0:*</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot_ligacaoProcessoResultado.html">ligacaoProcessoResultado</a></td>
+<td class="mozillaTableHack">Relacionamento com a classe Resultado</td>
+<td class="mozillaTableHack"><a href="Resultado.html">Resultado</a></td>
+<td class="mozillaTableHack">0:*</td>
+</tr>
+</table><br>
+<table width="100%" border="1" cellpadding="3" cellspacing="0" class="mozillaTableHack">
+	<th align="left" bgcolor="#C4DAE5" colspan="3" class="mozillaTableHack">Own Slots</th>
+	<tr class="sectionTitle">
+		<td class="mozillaTableHack">&nbsp;</td>
+		<td class="mozillaTableHack">Slot Name</td>
+		<td class="mozillaTableHack">Value</td>
+	</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot__ROLE.html">:ROLE</a></td>
+<td class="mozillaTableHack">Concrete</td>
+</tr>
+<tr>
+<td class="mozillaTableHack"><img src="images/slot.gif" width="16" height="16" border="0" align="middle"></td>
+<td class="mozillaTableHack"><a href="slot__SLOT-CONSTRAINTS.html">:SLOT-CONSTRAINTS</a></td>
+<td class="mozillaTableHack">&nbsp;</td>
+</tr>
+</table>
+<br>
+&nbsp;&nbsp;<a href="#top"><span style="font-weight: bold;">^ back to top</span></a>
+</div><br>
+<span class="generalContentBold">Return to <a href="index.html" target="_self">Class Hierarchy</a></span><br><br>
+<span class="generalContentBold">Generated: 11/02/2007, 12:03:51 PM, Greenwich Mean Time</span><br><br>
+<!-- BEGIN FOOTER -->
+<span class="legal">Prot&eacute;g&eacute; is a trademark of Stanford University, Copyright (c) 1998-2006 Stanford University.</span><br><br>
+<!-- END FOOTER -->
