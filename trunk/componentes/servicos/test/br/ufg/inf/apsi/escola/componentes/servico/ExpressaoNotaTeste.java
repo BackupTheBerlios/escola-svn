@@ -19,7 +19,7 @@ public class ExpressaoNotaTeste {
 
 	/**
 	 * Testa metodos...
-	 * {@link br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService.validar e calulcar média}
+	 * {@link br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService.validar}
 	 */
 
 	@Test
@@ -29,7 +29,9 @@ public class ExpressaoNotaTeste {
 
 			assertEquals(expressao.validar("(N1+N2+N3)/3"), true);
 			assertEquals(expressao.validar("(N1+N2+M3)/3"), false);
-			
+			assertEquals(expressao.validar("(N1+N2+M3)/"), false);
+			assertEquals(expressao.validar("N1+N2+N3)/3"), false);
+			assertEquals(expressao.validar("(N1+N2+N3)/345+N4"), true);
 		} catch (Exception e) {
 			e.getMessage();
 		}
