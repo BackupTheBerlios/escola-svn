@@ -10,13 +10,18 @@ public class ExpressaoNotaService {
 	public boolean validar(String expressao) throws Exception {
 
 		/*
-		 * Verifica se uma expressão foi passada como parâmetro.
+		 * Verifica se foi passado null.
 		 */
+		if (expressao == null) {
+			Exception e = new Exception("Uma Expressão deve ser informada!");
+			throw e;
+		}
+		
 		if (expressao.length() == 0) {
 			Exception e = new Exception("Uma Expressão deve ser informada!");
 			throw e;
 		}
-
+		
 		/*
 		 * Este laço verificar se a expressão passada contém caracteres não 
 		 * válidos para a expressão. p.ex. uma letra A ou B etc., sendo que
