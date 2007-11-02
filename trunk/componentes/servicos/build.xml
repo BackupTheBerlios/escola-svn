@@ -1,0 +1,47 @@
+<project name="Servico" basedir="." default="deploy">
+	<!--  Configuracoes do projeto 	  -->
+	<property name="project.distname" value="Servico" />
+
+	<!--  ======================================================  -->
+	<!--  Define 'kad.libs' (repositório de bibliotecas do Kad	  -->
+	<!--  ======================================================  -->
+	<property environment="env" />
+	<property name="kad.libs" value="${env.KAD_LIBS}" /> 
+	<!--  ======================================================  --> 
+	<!--  Propriedades de bibliotecas do Kad --> 
+	<!--  ======================================================  -->
+	<property file="${kad.libs}/kad-libs.properties" />
+	<property name="src.dir" location="${basedir}/src" />
+	<property name="docs.dir" location="${basedir}/docs" />
+	<property name="test.dir" location="${basedir}/test" />
+	<property name="build.dir" location="${basedir}" />
+
+	<path id="projeto.classpath">
+		<pathelement location="${jel.jar}" /> 
+	  	<pathelement location="${commons-email.jar}" /> 
+	  	<pathelement location="${mail.jar}" /> 
+	  	<pathelement location="${junit.jar}" /> 
+	</path>
+	
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${src.dir}/bin">
+			<classpath refid="projeto.classpath" /> 
+		</javac>
+	</target>	
+	
+	<target name="clean" description="Prepare for clean build">
+	  <delete dir="${src.dir}/bin" /> 
+	  <mkdir dir="${src.dir}/bin" />
+	</target>	
+
+	<target name="deploy" depends="clean">
+	  <delete file="${deploy.dir}/${project.distname}.war" /> 
+	  <delete dir="${deploy.dir}/${project.distname}" /> 
+	  <copy file="${build.dir}/${project.distname}.war" todir="${deploy.dir}" /> 
+	  </target>
+
+	<target name="run">
+		<java jar="${jar.dir}/apache-ant.jar" fork="true"/>
+	</target>
+</project>
+
