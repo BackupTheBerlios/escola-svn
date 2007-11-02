@@ -1,6 +1,6 @@
-<project name="Servico" basedir="." default="deploy">
+<project name="Servicos" basedir="." default="deploy">
 	<!--  Configuracoes do projeto 	  -->
-	<property name="project.distname" value="Servico" />
+	<property name="project.distname" value="Servicos" />
 
 	<!--  ======================================================  -->
 	<!--  Define 'kad.libs' (repositório de bibliotecas do Kad	  -->
