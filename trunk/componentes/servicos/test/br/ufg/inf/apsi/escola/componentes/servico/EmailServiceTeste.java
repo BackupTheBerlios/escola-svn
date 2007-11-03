@@ -8,18 +8,16 @@ import src.br.ufg.inf.apsi.escola.componentes.servico.EmailService;
 
 /**
  * Classe para testar a classe Email
- * 
  * @author Gerson Rodrigues Pereira
- * 
  */
 
 public class EmailServiceTeste {
 
 	/**
-	 * Testa metodos...
+	 * Testa metodos do EmailService
 	 * {@link br.ufg.inf.apsi.escola.componentes.servico.enviarEmailTexto()}
 	 */
-
+	
 	@Test
 	public void testValidar() {
 		try {
