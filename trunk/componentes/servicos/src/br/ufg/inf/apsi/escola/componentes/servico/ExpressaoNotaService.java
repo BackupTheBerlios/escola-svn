@@ -5,8 +5,28 @@ import gnu.jel.CompiledExpression;
 import gnu.jel.Evaluator;
 import gnu.jel.Library;
 
+/**
+ * Classe de serviço do Escola 1.0 cuja finalidade é validar uma expressao
+ * ela retornará true ou uma exceção dependendo da análise da expressão.
+ * @author Gerson Rodrigues
+ * @version 1.0
+ *
+ */
 public class ExpressaoNotaService {
 
+	/**
+	 * Método que valida a expressão passada como parametro. 
+	 * Observações:
+	 * 1- Neste método é verificado se a expressão é nula ou em branco, 
+	 * caso seja, uma exceção será retornada.
+	 * 2- Num próximo momento é verificado se a expressão contém caracteres 
+	 * não válidos, pois só são válidos caracters de expressões matemáticas e
+	 * a letra N ou n. Caso exista um caracter não válido uma exceção é retornada.
+	 * 3- Por fim, a expressão será validada através do componente JEL.
+	 * @param expressao
+	 * @return true ou uma exceção
+	 * @throws Exception
+	 */
 	public boolean validar(String expressao) throws Exception {
 
 		/*
@@ -99,12 +119,17 @@ public class ExpressaoNotaService {
 		return true;
 	}
 
-	/*
+	/**
 	 * Este método, retornará a nota do aluno na turma, se for possivel, ou seja,
 	 * se as notas estiverem todas lançadas.
-	 * obs: Este método deve ser sincronizado com os métodos corretos dos
+	 * Obs: Este método deve ser sincronizado com os métodos corretos dos
 	 * outros pacotes de trabalho no momento da integraçaõ dos componentes
 	 * por esse motivo ele esta comentado.
+	 * @param turma
+	 * @param aluno
+	 * @return a nota do aluno ou uma exceção
+	 * @throws Exception
+	 * 
 	 */
 	
 	/*public double calcularNotaAlunos(int turma, int aluno) throws Exception {
