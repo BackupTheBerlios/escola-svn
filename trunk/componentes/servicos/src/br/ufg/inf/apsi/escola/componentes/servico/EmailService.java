@@ -14,20 +14,38 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
-
+/**
+ * Esta classe tem por finalidade enviar e-mail´s, de tres formas possíveis
+ * sendo mensagens com texto simples, texto html (padrão pré-definido) e
+ * através de templates.
+ * @author Gerson Rodrigues
+ * @version 1.0
+  */
 public class EmailService {
 
+	
 	Session session = null;
-	/*
+	/**
 	 * Método construtor que carrega a seção com o arquivo de propriedades, 
-	 * utilizado para configurar o servidor de e-mail. 
+	 * utilizado para configurar o servidor de e-mail.
+	 * Um arquivo mail.properties deve existir no diretório src do projeto.
+	 * @exception IOException
 	 */
 	public EmailService() throws IOException{
 		session = Session.getInstance(carregarProriedade("mail.properties"), null);		
 	}
 	
-	/*
-	 * Método que enviar e-mail do tipo texto simples.
+	/**
+	 * Método que envia e-mail do tipo texto simples.
+	 * @param emailDestino
+	 * @param nomeDestino
+	 * @param emailRemetente
+	 * @param nomeRemetente
+	 * @param assunto
+	 * @param mensagem
+	 * @author Gerson Rodrigues
+	 * @return E-mail Enviado com Sucesso!
+	 * @exception Excpetion - Mensagem: Erro ao enviar o e-mail! 
 	 */
 	public String enviarEmailTexto(String emailDestino, String nomeDestino, String emailRemetente,
 			String nomeRemetente, String assunto, String mensagem)
@@ -49,8 +67,20 @@ public class EmailService {
 		return "E-mail Enviado com Sucesso!";
 	}
 
-	/*
+	/**
 	 * Método que envia e-mail do tipo html, com ou sem imagem (deve ser remota)
+	 * @param emailDestino
+	 * @param nomeDestino
+	 * @param emailRemetente
+	 * @param nomeRemetente
+	 * @param assunto
+	 * @param cabeçalho
+	 * @param corpo
+	 * @param rodape
+	 * @param endereço Imagem (deve ser Remota) - não é obrigatória
+	 * @param tituoImagem
+	 * @return E-mail Enviado com Sucesso!
+	 * @exception Excpetion - Mensagem: Erro ao enviar o e-mail! 
 	 */
 	public String enviarEmailHTML(String emailDestino, String nomeDestino,
 			String emailRemetente, String nomeRemetente, String assunto,
@@ -105,8 +135,20 @@ public class EmailService {
 		return "E-mail Enviado com Sucesso!";
 	}
 
-	/*
+	/**
 	 * Método que envia e-mail com através de um template, previamente definido.
+	 * @param emailDestino
+	 * @param nomeDestino
+	 * @param emailRemetente
+	 * @param nomeRemetente
+	 * @param assunto
+	 * @param localTemplate
+	 * @param localImagem
+	 * @param cabeçalho
+	 * @param corpo
+	 * @param rodape
+	 * @return E-mail Enviado com Sucesso!
+	 * @exception Excpetion - Mensagem: Erro ao enviar o e-mail! 	 * 
 	 */
 	public String enviarEmailTemplate(String emailDestino, String nomeDestino,
 			String emailRemetente, String nomeRemetente, String assunto, String localTemplate, String localImagem, String cabecalho, String corpo, String rodape)
