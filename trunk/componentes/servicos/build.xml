@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <project name="Servicos" basedir="." default="all">
 	<description>Script de automatizacao de tarefas para Package Serviços.</description>
-	
-	<!--  Configuracoes do projeto 	  -->
+
+	<!--  Define 'kad.libs' (repositório de bibliotecas do Kad)  -->
+	<property environment="env" />
+	<property name="kad.libs" value="${env.KAD_LIBS}" />
+
+	<!--  Propriedades de bibliotecas do Kad  -->
+	<property file="${kad.libs}/kad-libs.properties" />
 	<property name="project.distname" value="Servicos" />
 	<property name="src.dir" location="${basedir}/src" />
 	<property name="docs.dir" location="${basedir}/docs" />
 	<property name="test.dir" location="${basedir}/test" />
 	<property name="build.dir" location="${basedir}" />
 
+	<!--  CLASSPATH (bibliotecas e diretórios) -->
 	<path id="projeto.classpath">
-		<pathelement location="${jre.home}" />
-
-		<fileset dir="${jre.home}/bin">
-			<include name="*.jar" />
-		</fileset>
-
-		<pathelement location="${java.home}" />
-
-		<fileset dir="${java.home}/bin">
-			<include name="*.exe" />
-		</fileset>
+		<pathelement location="${commons-email.jar}" />
+		<pathelement location="${mail.jar}" />
+		<pathelement location="${jel.jar}" />
 	</path>
 
 	<!-- compila o projeto -->
 	<target name="compile" description="Compilando o projeto.">
 		<mkdir dir="${basedir}/bin" />
 		<javac srcdir="${src.dir}" destdir="${basedir}/bin">
-			<classpath refid="projeto.classpath"/>
+			<classpath refid="projeto.classpath" /> 
 		</javac>
 	</target>
 
@@ -35,7 +33,7 @@
 	<target name="compileTest" description="Compilando os testes de unidade do projeto.">
 		<mkdir dir="${test.dir}/bin" />
 		<javac srcdir="${test.dir}" destdir="${test.dir}/bin">
-			<classpath refid="projeto.classpath"/>
+			<classpath refid="projeto.classpath" /> 
 		</javac>
 	</target>
 
@@ -43,17 +41,17 @@
 	<target name="clean" description="Limpando(excluindo) bytecodes.">
 		<delete dir="${basedir}/bin" />
 		<delete dir="${test.dir}/bin" />
+		<delete dir="${docs.dir}/javadoc" />
 	</target>
 
 	<!-- gera a documentacao (javadoc) para o projeto -->
 	<target name="doc" description="Gerando a documentacao">
-		<javadoc destdir="docs.dir" author="true" version="true" use="true" package="true">
+		<mkdir dir="${docs.dir}/javadoc" />
+		<javadoc destdir="${docs.dir}/javadoc" author="true" version="true" use="true" package="true">
 			<fileset dir = "${src.dir}">
 				<include name="**/*.java"/>
 			</fileset>
-			<classpath>
-				<pathelement path="${java.class.path}"/>
-			</classpath>
+			<classpath refid="projeto.classpath" /> 
 		</javadoc>
 	</target>
 
