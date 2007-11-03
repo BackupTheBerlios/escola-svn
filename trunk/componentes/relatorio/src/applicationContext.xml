@@ -10,35 +10,40 @@
 
 	<!-- CONFIGURAÇÕES DOS OBJETOS DA AAPLICAÇÃO -->
 
-	<bean id="relatorioNFAlunosUmaTurmaController"
-		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.RelatorioNFAlunosUmaTurmaController"
+	<!-- =============================================================================================================================   -->
+	<!-- Controllers                                                                                                                     -->
+	<!-- =============================================================================================================================   -->
+	<bean id="relatorioController"
+		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.RelatorioController"
 		scope="session" />
 
 	<!-- =============================================================================================================================   -->
 	<!-- Relatorios                                                                                                                      -->
 	<!-- =============================================================================================================================   -->
-	<bean id="consultasBean"
-		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.ConsultasBean">
+	<bean id="relatorioNotasFrequenciasTurma"
+		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.RelatorioNotasFrequenciasTurmaBean">
+		<property name="expressaoNotaService" ref="localExpressaoNotaService" />
+		<property name="matriculaTurmaService" ref="localMatriculaTurmaService" />
+		<property name="notaFrequenciaService" ref="localNotaFrequenciaService" />
 		<property name="turmaService" ref="localTurmaService" />
+		<property name="pessoaService" ref="localPessoaService" />
+		<property name="arquivoDeModeloJasper" value="/home/sponja/workspace-rh/relatorio/web/resources/NFDosAlunosDeUmaTurma.jasper" />
+		<property name="arquivoDaImagemDoCabecalho" value="/home/sponja/workspace-rh/relatorio/web/resources/cabecalho_relatorio.gif" />
 	</bean>
 
-	<bean id="relatorioNotasEFrequenciasBean"
-		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.RelatorioNotasEFrequenciasBean">
-		<property name="cursoService" ref="localCursoService" />
-		<property name="expressaoNotaFinalService"
-			ref="localExpressaoNotaFinalService" />
-		<property name="matriculaTurmaService"
-			ref="localMatriculaTurmaService" />
-		<property name="notaFrequenciaService"
-			ref="localNotaFrequenciaService" />
+	<bean id="relatorioAvaliacaoDocenteTurma"
+		class="br.ufg.inf.apsi.escola.componentes.relatorios.negocio.bean.RelatorioAvaliacaoDocenteTurmaBean">
 		<property name="turmaService" ref="localTurmaService" />
+		<property name="pessoaService" ref="localPessoaService" />
+		<property name="avaliacaoDocenteService" ref="localAvaliacaoDocenteService" />
+		<property name="arquivoDeModeloJasper" value="/home/sponja/workspace-rh/relatorio/web/resources/AvaliacaoCorpoDocente.jasper" />
+		<property name="arquivoDaImagemDoCabecalho" value="/home/sponja/workspace-rh/relatorio/web/resources/cabecalho_relatorio.gif" />
 	</bean>
 
 	<bean id="localRelatorioService"
 		class="br.ufg.inf.apsi.escola.componentes.relatorios.servico.local.LocalRelatorioService">
-		<property name="consultas" ref="consultasBean" />
-		<property name="relatorioNotasEFrequencias"
-			ref="relatorioNotasEFrequenciasBean" />
+		<property name="relatorioNotasFrequenciasTurma" ref="relatorioNotasFrequenciasTurma" />
+		<property name="relatorioAvaliacaoDocenteTurma" ref="relatorioAvaliacaoDocenteTurma" />
 	</bean>
 
 	<!-- ============================================================================================================================= -->
@@ -58,6 +63,12 @@
 		class="br.ufg.inf.apsi.escola.componentes.admc.servico.local.LocalMatriculaTurmaService" />
 
 	<!-- ============================================================================================================================= -->
+	<!-- acd - Administração Corpo Docente                                                                                             -->
+	<!-- ============================================================================================================================= -->
+	<bean id="localAvaliacaoDocenteService"
+		class="br.ufg.inf.apsi.escola.componentes.acd.servico.local.LocalAvaliacaoDocenteService" />
+
+	<!-- ============================================================================================================================= -->
 	<!-- nf - Notas e Frequencias                                                                                                      -->
 	<!-- ============================================================================================================================= -->
 	<bean id="localNotaFrequenciaService"
@@ -66,8 +77,8 @@
 	<!-- ============================================================================================================================= -->
 	<!-- expnf - Servico de Expressao de Nota Final                                                                                    -->
 	<!-- ============================================================================================================================= -->
-	<bean id="localExpressaoNotaFinalService"
-		class="br.ufg.inf.apsi.escola.componentes.expnf.servico.local.LocalExpressaoNotaFinalService" />
+	<bean id="localExpressaoNotaService"
+		class="br.ufg.inf.apsi.escola.componentes.expnf.servico.local.LocalExpressaoNotaService" />
 
 
 	<!--                                                            Autorizacao                                                                      -->

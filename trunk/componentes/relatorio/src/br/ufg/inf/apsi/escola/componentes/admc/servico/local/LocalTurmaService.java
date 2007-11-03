@@ -20,16 +20,20 @@ public class LocalTurmaService implements TurmaService {
 		repositorio = RepositorioTeste.getRepositorioTeste();
 	}
 	
-	public Curso consultaCurso(String codigoTurma) {
-		return null;
+	public Curso consultaCurso(Long idTurma) {
+		String codigoDisciplina = repositorio.getTurmaIdHM().get(idTurma).getDisciplina().getCodigo();
+		return repositorio.getDisciplinaHM().get(codigoDisciplina).getCurso();
+		
 	}
 
-	public Disciplina consultaDisciplina(String codigoTurma) {
-		return null;
+	public Disciplina consultaDisciplina(Long idTurma) {
+		return repositorio.getTurmaIdHM().get(idTurma).getDisciplina();
 	}
 
-	public Docente consultaDocente(String codigoTurma) {
-		return null;
+	public Docente consultaDocente(Long idTurma) {
+		String codigoDocente = repositorio.getTurmaIdHM().get(idTurma).getDocente().getMatricula();
+		Docente d = repositorio.getDocenteHM().get(codigoDocente);
+		return d;
 	}
 
 	public List<Turma> consultar() throws Exception {
@@ -37,7 +41,13 @@ public class LocalTurmaService implements TurmaService {
 	}
 
 	public Turma consultar(String codigoTurma) throws Exception {
-		return null;
+		
+		return repositorio.getTurmaHM().get(codigoTurma);
+	}
+
+	public Turma consultar(Long idTurma) throws Exception {
+		
+		return repositorio.getTurmaIdHM().get(idTurma);
 	}
 
 	public List<Turma> consultarTurmasAluno(Long idPessoa) {

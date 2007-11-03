@@ -11,7 +11,7 @@ public class Docente {
 
 	private String curriculum;
 	
-	private long pessoaId;
+	private Long pessoaId;
 
 	private List<Turma> turma;
 	
@@ -19,10 +19,10 @@ public class Docente {
 		this.matricula = new String();
 		this.curriculum = new String();
 		this.turma = new ArrayList<Turma>();
-		this.pessoaId=0;
+		this.pessoaId=null;
 	}
 	
-	public Docente(String matricula, String curriculum,List<Turma> turma,long pessoaId){
+	public Docente(String matricula, String curriculum,List<Turma> turma,Long pessoaId){
 		this.matricula = matricula;
 		this.curriculum = curriculum;
 		this.turma = turma;
@@ -45,11 +45,11 @@ public class Docente {
 		this.id = id;
 	}
 
-	public long getPessoaId() {
+	public Long getPessoaId() {
 		return pessoaId;
 	}
 
-	public void setPessoaId(long pessoaId) {
+	public void setPessoaId(Long pessoaId) {
 		this.pessoaId = pessoaId;
 	}
 

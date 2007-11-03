@@ -4,6 +4,6 @@ import java.util.List;
 
 import br.ufg.inf.apsi.escola.componentes.nf.modelo.Nota;
 
-public interface ExpressaoNotaFinalService {
+public interface ExpressaoNotaService {
 	public double calculaNotaFinal(List<Nota> listaNotas, String expressao);
 }

@@ -1,6 +1,7 @@
 package br.ufg.inf.apsi.escola.componentes.pessoa.modelo;
 
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Classe definida para modelar os Emails das Pessoas participantes do sistema Escola.

@@ -12,12 +12,32 @@ public class Disciplina {
 	
 	private int cargaHoraria;
 	
+	private Curso curso;
+	
  	
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+
 	public Disciplina(){
 		this.codigo =new String();
 		this.nome = new String();
 		this.ementa = new String();
 		this.cargaHoraria =0;
+	}
+	
+	public Disciplina(String nome,String codigo, 
+			String ementa, int cargaHoraria, Curso curso){
+		this.nome = nome;
+		this.codigo = codigo;
+		this.ementa = ementa;
+		this.cargaHoraria = cargaHoraria;
+		this.curso = curso;
+		
 	}
 	
 	public Disciplina(String nome,String codigo, 
@@ -28,7 +48,6 @@ public class Disciplina {
 		this.cargaHoraria = cargaHoraria;
 		
 	}
-	
 	
 	
 	public String getEmenta() {

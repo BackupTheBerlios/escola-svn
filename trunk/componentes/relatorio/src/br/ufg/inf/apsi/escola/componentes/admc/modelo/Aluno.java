@@ -15,13 +15,13 @@ package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 
 public class Aluno {
  
-	private long id;
+	private Long id;
 	 
 	private String numeroMatricula;
 	 
 	private String historicoAcademico;
 	 
-	private long pessoa;
+	private Long pessoa;
 	
  	private Curso cursoMatriculado;
  	
@@ -29,7 +29,7 @@ public class Aluno {
  	public Aluno(){
  		this.numeroMatricula = new String();
  		this.historicoAcademico = new String();
- 		this.pessoa =0;
+ 		this.pessoa = new Long(0);
  		this.cursoMatriculado = new Curso();
  		
  	}
@@ -44,7 +44,7 @@ public class Aluno {
  	public Aluno(long pessoa,String numeroMatricula,String historicoAcademico,
  			Curso cursoMatriculado){
  		
- 		this.id=0;
+ 		this.id=new Long(0);
  		this.pessoa = pessoa;
  		this.numeroMatricula = numeroMatricula;
  		this.historicoAcademico = historicoAcademico;
@@ -67,11 +67,11 @@ public class Aluno {
 		this.historicoAcademico = historicoAcademico;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -83,11 +83,11 @@ public class Aluno {
 		this.numeroMatricula = numeroMatricula;
 	}
 
-	public long getPessoa() {
+	public Long getPessoa() {
 		return pessoa;
 	}
 
-	public void setPessoa(long pessoa) {
+	public void setPessoa(Long pessoa) {
 		this.pessoa = pessoa;
 	}
 

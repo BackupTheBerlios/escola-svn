@@ -9,8 +9,8 @@ public interface MatriculaTurmaService {
  
 	public void gravar(MatriculaTurma matriculaTurma)throws Exception;
 	public void excluir(String matriculaAluno)throws Exception;
-	public List<Aluno> listaAlunos(String codigoTurma);
+	public List<Aluno> listaAlunos(Long idTurma);
 	public MatriculaTurma consultar(String matriculaAluno)throws Exception;
-	public MatriculaTurma consultar(String codigoTurma,String matriculaAluno);
+	public MatriculaTurma consultar(Long idTurma,String matriculaAluno);
 }
  

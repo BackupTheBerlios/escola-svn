@@ -1,6 +1,5 @@
 package br.ufg.inf.apsi.escola.componentes.admc.modelo;
 
-import br.ufg.inf.apsi.escola.componentes.admc.modelo.Turma;
 
 public class MatriculaTurma {
  

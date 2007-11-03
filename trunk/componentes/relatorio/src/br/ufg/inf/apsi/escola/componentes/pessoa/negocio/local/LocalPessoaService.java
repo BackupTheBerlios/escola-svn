@@ -20,8 +20,15 @@ import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.LogradouroRepositor
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PaisRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.PessoaRepository;
 import br.ufg.inf.apsi.escola.componentes.pessoa.repositorio.TelefoneRepository;
+import br.ufg.inf.apsi.escola.componentes.repositorioParaTeste.RepositorioTeste;
 
 public class LocalPessoaService implements PessoaService {
+
+	private RepositorioTeste repositorio;
+	
+	public LocalPessoaService(){
+		repositorio = RepositorioTeste.getRepositorioTeste();
+	}
 
 	public void adicionaDocumento(Long pessoaId, String numero,
 			Date dataEmissao, String orgaoExpedidor) throws EscolaException {
@@ -106,8 +113,7 @@ public class LocalPessoaService implements PessoaService {
 	}
 
 	public String consultaPessoaId(Long pessoaId) throws EscolaException {
-		// TODO Auto-generated method stub
-		return null;
+		return repositorio.getPessoaHM().get(pessoaId).getNome();
 	}
 
 	public Map<Long, String> consultaPessoaPorDocumento(String numeroDocumento)
