@@ -9,16 +9,14 @@ import src.br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService;
 ;
 
 /**
- * Classe para testar a classe ExpressãoNotaService
- * 
+ * Classe para testar os métodos da classe ExpressãoNotaService
  * @author Gerson Rodrigues Pereira
- * 
  */
 
 public class ExpressaoNotaTeste {
 
 	/**
-	 * Testa metodos...
+	 * Testa metodos de ExpressaoNotaService
 	 * {@link br.ufg.inf.apsi.escola.componentes.servico.ExpressaoNotaService.validar}
 	 */
 
