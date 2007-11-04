@@ -6,7 +6,7 @@ import gnu.jel.Evaluator;
 import gnu.jel.Library;
 
 /**
- * Classe de serviço do Escola 1.0 cuja finalidade é validar uma expressao
+ * Classe de serviço do Escola 1.0 cuja finalidade é validar uma expressao,
  * ela retornará true ou uma exceção dependendo da análise da expressão.
  * @author Gerson Rodrigues
  * @version 1.0
@@ -43,9 +43,10 @@ public class ExpressaoNotaService {
 		}
 		
 		/*
-		 * Este laço verificar se a expressão passada contém caracteres não 
-		 * válidos para a expressão. p.ex. uma letra A ou B etc., sendo que
-		 * a única letra permitida é a letra N(maiscula ou minuscula).  
+		 * Este laço verifica se a expressão passada contém caracteres não 
+		 * válidos para a expressão (conforme definição), p.ex. uma letra A ou B etc., 
+		 * sendo que a única letra permitida é a letra N(maiscula ou minuscula), definido
+		 * juntamente com o gerente de projeto. Caso exista caracteres invalidos um exceção será levantada.  
 		 */
 		for (int i = 0; i < expressao.length(); i++) {
 			if (expressao.substring(i, i + 1).equals("(")
@@ -79,7 +80,8 @@ public class ExpressaoNotaService {
 	
 		/*
 		 * Este laço retirará a(s) letra(s) Nn da expressão
-		 * para submeter ao JEL apenas a expressao pura (limpa de letras)
+		 * para submeter ao JEL apenas a expressao pura (limpa de letras),
+		 * pois esse componente não identifica letras.
 		 */
 		StringBuffer expressao_sb = new StringBuffer();
 		for (int i = 0; i < expressao.length(); i++) {
@@ -91,7 +93,7 @@ public class ExpressaoNotaService {
 		String expressao_limpa = expressao_sb.toString();
 		
 		/*
-		 * Verifica se a expressão é válida
+		 * Aqui se Verifica se a expressão é válida
 		 * Monta a biblioteca
 		 */
 
@@ -123,7 +125,7 @@ public class ExpressaoNotaService {
 	 * Este método, retornará a nota do aluno na turma, se for possivel, ou seja,
 	 * se as notas estiverem todas lançadas.
 	 * Obs: Este método deve ser sincronizado com os métodos corretos dos
-	 * outros pacotes de trabalho no momento da integraçaõ dos componentes
+	 * outros pacotes de trabalho (especificamente notas e frequencia) no momento da integração dos componentes
 	 * por esse motivo ele esta comentado.
 	 * @param turma
 	 * @param aluno
