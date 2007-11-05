@@ -3,6 +3,111 @@
     <wb-module deploy-name="ExemploEscola">
         <wb-resource deploy-path="/" source-path="/web"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/lib/antlr-2.7.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/lib/asm.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/asm/asm-commons-2.2.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/asm/asm-util-2.2.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>               
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/acegi- security-1.0.4/acegi-security-1.0.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/aspectj/aspectjrt.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/aspectj/aspectjweaver.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/cglib/cglib-nodep-2.1_3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-beanutils.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-collections.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-dbcp.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-digester.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-fileupload.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-lang.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/lib/commons-logging-1.0.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-logging.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jakarta-commons/commons-pool.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/lib/dom4j-1.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/ehcache/ehcache-1.2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- annotations-3.3.0.GA/hibernate-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate-entitymanager-3.3.1.GA/hibernate-entitymanager.jar ">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/hibernate3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hsqldb- 1.8.0.7/lib/hsqldb.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/jboss- EJB-3.0_Embeddable_ALPHA/lib/javassist.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/hibernate/jboss-archive-browsing.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- 3.2/lib/jta.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/logging- log4j-1.2.14/dist/lib/log4j-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/jpa/persistence.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/lib/j2ee/rowset.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/dist/spring-mock.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/spring- framework-2.0.6/dist/spring.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/hibernate- annotations-3.3.0.GA/lib/hibernate-commons-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//opt/netbeans-5.5.1/enterprise3/modules/ext/jsf/jsf-api.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//opt/netbeans-5.5.1/enterprise3/modules/ext/jsf/jsf-impl.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/var/KAD_LIBS/jakarta-taglibs-standard-1.1.2/lib/jstl.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ExemploEscola"/>
         <property name="java-output-path" value="build/classes"/>
     </wb-module>
