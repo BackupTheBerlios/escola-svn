@@ -175,17 +175,13 @@ RelatorioAvaliacaoDocenteTurma {
 		/*
 		 * Busca e carga de informações do cabeçalho do relatório.
 		 */
-		try {
-			turma = turmaService.consultar(idTurma);
-			curso = turmaService.consultaCurso(idTurma);
-			disciplina = turmaService.consultaDisciplina(idTurma);
-			docente = turmaService.consultaDocente(idTurma);
-			nomeDocente = pessoaService.consultaPessoaId(docente.getPessoaId());
-			avaliacaoId = avaliacaoDocenteService.buscarAvaliacaoId(turma.getId());
-			listaFormAvaliacao = avaliacaoDocenteService.buscarFormulariosAvaliacao(avaliacaoId);
-		} catch (Exception e) {
-			throw e;
-		}
+		turma = turmaService.consultar(idTurma);
+		curso = turmaService.consultaCurso(idTurma);
+		disciplina = turmaService.consultaDisciplina(idTurma);
+		docente = turmaService.consultaDocente(idTurma);
+		nomeDocente = pessoaService.consultaPessoaId(docente.getPessoaId());
+		avaliacaoId = avaliacaoDocenteService.buscarAvaliacaoId(turma.getId());
+		listaFormAvaliacao = avaliacaoDocenteService.buscarFormulariosAvaliacao(avaliacaoId);
 		/*
 		 * Declaração de tipos do cabeçalho FormAvaliacao.
 		 */
@@ -224,7 +220,7 @@ RelatorioAvaliacaoDocenteTurma {
 				linha.put("matriculaDocente", docente.getMatricula());
 				linha.put("nomeDocente", nomeDocente);
 				linha.put("numeroAvaliacao", "Avaliação " + (indice + 1));
-				linha.put("perguntaQuestao", listaRespostas.get(indiceResposta).getQuestao().getPergunta());
+				linha.put("perguntaQuestao", (indiceResposta + 1) + ") " + listaRespostas.get(indiceResposta).getQuestao().getPergunta());
 				linha.put("respostaQuestao", listaRespostas.get(indiceResposta).getResposta());
 
 				linha.put("comparacao", comparacao + "           " + decimalFormatZeros.format(indiceResposta + 1));

@@ -16,6 +16,7 @@
 	<bean id="relatorioController"
 		class="br.ufg.inf.apsi.escola.ui.jsf.managedbeans.RelatorioController"
 		scope="session" />
+		
 
 	<!-- =============================================================================================================================   -->
 	<!-- Relatorios                                                                                                                      -->

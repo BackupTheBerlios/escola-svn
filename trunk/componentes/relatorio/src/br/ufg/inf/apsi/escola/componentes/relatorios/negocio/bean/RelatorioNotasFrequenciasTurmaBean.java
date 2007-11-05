@@ -212,17 +212,14 @@ public class RelatorioNotasFrequenciasTurmaBean implements
 		/*
 		 * Busca e carga de informações do cabeçalho do relatório.
 		 */
-		try {
-			turma = turmaService.consultar(idTurma);
-			curso = turmaService.consultaCurso(idTurma);
-			disciplina = turmaService.consultaDisciplina(idTurma);
-			docente = turmaService.consultaDocente(idTurma);
-			nomeDocente = pessoaService.consultaPessoaId(docente.getPessoaId());
-			expnf = turma.getExpressao();
-			listaAlunos = matriculaTurmaService.listaAlunos(idTurma);
-		} catch (Exception e) {
-			throw e;
-		}
+		turma = turmaService.consultar(idTurma);
+		curso = turmaService.consultaCurso(idTurma);
+		disciplina = turmaService.consultaDisciplina(idTurma);
+		docente = turmaService.consultaDocente(idTurma);
+		nomeDocente = pessoaService.consultaPessoaId(docente.getPessoaId());
+		expnf = turma.getExpressao();
+		listaAlunos = matriculaTurmaService.listaAlunos(idTurma);
+
 		/*
 		 * Declaração de tipos do cabeçalho Aluno.
 		 */

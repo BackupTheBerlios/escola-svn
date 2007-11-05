@@ -51,6 +51,9 @@ public class LocalRelatorioServiceTest extends TestCase {
 				{
 					one(relatorioNotasFrequenciasTurma).gerarRelatorio(new Long(1));
 					will(returnValue(new JasperPrint()));
+
+					one(relatorioNotasFrequenciasTurma).gerarRelatorio(new Long(100));
+					will(throwException(new Exception()));
 				}
 			});
 		} catch (Exception e) {
@@ -64,9 +67,19 @@ public class LocalRelatorioServiceTest extends TestCase {
 		} catch (Exception e) {
 			fail("Exceção não era esperada.");
 		}
-
-	}
 	
+		/**
+		 * Teste de retorno de excecão no método gerarRelNotasFrequenciasTurma.
+		 */
+		try {
+			JasperPrint jp = null;
+			jp = localRelatorioService.gerarRelNotasFrequenciasTurma(new Long(100));
+			fail("Deveria retornar uma exceção em gerarRelNotasFrequenciasTurma");
+		} catch (Exception e) {
+			assertTrue(true);
+		}
+	}
+
 	/**
 	 * Teste do método GerarRelAvaliacaoDocenteTurma.
 	 */
@@ -77,6 +90,9 @@ public class LocalRelatorioServiceTest extends TestCase {
 				{
 					one(relatorioAvaliacaoDocenteTurma).gerarRelatorio(new Long(1));
 					will(returnValue(new JasperPrint()));
+
+					one(relatorioAvaliacaoDocenteTurma).gerarRelatorio(new Long(100));
+					will(throwException(new Exception()));
 				}
 			});
 		} catch (Exception e) {
@@ -89,6 +105,17 @@ public class LocalRelatorioServiceTest extends TestCase {
 			assertNotNull(jp);
 		} catch (Exception e) {
 			fail("Exceção não era esperada.");
+		}
+
+		/**
+		 * Teste de retorno de excecão no método gerarRelAvaliacaoDocenteTurma.
+		 */
+		try {
+			JasperPrint jp = null;
+			jp = localRelatorioService.gerarRelAvaliacaoDocenteTurma(new Long(100));
+			fail("Deveria retornar uma exceção em gerarRelAvaliacaoDocenteTurma.");
+		} catch (Exception e) {
+			assertTrue(true);
 		}
 
 	}

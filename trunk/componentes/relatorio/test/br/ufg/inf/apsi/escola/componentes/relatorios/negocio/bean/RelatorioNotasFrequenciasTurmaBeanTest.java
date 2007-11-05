@@ -166,6 +166,9 @@ public class RelatorioNotasFrequenciasTurmaBeanTest extends TestCase {
 					one(turmaService).consultar(turma.getId());
 					will(returnValue(turma));
 
+					one(turmaService).consultar(new Long(100));
+					will(throwException(new Exception()));
+
 					one(turmaService).consultaCurso(turma.getId());
 					will(returnValue(curso));
 
@@ -244,6 +247,17 @@ public class RelatorioNotasFrequenciasTurmaBeanTest extends TestCase {
 			fail("Exceção não era esperada.");
 		}
 		
+		/**
+		 * Teste de retorno de excecão quando não existir a turma.
+		 */
+		try {
+			JasperPrint jp = null;
+			jp = relatorioNotasFrequenciasTurmaBean.gerarRelatorio(new Long(100));
+			fail("Deveria retornar uma exceção");
+		} catch (Exception e) {
+			assertTrue(true);
+		}
+
 	}
 	
 }
